@@ -164,6 +164,32 @@
 }
 
 @media screen and (max-width:768px) {
+  .mo-contact-info {
+    z-index: 49;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: size-m(375);
+    height: size-m(63);
+    gap: size-m(1);
+
+    .contact-item {
+      height: 100%;
+      background-color: #AD1B2D;
+      font-size: size-m(16);
+      font-weight: 400;
+      color: #fff;
+
+      img {
+        margin-bottom: size-m(5);
+        max-width: size-m(16.5);
+        height: auto;
+        max-height: size-m(16.5);
+        filter: brightness(0) invert(1);
+      }
+
+    }
+  }
 
   .contact-info {
     width: size-m(375);
