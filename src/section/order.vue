@@ -34,7 +34,7 @@
         </select>
       </div>
       <div class="right h-full">
-        <textarea :value="formData.note" @input="(event) => (formData.note = event.target.value)"
+        <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
           class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
       </div>
     </div>
@@ -214,14 +214,14 @@ const formData = reactive({
   // email: "",
   city: "",
   area: "",
-  note: "",
+  msg: "",
   policyChecked: false,
   r_verify: false,
 })
 
 //非必填
-// const bypass = ["note", "room_type", "email"]
-const bypass = [];
+// const bypass = ["msg", "room_type", "email"]
+const bypass = ["msg"];
 
 //中文對照
 const formDataRef = ref([
@@ -231,7 +231,7 @@ const formDataRef = ref([
   // "信箱", //email
   "居住縣市", //city
   "居住地區", //area
-  "備註訊息", //note
+  "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
 ])
