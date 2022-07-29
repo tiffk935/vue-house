@@ -92,13 +92,16 @@
   position: relative;
 
   .logo {
-    width: size(371.32);
-    height: size(171.57);
-    background-image: url("@/section/form/logo.svg");
+    width: size(550);
+    height: size(260);
+    //width: size(371.32);
+    //height: size(171.57);
+    background-image: url("@/section/form/logo1.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    margin-bottom: size(73);
+    margin-bottom: size(40);
+    //margin-bottom: size(73);
   }
 
   .contact-item-box {
@@ -200,9 +203,11 @@
     justify-content: flex-start;
 
     .logo {
-      width: size-m(177.42);
-      height: size-m(81.98);
-      background-image: url("@/section/form/logo.svg");
+      width: size-m(240);
+      height: size-m(160);
+      //width: size-m(177.42);
+      //height: size-m(81.98);
+      background-image: url("@/section/form/logo1.svg");
       margin-bottom: size-m(39);
     }
 

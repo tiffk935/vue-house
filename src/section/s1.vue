@@ -1,7 +1,7 @@
 <template>
   <section class="s1 text-white bg-[#D9374B] relative">
     <img data-aos="fade-left" data-aos-delay="0" class="people absolute" src="@/section/s1/people.png">
-    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
+    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main1.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
     <h3 class="text-[#FFF100] absolute">航空城-客運園區 飛向未來！</h3>
     <h2 data-aos="flip-left" data-aos-delay="400" class="absolute text-center">重劃新星<span class="hidden md:inline"> </span><span>大園新都心</span></h2>
     <h4 class="absolute text-center">
@@ -55,12 +55,14 @@
   }
   
   h3 {
-    left: size-m(45);
+    left: size-m(55);
+    //left: size-m(45);
     top: size-m(251);
     line-height: size-m(29);
     font-size: 5vw;
     @media screen and (min-width:768px) {
-      left: size(189);
+      left: size(210);
+      //left: size(185);
       top: size(787);
       line-height: size(71);
       font-size: 2.48vw;
