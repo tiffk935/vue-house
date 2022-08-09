@@ -56,7 +56,7 @@
 
     <!-- Send -->
     <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D9374B] text-white rounded-full" @click="send()">
-      送出表單
+      {{ sending ? '發送中..' : '送出表單' }}
     </div>
 
     <!-- Contact Info -->
@@ -219,6 +219,8 @@ const formData = reactive({
   r_verify: false,
 })
 
+const sending = ref(false)
+
 //非必填
 // const bypass = ["msg", "room_type", "email"]
 const bypass = ["msg"];
@@ -304,8 +306,8 @@ const send = () => {
     return
   }
 
-  if (pass) {
-
+  if (pass && !sending.value) {
+    sending.value = true
 
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
@@ -331,6 +333,8 @@ const send = () => {
         if (response.status === 200) {
           window.location.href = "formThanks";
         }
+
+        sending.value = false
       });
     });
 

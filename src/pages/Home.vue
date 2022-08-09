@@ -11,6 +11,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+    <S0 />
     <S1 />
     <S2 />
     <Order />
@@ -19,6 +20,7 @@
 
 <script setup>
 import info from "@/info"
+import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 import Order from "@/section/order.vue"
