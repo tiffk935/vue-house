@@ -78,7 +78,7 @@
     @media screen and (max-width:767px) {
       width: size-m(200);
       left: size-m(90);
-      top: size-m(379);
+      top: size-m(399);
       font-size: 13vw;
       line-height: 15vw;
 
@@ -97,7 +97,7 @@
      
     @media screen and (max-width:767px) {
       left: size-m(70);
-      top: size-m(493);
+      top: size-m(513);
       line-height: 5vw;
 
       .line1 {
@@ -112,7 +112,7 @@
   
   p {
     left: size-m(95);
-    top: size-m(550);
+    top: size-m(570);
     font-size: 4vw;
     line-height: 7.2vw;
     @media screen and (min-width:768px) {
