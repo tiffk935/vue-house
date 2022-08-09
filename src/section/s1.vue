@@ -1,7 +1,7 @@
 <template>
   <section class="s1 text-white bg-[#D9374B] relative">
     <img data-aos="fade-left" data-aos-delay="0" class="people absolute" src="@/section/s1/people.png">
-    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main1.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
+    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
     <h3 class="text-[#FFF100] absolute">航空城-客運園區 飛向未來！</h3>
     <h2 data-aos="flip-left" data-aos-delay="400" class="absolute text-center">重劃新星<span class="hidden md:inline"> </span><span>大園新都心</span></h2>
     <h4 class="absolute text-center">
@@ -15,8 +15,8 @@
     </h4>
     <p data-aos="flip-left" data-aos-delay="600" class="absolute text-center">
       從1 到20，一步一腳印<br class="md:hidden"><span class="hidden md:inline">，</span>威泰錢都20 期，用心圓夢！<br>
-      圓從1 期開始的建築初衷<br class="md:hidden"><span class="hidden md:inline">─</span>實用家居的起造者<br>
-      圓每個為夢想奮鬥的您<br class="md:hidden"><span class="hidden md:inline">，</span>一個薪享室成的居所
+      圓從1 期開始的建築初衷<br class="md:hidden">
+      圓每個為夢想奮鬥的您<br class="md:hidden">
     </p>
   </section>
 </template>
@@ -55,14 +55,14 @@
   }
   
   h3 {
-    left: size-m(55);
-    //left: size-m(45);
+    //left: size-m(55);
+    left: size-m(70);
     top: size-m(251);
     line-height: size-m(29);
     font-size: 5vw;
     @media screen and (min-width:768px) {
-      left: size(210);
-      //left: size(185);
+      //left: size(210);
+      left: size(185);
       top: size(787);
       line-height: size(71);
       font-size: 2.48vw;
@@ -77,7 +77,7 @@
     font-size: 3.95vw;
     @media screen and (max-width:767px) {
       width: size-m(200);
-      left: size-m(131);
+      left: size-m(90);
       top: size-m(379);
       font-size: 13vw;
       line-height: 15vw;
@@ -96,7 +96,7 @@
     font-size: 2.06vw;
      
     @media screen and (max-width:767px) {
-      left: size-m(112);
+      left: size-m(70);
       top: size-m(493);
       line-height: 5vw;
 
@@ -111,7 +111,7 @@
   }
   
   p {
-    left: size-m(136);
+    left: size-m(95);
     top: size-m(550);
     font-size: 4vw;
     line-height: 7.2vw;
