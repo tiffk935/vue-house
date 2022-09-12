@@ -18,15 +18,53 @@
           <div class="title absolute">
             <div class="text text-white">Alive 健身房</div>
           </div>
+          <div class="text text-white name">3D示意圖僅供參考</div>
           <img src="@/section/s8/1.jpg" alt="雙和心">
         </div>
       </swiper-slide>
       <swiper-slide>
         <div class="relative">
           <div class="title absolute">
-            <div class="text text-white">Alive 健身房</div>
+            <div class="text text-white">Journey 兒童遊戲室</div>
           </div>
-          <img src="@/section/s8/1.jpg" alt="雙和心">
+          <div class="text text-white name">3D示意圖僅供參考</div>
+          <img src="@/section/s8/2.jpg" alt="雙和心">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <div class="title absolute">
+            <div class="text text-white">Heaven 瑜珈室</div>
+          </div>
+          <div class="text text-white name">3D示意圖僅供參考</div>
+          <img src="@/section/s8/3.jpg" alt="雙和心">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <div class="title absolute">
+            <div class="text text-white">Lobby 歸家門廳</div>
+          </div>
+          <div class="text text-white name">3D示意圖僅供參考</div>
+          <img src="@/section/s8/4.jpg" alt="雙和心">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <div class="title absolute">
+            <div class="text text-white">Creative 藝廊</div>
+          </div>
+          <div class="text text-white name">3D示意圖僅供參考</div>
+          <img src="@/section/s8/5.jpg" alt="雙和心">
+        </div>
+      </swiper-slide>
+      <swiper-slide>
+        <div class="relative">
+          <div class="title absolute">
+            <div class="text text-white">Relax BAR</div>
+          </div>
+          <div class="text text-white name">3D示意圖僅供參考</div>
+          <img src="@/section/s8/6.jpg" alt="雙和心">
         </div>
       </swiper-slide>
     </swiper>
@@ -94,6 +132,21 @@
     }
   }
 
+  .name {
+    position: absolute;
+    font-weight: 700;
+    font-size: size-m(12);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+    right: size-m(10);
+    bottom: size-m(5);
+    color: #fff;
+    @media screen and (min-width:768px) {
+      font-size: size(15);
+      right: size(20);
+      bottom: size(10);
+    }
+  }
+
   .title {
     background: linear-gradient(90deg, rgba(221, 19, 115, 0) 0%, rgba(221, 19, 115, 0.08) 2%, rgba(221, 19, 115, 0.32) 9%, rgba(221, 19, 115, 0.53) 16%, rgba(221, 19, 115, 0.7) 23%, rgba(221, 19, 115, 0.83) 30%, rgba(221, 19, 115, 0.92) 37%, rgba(221, 19, 115, 0.98) 44%, #DD1373 50%, rgba(221, 19, 115, 0.98) 56%, rgba(221, 19, 115, 0.91) 62%, rgba(221, 19, 115, 0.8) 70%, rgba(221, 19, 115, 0.64) 77%, rgba(221, 19, 115, 0.45) 85%, rgba(221, 19, 115, 0.21) 94%, rgba(221, 19, 115, 0) 100%);
     opacity: 0.7;
@@ -105,6 +158,8 @@
     @media screen and (min-width:768px) {
       height: size(97);
     }
+
+  
 
     .text {
       text-align: center;

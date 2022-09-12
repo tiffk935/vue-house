@@ -4,6 +4,7 @@
 
       <!-- <div class="bg absolute"></div> -->
       <img class="bg1 absolute" src="@/section/form/bg1.png" alt="雙和心">
+      <img class="bg2 absolute" src="@/section/form/bg1.png" alt="雙和心">
 
       <section class="price text-white relative">
         <img class="content absolute md:hidden" src="@/section/form/content-m.svg" alt="雙和心">
@@ -90,14 +91,16 @@
   .price {
     width: 100%;
     height: size-m(349);
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     @media screen and (min-width:768px) {
-      height: size(619);
+      height: size(300);
     }
     
     .content {
-      width: 100%;
-      top: 0;
-      left: 0;
+      width: 40%;
+
     }
   }
 
@@ -118,9 +121,25 @@
     transform: translate(-50%, 0) rotate(75deg);
     transform-origin: center center;
     @media screen and (min-width:768px) {
-      height: calc(100% + 5vw);
-      top: -5vw;
-      transform: translate(-50%, 0) rotate(0deg)
+      height: calc(85% + 5vw);
+      top: 6vw;
+      transform: translate(-10%, 0) rotate(0deg)
+    }
+  }
+
+  .bg2 {
+    height: 100%;
+    width: auto;
+    max-width: unset;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0) rotate(75deg);
+    transform-origin: center center;
+    @media screen and (min-width:768px) {
+      height: calc(85% + 5vw);
+      top: 6vw;
+      transform: translate(-90%, 0) rotate(0deg)
     }
   }
 
@@ -143,7 +162,7 @@
       font-size: size(43);
       font-weight: 500;
       margin-bottom: size(45);
-      padding-top: size(48);
+      padding-top: size(40);
     }
   }
 

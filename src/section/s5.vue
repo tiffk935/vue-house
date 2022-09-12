@@ -19,7 +19,7 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/1.jpg" alt="雙和心">
-            <div class="name absolute">64快速道路</div>
+            <div class="name absolute">3分鐘進北市 華中橋&64快速道路</div>
           </div>
         </swiper-slide>
         <swiper-slide>
@@ -47,11 +47,16 @@
     <img class="logo absolute hidden md:block" src="@/section/s5/logo.svg" alt="雙和心">
 
     <div data-aos="fade-in" data-aos-delay="100" class="content text-white">
-      <div class="title text-center">1橋北市　2快聯外<br>3線快捷<br>4路直達　5橋馳騁</div>
+      <div class="title text-center">1橋北市　2快聯外<br>3線快捷<br>4大商圈　5橋馳騁</div>
       <div class="subtitle">最近北市區位，夢想一步到位！</div>
       <div class="text">
-        双和心不只擁雙捷交會，四通八達更問鼎地段傳奇：華中橋直進北市，64及環河快速道路雙快聯外，中和新蘆與環狀線、萬大線的快捷三線，中山路景平路區內要道、及中正路連城路通外的四路八達，更強勢坐擁五橋馳騁：華中橋、中正橋、永福橋、福和橋、秀朗橋。<br><br>
-        強勁外環機能搭配內在機能完善，是相較板橋與新店高漲房價下，青年成家、購屋追夢的最理想住宅，也是小資財富翻倍的最佳投資地段！
+        <span class="bold">•1橋：</span> 華中橋，4分鐘進北市<br>
+        <span class="bold">•2快：</span> 64快道，環河快速道路<br>
+        <span class="bold">•3線：</span> 中和新蘆線，環狀線，萬大線<br>
+        <span class="bold">•4商：</span> 大潤發,南山威力,COSTCO,比漾廣場<br>
+        <span class="bold">•5橋：</span> 華中橋，中正橋，永福橋，福和橋，秀朗橋<br><br>
+
+        外機能強勁，內機能完善，相較板橋新店高房價<br>是新世代最理想住宅，更是小資翻身最佳投資
       </div>
     </div>
   </section>
@@ -61,6 +66,11 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
+  
+img{
+    width: 100%;
+  }
+
   background: #E01373;
   color: #fff;
   width: 100%;
@@ -163,7 +173,7 @@
     bottom: size-m(5);
     color: #fff;
     @media screen and (min-width:768px) {
-      font-size: size(24);
+      font-size: size(15);
       right: size(20);
       bottom: size(10);
     }
@@ -233,19 +243,26 @@
     line-height: size-m(28);
     font-weight: 500;
     margin-bottom: size-m(26);
+    letter-spacing: size(10);
     @media screen and (min-width:768px) {
       font-size: size(24);
       line-height: size(35);
-      margin-bottom: size(53);
+      margin-bottom: size(10);
     }
   }
 
   .text {
     font-size: size-m(15);
     line-height: size-m(24);
+    font-weight: 300;
+
+      .bold{
+        font-weight: 700;
+      }
+
     @media screen and (min-width:768px) {
-      font-size: size(23);
-      line-height: size(33);
+      font-size: size(21);
+      line-height: size(40);
     }
   }
 

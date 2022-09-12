@@ -26,11 +26,11 @@
 
 .info-box {
 
-    width: size(900);
+    width: size(700);
 
     .title {
         width: 100%;
-        font-size: size(48);
+        font-size: size(35);
         font-weight: 700;
         margin-bottom: size(23);
     }

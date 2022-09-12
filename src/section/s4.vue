@@ -8,10 +8,6 @@
           clickable: true
         }"
         :loop="true"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
         :modules="modules" 
         class="mySwiper"
       >
@@ -42,13 +38,13 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s4/5.jpg" alt="雙和心">
-            <div class="name absolute">南山威力廣場</div>
+            <div class="name absolute">3分鐘南山威力廣場</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s4/6.jpg" alt="雙和心">
-            <div class="name absolute">比漾廣場商圈</div>
+            <div class="name absolute">6分鐘比漾廣場</div>
           </div>
         </swiper-slide>
         <img class="cold absolute" src="@/section/s4/cold.svg" alt="雙和心">
@@ -57,11 +53,11 @@
 
     <div data-aos="fade-in" data-aos-delay="100" class="content">
       <div class="title text-[#DD1373] text-center">世界軌道經濟顯學<br>三線交會價值鍍金</div>
-      <div class="subtitle text-black">萬大線2026即將通車，中和將高達三線交會，區內共計10個捷運站點，傲視群雄！</div>
+      <div class="subtitle text-black">萬大線2026即將通車，中和將高達三線交會</div>
       <div class="text text-black">
-        双和心位在中永和雙區中點，及中和新蘆線、環狀線雙捷交會，未來加入萬大線的超強區位，完全對應地產大亨川普的致富法則  「Location, Location, Location!」<br><br>
-        捷運決定當代城市發展、經濟版圖、房價漲跌，捷運宅即趨勢宅，雙線交集雙倍增值，周邊已有眾多商圈、公園水岸等十足機能，三線交會的黑馬潛力股，未來發展真實可期。<br><br>
-        新北更推動捷運開發BOT，中和站已徵得投資人，預估規劃地上14層、地下4層的商務辦公大型量體，總開發效益將高達28.3億元！
+        双和心位在中永和中點，擁中和新蘆、環狀線雙捷交會，未來加入萬大線，完全對應地產大亨川普致富法則「Location,Location,Location!」<br><br><br>
+        捷運決定當代城市發展、經濟版圖、房價漲跌，<span class="bold">捷運宅即趨勢宅</span>，雙線交集雙倍增值，周邊眾多商圈、公園水岸，三線交會的未來發展真實可期<br><br><br>
+        新北更推動捷運BOT，中和站已徵得投資人，將規劃商務辦公高樓，總開發效益<span class="bold">高達28.3億元</span>
       </div>
     </div>
   </section>
@@ -71,6 +67,10 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
+
+  img{
+    width: 100%;
+  }
   @media screen and (min-width:768px) {
     padding: size(187) 0;
     justify-content: space-between;
@@ -149,7 +149,7 @@
     bottom: size-m(5);
     color: #fff;
     @media screen and (min-width:768px) {
-      font-size: size(24);
+      font-size: size(15);
       right: size(20);
       bottom: size(10);
     }
@@ -191,7 +191,7 @@
   .subtitle {
     font-size: size-m(20);
     line-height: size-m(28);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size-m(26);
     @media screen and (min-width:768px) {
       font-size: size(24);
@@ -203,9 +203,17 @@
   .text {
     font-size: size-m(15);
     line-height: size-m(24);
+    font-weight: 300;
+    
+      .bold{
+        font-weight: 700;
+      }
+
     @media screen and (min-width:768px) {
       font-size: size(23);
-      line-height: size(33);
+      line-height: size(36);
+      letter-spacing: size(1);
+
     }
   }
 
