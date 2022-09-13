@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1103474936776!2d121.18124339999999!3d25.064248799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346820af94ef7b67%3A0x11134a66fcb2bab3!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A5aSn6KeA6LevNTk16Jmf!5e0!3m2!1szh-TW!2stw!4v1658754082639!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/eamn142jKNVssys97",
     phone: "03-385-2333",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/107771505357267/",
+    fbMessage: "https://m.me/107771505357267/",
     caseName: caseName,
     houseInfos: [
         ["建設團隊", "威泰國際股份有限公司"],
