@@ -49,12 +49,12 @@
     <div data-aos="fade-in" data-aos-delay="100" class="content text-white">
       <div class="title text-center">1橋北市　2快聯外<br>3線快捷<br>4大商圈　5橋馳騁</div>
       <div class="subtitle">最近北市區位，夢想一步到位！</div>
-      <div class="text">
-        <span class="bold">•1橋：</span> 華中橋，4分鐘進北市<br>
-        <span class="bold">•2快：</span> 64快道，環河快速道路<br>
-        <span class="bold">•3線：</span> 中和新蘆線，環狀線，萬大線<br>
-        <span class="bold">•4商：</span> 大潤發,南山威力,COSTCO,比漾廣場<br>
-        <span class="bold">•5橋：</span> 華中橋，中正橋，永福橋，福和橋，秀朗橋<br><br>
+      <div class="text nowrap">
+        <span class="bold">•1橋：</span>華中橋，4分鐘進北市<br>
+        <span class="bold">•2快：</span>64快道，環河快速道路<br>
+        <span class="bold">•3線：</span>中和新蘆線，環狀線，萬大線<br>
+        <span class="bold">•4商：</span>大潤發,南山威力,COSTCO,比漾廣場<br>
+        <span class="bold">•5橋：</span>華中橋，中正橋，永福橋，福和橋，秀朗橋<br><br>
 
         外機能強勁，內機能完善，相較板橋新店高房價<br>是新世代最理想住宅，更是小資翻身最佳投資
       </div>
@@ -252,7 +252,7 @@ img{
   }
 
   .text {
-    font-size: size-m(15);
+    font-size: size-m(14);
     line-height: size-m(24);
     font-weight: 300;
 
@@ -265,6 +265,9 @@ img{
       line-height: size(40);
     }
   }
+  .nowrap{
+     white-space:nowrap; 
+    }
 
 }
 </style>

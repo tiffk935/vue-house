@@ -90,17 +90,21 @@
 
   .price {
     width: 100%;
-    height: size-m(349);
+    height: size-m(150);
     display: flex;
     justify-content: center;
     align-items: flex-end;
+
     @media screen and (min-width:768px) {
       height: size(300);
+      align-items: flex-end;
     }
     
     .content {
       width: 40%;
-
+      @media screen and (max-width:768px) {
+      width: 80%;
+    }
     }
   }
 
@@ -158,6 +162,7 @@
     font-size: size-m(29);
     font-weight: 500;
     margin-bottom: size-m(20);
+    padding-top: size-m(30);
     @media screen and (min-width:768px) {
       font-size: size(43);
       font-weight: 500;
