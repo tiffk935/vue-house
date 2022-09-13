@@ -19,7 +19,7 @@ export default {
         ["房型規劃", "1~2房"],
         ["廣告企劃", "樂洋建築行銷"],
     ],
-    gtmCode: ["GTM-527G33V"], // 可放置多個
+    gtmCode: ["GTM-M6WWMTH"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

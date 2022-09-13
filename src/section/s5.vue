@@ -74,7 +74,7 @@ img{
   background: #E01373;
   color: #fff;
   width: 100%;
-  height: size-m(720);
+  height: size-m(680);
   @media screen and (min-width:768px) {
     height: auto;
     padding: size(187) 0;
@@ -85,7 +85,7 @@ img{
   .bg {
     top: 0;
     left: size-m(375);
-    width: size-m(720);
+    width: size-m(680);
     height: size-m(375);
     background-image: url('@/section/s5/bg.jpg');
     transform: rotate(90deg);
@@ -192,7 +192,7 @@ img{
   }
 
   .content {
-    padding: size-m(20) size-m(32) size-m(69) size-m(32);
+    padding: size-m(20) size-m(32) size-m(30) size-m(32);
     text-align: justify;
     position: relative;
     z-index: 1;
