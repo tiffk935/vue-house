@@ -7,6 +7,10 @@
         :pagination="{
           clickable: true
         }"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
         :loop="true"
         :modules="modules" 
         class="mySwiper"
