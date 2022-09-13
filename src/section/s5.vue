@@ -203,7 +203,8 @@ img{
   }
 
   .title {
-    width: size-m(206);
+    // width: size-m(206);
+    width: 56vw;
     font-size: size-m(25);
     line-height: size-m(35);
     font-weight: 900;

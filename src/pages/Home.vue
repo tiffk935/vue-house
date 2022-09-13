@@ -13,7 +13,7 @@
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <S1 />
     <S2 />
-    <S3 :isLoading="isLoading" />
+    <S3 />
     <S4 />
     <S5 />
     <S6 />
@@ -51,16 +51,18 @@ onMounted(() => {
     isLoading.value = false
     AOS.init();
 
-    let status = 0;
-    let hideHand = false;
-    document.querySelector('.s3 .map').scrollLeft = document.querySelector('.s3 .map .map3').clientWidth/2 - document.querySelector('.s3 .logo').clientWidth;
-    document.querySelector('.s3 .map').addEventListener("scroll", () => {
-      status++;
-      if(status > 1 && !hideHand){
-        document.querySelector('.s3 .hand').style.opacity = 0;
-        hideHand = true;
-      }
-    });
+    setTimeout(() => {
+      let status = 0;
+      let hideHand = false;
+      document.querySelector('.s3 .map').scrollLeft = document.querySelector('.s3 .map .map3').clientWidth/2 - window.innerWidth/2;
+      document.querySelector('.s3 .map').addEventListener("scroll", () => {
+        status++;
+        if(status > 1 && !hideHand){
+          document.querySelector('.s3 .hand').style.opacity = 0;
+          hideHand = true;
+        }
+      });
+    }, 0);
   };
 })
 </script>
