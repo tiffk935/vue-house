@@ -1,26 +1,26 @@
 <template>
-  <div class="contact-info mx-auto bg-[#D9374B] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto bg-[#14316F] flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+        <img src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="戀JIA" srcset="" />
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+        <img src="@/section/form/fb.svg" alt="艾美國際城" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-full overflow-hidden">
+    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -30,34 +30,35 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/pen.svg" alt="艾美國際城" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
 
   <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
-    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="aa-modal-toggle" />
+  <!-- <div class="modal -mt-20 md:-mt-72"> -->
+  <div class="aa-modal">
+    <div class="aa-modal-box py-12 relative flex flex-col items-center justify-center overflow-hidden">
+      <label for="contact-modal" class="aa-btn aa-btn-sm aa-btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -92,16 +93,14 @@
   position: relative;
 
   .logo {
-    //width: size(550);
-    //height: size(260);
-    width: size(371.32);
-    height: size(171.57);
-    background-image: url("@/section/form/logo.svg");
+    width: size(400.5);
+    height: size(93.5);
+    background-image: url("@/section/form/logo.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     //margin-bottom: size(40);
-    margin-bottom: size(73);
+    margin-bottom: size(43);
   }
 
   .contact-item-box {
@@ -110,8 +109,9 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #FFDFE3;
-      color: #595757;
+      border: 1px solid #fff;
+      // background-color: #FFDFE3;
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -123,12 +123,13 @@
       cursor: pointer;
 
       &:hover {
-        background-color: theme('colors.color2');
-        color: #fff;
+        background-color: #fff;
+        border-color: #fff;
+        color: theme('colors.color2');
 
         img {
 
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
       }
 
@@ -136,12 +137,12 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -164,6 +165,38 @@
       gap: 0 !important;
     }
   }
+
+
+  .address-wrap {
+    .contact-item {
+      background-color: #fff;
+      border-color: #fff;
+
+      &.address:before {
+        background-color: #fff;
+      }
+
+      &.map-btn {
+        background-color: #FFC107;
+        border-color: #FFC107;
+        color: theme('colors.color2');
+        
+        img {
+          filter: brightness(0) invert(0);
+        }
+
+        &:hover {
+          background-color: #14316F;
+          border-color: #fff;
+          color: #fff;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -178,7 +211,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #AD1B2D;
+      background-color: #14316F;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -203,11 +236,9 @@
     justify-content: flex-start;
 
     .logo {
-      //width: size-m(240);
-      //height: size-m(160);
-      width: size-m(177.42);
-      height: size-m(81.98);
-      background-image: url("@/section/form/logo.svg");
+      width: size-m(290.5);
+      height: size-m(67.82);
+      background-image: url("@/section/form/logo.png");
       margin-bottom: size-m(39);
     }
 
@@ -218,7 +249,6 @@
       flex-direction: column;
 
       &.address-wrap {
-        border-radius: size-m(50);
         margin-top: size-m(20);
       }
 
@@ -278,7 +308,6 @@ const go = () => {
 const open = () => {
   window.open(info.fbLink);
 }
-
 
 const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
