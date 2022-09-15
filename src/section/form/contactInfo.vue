@@ -1,25 +1,25 @@
 <template>
-  <div class="contact-info mx-auto bg-[#D9374B] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto bg-[#0B5034] flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-full btfanpage" @click="open()">
+      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="戀JIA" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-full overflow-hidden">
+    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -92,16 +92,14 @@
   position: relative;
 
   .logo {
-    //width: size(550);
-    //height: size(260);
-    width: size(371.32);
-    height: size(171.57);
+    width: size(408.76);
+    height: size(182.51);
     background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     //margin-bottom: size(40);
-    margin-bottom: size(73);
+    margin-bottom: size(43);
   }
 
   .contact-item-box {
@@ -110,8 +108,9 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #FFDFE3;
-      color: #595757;
+      border: 1px solid #fff;
+      // background-color: #FFDFE3;
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -123,12 +122,13 @@
       cursor: pointer;
 
       &:hover {
-        background-color: theme('colors.color2');
-        color: #fff;
+        background-color: #fff;
+        border-color: #fff;
+        color: theme('colors.color2');
 
         img {
 
-          filter: brightness(0) invert(1);
+          filter: brightness(0) invert(0);
         }
       }
 
@@ -136,12 +136,12 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -164,7 +164,75 @@
       gap: 0 !important;
     }
   }
+
+
+  .address-wrap {
+    .contact-item {
+      background-color: #fff;
+      border-color: #fff;
+
+      &.address:before {
+        background-color: #fff;
+      }
+
+      &.map-btn {
+        background-color: #FFFF00;
+        border-color: #FFFF00;
+        color: theme('colors.color2');
+        
+        img {
+          filter: brightness(0) invert(0);
+        }
+
+        &:hover {
+          background-color: #0B5034;
+          border-color: #fff;
+          color: #fff;
+
+          img {
+            filter: brightness(0) invert(1);
+          }
+        }
+      }
+    }
+  }
+
+  // .address-wrap {
+  //   .contact-item {
+      
+      
+
+  //     // &.address {
+  //     //   background-color: #fff;
+  //     //   border-color: #fff;
+
+  //     //   &:before {
+  //     //     background-color: #fff;
+  //     //   }
+  //     // }
+  //   }
+  // }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width:768px) {
   .mo-contact-info {
@@ -178,7 +246,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #AD1B2D;
+      background-color: #0B5034;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -198,15 +266,13 @@
     width: size-m(375);
     height: auto;
     padding: size-m(50) size-m(32);
-    margin-top: size-m(60);
+    margin-top: size-m(0);
     position: relative;
     justify-content: flex-start;
 
     .logo {
-      //width: size-m(240);
-      //height: size-m(160);
-      width: size-m(177.42);
-      height: size-m(81.98);
+      width: size-m(207.33);
+      height: size-m(92.57);
       background-image: url("@/section/form/logo.svg");
       margin-bottom: size-m(39);
     }
@@ -218,7 +284,6 @@
       flex-direction: column;
 
       &.address-wrap {
-        border-radius: size-m(50);
         margin-top: size-m(20);
       }
 

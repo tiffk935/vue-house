@@ -1,137 +1,305 @@
 <template>
-  <section class="s1 text-white bg-[#D9374B] relative">
-    <img data-aos="fade-left" data-aos-delay="0" class="people absolute" src="@/section/s1/people.png">
-    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
-    <h3 class="text-[#FFF100] absolute">航空城-客運園區 飛向未來！</h3>
-    <h2 data-aos="flip-left" data-aos-delay="400" class="absolute text-center">重劃新星<span class="hidden md:inline"> </span><span>大園新都心</span></h2>
-    <h4 class="absolute text-center">
-      <span class="line1">
-        <span class="text-[#FFF100]">國中小學區</span> X <span class="text-[#FFF100]">低密度綠活</span> X <span class="text-[#FFF100]">減擔好室</span>
-      </span>
-      <br>
-      <span class="line2">
-        <span class="text-[#FFF100]">S</span>mile house, <span class="text-[#FFF100]">S</span>imple life, <span class="text-[#FFF100]">S</span>tart new future
-      </span>
-    </h4>
-    <p data-aos="flip-left" data-aos-delay="600" class="absolute text-center">
-      從1 到20，一步一腳印<br class="md:hidden"><span class="hidden md:inline">，</span>威泰錢都20 期，用心圓夢！<br>
-      圓從1 期開始的建築初衷<br class="md:hidden">
-      圓每個為夢想奮鬥的您<br class="md:hidden">
-    </p>
+  <section class="s1">
+    <!-- A : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/01.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-01.svg" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- A : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/01.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-01_1.svg" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- B : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/02.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-02.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- B : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/02.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-02.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- C : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/03_1.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-03_1.svg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-03_2.svg" data-aos="fade-right"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/pc/w-03_3.svg">
+        </div>
+      </div>
+    </div>
+    <!-- C : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/03_1.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-03_1_1.png" data-aos="fade-right"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- C : 全景  -->
+    <!-- <div class="container-fluid d-none d-md-block">
+      <div class="row">
+          <div class="col-12 pl-0 pr-0 C_block">
+              <img class="w-100" src="@/section/s1/C/C_001.jpg" alt="" style="width: 100%;">
+      
+          </div>
+      </div>
+      </div> -->
+    <div class="container-fluid d-sm-none" style="background-color: #2468cd;">
+      <div class="row">
+        <div class="pl-0 pr-0 C_M_block">
+          <div id="pan" class="pan pl-0 pr-0 view_C_M" alt="view_C_M">
+            <img class="selected" src="@/section/s1/m/03_map.svg" alt="main">
+          </div>
+          <div class="panorama_C">
+            <img src="@/section/s1/rwd/swipe_01.svg" alt="">
+          </div>
+          <div class="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/03_2.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-03_2.svg" data-aos="fade-right"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/m/w-03_3.svg" data-aos="fade-right"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- D : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/04.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-04.svg" data-aos="fade-left"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/pc/w-04-1.svg">
+        </div>
+      </div>
+    </div>
+    <!-- D : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/04.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-04.png" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/m/w-04-2.svg" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- E : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/05.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-05_1.svg" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/pc/w-05-1.svg">
+        </div>
+      </div>
+    </div>
+    <!-- E : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/05_2.jpg" alt="">
+          <div class="A_carousel_m" style="position: absolute;top:0;right: 0;">
+            <div id="A_carousel_m1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="@/section/s1/m/05-s1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="@/section/s1/m/05-s2.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-next" type="button" data-bs-target="#A_carousel_m1"
+                data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <img class="w-100 word" src="@/section/s1/m/w-05_3.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/m/w-05_2.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">               
+        </div>
+        <div class="col-12 pl-0 pr-0 A_M_block">
+          <img class="w-100" src="@/section/s1/m/05_3.jpg" alt="">
+          <img class="w-100 word" src="@/section/s1/m/w-05-3.png" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- F : Block -->
+    <div id="block-f" class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/06_1.jpg" alt="" title="">
+          <div class="A_carousel_F" style="position: absolute;top:0;right: 0;width: 100%;">
+            <div id="A_carousel_F" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="@/section/s1/pc/06-s1.png" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="@/section/s1/pc/06-s2.png" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-next" type="button" data-bs-target="#A_carousel_F"
+                data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <img class="w-100 word" src="@/section/s1/pc/w-06-2.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- F : mobile Block -->
+    <div class="container-fluid d-md-none" style="overflow: hidden;background-color: #333333;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_M_block" style="padding: 0;">
+          <!-- <img class="w-100" src="@/section/s1/m_A/01.jpg">
+            <img class="w-100" src="@/section/s1/m_A/text_01.svg"
+                style="position: absolute;top: 0px;left: 0px;width: 100%;"> -->
+          <div class="A_carousel_m">
+            <div id="A_carousel_m" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="@/section/s1/m/06-1_2.jpg" class="d-block w-100" alt="...">
+                  <img src="@/section/s1/m/w-06-1-2.png" class="d-block w-100 word" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="@/section/s1/m/06-2_2.jpg" class="d-block w-100" alt="...">
+                  <img src="@/section/s1/m/w-06-2-2.png" class="d-block w-100 word" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="@/section/s1/m/06-3_1.jpg" class="d-block w-100" alt="...">
+                  <img src="@/section/s1/m/w-06-3-3.png" class="d-block w-100 word" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#A_carousel_m"
+                data-bs-slide="prev" style="padding-top: 50%;">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#A_carousel_m"
+                data-bs-slide="next" style="padding-top: 50%;">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- F : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/07_1.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-07.png" data-aos="fade-up"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+          <img class="w-100 word" src="@/section/s1/pc/w-07_2.svg">
+        </div>
+      </div>
+    </div>
+    <!-- G : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/08-1.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-08-1.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- H : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/09.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-09_1.svg" data-aos="fade-right"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
+    <!-- I : Block -->
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+      <div class="row">
+        <div class="col-12 pl-0 pr-0 A_block">
+          <img class="w-100" src="@/section/s1/pc/10.jpg" alt="" title="">
+          <img class="w-100 word" src="@/section/s1/pc/w-10.svg" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+@import "@/assets/style/my.css";
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css";
+@import "@/assets/style/my_bootstrap.css";
+@import "@/assets/style/animate.min.css";
+@import "@/assets/style/animate_add.css";
+@import "@/assets/style/swiper_app.css";
+@import "@/assets/style/style.css";
 
 .s1 {
-  width: 100%;
-  height: size-m(736);
-  font-weight: 500;
-  @media screen and (min-width:768px) {
-    height: size(1080);
-  }
   
-  .people {
-    top: size-m(283);
-    left: size-m(151);
-    width: size-m(180);
-    @media screen and (min-width:768px) {
-      top: size(132);
-      left: size(198);
-      width: size(416);
+  #block-f {
+
+    .swiper {
+      z-index: 0;
     }
+
+    .carousel-control-next {
+      z-index: 1;
+    }
+
   }
 
-  .main {
-    top: size-m(40);
-    left: size-m(45);
-    width: size-m(288);
-    @media screen and (min-width:768px) {
-      top: size(346);
-      left: size(189);
-      width: size(618);
-    }
-  }
-  
-  h3 {
-    //left: size-m(55);
-    left: size-m(70);
-    top: size-m(251);
-    line-height: size-m(29);
-    font-size: 5vw;
-    @media screen and (min-width:768px) {
-      //left: size(210);
-      left: size(185);
-      top: size(787);
-      line-height: size(71);
-      font-size: 2.48vw;
-    }
-  }
-  
-  h2 {
-    left: size(1013);
-    top: size(435);
-    line-height: size(107);
-    font-weight: 900;
-    font-size: 3.95vw;
-    @media screen and (max-width:767px) {
-      width: size-m(200);
-      left: size-m(90);
-      top: size-m(399);
-      font-size: 13vw;
-      line-height: 15vw;
-
-      span {
-        font-size: 10.6vw;
-        line-height: 1;
-      }
-    }
-  }
-
-  h4 {
-    left: size(960);
-    top: size(548);
-    line-height: size(58);
-    font-size: 2.06vw;
-     
-    @media screen and (max-width:767px) {
-      left: size-m(70);
-      top: size-m(513);
-      line-height: 5vw;
-
-      .line1 {
-        font-size: 3.77vw;
-      }
-        
-      .line2 {
-        font-size: 3.17vw;
-      }
-    }
-  }
-  
-  p {
-    left: size-m(95);
-    top: size-m(570);
-    font-size: 4vw;
-    line-height: 7.2vw;
-    @media screen and (min-width:768px) {
-      left: size(993);
-      top: size(706);
-      font-size: 1.6vw;
-      line-height: 2.7vw;
-    }
-  }
 }
-
 </style>
 
-<script setup>
-// import { inject } from 'vue';
-// const smoothScroll = inject('smoothScroll')
-// const scrollTo = (el) => {
-//   smoothScroll({
-//     scrollTo: document.querySelector(el)
-//   })
-// }
+<script>
+import "https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js";
 </script>
