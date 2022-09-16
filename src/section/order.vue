@@ -19,9 +19,8 @@
               @input="(event) => (formData.phone = event.target.value)" />
             <select class="aa-select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
-              <option value="三房">三房</option>
               <option value="透天">透天</option>
+              <option value="別墅">別墅</option>
             </select>
             <select class="aa-select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
