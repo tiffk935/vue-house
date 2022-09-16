@@ -50,10 +50,10 @@
   </div>
 
   <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
-    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="aa-modal-toggle" />
+  <div class="aa-modal -mt-20 md:-mt-72">
+    <div class="aa-modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="contact-modal" class="aa-btn aa-btn-sm aa-btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="清景麟名人坊" srcset="" />
       <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="清景麟名人坊" srcset="" />
@@ -67,7 +67,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="aa-btn aa-btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',

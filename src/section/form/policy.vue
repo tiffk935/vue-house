@@ -1,7 +1,7 @@
 <template>
-  <input type="checkbox" id="policy-modal" class="modal-toggle" />
-  <div class="modal">
-    <div class="modal-box w-11/12 max-w-5xl text-left">
+  <input type="checkbox" id="policy-modal" class="aa-modal-toggle" />
+  <div class="aa-modal">
+    <div class="aa-modal-box w-11/12 max-w-5xl text-left">
       <div class="text-3xl font-bold">個資告知事項聲明</div>
       <h3 class="text-lg py-4">
         非常歡迎您光臨「{{
@@ -81,8 +81,8 @@
           本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。
         </p>
       </div>
-      <div class="modal-action">
-        <label for="policy-modal" class="btn">關閉</label>
+      <div class="aa-modal-action">
+        <label for="policy-modal" class="aa-btn">關閉</label>
       </div>
     </div>
   </div>
