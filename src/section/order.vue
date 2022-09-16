@@ -43,7 +43,7 @@
     <div class="flex gap-2 items-center justify-center control">
       <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="aa-checkbox bg-white rounded-md" />
-      <p>
+      <p class="mb-0">
         本人知悉並同意<label for="policy-modal"
           class="aa-modal-button mb-0 text-[#D9374B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
       </p>
@@ -102,6 +102,7 @@
     height: 300px;
     gap: size(80);
     margin-bottom: size(50);
+    padding: 3px;
 
     .left {
       width: size(419);
