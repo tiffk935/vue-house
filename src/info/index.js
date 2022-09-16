@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "新北市中和區中山路二段178巷3號",
+    address: "新北市中和區中山路二段188號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14463.681906695343!2d121.500315!3d25.002818!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf4b7507526cddffc!2z6b6N55GpLeS4reWSjOermeW7uuahiCjljbPlsIflhazplosp!5e0!3m2!1szh-TW!2stw!4v1662966043130!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/RiXMgXWkUhfcXS836",
     phone: "02-2240-9666",
