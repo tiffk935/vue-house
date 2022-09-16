@@ -7,11 +7,11 @@ export default {
         keywords: caseName,
     },
     address: "高雄市橋頭區里林東路186號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.0080911523155!2d120.3015687!3d22.765080999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e5e3f271177%3A0xfd84fcc5307d3107!2zODI16auY6ZuE5biC5qmL6aCt5Y2A6YeM5p6X5p2x6LevMTg26Jmf!5e0!3m2!1szh-TW!2stw!4v1663142042731!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/LrBaq7SbUqanFWz77",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3679.0168134167484!2d120.3002916!3d22.7647573!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e5e3f271177%3A0xfd84fcc5307d3107!2zODI16auY6ZuE5biC5qmL6aCt5Y2A6YeM5p6X5p2x6LevMTg26Jmf!5e0!3m2!1szh-TW!2stw!4v1663309002058!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/zWKokyR939aT6hZQ6",
     phone: "07-611-2333",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/113938151313447/",
+    fbMessage: "https://m.me/113938151313447/",
     caseName: caseName,
     houseInfos: [
         ["建案名稱", "清景麟‧名人坊"],
@@ -23,7 +23,7 @@ export default {
         ["棟戶樓層", "9棟，4戶住家，5戶店面"],
         ["廣告代銷", ""],
     ],
-    gtmCode: ["GTM-527G33V"], // 可放置多個
+    gtmCode: ["GTM-NBP6FB5"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
