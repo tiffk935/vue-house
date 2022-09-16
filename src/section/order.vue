@@ -17,11 +17,11 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="aa-input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="aa-select w-full rounded-none" v-model="formData.room_type">
+            <!--select class="aa-select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="透天">透天</option>
               <option value="別墅">別墅</option>
-            </select>
+            </select-->
             <select class="aa-select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :key="city.label" :value="city.value">
