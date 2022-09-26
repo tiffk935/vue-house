@@ -12,9 +12,9 @@
             <div class="col">
               <div class="kv text-lg-center ">
                 <div class="kv-title text-lg-center">
-                  <img src="@/section/s1/00_logo.png" class="img-fluid img-protected mx-auto d-block kv-logo mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="00_logo" data-appear-anim-style="vanishIn" /><img src="@/section/s1/00_title.png" class="img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1 mg-sm" alt="00_logo" data-appear-anim-style="fadeInDown" /><img src="@/section/s1/00_subtitle.png" class="img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1" alt="00_logo" data-appear-anim-style="fadeInDown" />
+                  <img src="@/section/s1/00_logo.png" class="img-fluid img-protected mx-auto d-block kv-logo mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="00_logo" data-appear-anim-style="vanishIn" /><img src="@/section/s1/00_title.png" class="img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1 mg-sm" alt="00_logo" data-appear-anim-style="fadeInDown" /><img src="@/section/s1/00_subtitle.png" class="kv-subtitle img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1" alt="00_logo" data-appear-anim-style="fadeInDown" />
                 </div>
-                <img src="@/section/s1/00_eng.png" class="img-fluid img-protected mx-auto d-block eng" alt="00_logo" /><img src="@/section/s1/00_brand.png" class="img-fluid img-protected mx-auto d-block kv-brand" alt="00_logo" />
+                <!--img src="@/section/s1/00_eng.png" class="img-fluid img-protected mx-auto d-block eng" alt="00_logo" /--><img src="@/section/s1/00_brand.png" class="img-fluid img-protected mx-auto d-block kv-brand" alt="00_logo" />
               </div>
             </div>
           </div>
@@ -22,7 +22,7 @@
       </div>
       <!-- bloc-0 END -->
       <!-- bloc-1 -->
-      <div class="bloc full-width-bloc b-parallax l-bloc" id="bloc-1">
+      <!--div class="bloc full-width-bloc b-parallax l-bloc" id="bloc-1">
         <div class="parallax bg-01-bg">
         </div>
         <div class="container bloc-no-padding-lg bloc-no-padding-md bloc-no-padding-sm bloc-no-padding">
@@ -37,7 +37,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div-->
       <!-- bloc-1 END -->
       <!-- bloc-2 -->
       <div class="bloc full-width-bloc bg-02-bg-m d-bloc" id="bloc-2">
@@ -373,6 +373,10 @@
   }
 
   @media screen and (max-width:991px) {
+    .kv{
+    background-image:url("@/section/s1/00_bg-m.jpg");
+  }
+
     .change{
       background-image:url("@/section/s1/01_bg-m.jpg");
     }

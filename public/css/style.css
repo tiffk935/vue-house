@@ -20,7 +20,7 @@ a:hover{text-decoration: none; cursor:pointer;}
 
 /* Preloader */
 
-.page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("@/section/s1/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 2s;animation-duration: 0.5s;animation-fill-mode: both;}
+.page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 2s;animation-duration: 0.5s;animation-fill-mode: both;}
 .preloader-complete{animation-delay:0.1s;}
 @keyframes preloader-fade {0% {opacity: 1;visibility: visible;}100% {opacity: 0;visibility: hidden;}}
 
@@ -333,7 +333,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	justify-content:center;
 	align-content:center;
 	overflow:hidden;
-	background-image:url("@@/section/s1/00_bg.jpg");
+	background-image:url("img/00_bg.jpg");
 	position:relative;
 	width:100%;
 	height:100vh;
@@ -342,7 +342,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	min-height:768px;
 }
 .kv-logo{
-	width:80%;
+	width:40%;
+}
+
+.kv-subtitle{
+	width:70%;
 }
 .kv-title03{
 	position:absolute;
@@ -409,8 +413,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-size:1.8em;
 }
 .kv-title{
-	width:45%;
-	margin-top:-15%;
+	width:45vw;
+	margin-top:-11%;
 }
 .eng{
 	position:absolute;
@@ -455,7 +459,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:100%;
 }
 .master-bloc{
-	background-image:url("@/section/s1/03_bg.jpg");
+	background-image:url("img/03_bg.jpg");
 	background-position:left center;
 	background-size:cover;
 }
@@ -532,7 +536,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	width:55%;
 }
 .foxtron-bloc{
-	background-image:url("@/section/s1/07_bg.jpg");
+	background-image:url("img/07_bg.jpg");
 	background-position:center center;
 	background-size:cover;
 }
@@ -661,16 +665,16 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 /* Bloc image backgrounds */
 
 .bg-01-bg{
-	background-image:url("@/section/s1/01_bg.jpg");
+	background-image:url("img/01_bg.jpg");
 }
 .bg-07-bg{
-	background-image:url("@/section/s1/07_bg.jpg");
+	background-image:url("img/07_bg.jpg");
 }
 .bg-02-bg-m{
-	background-image:url("@/section/s1/02_bg-m.jpg");
+	background-image:url("img/02_bg-m.jpg");
 }
 .bg-08-bg{
-	background-image:url("@/section/s1/08_bg.jpg");
+	background-image:url("img/08_bg.jpg");
 }
 
 /* = Custom Bric Data
@@ -709,6 +713,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 
 /* = Mobile adjustments 
 -------------------------------------------------------------- */
+
+
 @media (max-width: 1024px)
 {
     .bloc.full-width-bloc, .bloc-tile-2.full-width-bloc .container, .bloc-tile-3.full-width-bloc .container, .bloc-tile-4.full-width-bloc .container{
@@ -760,7 +766,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 @media (max-width: 991px){
 	.kv-logo{
 		top:20%;
-		width:100%;
+		width:60%;
+		margin-bottom: 20px !important;
 	}
 	.form-img01{
 		width:30%;
@@ -776,23 +783,25 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	}
 	.kv-title{
 		width:60%;
-		margin-top:-80%;
+		justify-items: center;
 	}
 	.kv-brand{
-		width:30%;
+		width:90%;
 	}
 	.change-title{
 		width:80%;
 	}
 	.kv{
 		background-size:cover;
-		background-image:url("@/section/s1/00_bg-m.jpg");
+		background-image:url("img/00_bg-m.jpg");
+		background-position: center center;
 		min-height:768px;
+		display: flex;
 	}
 	.change{
 		height:100vh;
 		background-size:cover;
-		background-image:url("@/section/s1/01_bg-m.jpg");
+		background-image:url("img/01_bg-m.jpg");
 		min-height:768px;
 		background-position:center bottom;
 	}
@@ -820,7 +829,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		width:100%;
 	}
 	.panasonic{
-		background-image:url("@/section/s1/05_bg-m.jpg");
+		background-image:url("img/05_bg-m.jpg");
 		background-size:cover;
 		background-position:center bottom;
 	}
@@ -938,14 +947,14 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		position:relative;
 	}
 	.station-slide01{
-		background-image:url("@/section/s1/02_bg01-m.jpg");
+		background-image:url("img/02_bg01-m.jpg");
 		margin-bottom:50px;
 	}
 	.station-slide-box{
 		height:85%;
 	}
 	.station-slide02{
-		background-image:url("@/section/s1/02_bg02-m.jpg");
+		background-image:url("img/02_bg02-m.jpg");
 	}
 	.change-content{
 		width:60%;
@@ -965,7 +974,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		bottom:30px;
 	}
 	.foxtron{
-		background-image:url("@/section/s1/07_bg-m.jpg");
+		background-image:url("img/07_bg-m.jpg");
 		background-size:cover;
 		position:relative;
 		min-height:768px;
@@ -1100,7 +1109,6 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		height:400px;
 	}
 	.kv{
-		background-position:center bottom;
 		height:100vh;
 		min-height:480px;
 	}
