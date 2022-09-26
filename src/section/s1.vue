@@ -325,12 +325,12 @@
       <!-- ScrollToTop Button END-->
       <!-- bloc-9 -->
       <div class="bloc full-width-bloc d-bloc b-parallax" id="bloc-9">
-        <div class="parallax bg-07-bg">
+        <div class="bg-07-bg">
         </div>
         <div class="container bloc-no-padding-lg bloc-no-padding">
           <div class="row no-gutters">
             <div class="col">
-              <div class="foxtron ">
+              <div class="foxtron">
                 <div class="foxtron-box  scroll-fx-down-in">
                   <img src="@/section/s1/07_title.png" class="img-fluid img-protected mx-auto foxtron-title animated vanishIn" alt="07_title01" data-appear-anim-style="vanishIn" /><img src="@/section/s1/07_title01-m.png" class="img-fluid img-protected mx-auto foxtron-title01-m mg-lg animated vanishIn" alt="07_title01" data-appear-anim-style="vanishIn" /><img src="@/section/s1/07_title02-m.png" class="img-fluid img-protected mx-auto foxtron-title02-m animated fadeInDown animDelay1" alt="07_title01" data-appear-anim-style="fadeInDown" />
                 </div>
