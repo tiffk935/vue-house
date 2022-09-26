@@ -1,27 +1,31 @@
 <template>
-  <div class="contact-info mx-auto bg-[#0B5034] flex flex-col items-center justify-between">
-    <div class="logo"></div>
-    <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
-        <div class="flex-1">{{ info.phone }}</div>
+  <div class="contact-info-wrapper relative">
+    <img class="style1" src="@/section/form/style1.png" alt="春福安安" />
+    <img class="style2" src="@/section/form/style2.png" alt="春福安安" />
+    <div class="contact-info mx-auto bg-[#00797F] flex flex-col items-center justify-between relative">
+      <div class="logo"></div>
+      <div class="flex justify-between w-full contact-item-box">
+        <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+          <img src="@/section/form/phone.svg" alt="春福安安" srcset="" />
+          <div class="flex-1">{{ info.phone }}</div>
+        </div>
+        <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+          <img src="@/section/form/messenger.svg" alt="春福安安" srcset="" />
+          <div class="flex-1">FB 諮詢</div>
+        </div>
+        <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+          <img src="@/section/form/fb.svg" alt="春福安安" srcset="" />
+          <div class="flex-1">前往粉絲專頁</div>
+        </div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
-        <div class="flex-1">FB 諮詢</div>
-      </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="戀JIA" srcset="" />
-        <div class="flex-1">前往粉絲專頁</div>
-      </div>
-    </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
-      <div class="flex contact-item justify-between items-center address">
-        <div>{{ info.address }}</div>
-      </div>
-      <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
-        <div>導航 GoogleMap</div>
+      <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
+        <div class="flex contact-item justify-between items-center address">
+          <div>{{ info.address }}</div>
+        </div>
+        <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+          <img src="@/section/form/gmap.svg" alt="春福安安" srcset="" />
+          <div>導航 GoogleMap</div>
+        </div>
       </div>
     </div>
   </div>
@@ -30,34 +34,34 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/phone.svg" alt="春福安安" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="春福安安" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/pen.svg" alt="春福安安" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="春福安安" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
 
   <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
-  <div class="modal -mt-20 md:-mt-72">
-    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="aa-modal-toggle" />
+  <div class="aa-modal -mt-20 md:-mt-72">
+    <div class="aa-modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="contact-modal" class="aa-btn aa-btn-sm aa-btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="春福安安" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="春福安安" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="春福安安" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -67,7 +71,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="aa-btn aa-btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -85,6 +89,33 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+.contact-info-wrapper {
+
+  .style1, .style2 {
+    position: absolute;
+    bottom: 0;
+  }
+
+  .style1 {
+    width: size(605);
+    left: size(-16);
+  }
+
+  .style2 {
+    width: size(623);
+    left: size(1401);
+  }
+
+  @media screen and (max-width:768px) {
+
+    .style1, .style2 {
+      display: none;
+    }
+
+  }
+
+}
+
 .contact-info {
   width: size(1200);
   padding: size(68) size(160) size(56) size(160);
@@ -92,8 +123,8 @@
   position: relative;
 
   .logo {
-    width: size(408.76);
-    height: size(182.51);
+    width: size(468.38);
+    height: size(101.97);
     background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -176,8 +207,8 @@
       }
 
       &.map-btn {
-        background-color: #FFFF00;
-        border-color: #FFFF00;
+        background-color: #FFC107;
+        border-color: #FFC107;
         color: theme('colors.color2');
         
         img {
@@ -185,7 +216,7 @@
         }
 
         &:hover {
-          background-color: #0B5034;
+          background-color: #00797F;
           border-color: #fff;
           color: #fff;
 
@@ -196,43 +227,7 @@
       }
     }
   }
-
-  // .address-wrap {
-  //   .contact-item {
-      
-      
-
-  //     // &.address {
-  //     //   background-color: #fff;
-  //     //   border-color: #fff;
-
-  //     //   &:before {
-  //     //     background-color: #fff;
-  //     //   }
-  //     // }
-  //   }
-  // }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width:768px) {
   .mo-contact-info {
@@ -246,7 +241,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #0B5034;
+      background-color: #00797F;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -271,9 +266,9 @@
     justify-content: flex-start;
 
     .logo {
-      width: size-m(207.33);
-      height: size-m(92.57);
-      background-image: url("@/section/form/logo.svg");
+      width: size-m(261);
+      height: size-m(202);
+      background-image: url("@/section/form/logo-m.svg");
       margin-bottom: size-m(39);
     }
 

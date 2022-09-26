@@ -2,34 +2,34 @@
   <div class="order relative text-center">
     <div class="order-inner">
       
-      <div class="order-inner2">
+      <div class="order-inner2 relative">
         <!-- Title -->
         <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="春福安安" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="春福安安" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+            <input type="text" placeholder="姓名" class="aa-input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" />
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+            <input type="text" placeholder="手機" class="aa-input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <select class="aa-select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
             </select>
-            <select class="select w-full rounded-none" v-model="formData.city">
+            <select class="aa-select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :key="city.label" :value="city.value">
                 {{ city.label }}
               </option>
             </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
+            <select class="aa-select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>居住地區</option>
               <option v-for="area in areaList" :key="area.label" :value="area.value">
                 {{ area.label }}
@@ -38,17 +38,17 @@
           </div>
           <div class="right h-full">
             <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
+              class="aa-textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
           </div>
         </div>
 
         <!-- Policy -->
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-            class="checkbox bg-white rounded-md" />
+            class="aa-checkbox bg-white rounded-md" />
           <p class="mb-0">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#D9374B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="aa-modal-button text-[#D9374B] cursor-pointer hover:opacity-70 mb-0">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -58,9 +58,12 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 cursor-pointer btregistration bg-[#0B5034] text-white" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 cursor-pointer btregistration bg-[#00797F] text-white" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
+
+        <img class="style1 block md:hidden" src="@/section/form/style1.png" alt="春福安安" />
+        <img class="style2 block md:hidden" src="@/section/form/style2.png" alt="春福安安" />
       </div>
 
       <!-- Contact Info -->
@@ -82,11 +85,6 @@
   width: 100%;
   padding-top: size(115);
   background: #E3E3E3;
-
-  .order-inner {
-    background-image: url('@/section/form/bg.svg');
-    background-size: cover;
-  }
 
   .order-title {
     font-size: size(43);
@@ -130,7 +128,7 @@
   }
 
   .send {
-    background: #0B5034;
+    background: #00797F;
     font-size: size(22);
     letter-spacing: 0.9em;
     text-indent: 0.9em;
@@ -211,6 +209,21 @@
 
     .control {
       font-size: size-m(14.6);
+    }
+
+    .style1, .style2 {
+      position: absolute;
+      bottom: 0;
+    }
+
+    .style1 {
+      width: size-m(204);
+      left: size-m(-16);
+    }
+
+    .style2 {
+      width: size-m(207);
+      left: size-m(166);
     }
   }
 }

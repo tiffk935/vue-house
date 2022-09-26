@@ -1,4 +1,4 @@
-const caseName = "戀JIA"
+const caseName = "春福安安"
 
 export default {
     meta: {
@@ -6,21 +6,18 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "高雄市橋頭區里林東路186號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3679.0080911523155!2d120.3015687!3d22.765080999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e0e5e3f271177%3A0xfd84fcc5307d3107!2zODI16auY6ZuE5biC5qmL6aCt5Y2A6YeM5p6X5p2x6LevMTg26Jmf!5e0!3m2!1szh-TW!2stw!4v1663142042731!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/LrBaq7SbUqanFWz77",
-    phone: "07-611-2333",
+    address: "高雄市三民區博愛一路218號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1712989385455!2d120.30367000000001!3d22.647401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f0a93c64a9%3A0x5df6f456aa9d2987!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Y2a5oSb5LiA6LevMjE46Jmf!5e0!3m2!1szh-TW!2stw!4v1664167871406!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/GECskA1ykqxz9UR8A",
+    phone: "07-311-8800",
     fbLink: "",
     fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["建案名稱", "清景麟‧名人坊"],
-        ["基地地址", "825高雄市橋頭區里林東路186號"],
-        ["建案型態", "透天 別墅"],
-        ["投資興建", "清景麟資產有限公司"],
-        ["建築設計", "佐為建築師事務所"],
-        ["基地面積", "246.73坪"],
-        ["棟戶樓層", "9棟，4戶住家，5戶店面"],
+        ["投資興建", "新春建設股份有限公司"],
+        ["規劃坪數", "24坪、28坪、36坪"],
+        ["基地面績", "約637.56坪"],
+        ["房型規劃", "2-3房、店面"],
         ["廣告代銷", ""],
     ],
     gtmCode: ["GTM-527G33V"], // 可放置多個

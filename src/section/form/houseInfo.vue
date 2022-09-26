@@ -7,8 +7,8 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="(item, idx) in info.houseInfos" :key="idx">
-                        <p class="mr-5 border-l-2 border-[#0B5034] pl-2 ">{{ item[0] }}</p>
-                        <img v-if="idx == 7" class='logo2' src='@/section/form/logo2.svg'>
+                        <p class="mr-5 border-l-2 border-[#00797F] text-[#00797F] font-bold pl-2 ">{{ item[0] }}</p>
+                        <img v-if="idx == 4" class='logo2' src='@/section/form/logo2.svg'>
                         <p v-else class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -17,7 +17,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="戀JIA" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="春福安安" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs mb-0">網頁製作</p></a>
     </div>
 </template>
@@ -28,10 +28,6 @@
 .info-box {
 
     width: size(900);
-
-    p {
-        margin: 0;
-    }
 
     .title {
         width: 100%;

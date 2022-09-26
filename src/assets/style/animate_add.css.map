@@ -1,9 +1,0 @@
-{
-    "version": 3,
-    "mappings": "AAAA,AAAA,oBAAoB,CAAC;EAEjB,kBAAkB,EAAE,IAAI;CAE3B",
-    "sources": [
-        "animate_add.scss"
-    ],
-    "names": [],
-    "file": "animate_add.css"
-}
