@@ -11,7 +11,7 @@ export default {
     googleLink: "https://goo.gl/maps/AZ7q9piMV1xrD2oz9",
     phone: "07-311-8800",
     fbLink: "https://www.facebook.com/profile.php?id=100078647176285",
-    fbMessage: "https://m.me/10007864717628/",
+    fbMessage: "https://m.me/100078647176285/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "三地開發建築股份有限公司"],
