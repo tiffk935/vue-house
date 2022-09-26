@@ -379,6 +379,10 @@
   .bg-08-bg{
     background-image:url("@/section/s1/08_bg.jpg");
   }
+  .foxtron{
+      background-image:url("@/section/s1/07_bg.jpg");
+      background-size: cover;
+    }
 
   @media screen and (max-width:991px) {
     .kv{
