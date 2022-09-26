@@ -22,6 +22,12 @@
       </div>
       <!-- bloc-0 END -->
       <!-- bloc-1 -->
+      <div class="kv2 text-lg-center">
+        <div class="text-lg-center  change-title">
+                  <img src="@/section/s1/01_title.png" class="img-fluid img-protected mx-auto d-block kv-logo mg-lg animated zoomIn none" alt="00_logo" data-appear-anim-style="zoomIn" /><img src="@/section/s1/01_content.png" class="img-fluid img-protected mx-auto d-block change-content animated fadeInUp none" alt="00_logo" data-appear-anim-style="fadeInUp" />
+                </div>
+                <img src="@/section/s1/01_eng.png" class="img-fluid img-protected mx-auto d-block change-eng" alt="00_logo" />
+      </div>
       <!--div class="bloc full-width-bloc b-parallax l-bloc" id="bloc-1">
         <div class="parallax bg-01-bg">
         </div>
@@ -358,7 +364,9 @@
   .kv{
     background-image:url("@/section/s1/00_bg.jpg");
   }
-
+  .kv2{
+    background-image:url("@/section/s1/01_bg.jpg");
+  }
   .bg-01-bg{
     background-image:url("@/section/s1/01_bg.jpg");
   }
@@ -375,6 +383,9 @@
   @media screen and (max-width:991px) {
     .kv{
     background-image:url("@/section/s1/00_bg-m.jpg");
+  }
+  .kv2{
+    background-image:url("@/section/s1/01_bg-m.jpg");
   }
 
     .change{
