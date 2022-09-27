@@ -1553,6 +1553,57 @@ body {
 }
 /*# sourceMappingURL=style.css.map */
 
+
+/* 新主視覺*/
+.s1new{
+  background: #00797f;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 46.875vw;
+  max-height: 56.25vw;
+}
+.synlogo{
+  position: absolute;
+    right: 2%;
+    top: 2%;
+    width: 20%;
+}
+
+.s1 .bg-img{
+width: 100%;
+
+}
+
+.s1 .bg-img .style1{
+  position: absolute;
+  bottom:0;
+  left:0;
+  -webkit-transform: skewX(2deg);
+  transform: skewX(2deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: anx 2s ease-in-out infinite alternate;
+  animation: anx 2s ease-in-out infinite alternate;
+}
+
+.s1 .bg-img .style2{
+  position: absolute;
+  bottom:0;
+  right:0;
+  -webkit-transform: skewX(2deg);
+  transform: skewX(2deg);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+  -webkit-animation: anx 2s ease-in-out infinite alternate;
+  animation: anx 2s ease-in-out infinite alternate;
+}
+
+
+
+
+
+
 /* 首頁底圖動畫 */
 .A_block .into {
   background: -webkit-gradient(linear, left top, right top, from(#fff0), color-stop(#6192a6), to(#6192a6));
@@ -1613,6 +1664,7 @@ body {
   position: absolute;
   width: 100%;
   
+  
   top: 0%;
   right: 0%;
   -webkit-transition: all 1.3s;
@@ -1621,6 +1673,8 @@ body {
 
 .A_block .A_P_001 img {
   width: 100%;
+  filter: drop-shadow(0 0 0.2em rgba(0,0,0,.4));
+  
 }
 
 

@@ -1,16 +1,21 @@
 <template>
   <section class="s1">
     <!-- A : Block 首頁 -->
-    <div class="container-fluid d-none d-md-block">
+    <div class=" d-none d-md-block">
+     <div class="s1new"> 
+      <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
       <div class="row">
         <div class="col-12 pl-0 pr-0 A_block">
           <div class="into"></div>
-          <img class="w-100 " src="@/section/s1/A/A_1.jpg">
-          <div class="A_P_001 animate__animated animate__fadeInDown animate__delay-3s"
-            style="--animate-duration: 3s;">
+          <div class="A_P_001 animate__animated animate__fadeInDown animate__delay-1s"
+            style="--animate-duration: 1s;">
             <img src="@/section/s1/A/A_2.svg" alt="">
           </div>
         </div>
+      </div>
+      <div class="bg-img">
+      <img src="@/section/s1/A/style_1.png" alt="" class="style1">
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
       </div>
     </div>
     <div class="container-fluid d-md-none">
@@ -23,6 +28,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
     <!-- B -->
     <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
