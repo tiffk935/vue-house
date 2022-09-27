@@ -163,7 +163,6 @@
     .order-inner2 {
       padding-top: size-m(40);
       padding-bottom: size-m(60);
-      background-image: url('@/section/form/bg-m.svg');
       background-size: cover;
       background-position: bottom right;
     }
