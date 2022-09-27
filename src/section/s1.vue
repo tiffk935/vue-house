@@ -131,7 +131,7 @@
       </div>
     </div>
     <!-- F -->
-    <!--div class="container-fluid d-none d-md-block" style="overflow: hidden;">
+    <div class="container-fluid d-none d-md-block" style="overflow: hidden;">
       <div class="row">
         <div class="col-12 pl-0 pr-0 A_block">
           <img class="w-100" src="@/section/s1/F/F_1.jpg">
@@ -141,7 +141,7 @@
         </div>
       </div>
     </div>
-    <div class="container-fluid d-md-none" style="overflow: hidden;">
+    <!--div class="container-fluid d-md-none" style="overflow: hidden;">
       <div class="row">
         <div class="col-12 pl-0 pr-0 A_M_block">
           <img class="w-100" src="@/section/s1/F/m_F_1.jpg">
