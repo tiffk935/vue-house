@@ -1,66 +1,72 @@
   <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
-    <!-- Title -->
-    <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
-    <!-- Title Image -->
-    <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
-      data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
-      data-aos-duration="1000"> -->
-    <!-- Form -->
-    <div class="form mx-auto relative flex items-start justify-center">
-      <div class="left h-full flex flex-col justify-between items-center">
-        <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-          @input="(event) => (formData.name = event.target.value)" />
-        <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-          @input="(event) => (formData.phone = event.target.value)" />
-        <select class="select w-full rounded-none" v-model="formData.room_type">
-          <option value="" selected disabled>需求房型</option>
-          <option value="兩房">兩房</option>
-          <option value="三房">三房</option>
-          <option value="透天">透天</option>
-        </select>
-        <select class="select w-full rounded-none" v-model="formData.city">
-          <option value="" selected disabled>居住縣市</option>
-          <option v-for="city in cityList" :value="city.value">
-            {{ city.label }}
-          </option>
-        </select>
-        <select class="select w-full rounded-none" v-model="formData.area">
-          <option value="" selected disabled>居住地區</option>
-          <option v-for="area in areaList" :value="area.value">
-            {{ area.label }}
-          </option>
-        </select>
+  <div class="order relative text-center">
+    <div class="order2 relative">
+      <div class="rect hidden md:block"></div>
+      
+      <div class="order3 relative">
+        <div class="rect md:hidden"></div>
+        <!-- Title -->
+        <div class="order-title relative text-center text-[#595757]">{{ info.order.title }}</div>
+        <!-- Title Image -->
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="清景麟國家公園" srcset=""
+          data-aos="fade" data-aos-duration="1000">
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="清景麟國家公園" srcset="" data-aos="fade"
+          data-aos-duration="1000"> -->
+        <!-- Form -->
+        <div class="form mx-auto relative flex items-start justify-center">
+          <div class="left h-full flex flex-col justify-between items-center">
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" />
+            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)" />
+            <select class="select w-full rounded-none" v-model="formData.room_type">
+              <option value="" selected disabled>需求房型</option>
+              <option value="兩房">兩房</option>
+              <option value="三房">三房</option>
+            </select>
+            <select class="select w-full rounded-none" v-model="formData.city">
+              <option value="" selected disabled>居住縣市</option>
+              <option v-for="city in cityList" :value="city.value">
+                {{ city.label }}
+              </option>
+            </select>
+            <select class="select w-full rounded-none" v-model="formData.area">
+              <option value="" selected disabled>居住地區</option>
+              <option v-for="area in areaList" :value="area.value">
+                {{ area.label }}
+              </option>
+            </select>
+          </div>
+          <div class="right h-full">
+            <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
+          </div>
+        </div>
+
+        <!-- Policy -->
+        <div class="flex gap-2 items-center justify-center control">
+          <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+            class="checkbox bg-white rounded-md" />
+          <p>
+            本人知悉並同意<label for="policy-modal"
+              class="modal-button text-[#D9374B] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          </p>
+        </div>
+        <Policy />
+
+        <!-- Recaptcha -->
+        <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+          @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+
+        <!-- Send -->
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#000000] text-white rounded-none" @click="send()">
+          {{ sending ? '發送中..' : '送出表單' }}
+        </div>
       </div>
-      <div class="right h-full">
-        <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-          class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
-      </div>
+
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
-
-    <!-- Policy -->
-    <div class="flex gap-2 items-center justify-center control">
-      <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-        class="checkbox bg-white rounded-md" />
-      <p>
-        本人知悉並同意<label for="policy-modal"
-          class="modal-button text-[#D9374B] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-      </p>
-    </div>
-    <Policy />
-
-    <!-- Recaptcha -->
-    <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-      @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
-
-    <!-- Send -->
-    <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D9374B] text-white rounded-full" @click="send()">
-      {{ sending ? '發送中..' : '送出表單' }}
-    </div>
-
-    <!-- Contact Info -->
-    <ContactInfo />
 
     <!-- Map -->
     <Map />
@@ -75,7 +81,25 @@
 
 .order {
   width: 100%;
-  padding-top: size(115);
+
+  .order2 {
+    background-image: url(@/section/form/bg.png);
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .order3 {
+    padding-top: size(115);
+  }
+
+  .rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, #EAEAEA 0%, rgba(234, 234, 234, 0.6) 100%);
+  }
 
   .order-title {
     font-size: size(43);
@@ -143,9 +167,19 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(40);
     margin-top: size-m(0);
+
+    .order2 {
+      background: none;
+    }
+
+    .order3 {
+      padding-top: size-m(40);
+      padding-bottom: size-m(60);
+      background-image: url(@/section/form/bg-m.png);
+      background-size: cover;
+      background-position: center center;
+    }
 
     .order-title {
       font-size: size-m(29);

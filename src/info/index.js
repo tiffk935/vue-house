@@ -1,4 +1,4 @@
-const caseName = "戀JIA"
+const caseName = "清景麟國家公園"
 
 export default {
     meta: {
@@ -6,20 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "桃園市大園區大觀路595號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1103474936776!2d121.18124339999999!3d25.064248799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346820af94ef7b67%3A0x11134a66fcb2bab3!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A5aSn6KeA6LevNTk16Jmf!5e0!3m2!1szh-TW!2stw!4v1658754082639!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/eamn142jKNVssys97",
-    phone: "03-385-2333",
-    fbLink: "https://www.facebook.com/107771505357267/",
-    fbMessage: "https://m.me/107771505357267/",
+    address: "高雄市小港區松金段3地號(高松路VS松園一路)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.2318259737785!2d120.36713041525947!3d22.570431185183885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e1ce9aa64b221%3A0xf30a143be5960238!2zODEy6auY6ZuE5biC5bCP5riv5Y2A5p2-5ZyS5LiA6Lev!5e0!3m2!1szh-TW!2stw!4v1664511947808!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/ymyu1pjxyMo6yJez8",
+    phone: "0800-363-888",
+    fbLink: "",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["建設團隊", "威泰國際股份有限公司"],
-        ["行銷團隊", "全紘國事業有限公司"],
-        ["坪數規劃", "華厦:19-31 透天:72-88"],
-        ["聯絡電話", "03-385-2333"],
-        ["公設比例", "約22%"],
-        ["接待中心", "桃園市大園區大觀路595號"],
+        ["投資興建", "清景麟資產有限公司"],
+        ["工程營造", "力洋營造"],
+        ["建築設計", "大磊建築師事務所"],
+        ["燈光設計", "旭川光禾照明設計"],
+        ["公設設計", "盼達創意事業"],
+        ["基地面積", "約2180坪"],
+        ["房型規劃", "2-3房"],
+        ["企劃銷售", ""],
     ],
     gtmCode: ["GTM-527G33V"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
