@@ -22,17 +22,17 @@
 
 @keyframes floatY {
   to {
-    transform: translateY(-10%);
+    transform: translateY(-13%);
   }
 }
 @keyframes floatY2 {
   to {
-    transform: translateY(10%);
+    transform: translateY(13%);
   }
 }
 @keyframes floatY3 {
   to {
-    transform: translateY(10%) rotate(120deg) ;
+    transform: translateY(13%) rotate(120deg) ;
   }
 }
 @keyframes light {
@@ -81,7 +81,7 @@
     width: size-m(84);
     left: size-m(-27);
     top: size-m(317);
-    animation: floatY 2s alternate-reverse infinite ease-in-out;
+    animation: floatY 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(203);
       left: size(152);
