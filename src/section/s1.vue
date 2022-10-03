@@ -1,8 +1,14 @@
 <template>
   <section class="s1 relative">
-    <!-- <img data-aos="fade-left" data-aos-delay="0" class="people absolute" src="@/section/s1/bg.jpg"> -->
-    <img class="bg absolute hidden md:block" src="@/section/s1/bg.jpg" alt="清景麟國家公園" />
-    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.jpg" alt="清景麟國家公園" />
+    <img class="bg absolute hidden md:block" src="@/section/s1/bg.png" alt="清景麟國家公園" />
+    <img class="tree1 absolute hidden md:block" src="@/section/s1/tree1.png" alt="清景麟國家公園" />
+    <img class="tree2 absolute hidden md:block" src="@/section/s1/tree2.png" alt="清景麟國家公園" />
+    <img class="tree3 absolute hidden md:block" src="@/section/s1/tree3.png" alt="清景麟國家公園" />
+    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.png" alt="清景麟國家公園" />
+    <img class="tree1 absolute md:hidden" src="@/section/s1/tree1-m.png" alt="清景麟國家公園" />
+    <img class="tree2 absolute md:hidden" src="@/section/s1/tree2-m.png" alt="清景麟國家公園" />
+    <img class="tree3 absolute md:hidden" src="@/section/s1/tree3-m.png" alt="清景麟國家公園" />
+
     <img data-aos="fade-up" data-aos-delay="0" class="title absolute hidden md:block" src="@/section/s1/title.svg" alt="清景麟國家公園" />
     <img data-aos="fade-up" data-aos-delay="0" class="title absolute md:hidden" src="@/section/s1/title-m.svg" alt="清景麟國家公園" />
     <img data-aos="fade-up" data-aos-delay="500" class="subtitle absolute hidden md:block" src="@/section/s1/subtitle.svg" alt="清景麟國家公園" />
@@ -35,7 +41,7 @@
     transform: translateY(13%) rotate(120deg) ;
   }
 }
-@keyframes light {
+@keyframes skew {
   to {
     transform: skewX(0deg);
   }
@@ -48,11 +54,25 @@
     height: size(1080);
   }
 
-  .bg {
+  .bg, .tree1, .tree2, .tree3 {
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+    transform-origin: 50% 100%;
+    animation: skew 6s linear infinite alternate;
+  }
+
+  .tree1 {
+    transform: skewX(2deg);
+  }
+
+  .tree2 {
+    transform: skewX(6deg);
+  }
+  
+  .tree3 {
+    transform: skewX(15deg);
   }
 
   .title {
@@ -152,7 +172,7 @@
     mix-blend-mode: lighten;
     transform-origin: 35% 45%;
     transform: rotate(45deg);
-    animation: light 6s linear infinite alternate;
+    animation: skew 6s linear infinite alternate;
     @media screen and (min-width:768px) {
       width: size(628);
       left: size(332);
