@@ -9,16 +9,18 @@
     <img class="tree2 absolute md:hidden" src="@/section/s1/tree2-m.png" alt="清景麟國家公園" />
     <img class="tree3 absolute md:hidden" src="@/section/s1/tree3-m.png" alt="清景麟國家公園" />
 
-    <img data-aos="fade-up" data-aos-delay="0" class="title absolute hidden md:block" src="@/section/s1/title.svg" alt="清景麟國家公園" />
-    <img data-aos="fade-up" data-aos-delay="0" class="title absolute md:hidden" src="@/section/s1/title-m.svg" alt="清景麟國家公園" />
+    <img data-aos="fade-up" data-aos-delay="0" class="title absolute hidden md:block" src="@/section/s1/title.png" alt="清景麟國家公園" />
+    <img data-aos="fade-up" data-aos-delay="0" class="title absolute md:hidden" src="@/section/s1/title-m.png" alt="清景麟國家公園" />
     <img data-aos="fade-up" data-aos-delay="500" class="subtitle absolute hidden md:block" src="@/section/s1/subtitle.svg" alt="清景麟國家公園" />
     <img data-aos="fade-up" data-aos-delay="500" class="subtitle absolute md:hidden" src="@/section/s1/subtitle-m.svg" alt="清景麟國家公園" />
+    <!--
     <img class="bubble1 absolute" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble2 absolute" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble3 absolute" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble4 absolute" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble5 absolute hidden md:block" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble6 absolute hidden md:block" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
+    -->
     <img class="light absolute" src="@/section/s1/light.png" alt="清景麟國家公園" />
   </section>
 </template>
@@ -88,7 +90,7 @@
 
   .subtitle {
     width: size-m(212.2);
-    top: size-m(366);
+    top: size-m(380);
     left: size-m(81.46);
     @media screen and (min-width:768px) {
       width: size(557.54);
