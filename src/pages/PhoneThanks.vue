@@ -1,7 +1,7 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img-phone.png.png" alt="清景麟國家公園" class="img">
+            <img src="~@/assets/thank-img-phone.png" alt="清景麟國家公園" class="img">
             <img src="~@/assets/thank-img-phone-h.png" alt="清景麟國家公園" class="img-hover">
         </a>
     </div>
