@@ -96,13 +96,13 @@
   }
 
   .subtitle {
-    width: size-m(250);
+    width: size-m(300);
     top: size-m(380);
-    left: size-m(60);
+    left: size-m(35);
     @media screen and (min-width:768px) {
-      width: size(1000);
+      width: size(750);
       top: size(900.36);
-      left: size(450);
+      left: size(570);
     }
   }
 
