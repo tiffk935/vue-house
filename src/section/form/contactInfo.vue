@@ -294,9 +294,9 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-    setTimeout(() => {
-      window.location.href = "phoneThanks";
-    }, 1000);
+    // setTimeout(() => {
+    //   window.location.href = "phoneThanks";
+    // }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
