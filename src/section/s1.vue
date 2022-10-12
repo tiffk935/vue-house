@@ -1,13 +1,9 @@
 <template>
   <section class="s1 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s1/bg.png" alt="清景麟國家公園" />
+    <img class="bg absolute hidden md:block" src="@/section/s1/bg.jpg" alt="清景麟國家公園" />
     <img class="tree1 absolute hidden md:block" src="@/section/s1/tree1.png" alt="清景麟國家公園" />
-    <img class="tree2 absolute hidden md:block" src="@/section/s1/tree2.png" alt="清景麟國家公園" />
-    <img class="tree3 absolute hidden md:block" src="@/section/s1/tree3.png" alt="清景麟國家公園" />
-    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.png" alt="清景麟國家公園" />
+    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.jpg" alt="清景麟國家公園" />
     <img class="tree1 absolute md:hidden" src="@/section/s1/tree1-m.png" alt="清景麟國家公園" />
-    <img class="tree2 absolute md:hidden" src="@/section/s1/tree2-m.png" alt="清景麟國家公園" />
-    <img class="tree3 absolute md:hidden" src="@/section/s1/tree3-m.png" alt="清景麟國家公園" />
 
     <img data-aos="fade-up" data-aos-delay="0" class="title absolute hidden md:block" src="@/section/s1/title.png" alt="清景麟國家公園" />
     <img data-aos="fade-up" data-aos-delay="0" class="title absolute md:hidden" src="@/section/s1/title-m.png" alt="清景麟國家公園" />
@@ -21,7 +17,7 @@
     <img class="bubble5 absolute hidden md:block" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     <img class="bubble6 absolute hidden md:block" src="@/section/s1/bubble.png" alt="清景麟國家公園" />
     -->
-    <img class="light absolute" src="@/section/s1/light.png" alt="清景麟國家公園" />
+    <!--img class="light absolute" src="@/section/s1/light.png" alt="清景麟國家公園" /-->
   </section>
 </template>
 
@@ -66,8 +62,19 @@
   }
 
   .tree1 {
-    transform: skewX(2deg);
+    transform: skewX(6deg);
+    min-width: 115%;
+
+    @media screen and (min-width:768px) {
+    min-width: 115%;
   }
+
+  }
+
+
+
+
+
 
   .tree2 {
     transform: skewX(6deg);
@@ -79,7 +86,7 @@
 
   .title {
     width: size-m(310);
-    top: size-m(178.98);
+    top: size-m(138.98);
     left: size-m(33);
     @media screen and (min-width:768px) {
       width: size(904);
@@ -89,13 +96,13 @@
   }
 
   .subtitle {
-    width: size-m(212.2);
+    width: size-m(250);
     top: size-m(380);
-    left: size-m(81.46);
+    left: size-m(60);
     @media screen and (min-width:768px) {
-      width: size(557.54);
-      top: size(803.36);
-      left: size(681.22);
+      width: size(1000);
+      top: size(900.36);
+      left: size(450);
     }
   }
 
