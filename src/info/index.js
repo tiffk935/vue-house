@@ -23,7 +23,7 @@ export default {
         ["棟戶樓層", "9棟，4戶住家，5戶店面"],
         ["廣告代銷", ""],
     ],
-    gtmCode: ["GTM-T7HFZXK","GTM-M87MK5M"], // 可放置多個
+    gtmCode: ["GTM-M87MK5M","GTM-T7HFZXK"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
