@@ -345,7 +345,7 @@
     <!-- Main container END -->
 
     <a class="scroll-to-order" href="#order" v-smooth-scroll>
-      <img src="@/section/s1/scroll-to-order.svg">
+      <img src="@/section/s1/scroll-to-order.png">
     </a>
 
   </section>
@@ -417,10 +417,12 @@
     position: fixed;
     display: block;
     width: 7.3958vw;
-    top: 31.3541vw;
-    right: 2.2916vw;
+    bottom: 10vw;
+    right: 1vw;
     z-index: 1;
     display: none;
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.6));
+
     @media screen and (min-width:992px) {
       display: block;
     }
