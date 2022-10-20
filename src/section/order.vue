@@ -1,5 +1,5 @@
   <template>
-  <div class="order relative text-center">
+  <div id="order" class="order relative text-center">
     <!-- Title -->
     <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
     <!-- Title Image -->

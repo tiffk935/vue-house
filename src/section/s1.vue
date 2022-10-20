@@ -344,6 +344,10 @@
     </div>
     <!-- Main container END -->
 
+    <a class="scroll-to-order" href="#order" v-smooth-scroll>
+      <img src="@/section/s1/scroll-to-order.svg">
+    </a>
+
   </section>
 </template>
 
@@ -408,6 +412,19 @@
       background-image:url("@/section/s1/07_bg-m.jpg");
     }
   }
+
+  .scroll-to-order {
+    position: fixed;
+    display: block;
+    width: 7.3958vw;
+    top: 31.3541vw;
+    right: 2.2916vw;
+    z-index: 1;
+    display: none;
+    @media screen and (min-width:992px) {
+      display: block;
+    }
+  }
   
 }
 </style>
@@ -444,10 +461,5 @@
         document.querySelector('body').append(foo);
       }
     },
-    methods: {
-      aaa() {
-        console.log('aaaa')
-      }
-    }
   };
 </script>
