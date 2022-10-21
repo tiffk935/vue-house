@@ -34,7 +34,10 @@ import { createGtm } from '@gtm-support/vue-gtm';
 createApp(App)
     .use(Toast, toastOptions)
     .use(VueMobileDetection)
-    .use(VueSmoothScroll)
+    .use(VueSmoothScroll, {
+      duration: 1000,
+      updateHistory: false
+    })
     .use(VueSplide)
     .use(router)
     .use(Vue3TouchEvents)

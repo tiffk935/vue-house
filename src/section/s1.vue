@@ -270,6 +270,11 @@
         </div>
       </div>
     </div>
+
+    <a class="scroll-to-order" href="#order" v-smooth-scroll>
+      <img src="@/section/s1/scroll-to-order.png">
+    </a>
+
   </section>
 </template>
 
@@ -295,6 +300,20 @@
       z-index: 1;
     }
 
+  }
+
+  .scroll-to-order {
+    position: fixed;
+    display: block;
+    width: 7.3958vw;
+    bottom: 10vw;
+    right: 1vw;
+    z-index: 1;
+    display: none;
+    filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.6));
+    @media screen and (min-width:992px) {
+      display: block;
+    }
   }
 
 }
