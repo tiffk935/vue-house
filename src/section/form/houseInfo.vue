@@ -63,7 +63,7 @@
         }
     }
     .logo2 {
-        width: size(244);
+        width: size(400);
     }
 }
 
@@ -94,7 +94,7 @@
         }
 
         .logo2 {
-            width: size-m(194);
+            width: size-m(230);
         }
     }
 
