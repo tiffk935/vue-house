@@ -5,7 +5,7 @@
       <div class="row">
         <div class="col-12 pl-0 pr-0 A_block">
           <img class="w-100" src="@/section/s1/pc/01.jpg" alt="" title="">
-          <img class="w-100 word" src="@/section/s1/pc/w-01.svg" data-aos="fade-up"
+          <img class="w-100 word word-kv" src="@/section/s1/pc/w-01.svg" data-aos="fade-up"
             data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
         </div>
       </div>
@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-12 pl-0 pr-0 A_M_block">
           <img class="w-100 mobile-kv" src="@/section/s1/m/01.jpg" alt="">
-          <img class="w-100 word" src="@/section/s1/m/w-01_1.svg" data-aos="fade-up"
+          <img class="w-100 word word-kv" src="@/section/s1/m/w-01_1.svg" data-aos="fade-up"
             data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
         </div>
       </div>
@@ -295,7 +295,7 @@
     height: 100vh;
   }
 }
-.word{
+.word-kv{
   filter: drop-shadow(0px 0px 8px rgba(0, 0, 0, 0.8));
 }
 
