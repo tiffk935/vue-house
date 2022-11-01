@@ -31,7 +31,7 @@ const routes = [{
     },
     {
         path: "/:catchAll(.*)", // 此处需特别注意至于最底部
-        redirect: "/404",
+        redirect: "/",
     },
 ]
 const router = createRouter({

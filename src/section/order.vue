@@ -1,5 +1,5 @@
   <template>
-  <div class="order relative text-center">
+  <div id="order" class="order relative text-center">
     <!-- Title -->
     <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
     <!-- Title Image -->
@@ -18,7 +18,7 @@
           <option value="" selected disabled>需求房型</option>
           <option value="兩房">兩房</option>
           <option value="三房">三房</option>
-          <option value="透天">透天</option>
+          <option value="四房">四房</option>
         </select>
         <select class="aa-select w-full rounded-none" v-model="formData.city">
           <option value="" selected disabled>居住縣市</option>
@@ -43,7 +43,7 @@
     <div class="flex gap-2 items-center justify-center control">
       <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="aa-checkbox bg-white rounded-md" />
-      <p>
+      <p class="mb-0">
         本人知悉並同意<label for="policy-modal"
           class="aa-modal-button mb-0 text-[#D9374B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
       </p>
@@ -102,6 +102,7 @@
     height: 300px;
     gap: size(80);
     margin-bottom: size(50);
+    padding: 3px;
 
     .left {
       width: size(419);
