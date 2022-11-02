@@ -4,38 +4,29 @@
     <div class=" ">
      <div class="s1new pc-pv"> 
       <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
-      <div class="row">
-        <div class="col-12 pl-0 pr-0 A_block">
-          <div class="into"></div>
-          <div class="A_P_001 animate__animated animate__fadeInDown animate__delay-1s"
-            style="--animate-duration: 1s;">
+      <div class="s1logo">
             <img src="@/section/s1/A/A_2.svg" alt="">
-          </div>
-        </div>
       </div>
       <div class="bg-img">
       <img src="@/section/s1/A/style_1.png" alt="" class="style1">
       <img src="@/section/s1/A/style_2.png" alt="" class="style2">
-      <img src="@/section/s1/A/fl.png" alt="" class="style3">
+   <!--   <img src="@/section/s1/A/fl.png" alt="" class="style3">
       <img src="@/section/s1/A/fl.png" alt="" class="style4">
         <div class="bird">
         <img src="@/section/s1/A/bird.png" class="bird1" alt=""> 
-        </div>
+        </div> --> 
       </div>
     </div>
     <div class="mobile-pv">
       <div class="s1new">
         <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
         <div class="bg-img">
-          <img src="@/section/s1/A/style_m.png" alt="" class="stylem">
+     <!--         <img src="@/section/s1/A/style_m.png" alt="" class="stylem"> --> 
+      <div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
           </div>
-      <div class="row">
-        <div class="col-12 pl-0 pr-0 A_M_block">
-          <div class="into_M"></div>
-          <div class="A_M_P_001" >
+      <div class="s1logo">
             <img src="@/section/s1/A/m_A_2.svg" alt="">
-          </div>
-        </div>
       </div>
       </div>
     </div>
@@ -164,14 +155,8 @@
     </div-->
     <div class=" ">
      <div class="s1new pc-pv sg"> 
-      <div class="row">
-        <div class="col-12 pl-0 pr-0 A_block">
-          <div class="into"></div>
-          <div class="A_P_001 animate__animated animate__fadeInDown animate__delay-1s"
-            style="--animate-duration: 1s;">
+      <div class="s1logo">
             <img src="@/section/s1/A/A_2_sg.svg" alt="">
-          </div>
-        </div>
       </div>
       <div class="bg-img">
       <img src="@/section/s1/A/style_1.png" alt="" class="style1">
@@ -181,15 +166,12 @@
     <div class="mobile-pv sg">
       <div class="s1new">
         <div class="bg-img">
-          <img src="@/section/s1/A/style_m.png" alt="" class="stylem">
+         
+      <div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
           </div>
-      <div class="row">
-        <div class="col-12 pl-0 pr-0 A_M_block">
-          <div class="into_M"></div>
-          <div class="A_M_P_001" >
-            <img src="@/section/s1/A/m_A_2.svg" alt="">
-          </div>
-        </div>
+      <div class="s1logo">
+            <img src="@/section/s1/A/m_A_2_sg.svg" alt="">
       </div>
       </div>
     </div>
