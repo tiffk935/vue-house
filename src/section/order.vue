@@ -83,7 +83,7 @@
   width: 100%;
 
   .order2 {
-    background-image: url(@/section/form/bg.png);
+    background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
   }
@@ -176,7 +176,7 @@
     .order3 {
       padding-top: size-m(40);
       padding-bottom: size-m(60);
-      background-image: url(@/section/form/bg-m.png);
+      background-image: url(@/section/form/bg-m.jpg);
       background-size: cover;
       background-position: center center;
     }
