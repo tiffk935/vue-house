@@ -11,18 +11,24 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
-    <S0 />
     <S1 />
     <S2 />
+    <S3 />
+    <S4 />
+    <S5 />
+    <S6 />
     <Order />
   </div>
 </template>
 
 <script setup>
 import info from "@/info"
-import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
+import S3 from "@/section/s3.vue"
+import S4 from "@/section/s4.vue"
+import S5 from "@/section/s5.vue"
+import S6 from "@/section/s6.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -32,13 +38,27 @@ import AOS from 'aos';
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: false
+  showNav: true
 })
 
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
+
+    setTimeout(() => {
+      let status = 0;
+      let hideHand = false;
+      document.querySelector('.s2 .map').scrollLeft = document.querySelector('.s2 .map .map1').clientWidth * 0.38 - window.innerWidth/2;
+      document.querySelector('.s2 .map').addEventListener("scroll", () => {
+        status++;
+        if(status > 1 && !hideHand){
+          document.querySelector('.s2 .hand').style.opacity = 0;
+          document.querySelector('.s2 .hand-bg').style.opacity = 0;
+          hideHand = true;
+        }
+      });
+    }, 0);
   };
 
 })

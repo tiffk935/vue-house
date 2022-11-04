@@ -1,5 +1,6 @@
 <template>
-  <div class="contact-info mx-auto bg-[#D9374B] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto bg-white flex flex-col items-center justify-between">
+    <div class="border absolute"></div>
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
@@ -19,7 +20,7 @@
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-between items-center md:rounded-full" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -88,14 +89,20 @@
 .contact-info {
   width: size(1200);
   padding: size(68) size(160) size(56) size(160);
-  margin-top: size(73);
+  // margin-top: size(73);
   position: relative;
 
+  .border {
+    top: size(21);
+    bottom: size(21);
+    left: size(23);
+    right: size(23);
+    border: size(12) solid #D9374B;
+  }
+
   .logo {
-    //width: size(550);
-    //height: size(260);
-    width: size(371.32);
-    height: size(171.57);
+    width: size(448.44);
+    height: size(152.4);
     background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
@@ -109,9 +116,13 @@
     margin-top: size(20);
     gap: size(20);
 
+    &.address-wrap {
+      border: size(3) solid #D9374B;
+    } 
+
     .contact-item {
-      background-color: #FFDFE3;
-      color: #595757;
+      background-color: #D9374B;
+      color: #fff;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -136,7 +147,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(0);
+        filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
@@ -198,15 +209,21 @@
     width: size-m(375);
     height: auto;
     padding: size-m(50) size-m(32);
-    margin-top: size-m(60);
+    // margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
 
+    .border {
+      top: size-m(13);
+      bottom: size-m(13);
+      left: size-m(9);
+      right: size-m(10);
+      border: size-m(8) solid #D9374B;
+    }
+
     .logo {
-      //width: size-m(240);
-      //height: size-m(160);
-      width: size-m(177.42);
-      height: size-m(81.98);
+      width: size-m(258);
+      height: size-m(87.68);
       background-image: url("@/section/form/logo.svg");
       margin-bottom: size-m(39);
     }
@@ -220,6 +237,7 @@
       &.address-wrap {
         border-radius: size-m(50);
         margin-top: size-m(20);
+        border: size-m(4) solid #D9374B;
       }
 
       .contact-item {

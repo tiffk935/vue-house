@@ -1,13 +1,13 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#D9374B] text-white">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title font-['Noto_Sans_TC']">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
-                    <div class="item font-bold flex items-center w-full whitespace-nowrap"
+                    <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-2 border-[#D9374B] pl-2 ">{{ item[0] }}</p>
+                        <p class="mr-5 font-bold border-l-2 border-[#ffffff] pl-2 ">{{ item[0] }}</p>
                         <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
         font-size: size(48);
         font-weight: 700;
         margin-bottom: size(23);
-        color: #595757;
+        color: #fff;
     }
 
     .info-items {
