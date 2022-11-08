@@ -1,7 +1,19 @@
 <template>
   <section class="s3 text-white bg-[#D9374B] relative">
-    <img class="text1 absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/text1-m.svg" />
-    <img class="text1 absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/text1.svg" />
+
+    <div class="title">
+    <div class="t1 hidden md:block" data-aos="fade-up" data-aos-delay="200">國門心地標<br>綠景城中城</div>
+    <div class="t1 md:hidden" data-aos="fade-up" data-aos-delay="200">國門心地標 綠景城中城</div>
+
+    <div class="t2" data-aos="fade-up" data-aos-delay="300">三座埤塘生態、多座公園 Chill樂活<br>千塘之鄉馥郁芬芳  城市稀有慢步調</div>
+
+    <div class="content" data-aos="fade-up" data-aos-delay="300">
+     大園客運特區以符合未來趨勢的綠色城市為概念，除了融入河流、埤塘、綠地等當地特色景觀，保留區內三處較大埤塘及施作灌溉溝渠以塑造親水景觀環境，創造獨特都市風貌與提供高品質之生活空間。<br>
+其中店子埤占地面積約5.5公頃，環埤步道長度超過千米，改造過程中，市府特意保留歷史與人文特色，採用舊地名為埤塘生態公園命名，也保留180公尺自然生態樹林，成了埤塘賞鳥秘境。
+      </div>
+    </div>
+
+
     <div class="slider slider1 absolute">
       <swiper 
         :pagination="{
@@ -26,9 +38,17 @@
       </swiper>
     </div>
     <div class="w-bg bg-white absolute"></div>
-    <img class="map absolute" src="@/section/s3/map.png" />
-    <img class="text2 absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/text2-m.svg" />
-    <img class="text2 absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/text2.svg" />
+    <img class="map absolute" src="@/section/s3/map.jpg" />
+
+    <div class="title2">
+    <div class="t1" data-aos="fade-up" data-aos-delay="200">機場城市 發展告捷</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="300">園區發展ing 利多進形式<br>⼯作就學 ⾃住好樂</div>
+    <div class="content" data-aos="fade-up" data-aos-delay="300">
+     新市鎮共享新舊城區教育資源，同步將歷史悠久、採雙語教學的名校大園國中搬遷至特區內，加上潮音國小完整的九年一貫學研文教，學區免煩惱，迎向未來進行式。生活機能集中在中正東路、大觀路，有寶雅、小北百貨、肯德基、星巴克等。<br>
+    交通動能方面，除了便利的國道2、61快速道路，開車5分鐘可以抵達機捷A15大園站，周邊大園市場、全聯、屈臣氏等商店，滿足日常生活採買。近幾年則是積極拓建多條聯外動線，月桃路拓寬工程，以及機場聯外道路等利多建設進行式，大幅提升當地交通便利性。
+      </div>
+    </div>
+
     <div class="slider slider2 absolute">
       <swiper 
         :pagination="{
@@ -114,6 +134,120 @@
       width: size(604);
     }
   }
+
+
+  .title{
+    position: absolute;
+    top: size(280);
+    left:size(150);
+    width: size(559);
+    z-index: 5;
+    text-align: right;
+
+    @media screen and (max-width:768px) {
+      text-align: left;
+      top: size-m(45);
+      right:size-m(30);
+      width: size-m(315);
+    }
+
+    .t1{
+      font-size: size(58);
+      line-height: size(70);
+      margin-bottom: size(15);
+      color: #fff;
+      font-weight: 900;
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(25);
+        margin-bottom: size-m(20);
+      }
+    }
+
+    .t2{
+      font-size: size(30);
+      color: #fff;
+      font-weight:500;
+      line-height: size(40);
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(16);
+        line-height: size-m(25);
+      }
+    }
+
+    .content{
+      font-size: size(16);
+      color: #fff;
+      font-weight:300;
+      margin-top: size(45);
+      text-align: left;
+      text-align: justify;
+      @media screen and (max-width:768px) {
+        font-size: size-m(13);
+        margin-top: size-m(10);
+      }
+    }
+
+  }
+
+  .title2{
+    position: absolute;
+    bottom: size(120);
+    right:size(370);
+    width: size(559);
+    z-index: 5;
+    text-align: left;
+
+    @media screen and (max-width:768px) {
+      text-align: left;
+      bottom: size-m(365);
+      right:size-m(30);
+      width: size-m(315);
+    }
+
+    .t1{
+      font-size: size(58);
+      line-height: size(70);
+      margin-bottom: size(5);
+      color: #D9374B;
+      font-weight: 900;
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(25);
+        margin-bottom: size-m(20);
+      }
+    }
+
+    .t2{
+      font-size: size(30);
+      color: #727171;
+      font-weight:500;
+      line-height: size(40);
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(16);
+        line-height: size-m(25);
+      }
+    }
+
+    .content{
+      font-size: size(16);
+      color: #727171;
+      font-weight:300;
+      margin-top: size(35);
+      text-align: left;
+      text-align: justify;
+      @media screen and (max-width:768px) {
+        font-size: size-m(13);
+        margin-top: size-m(10);
+      }
+    }
+
+  }
+
+
+
 
   .slider {
     width: 100%;

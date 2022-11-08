@@ -5,8 +5,10 @@
     <img class="house absolute" src="@/section/s1/house.png" />
     <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo-m.svg" />
     <img class="logo absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <img class="text absolute md:hidden" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/text-m.svg" />
-    <img class="text absolute hidden md:block" data-aos="fade-up" data-aos-delay="200" src="@/section/s1/text.svg" />
+    <div class="title">
+    <div class="t1" data-aos="fade-up" data-aos-delay="200">超低公設 甲級營造</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="300">航空客運園區 <span>2-3</span> 房</div>
+    </div>
   </section>
 </template>
 
@@ -29,6 +31,53 @@
     height: size(1080);
   }
 
+
+  .title{
+    position: absolute;
+    top: size(550);
+    right:size(280);
+
+    @media screen and (max-width:768px) {
+      text-align: center;
+      top: size-m(240);
+      right:size-m(70);
+    }
+
+    .t1{
+      font-size: size(46);
+      color: #fff;
+      font-weight: 900;
+      margin-bottom:size(-20);
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(29);
+        margin-bottom:size-m(-15);
+      }
+    }
+
+    .t2{
+      font-size: size(40);
+      color: #fff;
+      font-weight:500;
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(25);
+      }
+
+      span{
+        color: #FFF100;
+        font-size: size(61);
+
+        @media screen and (max-width:768px) {
+        font-size: size-m(34);
+      }
+      }
+    }
+
+  }
+
+
+
   .cloud {
     top: size-m(346);
     left: size-m(136);
@@ -40,6 +89,8 @@
       width: size(402);
     }
   }
+
+
 
   .house {
     top: size-m(488);

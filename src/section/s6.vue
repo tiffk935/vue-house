@@ -3,8 +3,22 @@
     <div class="rect w-full absolute bg-[#D9374B]"></div>
     <img class="bg absolute block md:hidden" src="@/section/s6/bg-m.svg" />
     <img class="bg absolute hidden md:block" src="@/section/s6/bg.svg" />
-    <img class="text absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s6/text-m.svg" />
-    <img class="text absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s6/text.svg" />
+    
+    <div class="title">
+    <div class="t2" data-aos="fade-up" data-aos-delay="100">錢都20期：大樓 & 別墅</div>
+    <div class="t1" data-aos="fade-up" data-aos-delay="200">威泰好宅 自有風華</div>
+    <div class="content" data-aos="fade-up" data-aos-delay="300">
+      威泰選地擇優，<br>
+      以經典時尚語彙成就建築詩篇，<br>
+      建築城市的風景，團隊堅信─<br>
+      有使命感的建築將會改造一座城市。<br>
+      城市一靜 水綠靚界；實踐夢想 幸福造鎮<br>
+      在桃園客運園區，寓見未來！<br>
+      生活FUN輕鬆，與最好的自己相遇。
+
+    </div>
+    </div>
+
     <div class="slider slider1 absolute md:hidden">
       <swiper 
         :pagination="{
@@ -184,6 +198,64 @@
       left: size(218);
       width: size(807);
     }
+  }
+
+  .title{
+    position: absolute;
+    top: size(40);
+    left:size(220);
+    width: size(559);
+    z-index: 5;
+    text-align: left;
+
+    @media screen and (max-width:768px) {
+      text-align: left;
+      top: size-m(35);
+      left:size-m(30);
+      width: size-m(315);
+    }
+
+    .t1{
+      font-size: size(58);
+      line-height: size(70);
+      margin-bottom: size(5);
+      color: #D9374B;
+      font-weight: 900;
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(25);
+        margin-top: size-m(10);
+        margin-bottom: size-m(25);
+      }
+    }
+
+    .t2{
+      font-size: size(30);
+      color: #727171;
+      font-weight:500;
+      line-height: size(40);
+
+      @media screen and (max-width:768px) {
+        font-size: size-m(16);
+        line-height: size-m(25);
+      }
+    }
+
+    .content{
+      font-size: size(16);
+      color: #727171;
+      font-weight:300;
+      margin-top: size(35);
+      text-align: left;
+      text-align: justify;
+      @media screen and (max-width:768px) {
+        font-size: size-m(14);
+        margin-top: size-m(10);
+        line-height: size-m(20);
+        font-weight:400;
+      }
+    }
+
   }
 
   .tk-tabs {
