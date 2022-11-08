@@ -16,7 +16,7 @@
       >
         <swiper-slide>
           <div class="content md:flex">
-            <img src="@/section/s6/1.jpg" alt="雙和心">
+            <img src="@/section/s6/1.jpg" alt="双和心">
             <div class="inner">
               <div class="title text-[#DD1373] text-center">團隊升級 重磅來襲<br>五大團隊 超乎規格</div>
               <div class="title2">龍瑩建設 精工匠作</div>
@@ -38,14 +38,14 @@
               </div>
 
               <div class="mark text-right">
-                <img src="@/section/s6/mark1.png" alt="雙和心">
+                <img src="@/section/s6/mark1.png" alt="双和心">
               </div>
             </div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="content md:flex">
-            <img src="@/section/s6/3.jpg" alt="雙和心">
+            <img src="@/section/s6/3.jpg" alt="双和心">
             <div class="inner">
               <div class="title text-[#DD1373] text-center">團隊升級 重磅來襲<br>五大團隊 超乎規格</div>
               <div class="title2">現代俐落 線性演繹</div>
@@ -72,7 +72,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="content md:flex">
-            <img src="@/section/s6/2.jpg" alt="雙和心">
+            <img src="@/section/s6/2.jpg" alt="双和心">
             <div class="inner">
               <div class="title text-[#DD1373] text-center">團隊升級 重磅來襲<br>五大團隊 超乎規格</div>
               <div class="title2">豪邸名師 城市綠川</div>
@@ -99,7 +99,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="content md:flex">
-            <img src="@/section/s6/4.jpg" alt="雙和心">
+            <img src="@/section/s6/4.jpg" alt="双和心">
             <div class="inner">
               <div class="title text-[#DD1373] text-center">團隊升級 重磅來襲<br>五大團隊 超乎規格</div>
               <div class="title2">飯店公設 時尚型格</div>
@@ -127,7 +127,7 @@
         
       </swiper>
     </div>
-    <img class="logo absolute" src="@/section/s6/logo.svg" alt="雙和心">
+    <img class="logo absolute" src="@/section/s6/logo.svg" alt="双和心">
   </section>
 </template>
 

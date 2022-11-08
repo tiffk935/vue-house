@@ -1,8 +1,8 @@
 <template>
   <section class="s2 relative">
     <div class="absolute rect"></div>
-    <img data-aos="zoom-in" data-aos-delay="0" class="absolute legend" src="@/section/s2/legend.svg" alt="雙和心">
-    <img data-aos="zoom-in" data-aos-delay="0" class="absolute text" src="@/section/s2/text.svg" alt="雙和心">
+    <img data-aos="zoom-in" data-aos-delay="0" class="absolute legend" src="@/section/s2/legend.svg" alt="双和心">
+    <img data-aos="zoom-in" data-aos-delay="0" class="absolute text" src="@/section/s2/text.svg" alt="双和心">
   </section>
 </template>
 

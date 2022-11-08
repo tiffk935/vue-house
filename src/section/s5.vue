@@ -18,33 +18,33 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s5/1.jpg" alt="雙和心">
+            <img src="@/section/s5/1.jpg" alt="双和心">
             <div class="name absolute">3分鐘進北市 華中橋&64快速道路</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s5/2.jpg" alt="雙和心">
+            <img src="@/section/s5/2.jpg" alt="双和心">
             <div class="name absolute">64快速道路</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s5/3.jpg" alt="雙和心">
+            <img src="@/section/s5/3.jpg" alt="双和心">
             <div class="name absolute">雙捷運情境示意</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s5/4.jpg" alt="雙和心">
+            <img src="@/section/s5/4.jpg" alt="双和心">
             <div class="name absolute">國道3號</div>
           </div>
         </swiper-slide>
       </swiper>
-      <img class="logo absolute md:hidden" src="@/section/s5/logo.svg" alt="雙和心">
+      <img class="logo absolute md:hidden" src="@/section/s5/logo.svg" alt="双和心">
     </div>
 
-    <img class="logo absolute hidden md:block" src="@/section/s5/logo.svg" alt="雙和心">
+    <img class="logo absolute hidden md:block" src="@/section/s5/logo.svg" alt="双和心">
 
     <div data-aos="fade-in" data-aos-delay="100" class="content text-white">
       <div class="title text-center">1橋北市　2快聯外<br>3線快捷<br>4大商圈　5橋馳騁</div>

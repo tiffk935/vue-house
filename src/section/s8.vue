@@ -19,7 +19,7 @@
             <div class="text text-white">Alive 健身房</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/1.jpg" alt="雙和心">
+          <img src="@/section/s8/1.jpg" alt="双和心">
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -28,7 +28,7 @@
             <div class="text text-white">Journey 兒童遊戲室</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/2.jpg" alt="雙和心">
+          <img src="@/section/s8/2.jpg" alt="双和心">
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -37,7 +37,7 @@
             <div class="text text-white">Heaven 瑜珈室</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/3.jpg" alt="雙和心">
+          <img src="@/section/s8/3.jpg" alt="双和心">
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -46,7 +46,7 @@
             <div class="text text-white">Lobby 歸家門廳</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/4.jpg" alt="雙和心">
+          <img src="@/section/s8/4.jpg" alt="双和心">
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -55,7 +55,7 @@
             <div class="text text-white">Creative 藝廊</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/5.jpg" alt="雙和心">
+          <img src="@/section/s8/5.jpg" alt="双和心">
         </div>
       </swiper-slide>
       <swiper-slide>
@@ -64,11 +64,11 @@
             <div class="text text-white">Relax BAR</div>
           </div>
           <div class="text text-white name">3D示意圖僅供參考</div>
-          <img src="@/section/s8/6.jpg" alt="雙和心">
+          <img src="@/section/s8/6.jpg" alt="双和心">
         </div>
       </swiper-slide>
     </swiper>
-    <img class="logo absolute" src="@/section/s8/logo.svg" alt="雙和心">
+    <img class="logo absolute" src="@/section/s8/logo.svg" alt="双和心">
   </section>
 </template>
 

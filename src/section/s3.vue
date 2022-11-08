@@ -1,11 +1,11 @@
 <template>
   <section class="s3 relative">
     <div class="map relative">
-      <img class="map3" src="@/section/s3/map3.jpg" alt="雙和心">
-      <img class="map2 absolute top-0 left-0" src="@/section/s3/map2.png" alt="雙和心">
-      <img class="map1 absolute top-0 left-0" src="@/section/s3/map1.png" alt="雙和心">
+      <img class="map3" src="@/section/s3/map3.jpg" alt="双和心">
+      <img class="map2 absolute top-0 left-0" src="@/section/s3/map2.png" alt="双和心">
+      <img class="map1 absolute top-0 left-0" src="@/section/s3/map1.png" alt="双和心">
     </div>
-    <img ref="hand" class="hand absolute" src="@/section/s3/hand.svg" alt="雙和心">
+    <img ref="hand" class="hand absolute" src="@/section/s3/hand.svg" alt="双和心">
   </section>
 </template>
 

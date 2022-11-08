@@ -17,41 +17,41 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/1.jpg" alt="雙和心">
+            <img src="@/section/s4/1.jpg" alt="双和心">
             <div class="name absolute">中山路主幹道</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/2.jpg" alt="雙和心">
+            <img src="@/section/s4/2.jpg" alt="双和心">
             <div class="name absolute">捷運中和站</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/3.jpg" alt="雙和心">
+            <img src="@/section/s4/3.jpg" alt="双和心">
             <div class="name absolute">中和站TOD情境示意</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/4.jpg" alt="雙和心">
+            <img src="@/section/s4/4.jpg" alt="双和心">
             <div class="name absolute">捷運局萬大線列車規劃模擬</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/5.jpg" alt="雙和心">
+            <img src="@/section/s4/5.jpg" alt="双和心">
             <div class="name absolute">3分鐘南山威力廣場</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s4/6.jpg" alt="雙和心">
+            <img src="@/section/s4/6.jpg" alt="双和心">
             <div class="name absolute">6分鐘比漾廣場</div>
           </div>
         </swiper-slide>
-        <img class="cold absolute" src="@/section/s4/cold.svg" alt="雙和心">
+        <img class="cold absolute" src="@/section/s4/cold.svg" alt="双和心">
       </swiper>
     </div>
 

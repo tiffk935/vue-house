@@ -2,12 +2,12 @@
   <section class="s7 relative">
     <div class="bg absolute"></div>
     <div class="title absolute">五心建材 一屋致勝</div>
-    <img data-aos="fade-in" data-aos-delay="0" class="list1 absolute" src="@/section/s7/list1.svg" alt="雙和心">
-    <img data-aos="fade-in" data-aos-delay="200" class="list2 absolute" src="@/section/s7/list2.svg" alt="雙和心">
-    <img data-aos="fade-in" data-aos-delay="400" class="list3 absolute" src="@/section/s7/list3.svg" alt="雙和心">
-    <img data-aos="fade-in" data-aos-delay="500" class="list4 absolute" src="@/section/s7/list4.svg" alt="雙和心">
-    <img data-aos="fade-in" data-aos-delay="600" class="list5 absolute" src="@/section/s7/list5.svg" alt="雙和心">
-    <img data-aos="fade-in" data-aos-delay="800" class="logo absolute hidden md:block" src="@/section/s7/logo.svg" alt="雙和心">
+    <img data-aos="fade-in" data-aos-delay="0" class="list1 absolute" src="@/section/s7/list1.svg" alt="双和心">
+    <img data-aos="fade-in" data-aos-delay="200" class="list2 absolute" src="@/section/s7/list2.svg" alt="双和心">
+    <img data-aos="fade-in" data-aos-delay="400" class="list3 absolute" src="@/section/s7/list3.svg" alt="双和心">
+    <img data-aos="fade-in" data-aos-delay="500" class="list4 absolute" src="@/section/s7/list4.svg" alt="双和心">
+    <img data-aos="fade-in" data-aos-delay="600" class="list5 absolute" src="@/section/s7/list5.svg" alt="双和心">
+    <img data-aos="fade-in" data-aos-delay="800" class="logo absolute hidden md:block" src="@/section/s7/logo.svg" alt="双和心">
   </section>
 </template>
 
