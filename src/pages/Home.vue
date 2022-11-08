@@ -11,6 +11,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+    <h1 style="display:none;">清景麟國家公園</h1>
     <S1 />
     <Order />
   </div>
