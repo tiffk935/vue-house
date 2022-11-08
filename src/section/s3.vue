@@ -134,6 +134,7 @@
       width: size(604);
     }
   }
+ 
 
 
   .title{
@@ -281,8 +282,8 @@
           font-size: size(19);
           text-shadow: none;
           bottom: size(10);
-          right: auto;
-          left: size(10);
+          right: size(30);
+          left: auto;
         }
       }
 
