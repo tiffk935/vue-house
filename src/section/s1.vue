@@ -3,7 +3,7 @@
     <img class="cloud absolute md:hidden" src="@/section/s1/cloud-m.png" />
     <img class="cloud absolute hidden md:block" src="@/section/s1/cloud.png" />
     <img class="house absolute" src="@/section/s1/house.png" />
-    <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo-m.svg" />
+    <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
     <img class="logo absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
     <div class="title">
     <div class="t1" data-aos="fade-up" data-aos-delay="200">超低公設 甲級營造</div>
