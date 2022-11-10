@@ -59,6 +59,8 @@ onMounted(() => {
           hideHand = true;
         }
       });
+
+      document.querySelector('.s1 .logo').classList.remove('paused');
     }, 0);
   };
 
