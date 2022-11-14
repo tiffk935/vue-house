@@ -152,26 +152,15 @@
       </swiper>
       <div class="wline md:hidden"></div>
 
-      <div class="slideToPrev absolute">
-        <img class="w-full md:hidden" @click="slideToPrev" src="@/section/s3/arrow-prev-m.svg" />
-        <img class="w-full hidden md:block" @click="slideToPrev" src="@/section/s3/arrow-prev.svg" />
+      <div class="slideToPrev absolute cursor-pointer" @click="slideToPrev">
+        <img class="w-full md:hidden" src="@/section/s3/arrow-prev-m.svg" />
+        <img class="w-full hidden md:block" src="@/section/s3/arrow-prev.svg" />
       </div>
-      <div class="slideToNext absolute">
-        <img class="w-full md:hidden" @click="slideToNext" src="@/section/s3/arrow-next-m.svg" />
-        <img class="w-full hidden md:block" @click="slideToNext" src="@/section/s3/arrow-next.svg" />
+      <div class="slideToNext absolute cursor-pointer" @click="slideToNext">
+        <img class="w-full md:hidden" src="@/section/s3/arrow-next-m.svg" />
+        <img class="w-full hidden md:block" src="@/section/s3/arrow-next.svg" />
       </div>
     </div>
-
-    
-
-    <!-- <button @click="slideToNext" class="slideToNext">
-      <img class="w-full" src="@/section/s3/arrow-right-circle.svg" />
-    </button>
-
-    <button @click="slideToPrev" class="slideToPrev">
-      <img class="w-full" src="@/section/s3/arrow-left-circle.svg" />
-    </button> -->
-
   </section>
 </template>
 

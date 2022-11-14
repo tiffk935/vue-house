@@ -206,142 +206,146 @@
       <line x1="1216.5" y1="2.18557e-08" x2="1216.5" y2="66" stroke="#808080"/>
     </svg>
 
-    <div class="content content1 absolute" v-show="currContent === 1">
-      <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title-m.svg" />
-      <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title.svg" />
-      <div class="text">宗大以建設起家，從1991年創立至今已超越半甲子。以「宗親人文，大隱美學」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。</div>
-      <div class="slider slider1 absolute">
-        <swiper
-          :modules="modules"
-          :loop="true"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-          }"
-          @swiper="setSwiperRef1"
-          @slideChange="slideChange1"
-        >
-          <swiper-slide>
-            <img src="@/section/s4/content1/1.jpg" />
-            <div class="text-white">建築業績｜凌波揚</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content1/2.jpg" />
-            <div class="text-white">建築業績｜凌波揚+霞飛</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content1/3.jpg" />
-            <div class="text-white">建築業績｜陶裡原</div>
-          </swiper-slide>
-        </swiper>
+    <transition>
+      <div class="content content1 absolute" v-show="currContent === 1">
+        <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title-m.svg" />
+        <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title.svg" />
+        <div class="text">宗大以建設起家，從1991年創立至今已超越半甲子。以「宗親人文，大隱美學」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。</div>
+        <div class="slider slider1 absolute">
+          <swiper
+            :modules="modules"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            @swiper="setSwiperRef1"
+            @slideChange="slideChange1"
+          >
+            <swiper-slide>
+              <img src="@/section/s4/content1/1.jpg" />
+              <div class="text-white">建築業績｜凌波揚</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content1/2.jpg" />
+              <div class="text-white">建築業績｜凌波揚+霞飛</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content1/3.jpg" />
+              <div class="text-white">建築業績｜陶裡原</div>
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div class="slider-pagination">
+          <span 
+            v-for="num in 3" 
+            :key="num" 
+            :class="{'slider-rect': true, 'active': activeIndex1 == (num-1)}"
+          ></span>
+        </div>
       </div>
-      <div class="slider-pagination">
-        <span 
-          v-for="num in 3" 
-          :key="num" 
-          :class="{'slider-rect': true, 'active': activeIndex1 == (num-1)}"
-        ></span>
+    </transition>
+
+    <transition>
+      <div class="content content2 absolute" v-show="currContent === 2">
+        <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content2/title-m.svg" />
+        <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content2/title.svg" />
+        <div class="text">宗大深知，建築品質的關鍵在「營造」。為了加速溝通，精準落實施工，以自有營造廠「合新營造」專責宗大旗下建案。南臺灣知名甲級營造廠之一，承攬公共工程、校園新建等，更挺身主責維冠重建工程「出雲居」，以及「小東路青年公宅」，實踐精工品質好生活。</div>
+        <div class="slider slider2 absolute">
+          <swiper
+            :modules="modules"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            @swiper="setSwiperRef2"
+            @slideChange="slideChange2"
+          >
+            <swiper-slide>
+              <img src="@/section/s4/content2/1.jpg" />
+              <div class="text-white">建築業績｜青硯</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content2/2.jpg" />
+              <div class="text-white">建築業績｜出雲居</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content2/3.jpg" />
+              <div class="text-white">建築業績｜霞飛</div>
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div class="slider-pagination">
+          <span 
+            v-for="num in 3" 
+            :key="num" 
+            :class="{'slider-rect': true, 'active': activeIndex2 == (num-1)}"
+          ></span>
+        </div>
       </div>
-    </div>
-    <div class="content content2 absolute" v-show="currContent === 2">
-      <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content2/title-m.svg" />
-      <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content2/title.svg" />
-      <div class="text">宗大深知，建築品質的關鍵在「營造」。為了加速溝通，精準落實施工，以自有營造廠「合新營造」專責宗大旗下建案。南臺灣知名甲級營造廠之一，承攬公共工程、校園新建等，更挺身主責維冠重建工程「出雲居」，以及「小東路青年公宅」，實踐精工品質好生活。</div>
-      <div class="slider slider2 absolute">
-        <swiper
-          :modules="modules"
-          :loop="true"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-          }"
-          @swiper="setSwiperRef2"
-          @slideChange="slideChange2"
-        >
-          <swiper-slide>
-            <img src="@/section/s4/content2/1.jpg" />
-            <div class="text-white">建築業績｜青硯</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content2/2.jpg" />
-            <div class="text-white">建築業績｜出雲居</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content2/3.jpg" />
-            <div class="text-white">建築業績｜霞飛</div>
-          </swiper-slide>
-        </swiper>
+    </transition>
+
+    <transition>
+      <div class="content content3 absolute" v-show="currContent === 3">
+        <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content3/title-m.svg" />
+        <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content3/title.svg" />
+        <div class="text">「天下南隅」以首排之姿，靜鄰赤崁樓。前身為達官顯貴短居台南首選的「天下大飯店」，積累超過半甲子時光後全面翻新，將府城人文底蘊化作設計養分，以時髦比例與層次，轉譯台南生活中最熟悉的元素，邀請旅人，以新潮的五感體驗，感受台南古今歲月。</div>
+        <div class="slider slider3 absolute">
+          <swiper
+            :modules="modules"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            @swiper="setSwiperRef3"
+            @slideChange="slideChange3"
+          >
+            <swiper-slide>
+              <img src="@/section/s4/content3/1.jpg" />
+              <div class="text-white">天下南隅</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content3/2.jpg" />
+              <div class="text-white">天下南隅</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content3/3.jpg" />
+              <div class="text-white">天下南隅</div>
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div class="slider-pagination">
+          <span 
+            v-for="num in 3" 
+            :key="num" 
+            :class="{'slider-rect': true, 'active': activeIndex3 == (num-1)}"
+          ></span>
+        </div>
       </div>
-      <div class="slider-pagination">
-        <span 
-          v-for="num in 3" 
-          :key="num" 
-          :class="{'slider-rect': true, 'active': activeIndex2 == (num-1)}"
-        ></span>
+    </transition>
+
+    <transition>
+      <div class="content content4 absolute" v-show="currContent === 4">
+        <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title-m.svg" />
+        <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title.svg" />
+        <div class="text">為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。</div>
+        <div class="slider slider4 absolute">
+          <swiper
+            :modules="modules"
+            :loop="false"
+            @swiper="setSwiperRef4"
+            @slideChange="slideChange4"
+          >
+            <swiper-slide>
+              <img src="@/section/s4/content4/1.jpg" />
+              <div class="text-white">鋁罐廠情境示意</div>
+            </swiper-slide>
+          </swiper>
+        </div>
       </div>
-    </div>
-    <div class="content content3 absolute" v-show="currContent === 3">
-      <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content3/title-m.svg" />
-      <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content3/title.svg" />
-      <div class="text">「天下南隅」以首排之姿，靜鄰赤崁樓。前身為達官顯貴短居台南首選的「天下大飯店」，積累超過半甲子時光後全面翻新，將府城人文底蘊化作設計養分，以時髦比例與層次，轉譯台南生活中最熟悉的元素，邀請旅人，以新潮的五感體驗，感受台南古今歲月。</div>
-      <div class="slider slider3 absolute">
-        <swiper
-          :modules="modules"
-          :loop="true"
-          :autoplay="{
-            delay: 2500,
-            disableOnInteraction: false,
-          }"
-          @swiper="setSwiperRef3"
-          @slideChange="slideChange3"
-        >
-          <swiper-slide>
-            <img src="@/section/s4/content3/1.jpg" />
-            <div class="text-white">天下南隅</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content3/2.jpg" />
-            <div class="text-white">天下南隅</div>
-          </swiper-slide>
-          <swiper-slide>
-            <img src="@/section/s4/content3/3.jpg" />
-            <div class="text-white">天下南隅</div>
-          </swiper-slide>
-        </swiper>
-      </div>
-      <div class="slider-pagination">
-        <span 
-          v-for="num in 3" 
-          :key="num" 
-          :class="{'slider-rect': true, 'active': activeIndex3 == (num-1)}"
-        ></span>
-      </div>
-    </div>
-    <div class="content content4 absolute" v-show="currContent === 4">
-      <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title-m.svg" />
-      <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title.svg" />
-      <div class="text">為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。</div>
-      <div class="slider slider4 absolute">
-        <swiper
-          :modules="modules"
-          :loop="false"
-          @swiper="setSwiperRef4"
-          @slideChange="slideChange4"
-        >
-          <swiper-slide>
-            <img src="@/section/s4/content4/1.jpg" />
-            <div class="text-white">鋁罐廠情境示意</div>
-          </swiper-slide>
-        </swiper>
-      </div>
-      <!-- <div class="slider-pagination">
-        <span 
-          v-for="num in 3" 
-          :key="num" 
-          :class="{'slider-rect': true, 'active': activeIndex4 == (num-1)}"
-        ></span>
-      </div> -->
-    </div>
+    </transition>
   </section>
 </template>
 
@@ -352,6 +356,18 @@
   height: size-m(1260);
   @media screen and (min-width:768px) {
     height: size(1171);
+  }
+
+  .v-enter-active, .v-leave-active {
+    transition: opacity .4s;
+  }
+
+  .v-enter-from, .v-leave-to {
+    opacity: 0;
+  }
+
+  .v-enter-to, .v-leave-from {
+    opacity: 1;
   }
 
   .title {
@@ -393,14 +409,13 @@
     left: size-m(40);
     width: size-m(295);
     height: size-m(588);
-    opacity: 1;
-    transition: opacity .5s;
+    // opacity: 1;
+    // transition: opacity .5s;
     @media screen and (min-width:768px) {
       top: size(468);
       left: size(180);
       width: size(1560);
       height: size(550);
-      
     }
 
     .slider {
@@ -510,10 +525,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
-// import { ref } from 'vue'
-
-// let swiperRef1 = ref(null);
-
 export default {
   components: {
     Swiper,
@@ -549,7 +560,6 @@ export default {
     showContent(num) {
       this.currContent = num;
       this.$nextTick(() => {
-        console.log('tick')
         if(num == 1){
           this.swiperRef1.update();
           this.swiperRef1.slideTo(1, 0);
