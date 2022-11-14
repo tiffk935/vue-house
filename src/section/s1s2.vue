@@ -1,8 +1,43 @@
 <template>
   <section class="s1s2 bg-[#e4e3db] relative">
+    <!-- 
     <div class="line2 absolute"></div>
     <div class="line1 absolute"></div>
     <div class="line3 absolute hidden md:block"></div>
+     -->
+
+  <div class="line-1 line1 md:block">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#DE9C3E" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#DE9C3E" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+    </div>
+  </div>
+  <div class="line-1 line2">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#E5BA78" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#E5BA78" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+    </div>
+  </div>
+  <div class="line-1 line3">
+    <div>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#fff" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1770 520" preserveAspectRatio="none">
+        <path stroke="#fff" d="M28.4,342.9c253.1,74,595.1,93.3,853.9-86.3c448.3-311.1,600.1,10.5,859.4,86.3" />
+      </svg>
+    </div>
+  </div>
+
+
     <div class="grid-bg absolute"></div>
     <div class="rect absolute"></div>
     <svg class="scroll absolute hidden md:block" viewBox="0 0 41 589" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -153,7 +188,7 @@
     transform: rotate(360deg);
   }
 }
-
+/*
 @keyframes line1 {
   to {
     transform: translateX(-50%);
@@ -171,6 +206,7 @@
     background-position: size(-1017.37) 0;
   }
 }
+*/
 
 @keyframes elasticus {
   0% {
@@ -197,7 +233,7 @@
   @media screen and (min-width:768px) {
     height: size(2160);
   }
-
+/* 
   .line1 {
     top: size-m(499);
     left: size-m(-452.42);
@@ -252,6 +288,84 @@
       height: size(626.17);
       background-image: url(@/section/s1s2/line3.svg);
       background-position: size(1935.96 - 1017.37) 0;
+    }
+  }
+
+  */
+  .line-1 {
+    position: absolute;
+    overflow: hidden;
+      filter: blur(1.5vw);
+    > div {
+      width: 200%;
+      white-space: nowrap;
+      animation: an 5s linear infinite;
+    }
+    svg {
+      width: 52%;
+      margin: 0 -.9%;
+    display: inline;
+    display: inline-block;
+    stroke-width:90;
+    fill:none;
+    }
+  }
+  @keyframes an {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+  .line1 {
+    top: -15%;
+    left: -20%;
+    width: 100%;
+    transform: rotate(-19deg);
+    opacity: 1;
+  }
+  .line2 {
+    top: 30%;
+    left: -20%;
+    width: 200%;
+    transform: rotate(-10deg);
+      filter: blur(3.5vw);
+    > div {
+      animation: an 6s -2s linear infinite;
+    }
+    svg {
+      height: size-m(150);
+    stroke-width:130;
+    }
+    @media screen and (min-width:768px) {
+    top: 32%;
+    width: 140%;
+    filter: blur(1.5vw);
+    svg {
+      height: size(400);
+    stroke-width:70;
+    }
+  }
+  }
+  .line3 {
+    top: 31%;
+    left: -10%;
+    width: 200%;
+    transform: rotate(5deg);
+      filter: blur(3vw);
+      opacity: .8;
+    > div {
+      animation: an 4s -4s linear infinite;
+    }
+    svg {
+    stroke-width:100;
+    }
+    @media screen and (min-width:768px) {
+    top: 27%;
+    width: 120%;
+    filter: blur(1.5vw);
+    svg {
+    stroke-width:60;
+    }
+
     }
   }
 
