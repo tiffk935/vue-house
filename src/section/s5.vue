@@ -1,5 +1,5 @@
 <template>
-  <section class="s5 bg-[#E4E3DB] bg-[#979480] relative">
+  <section class="s5 bg-[#E4E3DB] relative">
     <!-- <video src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov" playsinline autoplay muted loop></video> -->
     <video src="https://h35.banner.tw/zongda/123.mp4" playsinline autoplay muted loop></video>
     <img class="circle absolute" src="@/section/s5/circle.svg" />
@@ -28,6 +28,10 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    @media screen and (max-width:768px) {
+      height: size-m(558);
+    }
   }
 
   .circle {
@@ -66,7 +70,7 @@
   }
 
   .text {
-    top: size-m(603);
+    top: size-m(585);
     left: size-m(40);
     width: size-m(295);
     font-size: size-m(12);

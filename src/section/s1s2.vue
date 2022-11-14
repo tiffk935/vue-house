@@ -448,7 +448,7 @@
 
     .wbg {
       opacity: 0.4;
-      transition: opacity .2s;
+      transition: opacity .5s;
     }
 
     &:hover {
