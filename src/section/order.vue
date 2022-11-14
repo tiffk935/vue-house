@@ -1,9 +1,12 @@
   <template>
   <div class="order relative bg-[#FFDFE3] text-center">
-    <div class="order1">
+    <div class="rect absolute"></div>
+    <div class="order1 relative">
       <div class="order2">
+        <img class="title hidden md:block" src="@/section/form/title.svg" alt="">
+        <img class="title md:hidden" src="@/section/form/title-m.svg" alt="">
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center">{{ info.order.title }}</div>
         <!-- Title Image -->
         <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
           data-aos="fade" data-aos-duration="1000">
@@ -12,32 +15,52 @@
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" />
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
-              <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
-              <option value="三房">三房</option>
-              <option value="透天">透天</option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value">
-                {{ city.label }}
-              </option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value">
-                {{ area.label }}
-              </option>
-            </select>
+            <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">姓名*</label>
+              <input type="text" placeholder="" class="input flex-1 w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" /> 
+            </div>
+            <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">手機*</label>
+              <input type="text" placeholder="" class="input flex-1 w-full rounded-none" :value="formData.phone"
+                @input="(event) => (formData.phone = event.target.value)" />
+            </div>
+            <!-- <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">需求房型*</label>
+              <select class="select flex-1 w-full rounded-none" v-model="formData.room_type">
+                <option value="" selected disabled>需求房型</option>
+                <option value="兩房">兩房</option>
+                <option value="三房">三房</option>
+                <option value="透天">透天</option>
+              </select>
+            </div> -->
+            <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">居住縣市*</label>
+              <select class="select flex-1 w-full rounded-none" v-model="formData.city">
+                <option value="" selected disabled></option>
+                <option v-for="city in cityList" :value="city.value">
+                  {{ city.label }}
+                </option>
+              </select>
+            </div>
+            <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">居住地區*</label>
+              <select class="select flex-1 w-full rounded-none" v-model="formData.area">
+                <option value="" selected disabled></option>
+                <option v-for="area in areaList" :value="area.value">
+                  {{ area.label }}
+                </option>
+              </select>
+            </div>
+            <div class="flex items-center w-full align-center">
+              <label class="tk-label mr-2 whitespace-nowrap">電子信箱*</label>
+              <input type="text" placeholder="" class="input flex-1 w-full rounded-none" :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)" /> 
+            </div>
           </div>
           <div class="right h-full">
             <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
+              class="textarea w-full h-full rounded-none" placeholder=""></textarea>
           </div>
         </div>
 
@@ -47,7 +70,7 @@
             class="checkbox bg-white rounded-md" />
           <p>
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,17 +80,17 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D08421] text-white hover:text-white rounded-none" @click="send()">
+          {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
-
-      <!-- Contact Info -->
-      <ContactInfo />
     </div>
 
     <!-- Map -->
     <Map />
+
+    <!-- Contact Info -->
+    <ContactInfo />
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -79,24 +102,58 @@
 
 .order {
   width: 100%;
+  background: #E4E3DB;
   // padding-top: size(115);
+  background-image: url(@/section/s1s2/mask.png);
+  background-size: 100% 100%;
+
+  input[type=text], select, textarea {
+    border: 1px dashed #D08421;
+  }
+
+  .tk-label {
+    width: 77px;
+    text-align: left;
+  }
+
+  .rect {
+    width: 100%;
+    height: size(1252);
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(228, 227, 219, 0) 0%, #E4E3DB 77.6%);
+    transform: rotate(-180deg);
+  }
 
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
+    // background-color: #D9374B;
+    // background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
   }
 
   .order2 {
-    padding: size(115) 0 size(73) 0;
+    padding: size(92) 0 size(73) 0;
+  }
+
+  .title {
+    width: size(1125.52);
+    margin: 0 auto;
+    margin-bottom: size(130.9);
   }
 
   .order-title {
-    font-size: size(43);
-    font-weight: 500;
-    margin-bottom: size(45);
+    font-size: size(36);
+    background: #FFFFFF;
+    border: 1px dashed #D08421;
+    border-radius: size(60);
+    color: #D08421;
+    padding: size(20) 0;
+    line-height: 1;
+    width: size(1560);
+    margin: 0 auto;
+    margin-bottom: size(105);
   }
 
   .z-10 {
@@ -112,17 +169,19 @@
   }
 
   .form {
-    width: size(920);
+    // width: size(920);
     height: 300px;
     gap: size(80);
     margin-bottom: size(50);
 
     .left {
-      width: size(419);
+      // width: size(419);
+      width: 27.823vw;
     }
 
     .right {
-      width: size(419);
+      // width: size(419);
+      width: 27.823vw;
     }
 
     &::after {
@@ -159,6 +218,7 @@
     // border-radius: size-m(68) size-m(68) 0 0;
     // padding-top: size-m(40);
     margin-top: size-m(0);
+    background-image: url(@/section/s1s2/mask-m.png);
 
     .order1 {
       background: none;
@@ -166,17 +226,28 @@
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      padding: size-m(66) 0 size-m(60) 0;
+      // background-color: #D9374B;
+      // background-image: url(@/section/form/bg-m.png);
       background-size: cover;
       background-position: center center;
     }
 
+    .title {
+      width: size-m(247.68);
+      margin: 0 auto;
+      margin-bottom: size-m(92.52);
+    }
+
     .order-title {
-      font-size: size-m(29);
-      font-weight: 500;
-      margin-bottom: size-m(20);
+      font-size: size-m(20);
+      line-height: size-m(29);
+      padding: size-m(7) 0;
+      margin-bottom: size-m(66);
+      width: 100%;
+      border-radius: 0;
+      border-left: none;
+      border-right: none;
     }
 
     .order-title-img {
@@ -236,8 +307,8 @@ const toast = useToast()
 const formData = reactive({
   name: "",
   phone: "",
-  room_type: "",
-  // email: "",
+  // room_type: "",
+  email: "",
   city: "",
   area: "",
   msg: "",
@@ -255,8 +326,8 @@ const bypass = ["msg"];
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "房型", //room_type
-  // "信箱", //email
+  // "房型", //room_type
+  "信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg

@@ -1,27 +1,33 @@
 <template>
-  <div class="contact-info mx-auto bg-white flex flex-col items-center justify-between">
-    <div class="border absolute"></div>
-    <div class="logo"></div>
+  <div class="contact-info mx-auto flex flex-col items-center justify-between">
+    <!-- <div class="border absolute"></div> -->
+    <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
+        <img src="@/section/form/phone.svg" alt="宗大青田" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="宗大青田" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center rounded-full btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="戀JIA" srcset="" />
+        <img src="@/section/form/fb.svg" alt="宗大青田" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-full overflow-hidden">
+    <div class="address-wrap flex justify-between w-full contact-item-box md:rounded-full overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div>{{ info.address }}</div>
+        <div class="hidden md:block">接待中心｜{{ info.address }}</div>
+        <div class="md:hidden text-center">
+          <div>
+            <small>接待中心</small>
+            {{ info.address }}
+          </div>
+        </div>
       </div>
-      <div class="flex contact-item justify-between items-center md:rounded-full" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <div class="flex contact-item justify-between items-center md:rounded-full gmap-item" @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="宗大青田" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -29,24 +35,24 @@
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
-      <div>撥打電話</div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.s1s2')">
+      <img src="@/section/form/icon-home.svg" alt="宗大青田" srcset="" />
+      <!-- <div>預約賞屋</div> -->
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
-      <div>FB 諮詢</div>
+      <img src="@/section/form/icon-fb.svg" alt="宗大青田" srcset="" />
+      <!-- <div>FB 諮詢</div> -->
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="戀JIA" srcset="" />
-      <div>預約賞屋</div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+      @click="modalOpen = true; modalType = 'phone'">
+      <img src="@/section/form/icon-contactus.svg" alt="宗大青田" srcset="" />
+      <!-- <div>撥打電話</div> -->
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
-      <div>地圖導航</div>
+      <img src="@/section/form/icon-location.svg" alt="宗大青田" srcset="" />
+      <!-- <div>地圖導航</div> -->
     </div>
   </div>
 
@@ -56,9 +62,13 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="戀JIA" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="戀JIA" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="宗大青田" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="宗大青田" srcset="" />
+      <!-- <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="宗大青田" srcset="" /> -->
+      <svg class="h-12" v-else-if="modalType == 'gmap'" viewBox="0 0 25 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.4993 0.00135968C19.4041 0.00135968 25 5.68499 25 12.6981C25 15.2606 24.2532 17.6463 22.9683 19.6405L12.5582 37L2.19364 19.8852C1.95407 19.5318 1.73323 19.1675 1.53113 18.7909L1.51373 18.7596H1.51641C0.551422 16.9584 0 14.8922 0 12.6967C0 5.68363 5.59586 0 12.5007 0L12.4993 0.00135968ZM12.4993 6.95738C15.6205 6.95738 18.1514 9.528 18.1514 12.6981C18.1514 15.8682 15.6205 18.4388 12.4993 18.4388C9.37818 18.4388 6.84726 15.8682 6.84726 12.6981C6.84726 9.528 9.37818 6.95738 12.4993 6.95738Z" fill="#D08421"/>
+      </svg>
+
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -68,7 +78,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 bg-[#D08421] hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -88,7 +98,7 @@
 
 .contact-info {
   width: size(1200);
-  padding: size(68) size(160) size(56) size(160);
+  padding: size(108) size(160) size(108) size(160);
   // margin-top: size(73);
   position: relative;
 
@@ -116,13 +126,13 @@
     margin-top: size(20);
     gap: size(20);
 
-    &.address-wrap {
-      border: size(3) solid #D9374B;
-    } 
+    // &.address-wrap {
+    //   border: size(3) solid #D9374B;
+    // } 
 
     .contact-item {
-      background-color: #D9374B;
-      color: #fff;
+      background-color: #fff;
+      color: #000;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -132,6 +142,7 @@
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      border: 1px dashed #D08421;
 
       &:hover {
         background-color: theme('colors.color2');
@@ -147,28 +158,34 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
         transition: all .5s;
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
         max-width: 9999px;
         justify-content: center;
+        border-radius: 9999px;
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 8em;
-          height: 100%;
-          background-color: #eee;
-          left: calc(100% - 4em);
-          z-index: -1;
-        }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 8em;
+        //   height: 100%;
+        //   background-color: #eee;
+        //   left: calc(100% - 4em);
+        //   z-index: -1;
+        // }
       }
+    }
+
+    .gmap-item {
+      background: #D08421;
+      color: #fff;
     }
 
     &.no-gap {
@@ -179,27 +196,34 @@
 
 @media screen and (max-width:768px) {
   .mo-contact-info {
+    background: rgba(255,255,255,0.6);
     z-index: 49;
     position: fixed;
     bottom: 0;
     left: 0;
     width: size-m(375);
     height: size-m(63);
-    gap: size-m(1);
+    // gap: size-m(1);
+    border: 1px solid #D08421;
+    border-right: none;
 
     .contact-item {
       height: 100%;
-      background-color: #AD1B2D;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
+      border-right: 1px solid #D08421;
+      line-height: 1;
 
       img {
-        margin-bottom: size-m(5);
-        max-width: size-m(16.5);
-        height: auto;
-        max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        // margin-bottom: size-m(5);
+        // max-width: size-m(16.5);
+        // height: auto;
+        // max-height: size-m(16.5);
+        // filter: brightness(0) invert(1);
+        width: auto;
+        height: size-m(41.37);
+        display: block;
       }
 
     }
@@ -235,9 +259,9 @@
       flex-direction: column;
 
       &.address-wrap {
-        border-radius: size-m(50);
+        border-radius: size-m(0);
         margin-top: size-m(20);
-        border: size-m(4) solid #D9374B;
+        // border: size-m(4) solid #D9374B;
       }
 
       .contact-item {
@@ -245,7 +269,8 @@
         font-size: size-m(16);
         max-width: 100%;
         justify-content: space-around;
-
+        line-height: 1;
+        height: size-m(69);
 
         img {
           max-width: size-m(27);
@@ -263,6 +288,17 @@
             left: 0;
           }
         }
+
+        small {
+          font-size: size-m(12);
+          color: #D08421;
+          display: block;
+          margin-bottom: size-m(8);
+        }
+      }
+
+      .gmap-item {
+        border-radius: 999px;
       }
 
       &.no-gap {

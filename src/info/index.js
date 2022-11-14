@@ -1,4 +1,4 @@
-const caseName = "戀JIA"
+const caseName = "宗大青田"
 
 export default {
     meta: {
@@ -6,20 +6,23 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "桃園市大園區大觀路595號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1103474936776!2d121.18124339999999!3d25.064248799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346820af94ef7b67%3A0x11134a66fcb2bab3!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A5aSn6KeA6LevNTk16Jmf!5e0!3m2!1szh-TW!2stw!4v1658754082639!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/eamn142jKNVssys97",
-    phone: "03-3852333",
-    fbLink: "https://www.facebook.com/107771505357267/",
-    fbMessage: "https://m.me/107771505357267/",
+    address: "台南市仁德區文忠路89號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3576645992193!2d120.23886680000001!3d22.9738717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76a7c2832e61%3A0xd5c1b36203b29863!2zNzE35Y-w5Y2X5biC5LuB5b635Y2A5paH5b-g6LevODnomZ8!5e0!3m2!1szh-TW!2stw!4v1667725626436!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/6CBuzJWDGLwvet2x7",
+    phone: "06 225 6688",
+    fbLink: "https://www.facebook.com",
+    fbMessage: "",
     caseName: caseName,
     houseInfos: [
-        ["建設團隊", "威泰國際股份有限公司"],
-        ["行銷團隊", "全紘國事業有限公司"],
-        ["坪數規劃", "華厦:19-31 透天:72-88"],
-        ["聯絡電話", "03-385-2333"],
-        ["公設比例", "約22%"],
-        ["接待中心", "桃園市大園區大觀路595號"],
+        ["投資興建", "宗大建設"],
+        ["營建施工", "合新營造"],
+        ["建築規劃", "深品建築"],
+        ["公設景觀", "Oh Dear Studio"],
+        ["書苑合作", "臺灣蔦屋選書"],
+        ["建築代銷", "聯碩地產行銷團隊"],
+        ["接待會館", "台南市仁德區文忠路89號"],
+        ["建照號碼", ""],
+        ["經紀人", ""],
     ],
     gtmCode: ["GTM-527G33V"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

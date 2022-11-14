@@ -1,14 +1,17 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#D9374B] text-white">
+    <div class="flex flex-col md:flex-row items-center justify-between relative">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title font-['Noto_Sans_TC']">建案資訊</div>
-                <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
-                    <div class="item flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos">
-                        <p class="mr-5 font-bold border-l-2 border-[#ffffff] pl-2 ">{{ item[0] }}</p>
-                        <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+            <div class="info-box mx-auto flex flex-col items-center justify-center">
+                <!-- <div class="title font-['Noto_Sans_TC']">建案資訊</div> -->
+                <div class="w-full md:flex items-center justify-between">
+                    <img class="logo" src="@/section/form/logo.svg" />
+                    <div class="info-items mt-2 mb-2 w-full grid grid-cols-1 md:grid-cols-1">
+                        <div class="item flex items-center w-full whitespace-nowrap"
+                            v-for="item in info.houseInfos">
+                            <p class="mr-5 text-[#D08421] pl-2">{{ item[0] }}</p>
+                            <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -16,7 +19,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="戀JIA" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="宗大青田" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
     </div>
 </template>
@@ -26,7 +29,7 @@
 
 .info-box {
 
-    width: size(900);
+    width: size(1378.01);
 
     .title {
         width: 100%;
@@ -36,19 +39,26 @@
         color: #fff;
     }
 
+    .logo {
+        width: size(515.7);
+    }
+
     .info-items {
         row-gap: size(20);
         column-gap: size(20);
+        width: auto;
+        min-width: size(588);
 
         .item {
-            line-height: size(17);
-            font-size: size(17);
+            // line-height: size(33);
+            font-size: size(23);
             align-items: flex-start;
-            line-height: 1.5;
             text-align: left;
+            border-bottom: 1px dashed #D08421;
+            padding-bottom: size(11);
 
-            p:first-child {
-                width: 4.5em;
+            &:last-child {
+                border: none;
             }
         }
     }
@@ -60,18 +70,26 @@
     }
 
     .info-box {
-        width: size-m(313);
-        padding: size-m(30) 0;
+        width: size-m(295);
+        padding: size-m(50) 0;
 
         .title {
             font-size: size-m(29);
         }
 
+        .logo {
+            width: size-m(257.72);
+            display: block;
+            margin: 0 auto;
+            margin-bottom: size-m(60);
+        }
+
         .info-items {
-            row-gap: size-m(20);
+            row-gap: size-m(0);
 
             .item {
-                font-size: size-m(14);
+                font-size: size-m(15);
+                padding: size-m(11) 0;
             }
         }
     }
