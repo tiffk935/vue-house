@@ -117,10 +117,10 @@
   </section>
 
   <!-- Modal -->
-  <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
+  <input type="checkbox" v-model="modalOpen" id="contact-modal2" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
-      <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <label for="contact-modal2" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" src="@/section/form/phone.svg" alt="宗大青田" srcset="" />
       <!-- title -->
