@@ -406,7 +406,12 @@ const send = () => {
   if (pass && !sending.value) {
     sending.value = true
 
-    .then(() => {
+    fetch(
+      ``,
+      {
+        method: "GET"
+      }
+    ).then(() => {
       fetch("contact-form.php", {
         method: "POST",
         body: presend,
