@@ -11,6 +11,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+    <h1 style="display:none;">宗大青田</h1>
     <S1S2 />
     <S3 />
     <S4 />
