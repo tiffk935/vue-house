@@ -24,7 +24,7 @@ export default {
         ["建照號碼", ""],
         ["經紀人", ""],
     ],
-    gtmCode: ["GTM-KQZ9S8H"], // 可放置多個
+    gtmCode: ["GTM-KQZ9S8H","GTM-MT7BH65"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

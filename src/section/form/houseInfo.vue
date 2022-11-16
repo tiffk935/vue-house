@@ -17,11 +17,12 @@
             </div>
         </div>
     </div>
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+    <div class="footernone"></div>
+    <!--div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.png" alt="宗大青田" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
-    </div>
+    </div-->
 </template>
 
 <style lang="scss">
@@ -65,6 +66,9 @@
 }
 
 @media screen and (max-width:768px) {
+    .footernone{
+        margin-bottom: size-m(63);
+    }
     .footer {
         margin-bottom: size-m(63);
     }

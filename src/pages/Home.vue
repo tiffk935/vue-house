@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="宗大青田" srcset="">
+    <img class="w-32" src="@/assets/loading_aota.svg" alt="宗大青田" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
@@ -21,6 +21,16 @@
     <Order />
   </div>
 </template>
+
+<style lang="scss">
+.w-32{
+  width: 320px !important;
+
+  @media screen and (max-width:768px) {
+    width: 200px !important;
+  }
+}
+</style>
 
 <script setup>
 import info from "@/info"
