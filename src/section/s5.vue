@@ -1,7 +1,7 @@
 <template>
   <section class="s5 bg-[#E4E3DB] relative">
-    <!-- <video src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov" playsinline autoplay muted loop></video> -->
-    <video src="https://h35.banner.tw/zongda/123.mp4" playsinline autoplay muted loop></video>
+    <video class="md:hidden" src="https://h35.banner.tw/zongda/aota_m.mp4" playsinline autoplay muted loop></video>
+    <video class="hidden md:block" src="https://h35.banner.tw/zongda/aota_pc.mp4" playsinline autoplay muted loop></video>
     <img class="circle absolute" src="@/section/s5/circle.svg" />
     <img class="circle-num absolute" data-aos="fade-in" data-aos-delay="0" src="@/section/s5/circle-num.svg" />
     <img class="title absolute md:hidden" src="@/section/s5/title-m.svg" />
