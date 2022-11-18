@@ -16,7 +16,7 @@
 @import "@/assets/style/function.scss";
 .s5 {
   width: 100%;
-  height: size-m(770);
+  height: size-m(600);
   @media screen and (min-width:768px) {
     height: size(932);
   }
