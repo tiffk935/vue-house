@@ -467,7 +467,8 @@
     width: size-m(295);
     font-size: size-m(12);
     line-height: size-m(27);
-    letter-spacing: 0.01em;
+    letter-spacing: 0;
+    text-align: justify;
     @media screen and (min-width:768px) {
       top: size(695 + 1080);
       left: size(682);

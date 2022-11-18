@@ -510,7 +510,8 @@
       width: 100%;
       font-size: size-m(12);
       line-height: size-m(27);
-      letter-spacing: 0.16em;
+      letter-spacing: 0.05em;
+      text-align: justify;
       @media screen and (min-width:768px) {
         top: size(211);
         width: size(523);

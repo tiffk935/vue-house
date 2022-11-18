@@ -52,7 +52,7 @@
 
         .item {
             // line-height: size(33);
-            font-size: size(23);
+            font-size: size(20);
             align-items: flex-start;
             text-align: left;
             border-bottom: 1px dashed #D08421;

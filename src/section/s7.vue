@@ -91,6 +91,7 @@
     font-size: size-m(12);
     line-height: size-m(27);
     letter-spacing: 0.16em;
+    text-align: justify;
     @media screen and (min-width:768px) {
       font-size: size(19);
       line-height: size(48);

@@ -35,7 +35,8 @@
   }
 
   .circle {
-    top: size-m(235);
+    //top: size-m(235);
+    top: size-m(65);
     left: size-m(96);
     width: size-m(183);
     animation: circle 8s infinite linear;
@@ -48,7 +49,8 @@
   }
 
   .circle-num {
-    top: size-m(296.35);
+    //top: size-m(296.35);
+    top: size-m(126.35);
     left: size-m(145.31);
     width: size-m(81.19);
     @media screen and (min-width:768px) {
@@ -59,7 +61,8 @@
   }
 
   .title {
-    top: size-m(456);
+    //top: size-m(456);
+    top: size-m(276);
     left: size-m(106);
     width: size-m(163.13);
     @media screen and (min-width:768px) {
@@ -70,12 +73,14 @@
   }
 
   .text {
-    top: size-m(585);
+    //top: size-m(585);
+    top: size-m(355);
     left: size-m(40);
     width: size-m(295);
     font-size: size-m(12);
     line-height: size-m(27);
     letter-spacing: 0.16em;
+    color: #fff;
     @media screen and (min-width:768px) {
       top: size(667);
       left: size(455);
