@@ -9,8 +9,8 @@
                     <div class="info-items mt-2 mb-2 w-full grid grid-cols-1 md:grid-cols-1">
                         <div class="item flex items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
-                            <p class="mr-5 text-[#D08421] pl-2">{{ item[0] }}</p>
-                            <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+                            <p class="mr-5 text-[#D08421] pl-2" v-html="item[0]"></p>
+                            <p class="whitespace-pre-line leading-normal text-left" v-html="item[1]"></p>
                         </div>
                     </div>
                 </div>
@@ -61,6 +61,10 @@
             &:last-child {
                 border: none;
             }
+
+            span{
+            font-size: size(16);
+            }
         }
     }
 }
@@ -94,6 +98,10 @@
             .item {
                 font-size: size-m(15);
                 padding: size-m(11) 0;
+
+                span{
+                font-size: size-m(13);
+                }
             }
         }
     }
