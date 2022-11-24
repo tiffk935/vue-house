@@ -139,6 +139,7 @@
       </div>
       <!-- bloc-5 END -->
       <!-- bloc-6 -->
+      <!--
       <div class="bloc full-width-bloc bg-08-bg d-bloc bg-center" id="bloc-6">
         <div class="container bloc-no-padding-lg bloc-no-padding">
           <div class="row no-gutters align-items-start">
@@ -157,6 +158,7 @@
           </div>
         </div>
       </div>
+      -->
       <!-- bloc-6 END -->
       <!-- bloc-6 -->
       <div class="bloc l-bloc full-width-bloc" id="bloc-6">
