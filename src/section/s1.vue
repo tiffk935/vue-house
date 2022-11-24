@@ -5,7 +5,8 @@
     </svg>
     <div data-aos="zoom-in" data-aos-delay="200" class="absolute name" alt="双和心">龍瑩</div>
     <img data-aos="zoom-in" data-aos-delay="400" class="absolute logo" src="@/section/s1/logo.svg" alt="双和心">
-    <div data-aos="zoom-in" data-aos-delay="600" class="absolute text" alt="双和心">小宅大作 重磅登場｜1-2房｜2240-9666</div>
+    
+    <img data-aos="zoom-in" data-aos-delay="400" class="absolute text" src="@/section/s1/text.svg" alt="双和心">
   </section>
 </template>
 
@@ -60,13 +61,17 @@
   .text {
     font-size: size-m(18);
     top: size-m(403);
-    left: size-m(34);
+    left: size-m(30);
+    width: size-m(310);
     font-weight: 900;
     letter-spacing: -0.02em;
+    margin-top: size-m(10);
     @media screen and (min-width:768px) {
       font-size: size(55);
       top: size(910);
-      left: size(465);
+      left: size(450);
+      width: size(1020);
+      margin-top: size(0);
     }
   }
 }
