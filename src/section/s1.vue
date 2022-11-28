@@ -161,7 +161,7 @@
       -->
       <!-- bloc-6 END -->
       <!-- bloc-7 -->
-      <div class="bloc l-bloc full-width-bloc" id="bloc-7">
+      <div class="bloc l-bloc full-width-bloc bloc-7" id="bloc-7">
         <div class="container bloc-no-padding-lg bloc-no-padding">
           <div class="row no-gutters align-items-center">
             <div class="col">
@@ -171,10 +171,10 @@
                 </div>
                 <div class="brand-box  text-md-center animated fadeInRight" data-appear-anim-style="fadeInRight">
                   <img src="@/section/s1/09_eng.png" class="img-fluid img-protected mx-auto d-block eng2" alt="Brand_艾美國際城" />
-                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none mg-md brand-title" alt="上市品牌實力 八大事業遍全台" />
-                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none brand-title-m mg-md" alt="上市品牌實力 八大事業遍全台" />
-                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content" alt="三地集團由高雄發跡" />
-                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content-m" alt="三地集團由高雄發跡" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none mg-md brand-title" alt="艾美國際城" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none brand-title-m mg-md" alt="艾美國際城" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content" alt="艾美國際城" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content-m" alt="艾美國際城" />
 
 
                     <div class="carousel slide brand-slide" data-ride="carousel" id="new">
@@ -240,12 +240,12 @@
                     </ol>
                     <div class="carousel-inner" role="listbox">
                       <div class="carousel-item img-protected active">
-                        <img class="d-inline-block w-100" alt="高雄客運" src="@/section/s1/09_img-1.jpg" />
+                        <img class="d-inline-block w-100" alt="艾美國際城" src="@/section/s1/09_img-1.jpg" />
                         <div class="carousel-caption">
                         </div>
                       </div>
                       <div class="carousel-item img-protected">
-                        <img alt="高雄客運" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
+                        <img alt="艾美國際城" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
                         <div class="carousel-caption">
                         </div>
                       </div>
