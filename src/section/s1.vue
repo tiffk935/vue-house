@@ -470,6 +470,55 @@
 
 .s1 {
 
+
+.bloc-7{
+	background-color: #b6a089;
+}
+
+.bloc-7 .eng2{
+	width: 600px;
+	height: auto;
+}
+.bloc-7 .brand-kv {
+    min-width: 52.5%;
+}
+
+.bloc-7 .brand-box{
+	padding-left: 8%;
+    padding-right: 8%;
+} 
+.bloc-7 .carousel{
+	margin-top: 5%;
+}
+
+@media (max-width: 767px){
+	.bloc-7 .brand {
+		flex-direction: column;
+	}
+	.bloc-7 .brand-box {
+		height: 350px;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 0%;
+		padding-bottom: 10%;
+	}
+	.bloc-7 .eng2{
+		top:auto;
+		bottom:0;
+	}
+	.bloc-7 .brand-title-m{
+		width: 100%;
+	}
+	.bloc-7 .brand-content-m{
+		width: 100%;
+	}
+
+
+}
+
+
+
+
   h1, h2, h3, h4, h5, h6, p, label, .btn, a {
     font-family:"Noto Sans TC";
   }
