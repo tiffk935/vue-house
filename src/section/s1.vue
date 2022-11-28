@@ -160,6 +160,116 @@
       </div>
       -->
       <!-- bloc-6 END -->
+      <!-- bloc-7 -->
+      <div class="bloc l-bloc full-width-bloc" id="bloc-7">
+        <div class="container bloc-no-padding-lg bloc-no-padding">
+          <div class="row no-gutters align-items-center">
+            <div class="col">
+              <div class="brand ">
+                <div class="brand-kv ">
+                  <img src="@/section/s1/09_img.jpg" class="left-img" alt="Brand_艾美國際城" />  
+                </div>
+                <div class="brand-box  text-md-center animated fadeInRight" data-appear-anim-style="fadeInRight">
+                  <img src="@/section/s1/09_eng.png" class="img-fluid img-protected mx-auto d-block eng2" alt="Brand_艾美國際城" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none mg-md brand-title" alt="上市品牌實力 八大事業遍全台" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none brand-title-m mg-md" alt="上市品牌實力 八大事業遍全台" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content" alt="三地集團由高雄發跡" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content-m" alt="三地集團由高雄發跡" />
+
+
+                    <div class="carousel slide brand-slide" data-ride="carousel" id="new">
+                    <ol class="carousel-indicators hide-indicators">
+                      <li data-target="#new" data-slide-to="0" class="active">
+                      </li>
+                      <li data-target="#new" data-slide-to="1">
+                      </li>
+                      <li data-target="#new" data-slide-to="2">
+                      </li>
+                      <li data-target="#new" data-slide-to="3">
+                      </li>
+                      <li data-target="#new" data-slide-to="4">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item img-protected active">
+                        <img class="d-inline-block w-100" alt="高雄客運" src="@/section/s1/09_img-1.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item img-protected">
+                        <img alt="三地集團" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-nav-controls carousel-control-prev" href="#new" role="button" data-slide="prev">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path>
+                      </svg>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-nav-controls carousel-control-next" href="#new" role="button" data-slide="next">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path>
+                      </svg>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <div class="carousel slide brand-slide-m" data-ride="carousel" id="new">
+                    <ol class="carousel-indicators hide-indicators">
+                      <li data-target="#new" data-slide-to="0" class="active">
+                      </li>
+                      <li data-target="#new" data-slide-to="1">
+                      </li>
+                      <li data-target="#new" data-slide-to="2">
+                      </li>
+                      <li data-target="#new" data-slide-to="3">
+                      </li>
+                      <li data-target="#new" data-slide-to="4">
+                      </li>
+                      <li data-target="#new" data-slide-to="5">
+                      </li>
+                      <li data-target="#new" data-slide-to="6">
+                      </li>
+                      <li data-target="#new" data-slide-to="7">
+                      </li>
+                      <li data-target="#new" data-slide-to="8">
+                      </li>
+                      <li data-target="#new" data-slide-to="9">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item img-protected active">
+                        <img class="d-inline-block w-100" alt="高雄客運" src="@/section/s1/09_img-1.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item img-protected">
+                        <img alt="高雄客運" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-nav-controls carousel-control-prev" href="#new" role="button" data-slide="prev">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path>
+                      </svg>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-nav-controls carousel-control-next" href="#new" role="button" data-slide="next">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path>
+                      </svg>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bloc-7 END -->
       <!-- bloc-6 -->
       <div class="bloc l-bloc full-width-bloc" id="bloc-6">
         <div class="container bloc-no-padding-lg bloc-no-padding">
