@@ -211,6 +211,7 @@
       line-height: 1;
       display: none;
       @media screen and (min-width:768px) {
+        display: block;
         font-size: size(12);
         text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
         bottom: size(10);
