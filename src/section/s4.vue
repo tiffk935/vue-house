@@ -1,147 +1,237 @@
 <template>
   <section class="s4 relative">
-    <img class="bg absolute" src="@/section/s4/bg.png" />
-    <img class="deco absolute md:hidden" src="@/section/s4/deco-m.svg" />
-    <img class="deco absolute hidden md:block" src="@/section/s4/deco.png" />
-    <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/logo-m.svg" />
-    <img class="logo absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/logo.svg" />
-    <img class="title absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/title-m.svg" />
-    <img class="title absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/title.svg" />
-
-    <div class="title1">
-    <div class="t1 hidden md:block" data-aos="fade-up" data-aos-delay="200">溫慶玄董事長：「自己敢住的房子，我才敢蓋；</div>
-    <div class="t1 md:hidden" data-aos="fade-up" data-aos-delay="200">溫慶玄董事長：<br>「自己敢住的房子，我才敢蓋；</div>
-    <div class="t1 br" data-aos="fade-up" data-aos-delay="200">自己願意住的房子，我才願意蓋。」</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     董事長創辦理念：低總價、高空間效率、好建材的商品，是持續以來不變的精神也是初衷。因為對於成家的夢想，我們緊緊守護，並真誠地了解：真正的好房，是買得起的好房子！<br><br>
-     在規劃之初，為建築琢磨高坪效的實用價值，以及耐震安全性的考量，我們捨棄填滿容積率而拔高建築物的經營態度，以守護家園價值為本心，致力建築符合居住需求的作品。
-      </div>
+    <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
+    <div class="slider absolute">
+      <swiper 
+        :spaceBetween="10"
+        :navigation="true"
+        :modules="modules"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :breakpoints="{
+          '768': {
+            slidesPerView: 2,
+          },
+        }"
+      >
+        <swiper-slide>
+          <img src="@/section/s4/slide1.png" />
+          <div class="text-white">情境示意圖</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/slide2.png" />
+          <div class="text-white">情境示意圖</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/slide3.png" />
+          <div class="text-white">情境示意圖</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/slide4.png" />
+          <div class="text-white">情境示意圖</div>
+        </swiper-slide>
+      </swiper>
     </div>
+    <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
+      <div class="t1 text-[#C2465A]">城市 新榮景</div>
+      <div class="t2">重大願景建設 司法特區</div>
+      <div class="content">以國道三號為分界，北區鄰近土城醫院，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
+    </div>
+    <img class="tree absolute" src="@/section/s4/tree.png" />
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s4 {
   width: 100%;
-  height: size-m(923);
-  background: linear-gradient(180deg, #D9D9D9 76.04%, rgb(212 212 212) 100%);
+  height: size-m(667);
   @media screen and (min-width:768px) {
-    height: size(1090);
-    background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+    height: size(1080);
   }
 
   .bg {
-    bottom: size-m(0);
-    left: size-m(-187);
-    width: size-m(562);
-    opacity: 0.5;
-    max-width: none;
-    @media screen and (min-width:768px) {
-      bottom: auto;
-      top: size(-38);
-      left: size(0);
-      width: size(1920);
-    }
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 
-    .title1{
-    position: absolute;
-    top: size(643);
-    left:size(865);
-    width: size(481);
-
-    @media screen and (max-width:768px) {
-      text-align: center;
-      top: size-m(330);
-      left:size-m(30);
-      width: size-m(315);
+  .slider {
+    width: 100%;
+    top: size-m(76);
+    left: size-m(0);
+    @media screen and (min-width:768px) {
+      top: size(109);
     }
 
-    .t1{
-      font-size: size(20);
-      color: #727171;
-      font-weight: 700;
-      text-align: left;
-
-      &.br{
-       margin-left: size(160);
-
-       @media screen and (max-width:768px) {
-        margin-left: size-m(16);
-      }
-      }
-
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(16);
+    .swiper-slide .text-white {
+      font-size: size-m(12);
+      position: absolute;
+      bottom: size-m(10);
+      right: size-m(10);
+      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+      @media screen and (min-width:768px) {
+        font-size: size(12);
+        bottom: size(10);
+        right: size(10);
       }
     }
 
-
-    .content{
-      font-size: size(16);
-      color: #727171;
-      font-weight:300;
-      margin-top: size(20);
-      text-align: left;
-      text-align: justify;
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        font-weight:500;
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(30.84);
+      height: size-m(30.84);
+      background-size: contain;
+      @media screen and (min-width:768px) {
+        width: size(60);
+        height: size(60);
+      }
+      &:after {
+        display: none;
       }
     }
 
-  }
-
-
-  .deco {
-    top: size-m(222);
-    left: size-m(14);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(437);
-      left: size(476);
-      width: size(967);
+    .swiper-button-prev {
+      left: 0;
+      background-image: url(@/section/s4/arrow-prev.svg);
     }
-  }
 
-  .logo {
-    top: size-m(47);
-    left: size-m(81);
-    width: size-m(213);
-    @media screen and (min-width:768px) {
-      top: size(180);
-      left: size(807);
-      width: size(306);
-    }
-  }
-
-  .title {
-    top: size-m(249);
-    left: size-m(41);
-    width: size-m(292);
-    @media screen and (min-width:768px) {
-      top: size(453);
-      left: size(643);
-      width: size(633);
+    .swiper-button-next {
+      right: 0;
+      background-image: url(@/section/s4/arrow-next.svg);
     }
   }
 
   .text {
-    top: size-m(342);
-    left: size-m(30);
-    width: size-m(315);
+    width: 100%;
+    top: size-m(319);
+    left: 0;
+    padding: 0 size-m(30);
+    text-align: center;
     @media screen and (min-width:768px) {
-      top: size(643);
-      left: size(867);
-      width: size(504);
+      top: size(730);
+      padding: 0 size(555) 0 size(509);
+    }
+
+    .t1 {
+      font-size: size-m(25);
+      font-weight: 800;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(18);
+      @media screen and (min-width:768px) {
+        font-size: size(40);
+        margin-bottom: size(20);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(20);
+      font-weight: 700;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(18);
+      @media screen and (min-width:768px) {
+        font-size: size(30);
+        margin-bottom: size(50);
+      }
+    }
+
+    .content {
+      font-size: size-m(13);
+      line-height: 1.7;
+      @media screen and (min-width:768px) {
+        font-size: size(20);
+      }
+    }
+  }
+
+  .tree {
+    width: size-m(152);
+    top: size-m(518);
+    left: size-m(18);
+    transform-origin: bottom;
+    animation: tree 3s alternate-reverse infinite ease-in-out;
+    @media screen and (min-width:768px) {
+      width: size(345);
+      top: size(742);
+      left: size(96);
     }
   }
 }
 
 </style>
 
-<script setup>
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper";
+// // import FsLightbox from "fslightbox-vue/v3";
+// import slide2_1_full from '@/section/s4/slide2-1-full.jpg';
+// import slide2_2_full from '@/section/s4/slide2-2-full.jpg';
+// import slide2_3_full from '@/section/s4/slide2-3-full.jpg';
+// import slide3_1_full from '@/section/s4/slide3-1-full.jpg';
+// import slide3_2_full from '@/section/s4/slide3-2-full.jpg';
+// import slide3_3_full from '@/section/s4/slide3-3-full.jpg';
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+    // FsLightbox,
+  },
+  setup() {
+    // let swiperRef = null;
+
+    // const setSwiperRef = (swiper) => {
+    //   swiperRef = swiper;
+    // };
+
+    // const slideToPrev = () => {
+    //   swiperRef.slidePrev();
+    // };
+
+    // const slideToNext = () => {
+    //   swiperRef.slideNext();
+    // };
+    
+    return {
+      // swiperRef: null,
+      // setSwiperRef,
+      // slideToPrev,
+      // slideToNext,
+      modules: [Navigation, Autoplay],
+    };
+  },
+  // data() {
+  //   return {
+  //     currentSlider: 2,
+  //     slider2Toggler: false,
+  //     slider2Slide: 1,
+  //     slider3Toggler: false,
+  //     slider3Slide: 1,
+  //     sources2: [slide2_1_full, slide2_2_full, slide2_3_full],
+  //     sources3: [slide3_1_full, slide3_2_full, slide3_3_full],
+  //   }
+  // },
+  // methods: {
+  //   openSlider: function(slider, slide) {
+  //     console.log('open', slide)
+  //     if(slider === 2) {
+  //       this.slider2Slide = slide;
+  //       this.slider2Toggler = !this.slider2Toggler;
+  //     }
+  //     else if(slider === 3) {
+  //       this.slider3Slide = slide;
+  //       this.slider3Toggler = !this.slider3Toggler;
+  //     }
+  //   }
+  // } 
+};
 </script>

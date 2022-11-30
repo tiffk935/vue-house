@@ -1,13 +1,18 @@
   <template>
   <div class="order relative bg-[#FFDFE3] text-center">
-    <div class="order1">
+    <div class="order1 relative">
+      <img class="tree absolute hidden md:block" src="@/section/s14/tree.png" />
+      <img class="bird1 absolute hidden md:block" src="@/section/form/bird1.svg" />
+      <img class="bird2 absolute hidden md:block" src="@/section/form/bird2.svg" />
+      <img class="man1 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/form/man1.png" />
+      <img class="man2 absolute hidden md:block" data-aos="fade-left" data-aos-delay="0" src="@/section/form/man2.png" />
       <div class="order2">
         <!-- Title -->
         <div class="order-title text-center text-white">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="紅布朗花園" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="紅布朗花園" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -20,7 +25,6 @@
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
-              <option value="透天">透天</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
@@ -45,9 +49,9 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p>
+          <p class="text-white">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,8 +61,8 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-white text-[#000000] hover:text-white rounded-none" @click="send()">
+          {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
 
@@ -82,11 +86,54 @@
   // padding-top: size(115);
 
   .order1 {
-    background-color: #D9374B;
+    background-color: #CA485D;
     background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
+    
+    .bg {
+      display: none;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      mix-blend-mode: multiply;
+    }
+
+    .tree {
+      width: size(1920);
+      bottom: size(-2);
+      left: size(0);
+      max-width: none;
+      transform-origin: bottom;
+      animation: tree 3s alternate-reverse infinite ease-in-out;
+    }
+
+    .bird1 {
+      width: size(400);
+      top: size(48);
+      left: size(1465);
+    }
+
+    .bird2 {
+      width: size(211);
+      top: size(1112);
+      left: size(0);
+    }
+
+    .man1 {
+      width: size(419);
+      bottom: 0;
+      left: 0;
+    }
+
+    .man2 {
+      width: size(480);
+      bottom: 0;
+      right: 0;
+    }
   }
 
   .order2 {
@@ -161,14 +208,15 @@
     margin-top: size-m(0);
 
     .order1 {
-      background: none;
+      // background: none;
+      background-image: url(@/section/form/bg-m.png);
       padding-bottom: 0;
     }
 
     .order2 {
       padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      // background-color: #D9374B;
+      // background-image: url(@/section/form/bg-m.png);
       background-size: cover;
       background-position: center center;
     }

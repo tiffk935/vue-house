@@ -6,6 +6,7 @@
                 <div class="menu-item font-bold cursor-pointer text-white" v-for="item, i in info.navList"
                     @click="scrollTo(item.target)">
                     <span>{{ item.name }}</span>
+                    <img class="absolute w-full left-0 bottom-0" src="@/assets/nav-item.svg" alt="">
                 </div>
             </div>
         </div>
@@ -29,11 +30,11 @@
         z-index: 1;
         width: size(54);
         height: size(54);
-        background: rgba(158, 47, 61, 0.9);
+        // background: rgba(158, 47, 61, 0.9);
         position: fixed;
         top: size(46);
-        left: size(47);
-        border: 1px solid #fff;
+        right: size(47);
+        // border: 1px solid #fff;
         z-index: 99;
 
         .bar {
@@ -118,32 +119,40 @@
     .menu {
         position: fixed;
         top: size(0);
-        left: size(0);
-        background-color: #9E2F3D;
+        right: size(0);
+        // background-color: #9E2F3D;
+        background: rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(15px);
         width: size(280);
         height: 100%;
         z-index: 99;
-        transform: translateX(-100%);
+        transform: translateX(100%);
         transition: all .5s;
         padding: size(100) 0;
         gap: size(20);
 
-        .menu-inner {
-            width: size(128);
-            margin: 0 size(40) 0 auto;
-        }
+        // .menu-inner {
+        //     width: size(128);
+        //     margin: 0 size(40) 0 auto;
+        // }
 
         .menu-item {
-            text-align: right;
-            padding: size(39) 0;
-            border-bottom: 1px solid #fff;
+            text-align: center;
+            padding: size(10);
+            // border-bottom: 1px solid #fff;
+            position: relative;
+            margin-bottom: size(40);
 
             &:last-child {
-                border: none;
+                // border: none;
+                margin-bottom: 0;
             }
             
             span {
-                font-size: size(18);
+                font-family: 'Noto Serif TC';
+                font-weight: 700;
+                font-size: size(30);
+                line-height: size(40);
                 width: 100%;
                 display: block;
                 white-space: nowrap;
@@ -151,10 +160,14 @@
                 transform-origin: left center;
             }
 
+            img {
+                transition: all .2s;
+                filter: brightness(0) invert(1);
+            }
+
             &:hover {
-                span {
-                    transform: scale(1.3);
-                    width: 0;
+                img {
+                    filter: brightness(1) invert(0);
                 }
             }
         }
@@ -267,33 +280,28 @@
 
         .menu {
             position: fixed;
-            background-color: rgba(158, 47, 61, 0.9);
+            // background-color: rgba(158, 47, 61, 0.9);
             width: 100%;
             padding: 0;
             gap: size-m(45);
 
-            .menu-inner {
-                width: size-m(128);
-                margin: 0 auto;
-            }
+            // .menu-inner {
+            //     width: size-m(110.6);
+            //     margin: 0 auto;
+            // }
 
             .menu-item {
-                padding: size-m(28.85) 0;
+                padding: size-m(8);
+                margin-bottom: size-m(40);
                 
                 span {
-                    font-size: size-m(15);
+                    font-size: size-m(20);
+                    line-height: size-m(23.7);
                     width: 100%;
                     display: block;
                     white-space: nowrap;
                     transition: width .4s linear, transform .1s linear;
                     transform-origin: left center;
-                }
-
-                &:hover {
-                    span {
-                        transform: scale(1.3);
-                        width: 0;
-                    }
                 }
                 
             }

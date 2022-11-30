@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#D9374B] text-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#CA485D] text-white">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
@@ -7,7 +7,7 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 font-bold border-l-2 border-[#ffffff] pl-2 ">{{ item[0] }}</p>
+                        <p class="mr-5 border-l-2 border-[#ffffff] pl-2 ">{{ item[0] }}</p>
                         <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -16,7 +16,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="戀JIA" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="紅布朗花園" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
     </div>
 </template>

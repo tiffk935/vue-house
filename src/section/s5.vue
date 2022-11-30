@@ -1,179 +1,234 @@
 <template>
-  <section class="s5 relative z-10">
-    <div class="bg absolute"></div>
-    <img class="house absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s5/house.png" />
-    <img class="style absolute md:hidden" src="@/section/s5/style-m.svg" />
-    <img class="style absolute hidden md:block" src="@/section/s5/style.svg" />
-    <img class="house2 absolute md:hidden" src="@/section/s5/house2-m.png" />
-    <img class="house2 absolute hidden md:block" src="@/section/s5/house2.png" />
-    <img class="style2 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/s5/style2.png" />
-    
-    <div class="bigtitle" data-aos="fade-up" data-aos-delay="200">新蔚營造 甲級營造</div>
-    <div class="title1">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">價格超值，品質卓越</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     威泰建築從土地開發、產品規劃、承建營造，每一環節群策群力緊密相扣，發揮最大功能，共同創作出最優質的作品。時刻追求新技術的經營理念，重視進度控制：訂立良好管控制度，使工程進度如期進行。重視品質管制：工地主任現場實地監督，以管控工地作業品質；並不定時派人員前往稽核以達到品質管制之目的。
-     <br>
-     每件工程都當做自已的事來施作，必求盡善盡美，以「專業、誠信、品質、效率」，創造新蔚甲級營造，值得信賴的好口碑。
-      </div>
+  <section class="s5 relative">
+    <img class="bg absolute hidden md:block" src="@/section/s5/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s5/bg-m.png" />
+    <img class="tree absolute" src="@/section/s5/tree.png" />
+    <img class="man absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s5/man.png" />
+    <img class="bird absolute hidden md:block"  data-aos="fade-left" data-aos-delay="0" src="@/section/s5/bird.svg" />
+    <div class="pic1 absolute">
+      <img src="@/section/s5/pic1.png" />
+      <div class="text-white">情境示意圖</div>
     </div>
-
+    <div class="pic2 absolute">
+      <img src="@/section/s5/pic2.png" />
+      <div class="text-white">情境示意圖</div>
+    </div>
+    <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
+      <div class="t1 text-[#C2465A]">科技 新門戶</div>
+      <div class="t2">擁抱智慧浪潮 千億產值</div>
+      <div class="content">擁抱3大科技產業園區，中和軟體、遠東通訊及頂埔科技，進駐產業人口將近4萬人，預估產值將突破兆元，土城新矽谷準備好了。</div>
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s5 {
   width: 100%;
-  height: size-m(900);
+  height: size-m(667);
   @media screen and (min-width:768px) {
-    height: size(1444);
+    height: size(1080);
   }
 
   .bg {
+    width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
-    width: 100%;
-    height: size-m(746);
-    background-image: url(@/section/s5/bg-m.png);
-    background-size: 100% 100%;
+  }
+
+  .tree {
+    width: size-m(123.49);
+    top: size-m(-63);
+    right: size-m(-10.37);
+    transform-origin: bottom;
+    animation: tree 3s alternate-reverse infinite ease-in-out;
+    z-index: 1;
     @media screen and (min-width:768px) {
-      height: size(1320);
-      background-image: url(@/section/s5/bg.png);
+      width: size(246);
+      top: size(-149.4);
+      right: size(397);
+      z-index: 0;
     }
   }
 
-  .house {
-    top: size-m(0);
-    left: size-m(-59);
-    width: size-m(808);
-    max-width: none;
+  .man {
+    width: size-m(215.4);
+    top: size-m(-240);
+    left: size-m(170);
     @media screen and (min-width:768px) {
-      top: size(-30);
-      left: size(31);
-      width: size(1872);
+      width: size(463);
+      top: size(-411);
+      left: size(1444);
     }
   }
 
-  .title {
-    top: size-m(202);
-    left: size-m(66);
-    width: size-m(247);
+  .bird {
+    width: size(355);
+    top: size(829);
+    left: size(1565);
+  }
+
+  .pic1 {
+    width: size-m(256);
+    top: size-m(24);
+    left: size-m(61);
     @media screen and (min-width:768px) {
-      top: size(462);
-      left: size(591);
-      width: size(741);
+      width: size(602);
+      top: size(154);
+      left: size(1063);
     }
   }
 
-  .bigtitle{
-    position: absolute;
-    font-size: size(90);
-    color: #fff;
-    font-weight: 900;
-    left:size(590);
-    top: size(435);
-    text-shadow: rgba(0, 0, 0, 0.3) 0.05em 0.05em 0.05em;
-    @media screen and (max-width:768px) {
-    font-size: size-m(30); 
-    left:size-m(65);
-    top: size-m(195);
+  .pic2 {
+    width: size-m(375);
+    height: size-m(272.88);
+    bottom: 0;
+    left: 0;
+    @media screen and (min-width:768px) {
+      width: size(960);
+      height: 100%;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
   }
 
-  .title1{
-    position: absolute;
-    top: size(650);
-    left:size(680);
-    width: size(559);
-    z-index: 5;
-    text-align: center;
-
-    @media screen and (max-width:768px) {
-      top: size-m(310);
-      left:size-m(30);
-      width: size-m(315);
-    }
-
-    .t1{
-      font-size: size(45);
-      line-height: size(70);
-      margin-bottom: size(15);
-      color: #fff;
-      font-weight: 900;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-      
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(20);
-        margin-bottom: size-m(20);
+  .pic1, .pic2 {
+    .text-white {
+      font-size: size-m(12);
+      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: size-m(10);
+      right: size-m(10);
+      line-height: 1;
+      @media screen and (min-width:768px) {
+        font-size: size(12);
+        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
+        bottom: size(10);
+        right: size(10);
       }
-    }
-
-
-    .content{
-      font-size: size(16);
-      color: #fff;
-      font-weight:300;
-      margin-top: size(15);
-      text-align: left;
-      text-align: justify;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        line-height: size-m(20);
-        font-weight:400;
-      }
-    }
-
-  }
-
-  .style {
-    top: size-m(271);
-    left: size-m(16);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(617);
-      left: size(609);
-      width: size(706);
     }
   }
 
   .text {
-    top: size-m(301);
-    left: size-m(32);
-    width: size-m(315);
-    @media screen and (min-width:768px) {
-      top: size(652);
-      left: size(682);
-      width: size(559);
-    }
-  }
-
-  .house2 {
-    top: size-m(555);
-    left: 0;
     width: 100%;
+    top: size-m(225);
+    left: 0;
+    padding: 0 size-m(30);
+    text-align: center;
     @media screen and (min-width:768px) {
-      top: size(702.58);
-      left: size(728);
-      width: size(1194);
-      max-width: none;
+      top: size(669);
+      padding: 0 size(344) 0 size(1063);
+      text-align: left;
     }
-  }
 
-  .style2 {
-    @media screen and (min-width:768px) {
-      top: size(1133);
-      left: size(170);
-      width: size(662);
+    .t1 {
+      font-size: size-m(25);
+      font-weight: 800;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(12);
+      @media screen and (min-width:768px) {
+        font-size: size(40);
+        margin-bottom: size(20);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(20);
+      font-weight: 700;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(12);
+      @media screen and (min-width:768px) {
+        font-size: size(30);
+        margin-bottom: size(60);
+      }
+    }
+
+    .content {
+      font-size: size-m(13);
+      line-height: 1.7;
+      @media screen and (min-width:768px) {
+        font-size: size(20);
+      }
     }
   }
 }
 
 </style>
 
-<script setup>
+<script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation, Autoplay } from "swiper";
+// // import FsLightbox from "fslightbox-vue/v3";
+// import slide2_1_full from '@/section/s5/slide2-1-full.jpg';
+// import slide2_2_full from '@/section/s5/slide2-2-full.jpg';
+// import slide2_3_full from '@/section/s5/slide2-3-full.jpg';
+// import slide3_1_full from '@/section/s5/slide3-1-full.jpg';
+// import slide3_2_full from '@/section/s5/slide3-2-full.jpg';
+// import slide3_3_full from '@/section/s5/slide3-3-full.jpg';
+
+export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+    // FsLightbox,
+  },
+  setup() {
+    // let swiperRef = null;
+
+    // const setSwiperRef = (swiper) => {
+    //   swiperRef = swiper;
+    // };
+
+    // const slideToPrev = () => {
+    //   swiperRef.slidePrev();
+    // };
+
+    // const slideToNext = () => {
+    //   swiperRef.slideNext();
+    // };
+    
+    return {
+      // swiperRef: null,
+      // setSwiperRef,
+      // slideToPrev,
+      // slideToNext,
+      modules: [Navigation, Autoplay],
+    };
+  },
+  // data() {
+  //   return {
+  //     currentSlider: 2,
+  //     slider2Toggler: false,
+  //     slider2Slide: 1,
+  //     slider3Toggler: false,
+  //     slider3Slide: 1,
+  //     sources2: [slide2_1_full, slide2_2_full, slide2_3_full],
+  //     sources3: [slide3_1_full, slide3_2_full, slide3_3_full],
+  //   }
+  // },
+  // methods: {
+  //   openSlider: function(slider, slide) {
+  //     console.log('open', slide)
+  //     if(slider === 2) {
+  //       this.slider2Slide = slide;
+  //       this.slider2Toggler = !this.slider2Toggler;
+  //     }
+  //     else if(slider === 3) {
+  //       this.slider3Slide = slide;
+  //       this.slider3Toggler = !this.slider3Toggler;
+  //     }
+  //   }
+  // } 
+};
 </script>

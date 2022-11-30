@@ -1,28 +1,21 @@
 <template>
-  <section class="s6 relative">
-    <div class="rect w-full absolute bg-[#D9374B]"></div>
-    <img class="bg absolute block md:hidden" src="@/section/s6/bg-m.svg" />
-    <img class="bg absolute hidden md:block" src="@/section/s6/bg.svg" />
-    
-    <div class="title">
-    <div class="t2" data-aos="fade-up" data-aos-delay="100">錢都20期：大樓 & 別墅</div>
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">威泰好宅 自有風華</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-      威泰選地擇優，<br>
-      以經典時尚語彙成就建築詩篇，<br>
-      建築城市的風景，團隊堅信─<br>
-      有使命感的建築將會改造一座城市。<br>
-      城市一靜 水綠靚界；實踐夢想 幸福造鎮<br>
-      在桃園客運園區，寓見未來！<br>
-      生活FUN輕鬆，與最好的自己相遇。
-
+  <section class="s6 bg-[#CA485D] relative">
+    <img class="bg absolute hidden md:block" src="@/section/s6/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s6/bg-m.png" />
+    <img class="tree absolute" src="@/section/s6/tree.png" />
+    <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
+      <div class="t1 text-[#E2C46C]">便利 全集中</div>
+      <div class="t2">土城人的主場 就是這裡</div>
+      <div class="content">10分鐘內吃喝玩樂，延吉、裕民與家樂福三大商圈；15分鐘內享受21,000坪綠意；清水國小、中正國中和裕德雙語高中，人文教育自小養成。</div>
     </div>
-    </div>
+    <img class="tree2 absolute" src="@/section/s6/tree2.png" />
+    <img class="bird absolute" src="@/section/s6/bird.svg" />
 
-    <div class="slider slider1 absolute md:hidden">
+    <div class="slider absolute">
       <swiper 
+        :spaceBetween="10"
         :pagination="{
-          clickable: true,
+          clickable: true
         }"
         :navigation="true"
         :modules="modules"
@@ -33,133 +26,66 @@
         }"
       >
         <swiper-slide>
-          <img src="@/section/s6/slide1-1.jpg" />
-          <div class="text-white">戀JIA公寓區3D示意圖</div>
+          <img src="@/section/s6/1.jpg" />
+          <!-- <div class="text-white">清和公園</div> -->
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s6/slide1-2.jpg" />
-          <div class="text-white">戀JIA一樓3D示意圖</div>
+          <img src="@/section/s6/2.jpg" />
+          <!-- <div class="text-white">青山公園</div> -->
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s6/slide1-3.jpg" />
-          <div class="text-white">戀JIA一樓3D示意圖</div>
+          <img src="@/section/s6/3.jpg" />
+          <!-- <div class="text-white">土城國民運動中心</div> -->
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/4.jpg" />
+          <!-- <div class="text-white">土城棒壘球場</div> -->
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/5.jpg" />
+          <!-- <div class="text-white">土城綜合體育場</div> -->
         </swiper-slide>
       </swiper>
     </div>
-    <div class="pics absolute hidden md:flex">
-      <div class="pic">
-        <img src="@/section/s6/slide1-1.jpg" alt="">
-        <div class="text-[#727171]">戀JIA公寓區3D示意圖</div>
+    <div class="grids absolute">
+      <div class="item">
+        <img src="@/section/s6/1.jpg" />
+        <div class="mask"></div>
       </div>
-      <div class="pic">
-        <img src="@/section/s6/slide1-2.jpg" alt="">
-        <div class="text-white">戀JIA一樓3D示意圖</div>
+      <div class="item">
+        <img src="@/section/s6/2.jpg" />
+        <div class="mask"></div>
       </div>
-      <div class="pic">
-        <img src="@/section/s6/slide1-3.jpg" alt="">
-        <div class="text-white">戀JIA一樓3D示意圖</div>
+      <div class="item">
+        <img src="@/section/s6/3.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/4.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/5.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/6.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/7.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/8.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="item">
+        <img src="@/section/s6/9.jpg" />
+        <div class="mask"></div>
       </div>
     </div>
-
-    <div class="tk-tabs absolute">
-      <div :class="{'tk-tab': true, active: currentSlider === 2}" @click="currentSlider = 2">全區配置</div>
-      <div :class="{'tk-tab': true, active: currentSlider === 3}" @click="currentSlider = 3">百變戶型</div>
-    </div>
-
-    <div v-if="currentSlider === 2" class="slider slider2 absolute">
-      <swiper 
-        :allowTouchMove="false"
-        :pagination="{
-          clickable: true,
-        }"
-        :loop="true"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
-        @swiper="setSwiperRef"
-        :navigation="false"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(2, 1)">
-            <img class="hidden md:block" src="@/section/s6/slide2-1.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide2-1-m.jpg" />
-          </figure>
-        </swiper-slide>
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(2, 2)">
-            <img class="hidden md:block" src="@/section/s6/slide2-2.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide2-2-m.jpg" />
-          </figure>
-        </swiper-slide>
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(2, 3)">
-            <img class="hidden md:block" src="@/section/s6/slide2-3.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide2-3-m.jpg" />
-          </figure>
-        </swiper-slide>
-      </swiper>
-    </div>
-
-    <div v-if="currentSlider === 3" class="slider slider3 absolute">
-      <swiper 
-        :allowTouchMove="false"
-        :pagination="{
-          clickable: true,
-        }"
-        :loop="true"
-        :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }"
-        @swiper="setSwiperRef"
-        :navigation="false"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(3, 1)">
-            <img class="hidden md:block" src="@/section/s6/slide3-1.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide3-1-m.jpg" />
-          </figure>
-        </swiper-slide>
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(3, 2)">
-            <img class="hidden md:block" src="@/section/s6/slide3-2.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide3-2-m.jpg" />
-          </figure>
-        </swiper-slide>
-        <swiper-slide>
-          <figure class="cursor-pointer" @click="openSlider(3, 3)">
-            <img class="hidden md:block" src="@/section/s6/slide3-3.jpg" />
-            <img class="md:hidden" src="@/section/s6/slide3-3-m.jpg" />
-          </figure>
-        </swiper-slide>
-      </swiper>
-    </div>
-
-    <img class="note absolute" src="@/section/s6/note.svg" />
-
-    <button @click="slideToNext" class="slideToNext">
-      <img class="w-full" src="@/section/s3/arrow-right-circle.svg" />
-    </button>
-
-    <button @click="slideToPrev" class="slideToPrev">
-      <img class="w-full" src="@/section/s3/arrow-left-circle.svg" />
-    </button>
-
-    <FsLightbox
-      :toggler="slider2Toggler"
-      :slide="slider2Slide"
-      :sources="sources2"
-    /> 
-
-    <FsLightbox
-      :toggler="slider3Toggler"
-      :slide="slider3Slide"
-      :sources="sources3"
-    /> 
-
+    
   </section>
 </template>
 
@@ -168,364 +94,199 @@
 
 .s6 {
   width: 100%;
-  height: size-m(1154);
+  height: size-m(667);
   @media screen and (min-width:768px) {
-    height: size(1444);
-  }
-
-  .fslightbox-toolbar-button:nth-child(1) {
-    display: none;
-  }
-
-  .rect {
-    height: 10px;
-    bottom: 0;
-    left: 0;
+    height: size(1080);
   }
 
   .bg {
     width: 100%;
-    bottom: 0;
+    height: 100%;
+    top: 0;
     left: 0;
+    mix-blend-mode: multiply;
   }
 
-  .text {
-    top: size-m(36);
+  .slider {
+    top: size-m(266);
     left: size-m(30);
-    width: size-m(315);
+    right: size-m(30);
+    overflow: hidden;
+    padding-top: size-m(36);
     @media screen and (min-width:768px) {
-      top: size(42);
-      left: size(218);
-      width: size(807);
-    }
-  }
-
-  .title{
-    position: absolute;
-    top: size(40);
-    left:size(220);
-    width: size(559);
-    z-index: 5;
-    text-align: left;
-
-    @media screen and (max-width:768px) {
-      text-align: left;
-      top: size-m(35);
-      left:size-m(30);
-      width: size-m(315);
+      display: none;
     }
 
-    .t1{
-      font-size: size(58);
-      line-height: size(70);
-      margin-bottom: size(5);
-      color: #D9374B;
-      font-weight: 900;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(25);
-        margin-top: size-m(10);
-        margin-bottom: size-m(25);
-      }
+    .swiper {
+      overflow: visible;
     }
 
-    .t2{
-      font-size: size(30);
-      color: #727171;
-      font-weight:500;
-      line-height: size(40);
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(16);
-        line-height: size-m(25);
-      }
-    }
-
-    .content{
-      font-size: size(16);
-      color: #727171;
-      font-weight:300;
-      margin-top: size(35);
-      text-align: left;
-      text-align: justify;
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        line-height: size-m(20);
-        font-weight:400;
-      }
-    }
-
-  }
-
-  .tk-tabs {
-    top: size-m(607);
-    left: size-m(31);
-    width: size-m(312.73);
-    display: flex;
-    justify-content: space-between;
-    @media screen and (min-width:768px) {
-      top: size(1240);
-      left: size(155);
-      width: size(139);
+    .swiper-slide img {
       display: block;
+      width: 100%;
     }
 
-    .tk-tab {
-      font-size: size-m(18);
-      font-weight: 500;
-      color: #fff;
-      width: size-m(138);
-      border: 1px solid #FFFFFF;
-      text-align: center;
-      line-height: size-m(42);
-      cursor: pointer;
-      position: relative;
-      @media screen and (min-width:768px) {
-        font-size: size(18);
-        width: 100%;
-        line-height: size(42);
-        margin-bottom: size(25.91);
-      }
+    .swiper-pagination-bullets {
+      bottom: auto;
+      top: -7vw;
 
-      &.active {
-        font-size: size-m(20);
-        font-weight: 700;
-        border: none;
-        border-color: rgba(255,255,255,0);
-        @media screen and (min-width:768px) {
-          font-size: size(20);
+      .swiper-pagination-bullet {
+        width: size-m(10);
+        height: size-m(10);
+        background: #fff;
+        opacity: 0.1;
+
+        &.swiper-pagination-bullet-active {
+          background: #fff;
+          opacity: 1;
+        }
+      }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(30.84);
+      height: size-m(30.84);
+      background-size: contain;
+      top: -9vw;
+      margin: 0;
+      z-index: 11;
+      @media screen and (min-width:768px) {
+        width: size(60);
+        height: size(60);
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      background-image: url(@/section/s4/arrow-prev.svg);
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-image: url(@/section/s4/arrow-next.svg);
+    }
+  }
+
+  .grids {
+    display: none;
+    @media screen and (min-width:768px) {
+      // width: size(961);
+      display: flex;
+      flex-wrap: wrap;
+      gap: size(11);
+      top: size(60);
+      left: size(901);
+
+      .item {
+        width: size(313);
+        position: relative;
+
+        img {
+          width: 100%;
+          display: block;
         }
 
-        &:after {
-          content: "";
+        .mask {
           position: absolute;
+          top: 0;
           left: 0;
-          bottom: 0;
           width: 100%;
-          height: size-m(4);
-          background: #fff;
-          @media screen and (min-width:768px) {
-            height: size(4);
+          height: 100%;
+          background: rgba(109, 0, 33, 0.7);
+          transition: opacity .2s;
+        }
+
+        &:hover {
+          .mask {
+            opacity: 0;
           }
         }
       }
     }
   }
 
-  .slider {
-    width: size-m(314.34);
-    height: size-m(197.02 + 34);
-    padding-bottom: size-m(34);
-    top: size-m(281);
-    left: size-m(30);
-    overflow: hidden;
-    // background: yellow;
-    box-sizing: content-box;
-    z-index: 1;
+  .text {
+    color: #fff;
+    width: 100%;
+    top: size-m(96);
+    left: 0;
+    padding: 0 size-m(30);
+    text-align: center;
     @media screen and (min-width:768px) {
-      width: size(1134);
-      height: size(605 + 55);
-      padding-bottom: size(55);
-      top: size(223);
-      left: size(786);
+      top: size(395);
+      padding: 0 size(1283) 0 size(272);
+      text-align: left;
     }
 
-    .swiper {
-      overflow: visible;
-
-      .swiper-slide div {
-        font-size: size-m(14);
-        // text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
-        font-weight: 500;
-        position: absolute;
-        bottom: size-m(10);
-        right: size-m(10);
-        @media screen and (min-width:768px) {
-          font-size: size(19);
-          text-shadow: none;
-          bottom: size(10);
-          right: size(10);
-        }
-      }
-
-      .swiper-pagination {
-        bottom: -7vw;
-        z-index: 0;
-        @media screen and (min-width:768px) {
-          bottom: -2.38vw;
-        }
-      }
-
-      .swiper-pagination-bullet {
-        width: size-m(6.44);
-        height: size-m(6.44);
-        background: #BFBFBF;
-        opacity: 1;
-        margin: 0 size-m(6.445);
-        @media screen and (min-width:768px) {
-          width: size(10);
-          height: size(10);
-          margin: 0 size(10);
-        }
-
-        &.swiper-pagination-bullet-active {
-          background: #fff;
-        }
-      }
-
-      .swiper-button-next, .swiper-button-prev {
-        width: size-m(29);
-        height: size-m(29);
-        top: auto;
-        bottom: 0;
-        margin: 0;
-        background-size: contain;
-        background-position: center center;
-        z-index: 1;
-        @media screen and (min-width:768px) {
-          width: size(45);
-          height: size(45);
-        }
-
-        &:after {
-          display: none;
-        }
-      }
-
-      .swiper-button-next {
-        right: 50%;
-        transform: translate(19vw, size-m(29 + 5));
-        background-image: url(@/section/s3/arrow-right-circle.svg);
-        @media screen and (min-width:768px) {
-          transform: translate(5vw, size(45 + 10));
-        }
-      }
-
-      .swiper-button-prev {
-        left: 50%;
-        transform: translate(-19vw, size-m(29 + 5));
-        background-image: url(@/section/s3/arrow-left-circle.svg);
-        @media screen and (min-width:768px) {
-          transform: translate(-5vw, size(45 + 10));
-        }
+    .t1 {
+      font-size: size-m(25);
+      font-weight: 800;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(13);
+      @media screen and (min-width:768px) {
+        font-size: size(40);
+        margin-bottom: size(20);
       }
     }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      // display: block;
+    .t2 {
+      font-size: size-m(20);
+      font-weight: 700;
+      line-height: 1;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(13);
+      @media screen and (min-width:768px) {
+        font-size: size(30);
+        margin-bottom: size(63);
+      }
+    }
+
+    .content {
+      font-size: size-m(13);
+      line-height: 1.7;
+      @media screen and (min-width:768px) {
+        font-size: size(20);
+        letter-spacing: 0.2em;
+      }
     }
   }
 
-  .slider1 .swiper, .slider2 .swiper, .slider3 .swiper {
-
-    .swiper-slide div {
-      font-size: size-m(12);
-      bottom: size-m(-5);
-      right: size-m(10);
-      right: 50%;
-      transform: translate(50%, 100%);
-    }
-    
-    .swiper-button-next {
-      transform: translate(19vw, size-m(29 + 30));
-    }
-
-    .swiper-button-prev {
-      transform: translate(-19vw, size-m(29 + 30));
-    }
-
-    .swiper-pagination {
-      bottom: -13.5vw;
-    }
-    
-  }
-
-  .slideToPrev, .slideToNext {
-    width: size-m(29);
-    height: size-m(29);
-    position: absolute;
-    top: size-m(1094);
-    cursor: pointer;
+  .tree {
+    width: size-m(897);
+    bottom: size-m(-14);
+    left: size-m(-339);
+    transform-origin: bottom;
+    animation: tree 3s alternate-reverse infinite ease-in-out;
+    max-width: none;
     @media screen and (min-width:768px) {
-      width: size(45);
-      height: size(45);
-      top: size(954);
+      width: size(1920);
+      bottom: size(-60);
+      left: size(0);
     }
   }
 
-  .slideToPrev {
-    left: size-m(119);
-    z-index: 10;
+  .tree2 {
+    width: size-m(124);
+    top: size-m(10);
+    left: size-m(-35);
+    transform-origin: bottom;
+    animation: tree 3s alternate-reverse infinite ease-in-out;
+    max-width: none;
     @media screen and (min-width:768px) {
-      left: size(332);
+      display: none;
     }
   }
 
-  .slideToNext {
-    left: size-m(226);
-    z-index: 10;
+  .bird {
+    width: size-m(236.83);
+    top: size-m(16.46);
+    left: size-m(203);
     @media screen and (min-width:768px) {
-      left: size(1689);
-    }
-  }
-
-  .slider2, .slider3 {
-    width: size-m(313);
-    height: size-m(380 + 34);
-    top: size-m(681);
-    left: size-m(31);
-    @media screen and (min-width:768px) {
-      width: size(1272);
-      height: size(740 + 55);
-      top: size(613);
-      left: size(397);
-    }
-
-    .swiper {
-
-      .swiper-pagination {
-        bottom: -14vw;
-        @media screen and (min-width:768px) {
-          bottom: -2vw;
-        }
-      }
-    }
-  }
-
-  .pics {
-    top: size(225);
-    left: size(618);
-
-    .pic {
-      width: size(351);
-      margin-right: size(24);
-
-      img {
-        display: block;
-        width: 100%;
-      }
-
-      div {
-        font-size: size(16);
-        line-height: size(18);
-        margin-top: size(6);
-      }
-    }
-
-  }
-
-  .note {
-    top: size-m(1072);
-    left: size-m(52);
-    width: size-m(270);
-    @media screen and (min-width:768px) {
-      top: size(1366);
-      left: size(1439);
-      width: size(226.59);
+      display: none;
     }
   }
 }
@@ -535,69 +296,42 @@
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Pagination, Navigation, Autoplay } from "swiper";
-import FsLightbox from "fslightbox-vue/v3";
-import slide2_1_full from '@/section/s6/slide2-1-full.jpg';
-import slide2_2_full from '@/section/s6/slide2-2-full.jpg';
-import slide2_3_full from '@/section/s6/slide2-3-full.jpg';
-import slide3_1_full from '@/section/s6/slide3-1-full.jpg';
-import slide3_2_full from '@/section/s6/slide3-2-full.jpg';
-import slide3_3_full from '@/section/s6/slide3-3-full.jpg';
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    FsLightbox,
-  },
-  setup() {
-    let swiperRef = null;
-
-    const setSwiperRef = (swiper) => {
-      swiperRef = swiper;
-    };
-
-    const slideToPrev = () => {
-      swiperRef.slidePrev();
-    };
-
-    const slideToNext = () => {
-      swiperRef.slideNext();
-    };
-    
-    return {
-      swiperRef: null,
-      setSwiperRef,
-      slideToPrev,
-      slideToNext,
-      modules: [Pagination, Navigation, Autoplay],
-    };
   },
   data() {
     return {
-      currentSlider: 2,
-      slider2Toggler: false,
-      slider2Slide: 1,
-      slider3Toggler: false,
-      slider3Slide: 1,
-      sources2: [slide2_1_full, slide2_2_full, slide2_3_full],
-      sources3: [slide3_1_full, slide3_2_full, slide3_3_full],
+      swiper: null,
+      modules: [Pagination, Navigation, Autoplay],
     }
   },
-  methods: {
-    openSlider: function(slider, slide) {
-      console.log('open', slide)
-      if(slider === 2) {
-        this.slider2Slide = slide;
-        this.slider2Toggler = !this.slider2Toggler;
-      }
-      else if(slider === 3) {
-        this.slider3Slide = slide;
-        this.slider3Toggler = !this.slider3Toggler;
-      }
-    }
-  } 
+  // methods: {
+  //   setSwiper(swiper) {
+  //     this.swiper = swiper;
+  //   },
+  //   slideTo(num) {
+  //     this.swiper.update();
+  //     this.swiper.slideTo(num);
+  //   },
+  // }
 };
+
+// export default {
+//   components: {
+//     Swiper,
+//     SwiperSlide,
+//   },
+//   setup() {
+//     return {
+//       modules: [Navigation, Autoplay],
+//     };
+//   },
+  
+// };
 </script>
