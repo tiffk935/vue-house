@@ -38,17 +38,17 @@ export default {
         },
         {
             name: "城市樂活",
-            target: ".s4",
+            target: ".s3",
             offset: "",
         },
         {
             name: "築美視野",
-            target: ".s6",
+            target: ".s9",
             offset: "",
         },
         {
             name: "安心成家",
-            target: ".s8",
+            target: ".s14",
             offset: "",
         },
         {
