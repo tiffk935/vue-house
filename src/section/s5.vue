@@ -7,11 +7,11 @@
     <img class="bird absolute hidden md:block"  data-aos="fade-left" data-aos-delay="0" src="@/section/s5/bird.svg" />
     <div class="pic1 absolute">
       <img src="@/section/s5/pic1.jpg" />
-      <div class="text-white">情境示意圖</div>
+      <div class="text-white">頂埔科技園區實景</div>
     </div>
     <div class="pic2 absolute">
       <img src="@/section/s5/pic2.jpg" />
-      <div class="text-white">情境示意圖</div>
+      <div class="text-white">遠東通訊園區實景</div>
     </div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#C2465A]">科技 新門戶</div>

@@ -31,11 +31,11 @@ export default {
         subTitle: "",
     },
     navList: [
-        {
-            name: "慢活哲學",
-            target: ".s2",
-            offset: "",
-        },
+        //{
+        //    name: "慢活哲學",
+        //    target: ".s2",
+        //    offset: "",
+        //},
         {
             name: "城市樂活",
             target: ".s3",

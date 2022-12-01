@@ -27,77 +27,86 @@
       >
         <swiper-slide>
           <img src="@/section/s6/1.jpg" />
-          <!-- <div class="text-white">清和公園</div> -->
+          <div class="text-white">延吉街商圈實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/2.jpg" />
-          <!-- <div class="text-white">青山公園</div> -->
+          <div class="text-white">家樂福商圈實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/3.jpg" />
-          <!-- <div class="text-white">土城國民運動中心</div> -->
+          <div class="text-white">裕民街商圈實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/4.jpg" />
-          <!-- <div class="text-white">土城棒壘球場</div> -->
+          <div class="text-white">學府市場實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/5.jpg" />
-          <!-- <div class="text-white">土城綜合體育場</div> -->
+          <div class="text-white">uniqlo金城店實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/6.jpg" />
-          <!-- <div class="text-white">土城綜合體育場</div> -->
+          <div class="text-white">藏壽司金城店實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/7.jpg" />
-          <!-- <div class="text-white">土城綜合體育場</div> -->
+        <div class="text-white">清水國小實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/8.jpg" />
-          <!-- <div class="text-white">土城綜合體育場</div> -->
+          <div class="text-white">中正國中實景</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s6/9.jpg" />
-          <!-- <div class="text-white">土城綜合體育場</div> -->
+          <div class="text-white">裕德雙語高中實景</div>
         </swiper-slide>
       </swiper>
     </div>
     <div class="grids absolute">
       <div class="item">
         <img src="@/section/s6/1.jpg" />
+        <div class="text-white">延吉街商圈實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/2.jpg" />
+        <div class="text-white">家樂福商圈實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/3.jpg" />
+        <div class="text-white">裕民街商圈實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/4.jpg" />
+        <div class="text-white">學府市場實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/5.jpg" />
+        <div class="text-white">uniqlo金城店實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/6.jpg" />
+        <div class="text-white">藏壽司金城店實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/7.jpg" />
+        <div class="text-white">清水國小實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/8.jpg" />
+        <div class="text-white">中正國中實景</div>
         <div class="mask"></div>
       </div>
       <div class="item">
         <img src="@/section/s6/9.jpg" />
+        <div class="text-white">裕德雙語高中實景</div>
         <div class="mask"></div>
       </div>
     </div>
@@ -135,6 +144,13 @@
 
     .swiper {
       overflow: visible;
+    }
+
+    .text-white{
+      position: absolute;
+      font-size: size-m(12);
+      bottom:size-m(5);
+      right:size-m(5);
     }
 
     .swiper-slide img {
@@ -199,6 +215,14 @@
       .item {
         width: size(313);
         position: relative;
+
+
+        .text-white{
+        position: absolute;
+        bottom: size(0);
+        right: size(10);
+        font-size: size(12);
+        }
 
         img {
           width: 100%;

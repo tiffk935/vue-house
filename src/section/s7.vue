@@ -17,7 +17,7 @@
       >
         <swiper-slide>
           <img src="@/section/s7/slide1.jpg" />
-          <div class="text-white">清和公園</div>
+          <div class="text-white">大清水運動公園</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s7/slide2.jpg" />
@@ -25,7 +25,7 @@
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s7/slide3.jpg" />
-          <div class="text-white">土城國民運動中心</div>
+          <div class="text-white">清和公園</div>
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s7/slide4.jpg" />
@@ -33,6 +33,10 @@
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s7/slide5.jpg" />
+          <div class="text-white">土城國民運動中心</div>
+        </swiper-slide>
+         <swiper-slide>
+          <img src="@/section/s7/slide6.jpg" />
           <div class="text-white">土城綜合體育場</div>
         </swiper-slide>
       </swiper>
@@ -56,6 +60,10 @@
       </div>
       <div class="atab" @click="slideTo(5)">
         <img src="@/section/s7/slide5.jpg" />
+        <div class="mask"></div>
+      </div>
+      <div class="atab" @click="slideTo(6)">
+        <img src="@/section/s7/slide6.jpg" />
         <div class="mask"></div>
       </div>
     </div>
