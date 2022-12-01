@@ -89,7 +89,7 @@
         font-size: size(12);
         text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
         bottom: size(10);
-        right: size(10);
+        right: size(25);
       }
     }
   }

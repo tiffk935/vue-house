@@ -6,7 +6,7 @@
       <div class="title text-[#CFA123]">邂逅 迷人生活</div>
       <div class="t1">值得期待 回家這件事</div>
       <div class="t2">涵仰迎賓大廳</div>
-      <div class="t3">木質書架搭配木質地板，溫潤舒適的空間氛<br>圍，讓親子都能安心放鬆，共享溫馨時光。</div>
+      <div class="t3">挑高消彌距離感，軟裝增添親切感，每次進門都像獲得一個擁抱。</div>
     </div>
     <div class="text-white">3D示意圖</div>
   </section>
@@ -78,7 +78,7 @@
     font-size: size-m(13);
     line-height: size-m(20);
     font-weight: 600;
-    letter-spacing: 0.2em;
+    letter-spacing: 0.1em;
     @media screen and (min-width:768px) {
       font-size: size(20);
       line-height: size(30);

@@ -66,7 +66,7 @@
     animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(1920);
-      bottom: size(-101);
+      bottom: size(0);
       left: size(0);
     }
   }
@@ -132,7 +132,7 @@
     top: size-m(261);
     left: 0;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     font-size: size-m(20);
     @media screen and (min-width:768px) {
       top: size(631);
@@ -140,7 +140,7 @@
     }
 
     .l1 {
-      font-weight: 800;
+      font-weight: 700;
       font-size: size-m(25);
       @media screen and (min-width:768px) {
         font-size: size(40);

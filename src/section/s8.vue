@@ -25,26 +25,26 @@
         }"
       >
         <swiper-slide>
-          <img src="@/section/s8/1.jpg" />
+          <img class="slide_img" src="@/section/s8/1.jpg" />
           <div class="text-white">國道三號</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s8/2.jpg" />
+          <img class="slide_img" src="@/section/s8/2.jpg" />
           <div class="text-white">板南線土城海山站</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s8/3.jpg" />
+          <img class="slide_img" src="@/section/s8/3.jpg" />
           <div class="text-white">板南線土城捷運站</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s8/4.jpg" />
+          <img class="slide_img" src="@/section/s8/4.jpg" />
           <div class="text-white">65號快速道路</div>
         </swiper-slide>
       </swiper>
     </div>
     <div class="grids absolute">
       <div class="item">
-        <img src="@/section/s8/1.jpg" />
+        <img class="slide_img" src="@/section/s8/1.jpg" />
         <div class="text-white">國道三號</div>
         <div class="mask"></div>
       </div>
@@ -56,7 +56,7 @@
         <img class="tree1 absolute" src="@/section/s8/tree1.png" />
       </div>
       <div class="item">
-        <img src="@/section/s8/2.jpg" />
+        <img class="slide_img" src="@/section/s8/2.jpg" />
         <div class="text-white">板南線土城海山站</div>
         <div class="mask"></div>
       </div>
@@ -69,7 +69,7 @@
         <img class="tree2 absolute" src="@/section/s8/tree2.png" />
       </div>
       <div class="item">
-        <img src="@/section/s8/3.jpg" />
+        <img class="slide_img" src="@/section/s8/3.jpg" />
         <div class="text-white">板南線土城捷運站</div>
         <div class="mask"></div>
       </div>
@@ -79,7 +79,7 @@
         </div>
       </div>
       <div class="item">
-        <img src="@/section/s8/4.jpg" />
+        <img class="slide_img" src="@/section/s8/4.jpg" />
         <div class="text-white">65號快速道路</div>
         <div class="mask"></div>
       </div>
@@ -189,6 +189,7 @@
     display: none;
     @media screen and (min-width:768px) {
       width: 100%;
+      height: 100%;
       display: flex;
       flex-wrap: wrap;
       top: size(0);
@@ -204,6 +205,10 @@
         //   height: 0;
         //   padding-top: 100%;
         // }
+
+        .slide_img{
+          height: 100%;
+        }
 
         img {
           width: 100%;

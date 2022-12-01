@@ -255,6 +255,7 @@
 
         &.address {
           padding: 0 0;
+          font-size: size-m(13);
 
           &::before {
             width: 100%;

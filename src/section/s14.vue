@@ -12,14 +12,14 @@
         <div class="item">不動產開發信託</div>
         <div class="item">房地產權絕對清楚</div>
         <div class="item">使用台灣最佳品牌-國產水泥</div>
-        <div class="item">協助社區成立管委會並研擬社區管理規章<br>依法提撥社區管理基金</div>
+        <div class="item">協助社區成立管委會並研擬社區管理規章<br><span>依法提撥社區管理基金</span></div>
       </div>
       <div>
         <div class="item">結構體保固15年，防水保固3年、<br class="md:hidden">固定設備保固1年</div>
         <div class="item">貸款銀行利率諮詢及對保服務</div>
         <div class="item">絕不使用輻射鋼筋、電弧爐渣、海砂</div>
         <div class="item">交屋確實點交、保證買賣清楚</div>
-        <div class="item">成立售後部門，保證售後服務<br>售後服務(從成交開始)一對一LINE＠</div>
+        <div class="item">成立售後部門，保證售後服務<br><span>售後服務(從成交開始)一對一LINE＠</span></div>
       </div>
     </div>
   </section>
@@ -88,21 +88,36 @@
     }
 
     .item {
-      font-size: size-m(13);
-      line-height: size-m(25);
+      font-size: size-m(15);
+      line-height: size-m(22);
       padding-left: size-m(30);
       position: relative;
       background-image: url(@/section/s14/icon.svg);
       background-size: size-m(25) size-m(25);
       background-repeat: no-repeat;
-      margin-bottom: size-m(12);
+      margin-bottom: size-m(14);
+      padding-bottom: size-m(3);
+      padding-top: size-m(3);
       @media screen and (min-width:768px) {
         font-size: size(24);
-        line-height: size(50);
+        line-height: size(30);
         padding-left: size(60);
         background-size: size(50) size(50);
         margin-bottom: size(50);
+        padding-bottom: size(10);
+        padding-top: size(10);
       }
+
+
+      span{
+      font-size: size-m(11);
+      
+      @media screen and (min-width:768px) {
+      font-size: size(15);
+      margin-top: size(-15);
+      }
+      }
+
     }
   }
 

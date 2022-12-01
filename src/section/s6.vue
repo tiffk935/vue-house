@@ -45,6 +45,22 @@
           <img src="@/section/s6/5.jpg" />
           <!-- <div class="text-white">土城綜合體育場</div> -->
         </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/6.jpg" />
+          <!-- <div class="text-white">土城綜合體育場</div> -->
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/7.jpg" />
+          <!-- <div class="text-white">土城綜合體育場</div> -->
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/8.jpg" />
+          <!-- <div class="text-white">土城綜合體育場</div> -->
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s6/9.jpg" />
+          <!-- <div class="text-white">土城綜合體育場</div> -->
+        </swiper-slide>
       </swiper>
     </div>
     <div class="grids absolute">

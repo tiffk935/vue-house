@@ -13,7 +13,7 @@
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">紅布朗花園</h1>
     <S1 />
-    <S2 />
+    <!--S2 /-->
     <S3 />
     <S4 />
     <S5 />

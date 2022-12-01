@@ -19,19 +19,19 @@
         }"
       >
         <swiper-slide>
-          <img src="@/section/s4/slide1.png" />
+          <img src="@/section/s4/slide1.jpg" />
           <div class="text-white">情境示意圖</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide2.png" />
+          <img src="@/section/s4/slide2.jpg" />
           <div class="text-white">情境示意圖</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide3.png" />
+          <img src="@/section/s4/slide3.jpg" />
           <div class="text-white">情境示意圖</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide4.png" />
+          <img src="@/section/s4/slide4.jpg" />
           <div class="text-white">情境示意圖</div>
         </swiper-slide>
       </swiper>

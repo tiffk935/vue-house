@@ -24,21 +24,22 @@
             <div class="t1">建築規劃</div>
             <div class="t2">A8建築師事務所 陳朝雄建築師</div>
             <div class="content">設計風格千變萬化，從新古典到現代皆能信手捻來。從半山豪華別墅到傲視水岸景觀宅皆能輕鬆駕馭，並與茂德建設一同打造三重行政特區，實力不可忽視。</div>
-            <div class="md:flex">
+            <div class="md:flex work">
               <div class="sec">
                 <div class="title">獲獎資訊:</div>
                 <div class="content">
                   2020台灣十大建築師
                 </div>
               </div>
-              <div class="sec">
+              <div class="sec work2">
                 <div class="title">作品實績:</div>
                 <div class="content">
                   新莊副都心：青青<br />
                   板橋：高妍植、江南STAR<br />
                   三重：米蘭花園、繽麗<br />
                   土城：金城舞-世界花園<br />
-                  五股：天空之邑、芳洲漾、伴月灣
+                  五股：天空之邑、芳洲漾、伴月灣<br />
+                  新店：波爾多
                 </div>
               </div>
             </div>
@@ -51,7 +52,7 @@
             <div class="t1">公設規劃</div>
             <div class="t2">呈境設計 袁世賢總監</div>
             <div class="content">設計沒有停止的時候，設計必須不斷的開始，在不斷的開始中找尋各種可能性。以「人」為空間主體，賦予生活場域兼具美學與實用，讓家的尺度超脫日常。</div>
-            <div class="md:flex">
+            <div class="md:flex work">
               <div class="sec">
                 <div class="title">獲獎資訊:</div>
                 <div class="content">
@@ -71,7 +72,7 @@
             <div class="t1">景觀規劃</div>
             <div class="t2">大漢景觀 徐世萃總監</div>
             <div class="content">藉由設計的力量，增添大眾對生活場域的想像空間。從規劃、設計到施工，擁有豐富經歷於一身，讓景觀園藝不僅僅是美化，更呈現出嶄新生活型態，與自然合而為一。</div>
-            <div class="md:flex">
+            <div class="md:flex work">
               <div class="sec">
                 <div class="title">獲獎資訊:</div>
                 <div class="content">
@@ -80,7 +81,7 @@
                   倫敦設計獎 銀獎
                 </div>
               </div>
-              <div class="sec">
+              <div class="sec work2">
                 <div class="title">作品實績:</div>
                 <div class="content">
                   台北：大直 ATT<br /><span>　　　</span>維多麗亞酒店<br />
@@ -180,7 +181,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      padding: size-m(40) size-m(30);
+      padding: size-m(60) size-m(30);
       @media screen and (min-width:768px) {
         top: size(271);
         left: size(940);
@@ -243,9 +244,24 @@
           max-width: size(710);
         }
       }
+      .work{
+        margin-top: size-m(60);
+        @media screen and (min-width:768px) {
+        margin-top: size(0);  
+        }
+      }
+
+      .work2{
+        margin-top: size-m(60);
+        @media screen and (min-width:768px) {
+        margin-top: size(0);  
+        }
+      }
+      
 
       .sec {
-        margin-top: size-m(37);
+        //margin-top: size-m(37);
+        font-size: size-m(13);
         @media screen and (min-width:768px) {
           margin-top: size(130);
           margin-right: size(106);

@@ -4,8 +4,8 @@
     <img class="bg absolute md:hidden" src="@/section/s10/bg-m.png" />
     <div class="map relative">
       <img class="map1" src="@/section/s10/map.jpg" />
-      <div class="text-white">茂德建設</div>
     </div>
+    <div class="text-white">茂德建設</div>
     <div class="info absolute text-white">茂德建設</div>
     <img class="hand-bg absolute md:hidden" src="@/section/s10/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s10/hand.svg" />
@@ -20,9 +20,9 @@
     <img class="tree absolute hidden md:block" src="@/section/s10/tree.svg" />
     <img class="tree absolute md:hidden" src="@/section/s10/tree-m.svg" />
     <div class="abtns">
-      <div class="abtn" @click="modalOpen = true; modalType = '作品'">知名<br class="md:hidden">作品</div>
-      <div class="abtn" @click="modalOpen = true; modalType = '基地開發'">萬坪<br class="md:hidden">基地開發</div>
-      <div class="abtn" @click="modalOpen = true; modalType = '景觀宅'">山水<br class="md:hidden">景觀宅</div>
+      <div class="abtn" @click="modalOpen = true; modalType = '作品'">城市<br class="md:hidden">建設</div>
+      <div class="abtn" @click="modalOpen = true; modalType = '基地開發'">萬坪<br class="md:hidden">造鎮</div>
+      <div class="abtn" @click="modalOpen = true; modalType = '景觀宅'">國際<br class="md:hidden">團隊</div>
     </div>
   </section>
 
@@ -35,14 +35,9 @@
       <template v-if="modalType == '作品'">
         <div class="inner">
           <div>
-            <div class="t1">知名作品</div>
+            <div class="t1">城市建設</div>
             <div class="content">
-              三重：繽麗、仁仁河系列<br>
-              新莊：新泰暘系列<br>
-              板橋：江南Star、高妍植系列<br>
-              新店：波爾多系列<br>
-              南港：香朵、世界心<br>
-              北投：令和
+              興建新北市政府<br>「新北第二行政中心」
             </div>
           </div>
           <div class="slider">
@@ -58,13 +53,8 @@
               }"
             >
               <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
+                <img class="w-full" src="@/section/s10/slider1/1.jpg" />
+                <div class="text-white">新北第二行政中心</div>
               </swiper-slide>
             </swiper>
           </div>
@@ -73,11 +63,9 @@
       <template v-if="modalType == '基地開發'">
         <div class="inner">
           <div>
-            <div class="t1">萬坪基地開發</div>
+            <div class="t1">萬坪造鎮</div>
             <div class="content">
-              新莊：歐洲村、超級城市<br>
-              蘆洲：希望城市<br>
-              土城：金城舞系列
+              無數都更成功經驗，社區造鎮引領城市發展。
             </div>
           </div>
           <div class="slider">
@@ -93,13 +81,8 @@
               }"
             >
               <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
+                <img class="w-full" src="@/section/s10/slider1/3.jpg" />
+                <div class="text-white">超級城市</div>
               </swiper-slide>
             </swiper>
           </div>
@@ -108,10 +91,9 @@
       <template v-if="modalType == '景觀宅'">
         <div class="inner">
           <div>
-            <div class="t1">山水景觀宅</div>
+            <div class="t1">國際團隊</div>
             <div class="content">
-              中和：太陽帝國<br>
-              新店：碧波白、晴山匯
+              攜手澳洲建築團隊PTW<br>多次拿下美國MUSE金獎。
             </div>
           </div>
           <div class="slider">
@@ -127,13 +109,8 @@
               }"
             >
               <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
-              </swiper-slide>
-              <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/1.png" />
+                <img class="w-full" src="@/section/s10/slider1/2.jpg" />
+                <div class="text-white">太陽帝國</div>
               </swiper-slide>
             </swiper>
           </div>
@@ -178,6 +155,21 @@
     top: 0;
     left: 0;
   }
+  .text-white {
+      font-size: size-m(12);
+      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: size-m(10);
+      right: size-m(10);
+      line-height: 1;
+      @media screen and (min-width:768px) {
+        display: block;
+        font-size: size(12);
+        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
+        bottom: size(10);
+        right: size(25);
+      }
+    }
 
   .map {
     overflow-x: scroll;
@@ -202,22 +194,7 @@
       }
     }
 
-    .text-white {
-      font-size: size-m(12);
-      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
-      position: absolute;
-      bottom: size-m(10);
-      right: size-m(10);
-      line-height: 1;
-      display: none;
-      @media screen and (min-width:768px) {
-        display: block;
-        font-size: size(12);
-        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
-        bottom: size(10);
-        right: size(10);
-      }
-    }
+    
 
   }
   .hand {
@@ -350,13 +327,13 @@
       text-align: center;
       font-family: 'Noto Serif TC';
       font-weight: 700;
-      font-size: size-m(15);
+      font-size: size-m(18);
       line-height: size-m(18);
       @media screen and (min-width:768px) {
         width: size(300);
         height: size(60);
         border: size(1) solid #000;
-        font-size: size(30);
+        font-size: size(28);
         line-height: 1;
       }
 
@@ -429,6 +406,21 @@
       width: size(585);
     }
 
+    .text-white {
+    font-size: size-m(12);
+    text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
+    position: absolute;
+    bottom: size-m(10);
+    right: size-m(10);
+    line-height: 1;
+    @media screen and (min-width:768px) {
+      font-size: size(12);
+      text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
+      bottom: size(10);
+      right: size(10);
+    }
+  }
+
     .swiper-button-prev, .swiper-button-next {
       width: 50px;
       height: 50px;
@@ -443,11 +435,13 @@
     }
 
     .swiper-button-prev {
+      display: none;
       left: 0;
       background-image: url(@/section/s4/arrow-prev.svg);
     }
 
     .swiper-button-next {
+      display: none;
       right: 0;
       background-image: url(@/section/s4/arrow-next.svg);
     }
@@ -470,7 +464,7 @@ export default {
   data() {
     return {
       swiper: null,
-      modules: [Pagination, Navigation, Autoplay],
+      modules: [Pagination, Navigation],
       modalOpen: false,
       modalType: '',
     }

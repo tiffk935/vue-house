@@ -6,11 +6,11 @@
     <img class="man absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s5/man.png" />
     <img class="bird absolute hidden md:block"  data-aos="fade-left" data-aos-delay="0" src="@/section/s5/bird.svg" />
     <div class="pic1 absolute">
-      <img src="@/section/s5/pic1.png" />
+      <img src="@/section/s5/pic1.jpg" />
       <div class="text-white">情境示意圖</div>
     </div>
     <div class="pic2 absolute">
-      <img src="@/section/s5/pic2.png" />
+      <img src="@/section/s5/pic2.jpg" />
       <div class="text-white">情境示意圖</div>
     </div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">

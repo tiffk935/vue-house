@@ -150,7 +150,7 @@
             
             span {
                 font-family: 'Noto Serif TC';
-                font-weight: 700;
+                font-weight: 500;
                 font-size: size(30);
                 line-height: size(40);
                 width: 100%;

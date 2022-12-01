@@ -97,6 +97,7 @@
     left: size-m(0);
     @media screen and (min-width:768px) {
       width: size(1920);
+      height: 100%;
       bottom: size(0);
       left: size(0);
     }

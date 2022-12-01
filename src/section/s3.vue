@@ -4,7 +4,7 @@
       <img class="map1" src="@/section/s3/map.jpg" />
     </div>
     <div class="rect absolute"></div>
-    <div class="info absolute text-white">空拍攝影圖</div>
+    <div class="info absolute text-white">區域空拍實景修飾</div>
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
     <div class="title" data-aos="fade-down" data-aos-delay="0">
@@ -38,7 +38,7 @@
       transform: translateX(0%);
     }
   }
-
+  background: #0579cf;
   width: 100%;
   height: size-m(667);
   color: #fff;
@@ -62,10 +62,10 @@
       display: block;
       @media screen and (min-width:768px) {
         overflow: hidden;
-        width: size(2280);
+        width: size(1920);
         height: auto;
-        margin-top: size(140);
-        margin-left: size(-180);
+        margin-top: size(0);
+        margin-left: size(0);
       }
     }
   }
@@ -92,14 +92,15 @@
     background: linear-gradient(180deg, rgba(39, 149, 245, 0) 12.66%, rgba(69, 164, 246, 0.365079) 49.75%, #1B92F7 85.64%);
     transform: rotate(-180deg);
     width: 100%;
-    height: size-m(536);
+    height: size-m(300);
     top: 0;
     left: 0;
     pointer-events: none;
     @media screen and (min-width:768px) {
       height: size(714);
+      opacity: 0;
       // background: linear-gradient(180deg, #55B1FF 0%, rgba(140, 201, 255, 0) 44.27%);
-      background: linear-gradient(180deg, rgba(39, 149, 245, 0) 12.66%, rgba(69, 164, 246, 0.365079) 38.98%, #1B92F7 100%);
+      //background: linear-gradient(180deg, rgba(39, 149, 245, 0) 12.66%, rgba(69, 164, 246, 0.365079) 38.98%, #1B92F7 100%);
       // transform: rotate(0deg);
     }
   }
@@ -147,6 +148,8 @@
       line-height: 1.7;
       @media screen and (min-width:768px) {
         font-size: size(20);
+        width: size(780);
+        margin: 0pc auto;
       }
     }
   }
@@ -159,7 +162,7 @@
     @media screen and (min-width:768px) {
       bottom: size(10);
       right: size(10);
-      font-size: size(16);
+      font-size: size(12);
     }
   }
 }
