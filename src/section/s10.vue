@@ -13,7 +13,7 @@
       <div class="t1">匠心 職人獻藝</div>
       <div class="t2">專業歷練 構築豪宅品質</div>
       <div>
-        <div class="content">茂德機構-全台十大建商</div>
+        <div class="content">茂德建設-全台十大建商</div>
         <div class="content">20年經驗累積，在北台灣房地產市場佔有一席之地。2004年起擴大推案，以造鎮案大基地等系列遍地開花，更經常是重劃區的開發領頭羊。</div>
       </div>
     </div>

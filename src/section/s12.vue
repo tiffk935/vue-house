@@ -13,7 +13,7 @@
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#C2465A]">全國首創 全齡共學場域</div>
       <div class="t2">友善 共融 共好 0-99歲都可以</div>
-      <div class="content">當社區完工交屋後，公共設施的經營與服務將更多元和靈活，不只舉辦社區節慶活動，更以加強居民之間的交流為目的。同時打造成適合所有年齡層都能安心、放心使用的全齡場域</div>
+      <div class="content">當社區完工交屋後，公共設施的經營與服務將更多元和靈活，不只舉辦社區節慶活動，更以加強居民之間的交流為目的。同時打造成適合所有年齡層都能安心、放心使用的全齡場域。</div>
     </div>
   </section>
 </template>

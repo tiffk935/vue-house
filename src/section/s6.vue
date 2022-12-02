@@ -288,9 +288,11 @@
     .content {
       font-size: size-m(13);
       line-height: 1.7;
+      text-align: justify;
       @media screen and (min-width:768px) {
         font-size: size(20);
         letter-spacing: 0.2em;
+        width: size(345);
       }
     }
   }

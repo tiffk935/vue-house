@@ -6,7 +6,7 @@
     <img class="man absolute md:hidden" src="@/section/s8/man.png" />
     <div class="text absolute md:hidden" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">移動 快捷有感</div>
-      <div class="t2">一高兩快三捷運 說走就走</div>
+      <div class="t2">一高2快三捷運 說走就走</div>
       <div class="content">驅車國道3號或經由台65線接軌國道1號，南來北往超順暢；板南線海山站、土城站以及萬大線二期LG10站，4分鐘就到，輕鬆遊走雙北。</div>
     </div>
     <img class="tree1 absolute md:hidden" src="@/section/s8/tree1.png" />
@@ -51,7 +51,7 @@
       <div class="item flex items-center relative">
         <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
           <div class="t1 text-[#E2C46C]">移動 快捷有感</div>
-          <div class="t2">一高兩快三捷運 說走就走</div>
+          <div class="t2">一高2快三捷運 說走就走</div>
         </div>
         <img class="tree1 absolute" src="@/section/s8/tree1.png" />
       </div>

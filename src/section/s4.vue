@@ -2,7 +2,7 @@
   <section class="s4 relative">
     <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
-    <div class="slider absolute">
+    <!--div class="slider absolute">
       <swiper 
         :spaceBetween="10"
         :navigation="true"
@@ -35,7 +35,7 @@
           <div class="text-white">情境示意圖</div>
         </swiper-slide>
       </swiper>
-    </div>
+    </div-->
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#C2465A]">城市 新榮景</div>
       <div class="t2">重大願景建設 司法特區</div>
@@ -50,9 +50,11 @@
 
 .s4 {
   width: 100%;
-  height: size-m(667);
+  //height: size-m(667);
+  height: size-m(387);
   @media screen and (min-width:768px) {
-    height: size(1080);
+    //height: size(1080);
+    height: size(500);
   }
 
   .bg {
@@ -109,12 +111,14 @@
 
   .text {
     width: 100%;
-    top: size-m(319);
+    //top: size-m(319);
+    top: size-m(39);
     left: 0;
     padding: 0 size-m(30);
     text-align: center;
     @media screen and (min-width:768px) {
-      top: size(730);
+      //top: size(730);
+      top: size(100);
       padding: 0 size(555) 0 size(509);
     }
 
@@ -153,13 +157,15 @@
 
   .tree {
     width: size-m(152);
-    top: size-m(518);
+    //top: size-m(518);
+    top: size-m(218);
     left: size-m(18);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(345);
-      top: size(742);
+      //top: size(742);
+      top: size(242);
       left: size(96);
     }
   }

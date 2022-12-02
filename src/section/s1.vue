@@ -6,7 +6,8 @@
     <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s1/logo.svg" />
     <div class="title absolute" data-aos="fade-down" data-aos-delay="200">
       <div class="l1">人生MVP 生活紅不讓</div>
-      <div class="l2">全能綠生活 核心雙商圈｜<span class="text-[#EACA6B]">2-3房</span></div>
+      <div class="l2">司法特區 × 萬坪森活｜<span class="text-[#EACA6B]">2-3房</span></div>
+      <div class="l2"><span class="text-[#EACA6B]">12.10 COMING SOON</span></div>
     </div>
     <img class="person1 absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/person1.png" />
     <img class="person2 absolute" data-aos="fade-right" data-aos-delay="200" src="@/section/s1/person2.png" />
@@ -122,7 +123,7 @@
     left: size-m(52);
     @media screen and (min-width:768px) {
       width: size(785.52);
-      top: size(251);
+      top: size(221);
       left: size(567);
     }
   }
@@ -135,7 +136,7 @@
     font-weight: 600;
     font-size: size-m(20);
     @media screen and (min-width:768px) {
-      top: size(631);
+      top: size(600);
       font-size: size(30);
     }
 

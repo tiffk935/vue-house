@@ -155,8 +155,11 @@
     .content {
       font-size: size-m(13);
       line-height: 1.7;
+      text-align: justify;
       @media screen and (min-width:768px) {
         font-size: size(20);
+        width: size(515);
+        
       }
     }
   }
