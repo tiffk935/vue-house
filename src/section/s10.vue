@@ -65,7 +65,7 @@
           <div>
             <div class="t1">萬坪造鎮</div>
             <div class="content">
-              無數都更成功經驗，社區造鎮引領城市發展。
+              無數都更成功經驗<br>社區造鎮引領城市發展。
             </div>
           </div>
           <div class="slider">
@@ -81,8 +81,8 @@
               }"
             >
               <swiper-slide>
-                <img class="w-full" src="@/section/s10/slider1/3.jpg" />
-                <div class="text-white">超級城市</div>
+                <img class="w-full" src="@/section/s10/slider1/4.jpg" />
+                <div class="text-white">新板巨星實景</div>
               </swiper-slide>
             </swiper>
           </div>
@@ -157,7 +157,7 @@
   }
   .text-white {
       font-size: size-m(12);
-      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
+      text-shadow: 0px 0px size-m(10) rgba(0, 0, 0, 0.8);
       position: absolute;
       bottom: size-m(10);
       right: size-m(10);
@@ -165,7 +165,7 @@
       @media screen and (min-width:768px) {
         display: block;
         font-size: size(12);
-        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
+        text-shadow: 0px 0px size(10) rgba(0, 0, 0, 0.8);
         bottom: size(10);
         right: size(25);
       }
