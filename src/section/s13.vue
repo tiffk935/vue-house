@@ -1,14 +1,14 @@
 <template>
   <section class="s13 relative">
-    <img class="bg absolute md:hidden" src="@/section/s13/bg-m.png" />
-    <img class="bg absolute hidden md:block" src="@/section/s13/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s13/bg-m.jpg" />
+    <img class="bg absolute hidden md:block" src="@/section/s13/bg.jpg" />
     <div class="text absolute">
       <div class="title text-[#CFA123]">邂逅 迷人生活</div>
       <div class="t1">值得期待 回家這件事</div>
       <div class="t2">涵仰迎賓大廳</div>
       <div class="t3">挑高消彌距離感，軟裝增添親切感，每次進門都像獲得一個擁抱。</div>
     </div>
-    <div class="text-white">3D示意圖</div>
+    <div class="text-white">業績示意</div>
   </section>
 </template>
 
