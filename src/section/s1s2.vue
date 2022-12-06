@@ -359,12 +359,12 @@
 
   .logo {
     top: size-m(131);
-    left: size-m(113);
-    width: size-m(148);
+    left: size-m(53);
+    width: size-m(260);
     @media screen and (min-width:768px) {
       top: size(214);
-      left: size(821);
-      width: size(278.26);
+      left: size(661);
+      width: size(588);
     }
   }
 
