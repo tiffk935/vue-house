@@ -1,5 +1,5 @@
 <template>
-  <div class="contact-info mx-auto bg-[#366758] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto bg-[#E60012] flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
@@ -92,14 +92,14 @@
   position: relative;
 
   .logo {
-    width: size(557.54);
-    height: size(113.46);
+    width: size(492);
+    height: size(185);
     background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     //margin-bottom: size(40);
-    margin-bottom: size(78);
+    margin-bottom: size(50);
   }
 
   .contact-item-box {
@@ -108,7 +108,7 @@
     gap: size(20);
 
     .contact-item {
-      background-color: #366758;
+      background-color: #E60012;
       border: 1px solid #fff;
       color: #ffffff;
       width: 100%;
@@ -122,7 +122,7 @@
       cursor: pointer;
 
       &:hover {
-        background-color: theme('colors.color2');
+        background-color: #000;
         color: #fff;
 
         img {

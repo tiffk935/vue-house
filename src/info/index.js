@@ -1,4 +1,4 @@
-const caseName = "清景麟國家公園"
+const caseName = "巴克禮OnePark"
 
 export default {
     meta: {
@@ -9,7 +9,7 @@ export default {
     address: "高雄市小港區松金段3地號(高松路VS松園一路)",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1842.0860368320316!2d120.36925000000001!3d22.572666700000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x56bbb594d965c250!2zMjLCsDM0JzIxLjYiTiAxMjDCsDIyJzA5LjMiRQ!5e0!3m2!1szh-TW!2stw!4v1664766397193!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/ybQY8hVHS7p9b4KL7",
-    phone: "0800-363-888",
+    phone: "06-2602-777",
     fbLink: "https://www.facebook.com/107608068785783/",
     fbMessage: "https://m.me/107608068785783/",
     caseName: caseName,
@@ -23,7 +23,7 @@ export default {
         ["房型規劃", "2-3房"],
         ["企劃銷售", ""],
     ],
-    gtmCode: ["GTM-MQRTZPS","GTM-M87MK5M"], // 可放置多個
+    gtmCode: ["GTM-PDH8S8G"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
