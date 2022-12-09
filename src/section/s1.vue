@@ -578,7 +578,7 @@
     position: fixed;
     display: block;
     width: 7.3958vw;
-    bottom:80px;
+    bottom: 10vw;
     right: 1vw;
     z-index: 20;
     display: none;
@@ -588,8 +588,11 @@
       display: block;
     }
   }
+
   
 }
+
+
 </style>
 
 <script>
