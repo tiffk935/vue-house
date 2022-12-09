@@ -580,7 +580,7 @@
     width: 7.3958vw;
     bottom: 10vw;
     right: 1vw;
-    z-index: 1;
+    z-index: 20;
     display: none;
     filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.6));
 
