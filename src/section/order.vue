@@ -354,12 +354,10 @@ const send = () => {
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
-      &age=${formData.age}
-      &budget=${formData.budget}
       &room_type=${formData.room_type}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
+      &msg=年齡:${formData.age};預算:${formData.budget};留言:${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}

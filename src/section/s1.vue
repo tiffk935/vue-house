@@ -5,8 +5,11 @@
     <img data-aos="fade-up" data-aos-delay="500" class="title absolute" src="@/section/s1/title.svg" alt="巴克禮OnePark" />
     <img  class="t2 absolute" src="@/section/s1/t2.svg" alt="巴克禮OnePark" />
     <img  class="mask absolute" src="@/section/s1/mask.svg" alt="巴克禮OnePark" />
-    <img  class="style1 absolute" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
-    <img  class="style2 absolute" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
+    <img  class="style1 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
+    <img  class="style2 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
+
+    <img  class="style1 absolute md:hidden" src="@/section/s1/style_m.svg" alt="巴克禮OnePark" />
+    <img  class="style2 absolute md:hidden" src="@/section/s1/style_m.svg" alt="巴克禮OnePark" />
   </section>
 </template>
 
@@ -113,6 +116,7 @@
     bottom: size-m(69);
     right: size-m(0);
     z-index: 2;
+    display: none;
     @media screen and (min-width:768px) {
       width: size(1373);
       bottom: size(0);
@@ -122,9 +126,9 @@
 
   .style1,
   .style2 {
-    width: size-m(1184);
+    width: size-m(375);
     bottom: size-m(0);
-    right: size-m(-405);
+    right: size-m(0);
     z-index: 1;
     transform-origin: 50% 100%;
     animation: sty 6s linear infinite;
@@ -133,6 +137,9 @@
       width: size(1920);
       bottom: size(0);
       right: size(0);
+      transform-origin: 50% 100%;
+      animation: sty 6s linear infinite;
+      transform: translate(0, -100%);
     }
   }
   .style2{
