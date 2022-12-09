@@ -19,6 +19,10 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
+              <input type="text" placeholder="年齡" class="input w-full rounded-none" :value="formData.age"
+              @input="(event) => (formData.age = event.target.value)" />
+              <input type="text" placeholder="預算" class="input w-full rounded-none" :value="formData.budget"
+              @input="(event) => (formData.budget = event.target.value)" />
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
@@ -121,7 +125,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 410px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -263,6 +267,8 @@ const bypass = ["msg"];
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
+  "年齡", //age
+  "預算", //budget
   "房型", //room_type
   // "信箱", //email
   "居住縣市", //city
@@ -346,6 +352,8 @@ const send = () => {
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
+      &age=${formData.age}
+      &budget=${formData.budget}
       &room_type=${formData.room_type}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
