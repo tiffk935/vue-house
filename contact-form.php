@@ -5,7 +5,7 @@
 #$case_code = "jw";特殊案使用
 $src =$_SERVER['SERVER_NAME']; 
 $case_code_test = substr(substr($src,0,strpos($src,'.')),-1);
-$case_code = "mori";
+$case_code = "mori-architecture";
 
 # PDO DB 連線 Start
     $pdo=new pdo('mysql:host=localhost;dbname=htw12_web','htw12','3hdaiU813Q');
@@ -257,7 +257,7 @@ if ($name == '') {
     $mail->FromName = $case_name." - 官網網站"; //設定寄件者姓名
 
     $mail->Subject = $case_name." - 官網網站"; //設定郵件標題
-    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>留言：".$msg."<BR>年齡：". $age ."<BR>預算：". $budget ."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
+    $mail->Body = "網站：https://" . $src . "/<BR>姓名：" . $name . "<BR>電話：" . $phone . "<BR>城市：" . $city . $area . "<BR>需求房型：".$room_type."<BR>留言：".$msg."<BR>年齡：".$age."<BR>預算：".$budget."<BR><BR>填表日期：".$datetime."<BR>廣告來源：".$utm_source."<BR>廣告媒介：".$utm_medium."<BR>廣告名稱：".$utm_campaign."<BR>廣告內容：".$utm_content; //設定郵件內容
     $mail->IsHTML(true); //設定郵件內容為HTML
 
     $tomail_arr = explode(",",$tomail);
