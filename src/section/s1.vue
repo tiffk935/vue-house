@@ -578,7 +578,7 @@
     position: fixed;
     display: block;
     width: 7.3958vw;
-    bottom: 10vw;
+    bottom:80px;
     right: 1vw;
     z-index: 20;
     display: none;
