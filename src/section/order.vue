@@ -248,6 +248,8 @@ const toast = useToast()
 const formData = reactive({
   name: "",
   phone: "",
+  age: "",
+  budget: "",
   room_type: "",
   // email: "",
   city: "",
