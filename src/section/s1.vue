@@ -112,11 +112,10 @@
   }
 
   .mask {
-    width: size-m(375);
+    width: size-m(400);
     bottom: size-m(69);
     right: size-m(0);
     z-index: 2;
-    display: none;
     @media screen and (min-width:768px) {
       width: size(1373);
       bottom: size(0);
@@ -131,25 +130,35 @@
     right: size-m(0);
     z-index: 1;
     transform-origin: 50% 100%;
+    transform: translateY(size-m(-667));  
     animation: sty 6s linear infinite;
-    transform: translate(0, -100%);
     @media screen and (min-width:768px) {
       width: size(1920);
       bottom: size(0);
       right: size(0);
-      transform-origin: 50% 100%;
-      animation: sty 6s linear infinite;
-      transform: translate(0, -100%);
+      transform: translateY(-100%);
+      animation: stypc 6s linear infinite;
     }
+    
   }
-  .style2{
-    animation: sty 6s -3s linear infinite;}
+
+  .style2{ 
+    animation-delay: 3s;
+    }
 
   @keyframes sty {
   to {
-    transform: translate(0, 100%);
+    transform: translateY(size-m(667));
   }
 }
+
+@keyframes stypc {
+  to {
+    transform: translateY(100%);
+  }
+}
+
+
 
 }
 

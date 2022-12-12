@@ -140,7 +140,7 @@
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #fff;
         color: #000;
         z-index: 0;
         position: relative;
@@ -152,7 +152,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: #fff;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -182,7 +182,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #366758;
+      background-color: #80000b;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -207,8 +207,8 @@
     justify-content: flex-start;
 
     .logo {
-      width: size-m(310);
-      height: size-m(63.08);
+      width: size-m(279);
+      height: size-m(105);
       background-image: url("@/section/form/logo.svg");
       margin-bottom: size-m(39);
     }
