@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3359038210615!2d120.22337065830482!3d22.96529247234698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fdfe935897%3A0x1e1ef78865d529f7!2z5riF5pmv6bqf5be05YWL56auIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1670911072451!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/HYqM9bdzKYpUWXyK8",
     phone: "02-1111-234",
-    fbLink: "",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/100088627030121/",
+    fbMessage: "https://m.me/100088627030121/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "清景麟地產、襄陽國際、豐鉅地產"],
