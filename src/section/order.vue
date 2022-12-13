@@ -25,8 +25,8 @@
               @input="(event) => (formData.budget = event.target.value)" />
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
-              <option value="三房">三房</option>
+              <option value="3房">3房</option>
+              <option value="3+1房">3+1房</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
