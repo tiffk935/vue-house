@@ -7,7 +7,7 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap" v-for="(item, idx) in info.houseInfos">
                         <p class="mr-5 border-l-2 border-[#E60012] text-[#E60012] pl-2 font-bold">{{ item[0] }}</p>
-                        <img v-if="idx == 7" class='logo2' src='@/section/form/logo2.svg'>
+                        <img v-if="idx == 3" class='logo2' src='@/section/form/logo2.svg'>
                         <p v-else class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>

@@ -27,6 +27,7 @@
               <option value="" selected disabled>需求房型</option>
               <option value="3房">3房</option>
               <option value="3+1房">3+1房</option>
+              <option value="店面">店面</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
