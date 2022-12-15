@@ -21,8 +21,13 @@
               @input="(event) => (formData.phone = event.target.value)" />
               <input type="text" placeholder="年齡" class="input w-full rounded-none" :value="formData.age"
               @input="(event) => (formData.age = event.target.value)" />
-              <input type="text" placeholder="預算" class="input w-full rounded-none" :value="formData.budget"
-              @input="(event) => (formData.budget = event.target.value)" />
+              <select class="select w-full rounded-none" v-model="formData.budget">
+              <option value="" selected disabled>預算</option>
+              <option value="1500-2000">1500-2000</option>
+              <option value="2000-3000">2000-3000</option>
+              <option value="3000-4000">3000-4000</option>
+              <option value="4000以上">4000以上</option>
+            </select>
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="3房">3房</option>
@@ -264,7 +269,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg","age"];
 
 //中文對照
 const formDataRef = ref([
