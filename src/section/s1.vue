@@ -7,7 +7,6 @@
     <div class="title absolute" data-aos="fade-down" data-aos-delay="200">
       <div class="l1">人生MVP 生活紅不讓</div>
       <div class="l2">司法特區 × 萬坪森活｜<span class="text-[#EACA6B]">17-29坪</span></div>
-      <div class="l2"><span class="text-[#EACA6B]">12.10 COMING SOON</span></div>
     </div>
     <img class="person1 absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/person1.png" />
     <img class="person2 absolute" data-aos="fade-right" data-aos-delay="200" src="@/section/s1/person2.png" />
