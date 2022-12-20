@@ -210,7 +210,7 @@
       <div class="content content1 absolute" v-show="currContent === 1">
         <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title-m.svg" />
         <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content1/title.svg" />
-        <div class="text">宗大以建設起家，從1991年創立至今已超越半甲子。以「宗親人文，大隱美學」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。</div>
+        <div class="text">宗大以建設起家，從1991年創立至今已超越半甲子。以「連結你我，發現生活」為理念，擘建逾50件建築作品，超過3000戶客戶幸福成家。通過ISO 9002國際品質認證，從透天、大樓，到大型造鎮，台南的繁榮發展處處皆可見到宗大建設蹤跡。</div>
         <div class="slider slider1 absolute">
           <swiper
             :modules="modules"
