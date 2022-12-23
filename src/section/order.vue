@@ -211,15 +211,9 @@
     width: size(1481);
     left: size(-713);
     bottom: size(-19);
-    transform: translate(-100%, 0%);
+    transform: translate(0%, 0%);
     transform-origin: 0% 100%;
 
-    &[data-aos^="train"].aos-animate {
-      // animation: train 3s ease-out forwards;
-      transform: translate(0, 0);
-      transition-duration: 3s !important;
-      transition-timing-function: ease-out !important;
-    }
 
     img {
       max-width: none;

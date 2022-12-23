@@ -3,7 +3,7 @@
     <img class="play" src="@/section/s3/play.png" alt="" srcset="" @click="videoOpened = !videoOpened">
     <div class="player" v-bind:class="{ 'open': videoOpened }">
       <div class="video-box aspect-video">
-            <iframe src="https://www.youtube.com/embed/L52pIFHsebY" title="YouTube video player" frameborder="0" 
+            <iframe src="https://www.youtube.com/embed/mYNqIs2XYnY" title="YouTube video player" frameborder="0" 
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
               allowfullscreen></iframe>
       </div>
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('@/section/s3/fake.png');
+  background-image: url('@/section/s3/fake.jpg');
   background-size: cover;
   .play {
       width: size(142);
@@ -74,13 +74,13 @@
 @media screen and (max-width:768px) {
   .s3 {
       width: 100%;
-      height: size-m(667);
+      height: size-m(221);
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('@/section/s3/fake.png');
+      background-image: url('@/section/s3/fake.jpg');
       .play {
-          width: size-m(84);
+          width: size-m(50);
       }
       .player {
           backdrop-filter: blur(15px);

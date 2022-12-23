@@ -291,7 +291,7 @@
     @media screen and (min-width:768px) {
       display: flex;
       width: 100%;
-      height: size(333.24);
+      height: size(330.24);
       top: size(571.76);
       left: 0;
     }
