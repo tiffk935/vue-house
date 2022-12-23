@@ -4,7 +4,7 @@
       <img class="leaf1" src="@/section/s1/leaf1.png" />		
       <img class="leaf2" src="@/section/s1/leaf2.png" />		
     </div>
-    <img class="train" src="@/section/s1/train.png" />
+    <img class="train" data-aos="train" src="@/section/s1/train.png" />
     <div class="main">
       <div class="floorstyle">
         <img class="floor" src="@/section/s1/floor.png" />	
@@ -109,8 +109,15 @@
     bottom: size(140);
     right: size(-1330);
     transform: translate(100%, 0%);
-    animation: train 3s ease-out forwards;
+    // animation: train 3s ease-out forwards;
     transform-origin: 0% 100%;
+
+    &[data-aos^="train"].aos-animate {
+      // animation: train 3s ease-out forwards;
+      transform: translate(0, 0);
+      transition-duration: 3s !important;
+      transition-timing-function: ease-out !important;
+    }
   }
   .logo {
     width: size(523);

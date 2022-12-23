@@ -67,6 +67,9 @@
       </div>
     </transition>
 
+    <div class="line1 absolute hidden md:block"></div>
+    <div class="line2 absolute hidden md:block"></div>
+
   </section>
 </template>
 
@@ -109,7 +112,7 @@
     @media screen and (min-width:768px) {
       width: size(351);
       top: size(212);
-      left: size(1441);
+      left: size(1398);
     }
 
     .tk-tab {
@@ -242,6 +245,7 @@
       @media screen and (min-width:768px) {
         height: 100%;
         font-size: size(37.71);
+        transition: height .4s;
       }
 
       .flex {
@@ -291,6 +295,24 @@
       }
     }
 
+    &:hover .mask {
+      @media screen and (min-width:768px) {
+        height: 15%;
+      }
+    }
+
+  }
+
+  .line1, .line2 {
+    width: size(379);
+    height: size(6);
+    top: size(281);
+    left: size(1385);
+    background: #DC8039;
+  }
+
+  .line2 {
+    top: size(805);
   }
 }
 

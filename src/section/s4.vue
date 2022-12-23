@@ -9,14 +9,14 @@
     </div>
     <div class="tabs-title absolute">業 績</div>
 
-    <div class="tk-tabs absolute md:hidden">
+    <div class="tk-tabs absolute flex md:hidden">
       <div :class="{'tk-tab': true, active: activeTab === 1}" @click="slideTo(1)">Hi 台北</div>
       <div :class="{'tk-tab': true, active: activeTab === 2}" @click="slideTo(2)">中山直美</div>
       <div :class="{'tk-tab': true, active: activeTab === 3}" @click="slideTo(3)">翠松園</div>
       <div :class="{'tk-tab': true, active: activeTab === 4}" @click="slideTo(4)">墨清院</div>
       <div :class="{'tk-tab': true, active: activeTab === 5}" @click="slideTo(5)">景上汀</div>
     </div>
-    <div class="tk-tabs absolute hidden md:block">
+    <div class="tk-tabs absolute hidden md:flex">
       <div :class="{'tk-tab': true, active: activeTab === 1}" @click="activeTab = 1">Hi 台北</div>
       <div :class="{'tk-tab': true, active: activeTab === 2}" @click="activeTab = 2">中山直美</div>
       <div :class="{'tk-tab': true, active: activeTab === 3}" @click="activeTab = 3">翠松園</div>
@@ -27,19 +27,19 @@
     <img class="leaf absolute" src="@/section/s4/leaf.png" />
     <img class="bird absolute" src="@/section/s4/bird.png" />
     <div class="gallary absolute">
-      <div :class="{item: true, active: activeTab === 1}">
+      <div :class="{item: true, active: activeTab === 1}" @click="activeTab = 1">
         <img src="@/section/s4/slide1.jpg" />
       </div>
-      <div :class="{item: true, active: activeTab === 2}">
+      <div :class="{item: true, active: activeTab === 2}" @click="activeTab = 2">
         <img src="@/section/s4/slide2.jpg" />
       </div>
-      <div :class="{item: true, active: activeTab === 3}">
+      <div :class="{item: true, active: activeTab === 3}" @click="activeTab = 3">
         <img src="@/section/s4/slide3.jpg" />
       </div>
-      <div :class="{item: true, active: activeTab === 4}">
+      <div :class="{item: true, active: activeTab === 4}" @click="activeTab = 4">
         <img src="@/section/s4/slide4.jpg" />
       </div>
-      <div :class="{item: true, active: activeTab === 5}">
+      <div :class="{item: true, active: activeTab === 5}" @click="activeTab = 5">
         <img src="@/section/s4/slide5.jpg" />
       </div>
     </div>
@@ -213,7 +213,7 @@
     text-align: center;
     font-size: size-m(14);
     padding: 0 size-m(15);
-    display: flex;
+    // display: flex;
     justify-content: space-between;
     color: #fff;
     @media screen and (min-width:768px) {
@@ -298,6 +298,7 @@
 
     .item {
       position: relative;
+      cursor: pointer;
 
       &:after {
         content: "";
@@ -311,7 +312,7 @@
         transition: opacity .3s;
       }
 
-      &.active:after {
+      &:hover:after, &.active:after {
         opacity: 0;
       }
     }
@@ -407,6 +408,7 @@ export default {
       }
     },
     slideTo(num) {
+      console.log('slideTo', num)
       this.swiper.update();
       this.swiper.slideTo(num);
     },
