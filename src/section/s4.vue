@@ -2,9 +2,51 @@
   <section class="s4 relative">
     <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
-    <!--div class="slider absolute">
+    <div class="text">
+      <div class="t1 absolute">三十年甲級營造職人</div>
+      <div class="t2">專業建築品牌</div>
+      <div class="content">以專業為職志打造建築－鐵冠建設、昌譽營造，卓越的工程實力與設計品質，榮獲多項國家大獎肯定，成就建築最完美的價值</div>
+    </div>
+    <div class="tabs-title absolute">業 績</div>
+
+    <div class="tk-tabs absolute md:hidden">
+      <div :class="{'tk-tab': true, active: activeTab === 1}" @click="slideTo(1)">Hi 台北</div>
+      <div :class="{'tk-tab': true, active: activeTab === 2}" @click="slideTo(2)">中山直美</div>
+      <div :class="{'tk-tab': true, active: activeTab === 3}" @click="slideTo(3)">翠松園</div>
+      <div :class="{'tk-tab': true, active: activeTab === 4}" @click="slideTo(4)">墨清院</div>
+      <div :class="{'tk-tab': true, active: activeTab === 5}" @click="slideTo(5)">景上汀</div>
+    </div>
+    <div class="tk-tabs absolute hidden md:block">
+      <div :class="{'tk-tab': true, active: activeTab === 1}" @click="activeTab = 1">Hi 台北</div>
+      <div :class="{'tk-tab': true, active: activeTab === 2}" @click="activeTab = 2">中山直美</div>
+      <div :class="{'tk-tab': true, active: activeTab === 3}" @click="activeTab = 3">翠松園</div>
+      <div :class="{'tk-tab': true, active: activeTab === 4}" @click="activeTab = 4">墨清院</div>
+      <div :class="{'tk-tab': true, active: activeTab === 5}" @click="activeTab = 5">景上汀</div>
+    </div>
+
+    <img class="leaf absolute" src="@/section/s4/leaf.png" />
+    <img class="bird absolute" src="@/section/s4/bird.png" />
+    <div class="gallary absolute">
+      <div :class="{item: true, active: activeTab === 1}">
+        <img src="@/section/s4/slide1.jpg" />
+      </div>
+      <div :class="{item: true, active: activeTab === 2}">
+        <img src="@/section/s4/slide2.jpg" />
+      </div>
+      <div :class="{item: true, active: activeTab === 3}">
+        <img src="@/section/s4/slide3.jpg" />
+      </div>
+      <div :class="{item: true, active: activeTab === 4}">
+        <img src="@/section/s4/slide4.jpg" />
+      </div>
+      <div :class="{item: true, active: activeTab === 5}">
+        <img src="@/section/s4/slide5.jpg" />
+      </div>
+    </div>
+    <div class="slider absolute">
       <swiper 
         :spaceBetween="10"
+        :pagination="false"
         :navigation="true"
         :modules="modules"
         :loop="true"
@@ -12,36 +54,31 @@
           delay: 2500,
           disableOnInteraction: false,
         }"
-        :breakpoints="{
-          '768': {
-            slidesPerView: 2,
-          },
-        }"
+        @swiper="setSwiper"
+        @slideChange="slideChange"
       >
         <swiper-slide>
-          <img src="@/section/s4/slide1.jpg" />
-          <div class="text-white">情境示意圖</div>
+          <img class="photo md:hidden" src="@/section/s4/slide1-m.jpg" />
+          <img class="photo hidden md:block" src="@/section/s4/slide1.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide2.jpg" />
-          <div class="text-white">情境示意圖</div>
+          <img class="photo md:hidden" src="@/section/s4/slide2-m.jpg" />
+          <img class="photo hidden md:block" src="@/section/s4/slide2.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide3.jpg" />
-          <div class="text-white">情境示意圖</div>
+          <img class="photo md:hidden" src="@/section/s4/slide3-m.jpg" />
+          <img class="photo hidden md:block" src="@/section/s4/slide3.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s4/slide4.jpg" />
-          <div class="text-white">情境示意圖</div>
+          <img class="photo md:hidden" src="@/section/s4/slide4-m.jpg" />
+          <img class="photo hidden md:block" src="@/section/s4/slide4.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="photo md:hidden" src="@/section/s4/slide5-m.jpg" />
+          <img class="photo hidden md:block" src="@/section/s4/slide5.jpg" />
         </swiper-slide>
       </swiper>
-    </div-->
-    <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#C2465A]">城市 新榮景</div>
-      <div class="t2">重大願景建設 司法特區</div>
-      <div class="content">以國道三號為分界，北區鄰近土城醫院，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
     </div>
-    <img class="tree absolute" src="@/section/s4/tree.png" />
   </section>
 </template>
 
@@ -50,11 +87,10 @@
 
 .s4 {
   width: 100%;
-  //height: size-m(667);
-  height: size-m(387);
+  height: size-m(667);
+  color: #000;
   @media screen and (min-width:768px) {
-    //height: size(1080);
-    height: size(500);
+    height: size(980);
   }
 
   .bg {
@@ -64,34 +100,255 @@
     left: 0;
   }
 
-  .slider {
+  .text {
+    position: absolute;
+    top: size-m(43);
+    left: 0;
     width: 100%;
-    top: size-m(76);
-    left: size-m(0);
+    height: 100%;
+    padding: 0 size-m(30);
+    text-align: center;
     @media screen and (min-width:768px) {
-      top: size(109);
+      top: size(216);
+      left: size(990);
+      width: auto;
+      height: auto;
+      padding: 0;
+      text-align: left;
     }
 
-    .swiper-slide .text-white {
-      font-size: size-m(12);
-      position: absolute;
-      bottom: size-m(10);
-      right: size-m(10);
-      text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.8);
+    .t1 {
+      font-family: 'Noto Serif TC';
+      font-weight: 800;
+      font-size: size-m(25);
+      line-height: size-m(17);
+      margin-bottom: size-m(18);
+      position: relative;
       @media screen and (min-width:768px) {
-        font-size: size(12);
-        bottom: size(10);
-        right: size(10);
+        font-size: size(48);
+        line-height: size(56.64);
+        margin-bottom: size(9);
       }
     }
 
+    .t2 {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size-m(20);
+      line-height: size-m(20);
+      margin-bottom: size-m(18);
+      @media screen and (min-width:768px) {
+        font-size: size(36);
+        line-height: size(42.48);
+        margin-bottom: size(28);
+      }
+    }
+
+    .content {
+      letter-spacing: 0.1em;
+      font-size: size-m(13);
+      line-height: size-m(20);
+      @media screen and (min-width:768px) {
+        font-size: size(18);
+        line-height: size(28.62);
+        max-width: size(650);
+      }
+    }
+  }
+
+  .tabs-title {
+    top: size-m(204);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: size-m(20);
+    line-height: size-m(24);
+    color: #fff;
+    font-family: 'Noto Serif TC';
+    font-weight: 900;
+    // letter-spacing: 0.295em;
+    @media screen and (min-width:768px) {
+      top: size(459);
+      left: size(905);
+      width: auto;
+      font-size: size(24);
+      line-height: size(28.32);
+    }
+
+    &:before, &:after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: size-m(144);
+      height: size-m(2);
+      background: #fff;
+      @media screen and (min-width:768px) {
+        height: size(2);
+      }
+    }
+
+    &:before {
+      left: 0;
+      @media screen and (min-width:768px) {
+        width: size(144);
+        left: size(-144 - 15);
+      }
+    }
+
+    &:after {
+      right: 0;
+      @media screen and (min-width:768px) {
+        transform: translateX(100%);
+        right: size(-15);
+        width: size(944);
+      }
+    }
+  }
+
+  .tk-tabs {
+    top: size-m(251);
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: size-m(14);
+    padding: 0 size-m(15);
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    @media screen and (min-width:768px) {
+      top: size(510);
+      left: size(992);
+      width: size(500);
+      font-size: size(18);
+      padding: 0 size(28.62);
+    }
+
+    .tk-tab {
+      cursor: pointer;
+      position: relative;
+      line-height: 1;
+      transition: all .2s;
+
+      &.active {
+        color: #000;
+        font-weight: 700;
+        transform: translateY(size-m(6.5));
+        @media screen and (min-width:768px) {
+          transform: translateY(size(6.5));
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 50%;
+          transform: translate(-50%, -100%);
+          // background: rgba(255,0,0,0.3);
+          width: size-m(49.5);
+          height: size-m(10.5);
+          background-image: url(@/section/s4/tab-arrow.svg);
+          background-position: center center;
+          background-size: contain;
+          background-repeat: no-repeat;
+          @media screen and (min-width:768px) {
+            top: size(-5);
+            width: size(49.5);
+            height: size(13);
+          }
+        }
+      }
+    }
+  }
+
+  .leaf {
+    width: size-m(179.81);
+    top: size-m(289);
+    left: size-m(-21);
+    animation: tree1 5s ease-in-out alternate infinite;
+    transform-origin: 0% 100%;
+    transform: skew(5deg);
+    @media screen and (min-width:768px) {
+      width: size(807);
+      top: size(34);
+      left: size(-89);
+    }
+  }
+
+  .bird {
+    width: size-m(151);
+    top: size-m(297);
+    left: size-m(66);
+    @media screen and (min-width:768px) {
+      width: size(565);
+      top: size(282);
+      left: size(263);
+    }
+  }
+
+  .gallary {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: flex;
+      width: 100%;
+      height: size(333.24);
+      top: size(571.76);
+      left: 0;
+    }
+
+    .item {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #000;
+        opacity: 0.6;
+        transition: opacity .3s;
+      }
+
+      &.active:after {
+        opacity: 0;
+      }
+    }
+  }
+
+  .slider {
+    bottom: size-m(0);
+    left: size-m(0);
+    width: 100%;
+    @media screen and (min-width:768px) {
+      display: none;
+    }
+
+    .swiper-slide {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+    
+    .swiper-pagination {
+      width: auto;
+    }
+
     .swiper-button-prev, .swiper-button-next {
-      width: size-m(30.84);
-      height: size-m(30.84);
+      width: size-m(30);
+      height: size-m(30);
       background-size: contain;
+      margin: 0;
+      z-index: 11;
+      background-repeat: no-repeat;
+      // background-color: red;
       @media screen and (min-width:768px) {
         width: size(60);
         height: size(60);
+        bottom: 37.4vw;
       }
       &:after {
         display: none;
@@ -99,145 +356,73 @@
     }
 
     .swiper-button-prev {
-      left: 0;
+      left: size-m(12);
       background-image: url(@/section/s4/arrow-prev.svg);
+      background-position: left;
+      // @media screen and (min-width:768px) {
+      //   left: 85vw;
+      // }
     }
 
     .swiper-button-next {
-      right: 0;
+      right: size-m(12);
       background-image: url(@/section/s4/arrow-next.svg);
-    }
-  }
-
-  .text {
-    width: 100%;
-    //top: size-m(319);
-    top: size-m(39);
-    left: 0;
-    padding: 0 size-m(30);
-    text-align: center;
-    @media screen and (min-width:768px) {
-      //top: size(730);
-      top: size(100);
-      padding: 0 size(555) 0 size(509);
-    }
-
-    .t1 {
-      font-size: size-m(25);
-      font-weight: 800;
-      line-height: 1;
-      font-family: 'Noto Serif TC';
-      margin-bottom: size-m(18);
-      @media screen and (min-width:768px) {
-        font-size: size(40);
-        margin-bottom: size(20);
-      }
-    }
-
-    .t2 {
-      font-size: size-m(20);
-      font-weight: 700;
-      line-height: 1;
-      font-family: 'Noto Serif TC';
-      margin-bottom: size-m(18);
-      @media screen and (min-width:768px) {
-        font-size: size(30);
-        margin-bottom: size(50);
-      }
-    }
-
-    .content {
-      font-size: size-m(13);
-      line-height: 1.7;
-      @media screen and (min-width:768px) {
-        font-size: size(20);
-      }
-    }
-  }
-
-  .tree {
-    width: size-m(152);
-    //top: size-m(518);
-    top: size-m(218);
-    left: size-m(18);
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
-    @media screen and (min-width:768px) {
-      width: size(345);
-      //top: size(742);
-      top: size(242);
-      left: size(96);
+      background-position: right;
+      // @media screen and (min-width:768px) {
+      //   left: 95vw;
+      // }
     }
   }
 }
-
 </style>
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper";
-// // import FsLightbox from "fslightbox-vue/v3";
-// import slide2_1_full from '@/section/s4/slide2-1-full.jpg';
-// import slide2_2_full from '@/section/s4/slide2-2-full.jpg';
-// import slide2_3_full from '@/section/s4/slide2-3-full.jpg';
-// import slide3_1_full from '@/section/s4/slide3-1-full.jpg';
-// import slide3_2_full from '@/section/s4/slide3-2-full.jpg';
-// import slide3_3_full from '@/section/s4/slide3-3-full.jpg';
+import "swiper/css/pagination";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    // FsLightbox,
   },
-  setup() {
-    // let swiperRef = null;
-
-    // const setSwiperRef = (swiper) => {
-    //   swiperRef = swiper;
-    // };
-
-    // const slideToPrev = () => {
-    //   swiperRef.slidePrev();
-    // };
-
-    // const slideToNext = () => {
-    //   swiperRef.slideNext();
-    // };
-    
+  data() {
     return {
-      // swiperRef: null,
-      // setSwiperRef,
-      // slideToPrev,
-      // slideToNext,
-      modules: [Navigation, Autoplay],
-    };
+      swiper: null,
+      activeTab: 1,
+      modules: [Pagination, Navigation, Autoplay],
+    }
   },
-  // data() {
-  //   return {
-  //     currentSlider: 2,
-  //     slider2Toggler: false,
-  //     slider2Slide: 1,
-  //     slider3Toggler: false,
-  //     slider3Slide: 1,
-  //     sources2: [slide2_1_full, slide2_2_full, slide2_3_full],
-  //     sources3: [slide3_1_full, slide3_2_full, slide3_3_full],
-  //   }
-  // },
-  // methods: {
-  //   openSlider: function(slider, slide) {
-  //     console.log('open', slide)
-  //     if(slider === 2) {
-  //       this.slider2Slide = slide;
-  //       this.slider2Toggler = !this.slider2Toggler;
-  //     }
-  //     else if(slider === 3) {
-  //       this.slider3Slide = slide;
-  //       this.slider3Toggler = !this.slider3Toggler;
-  //     }
-  //   }
-  // } 
+  methods: {
+    setSwiper(swiper) {
+      this.swiper = swiper;
+    },
+    slideChange() {
+      if(this.swiper){
+        if( document.querySelector('.s4 .slider') && document.querySelector('.s4 .slider').clientWidth > 0 ) {
+          this.activeTab = this.swiper.realIndex + 1;
+        }
+      }
+    },
+    slideTo(num) {
+      this.swiper.update();
+      this.swiper.slideTo(num);
+    },
+  }
 };
+
+// export default {
+//   components: {
+//     Swiper,
+//     SwiperSlide,
+//   },
+//   setup() {
+//     return {
+//       modules: [Navigation, Autoplay],
+//     };
+//   },
+  
+// };
 </script>

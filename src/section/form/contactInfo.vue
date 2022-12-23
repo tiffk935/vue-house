@@ -1,27 +1,27 @@
 <template>
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
-    <!-- <div class="border absolute"></div> -->
+    <img class="child hidden md:block absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/form/child.png" />
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="紅布朗花園" srcset="" />
+      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'phone'">
+        <img src="@/section/form/phone.svg" alt="漫活時代2" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="紅布朗花園" srcset="" />
+      <div class="flex contact-item justify-between items-center rounded-full" @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/form/messenger.svg" alt="漫活時代2" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="紅布朗花園" srcset="" />
+      <div class="flex contact-item justify-between items-center rounded-full btfanpage" @click="open()">
+        <img src="@/section/form/fb.svg" alt="漫活時代2" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap  overflow-hidden">
+    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden rounded-full">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="紅布朗花園" srcset="" />
+      <div class="flex contact-item justify-between items-center md:rounded-full" @click="modalOpen = true; modalType = 'gmap'">
+        <img src="@/section/form/gmap.svg" alt="漫活時代2" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -31,21 +31,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="紅布朗花園" srcset="" />
+      <img src="@/section/form/phone.svg" alt="漫活時代2" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="紅布朗花園" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="漫活時代2" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="紅布朗花園" srcset="" />
+      <img src="@/section/form/pen.svg" alt="漫活時代2" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="紅布朗花園" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="漫活時代2" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -56,9 +56,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="紅布朗花園" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="紅布朗花園" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="紅布朗花園" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="漫活時代2" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="漫活時代2" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="漫活時代2" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -88,9 +88,17 @@
 
 .contact-info {
   width: size(1200);
-  padding: size(68) size(160) size(56) size(160);
+  padding: size(115) size(160) size(56) size(160);
   // margin-top: size(73);
   position: relative;
+  background: #D2630C;
+
+  .child {
+    width: size(500 - 18);
+    bottom: size(-18);
+    right: size(-378);
+    max-width: none;
+  }
 
   .border {
     top: size(21);
@@ -101,14 +109,14 @@
   }
 
   .logo {
-    width: size(724);
-    height: size(317);
+    width: size(523.08);
+    height: size(133.72);
     background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     //margin-bottom: size(40);
-    margin-bottom: size(79);
+    margin-bottom: size(63);
   }
 
   .contact-item-box {
@@ -116,13 +124,13 @@
     margin-top: size(20);
     gap: size(20);
 
-    // &.address-wrap {
-    //   border: size(3) solid #D9374B;
-    // } 
+    &.address-wrap {
+      border: size(4) solid #fff;
+    } 
 
     .contact-item {
-      background-color: #E2C46C;
-      color: #CA485D;
+      background-color: #fff;
+      color: #D2630CEB;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -152,7 +160,7 @@
       }
 
       &.address {
-        background-color: #eee;
+        background-color: #D9D9D9;
         color: #000;
         z-index: 0;
         position: relative;
@@ -164,7 +172,7 @@
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #eee;
+          background-color: #D9D9D9;
           left: calc(100% - 4em);
           z-index: -1;
         }
@@ -189,7 +197,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #AD1B2D;
+      background-color: #D2630C;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -222,10 +230,10 @@
     }
 
     .logo {
-      width: size-m(275.98);
-      height: size-m(120.84);
+      width: size-m(273.92);
+      height: size-m(70.03);
       background-image: url("@/section/form/logo.svg");
-      margin-bottom: size-m(39);
+      margin-bottom: size-m(44);
     }
 
     .contact-item-box {
@@ -235,9 +243,9 @@
       flex-direction: column;
 
       &.address-wrap {
-        // border-radius: size-m(50);
         margin-top: size-m(20);
-        // border: size-m(4) solid #D9374B;
+        border: size-m(4) solid #fff;
+        border-radius: size-m(50);
       }
 
       .contact-item {

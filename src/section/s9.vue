@@ -1,16 +1,15 @@
 <template>
   <section class="s9 relative">
-    <!-- <div class="rect absolute"></div> -->
-    <div class="img-wrapper">
-      <img class="img absolute md:hidden" src="@/section/s9/img-m.jpg" />
-      <img class="img absolute hidden md:block" src="@/section/s9/img.jpg" />
-      <div class="text-white">建築立面實景圖</div>
+    <img class="bg absolute hidden md:block" src="@/section/s9/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s9/bg-m.png" />
+    <div class="leaf1 absolute">
+      <img class="w-full block" src="@/section/s9/leaf.png" />
     </div>
-    <div class="text absolute">
-      <div class="t1 text-[#CFA123]">純粹 建築本色</div>
-      <div class="t2">融入自然 與環境共奏</div>
-      <div class="content">映照周圍豐富綠意，採以低彩度建材構築和諧居住環境，使用深淺色階、木紋與石材等外飾增加都市景觀層次，賦予建築濃厚人文風格與自然和諧共存。</div>
+    <div class="leaf2 absolute">
+      <img class="w-full block" src="@/section/s9/leaf.png" />
     </div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">紅樹林生活圈</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">高坪效1-4房</div>
   </section>
 </template>
 
@@ -19,102 +18,100 @@
 
 .s9 {
   width: 100%;
-  height: size-m(667);
-  background: linear-gradient(180deg, #55B1FF 0%, rgba(140, 201, 255, 0) 100%);
+  height: size-m(263);
+  overflow: hidden;
   @media screen and (min-width:768px) {
-    height: size(1080);
+    height: size(476);
   }
 
-  .text {
-    background: rgba(0, 0, 0, 0.7);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    top: 0;
-    left: 0;
+  .bg {
     width: 100%;
-    height: size-m(228);
+    height: 100%;
+  }
+
+  .t1 {
+    // width: size-m(210);
+    top: size-m(90);
+    // left: size-m(82);
+    width: 100%;
+    left: 0;
+    font-family: 'Noto Serif TC';
+    font-weight: 800;
+    font-size: size-m(35);
+    line-height: size-m(24);
     text-align: center;
     color: #fff;
-    padding: size-m(50) size-m(19) 0 size-m(19);
     @media screen and (min-width:768px) {
-      background: rgba(0, 0, 0, 0.7);
-      border: 1px solid #CFA123;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-      top: size(770);
-      left: size(339);
-      right: size(339);
-      height: auto;
-      width: auto;
-      padding: size(40) size(278);
-    }
-
-    .t1 {
-      font-family: 'Noto Serif TC';
-      color: #CFA123;
-      font-weight: 800;
-      font-size: size-m(25);
-      line-height: size-m(17);
-      margin-bottom: size-m(18);
-      position: relative;
-      @media screen and (min-width:768px) {
-        font-size: size(40);
-        line-height: size(28);
-        display: block;
-        margin: 0 auto;
-        margin-bottom: size(20);
-        max-width: size(630);
-      }
-    }
-
-    .t2 {
-      font-family: 'Noto Serif TC';
       font-weight: 700;
-      font-size: size-m(20);
-      line-height: size-m(20);
-      margin-bottom: size-m(18);
-      @media screen and (min-width:768px) {
-        font-size: size(30);
-        line-height: size(30);
-        margin-bottom: size(20);
-      }
+      width: size(480);
+      top: size(156);
+      left: size(720);
+      font-size: size(80);
+      line-height: size(94);
+    }
+  }
+
+  .t2 {
+    width: size-m(210);
+    top: size-m(135);
+    left: size-m(82);
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(25);
+    line-height: size-m(38);
+    text-align: center;
+    color: #000;
+    border-top: size-m(1) solid #000;
+    border-bottom: size-m(1) solid #000;
+    @media screen and (min-width:768px) {
+      width: size(352);
+      top: size(272);
+      left: size(780);
+      font-size: size(48);
+      line-height: size(56.64);
+      border-top: size(1) solid #000;
+      border-bottom: size(1) solid #000;
+    }
+  }
+
+  .leaf1 {
+    top: -32.5vw;
+    left: -28.5vw;
+    animation: tree1 5s ease-in-out alternate infinite;
+    transform-origin: 0% 0%;
+    @media screen and (min-width:768px) {
+      top: -11.5vw;
+      left: -6.5vw;
     }
 
-    .content {
-      letter-spacing: 0.1em;
-      font-size: size-m(13);
-      line-height: size-m(20);
+    img {
+      max-width: none;
+      width: size-m(261.19);
+      transform: matrix(-0.63, -0.78, -0.78, 0.63, 0, 0);
       @media screen and (min-width:768px) {
-        font-size: size(20);
-        line-height: size(30);
-        max-width: size(795);
+        width: size(755);
       }
     }
   }
 
-  .img {
-    width: size-m(375);
-    object-fit: cover;
-    bottom: size-m(0);
-    left: size-m(0);
+  .leaf2 {
+    left: 37.907vw;
+    top: 10.413vw;
+    animation: tree1 5s ease-in-out alternate infinite;
+    transform-origin: 0% 100%;
     @media screen and (min-width:768px) {
-      width: size(1920);
-      height: 100%;
-      bottom: size(0);
-      left: size(0);
+      left: 54.907vw;
+      top: 7.413vw;
     }
-  }
 
-  .img-wrapper .text-white {
-    font-size: size-m(12);
-    text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
-    position: absolute;
-    bottom: size-m(10);
-    right: size-m(10);
-    line-height: 1;
-    @media screen and (min-width:768px) {
-      font-size: size(12);
-      text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
-      bottom: size(10);
-      right: size(10);
+    img {
+      max-width: none;
+      width: size-m(274.17);
+      transform: rotate(61.11deg);
+      @media screen and (min-width:768px) {
+        width: size(755);
+        transform: rotate(23.7deg);
+      }
     }
   }
 }

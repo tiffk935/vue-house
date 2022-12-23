@@ -1,18 +1,18 @@
   <template>
   <div class="order relative bg-[#FFDFE3] text-center">
     <div class="order1 relative">
-      <img class="tree absolute hidden md:block" src="@/section/s14/tree.png" />
-      <img class="bird1 absolute hidden md:block" src="@/section/form/bird1.svg" />
-      <img class="bird2 absolute hidden md:block" src="@/section/form/bird2.svg" />
-      <img class="man1 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/form/man1.png" />
-      <img class="man2 absolute hidden md:block" data-aos="fade-left" data-aos-delay="0" src="@/section/form/man2.png" />
-      <div class="order2">
+      <div class="order2 relative">
+        <img class="leaf absolute" src="@/section/form/leaf.png" />
+        <div class="train absolute" data-aos="train">
+          <img class="block w-full" src="@/section/form/train.png" />
+        </div>
+
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center text-[#000]">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="紅布朗花園" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="漫活時代2" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="紅布朗花園" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="漫活時代2" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -23,8 +23,10 @@
               @input="(event) => (formData.phone = event.target.value)" />
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
+              <option value="一房">一房</option>
+              <option value="二房">二房</option>
               <option value="三房">三房</option>
+              <option value="四房">四房</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
@@ -51,7 +53,7 @@
             class="checkbox bg-white rounded-md" />
           <p class="text-white">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70 text-[#BA2E3F]">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -61,7 +63,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-white text-[#000000] hover:text-white rounded-none" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D2630C] text-white hover:text-white rounded-full" @click="send()">
           {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
@@ -83,57 +85,56 @@
 
 .order {
   width: 100%;
-  // padding-top: size(115);
 
   .order1 {
-    background-color: #CA485D;
+    background-color: #D2630C;
     background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
     
-    .bg {
-      display: none;
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      mix-blend-mode: multiply;
-    }
+    // .bg {
+    //   display: none;
+    //   width: 100%;
+    //   height: 100%;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   mix-blend-mode: multiply;
+    // }
 
-    .tree {
-      width: size(1920);
-      bottom: size(-2);
-      left: size(0);
-      max-width: none;
-      transform-origin: bottom;
-      animation: tree 3s alternate-reverse infinite ease-in-out;
-    }
+    // .tree {
+    //   width: size(1920);
+    //   bottom: size(-2);
+    //   left: size(0);
+    //   max-width: none;
+    //   transform-origin: bottom;
+    //   animation: tree 3s alternate-reverse infinite ease-in-out;
+    // }
 
-    .bird1 {
-      width: size(400);
-      top: size(48);
-      left: size(1465);
-    }
+    // .bird1 {
+    //   width: size(400);
+    //   top: size(48);
+    //   left: size(1465);
+    // }
 
-    .bird2 {
-      width: size(211);
-      top: size(1112);
-      left: size(0);
-    }
+    // .bird2 {
+    //   width: size(211);
+    //   top: size(1112);
+    //   left: size(0);
+    // }
 
-    .man1 {
-      width: size(419);
-      bottom: 0;
-      left: 0;
-    }
+    // .man1 {
+    //   width: size(419);
+    //   bottom: 0;
+    //   left: 0;
+    // }
 
-    .man2 {
-      width: size(480);
-      bottom: 0;
-      right: 0;
-    }
+    // .man2 {
+    //   width: size(480);
+    //   bottom: 0;
+    //   right: 0;
+    // }
   }
 
   .order2 {
@@ -198,25 +199,47 @@
     color: #000;
     position: relative;
   }
+
+  .leaf {
+    width: size(1211);
+    left: size(-292);
+    bottom: size(84);
+    max-width: none;
+  }
+
+  .train {
+    width: size(1481);
+    left: size(-713);
+    bottom: size(-19);
+    transform: translate(-100%, 0%);
+    transform-origin: 0% 100%;
+
+    &[data-aos^="train"].aos-animate {
+      // animation: train 3s ease-out forwards;
+      transform: translate(0, 0);
+      transition-duration: 3s !important;
+      transition-timing-function: ease-out !important;
+    }
+
+    img {
+      max-width: none;
+      transform: scaleX(-1);
+    }
+  }
 }
 
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    // padding-top: size-m(40);
     margin-top: size-m(0);
 
     .order1 {
-      // background: none;
       background-image: url(@/section/form/bg-m.png);
       padding-bottom: 0;
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      // background-color: #D9374B;
-      // background-image: url(@/section/form/bg-m.png);
+      padding: size-m(40) 0 size-m(218) 0;
       background-size: cover;
       background-position: center center;
     }
@@ -262,7 +285,36 @@
     .control {
       font-size: size-m(14.6);
     }
+
+    .leaf {
+      width: size-m(812);
+      left: size-m(-188);
+      bottom: 0;
+      max-width: none;
+    }
+
+    .train {
+      width: size-m(881);
+      left: size-m(-506);
+      bottom: size-m(-16);
+      transform: translate(-100%, 0%);
+      transform-origin: 0% 100%;
+
+      &[data-aos^="train"].aos-animate {
+        // animation: train 3s ease-out forwards;
+        transform: translate(0, 0);
+        transition-duration: 3s !important;
+        transition-timing-function: ease-out !important;
+      }
+
+      img {
+        max-width: none;
+        transform: scaleX(-1);
+      }
+    }
   }
+
+  
 }
 </style>
 

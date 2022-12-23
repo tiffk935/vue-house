@@ -1,156 +1,204 @@
 <template>
-  <section class="s1 text-white bg-[#CA485D] relative">
-    <img class="bg absolute hidden md:block" src="@/section/s1/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.png" />
-    <img class="tree absolute" src="@/section/s1/tree.png" />
-    <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <div class="title absolute" data-aos="fade-down" data-aos-delay="200">
-      <div class="l1">人生MVP 生活紅不讓</div>
-      <div class="l2">司法特區 × 萬坪森活｜<span class="text-[#EACA6B]">17-29坪</span></div>
-      <div class="l2"><span class="text-[#EACA6B]">12.10 COMING SOON</span></div>
+  <section class="s1 text-white relative">
+    <div class="leafstyle">
+      <img class="leaf1" src="@/section/s1/leaf1.png" />		
+      <img class="leaf2" src="@/section/s1/leaf2.png" />		
     </div>
-    <img class="person1 absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/person1.png" />
-    <img class="person2 absolute" data-aos="fade-right" data-aos-delay="200" src="@/section/s1/person2.png" />
-    <div data-aos="fade-left" data-aos-delay="200">
-      <img class="person3 absolute" src="@/section/s1/person3.png" />
+    <img class="train" src="@/section/s1/train.png" />
+    <div class="main">
+      <div class="floorstyle">
+        <img class="floor" src="@/section/s1/floor.png" />	
+        <img class="shadow" src="@/section/s1/shadow.png" />		
+      </div>
+      <img class="child" src="@/section/s1/child.png" />
     </div>
-    <img class="person4 absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s1/person4.png" />
-
-    <!-- <img class="cloud absolute md:hidden" src="@/section/s1/cloud-m.png" />
-    <img class="cloud absolute hidden md:block" src="@/section/s1/cloud.png" />
-    <img class="house absolute" src="@/section/s1/house.png" />
-    <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <img class="logo absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
     
-    <div class="title">
-      <div class="t1" data-aos="fade-up" data-aos-delay="200">超低公設 甲級營造</div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="300">航空客運園區 <span>2-3</span> 房</div>
-    </div> -->
+    <img class="logo absolute" data-aos="zoom-in" data-aos-delay="200" src="@/section/s1/logo.svg" />
+    <div class="t1 absolute" data-aos="zoom-in" data-aos-delay="200">竹圍下一站 雙北3字頭</div>
+    <div class="t2 absolute" data-aos="zoom-in" data-aos-delay="200">2房價換大3房 / 幸福有餘裕</div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-@keyframes tree {
-  from {
-    transform: skew(-3deg)
-  }
+@keyframes tree1{
   to {
-    transform: skew(3deg)
+    transform:skew(-5deg);
+  }
+}
+@keyframes tree2{
+  to {
+    transform:skew(-2deg);
+  }
+}
+@keyframes train{
+  to {
+    transform:translate(0px, 0%);
   }
 }
 
 .s1 {
   width: 100%;
-  height: size-m(667);
-  font-family: 'Noto Serif TC';
+  height: 100vh;
+  min-height: size(1080);
+  max-height: size(1080);
+  // overflow: hidden;
+  position: relative;
   overflow: hidden;
-  @media screen and (min-width:768px) {
-    height: size(1080);
-  }
+  background: url(@/section/s1/bg.jpg) center;
+  // background-size: 100% auto;
 
-  .bg {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    mix-blend-mode: multiply;
-  }
-
-  .tree {
-    width: size-m(1059);
-    bottom: size-m(0);
-    left: size-m(-342);
+  img {
     max-width: none;
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
-    @media screen and (min-width:768px) {
+  }
+
+  .leaf1{
+    // z-index: 1;
+    position: absolute;
+    width: size(1176);
+    left: size(-195);
+    bottom: size(-300);
+    animation: tree1 5s ease-in-out alternate infinite;
+    transform-origin: 0% 100%;
+    transform: skew(5deg);
+  }
+  .leaf2{
+    // z-index: 1;
+    position: absolute;
+    width: size(1428);
+    bottom: size(-90);
+    left: size(-140);
+    animation: tree2 3s ease-in-out alternate infinite;
+    transform-origin: 0% 100%;
+    transform: skew(2deg);
+  }
+
+  .main{
+    position: absolute;
+    bottom: size(0);
+    width: size(1920);
+    .child{
+      // z-index: 10;
+      position: absolute;
+      width: size(380);
+      bottom: size(55);
+      left: size(410);
+    }
+    .shadow{
+      // z-index: 5;
+      position: absolute;
+      width: size(446);
+      bottom: size(30);
+      left: size(320);
+      mix-blend-mode: multiply;
+    }
+    .floor{
+      // z-index: 3;
+      position: absolute;
       width: size(1920);
       bottom: size(0);
       left: size(0);
+      right: size(0);
     }
   }
-
-  .person1 {
-    width: size-m(171.23);
-    top: size-m(410);
-    left: size-m(-25);
-    @media screen and (min-width:768px) {
-      width: size(350.24);
-      top: size(758.36);
-      left: size(131);
-    }
+  .train{
+    // z-index: 2;
+    position: absolute;
+    width: size(2533);
+    bottom: size(140);
+    right: size(-1330);
+    transform: translate(100%, 0%);
+    animation: train 3s ease-out forwards;
+    transform-origin: 0% 100%;
   }
-
-  .person2 {
-    width: size-m(105.21);
-    top: size-m(414);
-    left: size-m(50.79);
-    @media screen and (min-width:768px) {
-      width: size(223.67);
-      top: size(751);
-      left: size(379);
-    }
-  }
-
-  .person3 {
-    width: size-m(174.34);
-    top: size-m(387.35);
-    left: size-m(185.05);
-    transform: matrix(-1, 0.03, 0.03, 1, 0, 0);
-    @media screen and (min-width:768px) {
-      width: size(404.43);
-      top: size(684.12);
-      left: size(1235);
-    }
-  }
-
-  .person4 {
-    width: size-m(150);
-    top: size-m(385);
-    left: size-m(268);
-    @media screen and (min-width:768px) {
-      width: size(342);
-      top: size(678);
-      left: size(1529);
-    }
-  }
-
   .logo {
-    width: size-m(271);
-    top: size-m(100);
-    left: size-m(52);
-    @media screen and (min-width:768px) {
-      width: size(785.52);
-      top: size(221);
-      left: size(567);
+    width: size(523);
+    top: size(204);
+    left: size(974.73);
+  }
+  .t1 {
+    font-family: 'Noto Serif TC';
+    font-size: size(67);
+    line-height: size(79);
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    top: size(362);
+    left: size(908);
+  }
+  .t2 {
+    font-family: 'Noto Serif TC';
+    font-size: size(48);
+    line-height: size(57);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 0.005em;
+    top: size(970);
+    left: size(1286);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .s1 {
+    min-height: size-m(667);
+    max-height: size-m(812);
+    height:100vh;
+    background: url(@/section/s1/bg-m.jpg) top center;
+    background-size:100% ;
+
+    .leaf1{
+      width:size-m(417);
+      left: size-m(-117);
+      bottom: size-m(-20);
+    }
+    .leaf2{
+      width:size-m(506);
+      bottom: size-m(55);
+      left: size-m(-95);
+    }
+    .main{
+    width: size-m(375);
+    .child{
+      width: size-m(160);
+      bottom: size-m(85);
+      left: size-m(30);
+    }
+    .shadow{
+      width: size-m(190);
+      bottom: size-m(75);
+      left: size-m(0);
+    }
+    .floor{
+      width: auto;
+      height: size-m(159);
+      left: size-m(-150);
+    }
+    }
+    .train{
+      width: size-m(672);
+      bottom: size-m(130);
+      right: size-m(-280);
+    }
+    .logo {
+      width: size-m(203.78);
+      top: size-m(78);
+      left: size-m(86);
+    }
+    .t1 {
+      font-size: size-m(30);
+      line-height: size-m(35.4);
+      top: size-m(160);
+      left: size-m(39);
+    }
+    .t2 {
+      font-size: size-m(23);
+      line-height: size-m(27);
+      top: size-m(205);
+      left: size-m(48);
+      color: #000;
     }
   }
-
-  .title {
-    width: 100%;
-    top: size-m(261);
-    left: 0;
-    text-align: center;
-    font-weight: 600;
-    font-size: size-m(20);
-    @media screen and (min-width:768px) {
-      top: size(600);
-      font-size: size(30);
-    }
-
-    .l1 {
-      font-weight: 700;
-      font-size: size-m(25);
-      @media screen and (min-width:768px) {
-        font-size: size(40);
-      }
-    }
-  }
-
-  
-  
 }
 
 </style>

@@ -1,22 +1,99 @@
 <template>
   <section class="s5 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s5/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s5/bg-m.png" />
-    <img class="tree absolute" src="@/section/s5/tree.png" />
-    <img class="man absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s5/man.png" />
-    <img class="bird absolute hidden md:block"  data-aos="fade-left" data-aos-delay="0" src="@/section/s5/bird.svg" />
-    <div class="pic1 absolute">
-      <img src="@/section/s5/pic1.jpg" />
-      <div class="text-white">頂埔科技園區實景</div>
+    <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
+    <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
+    <img class="leaf absolute" src="@/section/s5/leaf.png">
+    <div class="text" data-aos="fade-up" data-aos-delay="0">
+      <div class="t1 absolute">安心售後服務</div>
+      <div class="t2">十年防水保固</div>
+      <div class="content">用心的建築來自對細節的要求，漏水、隔熱問題，一次完善到位，與台北101 同級的SA級鋼筋續接器、當層排氣工法等，負責到底的售後服務精神，給家人最好的穩固生活！</div>
     </div>
-    <div class="pic2 absolute">
-      <img src="@/section/s5/pic2.jpg" />
-      <div class="text-white">遠東通訊園區實景</div>
+    <div class="gallary">
+      <div class="item">
+        <div class="title absolute">耐震SA 級續接器</div>
+        <img src="@/section/s5/slide1.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">當層排氣工法</div>
+        <img src="@/section/s5/slide2.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">櫻花三機廚具</div>
+        <img src="@/section/s5/slide3.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">愛惠浦濾水器</div>
+        <img src="@/section/s5/slide4.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">台達暖風機</div>
+        <img src="@/section/s5/slide5.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">耶魯電子鎖</div>
+        <img src="@/section/s5/slide6.jpg" />
+      </div>
+      <div class="item">
+        <div class="title absolute">HCG 馬桶</div>
+        <img src="@/section/s5/slide7.jpg" />
+      </div>
     </div>
-    <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#C2465A]">科技 新門戶</div>
-      <div class="t2">擁抱智慧浪潮 千億產值</div>
-      <div class="content">擁抱3大科技產業園區，中和軟體、遠東通訊及頂埔科技，進駐產業人口將近4萬人，預估產值將突破兆元，土城新矽谷準備好了。</div>
+    <div class="slider absolute">
+      <swiper 
+        :spaceBetween="10"
+        :pagination="false"
+        :navigation="true"
+        :modules="modules"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        @swiper="setSwiper"
+      >
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">耐震SA 級續接器</div>
+            <img src="@/section/s5/slide1.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">當層排氣工法</div>
+            <img src="@/section/s5/slide2.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">櫻花三機廚具</div>
+            <img src="@/section/s5/slide3.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">愛惠浦濾水器</div>
+            <img src="@/section/s5/slide4.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">台達暖風機</div>
+            <img src="@/section/s5/slide5.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">耶魯電子鎖</div>
+            <img src="@/section/s5/slide6.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="item">
+            <div class="title absolute">HCG 馬桶</div>
+            <img src="@/section/s5/slide7.jpg" />
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
@@ -26,212 +103,283 @@
 
 .s5 {
   width: 100%;
-  height: size-m(667);
+  height: size-m(604);
+  color: #000;
+  overflow: hidden;
   @media screen and (min-width:768px) {
-    height: size(1080);
+    height: size(900);
   }
 
   .bg {
     width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
   }
 
-  .tree {
-    width: size-m(123.49);
-    top: size-m(-63);
-    right: size-m(-10.37);
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
-    z-index: 1;
-    @media screen and (min-width:768px) {
-      width: size(246);
-      top: size(-149.4);
-      right: size(397);
-      z-index: 0;
-    }
-  }
-
-  .man {
-    width: size-m(215.4);
-    top: size-m(-240);
-    left: size-m(170);
-    @media screen and (min-width:768px) {
-      width: size(463);
-      top: size(-411);
-      left: size(1444);
-    }
-  }
-
-  .bird {
-    width: size(355);
-    top: size(829);
-    left: size(1565);
-  }
-
-  .pic1 {
-    width: size-m(256);
-    top: size-m(24);
-    left: size-m(61);
-    @media screen and (min-width:768px) {
-      width: size(602);
-      top: size(154);
-      left: size(1063);
-    }
-  }
-
-  .pic2 {
-    width: size-m(375);
-    height: size-m(272.88);
-    bottom: 0;
-    left: 0;
-    @media screen and (min-width:768px) {
-      width: size(960);
-      height: 100%;
-    }
-
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-  }
-
-  .pic1, .pic2 {
-    .text-white {
-      font-size: size-m(12);
-      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
-      position: absolute;
-      bottom: size-m(10);
-      right: size-m(10);
-      line-height: 1;
-      @media screen and (min-width:768px) {
-        font-size: size(12);
-        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
-        bottom: size(10);
-        right: size(10);
-      }
-    }
-  }
-
   .text {
-    width: 100%;
-    top: size-m(225);
+    position: absolute;
+    top: size-m(43);
     left: 0;
+    width: 100%;
+    height: 100%;
     padding: 0 size-m(30);
     text-align: center;
     @media screen and (min-width:768px) {
-      top: size(669);
-      padding: 0 size(344) 0 size(1063);
+      top: size(180);
+      left: size(1007);
+      width: auto;
+      height: auto;
+      padding: 0;
       text-align: left;
     }
 
     .t1 {
-      font-size: size-m(25);
-      font-weight: 800;
-      line-height: 1;
       font-family: 'Noto Serif TC';
-      margin-bottom: size-m(12);
+      font-weight: 800;
+      font-size: size-m(25);
+      line-height: size-m(17);
+      margin-bottom: size-m(18);
+      position: relative;
       @media screen and (min-width:768px) {
-        font-size: size(40);
-        margin-bottom: size(20);
+        font-size: size(48);
+        line-height: size(63.6);
+        margin-bottom: size(0);
       }
     }
 
     .t2 {
-      font-size: size-m(20);
-      font-weight: 700;
-      line-height: 1;
       font-family: 'Noto Serif TC';
-      margin-bottom: size-m(12);
+      font-weight: 700;
+      font-size: size-m(20);
+      line-height: size-m(20);
+      margin-bottom: size-m(18);
       @media screen and (min-width:768px) {
-        font-size: size(30);
-        margin-bottom: size(60);
+        font-size: size(48);
+        line-height: size(63.6);
+        margin-bottom: size(30);
       }
     }
 
     .content {
+      letter-spacing: 0.1em;
       font-size: size-m(13);
-      line-height: 1.7;
-      text-align: justify;
+      line-height: size-m(20);
       @media screen and (min-width:768px) {
-        font-size: size(20);
-        width: size(515);
-        
+        font-size: size(18);
+        line-height: size(28.62);
+        max-width: size(545);
       }
     }
   }
-}
 
+  .leaf {
+    width: size-m(384);
+    top: size-m(156);
+    left: size-m(65);
+    animation: tree1 5s ease-in-out alternate infinite;
+    transform-origin: 0% 100%;
+    transform: skew(5deg);
+    max-width: none;
+    @media screen and (min-width:768px) {
+      width: size(820);
+      top: size(-100);
+      left: size(1216);
+    }
+  }
+
+  .gallary {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: block;
+    }
+
+    .item {
+      position: absolute;
+      width: size(239);
+      height: size(239);
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      .title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        font-size: size(20);
+        font-weight: 500;
+        background: #D2630C;
+        opacity: 0.92;
+        transition: opacity .3s;
+        z-index: 1;
+      }
+
+      &:hover .title {
+        opacity: 0;
+      }
+
+      &:nth-child(1) {
+        top: size(188);
+        left: size(159);
+      }
+
+      &:nth-child(2) {
+        top: size(188);
+        left: size(430);
+      }
+
+      &:nth-child(3) {
+        top: size(188);
+        left: size(700);
+      }
+
+      &:nth-child(4) {
+        top: size(459);
+        left: size(430);
+      }
+
+      &:nth-child(5) {
+        top: size(459);
+        left: size(700);
+      }
+
+      &:nth-child(6) {
+        top: size(459);
+        left: size(971);
+      }
+
+      &:nth-child(7) {
+        top: size(459);
+        left: size(1248);
+      }
+    }
+  }
+
+  .slider {
+    top: size-m(276);
+    left: size-m(0);
+    width: 100%;
+    @media screen and (min-width:768px) {
+      display: none;
+    }
+
+    .item {
+      max-width: size-m(239);
+      margin: 0 auto;
+      position: relative;
+
+      .title {
+        font-weight: 500;
+        color: #fff;
+        font-size: size-m(18);
+        line-height: size-m(44);
+        text-align: center;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(210, 99, 12, 0.92);
+      }
+    }
+
+    .swiper-slide {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+    
+    .swiper-pagination {
+      width: auto;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(30);
+      height: size-m(30);
+      background-size: contain;
+      margin: 0;
+      z-index: 11;
+      background-repeat: no-repeat;
+      // background-color: red;
+      @media screen and (min-width:768px) {
+        width: size(60);
+        height: size(60);
+        bottom: 37.4vw;
+      }
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: size-m(12);
+      background-image: url(@/section/s4/arrow-prev.svg);
+      background-position: left;
+      // @media screen and (min-width:768px) {
+      //   left: 85vw;
+      // }
+    }
+
+    .swiper-button-next {
+      right: size-m(12);
+      background-image: url(@/section/s4/arrow-next.svg);
+      background-position: right;
+      // @media screen and (min-width:768px) {
+      //   left: 95vw;
+      // }
+    }
+  }
+}
 </style>
 
 <script>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/navigation";
-import { Navigation, Autoplay } from "swiper";
-// // import FsLightbox from "fslightbox-vue/v3";
-// import slide2_1_full from '@/section/s5/slide2-1-full.jpg';
-// import slide2_2_full from '@/section/s5/slide2-2-full.jpg';
-// import slide2_3_full from '@/section/s5/slide2-3-full.jpg';
-// import slide3_1_full from '@/section/s5/slide3-1-full.jpg';
-// import slide3_2_full from '@/section/s5/slide3-2-full.jpg';
-// import slide3_3_full from '@/section/s5/slide3-3-full.jpg';
+import "swiper/css/pagination";
+import { Pagination, Navigation, Autoplay } from "swiper";
 
 export default {
   components: {
     Swiper,
     SwiperSlide,
-    // FsLightbox,
   },
-  setup() {
-    // let swiperRef = null;
-
-    // const setSwiperRef = (swiper) => {
-    //   swiperRef = swiper;
-    // };
-
-    // const slideToPrev = () => {
-    //   swiperRef.slidePrev();
-    // };
-
-    // const slideToNext = () => {
-    //   swiperRef.slideNext();
-    // };
-    
+  data() {
     return {
-      // swiperRef: null,
-      // setSwiperRef,
-      // slideToPrev,
-      // slideToNext,
-      modules: [Navigation, Autoplay],
-    };
+      swiper: null,
+      modules: [Pagination, Navigation, Autoplay],
+    }
   },
-  // data() {
-  //   return {
-  //     currentSlider: 2,
-  //     slider2Toggler: false,
-  //     slider2Slide: 1,
-  //     slider3Toggler: false,
-  //     slider3Slide: 1,
-  //     sources2: [slide2_1_full, slide2_2_full, slide2_3_full],
-  //     sources3: [slide3_1_full, slide3_2_full, slide3_3_full],
-  //   }
-  // },
-  // methods: {
-  //   openSlider: function(slider, slide) {
-  //     console.log('open', slide)
-  //     if(slider === 2) {
-  //       this.slider2Slide = slide;
-  //       this.slider2Toggler = !this.slider2Toggler;
-  //     }
-  //     else if(slider === 3) {
-  //       this.slider3Slide = slide;
-  //       this.slider3Toggler = !this.slider3Toggler;
-  //     }
-  //   }
-  // } 
+  methods: {
+    setSwiper(swiper) {
+      this.swiper = swiper;
+    },
+    slideTo(num) {
+      this.swiper.update();
+      this.swiper.slideTo(num);
+    },
+  }
 };
+
+// export default {
+//   components: {
+//     Swiper,
+//     SwiperSlide,
+//   },
+//   setup() {
+//     return {
+//       modules: [Navigation, Autoplay],
+//     };
+//   },
+  
+// };
 </script>
