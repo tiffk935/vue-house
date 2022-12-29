@@ -247,6 +247,8 @@
           <img class="w-100" src="@/section/s1/pc/08-1.jpg" alt="清景麟名人坊_獲獎肯定圖" title="">
           <img class="w-100 word" src="@/section/s1/pc/w-08-1.svg" alt="清景麟名人坊_文字介紹" data-aos="fade-in"
             data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
+            <img class="w-100 word" src="@/section/s1/pc/w-08-11.png" alt="清景麟名人坊_文字介紹" data-aos="fade-in"
+            data-aos-anchor-placement="top-center" data-aos-offset="0" data-aos-easing="ease-in-sine">
         </div>
       </div>
     </div>
