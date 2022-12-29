@@ -57,7 +57,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 aa-btn mx-auto hover:scale-90 cursor-pointer btregistration bg-[#0B5034] text-white" @click="send()">
+        <div :id="sending ? 'sendmail' : null" class="send mt-8 aa-btn mx-auto hover:scale-90 cursor-pointer btregistration bg-[#0B5034] text-white" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
