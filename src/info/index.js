@@ -20,6 +20,8 @@ export default {
         ["公設景觀", "OH DEAR Studio"],
         ["建築代銷", "聯碩行銷股份有限公司"],
         ["接待會館", "台南市仁德區文忠路89號"],
+        ["經紀人　", "趙怡如"],
+        ["建照號碼", "北基地(111)南工造字第03761號<br>南基地(111)南工造字第03760號"],
     ],
     gtmCode: ["GTM-MT7BH65"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",

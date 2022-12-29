@@ -340,9 +340,20 @@
           >
             <swiper-slide>
               <img src="@/section/s4/content4/1.jpg" />
-              <div class="text-white">鋁罐廠情境示意</div>
+              <div class="text-white">吉源控股廈門廠</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img src="@/section/s4/content4/2.jpg" />
+              <div class="text-white">吉源控股廣東廠</div>
             </swiper-slide>
           </swiper>
+        </div>
+        <div class="slider-pagination">
+          <span 
+            v-for="num in 2" 
+            :key="num" 
+            :class="{'slider-rect': true, 'active': activeIndex4 == (num-1)}"
+          ></span>
         </div>
       </div>
     </transition>
