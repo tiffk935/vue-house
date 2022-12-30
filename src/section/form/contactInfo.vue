@@ -60,11 +60,11 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="清景麟國家公園" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-          '接待會館'
+          '品牌形象館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+          `${info.address}`
       }}</div>
       <!-- btn -->
       <div :id="modalType == 'phone' && $isMobile() ? 'phonegtm' : ''" class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
