@@ -78,7 +78,7 @@
     }
 
     .info-box {
-        width: size-m(305);
+        width: size-m(320);
         padding: size-m(50) 0;
 
         .title {
