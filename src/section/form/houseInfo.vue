@@ -41,7 +41,7 @@
     }
 
     .logo {
-        width: size(515.7);
+        width: size(400);
     }
 
     .info-items {
