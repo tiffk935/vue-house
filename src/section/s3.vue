@@ -106,28 +106,10 @@
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full h-full relative">
-            <img class="logo" src="@/section/s3/slide11/logo.png" />
-            <div class="line"></div>
-            <div class="text">
-              <span class="year">2020</span>天下南隅
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item w-full h-full relative">
-            <img class="logo" src="@/section/s3/slide12/logo.png" />
-            <div class="line"></div>
-            <div class="text">
-              <span class="year">2022</span>出雲居
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item w-full h-full relative">
             <img class="logo" src="@/section/s3/slide13/logo.png" />
             <div class="line"></div>
             <div class="text">
-              <span class="year">Processing</span>遇州南
+              <span class="year">2022</span>遇州南
             </div>
           </div>
         </swiper-slide>
@@ -232,7 +214,7 @@
           position: absolute;
           width: size(231.92);
           top: 22.7vw;
-          opacity: 0;
+          opacity: 1;
           transition: opacity .4s;
         }
       }
