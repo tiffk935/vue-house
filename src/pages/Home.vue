@@ -56,21 +56,6 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
-
-    setTimeout(() => {
-      let status = 0;
-      let hideHand = false;
-      document.querySelector('.s6 .map').scrollLeft = document.querySelector('.s6 .map .map1').clientWidth * 0.38 - window.innerWidth/2;
-      document.querySelector('.s6 .map').addEventListener("scroll", () => {
-        status++;
-        if(status > 1 && !hideHand){
-          // document.querySelector('.s6 .hand').style.opacity = 0;
-          // document.querySelector('.s6 .hand-bg').style.opacity = 0;
-          hideHand = true;
-        }
-      });
-    }, 0);
   };
-
 })
 </script>

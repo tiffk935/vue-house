@@ -1,7 +1,10 @@
 <template>
   <section class="s6 bg-[#E4E3DB] relative">
-    <div class="map relative">
-      <img class="map1" src="@/section/s6/map.jpg" />
+    <div class="map relative" ref="viewbox">
+      <img class="map1" ref="viewImg" src="@/section/s6/map.jpg" />
+      <div class="mask" v-bind:class="{ hide: swiped }" v-if="$isMobile()">
+        <img src="@/section/s6/finger.png" alt="" srcset="">
+      </div>
     </div>
     <img class="circle absolute" src="@/section/s6/circle.svg" />
     <img class="circle-num absolute" data-aos="fade-in" data-aos-delay="0" src="@/section/s6/circle-num.svg" />
@@ -58,7 +61,7 @@
       border-radius: size(80);
     }
 
-    img {
+    .map1 {
       width: auto;
       height: size-m(546);
       margin-top: size-m(738 - 546);
@@ -70,6 +73,31 @@
         height: 100%;
         margin-top: 0;
         object-fit: cover;
+      }
+    }
+
+    .mask {
+      position: absolute;
+      width: 100%;
+      height: size-m(546);
+      left: 0;
+      bottom: 0;
+      z-index: 10;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      opacity: 1;
+      transition: all 1s;
+      background-color: rgba($color: #000000, $alpha: 0.5);
+      @media screen and (min-width:768px) {
+        display: none;
+      }
+      img {
+        height: 47px;
+      }
+      &.hide {
+        opacity: 0;
       }
     }
   }
@@ -176,4 +204,30 @@
 </style>
 
 <script setup>
+import BScroll from '@better-scroll/core'
+import { onMounted, ref } from 'vue';
+const viewbox = ref()
+const viewImg = ref()
+const swiped = ref(false)
+const offsetRatio = 3.3; //調整此值設定X軸位置偏移參數
+onMounted(() => {
+    viewImg.value.addEventListener('load', () => {
+        let scroll = new BScroll(viewbox.value, {
+            probeType: 2,
+            scrollX: true,
+            scrollY: true,
+            disableTouch: false,
+            disableMouse: false,
+            bindToWrapper: true,
+            eventPassthrough: "vertical",
+            bounce: false,
+        })
+        scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
+        setTimeout(() => {
+            scroll.on("scroll", () => {
+                swiped.value = true
+            });
+        }, 1000);
+    })
+});
 </script>
