@@ -1,11 +1,11 @@
 <template>
   <section class="s2 relative text-white">
     <div class="map relative">
-      <img class="map1" src="@/section/s2/map.jpg" />
+      <img loading="lazy" class="map1" src="@/section/s2/map.jpg" />
     </div>
     <div class="rect absolute"></div>
-    <img class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
-    <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
+    <img loading="lazy" class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
+    <img loading="lazy" class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
     <div class="title" data-aos="fade-up" data-aos-delay="0">
       <div class="t1 text-white">淡北快通車價值無限</div>
       <div class="t2">北士科優質生活腹地</div>

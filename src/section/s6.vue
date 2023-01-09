@@ -1,7 +1,7 @@
 <template>
   <section class="s6 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s6/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s6/bg-m.png" />
+    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s6/bg.jpg" />
+    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s6/bg-m.jpg" />
 
     <svg class="tabs absolute md:hidden" width="375" height="43" viewBox="0 0 375 43">
       <g :class="{'cursor-pointer': true, active: activeTab === 1}" @click="activeTab = 1">
@@ -55,11 +55,11 @@
             }"
           >
             <swiper-slide>
-              <img src="@/section/s6/slide1/1.jpg" />
+              <img loading="lazy" src="@/section/s6/slide1/1.jpg" />
               <div class="text-white">建築立面3D示意圖</div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s6/slide1/2.jpg" />
+              <img loading="lazy" src="@/section/s6/slide1/2.jpg" />
               <div class="text-white">建築立面3D示意圖</div>
             </swiper-slide>
           </swiper>
@@ -72,7 +72,7 @@
       <div v-if="activeTab == 2">
         <div class="text text-slide2 absolute" data-aos="fade-up" data-aos-delay="0">
           <div class="t1">紅林設計</div>
-          <img class="logo" src="@/section/s6/logo.png" />
+          <img loading="lazy" class="logo" src="@/section/s6/logo.png" />
           <div class="t3">得獎經歷：</div>
           <div class="content">
             2019年/<br />
@@ -100,19 +100,19 @@
             }"
           >
             <swiper-slide>
-              <img src="@/section/s6/slide2/1.jpg" />
+              <img loading="lazy" src="@/section/s6/slide2/1.jpg" />
               <div class="text-white">漫活時代公設3D示意圖，實際以現場實際竣工為主</div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s6/slide2/2.jpg" />
+              <img loading="lazy" src="@/section/s6/slide2/2.jpg" />
               <div class="text-white">漫活時代公設3D示意圖，實際以現場實際竣工為主</div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s6/slide2/3.jpg" />
+              <img loading="lazy" src="@/section/s6/slide2/3.jpg" />
               <div class="text-white">漫活時代公設3D示意圖，實際以現場實際竣工為主</div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s6/slide2/4.jpg" />
+              <img loading="lazy" src="@/section/s6/slide2/4.jpg" />
               <div class="text-white">漫活時代公設3D示意圖，實際以現場實際竣工為主</div>
             </swiper-slide>
           </swiper>

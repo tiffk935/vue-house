@@ -88,7 +88,7 @@
 
   .order1 {
     background-color: #D2630C;
-    background-image: url(@/section/form/bg.png);
+    background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
@@ -228,7 +228,7 @@
     margin-top: size-m(0);
 
     .order1 {
-      background-image: url(@/section/form/bg-m.png);
+      background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
     }
 

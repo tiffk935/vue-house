@@ -1,7 +1,7 @@
 <template>
   <section class="s7 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s6/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s6/bg-m.png" />
+    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s6/bg.jpg" />
+    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s6/bg-m.jpg" />
     <div class="tabs absolute">
       <div 
         :class="{'tk-tab': true, active: activeTab === 1}"
@@ -27,9 +27,9 @@
             坪走道，最高坪效格局規劃，收納好簡單。
           </div>
         </div>
-        <img class="floor absolute" src="@/section/s7/floor1.png" />
+        <img loading="lazy" class="floor absolute" src="@/section/s7/floor1.png" />
         <div class="vr absolute">
-          <img src="@/section/s7/vr1.jpg" />
+          <img loading="lazy" src="@/section/s7/vr1.jpg" />
           <div class="mask">
             <div class="flex justify-center items-end text-white absolute">
               <div>
@@ -52,9 +52,9 @@
             心，溫馨又舒適。
           </div>
         </div>
-        <img class="floor absolute" src="@/section/s7/floor2.png" />
+        <img loading="lazy" class="floor absolute" src="@/section/s7/floor2.png" />
         <div class="vr absolute">
-          <img src="@/section/s7/vr2.jpg" />
+          <img loading="lazy" src="@/section/s7/vr2.jpg" />
           <div class="mask">
             <div class="flex justify-center items-end text-white absolute">
               <div>

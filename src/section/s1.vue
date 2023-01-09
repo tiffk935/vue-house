@@ -1,19 +1,19 @@
 <template>
   <section class="s1 text-white relative">
     <div class="leafstyle">
-      <img class="leaf1" src="@/section/s1/leaf1.png" />		
-      <img class="leaf2" src="@/section/s1/leaf2.png" />		
+      <img loading="lazy" class="leaf1" src="@/section/s1/leaf1.png" />		
+      <img loading="lazy" class="leaf2" src="@/section/s1/leaf2.png" />		
     </div>
-    <img class="train" data-aos="train" src="@/section/s1/train.png" />
+    <img loading="lazy" class="train" data-aos="train" src="@/section/s1/train.png" />
     <div class="main">
       <div class="floorstyle">
-        <img class="floor" src="@/section/s1/floor.png" />	
-        <img class="shadow" src="@/section/s1/shadow.png" />		
+        <img loading="lazy" class="floor" src="@/section/s1/floor.png" />	
+        <img loading="lazy" class="shadow" src="@/section/s1/shadow.png" />		
       </div>
-      <img class="child" src="@/section/s1/child.png" />
+      <img loading="lazy" class="child" src="@/section/s1/child.png" />
     </div>
     
-    <img class="logo absolute" data-aos="zoom-in" data-aos-delay="200" src="@/section/s1/logo.svg" />
+    <img loading="lazy" class="logo absolute" data-aos="zoom-in" data-aos-delay="200" src="@/section/s1/logo.svg" />
     <div class="t1 absolute" data-aos="zoom-in" data-aos-delay="200">竹圍下一站 雙北3字頭</div>
     <div class="t2 absolute" data-aos="zoom-in" data-aos-delay="200">2房價換大3房 / 幸福有餘裕</div>
   </section>

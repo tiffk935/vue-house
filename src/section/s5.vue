@@ -1,8 +1,8 @@
 <template>
   <section class="s5 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
-    <img class="leaf absolute" src="@/section/s5/leaf.png">
+    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s4/bg.jpg" />
+    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s4/bg-m.jpg" />
+    <img loading="lazy" class="leaf absolute" src="@/section/s5/leaf.png">
     <div class="text" data-aos="fade-up" data-aos-delay="0">
       <div class="t1 absolute">安心售後服務</div>
       <div class="t2">十年防水保固</div>
@@ -11,31 +11,31 @@
     <div class="gallary">
       <div class="item">
         <div class="title absolute">耐震SA 級續接器</div>
-        <img src="@/section/s5/slide1.jpg" />
+        <img loading="lazy" src="@/section/s5/slide1.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">當層排氣工法</div>
-        <img src="@/section/s5/slide2.jpg" />
+        <img loading="lazy" src="@/section/s5/slide2.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">櫻花三機廚具</div>
-        <img src="@/section/s5/slide3.jpg" />
+        <img loading="lazy" src="@/section/s5/slide3.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">愛惠浦濾水器</div>
-        <img src="@/section/s5/slide4.jpg" />
+        <img loading="lazy" src="@/section/s5/slide4.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">台達暖風機</div>
-        <img src="@/section/s5/slide5.jpg" />
+        <img loading="lazy" src="@/section/s5/slide5.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">耶魯電子鎖</div>
-        <img src="@/section/s5/slide6.jpg" />
+        <img loading="lazy" src="@/section/s5/slide6.jpg" />
       </div>
       <div class="item">
         <div class="title absolute">HCG 馬桶</div>
-        <img src="@/section/s5/slide7.jpg" />
+        <img loading="lazy" src="@/section/s5/slide7.jpg" />
       </div>
     </div>
     <div class="slider absolute">
@@ -54,43 +54,43 @@
         <swiper-slide>
           <div class="item">
             <div class="title absolute">耐震SA 級續接器</div>
-            <img src="@/section/s5/slide1.jpg" />
+            <img loading="lazy" src="@/section/s5/slide1.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">當層排氣工法</div>
-            <img src="@/section/s5/slide2.jpg" />
+            <img loading="lazy" src="@/section/s5/slide2.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">櫻花三機廚具</div>
-            <img src="@/section/s5/slide3.jpg" />
+            <img loading="lazy" src="@/section/s5/slide3.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">愛惠浦濾水器</div>
-            <img src="@/section/s5/slide4.jpg" />
+            <img loading="lazy" src="@/section/s5/slide4.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">台達暖風機</div>
-            <img src="@/section/s5/slide5.jpg" />
+            <img loading="lazy" src="@/section/s5/slide5.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">耶魯電子鎖</div>
-            <img src="@/section/s5/slide6.jpg" />
+            <img loading="lazy" src="@/section/s5/slide6.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
             <div class="title absolute">HCG 馬桶</div>
-            <img src="@/section/s5/slide7.jpg" />
+            <img loading="lazy" src="@/section/s5/slide7.jpg" />
           </div>
         </swiper-slide>
       </swiper>

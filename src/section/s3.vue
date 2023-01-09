@@ -1,6 +1,6 @@
 <template>
   <div class="s3 relative">
-    <img class="play" src="@/section/s3/play.png" alt="" srcset="" @click="videoOpened = !videoOpened">
+    <img loading="lazy" class="play" src="@/section/s3/play.png" alt="" srcset="" @click="videoOpened = !videoOpened">
     <div class="player" v-bind:class="{ 'open': videoOpened }">
       <div class="video-box aspect-video">
             <iframe src="https://www.youtube.com/embed/mYNqIs2XYnY" title="YouTube video player" frameborder="0" 

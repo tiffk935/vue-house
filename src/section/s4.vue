@@ -1,7 +1,7 @@
 <template>
   <section class="s4 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s4/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s4/bg-m.png" />
+    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s4/bg.jpg" />
+    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s4/bg-m.jpg" />
     <div class="text">
       <div class="t1 absolute">三十年甲級營造職人</div>
       <div class="t2">專業建築品牌</div>
@@ -24,23 +24,23 @@
       <div :class="{'tk-tab': true, active: activeTab === 5}" @click="activeTab = 5">景上汀</div>
     </div>
 
-    <img class="leaf absolute" src="@/section/s4/leaf.png" />
-    <img class="bird absolute" src="@/section/s4/bird.png" />
+    <img loading="lazy" class="leaf absolute" src="@/section/s4/leaf.png" />
+    <img loading="lazy" class="bird absolute" src="@/section/s4/bird.png" />
     <div class="gallary absolute">
       <div :class="{item: true, active: activeTab === 1}" @click="activeTab = 1">
-        <img src="@/section/s4/slide1.jpg" />
+        <img loading="lazy" src="@/section/s4/slide1.jpg" />
       </div>
       <div :class="{item: true, active: activeTab === 2}" @click="activeTab = 2">
-        <img src="@/section/s4/slide2.jpg" />
+        <img loading="lazy" src="@/section/s4/slide2.jpg" />
       </div>
       <div :class="{item: true, active: activeTab === 3}" @click="activeTab = 3">
-        <img src="@/section/s4/slide3.jpg" />
+        <img loading="lazy" src="@/section/s4/slide3.jpg" />
       </div>
       <div :class="{item: true, active: activeTab === 4}" @click="activeTab = 4">
-        <img src="@/section/s4/slide4.jpg" />
+        <img loading="lazy" src="@/section/s4/slide4.jpg" />
       </div>
       <div :class="{item: true, active: activeTab === 5}" @click="activeTab = 5">
-        <img src="@/section/s4/slide5.jpg" />
+        <img loading="lazy" src="@/section/s4/slide5.jpg" />
       </div>
     </div>
     <div class="slider absolute">
@@ -58,24 +58,24 @@
         @slideChange="slideChange"
       >
         <swiper-slide>
-          <img class="photo md:hidden" src="@/section/s4/slide1-m.jpg" />
-          <img class="photo hidden md:block" src="@/section/s4/slide1.jpg" />
+          <img loading="lazy" class="photo md:hidden" src="@/section/s4/slide1-m.jpg" />
+          <img loading="lazy" class="photo hidden md:block" src="@/section/s4/slide1.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img class="photo md:hidden" src="@/section/s4/slide2-m.jpg" />
-          <img class="photo hidden md:block" src="@/section/s4/slide2.jpg" />
+          <img loading="lazy" class="photo md:hidden" src="@/section/s4/slide2-m.jpg" />
+          <img loading="lazy" class="photo hidden md:block" src="@/section/s4/slide2.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img class="photo md:hidden" src="@/section/s4/slide3-m.jpg" />
-          <img class="photo hidden md:block" src="@/section/s4/slide3.jpg" />
+          <img loading="lazy" class="photo md:hidden" src="@/section/s4/slide3-m.jpg" />
+          <img loading="lazy" class="photo hidden md:block" src="@/section/s4/slide3.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img class="photo md:hidden" src="@/section/s4/slide4-m.jpg" />
-          <img class="photo hidden md:block" src="@/section/s4/slide4.jpg" />
+          <img loading="lazy" class="photo md:hidden" src="@/section/s4/slide4-m.jpg" />
+          <img loading="lazy" class="photo hidden md:block" src="@/section/s4/slide4.jpg" />
         </swiper-slide>
         <swiper-slide>
-          <img class="photo md:hidden" src="@/section/s4/slide5-m.jpg" />
-          <img class="photo hidden md:block" src="@/section/s4/slide5.jpg" />
+          <img loading="lazy" class="photo md:hidden" src="@/section/s4/slide5-m.jpg" />
+          <img loading="lazy" class="photo hidden md:block" src="@/section/s4/slide5.jpg" />
         </swiper-slide>
       </swiper>
     </div>

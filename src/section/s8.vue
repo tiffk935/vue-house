@@ -1,7 +1,7 @@
 <template>
   <section class="s8 relative">
-    <img class="w-full hidden md:block" src="@/section/s8/tmp.svg" />
-    <img class="w-full block md:hidden" src="@/section/s8/tmp-m.svg" />
+    <img loading="lazy" class="w-full hidden md:block" src="@/section/s8/tmp.svg" />
+    <img loading="lazy" class="w-full block md:hidden" src="@/section/s8/tmp-m.svg" />
   </section>
 </template>
 

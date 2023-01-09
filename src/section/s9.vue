@@ -1,12 +1,12 @@
 <template>
   <section class="s9 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s9/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s9/bg-m.png" />
+    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s9/bg.jpg" />
+    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s9/bg-m.jpg" />
     <div class="leaf1 absolute">
-      <img class="w-full block" src="@/section/s9/leaf.png" />
+      <img loading="lazy" class="w-full block" src="@/section/s9/leaf.png" />
     </div>
     <div class="leaf2 absolute">
-      <img class="w-full block" src="@/section/s9/leaf.png" />
+      <img loading="lazy" class="w-full block" src="@/section/s9/leaf.png" />
     </div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">紅樹林生活圈</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">高坪效1-4房</div>
