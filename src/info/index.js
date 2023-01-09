@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.3576645992193!2d120.23886680000001!3d22.9738717!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e76a7c2832e61%3A0xd5c1b36203b29863!2zNzE35Y-w5Y2X5biC5LuB5b635Y2A5paH5b-g6LevODnomZ8!5e0!3m2!1szh-TW!2stw!4v1667725626436!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/6CBuzJWDGLwvet2x7",
     phone: "06 225 6688",
-    fbLink: "https://www.facebook.com",
-    fbMessage: "",
+    fbLink: "https://www.facebook.com/zongda.aota/",
+    fbMessage: "https://m.me/zongda.aota/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "宗大建設 <br><span>(吉源控股關係企業，股票代號8488)</span>"],
