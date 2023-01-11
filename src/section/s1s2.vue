@@ -94,11 +94,12 @@
     </svg>
     <span>home</span>
   </li>
-  <li :class="{'menu-tab': true}" @click="clickTab('facebook')" id="facebook">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
-      <path d="M39.5,16.7v-5.8c-6.1-0.7-13.2-0.4-13.2,8.4v4.4l-5.5,0v6.5h5.5v16.2H3.9V3.7h42.4v42.8H33V30.2h5.5l0.8-6.5H33l0-4.7c0-1.3,1.1-2.3,2.3-2.4L39.5,16.7z"/>
+  <li :class="{'menu-tab': true}" @click="clickTab('messenger')" id="messenger">
+    <svg class="msg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
+      <path d="M24.94,.5C11.41,.54,.47,10.86,.5,23.56c.02,7.55,3.91,14.24,9.91,18.42l-.65,7.56,8-4.06c2.31,.67,4.76,1.03,7.3,1.02,13.53-.03,24.47-10.36,24.44-23.06S38.47,.47,24.94,.5Zm13.59,18.63c-3.67,3.91-7.34,7.82-11,11.74-.22,.24-.32,.16-.5-.02-1.66-1.73-3.34-3.45-5-5.18-.22-.23-.37-.25-.65-.1-3.19,1.79-6.39,3.57-9.58,5.34-.14,.08-.26,.2-.5,.19,.29-.31,.55-.59,.8-.86,3.46-3.69,6.92-7.38,10.38-11.08,.21-.23,.33-.26,.56-.02,1.64,1.72,3.3,3.41,4.94,5.13,.25,.27,.42,.3,.75,.12,3.2-1.8,6.41-3.58,9.62-5.37,.1-.06,.21-.11,.36-.12-.06,.08-.11,.16-.17,.23Z" />
+    
     </svg>
-    <span>facebook</span>
+    <span>messenger</span>
   </li>
   <li :class="{'menu-tab': true}" @click="clickTab('contactus')" id="contactus">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50">
@@ -256,6 +257,8 @@
       white-space: nowrap;
       animation: an 5s linear infinite;
     }
+    .cls-1{fill:#d89038;}
+    .cls-2{fill:#d28507;}
     svg {
       width: 52%;
       margin: 0 -.9%;
@@ -657,8 +660,8 @@ const scrollTo = (el) => {
 }
 const clickTab = (tab) => {
   menuTabOpen.value = false;
-  if(tab == 'facebook') {
-    window.open(info.fbLink, '_blank').focus();
+  if(tab == 'messenger') {
+    window.open(info.fbMessage, '_blank').focus();
   }
   else if(tab == 'contactus'){
     modalOpen.value = true;
