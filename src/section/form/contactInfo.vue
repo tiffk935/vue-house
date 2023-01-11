@@ -78,7 +78,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 bg-[#D08421] hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 bg-[#d89038] hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
