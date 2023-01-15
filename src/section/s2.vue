@@ -1,24 +1,29 @@
 <template>
-  <section class="s2 relative">
-    <div class="map relative">
-      <img class="map1 absolute" src="@/section/s2/map1.png" />
-      <img class="map1" src="@/section/s2/map.jpg" />
-    </div>
-    <div class="rect absolute"></div>
-    <img class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
-    <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
-    <div class="border absolute"></div>
-
-    <div class="title">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">航空城發展能量</div>
-    <div class="t2" data-aos="fade-up" data-aos-delay="300">重劃新星-大園新都心 「客運園區」未來看好！</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-      桃園航空城佔地面積廣達4564公頃，不僅是台灣與國際接軌的最重要門戶，更是北台灣產業發展的重中之重，未來將結合周邊各大工業與物流園區，以及重金打造的亞洲矽谷計劃與5G創新等高科技產業，推估經濟效益上看2.8兆元。<br>
-其中客運園區  占地約197.5公頃，主要道路包括大觀路、環區東路、環區北路和環區西路，區內規劃多座公園、籃球場、活動中心、棒球場等，也有學校預定地，目前已有多家物流公司、民航局等企業進駐。
+  <section class="s2 relative text-white">
+    <div class="bg234 absolute w-full"></div>
+    <div class="p1 absolute parallax"></div>
+    <div class="p2 absolute parallax"></div>
+    <div class="title absolute">CONCENTRATE ON<br />ARCHITECTURE</div>
+    <div class="content absolute">
+      <img class="logo" src="@/section/s2/logo.svg" />
+      <div class="fade">
+        <div class="t1">一本初衷，建築百年事業。</div>
+        <div class="txt">德林建設機構創立於1985年，多年來建築作品以高滿意度、高指名度聞名；以誠信專業與客戶交陪，德林機構在乎的不是表面售價，而是對於客戶的價值，並以此堅持一路前行。</div>
+      </div>
+      <div class="fade">
+        <div class="t1">質純精粹，立地都會精華。</div>
+        <div class="txt">德林建設機構以住宅建築為開發導向， 1999年「國家藝術賞」引領都市建築美學，此後台北都會精華區域中的建築作品，如「青田」、「林与堂」等皆為人文質精的都市地標。</div>
+      </div>
+      <div class="fade">
+        <div class="t1">整合服務，一條龍全方位。</div>
+        <div class="txt">德林建設機構認為「不需要服務，才是最好的售後服務」。從開發、營造、售後服務的整合性營運系統，一制性的高品質服務也為客戶的資產創造恆久永續的價值。</div>
       </div>
     </div>
-
-    <div class="info absolute text-white">空拍實景輔以電腦美化</div>
+    <div class="leaf absolute">
+      <img class="w-full block" src="@/section/s2/frame.svg" />
+      <img class="window absolute" src="@/section/s2/leaf.gif" />
+      <img class="bird absolute" src="@/section/s2/bird.svg" />
+    </div>
   </section>
 </template>
 
@@ -26,175 +31,151 @@
 @import "@/assets/style/function.scss";
 
 .s2 {
-
-  @keyframes swing {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(-15%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    75% {
-      transform: translateX(15%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
-  }
-
   width: 100%;
-  height: size-m(828);
+  height: size-m(886);
+  font-family: 'Noto Serif TC';
+  margin-bottom: size-m(89);
+  z-index: 1;
   @media screen and (min-width:768px) {
     height: size(1080);
+    margin-bottom: size(0);
+    background: linear-gradient(113.99deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
   }
 
-  .map {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100vw;
-    @media screen and (min-width:768px) {
-      overflow: hidden;
-    }
-
-    img {
-      width: auto;
-      height: size-m(667);
-      margin-top: size-m(828 - 667);
-      max-width: none;
-      display: block;
-      @media screen and (min-width:768px) {
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        margin-top: 0;
-      }
-    }
-  }
-
-  .hand {
-    width: size-m(18.32);
-    top: size-m(717);
-    left: size-m(178);
-    cursor: pointer;
-    transition: opacity .5s;
-    animation: swing 3s linear 0s infinite;
-    pointer-events: none;
-    @media screen and (min-width:768px) {
-      display: none;
-    }
-  }
-
-  .hand-bg {
-    width: 100%;
-    bottom: 0;
-    left: 0;
-    transition: opacity .5s;
-    pointer-events: none;
-  }
-
-  .rect {
-    background: linear-gradient(180deg, #0361A0 41.67%, rgba(3, 97, 160, 0) 100%);
-    width: 100%;
-    height: size-m(402);
+  .bg234 {
     top: 0;
     left: 0;
-    pointer-events: none;
+    height: size-m(4224);
+    background: linear-gradient(113.99deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
     @media screen and (min-width:768px) {
+      // background: #078177;
       display: none;
     }
   }
 
-  .border {
-    border: size-m(6) solid #ffffff;
-    top: size-m(14);
-    bottom: size-m(12);
-    left: size-m(10);
-    right: size-m(10);
-    pointer-events: none;
+  .p1 {
+    width: size-m(210);
+    height: size-m(247.34);
+    top: size-m(55);
+    left: size-m(123);
+    background-image: url(@/section/s2/2.jpg);
+    background-size: 100% auto;
+    // background-position: 0 100%;
+    border-radius: 48% 48% 0px 0px;
     @media screen and (min-width:768px) {
-      border: size(16) solid #ffffff;
-      top: size(46);
-      bottom: size(46);
-      left: size(84);
-      right: size(90);
+      width: size(497);
+      height: size(585);
+      top: size(145);
+      left: size(467.79);
     }
   }
 
-
-
-
-    .title{
-    position: absolute;
-    top: size(220);
-    right:size(260);
-    width: size(676);
-
-    @media screen and (max-width:768px) {
-      text-align: center;
-      top: size-m(60);
-      right:size-m(30);
-      width: size-m(315);
-    }
-
-    .t1{
-      font-size: size(58);
-      color: #fff;
-      font-weight: 900;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(25);
-        margin-bottom: size-m(15);
-      }
-    }
-
-    .t2{
-      font-size: size(30);
-      color: #fff;
-      font-weight:500;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(15);
-      }
-    }
-
-    .content{
-      font-size: size(16);
-      color: #fff;
-      font-weight:300;
-      margin-top: size(25);
-      text-align: left;
-      text-align: justify;
-      @media screen and (max-width:768px) {
-        font-size: size-m(13);
-        margin-top: size-m(10);
-      }
-    }
-
-  }
-
-  .text {
-    top: size-m(43);
-    left: size-m(30);
-    width: size-m(326);
+  .p2 {
+    width: size-m(147);
+    height: size-m(168.6);
+    top: size-m(189);
+    left: size-m(43);
+    background-image: url(@/section/s2/img2.jpg);
+    background-size: 100% auto;
+    // background-position: 0 0;
+    border-radius: 48% 48% 0px 0px;
     @media screen and (min-width:768px) {
-      top: size(225);
-      left: size(967);
-      width: size(754);
+      width: size(381);
+      height: size(436.71);
+      top: size(439.9);
+      left: size(189);
     }
   }
 
-  .info {
-    top: size-m(788);
-    left: size-m(235);
-    font-size: size-m(12);
-    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.6);
+  .title {
+    top: size-m(340.26);
+    left: size-m(175.15);
+    font-size: size-m(13);
+    line-height: size-m(18);
+    color: #5CBD9E;
+    font-weight: 600;
+    letter-spacing: 0.1em;
     @media screen and (min-width:768px) {
-      top: size(1047);
-      left: size(1739);
-      font-size: size(16);
+      top: size(826.5);
+      left: size(484);
+      font-size: size(34);
+      line-height: size(48);
+    }
+  }
+
+  .content {
+    width: size-m(290);
+    top: size-m(393.91);
+    left: size-m(43);
+    @media screen and (min-width:768px) {
+      width: size(589.06);
+      top: size(166);
+      left: size(1120);
+    }
+
+    .logo {
+      width: size-m(114);
+      margin-bottom: size-m(24.02);
+      @media screen and (min-width:768px) {
+        width: size(240);
+        margin-bottom: size(73.84);
+      }
+    }
+
+    .t1 {
+      font-size: size-m(19);
+      line-height: size-m(25);
+      font-weight: 700;
+      margin-bottom: size-m(9.5);
+      @media screen and (min-width:768px) {
+        font-size: size(30);
+        line-height: size(40);
+        margin-bottom: size(26.5);
+      }
+    }
+
+    .txt {
+      font-size: size-m(12);
+      line-height: size-m(20);
+      font-weight: 500;
+      margin-bottom: size-m(24.5);
+      @media screen and (min-width:768px) {
+        font-size: size(16);
+        line-height: size(27);
+        margin-bottom: size(70);
+      }
+    }
+  }
+
+  .leaf {
+    width: size-m(88.25);
+    top: size-m(870);
+    left: size-m(81.42);
+    @media screen and (min-width:768px) {
+      width: size(248.17);
+      top: size(1037);
+      left: size(512.5);
+    }
+
+    .window {
+      width: 22.47vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media screen and (min-width:768px) {
+        width: 12.36vw;
+      }
+    }
+
+    .bird {
+      width: size-m(51.79);
+      top: size-m(70.94);
+      left: size-m(12.3);
+      @media screen and (min-width:768px) {
+        width: size(145.63);
+        top: size(200.19);
+        left: size(34.58);
+      }
     }
   }
 }

@@ -3,11 +3,11 @@
     <div class="order1">
       <div class="order2">
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center text-white">CONTACT US</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="德林哲里" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="德林哲里" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -16,12 +16,12 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :value="city.value">
@@ -45,9 +45,9 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p>
+          <p class="font-['Noto_Sans_TC'] text-white">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button text-[#28D0C2] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,13 +57,13 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#004B47] text-white hover:text-white rounded-none" @click="send()">
+          {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
 
       <!-- Contact Info -->
-      <ContactInfo />
+      <ContactInfo :setModal="setModal" />
     </div>
 
     <!-- Map -->
@@ -79,11 +79,16 @@
 
 .order {
   width: 100%;
-  // padding-top: size(115);
+  font-family: 'Noto Serif TC';
+  background: #004B47;
+
+  input, select, textarea {
+    background: none;
+    border: 1px solid #fff;
+    color: #fff;
+  }
 
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
@@ -113,7 +118,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 225px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -144,6 +149,32 @@
     border: 0;
     z-index: 10;
     position: relative;
+    border: 1px solid #fff;
+    position: relative;
+    overflow: hidden;
+
+    &:before {
+      content: "";
+      display: block;
+      background: hsla(0,0%,100%,.4);
+      position: absolute;
+      left: -15%;
+      top: 0;
+      width: 120%;
+      height: 100%;
+      transform: skewX(-30deg) translateX(-100%);
+      transition: -webkit-transform .4s;
+      transition: transform .4s;
+      transform-origin: 0 0;
+    }
+
+    &:hover {
+      background: #008D82;
+
+      &:before {
+        transform: skewX(-30deg) translateX(120%);
+      }
+    }
   }
 
   .control {
@@ -156,8 +187,6 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    // padding-top: size-m(40);
     margin-top: size-m(0);
 
     .order1 {
@@ -167,8 +196,6 @@
 
     .order2 {
       padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
       background-size: cover;
       background-position: center center;
     }
@@ -227,11 +254,17 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import { ref, reactive, watch, onMounted, defineProps } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
+
+const props = defineProps({
+  setModal: {
+    type: Function,
+  }
+})
 
 const formData = reactive({
   name: "",
@@ -249,7 +282,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg", "room_type"];
 
 //中文對照
 const formDataRef = ref([

@@ -1,0 +1,97 @@
+<template>
+  <section class="s9 relative text-white">
+    <img class="logo absolute" src="@/section/s9/logo.svg" />
+    <div class="t1 absolute">社子公園首排 原鄉翠庭棲居</div>
+    <div class="t2 absolute">23~39 坪｜2~3 房 8787-8888</div>
+    <div class="t3 absolute">2023初春  即將公開</div>
+    <img class="logo2 absolute" src="@/section/s9/logo2.svg" />
+  </section>
+</template>
+
+<style lang="scss">
+@import "@/assets/style/function.scss";
+
+.s9 {
+  width: 100%;
+  height: size-m(830);
+  font-family: 'Noto Serif TC';
+  background: #004B47;
+  @media screen and (min-width:768px) {
+    height: size(1080);
+  }
+
+  .logo {
+    width: size-m(227.27);
+    top: size-m(128.84);
+    left: size-m(72.86);
+    @media screen and (min-width:768px) {
+      width: size(517.83);
+      top: size(181.84);
+      left: size(701);
+    }
+  }
+
+  .t1 {
+    top: size-m(354);
+    left: size-m(69.5);
+    font-size: size-m(16);
+    line-height: size-m(19);
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.195em;
+    @media screen and (min-width:768px) {
+      top: size(697);
+      left: size(696);
+      font-size: size(36);
+      line-height: size(43);
+    }
+  }
+
+  .t2 {
+    top: size-m(379);
+    left: size-m(70);
+    font-size: size-m(17);
+    line-height: size-m(20);
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    @media screen and (min-width:768px) {
+      top: size(753);
+      left: size(697);
+      font-size: size(38);
+      line-height: size(46);
+    }
+  }
+
+  .t3 {
+    top: size-m(568);
+    left: size-m(70);
+    font-size: size-m(24);
+    line-height: size-m(29);
+    color: #fff;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    @media screen and (min-width:768px) {
+      top: size(867);
+      left: size(496);
+      font-size: size(45);
+      line-height: size(54);
+    }
+  }
+
+  .logo2 {
+    width: size-m(233.73);
+    top: size-m(604.91);
+    left: size-m(63);
+    @media screen and (min-width:768px) {
+      width: size(432);
+      top: size(878);
+      left: size(993);
+    }
+  }
+}
+
+</style>
+
+<script setup>
+</script>
