@@ -348,7 +348,6 @@ export default {
   },
   methods: {
     openSlider: function(slide) {
-      console.log('open', slide)
       this.slide = slide;
       this.sliderToggler = true;
       this.setFsLightbox({
