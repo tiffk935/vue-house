@@ -85,12 +85,15 @@
 
   <div v-if="sliderToggler" class="tk-lightbox">
     <div class="inner">
-      <div class="w-full h-full">
-        <div class="txt">{{slide}} XXXXXXXX</div>
-        <div class="img-wrapper h-full">
-          <div class="h-full">
-            <img class="h-full" :src="sources[slide-1]" alt="XXXXXXXX">
-          </div>
+      <div class="txt">
+        <div>
+          <span>{{sources[slide-1].year}}</span>{{sources[slide-1].txt}}
+        </div>
+        <div class="close" @click="sliderToggler = false"></div>
+      </div>
+      <div class="img-wrapper">
+        <div>
+          <img :src="sources[slide-1].img" :alt="sources[slide-1].year + sources[slide-1].txt">
         </div>
       </div>
     </div>
@@ -99,6 +102,8 @@
 </template>
 
 <style lang="scss">
+@import "@/assets/style/function.scss";
+
 .home {
   width: 100%;
   height: 100vh;
@@ -113,34 +118,71 @@
   background: rgba(0, 75, 71, 0.8);
   color: #fff;
   font-family: 'Noto Serif TC';
-  z-index: 9;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-  .inner {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    // width: 90%;
-    height: 90%;
-    background: orange;
-    // display: flex;
-    // flex-direction: column;
-    padding-top: 50px;
+  .txt {
+    width: 100%;
+    height: size-m(34);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: size-m(15);
+    line-height: size-m(30);
+    font-weight: 500;
     @media screen and (min-width:768px) {
-      padding-top: 50px;
+      height: size(50);
+      font-size: size(20);
+      line-height: size(29);
+    }
+
+    span {
+      font-size: size-m(18);
+      line-height: size-m(30);
+      margin-right: size-m(10);
+      @media screen and (min-width:768px) {
+        font-size: size(28);
+        line-height: size(40);
+        margin-right: size(10);
+      }
     }
   }
 
-  .txt {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+  .close {
+    width: size-m(30);
+    height: size-m(30);
+    background-image: url(@/section/s3/close.svg);
+    background-repeat: no-repeat;
+    background-size: size-m(25) auto;
+    background-position: center center;
+    cursor: pointer;
+    @media screen and (min-width:768px) {
+      width: size(30);
+      height: size(30);
+      background-size: size(24) auto;
+    }
   }
 
   .img-wrapper {
-    // flex: 1;
-    height: 100%;
+    width: 0; // by script
+
+    & > div {
+      width: 100%;
+      height: 0;
+      padding-top: 111.04651%;
+      position: relative;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 }
 </style>
@@ -158,7 +200,7 @@ import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
-import { onMounted, ref } from "vue"
+import { nextTick, onMounted, ref } from "vue"
 
 // import AOS from 'aos';
 import Scrollbar from 'smooth-scrollbar';
@@ -182,8 +224,38 @@ const config = ref({
 })
 const slide = ref(1)
 const sliderToggler = ref(false)
-const sources = ref([slide1_full, slide2_full, slide3_full, slide4_full, slide5_full, slide6_full])
-// const sources2 = ref('<h1>aaa</h1>');
+const sources = ref([
+  {
+    img: slide1_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  },
+  {
+    img: slide2_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  }, 
+  {
+    img: slide3_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  }, 
+  {
+    img: slide4_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  }, 
+  {
+    img: slide5_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  }, 
+  {
+    img: slide6_full,
+    year: '2015',
+    txt: '汐止區  哲人德林',
+  }, 
+])
 
 const modalOpen = ref(false)
 const modalType = ref('')
@@ -259,6 +331,12 @@ onMounted(() => {
         });
       });
     }, 600);
+
+    window.onresize = () => {
+      if(sliderToggler.value === true){
+        setModalImg();
+      }
+    }
   };
 
 })
@@ -266,6 +344,24 @@ onMounted(() => {
 function setFsLightbox(obj){
   slide.value = obj.slide;
   sliderToggler.value = obj.sliderToggler;
+  nextTick(() => {
+    console.log('nextTick');
+    setModalImg();
+  })
+}
+
+function setModalImg(){
+  const viewH = document.querySelector('.tk-lightbox').clientHeight;
+  const viewW = document.querySelector('.tk-lightbox').clientWidth;
+  const marginTop = 120 / 1080 * viewH;
+  let h = viewH - marginTop * 2 - document.querySelector('.tk-lightbox .txt').clientHeight;
+  let w = h * 688 / 768; //688*764
+  
+  if(w + 40 > viewW) {
+    document.querySelector('.tk-lightbox .img-wrapper').style.width = (viewW - 40) + 'px';
+  }else{
+    document.querySelector('.tk-lightbox .img-wrapper').style.width = w + 'px';
+  }
 }
 
 function setModal(obj){

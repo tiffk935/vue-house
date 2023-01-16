@@ -350,7 +350,7 @@ export default {
     openSlider: function(slide) {
       console.log('open', slide)
       this.slide = slide;
-      this.sliderToggler = !this.sliderToggler;
+      this.sliderToggler = true;
       this.setFsLightbox({
         slide: this.slide,
         sliderToggler: this.sliderToggler
