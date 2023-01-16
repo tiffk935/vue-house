@@ -345,7 +345,6 @@ function setFsLightbox(obj){
   slide.value = obj.slide;
   sliderToggler.value = obj.sliderToggler;
   nextTick(() => {
-    console.log('nextTick');
     setModalImg();
   })
 }
@@ -365,7 +364,6 @@ function setModalImg(){
 }
 
 function setModal(obj){
-  console.log(obj)
   modalOpen.value = obj.modalOpen;
   modalType.value = obj.modalType;
 }

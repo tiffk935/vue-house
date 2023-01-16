@@ -136,7 +136,6 @@ onMounted(() => {
       eventPassthrough: "vertical",
       bounce: false,
     })
-    // console.log('aaa', scroll.maxScrollX, scroll.maxScrollX / offsetRatio)
     scroll.scrollTo(scroll.maxScrollX / offsetRatio, 0);
     setTimeout(() => {
       scroll.on("scroll", () => {
