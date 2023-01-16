@@ -148,9 +148,13 @@
         background-size: 100% auto;
         border-radius: 48% 48% 0px 0px;
         opacity: 0.5;
-        transition: opacity .7s;
+        transition: all .4s, opacity .7s;
         @media screen and (min-width:768px) {
           height: size(585);
+        }
+
+        &:hover {
+          background-size: 110%;
         }
 
         .txt {
