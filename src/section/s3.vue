@@ -95,7 +95,7 @@
   @media screen and (min-width:768px) {
     height: size(1080);
     margin-bottom: size(0);
-    background: linear-gradient(113.99deg, #11A196 -46.13%, #0C887F -0.68%, #004B47 91.61%);
+    background: linear-gradient(66deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
   }
 
   .fslightbox-toolbar-button:nth-child(1) {

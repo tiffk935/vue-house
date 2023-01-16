@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 relative">
+  <section class="s4 relative parallax">
     <img class="photo absolute md:hidden" src="@/section/s4/photo.jpg" />
     <div class="content-m absolute text-white md:hidden">
       推窗見綠、出門入園，<br />
@@ -28,6 +28,7 @@
   z-index: 1;
   background-image: url(@/section/s4/bg-m.jpg);
   background-size: cover;
+  background-position: 50% 50%;
   font-family: 'Noto Serif TC';
   @media screen and (min-width:768px) {
     height: size(1080);

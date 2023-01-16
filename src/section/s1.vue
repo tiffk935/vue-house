@@ -1,7 +1,9 @@
 <template>
   <section class="s1 relative text-white bg-[#5CBD9E]">
-    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.jpg" />
-    <img class="bg absolute hidden md:block" src="@/section/s1/bg.jpg" />
+    <img class="bg absolute" src="@/section/s1/bg-m.jpg" />
+    <img class="bg absolute" src="@/section/s1/bg.jpg" />
+    <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
+    <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
     <img class="logo absolute" src="@/section/s1/logo.svg" />
     <div class="t1 absolute fade">生<br />有<br />熱<br />烈<br />，<br />藏<br />於<br />俗<br />常</div>
     <div class="t2 absolute fade">公<br />園<br />建<br />築<br />為<br />您<br />而<br />來<br />。</div>
@@ -26,46 +28,70 @@
   }
 }
 
+.bg{
+  top:0;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+
+}
+.bg01{
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+.bg02{  
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  filter: blur(7.5px);
+}  
 .s1 {
   width: 100%;
-  height: size-m(812);
+  height: 100vh;
+  min-height:size-m(667);
+  max-height:size-m(812);
   font-family: 'Noto Serif TC';
   overflow: hidden;
   @media screen and (min-width:768px) {
-    height: size(1080);
+    min-height:size(800);
+    max-height:size(1080);
   }
 
   .logo {
     width: size-m(86);
-    top: size-m(99);
+    top:calc(30% + (99 - 812 * .30) * 100vw / 375);
     left: size-m(144.5);
+    filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
       width: size(140.74);
-      top: size(105);
+      top:calc(25% + (105 - 1080 * .25) * 100vw / 1920);
       left: size(896);
+    filter: drop-shadow(0 0 size(20) #1A2E37);
     }
   }
 
   .t1, .t2 {
     width: size-m(20);
-    top: size-m(251);
+    top:calc(40% + (251 - 812 * .40) * 100vw / 375);
     left: size-m(188.62);
     font-size: size-m(16);
     line-height: 1.187;
     font-weight: 500;
+    filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
       width: size(36);
-      top: size(382);
+      top:calc(45% + (382 - 1080 * .45) * 100vw / 1920);
       left: size(963);
       font-size: size(30);
+    filter: drop-shadow(0 0 size(20) #204252);
     }
   }
 
   .t2 {
     top: size-m(267);
+    top:calc(40% + (267 - 812 * .4) * 100vw / 375);
     left: size-m(166.38);
     @media screen and (min-width:768px) {
-      top: size(409);
+      top:calc(45% + (409 - 1080 * .45) * 100vw / 1920);
       left: size(920.14);
     }
   }
@@ -73,7 +99,7 @@
   .order-btn {
     width: size-m(149.47);
     height: size-m(33);
-    top: size-m(526);
+    top:calc(70% + (526 - 812 * .70) * 100vw / 375);
     left: size-m(113.26);
     font-size: size-m(19);
     display: flex;
@@ -91,7 +117,7 @@
     @media screen and (min-width:768px) {
       width: size(209.5);
       height: size(45.91);
-      top: size(809);
+      top:calc(60% + (809 - 1080 * .6) * 100vw /1920);
       left: size(855.25);
       font-size: size(27);
       border: size(1) solid #fff;
@@ -105,6 +131,7 @@
 
   .t3 {
     top: size-m(593.73);
+    top:calc(80% + (593.73 - 812 * .80) * 100vw / 375);
     left: size-m(62.85);
     font-size: size-m(19);
     line-height: size-m(24);
@@ -114,6 +141,7 @@
 
   .t4 {
     top: size-m(586.73);
+    top:calc(80% + (586.73 - 812 * .80) * 100vw / 375);
     left: size-m(185.15);
     font-size: size-m(25);
     line-height: size-m(27);
@@ -128,23 +156,27 @@
 
   .t5 {
     @media screen and (min-width:768px) {
-      top: size(904.41);
+      top:calc(70% + (905 - 1080 * .7) * 100vw / 1920);
       left: size(565);
       font-size: size(29);
       line-height: size(34.8);
       font-weight: 500;
       letter-spacing: 0.02em;
+    filter: drop-shadow(0 0 size(20) #1A2E37);
     }
   }
 
   .group {
     width: size-m(247.83);
     top: size-m(649.9);
+    top:calc(80% + (649.9 - 812 * .80) * 100vw / 375);
     left: size-m(63.11);
+    filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
       width: size(792.55);
-      top: size(953);
+      top:calc(70% + (953 - 1080 * .7) * 100vw / 1920);
       left: size(563.72);
+    filter: drop-shadow(0 0 size(20) #1A2E37);
     }
   }
 

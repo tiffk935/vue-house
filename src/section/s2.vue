@@ -39,7 +39,7 @@
   @media screen and (min-width:768px) {
     height: size(1080);
     margin-bottom: size(0);
-    background: linear-gradient(113.99deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
+    background: linear-gradient(113deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
   }
 
   .bg234 {
@@ -107,6 +107,7 @@
     width: size-m(290);
     top: size-m(393.91);
     left: size-m(43);
+    text-align: justify;
     @media screen and (min-width:768px) {
       width: size(589.06);
       top: size(166);
@@ -124,24 +125,23 @@
 
     .t1 {
       font-size: size-m(19);
-      line-height: size-m(25);
+      line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(9.5);
       @media screen and (min-width:768px) {
         font-size: size(30);
-        line-height: size(40);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
       font-size: size-m(12);
-      line-height: size-m(20);
-      font-weight: 500;
+      line-height:1.7;
       margin-bottom: size-m(24.5);
+      font-weight: 300;
+    letter-spacing: .06em;
       @media screen and (min-width:768px) {
         font-size: size(16);
-        line-height: size(27);
         margin-bottom: size(70);
       }
     }
