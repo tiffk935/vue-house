@@ -7,7 +7,7 @@
       </div> -->
       <div class="mask" v-bind:class="{ hide: swiped }">
         左右滑動看全景
-        <img src="@/section/s7/finger.png" alt="" srcset=""><!-- 動態 -->
+        <img src="@/section/s7/finger.png" alt="" srcset="">
       </div>
       <div class="content absolute">
         <div class="fade w-full md:flex">
