@@ -1,10 +1,8 @@
 <template>
   <section class="s7 relative text-white">
-    <div class="viewbox" ref="viewbox" v-if="$isMobile()">
+    <!--   <div class="viewbox" ref="viewbox" v-if="$isMobile()"> -->
+    <div class="viewbox" ref="viewbox">
       <img ref="viewImg" src="@/section/s7/view.jpg" alt="" srcset="">
-     <!--  <div class="mask" v-bind:class="{ hide: swiped }">
-        <img src="@/section/s7/finger.png" alt="" srcset="">
-      </div> -->
       <div class="mask" v-bind:class="{ hide: swiped }">
         左右滑動看全景
         <img src="@/section/s7/finger.png" alt="" srcset="">
@@ -16,6 +14,7 @@
         </div>
       </div>
     </div>
+    <!-- 
     <div class="viewbox" v-else>
       <img src="@/section/s7/view.jpg" alt="" srcset="">
       <div class="content absolute">
@@ -24,7 +23,7 @@
           <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
         </div>
       </div>
-    </div>
+    </div> -->
   </section>
 </template>
 
