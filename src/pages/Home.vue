@@ -53,6 +53,8 @@
     </div>
   </div>
 
+  <Policy />
+
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
@@ -205,6 +207,7 @@ import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
+import Policy from "@/section/form/policy.vue"
 import { nextTick, onMounted, ref } from "vue"
 
 // import AOS from 'aos';

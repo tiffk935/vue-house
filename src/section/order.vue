@@ -50,7 +50,7 @@
               class="modal-button text-[#28D0C2] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
-        <Policy />
+        <!-- <Policy /> -->
 
         <!-- Recaptcha -->
         <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
@@ -248,7 +248,7 @@
 </style>
 
 <script setup>
-import Policy from "@/section/form/policy.vue"
+// import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
