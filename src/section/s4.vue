@@ -175,15 +175,15 @@
             <swiper-slide>
               <img class="pc" src="@/section/s4/content1/1.jpg" />
               <img class="mo" src="@/section/s4/content1/1_m.jpg" />
-              <div class="text-white">建築業績｜霞飛3</div>
+              <div class="text-white text-shadow">建築業績｜霞飛3</div>
             </swiper-slide>
             <swiper-slide>
               <img src="@/section/s4/content1/2.jpg" />
-              <div class="text-white">建築業績｜凌波揚+霞飛</div>
+              <div class="text-white text-shadow">建築業績｜凌波揚+霞飛</div>
             </swiper-slide>
             <swiper-slide>
               <img src="@/section/s4/content1/3.jpg" />
-              <div class="text-white">建築業績｜陶裡原</div>
+              <div class="text-white text-shadow">建築業績｜陶裡原</div>
             </swiper-slide>
           </swiper>
         </div>
@@ -215,17 +215,17 @@
           >
             <swiper-slide>
               <img src="@/section/s4/content2/1.jpg" />
-              <div class="text-white">小東路公宅基地實景</div>
+              <div class="text-white text-shadow">小東路公宅基地實景</div>
             </swiper-slide>
             <swiper-slide>
               <img class="pc" src="@/section/s4/content2/4.jpg" />
               <img class="mo" src="@/section/s4/content2/4_m.jpg" />
-              <div class="text-white">小東路青年公宅</div>
+              <div class="text-white text-shadow">小東路青年公宅</div>
             </swiper-slide>
             <swiper-slide>
               <img class="pc"  src="@/section/s4/content2/2.jpg" />
               <img class="mo"  src="@/section/s4/content2/2_m.jpg" />
-              <div class="text-white">建築業績｜霞飛</div>
+              <div class="text-white text-shadow">建築業績｜出雲居</div>
             </swiper-slide>
             
           </swiper>
@@ -258,15 +258,15 @@
           >
             <swiper-slide>
               <img src="@/section/s4/content3/1.jpg" />
-              <div class="text-white">圓頂西餐廳</div>
+              <div class="text-white text-shadow">圓頂西餐廳</div>
             </swiper-slide>
             <swiper-slide>
               <img src="@/section/s4/content3/2.jpg" />
-              <div class="text-white">天下南隅</div>
+              <div class="text-white text-shadow">天下南隅</div>
             </swiper-slide>
             <swiper-slide>
               <img src="@/section/s4/content3/3.jpg" />
-              <div class="text-white">天下南隅</div>
+              <div class="text-white text-shadow">天下南隅</div>
             </swiper-slide>
           </swiper>
         </div>
@@ -293,12 +293,19 @@
             @slideChange="slideChange4"
           > 
             <swiper-slide>
-              <img src="@/section/s4/content4/2.jpg" />
-              <div class="text-white">吉源控股廣東廠</div>
+              <img class="pc" src="@/section/s4/content4/1.jpg" />
+              <img class="mo" src="@/section/s4/content4/1_mo.jpg" />
+              <div class="text-white text-shadow">吉源控股廣東廠</div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s4/content4/1.jpg" />
-              <div class="text-white">吉源控股廈門廠</div>
+              <img class="pc" src="@/section/s4/content4/2.jpg" />
+              <img class="mo" src="@/section/s4/content4/2_mo.jpg" />
+              <div class="text-white text-shadow">吉源控股廈門廠</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="pc" src="@/section/s4/content4/3.jpg" />
+              <img class="mo" src="@/section/s4/content4/3_mo.jpg" />
+              <div class="text-white text-shadow">吉源控股廈門廠</div>
             </swiper-slide>
             
           </swiper>
@@ -407,6 +414,10 @@
         width: size(868);
         left: auto;
         right: 0;
+      }
+
+      .text-shadow{
+        text-shadow: black 0.1em 0.1em 0.2em
       }
 
       .mo{
