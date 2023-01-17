@@ -305,7 +305,7 @@
             <swiper-slide>
               <img class="pc" src="@/section/s4/content4/3.jpg" />
               <img class="mo" src="@/section/s4/content4/3_mo.jpg" />
-              <div class="text-white text-shadow">吉源控股廈門廠</div>
+              <div class="text-white text-shadow">吉源控股廠房實景</div>
             </swiper-slide>
             
           </swiper>
