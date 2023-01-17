@@ -49,6 +49,9 @@
       height: 100%;
       max-width: unset;
     }
+    .mask {
+      display: none;
+    }
   }
   @media screen and (max-width: 767px) {
     .viewbox {
@@ -165,29 +168,41 @@
 
 <script setup>
 import BScroll from '@better-scroll/core'
-import { onMounted, ref } from 'vue';
+import { getCurrentInstance, onMounted, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
 const offsetRatio = 1.705; //調整此值設定X軸位置偏移參數
 onMounted(() => {
-  viewImg.value.addEventListener('load', () => {
-    let scroll = new BScroll(viewbox.value, {
-      probeType: 2,
-      scrollX: true,
-      scrollY: true,
-      disableTouch: false,
-      disableMouse: false,
-      bindToWrapper: true,
-      eventPassthrough: "vertical",
-      bounce: false,
+  if(globals.$isMobile()){
+    viewImg.value.addEventListener('load', () => {
+      let scroll = new BScroll(viewbox.value, {
+        probeType: 2,
+        scrollX: true,
+        scrollY: true,
+        disableTouch: false,
+        disableMouse: false,
+        bindToWrapper: true,
+        eventPassthrough: "vertical",
+        bounce: false,
+      })
+      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 0);
+      setTimeout(() => {
+        scroll.on("scroll", () => {
+          swiped.value = true
+        });
+      }, 1000);
     })
-    scroll.scrollTo(scroll.maxScrollX / offsetRatio, 0);
-    setTimeout(() => {
-      scroll.on("scroll", () => {
-        swiped.value = true
-      });
-    }, 1000);
-  })
+  }
 })
+</script>
+
+<script>
+// export default {
+//   mounted() {
+//     // Use in js
+//     console.log(this.$isMobile());
+//   }
+// };
 </script>
