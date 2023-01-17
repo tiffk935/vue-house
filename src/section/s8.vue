@@ -59,7 +59,7 @@
     left: 0;
     background: linear-gradient(180deg, rgba(0, 75, 71, 0) 0%, #004B47 100%);
     @media screen and (min-width:768px) {
-      background: linear-gradient(129.02deg, #11A196 -39.64%, #004B47 95.77%);
+      background: linear-gradient(180deg, #11A196 -39.64%, #004B47 95.77%);
     }
   }
 
@@ -223,13 +223,15 @@
       left: size(1536);
     }
 
+    .w-full{position: relative;z-index: 2;}
     .window {
-      width: 22.47vw;
+      width: 23vw;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      filter: blur(2px);
       @media screen and (min-width:768px) {
-        width: 12.36vw;
+        width: 12.7vw;
       }
     }
 

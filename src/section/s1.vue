@@ -1,7 +1,6 @@
 <template>
   <section class="s1 relative text-white bg-[#5CBD9E]">
-    <img class="bg absolute" src="@/section/s1/bg-m.jpg" />
-    <img class="bg absolute" src="@/section/s1/bg.jpg" />
+    <div class="bg absolute parallax"></div>
     <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
     <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
     <img class="logo absolute" src="@/section/s1/logo.svg" />
@@ -33,7 +32,11 @@
   width:100%;
   height: 100%;
   object-fit: cover;
-
+  background-image:url("@/section/s1/bg-m.jpg");
+    background-size: 100% auto;
+  @media screen and (min-width:768px) {
+  background-image:url("@/section/s1/bg.jpg");
+  }
 }
 .bg01{
   mix-blend-mode: overlay;

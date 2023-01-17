@@ -29,7 +29,7 @@
   @media screen and (min-width:768px) {
     height: size(1080);
     margin-bottom: size(0);
-    background: linear-gradient(243.11deg, #004B47 5.42%, #11A196 127.44%);
+    background: linear-gradient(250deg, #004B47 5.42%, #11A196 127.44%);
   }
 
   .p1 {
@@ -123,14 +123,16 @@
       top: size(-47.98);
       left: size(1509.81);
     }
+    .w-full{position: relative;z-index: 2;}
 
     .window {
-      width: 22.47vw;
+      width: 23vw;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      filter: blur(2px);
       @media screen and (min-width:768px) {
-        width: 12.36vw;
+        width: 12.7vw;
       }
     }
 

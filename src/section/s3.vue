@@ -22,7 +22,7 @@
         <swiper-slide>
           <div class="p1 parallax">
             <div class="txt"><span>2015</span>汐止區  哲人德林</div>
-            <div class="mask" @click="openSlider(1)">
+            <div class="mask" @click="openSlider(1)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -30,7 +30,7 @@
         <swiper-slide>
           <div class="p2 parallax">
             <div class="txt"><span>2004</span>中正區  泰安觀止</div>
-            <div class="mask" @click="openSlider(2)">
+            <div class="mask" @click="openSlider(2)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -38,7 +38,7 @@
         <swiper-slide>
           <div class="p3 parallax">
             <div class="txt"><span>2004</span>士林區  圓山窗外</div>
-            <div class="mask" @click="openSlider(3)">
+            <div class="mask" @click="openSlider(3)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -46,7 +46,7 @@
         <swiper-slide>
           <div class="p4 parallax">
             <div class="txt"><span>2003</span>中正區  青田主人</div>
-            <div class="mask" @click="openSlider(4)">
+            <div class="mask" @click="openSlider(4)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -54,7 +54,7 @@
         <swiper-slide>
           <div class="p5 parallax">
             <div class="txt"><span>2002</span>中正區  林与堂</div>
-            <div class="mask" @click="openSlider(5)">
+            <div class="mask" @click="openSlider(5)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -62,7 +62,7 @@
         <swiper-slide>
           <div class="p6 parallax">
             <div class="txt"><span>2001</span>中正區  青田</div>
-            <div class="mask" @click="openSlider(6)">
+            <div class="mask" @click="openSlider(6)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
           </div>
@@ -255,7 +255,7 @@
         // }
       }
     }
-    .swiper-button-prev {
+    .swiper-button-next {
       left: 0;
       @media screen and (min-width:768px) {
         top: auto;
@@ -268,7 +268,7 @@
         background-repeat: no-repeat;
       }
     }
-    .swiper-button-next {
+    .swiper-button-prev {
       right: 0;
       @media screen and (min-width:768px) {
         display: none;

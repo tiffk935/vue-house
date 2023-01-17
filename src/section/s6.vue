@@ -32,7 +32,7 @@
   z-index: 1;
   @media screen and (min-width:768px) {
     height: size(1080);
-    background: linear-gradient(247deg, #004B47 -32.2%, #11A196 102.54%);
+    background: linear-gradient(290deg, #004B47 5.42%, #11A196 127.44%);
   }
 
   .p1 {
@@ -129,14 +129,16 @@
       top: size(-122.9);
       left: size(163.9);
     }
+    .w-full{position: relative;z-index: 2;}
 
     .window {
-      width: 22.47vw;
+      width: 23vw;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      filter: blur(2px);
       @media screen and (min-width:768px) {
-        width: 12.36vw;
+        width: 12.7vw;
       }
     }
 

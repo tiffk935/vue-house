@@ -58,7 +58,7 @@
     height: size-m(247.34);
     top: size-m(55);
     left: size-m(123);
-    background-image: url(@/section/s2/2.jpg);
+    background-image: url(@/section/s2/1.jpg);
     background-size: 100% auto;
     // background-position: 0 100%;
     border-radius: 48% 48% 0px 0px;
@@ -75,7 +75,7 @@
     height: size-m(168.6);
     top: size-m(189);
     left: size-m(43);
-    background-image: url(@/section/s2/img2.jpg);
+    background-image: url(@/section/s2/img.jpg);
     background-size: 100% auto;
     // background-position: 0 0;
     border-radius: 48% 48% 0px 0px;
@@ -156,14 +156,15 @@
       top: size(1037);
       left: size(512.5);
     }
-
+    .w-full{position: relative;z-index: 2;}
     .window {
-      width: 22.47vw;
+      width: 23vw;
       top: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);filter: blur(2px);
+
       @media screen and (min-width:768px) {
-        width: 12.36vw;
+        width: 12.7vw;
       }
     }
 
