@@ -156,21 +156,30 @@
         &:hover {
           background-size: 110%;
         }
-
+/*
+        padding: 0 size-m(10);
+      @media screen and (min-width:768px) {
+        padding: 0 size(28);*/
         .txt {
           font-weight: 500;
           font-size: size-m(13);
           line-height: size-m(18.68);
           position: absolute;
-          bottom: size-m(8.92);
-          left: size-m(16.5 + 10);
-          text-shadow: 0px size-m(1) size-m(10) rgba(0, 0, 0, 0.7);
+          bottom:0;
+          left:size-m(10);
+          text-shadow: 0px size-m(1) size-m(10) rgba(0, 0, 0, 1);
+          padding: 1em 1em size-m(8.92) size-m(16.5);
+          width: calc(100% - #{size-m(20)});
+          box-sizing: border-box;
+          background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.3) 70%,rgba(0,0,0,0.6) 100%);
+
           @media screen and (min-width:768px) {
+          width: calc(100% - #{size(28 * 2)});
+          left:size(28);
             font-size: size(23);
             line-height: size(33.05);
-            bottom: size(22);
-            left: size(28.21 + 28);
-            text-shadow: 0px size(1) size(20) rgba(0, 0, 0, 0.7);
+          padding: 1em 1em size(22) size(28.21);
+            text-shadow: 0px size(1) size(20) rgba(0, 0, 0, 1);
           }
 
           span {
@@ -281,6 +290,7 @@
     top: size-m(451.92);
     left: size-m(42.5);
     z-index: 1;
+    text-align: justify;
     @media screen and (min-width:768px) {
       width: size(589.1);
       top: size(428);
@@ -289,24 +299,26 @@
 
     .t1 {
       font-size: size-m(19);
-      line-height: size-m(25);
+      line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(12.5);
+    letter-spacing: .03em;
       @media screen and (min-width:768px) {
         font-size: size(30);
-        line-height: size(40.2);
         margin-bottom: size(34.5);
       }
     }
 
     .txt {
       font-size: size-m(12);
-      line-height: size-m(20);
-      font-weight: 500;
+      line-height:1.7;
+      font-weight: 300;
       text-align: justify;
+    letter-spacing: .1em;
       @media screen and (min-width:768px) {
         font-size: size(16);
         line-height: size(27.2);
+      font-weight: 200;
       }
     }
   }

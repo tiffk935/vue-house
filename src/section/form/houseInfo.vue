@@ -11,7 +11,9 @@
                             <p class="whitespace-pre-line leading-normal text-right" v-html="item[1]"></p>
                         </div>
                     </div>
-                    <img class="logo" src="@/section/form/logo2.svg" alt="">
+                    <img class="logo md:hidden" src="@/section/form/logo2.svg" alt="" />
+                    <img class="logo hidden md:block" src="@/section/form/logo.svg" alt="" />
+                    
                 </div>
             </div>
         </div>

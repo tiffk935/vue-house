@@ -88,6 +88,8 @@
     color: #fff;
   }
 
+  option{color: #000;}
+
   .order1 {
     background-size: cover;
     background-position: center center;

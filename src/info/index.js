@@ -7,11 +7,11 @@ export default {
         keywords: caseName,
     },
     address: "台北市士林區永平街80巷（社子公園正對面）",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3043252436237!2d121.5055873!3d25.0915577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aecfa74a61e3%3A0xf3b1c70dd89cd66c!2zMTEx5Y-w5YyX5biC5aOr5p6X5Y2A5rC45bmz6KGXODDlt7c!5e0!3m2!1szh-TW!2stw!4v1673790862801!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/CM6itG211EZTR8QA8",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3100747201233!2d121.506633!3d25.091362999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x783957c8091784e9!2zMjXCsDA1JzI4LjkiTiAxMjHCsDMwJzIzLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1673942627678!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/qRifkLPU4Tdvc5hK6",
     phone: "02-8787-8888",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "https://www.facebook.com/telin.zheli/",
+    fbMessage: "https://m.me/telin.zheli",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "德林建設股份有限公司"],
@@ -20,12 +20,12 @@ export default {
         ["結構設計", "桁城工程顧問股份有限公司"],
         ["營建工程", "輝達營造有限公司"],
         ["建築代銷", "聯碩地產股份有限公司"],
-        ["建照號碼", "待確定"],
-        ["經紀人", "待確定"],
+     //   ["建照號碼", "待確定"],
+     //   ["經紀人", "待確定"],
         ["建案位置", "台北市士林區永平街80巷<br class='md:hidden'>（社子公園正對面）"],
         ["貴賓專線", "02-87878888"],
     ],
-    gtmCode: ["GTM-527G33V"], // 可放置多個
+    gtmCode: ["GTM-PNQFGRW"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3

@@ -117,6 +117,7 @@
     width: size-m(290);
     top: size-m(440.09);
     left: size-m(42.5);
+    text-align: justify;
     @media screen and (min-width:768px) {
       width: size(630);
       top: size(334);
@@ -125,26 +126,27 @@
 
     .t1 {
       font-size: size-m(19);
-      line-height: size-m(25);
+      line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(12.5);
+    letter-spacing: .03em;
       @media screen and (min-width:768px) {
         font-size: size(30);
-        line-height: size(40);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
       font-size: size-m(12);
-      line-height: size-m(20);
-      font-weight: 500;
+      line-height:1.7;
+      font-weight: 300;
+    letter-spacing: .1em;
       margin-bottom: size-m(49.74);
       @media screen and (min-width:768px) {
         font-size: size(16);
-        line-height: size(27);
         margin-bottom: size(0);
         padding-right: size(40);
+      font-weight: 200;
       }
     }
   }
@@ -166,6 +168,7 @@
         line-height: size-m(19);
         font-weight: 700;
         margin-bottom: size-m(3);
+    letter-spacing: .03em;
         @media screen and (min-width:768px) {
           font-size: size(25);
           line-height: size(34);
@@ -175,12 +178,12 @@
 
       .txt {
         font-size: size-m(12);
-        line-height: size-m(20);
-        font-weight: 500;
+      line-height:1.7;
+      font-weight: 300;
         text-align: justify;
         @media screen and (min-width:768px) {
           font-size: size(14);
-          line-height: size(24);
+      font-weight: 200;
         }
       }
 

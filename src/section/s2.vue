@@ -45,7 +45,7 @@
   .bg234 {
     top: 0;
     left: 0;
-    height: size-m(4224);
+    height: size-m(4824);
     background: linear-gradient(113.99deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
     @media screen and (min-width:768px) {
       // background: #078177;
@@ -128,6 +128,7 @@
       line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(9.5);
+    letter-spacing: .03em;
       @media screen and (min-width:768px) {
         font-size: size(30);
         margin-bottom: size(26.5);
@@ -139,10 +140,11 @@
       line-height:1.7;
       margin-bottom: size-m(24.5);
       font-weight: 300;
-    letter-spacing: .06em;
+    letter-spacing: .1em;
       @media screen and (min-width:768px) {
         font-size: size(16);
         margin-bottom: size(70);
+      font-weight: 200;
       }
     }
   }

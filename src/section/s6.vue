@@ -27,7 +27,7 @@
 
 .s6 {
   width: 100%;
-  height: size-m(857);
+  height: size-m(930);
   font-family: 'Noto Serif TC';
   z-index: 1;
   @media screen and (min-width:768px) {
@@ -89,6 +89,7 @@
     width: size-m(290);
     top: size-m(441.27);
     left: size-m(43);
+    text-align: justify;
     @media screen and (min-width:768px) {
       width: size(589.06);
       top: size(281.5);
@@ -97,24 +98,25 @@
 
     .t1 {
       font-size: size-m(19);
-      line-height: size-m(25);
+      line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(12.5);
+    letter-spacing: .03em;
       @media screen and (min-width:768px) {
         font-size: size(30);
-        line-height: size(40);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
       font-size: size-m(12);
-      line-height: size-m(20);
-      font-weight: 500;
+      line-height:1.7;
+      font-weight: 300;
+    letter-spacing: .1em;
       margin-bottom: size-m(36.5);
       @media screen and (min-width:768px) {
         font-size: size(16);
-        line-height: size(27);
+      font-weight: 200;
         margin-bottom: size(119);
       }
     }
