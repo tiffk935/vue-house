@@ -21,72 +21,72 @@
   }
 
   .logo {
-    width: size-m(227.27);
+    width: size-m(200.27);
     top: size-m(128.84);
-    left: size-m(72.86);
+    left: size-m(85.86);
     @media screen and (min-width:768px) {
-      width: size(517.83);
+      width: size(417.83);
       top: size(181.84);
-      left: size(701);
+      left: size(751);
     }
   }
 
   .t1 {
-    top: size-m(354);
-    left: size-m(69.5);
-    font-size: size-m(16);
+    top: size-m(334);
+    left: size-m(89.5);
+    font-size: size-m(13.5);
     line-height: size-m(19);
     color: #fff;
     font-weight: 500;
-    letter-spacing: 0.195em;
+    letter-spacing: 0.14em;
     @media screen and (min-width:768px) {
-      top: size(697);
-      left: size(696);
-      font-size: size(36);
+      top: size(620);
+      left: size(720);
+      font-size: size(32);
       line-height: size(43);
     }
   }
 
   .t2 {
-    top: size-m(379);
-    left: size-m(70);
-    font-size: size-m(17);
+    top: size-m(361);
+    left: size-m(89.5);
+    font-size: size-m(14.4);
     line-height: size-m(20);
     color: #fff;
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
     @media screen and (min-width:768px) {
-      top: size(753);
-      left: size(697);
-      font-size: size(38);
+      top: size(675);
+      left: size(723);
+      font-size: size(34);
       line-height: size(46);
     }
   }
 
   .t3 {
-    top: size-m(568);
-    left: size-m(70);
-    font-size: size-m(24);
+    top: size-m(468);
+    left: size-m(89.5);
+    font-size: size-m(21);
     line-height: size-m(29);
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.08em;
     @media screen and (min-width:768px) {
-      top: size(867);
-      left: size(496);
-      font-size: size(45);
+      top: size(767);
+      left: size(530);
+      font-size: size(38);
       line-height: size(54);
     }
   }
 
   .logo2 {
-    width: size-m(233.73);
-    top: size-m(604.91);
-    left: size-m(63);
+    width: size-m(193);
+    top: size-m(500.91);
+    left: size-m(89.5);
     @media screen and (min-width:768px) {
-      width: size(432);
-      top: size(878);
-      left: size(993);
+      width: size(392);
+      top: size(778);
+      left: size(933);
     }
   }
 }

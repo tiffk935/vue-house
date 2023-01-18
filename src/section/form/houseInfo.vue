@@ -2,9 +2,10 @@
     <div class="flex flex-col md:flex-row items-center justify-between bg-[#004B47] text-white">
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title">建案資訊</div>
+                
                 <div class="info-flex">
                     <div class="info-items mt-4 w-full">
+                        <div class="title">建案資訊</div>
                         <div class="item flex justify-between items-center w-full whitespace-nowrap"
                             v-for="item in info.houseInfos">
                             <p class="mr-5 font-bold">{{ item[0] }}</p>
@@ -34,10 +35,13 @@
 
     .title {
         width: 100%;
-        font-size: size(48);
+        font-size: size(23);
         font-weight: 700;
-        margin-bottom: size(23);
+        margin-bottom: size(10);
         color: #fff;
+        border-bottom: 1px solid #fff;
+        text-align: left;
+        padding-bottom:size(20);
     }
 
     .info-items {
@@ -51,8 +55,8 @@
             line-height: 1.5;
             text-align: left;
             border-bottom: size(1) solid #fff;
-            padding-bottom: size(19);
-            margin-bottom: size(19);
+            padding-bottom: size(10);
+            margin-bottom: size(10);
 
             p:first-child {
                 width: 4.5em;
@@ -71,7 +75,10 @@
         padding: size-m(30) 0;
 
         .title {
-            font-size: size-m(29);
+            font-size: size-m(20);
+            text-align: center;
+            padding-bottom: size-m(20);
+            margin-bottom: size-m(10);
         }
 
         .info-items {

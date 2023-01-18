@@ -13,7 +13,7 @@
     <img class="group absolute md:hidden" src="@/section/s1/group-m.svg" />
     <img class="group absolute hidden md:block" src="@/section/s1/group.svg" />
     <div class="light">
-      <img class="absolute" src="@/section/s1/sun.png" />
+      <img class="absolute" src="@/section/s1/sun.jpg" />
     </div>
   </section>
 </template>
@@ -190,14 +190,15 @@
     width: size-m(832.67);
     top: size-m(-341.42);
     left: size-m(-368.06);
-    opacity: 0.8;
+    opacity: 0.6;
     max-width: none;
-    animation: sun 6s linear infinite alternate;
+
+    //animation: sun 6s linear infinite alternate;
     @media screen and (min-width:768px) {
       transform: rotate(22.47deg);
-      width: size(1607.19);
-      top: size(-657.43);
-      left: size(-367.86);
+      width: size(1307.19);
+      top: size(-557.43);
+      left: size(-237.86);
     }
   }
 
