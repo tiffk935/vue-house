@@ -173,17 +173,17 @@
             @slideChange="slideChange1"
           >
             <swiper-slide>
-              <img class="pc" src="@/section/s4/content1/1.jpg" />
-              <img class="mo" src="@/section/s4/content1/1_m.jpg" />
-              <div class="text-white text-shadow">建築業績｜霞飛3</div>
-            </swiper-slide>
-            <swiper-slide>
               <img src="@/section/s4/content1/2.jpg" />
               <div class="text-white text-shadow">建築業績｜凌波揚+霞飛</div>
             </swiper-slide>
             <swiper-slide>
               <img src="@/section/s4/content1/3.jpg" />
               <div class="text-white text-shadow">建築業績｜陶裡原</div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="pc" src="@/section/s4/content1/1.jpg" />
+              <img class="mo" src="@/section/s4/content1/1_m.jpg" />
+              <div class="text-white text-shadow">建築業績｜霞飛3</div>
             </swiper-slide>
           </swiper>
         </div>
@@ -284,7 +284,7 @@
       <div class="content content4 absolute" v-show="currContent === 4">
         <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title-m.svg" />
         <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s4/content4/title.svg" />
-        <div class="text">為實踐多角化經營，宗大董事長林漢清開設鐵鋁罐品牌「吉源控股」，設廠福建、湖北、安徽、廣東，主力客戶為泰山、雀巢咖啡、加多寶、銀鷺、達利等知名食品飲料大廠，年產能共超越30億罐，2016年在台上市，股票代號：吉源-KY，8488。</div>
+        <div class="text">為實踐多角化經營，宗大集團亦投入鐵鋁罐金屬包裝事業，「吉源控股」於廈門、湖北、安徽、廣東等地設廠，主要客戶包含雀巢、銀鷺、椰樹、加多寶、麒麟啤酒等知名食品飲料大廠，年產能達30億罐，2016年在台上市，股票代號：吉源-KY，8488。</div>
         <div class="slider slider4 absolute">
           <swiper
             :modules="modules"
