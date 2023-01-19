@@ -1,4 +1,4 @@
-const caseName = "艾美國際城"
+const caseName = "華友聯next21"
 
 export default {
     meta: {
@@ -6,20 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "807高雄市三民區博愛一路218號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.1712989385455!2d120.30367000000001!3d22.647401!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e04f0a93c64a9%3A0x5df6f456aa9d2987!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Y2a5oSb5LiA6LevMjE46Jmf!5e0!3m2!1szh-TW!2stw!4v1663256224772!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/AZ7q9piMV1xrD2oz9",
-    phone: "07-311-8800",
-    fbLink: "https://www.facebook.com/profile.php?id=100078647176285",
-    fbMessage: "https://m.me/100078647176285/",
+    address: "高雄市中華二路 X 九如路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3682.3057960552574!2d120.2910762!3d22.6423845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e045c2d1a8c07%3A0xd11a56be9747b650!2zODA36auY6ZuE5biC5LiJ5rCR5Y2A5Lmd5aaC5LiJ6LevMuiZnw!5e0!3m2!1szh-TW!2stw!4v1674120706640!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/FssAE4m6DZBbsDYQ7",
+    phone: "07-322-2121",
+    fbLink: "https://www.facebook.com/hylNext21",
+    fbMessage: "https://m.me/hylNext21/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "三地開發建築股份有限公司"],
-        ["基地地址", "高雄市三民區十全二路VS自立一路口"],
-        ["建築設計", "李祖原聯合建築師事務所"],
-        ["棟戶規劃", "1幢，3棟，629戶住家，14戶店面"],
-        ["建造執照", "(110)高市工建築字第02413號"],
-        ["廣告代銷", ""],
+        ["坪數規劃", "23-48坪"],
+        ["戶數規劃", "共497戶"],
+        ["樓層規劃", "地下4F / 地上18F"],
+        ["接待會館", "高雄市中華二路 X 九如路口"],
+        ["基地位置", "左營區啟文路 X 勵志中街路"],
+        ["建設公司", "華友聯開發股份有限公司"],
+        ["貴賓專線", "(07) 322-2121"],
+        ["建築代銷", "上揚國際建築團隊|上旺開發(股)"],
     ],
     gtmCode: ["GTM-KBWGHNV","GTM-M87MK5M"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

@@ -1,17 +1,17 @@
 <template>
-  <div class="contact-info mx-auto bg-[#14316F] flex flex-col items-center justify-between">
+  <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
+        <img src="@/section/form/phone.svg" alt="華友聯next21" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="華友聯next21" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="艾美國際城" srcset="" />
+        <img src="@/section/form/fb.svg" alt="華友聯next21" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
@@ -20,7 +20,7 @@
         <div>{{ info.address }}</div>
       </div>
       <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
@@ -30,21 +30,21 @@
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
+      <img src="@/section/form/phone.svg" alt="華友聯next21" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="華友聯next21" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="艾美國際城" srcset="" />
+      <img src="@/section/form/pen.svg" alt="華友聯next21" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -56,9 +56,9 @@
     <div class="aa-modal-box py-12 relative flex flex-col items-center justify-center overflow-hidden">
       <label for="contact-modal" class="aa-btn aa-btn-sm aa-btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="艾美國際城" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="艾美國際城" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="華友聯next21" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="華友聯next21" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -91,11 +91,12 @@
   padding: size(68) size(160) size(56) size(160);
   margin-top: size(73);
   position: relative;
+  background: rgba(255, 255, 255, 0.5);
 
   .logo {
     width: size(400.5);
     height: size(93.5);
-    background-image: url("@/section/form/logo.png");
+    background-image: url("@/section/form/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -109,8 +110,8 @@
     gap: size(20);
 
     .contact-item {
-      border: 1px solid #fff;
-      // background-color: #FFDFE3;
+      // border: 1px solid #fff;
+      background-color: #A7A7A7;
       color: #fff;
       width: 100%;
       padding: 0 size(55);
@@ -123,13 +124,10 @@
       cursor: pointer;
 
       &:hover {
-        background-color: #fff;
-        border-color: #fff;
-        color: theme('colors.color2');
+        background-color: #14316F;
 
         img {
-
-          filter: brightness(0) invert(0);
+          filter: brightness(0) invert(1);
         }
       }
 
@@ -168,6 +166,8 @@
 
 
   .address-wrap {
+    border: 1px solid #A7A7A7;
+
     .contact-item {
       background-color: #fff;
       border-color: #fff;
@@ -177,12 +177,10 @@
       }
 
       &.map-btn {
-        background-color: #FFC107;
-        border-color: #FFC107;
-        color: theme('colors.color2');
+        background-color: #A7A7A7;
         
         img {
-          filter: brightness(0) invert(0);
+          filter: brightness(0) invert(1);
         }
 
         &:hover {
@@ -211,7 +209,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #14316F;
+      background-color: #C30D23;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -238,7 +236,7 @@
     .logo {
       width: size-m(290.5);
       height: size-m(67.82);
-      background-image: url("@/section/form/logo.png");
+      background-image: url("@/section/form/logo.svg");
       margin-bottom: size-m(39);
     }
 

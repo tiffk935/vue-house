@@ -1,11 +1,11 @@
   <template>
   <div id="order" class="order relative text-center">
     <!-- Title -->
-    <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
+    <div class="order-title text-center text-[#C30D23]">{{ info.order.title }}</div>
     <!-- Title Image -->
-    <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="艾美國際城" srcset=""
+    <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="華友聯next21" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="艾美國際城" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="華友聯next21" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
@@ -43,7 +43,7 @@
     <div class="flex gap-2 items-center justify-center control">
       <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="aa-checkbox bg-white rounded-md" />
-      <p class="mb-0">
+      <p class="mb-0 text-[#595757]">
         本人知悉並同意<label for="policy-modal"
           class="aa-modal-button mb-0 text-[#D9374B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
       </p>
@@ -55,7 +55,7 @@
       @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
     <!-- Send -->
-    <div class="send mt-8 mx-auto hover:scale-90 aa-btn cursor-pointer btregistration bg-[#14316F] text-white" @click="send()">
+    <div class="send mt-8 mx-auto hover:scale-90 aa-btn cursor-pointer btregistration bg-[#A7A7A7] text-white" @click="send()">
       {{ sending ? '發送中..' : '送出表單' }}
     </div>
 
@@ -76,7 +76,9 @@
 .order {
   width: 100%;
   padding-top: size(115);
-  background: linear-gradient(89.87deg, #F0D2E7 0.18%, #5A9FD6 99.96%);
+  background: #E3E3E3;
+  background-image: url(@/section/form/bg.jpg);
+  background-size: 100% auto;
   font-family:"Noto Sans TC";
 
   .order-title {

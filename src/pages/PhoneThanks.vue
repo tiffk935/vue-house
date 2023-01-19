@@ -1,8 +1,8 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img-phone.png" alt="艾美國際城" class="img">
-            <img src="~@/assets/thank-img-phone-h.png" alt="艾美國際城" class="img-hover">
+            <img src="~@/assets/thank-img-phone.png" alt="華友聯next21" class="img">
+            <img src="~@/assets/thank-img-phone-h.png" alt="華友聯next21" class="img-hover">
         </a>
     </div>
 </template>

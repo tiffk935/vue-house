@@ -7,10 +7,8 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap"
                         v-for="(item, idx) in info.houseInfos" :key="idx">
-                        <p class="mr-5 border-l-2 border-[#14316F] text-[#14316F] pl-2 font-bold mb-0">{{ item[0] }}</p>
-                        <!-- <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p> -->
-                        <img v-if="idx == 5" class='logo2' src='@/section/form/logo2.svg'>
-                        <p v-else class="whitespace-pre-line leading-normal text-left mb-0">{{ item[1] }}</p>
+                        <p class="mr-5 border-l-2 border-[#6189B3] text-[#6189B3] pl-2 font-bold mb-0">{{ item[0] }}</p>
+                        <p class="whitespace-pre-line leading-normal text-left font-normal">{{ item[1] }}</p>
                     </div>
                 </div>
             </div>
@@ -62,9 +60,6 @@
             }
         }
     }
-    .logo2 {
-        width: size(400);
-    }
 }
 
 .hinfo .flex-1 {
@@ -91,10 +86,6 @@
             .item p {
                 font-size: size-m(14);
             }
-        }
-
-        .logo2 {
-            width: size-m(230);
         }
     }
 
