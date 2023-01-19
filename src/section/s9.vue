@@ -13,7 +13,7 @@
 
 .s9 {
   width: 100%;
-  height: size-m(830);
+  height: size-m(600);
   font-family: 'Noto Serif TC';
   background: #004B47;
   @media screen and (min-width:768px) {
@@ -41,14 +41,14 @@
     letter-spacing: 0.14em;
     @media screen and (min-width:768px) {
       top: size(620);
-      left: size(720);
-      font-size: size(32);
+      left: size(750);
+      font-size: size(30);
       line-height: size(43);
     }
   }
 
   .t2 {
-    top: size-m(361);
+    top: size-m(357);
     left: size-m(89.5);
     font-size: size-m(14.4);
     line-height: size-m(20);
@@ -57,14 +57,14 @@
     letter-spacing: 0.04em;
     @media screen and (min-width:768px) {
       top: size(675);
-      left: size(723);
-      font-size: size(34);
+      left: size(750);
+      font-size: size(30);
       line-height: size(46);
     }
   }
 
   .t3 {
-    top: size-m(468);
+    top: size-m(408);
     left: size-m(89.5);
     font-size: size-m(21);
     line-height: size-m(29);
@@ -73,7 +73,7 @@
     letter-spacing: 0.08em;
     @media screen and (min-width:768px) {
       top: size(767);
-      left: size(530);
+      left: size(540);
       font-size: size(38);
       line-height: size(54);
     }
@@ -81,12 +81,12 @@
 
   .logo2 {
     width: size-m(193);
-    top: size-m(500.91);
+    top: size-m(440.91);
     left: size-m(89.5);
     @media screen and (min-width:768px) {
       width: size(392);
       top: size(778);
-      left: size(933);
+      left: size(943);
     }
   }
 }

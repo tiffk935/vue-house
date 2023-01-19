@@ -190,15 +190,15 @@
     width: size-m(832.67);
     top: size-m(-341.42);
     left: size-m(-368.06);
-    opacity: 0.6;
+    opacity: 0.8;
     max-width: none;
 
     //animation: sun 6s linear infinite alternate;
     @media screen and (min-width:768px) {
       transform: rotate(22.47deg);
       width: size(1307.19);
-      top: size(-557.43);
-      left: size(-237.86);
+      top: size(-657.43);
+      left: size(-367.86);
     }
   }
 
