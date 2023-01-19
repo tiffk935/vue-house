@@ -24,12 +24,6 @@
     <Order :setModal="setModal" />
   </div>
 
-  <!-- <FsLightbox
-    :toggler="sliderToggler"
-    :slide="slide"
-    :sources="sources2"
-  />  -->
-
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
@@ -215,7 +209,6 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import FsLightbox from "fslightbox-vue/v3";
 import slide1_full from '@/section/s3/1.jpg';
 import slide2_full from '@/section/s3/2.jpg';
 import slide3_full from '@/section/s3/3.jpg';
@@ -293,16 +286,18 @@ onMounted(() => {
     smallScrollBar.addListener(ScrollTrigger.update);
     smallScrollBarRef.value = smallScrollBar;
 
-    gsap.set('.home .fade', {opacity: 0});
+    gsap.set('.home .fade', {opacity: 0, yPercent: 50});
     setTimeout(() => {
       gsap.utils.toArray(".home .fade").forEach(item => {
         gsap.to(item, {
           opacity: 1,
+          yPercent: 0,
+          duration: 0.6,
           ease: 'none',
           scrollTrigger: {
             scroller: ".home",
             trigger: item,
-            start: "center bottom",
+            start: "center 90%",
             toggleActions: "play none none reverse",
           },
         });
@@ -312,16 +307,16 @@ onMounted(() => {
         scrollTrigger: {
           scroller: ".home",
           trigger: document.querySelectorAll('.s8 .fade_s8')[0],
-          start: "top 90%",
+          start: "top 85%",
           toggleActions: "play none none reverse",
         }
       });
 
       s8TL
-        .from(document.querySelectorAll('.s8 .fade_s8')[0], { opacity: 0, duration: 0.6 }, 0)
-        .from(document.querySelectorAll('.s8 .fade_s8')[1], { opacity: 0, duration: 0.6 }, 0.2)
-        .from(document.querySelectorAll('.s8 .fade_s8')[2], { opacity: 0, duration: 0.6 }, 0.4)
-        .from(document.querySelectorAll('.s8 .fade_s8')[3], { opacity: 0, duration: 0.6 }, 0.6)
+        .from(document.querySelectorAll('.s8 .fade_s8')[0], { opacity: 0, yPercent: 50, duration: 0.6 }, 0)
+        .from(document.querySelectorAll('.s8 .fade_s8')[1], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.2)
+        .from(document.querySelectorAll('.s8 .fade_s8')[2], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.4)
+        .from(document.querySelectorAll('.s8 .fade_s8')[3], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.6)
       
       gsap.utils.toArray(".home .parallax").forEach(item => {
         gsap.set(item, {backgroundPosition: '50% 0%'});

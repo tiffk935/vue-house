@@ -3,7 +3,7 @@
     <div class="bg absolute"></div>
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute">NATURE OF<br />GREEN ISLAND</div>
+    <div class="title absolute fade">NATURE OF<br />GREEN ISLAND</div>
     <div class="content absolute">
       <div class="fade">
         <div class="t1">生態社子島輕取地利，<br class="md:hidden" />台北的未來在您手中。</div>

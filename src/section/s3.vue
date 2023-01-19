@@ -76,12 +76,6 @@
       <div class="txt">德林建設機構位於中正首善之地的建築作品，如「青田」、「林与堂」、「泰安觀止」體現因區段而生的人文溫度，近年落成的「河畔哲人」與「哲人德林」以細緻建築美學，賦予城市街廓精緻地貌，眼見為憑的美學形構，正等待您的親眼見證。</div>
     </div>
 
-    <!-- <FsLightbox
-      :toggler="sliderToggler"
-      :slide="slide"
-      :sources="sources"
-    />  -->
-
   </section>
 </template>
 
@@ -97,10 +91,6 @@
     height: size(1080);
     margin-bottom: size(0);
     background: linear-gradient(66deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
-  }
-
-  .fslightbox-toolbar-button:nth-child(1) {
-    display: none;
   }
 
   .slider {
@@ -332,13 +322,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
-// import FsLightbox from "fslightbox-vue/v3";
-// import slide1_full from '@/section/s3/1.jpg';
-// import slide2_full from '@/section/s3/2.jpg';
-// import slide3_full from '@/section/s3/3.jpg';
-// import slide4_full from '@/section/s3/4.jpg';
-// import slide5_full from '@/section/s3/5.jpg';
-// import slide6_full from '@/section/s3/6.jpg';
 
 export default {
   props: ['setFsLightbox'],
@@ -352,7 +335,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    // FsLightbox,
   },
   setup() {
     return {

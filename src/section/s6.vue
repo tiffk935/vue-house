@@ -2,7 +2,7 @@
   <section class="s6 relative text-white">
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute">THE INTERSECTION<br />OF FUTURE LIFE</div>
+    <div class="title absolute fade">THE INTERSECTION<br />OF FUTURE LIFE</div>
     <div class="content absolute">
       <div class="fade">
         <div class="t1">定格雙北正核心，<br class="md:hidden" />四通八達暢意快遊。</div>

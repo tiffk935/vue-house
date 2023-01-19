@@ -3,7 +3,7 @@
     <div class="bg234 absolute w-full"></div>
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute">CONCENTRATE ON<br />ARCHITECTURE</div>
+    <div class="title absolute fade">CONCENTRATE ON<br />ARCHITECTURE</div>
     <div class="content absolute">
       <img class="logo" src="@/section/s2/logo.svg" />
       <div class="fade">

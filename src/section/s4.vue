@@ -2,7 +2,7 @@
   <section class="s4 relative parallax">
     <div class="photo absolute md:hidden"></div>
 
-    <div class="content absolute text-white hidden md:block fade"></div>
+    <div class="content absolute text-white hidden md:block"></div>
     <div class="t1 absolute text-white fade">推窗見綠、出門入園，<br />豈止珍稀而已。</div>
     <div class="t2 absolute text-white fade">
       面積總計逾一公頃的社子公園，為社子島<br />
