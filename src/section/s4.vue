@@ -10,6 +10,8 @@
       帶來朗闊棟距與視野，公園宅奇貨可居，<br />
       綠金價值等同生活品質。
     </div>
+    <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
+    <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
 
     <!--
     <div class="content-m absolute text-white md:hidden">
@@ -41,10 +43,33 @@
   background-size: cover;
   background-position: 50% 50%;
   font-family: 'Noto Serif TC';
+  overflow: hidden;
   @media screen and (min-width:768px) {
     height: size(1080);
     background-image: url(@/section/s4/bg.jpg);
   }
+
+
+
+.bg01{
+  top:0;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: 100% auto;
+  mix-blend-mode: overlay;
+  opacity: 0.6;
+}
+.bg02{
+  top:0;
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+  background-size: 100% auto;  
+  mix-blend-mode: screen;
+  opacity: 0.5;
+  filter: blur(7.5px);
+}  
   .photo {
     width: 100%;
     height: size-m(315);

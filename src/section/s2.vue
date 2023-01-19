@@ -7,8 +7,8 @@
     <div class="content absolute">
       <img class="logo" src="@/section/s2/logo.svg" />
       <div class="fade">
-        <div class="t1">一本初衷，建築百年事業。</div>
-        <div class="txt">德林建設機構創立於1985年，多年來建築作品以高滿意度、高指名度聞名；以誠信專業與客戶交陪，德林機構在乎的不是表面售價，而是對於客戶的價值，並以此堅持一路前行。</div>
+        <div data-aos="fade-up" class="t1">一本初衷，建築百年事業。</div>
+        <div data-aos="fade-up" class="txt">德林建設機構創立於1985年，多年來建築作品以高滿意度、高指名度聞名；以誠信專業與客戶交陪，德林機構在乎的不是表面售價，而是對於客戶的價值，並以此堅持一路前行。</div>
       </div>
       <div class="fade">
         <div class="t1">質純精粹，立地都會精華。</div>

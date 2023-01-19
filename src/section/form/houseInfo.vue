@@ -35,7 +35,7 @@
 
     .title {
         width: 100%;
-        font-size: size(23);
+        font-size: size(21);
         font-weight: 700;
         margin-bottom: size(10);
         color: #fff;
@@ -50,7 +50,7 @@
 
         .item {
             line-height: size(17);
-            font-size: size(17);
+            font-size: size(15);
             align-items: flex-start;
             line-height: 1.5;
             text-align: left;
@@ -75,18 +75,19 @@
         padding: size-m(30) 0;
 
         .title {
-            font-size: size-m(20);
+            font-size: size-m(18);
             text-align: center;
             padding-bottom: size-m(20);
             margin-bottom: size-m(10);
+            border-bottom: size-m(0.5) solid #fff;
         }
 
         .info-items {
             // row-gap: size-m(20);
 
             .item {
-                font-size: size-m(14);
-                border-bottom: size-m(1) solid #fff;
+                font-size: size-m(12);
+                border-bottom: size-m(0.5) solid #fff;
                 padding-bottom: size-m(10);
                 margin-bottom: size-m(10);
             }

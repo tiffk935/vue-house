@@ -177,7 +177,7 @@
           @media screen and (min-width:768px) {
           width: calc(100% - #{size(28 * 2)});
           left:size(28);
-            font-size: size(18);
+            font-size: size(16);
             line-height: size(20.05);
           padding: 1em 1em size(22) size(28.21);
             text-shadow: 0px size(1) size(20) rgba(0, 0, 0, 1);
@@ -188,7 +188,7 @@
             font-size: size-m(18);
             line-height: size-m(25.87);
             @media screen and (min-width:768px) {
-              font-size: size(20);
+              font-size: size(18);
               line-height: size(30.24);
             }
           }

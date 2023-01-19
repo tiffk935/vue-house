@@ -56,7 +56,7 @@
     font-weight: 500;
     letter-spacing: 0.04em;
     @media screen and (min-width:768px) {
-      top: size(675);
+      top: size(665);
       left: size(750);
       font-size: size(30);
       line-height: size(46);
@@ -72,7 +72,7 @@
     font-weight: 500;
     letter-spacing: 0.08em;
     @media screen and (min-width:768px) {
-      top: size(767);
+      top: size(807);
       left: size(540);
       font-size: size(38);
       line-height: size(54);
@@ -85,7 +85,7 @@
     left: size-m(89.5);
     @media screen and (min-width:768px) {
       width: size(392);
-      top: size(778);
+      top: size(818);
       left: size(943);
     }
   }

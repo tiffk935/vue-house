@@ -136,7 +136,7 @@
     font-weight: 500;
     @media screen and (min-width:768px) {
       height: size(50);
-      font-size: size(20);
+      font-size: size(16);
       line-height: size(29);
     }
 
@@ -145,7 +145,7 @@
       line-height: size-m(30);
       margin-right: size-m(10);
       @media screen and (min-width:768px) {
-        font-size: size(28);
+        font-size: size(18);
         line-height: size(40);
         margin-right: size(10);
       }
