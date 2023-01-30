@@ -138,15 +138,18 @@
 
     .txt {
       font-size: size-m(12);
-      line-height:1.7;
+      line-height:1.5;
       font-weight: 300;
-    letter-spacing: .1em;
+    letter-spacing: 0em;
       margin-bottom: size-m(49.74);
       @media screen and (min-width:768px) {
         font-size: size(16);
         margin-bottom: size(0);
         padding-right: size(40);
       font-weight: 200;
+      letter-spacing: .1em;
+      line-height:1.7;
+
       }
     }
   }
@@ -168,7 +171,7 @@
         line-height: size-m(19);
         font-weight: 700;
         margin-bottom: size-m(3);
-    letter-spacing: .03em;
+        letter-spacing: .03em;
         @media screen and (min-width:768px) {
           font-size: size(25);
           line-height: size(34);
@@ -177,13 +180,16 @@
       }
 
       .txt {
-        font-size: size-m(12);
-      line-height:1.7;
+      font-size: size-m(12);
+      line-height:1.5;
       font-weight: 300;
-        text-align: justify;
+      text-align: justify;
+      letter-spacing: 0em;
         @media screen and (min-width:768px) {
           font-size: size(14);
       font-weight: 200;
+      letter-spacing: .1em;
+      line-height:1.7;
         }
       }
 

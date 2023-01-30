@@ -34,7 +34,7 @@
   .t1 {
     top: size-m(334);
     left: size-m(89.5);
-    font-size: size-m(13.5);
+    font-size: size-m(14);
     line-height: size-m(19);
     color: #fff;
     font-weight: 500;
@@ -50,7 +50,7 @@
   .t2 {
     top: size-m(357);
     left: size-m(89.5);
-    font-size: size-m(14.4);
+    font-size: size-m(14);
     line-height: size-m(20);
     color: #fff;
     font-weight: 500;

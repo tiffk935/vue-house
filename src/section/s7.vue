@@ -152,15 +152,17 @@
 
     .txt {
       font-size: size-m(12);
-      line-height:1.7;
+      line-height:1.5;
       font-weight: 300;
-    letter-spacing: .1em;
+    letter-spacing: 0em;
       margin-bottom: size-m(24.5);
       @media screen and (min-width:768px) {
         width: size(589.06);
         font-size: size(16);
       font-weight: 200;
         margin-bottom: size(0);
+        letter-spacing: .1em;
+      line-height:1.7;
       }
     }
   }

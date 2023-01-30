@@ -114,9 +114,9 @@
     top: size-m(529);
     left: size-m(115.4);
     font-size: size-m(12);
-    line-height: 2;
+    line-height: 1.8;
       font-weight: 500;
-    letter-spacing: .2em;
+    letter-spacing: .1em;
     writing-mode: vertical-rl;
     @media screen and (min-width:768px) {
       top: size(423.42);
@@ -124,6 +124,7 @@
       font-size: size(16);
       line-height: 1.7;
       font-weight: 200;
+      letter-spacing: .2em;
     }
   }
 }
