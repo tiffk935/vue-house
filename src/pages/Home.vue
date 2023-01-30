@@ -29,7 +29,7 @@ import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
-// import AOS from 'aos';
+import AOS from 'aos';
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')

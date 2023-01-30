@@ -639,26 +639,31 @@
 </template>
 
 <style lang="scss">
+.carousel-indicators {
+  @media screen and (max-width: 768px) {
+    bottom: 2vw;
+  }
+}
 </style>
 
 <script>
-  export default {
-    mounted() {
-      console.log( 'append js file to body' )
+  // export default {
+  //   mounted() {
+  //     console.log( 'append js file to body' )
 
-      var arr = [
-        'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js',
-        'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
-      ];
+  //     var arr = [
+  //       'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js',
+  //       'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js',
+  //     ];
 
-      for (let i = 0; i < arr.length; i++) {
-        let foo = document.createElement('script');
-        foo.setAttribute("type", "text/javascript");
-        foo.setAttribute("charset", "utf-8");
-        foo.setAttribute("src", arr[i]);
-        foo.setAttribute("data-transaction-amount", "14.90")
-        document.querySelector('body').append(foo);
-      }
-    },
-  };
+  //     for (let i = 0; i < arr.length; i++) {
+  //       let foo = document.createElement('script');
+  //       foo.setAttribute("type", "text/javascript");
+  //       foo.setAttribute("charset", "utf-8");
+  //       foo.setAttribute("src", arr[i]);
+  //       foo.setAttribute("data-transaction-amount", "14.90")
+  //       document.querySelector('body').append(foo);
+  //     }
+  //   },
+  // };
 </script>
