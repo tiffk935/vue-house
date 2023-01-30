@@ -17,8 +17,8 @@
         <select class="aa-select w-full rounded-none" v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
           <option value="兩房">兩房</option>
-          <option value="三房">三房</option>
-          <option value="四房">四房</option>
+          <option value="2+1房">2+1房</option>
+          <option value="3+1房">3+1房</option>
         </select>
         <select class="aa-select w-full rounded-none" v-model="formData.city">
           <option value="" selected disabled>居住縣市</option>

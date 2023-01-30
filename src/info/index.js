@@ -23,7 +23,7 @@ export default {
         ["貴賓專線", "(07) 322-2121"],
         ["建築代銷", "上揚國際建築團隊|上旺開發(股)"],
     ],
-    gtmCode: ["GTM-KBWGHNV","GTM-M87MK5M"], // 可放置多個
+    gtmCode: ["GTM-MGS879P","GTM-M87MK5M"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
