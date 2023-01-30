@@ -27,7 +27,7 @@
     @media screen and (min-width:768px) {
       width: size(417.83);
       top: size(181.84);
-      left: size(751);
+      left: size(761);
     }
   }
 
@@ -41,7 +41,7 @@
     letter-spacing: 0.14em;
     @media screen and (min-width:768px) {
       top: size(620);
-      left: size(750);
+      left: size(760);
       font-size: size(30);
       line-height: size(43);
     }
@@ -57,7 +57,7 @@
     letter-spacing: 0.04em;
     @media screen and (min-width:768px) {
       top: size(665);
-      left: size(750);
+      left: size(760);
       font-size: size(30);
       line-height: size(46);
     }
@@ -73,7 +73,7 @@
     letter-spacing: 0.08em;
     @media screen and (min-width:768px) {
       top: size(807);
-      left: size(540);
+      left: size(570);
       font-size: size(38);
       line-height: size(54);
     }
@@ -86,7 +86,7 @@
     @media screen and (min-width:768px) {
       width: size(392);
       top: size(818);
-      left: size(943);
+      left: size(973);
     }
   }
 }

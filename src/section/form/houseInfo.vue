@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col md:flex-row items-center justify-between bg-[#004B47] text-white">
         <div class="flex-1 items-center justify-center py-4 md:py-10">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
+            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-between">
                 
                 <div class="info-flex">
                     <div class="info-items mt-4 w-full">
@@ -91,7 +91,12 @@
                 padding-bottom: size-m(10);
                 margin-bottom: size-m(10);
             }
+        
         }
+
+        .logo {
+        
+    }
     }
 
 }
@@ -101,6 +106,7 @@
         gap: size(125);
         align-items: center;
         flex-direction: row-reverse;
+        width: 100%;
     }
 
     .info-items {
@@ -111,8 +117,14 @@
     }
     
     .logo {
-        width: size-m(174.41);
+        
+
+        width: size-m(170.41);
         margin: 0 auto;
+
+        @media screen and (min-width:768px) {
+        width: size(549.41);
+        }
     }
 }
 </style>
