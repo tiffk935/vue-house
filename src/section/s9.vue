@@ -1,8 +1,8 @@
 <template>
   <section class="s9 relative text-white">
     <img class="logo absolute" src="@/section/s9/logo.svg" />
-    <div class="t1 absolute">社子公園首排 原鄉翠庭棲居</div>
-    <div class="t2 absolute">23~39 坪｜2~3 房 8787-8888</div>
+    <div class="t1 absolute">戶戶社子公園首席 北方未來正核心</div>
+    <div class="t2 absolute">23~39 坪 ｜ 2~3 房 ｜ 8787-8888</div>
     <div class="t3 absolute">2023初春  即將公開</div>
     <img class="logo2 absolute" src="@/section/s9/logo2.svg" />
   </section>
@@ -33,7 +33,7 @@
 
   .t1 {
     top: size-m(334);
-    left: size-m(89.5);
+    left: size-m(66.5);
     font-size: size-m(14);
     line-height: size-m(19);
     color: #fff;
@@ -41,7 +41,7 @@
     letter-spacing: 0.14em;
     @media screen and (min-width:768px) {
       top: size(620);
-      left: size(760);
+      left: size(709);
       font-size: size(30);
       line-height: size(43);
     }
@@ -49,17 +49,18 @@
 
   .t2 {
     top: size-m(357);
-    left: size-m(89.5);
+    left: size-m(66.5);
     font-size: size-m(14);
     line-height: size-m(20);
     color: #fff;
     font-weight: 500;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.1em;
     @media screen and (min-width:768px) {
       top: size(665);
-      left: size(760);
+      left: size(707);
       font-size: size(30);
       line-height: size(46);
+      letter-spacing: 0.1em;
     }
   }
 

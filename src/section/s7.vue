@@ -9,7 +9,7 @@
       </div>
       <div class="content absolute">
         <div class="fade w-full md:flex">
-          <div class="t1">轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
+          <div class="t1">社子未來轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
           <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
         </div>
       </div>
@@ -125,9 +125,9 @@
     pointer-events: none;
     text-align: justify;
     @media screen and (min-width:768px) {
-      width: size(1171.06);
+      width: size(1300.06);
       top: size(116);
-      left: size(374);
+      left: size(285);
       display: flex;
     }
 
@@ -151,14 +151,14 @@
     }
 
     .txt {
-      font-size: size-m(12);
+      font-size: size-m(13);
       line-height:1.5;
       font-weight: 300;
     letter-spacing: 0em;
       margin-bottom: size-m(24.5);
       @media screen and (min-width:768px) {
         width: size(589.06);
-        font-size: size(16);
+        font-size: size(17);
       font-weight: 200;
         margin-bottom: size(0);
         letter-spacing: .1em;

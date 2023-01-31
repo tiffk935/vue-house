@@ -5,11 +5,11 @@
     <div class="title absolute fade">THE INTERSECTION<br />OF FUTURE LIFE</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">定格雙北正核心，<br class="md:hidden" />四通八達暢意快遊。</div>
+        <div class="t1">三橋二塊一高定格雙北核心，<br  />四通八達暢意快遊。</div>
         <div class="txt">本案位居雙北核心地帶，往北跨社子大橋連接石牌商圈、洲美快速道路對銜北士科園區，往南經延平北路、環河快速道路串連西區雙子星計畫；百齡橋直接士林商圈、重陽大橋接壤銀河灣計劃，國道一號兩端串連新莊副都心與大直重劃區…核心位置不言可諭。</div>
       </div>
       <div class="fade">
-        <div class="t1">北環捷運輕軌計畫，<br class="md:hidden" />四方對銜前瞻發展。</div>
+        <div class="t1">捷運社正公園站750米，<br  />北環捷運未來輕軌交匯。</div>
         <div class="txt">捷運北環段以新北產業園區站為起始點，循重陽橋經社子、士林至大直劍南站交會文湖線，「德林哲里」近距社正公園捷運站約750公尺，為捷運北環段與社子輕軌南北線預計交匯處，往南連接轉乘捷運蘆洲線進入民權西路站，往北接壤北士科園區福國路與八里淡水方向。</div>
       </div>
     </div>
@@ -109,13 +109,13 @@
     }
 
     .txt {
-      font-size: size-m(12);
+      font-size: size-m(13);
       line-height:1.5;
       font-weight: 300;
     letter-spacing: 0em;
       margin-bottom: size-m(36.5);
       @media screen and (min-width:768px) {
-        font-size: size(16);
+        font-size: size(17);
       font-weight: 200;
         margin-bottom: size(119);
         letter-spacing: .1em;

@@ -113,7 +113,7 @@
   .t2 {
     top: size-m(529);
     left: size-m(115.4);
-    font-size: size-m(12);
+    font-size: size-m(13);
     line-height: 1.8;
       font-weight: 500;
     letter-spacing: .1em;
@@ -121,7 +121,7 @@
     @media screen and (min-width:768px) {
       top: size(423.42);
       left: size(1666.63);
-      font-size: size(16);
+      font-size: size(17);
       line-height: 1.7;
       font-weight: 200;
       letter-spacing: .2em;

@@ -7,26 +7,26 @@
     <div class="content absolute">
       <div class="fade">
         <div class="t1">生態社子島輕取地利，<br class="md:hidden" />台北的未來在您手中。</div>
-        <div class="txt">台北未科技產業廊帶，包含南港生技聚落、內科2.0計劃、北投士林科技園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為台北市未來發展的核心命題；可開發面積約118公頃的社子島即將轉身人文永續、親水共生的明日聚落，並於2022年底完成公告徵收，台北未來50年就看這裡。</div>
+        <div class="txt">台北科技產業廊帶，包含南港生技、內科2.0、北士科園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為北市未來發展核心；社子島即將轉身人文永續、親水共生的明日聚落，台北未來50年就看這裡。</div>
       </div>
     </div>
     
     <div class="grid">
       <div class="fade_s8">
-        <div class="t1">︳生態社子島計劃</div>
-        <div class="txt">親水生態綠軸貫穿全島，輕軌與捷運北環段交通格局展開</div>
+        <div class="t1">︳生態社子島</div>
+        <div class="txt">親水生態綠軸貫穿全島，輕軌計劃與捷運北環段交通格局展開</div>
+      </div>
+      <div class="fade_s8">
+        <div class="t1">︳北士科園區</div>
+        <div class="txt">結合頂尖醫療與科技資源，產業強勢進駐，目標年產值10兆元</div>
       </div>
       <div class="fade_s8">
         <div class="t1">︳士林再生計畫</div>
-        <div class="txt">士電、新紡、士紙與捷運TOD開發案，翻轉北區計劃大未來</div>
-      </div>
-      <div class="fade_s8">
-        <div class="t1">︳北投士林科技園區</div>
-        <div class="txt">結合頂尖智慧醫療與科技資源，目標年產值10兆元</div>
+        <div class="txt">士電、新紡、士紙與捷運TOD開發案，建設軸線能像移轉</div>
       </div>
       <div class="fade_s8">
         <div class="t1">︳銀河灣計劃</div>
-        <div class="txt">蘆社大橋串連北士科園區、生態社子島，成為北方開發大型腹地</div>
+        <div class="txt">蘆社大橋串連北士科園區、生態社子島，北區發展大型腹地</div>
       </div>
     </div>
 
@@ -137,13 +137,13 @@
     }
 
     .txt {
-      font-size: size-m(12);
+      font-size: size-m(13);
       line-height:1.5;
       font-weight: 300;
     letter-spacing: 0em;
       margin-bottom: size-m(49.74);
       @media screen and (min-width:768px) {
-        font-size: size(16);
+        font-size: size(17);
         margin-bottom: size(0);
         padding-right: size(40);
       font-weight: 200;
@@ -158,19 +158,19 @@
     .fade_s8 {
       position: absolute;
       width: size-m(130);
-      top: size-m(672.33);
+      top: size-m(642.33);
       left: size-m(42.5);
       @media screen and (min-width:768px) {
         width: size(251);
-        top: size(645);
+        top: size(615);
         left: size(202);
       }
 
       .t1 {
-        font-size: size-m(14);
+        font-size: size-m(15);
         line-height: size-m(19);
         font-weight: 700;
-        margin-bottom: size-m(3);
+        margin-bottom: size-m(9);
         letter-spacing: .03em;
         @media screen and (min-width:768px) {
           font-size: size(25);
@@ -180,13 +180,13 @@
       }
 
       .txt {
-      font-size: size-m(12);
+      font-size: size-m(13);
       line-height:1.5;
       font-weight: 300;
       text-align: justify;
       letter-spacing: 0em;
         @media screen and (min-width:768px) {
-          font-size: size(14);
+          font-size: size(15);
       font-weight: 200;
       letter-spacing: .1em;
       line-height:1.7;
@@ -194,10 +194,10 @@
       }
 
       &:nth-child(2) {
-        top: size-m(672.33);
+        top: size-m(642.33);
         left: size-m(202.5);
         @media screen and (min-width:768px) {
-          top: size(645);
+          top: size(615);
           left: size(536);
         }
       }
@@ -206,7 +206,7 @@
         top: size-m(769.33);
         left: size-m(42.5);
         @media screen and (min-width:768px) {
-          top: size(802);
+          top: size(782);
           left: size(202);
         }
       }
@@ -215,7 +215,7 @@
         top: size-m(769.33);
         left: size-m(202.5);
         @media screen and (min-width:768px) {
-          top: size(802);
+          top: size(782);
           left: size(536);
         }
       }

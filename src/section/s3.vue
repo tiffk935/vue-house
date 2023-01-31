@@ -72,7 +72,7 @@
       <div class="line"></div>
     </div>
     <div class="content absolute fade">
-      <div class="t1">簡約層次美學構型，<br />台北都會精華見芳蹤。</div>
+      <div class="t1">簡約層次人文美學構型，<br />中正區都會精華遍見芳蹤。</div>
       <div class="txt">德林建設機構位於中正首善之地的建築作品，如「青田」、「林与堂」、「泰安觀止」體現因區段而生的人文溫度，近年落成的「河畔哲人」與「哲人德林」以細緻建築美學，賦予城市街廓精緻地貌，眼見為憑的美學形構，正等待您的親眼見證。</div>
     </div>
 
@@ -301,13 +301,13 @@
     }
 
     .txt {
-      font-size: size-m(12);
+      font-size: size-m(13);
       line-height:1.5;
       font-weight: 300;
       text-align: justify;
     letter-spacing: 0em;
       @media screen and (min-width:768px) {
-        font-size: size(16);
+        font-size: size(17);
         line-height: size(27.2);
       font-weight: 200;
       letter-spacing: .1em;

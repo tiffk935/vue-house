@@ -63,9 +63,8 @@
           '接待會館'
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `${info.address}`
-      }}</div>
+      <div class="text-md mt-4" v-html="modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :info.address">
+      </div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
@@ -99,6 +98,10 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+.text-md{
+  text-align: center;
+}
 
 .home {
   width: 100%;
@@ -144,6 +147,9 @@
         margin-right: size(10);
       }
     }
+  }
+  .text-center{
+    text-align: center;
   }
 
   .close {
