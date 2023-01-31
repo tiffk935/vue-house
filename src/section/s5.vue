@@ -5,7 +5,7 @@
     <div class="title absolute fade">GREEN LIGH OF<br />THE PARK</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">戶戶獨享三千坪社子公園<br  />生活品質等同綠金價值</div>
+        <div class="t1">戶戶獨享三千坪社子公園，<br  />生活品質等同綠金價值。</div>
         <div class="txt">社子地區以26平方公尺人均綠地比，居台北市所有行政區之冠，環島型河濱公園圍塑兩河文化之美， 9公里河岸綠意造就生態宜居住所。社子公園更為住戶帶來朗闊棟距視野，城市綠洲饒富興味，不僅引人入勝更陪伴家人的童年與老年</div>
       </div>
     </div>
