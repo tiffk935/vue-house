@@ -238,6 +238,7 @@
     .send {
       font-size: size-m(21);
       width: size-m(318);
+      padding-left:size-m(10);
     }
 
     .control {

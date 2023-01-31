@@ -64,7 +64,7 @@
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+          `${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{

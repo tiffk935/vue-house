@@ -6,7 +6,7 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台北市士林區永平街80巷（社子公園正對面）",
+    address: "台北市士林區永平街80巷<br>（社子公園正對面）",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3100747201233!2d121.506633!3d25.091362999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x783957c8091784e9!2zMjXCsDA1JzI4LjkiTiAxMjHCsDMwJzIzLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1673942627678!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/qRifkLPU4Tdvc5hK6",
     phone: "02-8787-8888",
