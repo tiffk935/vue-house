@@ -93,13 +93,13 @@
     }
 
     .t1 {
-      font-size: size-m(19);
+      font-size: size-m(20);
       line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(12.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(30);
+        font-size: size(31);
         margin-bottom: size(26.5);
       }
     }

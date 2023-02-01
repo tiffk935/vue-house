@@ -98,12 +98,12 @@
   .t1 {
     top: size-m(529);
     left: size-m(215.3);
-    font-size: size-m(16);
+    font-size: size-m(17);
     line-height: 2;
       font-weight: 500;
     writing-mode: vertical-rl;
     @media screen and (min-width:768px) {
-      font-size: size(30);
+      font-size: size(31);
       line-height: 1.4;
       top: size(46.17);
       left: size(1676.01);
