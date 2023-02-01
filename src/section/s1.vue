@@ -9,7 +9,7 @@
     <div class="order-btn absolute" @click="scrollTo('.order')">立即預約</div>
     <div class="t3 absolute md:hidden fade">德林哲人之里 戶戶社子公園首席</div>
     <div class="t4 absolute md:hidden fade">23~39坪 ｜ 2~3房 ｜ 8787-8888</div>
-    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 23~39 坪 ｜ 2~3 房  8787-8888</div>
+    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 ｜ 23~39 坪 ｜ 2~3 房  8787-8888</div>
     <img class="group absolute md:hidden" src="@/section/s1/group-m.svg" />
     <img class="group absolute hidden md:block" src="@/section/s1/group.svg" />
     <div class="light">
@@ -161,7 +161,7 @@
   .t5 {
     @media screen and (min-width:768px) {
       top:calc(70% + (905 - 1080 * .7) * 100vw / 1920);
-      left: size(530);
+      left: size(513);
       font-size: size(29);
       line-height: size(34.8);
       font-weight: 500;
@@ -177,9 +177,9 @@
     left: size-m(48.85);
     filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
-      width: size(833);
+      width: size(870);
       top:calc(70% + (953 - 1080 * .7) * 100vw / 1920);
-      left: size(530);
+      left: size(513);
     filter: drop-shadow(0 0 size(20) #1A2E37);
     }
   }

@@ -5,7 +5,7 @@
     <div class="title absolute fade">THE INTERSECTION<br />OF FUTURE LIFE</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">三橋二塊一高定格雙北核心，<br  />四通八達暢意快遊。</div>
+        <div class="t1">三橋二快一高定格雙北核心，<br  />四通八達暢意快遊。</div>
         <div class="txt">本案位居雙北核心地帶，往北跨社子大橋連接石牌商圈、洲美快速道路對銜北士科園區，往南經延平北路、環河快速道路串連西區雙子星計畫；百齡橋直接士林商圈、重陽大橋接壤銀河灣計劃，國道一號兩端串連新莊副都心與大直重劃區…核心位置不言可諭。</div>
       </div>
       <div class="fade">
