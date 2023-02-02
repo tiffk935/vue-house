@@ -96,14 +96,14 @@
   }
 
   .t1 {
-    top: size-m(529);
-    left: size-m(215.3);
-    font-size: size-m(17);
-    line-height: 2;
-      font-weight: 500;
+    top: size-m(509);
+    left: size-m(210.3);
+    font-size: size-m(19);
+    line-height: 1.8;
+    font-weight: 500;
     writing-mode: vertical-rl;
     @media screen and (min-width:768px) {
-      font-size: size(31);
+      font-size: size(33);
       line-height: 1.4;
       top: size(46.17);
       left: size(1676.01);
@@ -111,17 +111,18 @@
   }
 
   .t2 {
-    top: size-m(529);
-    left: size-m(115.4);
-    font-size: size-m(13);
+    top: size-m(509);
+    left: size-m(90.4);
+    font-size: size-m(15);
     line-height: 1.8;
-      font-weight: 500;
+      font-weight: 300;
     letter-spacing: .1em;
     writing-mode: vertical-rl;
+    font-family: 'Noto sans TC';
     @media screen and (min-width:768px) {
-      top: size(423.42);
-      left: size(1666.63);
-      font-size: size(17);
+      top: size(413.42);
+      left: size(1656.63);
+      font-size: size(19);
       line-height: 1.7;
       font-weight: 200;
       letter-spacing: .2em;

@@ -124,25 +124,26 @@
     }
 
     .t1 {
-      font-size: size-m(20);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(31);
+        font-size: size(32);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(13);
+      font-size: size-m(15);
       line-height:1.5;
       margin-bottom: size-m(24.5);
       font-weight: 300;
     letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(17);
+        font-size: size(19);
         margin-bottom: size(70);
       font-weight: 200;
       letter-spacing: .1em;
@@ -152,8 +153,8 @@
   }
 
   .leaf {
-    width: size-m(88.25);
-    top: size-m(870);
+    width: size-m(85.25);
+    top: size-m(890);
     left: size-m(81.42);
     @media screen and (min-width:768px) {
       width: size(248.17);

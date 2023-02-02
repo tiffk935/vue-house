@@ -6,7 +6,7 @@
     <div class="title absolute fade">NATURE OF<br />GREEN ISLAND</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">生態社子島輕取地利，<br class="md:hidden" />台北的未來在您手中。</div>
+        <div class="t1">生態社子島輕取地利，<br />台北的未來在您手中。</div>
         <div class="txt">台北科技產業廊帶，包含南港生技、內科2.0、北士科園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為北市未來發展核心；社子島即將轉身人文永續、親水共生的明日聚落，台北未來50年就看這裡。</div>
       </div>
     </div>
@@ -115,42 +115,41 @@
 
   .content {
     width: size-m(290);
-    top: size-m(440.09);
+    top: size-m(420.09);
     left: size-m(42.5);
     text-align: justify;
     @media screen and (min-width:768px) {
       width: size(630);
-      top: size(334);
+      top: size(304);
       left: size(202);
     }
 
     .t1 {
-      font-size: size-m(20);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
-    letter-spacing: .03em;
+      margin-bottom: size-m(9.5);
+      letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(31);
+        font-size: size(33);
         margin-bottom: size(26.5);
-        letter-spacing: .01em;
+        letter-spacing: .03em;
       }
     }
 
     .txt {
-      font-size: size-m(13);
+      font-size: size-m(15);
       line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
     letter-spacing: 0em;
-      margin-bottom: size-m(49.74);
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(17);
-        margin-bottom: size(0);
-        padding-right: size(40);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
       letter-spacing: .1em;
-      line-height:1.7;
-
+        line-height:1.7;
       }
     }
   }
@@ -162,19 +161,19 @@
       top: size-m(642.33);
       left: size-m(42.5);
       @media screen and (min-width:768px) {
-        width: size(251);
+        width: size(271);
         top: size(615);
         left: size(202);
       }
 
       .t1 {
-        font-size: size-m(15);
+        font-size: size-m(16);
         line-height: size-m(19);
         font-weight: 700;
         margin-bottom: size-m(9);
         letter-spacing: .03em;
         @media screen and (min-width:768px) {
-          font-size: size(25);
+          font-size: size(27);
           line-height: size(34);
           margin-bottom: size(10);
         }
@@ -186,8 +185,9 @@
       font-weight: 300;
       text-align: justify;
       letter-spacing: 0em;
-        @media screen and (min-width:768px) {
-          font-size: size(15);
+      font-family: 'Noto sans TC';
+      @media screen and (min-width:768px) {
+      font-size: size(17);
       font-weight: 200;
       letter-spacing: .1em;
       line-height:1.7;

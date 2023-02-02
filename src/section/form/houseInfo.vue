@@ -103,7 +103,7 @@
 .info-flex {
     @media screen and (min-width:768px) {
         display: flex;
-        gap: size(125);
+        gap: size(165);
         align-items: center;
         flex-direction: row-reverse;
         width: 100%;
@@ -123,7 +123,7 @@
         margin: 0 auto;
 
         @media screen and (min-width:768px) {
-        width: size(549.41);
+        width: size(500.41);
         }
     }
 }

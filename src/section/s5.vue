@@ -83,7 +83,7 @@
 
   .content {
     width: size-m(290);
-    top: size-m(498.66);
+    top: size-m(478.66);
     left: size-m(42.5);
     text-align: justify;
     @media screen and (min-width:768px) {
@@ -93,27 +93,30 @@
     }
 
     .t1 {
-      font-size: size-m(20);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
+      margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(31);
+        font-size: size(33);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(13);
+      font-size: size-m(15);
       line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
     letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(17);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
       letter-spacing: .1em;
-        line-height:1.7; 
+        line-height:1.7;
       }
     }
   }

@@ -13,7 +13,7 @@
 
 .s9 {
   width: 100%;
-  height: size-m(600);
+  height: size-m(640);
   font-family: 'Noto Serif TC';
   background: #004B47;
   @media screen and (min-width:768px) {
@@ -21,73 +21,73 @@
   }
 
   .logo {
-    width: size-m(200.27);
-    top: size-m(128.84);
-    left: size-m(85.86);
+    width: size-m(280.27);
+    top: size-m(108.84);
+    left: size-m(45.86);
     @media screen and (min-width:768px) {
-      width: size(417.83);
-      top: size(181.84);
-      left: size(761);
+      width: size(561.83);
+      top: size(150.84);
+      left: size(667);
     }
   }
 
   .t1 {
-    top: size-m(334);
-    left: size-m(66.5);
-    font-size: size-m(14);
+    top: size-m(364);
+    left: size-m(45.86);
+    font-size: size-m(16);
     line-height: size-m(19);
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.14em;
     @media screen and (min-width:768px) {
-      top: size(620);
-      left: size(709);
-      font-size: size(30);
+      top: size(690);
+      left: size(672);
+      font-size: size(32);
       line-height: size(43);
     }
   }
 
   .t2 {
-    top: size-m(357);
-    left: size-m(66.5);
-    font-size: size-m(14);
+    top: size-m(387);
+    left: size-m(45.86);
+    font-size: size-m(16);
     line-height: size-m(20);
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.1em;
     @media screen and (min-width:768px) {
-      top: size(665);
-      left: size(707);
-      font-size: size(30);
+      top: size(735);
+      left: size(672);
+      font-size: size(32);
       line-height: size(46);
       letter-spacing: 0.1em;
     }
   }
 
   .t3 {
-    top: size-m(408);
-    left: size-m(89.5);
-    font-size: size-m(21);
+    top: size-m(452);
+    left: size-m(80.5);
+    font-size: size-m(23);
     line-height: size-m(29);
     color: #fff;
     font-weight: 500;
     letter-spacing: 0.08em;
     @media screen and (min-width:768px) {
-      top: size(807);
-      left: size(570);
-      font-size: size(38);
+      top: size(877);
+      left: size(500);
+      font-size: size(40);
       line-height: size(54);
     }
   }
 
   .logo2 {
-    width: size-m(193);
-    top: size-m(440.91);
-    left: size-m(89.5);
+    width: size-m(213);
+    top: size-m(490.91);
+    left: size-m(80.5);
     @media screen and (min-width:768px) {
-      width: size(392);
-      top: size(818);
-      left: size(973);
+      width: size(422);
+      top: size(888);
+      left: size(943);
     }
   }
 }

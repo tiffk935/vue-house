@@ -27,7 +27,7 @@
 
 .s6 {
   width: 100%;
-  height: size-m(930);
+  height: size-m(970);
   font-family: 'Noto Serif TC';
   z-index: 1;
   @media screen and (min-width:768px) {
@@ -97,36 +97,37 @@
     }
 
     .t1 {
-      font-size: size-m(20);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
+      margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(31);
+        font-size: size(33);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(13);
+      font-size: size-m(15);
       line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
     letter-spacing: 0em;
-      margin-bottom: size-m(36.5);
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(17);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
-        margin-bottom: size(119);
-        letter-spacing: .1em;
-        line-height:1.7; 
+      letter-spacing: .1em;
+        line-height:1.7;
       }
     }
   }
 
   .leaf {
     width: size-m(88.25);
-    top: size-m(-73.22);
+    top: size-m(-53.22);
     left: size-m(75.37);
     @media screen and (min-width:768px) {
       width: size(248.17);
