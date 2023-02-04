@@ -16,6 +16,8 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
+              <input type="text" placeholder="信箱" class="input w-full rounded-none" :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)" />
             <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
@@ -120,7 +122,7 @@
 
   .form {
     width: size(920);
-    height: 225px;
+    height: 275px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -285,7 +287,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg", "room_type"];
+const bypass = ["msg", "room_type", "city", "area"];
 
 //中文對照
 const formDataRef = ref([
