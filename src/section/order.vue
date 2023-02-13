@@ -23,10 +23,10 @@
               @input="(event) => (formData.age = event.target.value)" />
               <select class="select w-full rounded-none" v-model="formData.budget">
               <option value="" selected disabled>預算</option>
-              <option value="1500-2000">1500-2000</option>
-              <option value="2000-3000">2000-3000</option>
-              <option value="3000-4000">3000-4000</option>
-              <option value="4000以上">4000以上</option>
+              <option value="2000-2500">2000-2500</option>
+              <option value="2500-3000">2500-3000</option>
+              <option value="3000-3500">3000-3500</option>
+              <option value="3500以上">3500以上</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
