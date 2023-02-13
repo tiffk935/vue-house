@@ -468,7 +468,7 @@
 
 <style lang="scss">
 // @import "@/assets/style/bootstrap.css";
-// @import "@/assets/style/style.css";
+@import "@/assets/style/style.css";
 // @import "@/assets/style/animate.css";
 
 
