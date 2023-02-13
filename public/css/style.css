@@ -321,7 +321,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .kv{
 	background-size:cover;
 	background-repeat:no-repeat;
-	background-position:left bottom;
+	background-position:center center;
 	align-items:center;
 	justify-content:center;
 	align-content:center;
@@ -332,7 +332,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	height:100vh;
 	background-attachment:scroll;
 	display:flex;
-	min-height:768px;
+	min-height:700px;
 }
 
 .kv2{
@@ -353,6 +353,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 .kv-logo{
 	width:40%;
+}
+.kv-logo-n{
+width:20%;
+position: absolute;
+top: 15%;
+}
+
+.mobile-view{
+	display: none !important;
 }
 
 .kv-subtitle{
@@ -424,8 +433,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-size:1.8em;
 }
 .kv-title{
-	width:45vw;
-	margin-top:-11%;
+	width: 30%;
+	bottom: 15%;
+    position: absolute;
 }
 .eng{
 	position:absolute;
@@ -779,6 +789,11 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		width:75%;
 		margin-bottom: 20px !important;
 	}
+	
+	.kv-logo{
+		width:50%;
+		top:12%
+	}
 	.form-img01{
 		width:30%;
 		margin:-15% -15% -15% -15%;
@@ -792,7 +807,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		overflow:scroll;
 	}
 	.kv-title{
-		width:60%;
+		width:90%;
+		top:37%;
+		
 	}
 	.kv-brand{
 		width:90%;
@@ -1059,12 +1076,20 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 }
 
 @media (max-width: 767px){
+	.mobile-view{
+		display: block !important;
+	}
+	.pc-view{
+		display: none !important;
+	}
 	.kv-subtitle{
 		margin-top: 50px;
 		width: 75%;
 	}
 	.kv-mintitle{
 		width: 75%;
+		top: 30%;
+		bottom: auto;
 	}
 	.kv{
 		height:1024px;
@@ -1081,8 +1106,8 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 		height:300px;
 	}
 	.kv-title{
-		width:80%;
-		margin-top: -60%;
+		width:90%;
+		margin-top: 0%;
 	}
 	.eng{
 		height:100px;
