@@ -4,12 +4,11 @@
     <img data-aos="fade-up" data-aos-delay="0" class="logo absolute" src="@/section/s1/logo.svg" alt="巴克禮OnePark" />
     <img data-aos="fade-up" data-aos-delay="500" class="title absolute" src="@/section/s1/title.svg" alt="巴克禮OnePark" />
     <img  class="t2 absolute" src="@/section/s1/t2.svg" alt="巴克禮OnePark" />
-    <img  class="mask absolute" src="@/section/s1/mask.svg" alt="巴克禮OnePark" />
-    <img  class="style1 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
-    <img  class="style2 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
+    <img  class="style1 absolute hidden md:block" src="@/section/s1/style1.png" alt="巴克禮OnePark" />
+    <img  class="style2 absolute hidden md:block" src="@/section/s1/style2.png" alt="巴克禮OnePark" />
 
-    <img  class="style1 absolute md:hidden" src="@/section/s1/style_m.svg" alt="巴克禮OnePark" />
-    <img  class="style2 absolute md:hidden" src="@/section/s1/style_m.svg" alt="巴克禮OnePark" />
+    <img  class="style1 absolute md:hidden" src="@/section/s1/style1.png" alt="巴克禮OnePark" />
+    <img  class="style2 absolute md:hidden" src="@/section/s1/style2.png" alt="巴克禮OnePark" />
   </section>
 </template>
 
@@ -40,11 +39,12 @@
 .s1 {
   width: 100%;
   height: size-m(667);
-  background: #E60012;
+  //background: #E60012;
   overflow: hidden;
-  //background: url(@/section/s1/01.png);
+  background: url(@/section/s1/bg_m.webp);
   @media screen and (min-width:768px) {
     height: size(1080);
+    background: url(@/section/s1/bg.webp);
     
   }
 
@@ -130,31 +130,32 @@
     right: size-m(0);
     z-index: 1;
     transform-origin: 50% 100%;
-    transform: translateY(size-m(-667));  
+    transform: translateX(size-m(-667));  
     animation: sty 6s linear infinite;
+    opacity: .8;
     @media screen and (min-width:768px) {
       width: size(1920);
       bottom: size(0);
       right: size(0);
-      transform: translateY(-100%);
-      animation: stypc 6s linear infinite;
+      transform: translateX(-100%);
+      animation: stypc 20s linear infinite;
     }
     
   }
 
   .style2{ 
-    animation-delay: 3s;
+    animation-delay: 10s;
     }
 
   @keyframes sty {
   to {
-    transform: translateY(size-m(667));
+    transform: translateX(size-m(667));
   }
 }
 
 @keyframes stypc {
   to {
-    transform: translateY(100%);
+    transform: translateX(100%);
   }
 }
 
