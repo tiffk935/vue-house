@@ -2,11 +2,11 @@
   <section class="s5 relative text-white">
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute">GREEN LIGH OF<br />THE PARK</div>
+    <div class="title absolute fade">GREEN LIGH OF<br />THE PARK</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">戶戶獨享三千坪社子公園<br class="md:hidden" />綠金價值。</div>
-        <div class="txt">德林建設機構以住宅建築為開發導向， 1999年「國家藝術賞」引領都市建築美學，此後台北都會精華區域中的建築作品，如「青田」、「林与堂」等皆為人文質精的都市地標。</div>
+        <div class="t1">戶戶獨享三千坪社子公園，<br  />生活品質等同綠金價值。</div>
+        <div class="txt">社子地區以26平方公尺人均綠地比，居台北市所有行政區之冠，環島型河濱公園圍塑兩河文化之美， 9公里河岸綠意造就生態宜居住所。社子公園更為住戶帶來朗闊棟距視野，城市綠洲饒富興味，不僅引人入勝更陪伴家人的童年與老年</div>
       </div>
     </div>
     <div class="leaf absolute">
@@ -83,7 +83,7 @@
 
   .content {
     width: size-m(290);
-    top: size-m(498.66);
+    top: size-m(478.66);
     left: size-m(42.5);
     text-align: justify;
     @media screen and (min-width:768px) {
@@ -93,25 +93,30 @@
     }
 
     .t1 {
-      font-size: size-m(19);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
+      margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(30);
+        font-size: size(33);
         margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(12);
-      line-height:1.7;
+      font-size: size-m(15);
+      line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
-    letter-spacing: .1em;
+    letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(16);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
+      letter-spacing: .1em;
+        line-height:1.7;
       }
     }
   }

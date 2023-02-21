@@ -9,7 +9,7 @@
       </div>
       <div class="content absolute">
         <div class="fade w-full md:flex">
-          <div class="t1">轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
+          <div class="t1">社子未來轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
           <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
         </div>
       </div>
@@ -120,14 +120,14 @@
 
   .content {
     width: size-m(290);
-    top: size-m(61.79);
+    top: size-m(41.79);
     left: size-m(42.5);
     pointer-events: none;
     text-align: justify;
     @media screen and (min-width:768px) {
-      width: size(1171.06);
+      width: size(1400.06);
       top: size(116);
-      left: size(374);
+      left: size(235);
       display: flex;
     }
 
@@ -139,28 +139,31 @@
     }
 
     .t1 {
-      font-size: size-m(19);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(30);
-        margin-bottom: size(0);
+        font-size: size(33);
+        margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(12);
-      line-height:1.7;
-      font-weight: 300;
-    letter-spacing: .1em;
+      font-size: size-m(15);
+      line-height:1.5;
       margin-bottom: size-m(24.5);
+      font-weight: 300;
+    letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        width: size(589.06);
-        font-size: size(16);
+        width: size(700);
+        font-size: size(19);
+        margin-bottom: size(30);
       font-weight: 200;
-        margin-bottom: size(0);
+      letter-spacing: .1em;
+        line-height:1.7;
       }
     }
   }

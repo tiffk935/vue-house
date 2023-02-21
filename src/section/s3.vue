@@ -14,11 +14,12 @@
             centeredSlides: false,
           }
         }"
-      >
-      <!-- :autoplay="{
+        :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
-        }" -->
+        }"
+      >
+        
         <swiper-slide>
           <div class="p1 parallax">
             <div class="txt"><span>2015</span>汐止區  哲人德林</div>
@@ -71,15 +72,9 @@
       <div class="line"></div>
     </div>
     <div class="content absolute fade">
-      <div class="t1">簡約層次美學構型，<br />台北都會精華見芳蹤。</div>
+      <div class="t1">簡約層次人文美學構型，<br />中正區都會精華遍見芳蹤。</div>
       <div class="txt">德林建設機構位於中正首善之地的建築作品，如「青田」、「林与堂」、「泰安觀止」體現因區段而生的人文溫度，近年落成的「河畔哲人」與「哲人德林」以細緻建築美學，賦予城市街廓精緻地貌，眼見為憑的美學形構，正等待您的親眼見證。</div>
     </div>
-
-    <!-- <FsLightbox
-      :toggler="sliderToggler"
-      :slide="slide"
-      :sources="sources"
-    />  -->
 
   </section>
 </template>
@@ -96,10 +91,6 @@
     height: size(1080);
     margin-bottom: size(0);
     background: linear-gradient(66deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
-  }
-
-  .fslightbox-toolbar-button:nth-child(1) {
-    display: none;
   }
 
   .slider {
@@ -176,8 +167,8 @@
           @media screen and (min-width:768px) {
           width: calc(100% - #{size(28 * 2)});
           left:size(28);
-            font-size: size(23);
-            line-height: size(33.05);
+            font-size: size(16);
+            line-height: size(20.05);
           padding: 1em 1em size(22) size(28.21);
             text-shadow: 0px size(1) size(20) rgba(0, 0, 0, 1);
           }
@@ -187,8 +178,8 @@
             font-size: size-m(18);
             line-height: size-m(25.87);
             @media screen and (min-width:768px) {
-              font-size: size(28);
-              line-height: size(40.24);
+              font-size: size(18);
+              line-height: size(30.24);
             }
           }
         }
@@ -298,27 +289,30 @@
     }
 
     .t1 {
-      font-size: size-m(19);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
+      margin-bottom: size-m(9.5);
     letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(30);
-        margin-bottom: size(34.5);
+        font-size: size(33);
+        margin-bottom: size(26.5);
       }
     }
 
     .txt {
-      font-size: size-m(12);
-      line-height:1.7;
+      font-size: size-m(15);
+      line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
-      text-align: justify;
-    letter-spacing: .1em;
+    letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(16);
-        line-height: size(27.2);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
+      letter-spacing: .1em;
+        line-height:1.7;
       }
     }
   }
@@ -331,13 +325,6 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper";
-// import FsLightbox from "fslightbox-vue/v3";
-// import slide1_full from '@/section/s3/1.jpg';
-// import slide2_full from '@/section/s3/2.jpg';
-// import slide3_full from '@/section/s3/3.jpg';
-// import slide4_full from '@/section/s3/4.jpg';
-// import slide5_full from '@/section/s3/5.jpg';
-// import slide6_full from '@/section/s3/6.jpg';
 
 export default {
   props: ['setFsLightbox'],
@@ -351,7 +338,6 @@ export default {
   components: {
     Swiper,
     SwiperSlide,
-    // FsLightbox,
   },
   setup() {
     return {

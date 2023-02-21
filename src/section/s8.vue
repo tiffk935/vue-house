@@ -3,30 +3,30 @@
     <div class="bg absolute"></div>
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute">NATURE OF<br />GREEN ISLAND</div>
+    <div class="title absolute fade">NATURE OF<br />GREEN ISLAND</div>
     <div class="content absolute">
       <div class="fade">
-        <div class="t1">生態社子島輕取地利，<br class="md:hidden" />台北的未來在您手中。</div>
-        <div class="txt">台北未科技產業廊帶，包含南港生技聚落、內科2.0計劃、北投士林科技園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為台北市未來發展的核心命題；可開發面積約118公頃的社子島即將轉身人文永續、親水共生的明日聚落，並於2022年底完成公告徵收，台北未來50年就看這裡。</div>
+        <div class="t1">生態社子島輕取地利，<br />台北的未來在您手中。</div>
+        <div class="txt">台北科技產業廊帶，包含南港生技、內科2.0、北士科園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為北市未來發展核心；社子島即將轉身人文永續、親水共生的明日聚落，台北未來50年就看這裡。</div>
       </div>
     </div>
     
     <div class="grid">
       <div class="fade_s8">
-        <div class="t1">︳生態社子島計劃</div>
-        <div class="txt">親水生態綠軸貫穿全島，輕軌與捷運北環段交通格局展開</div>
+        <div class="t1">︳生態社子島</div>
+        <div class="txt">親水生態綠軸貫穿全島，輕軌計劃與捷運北環段交通格局展開</div>
+      </div>
+      <div class="fade_s8">
+        <div class="t1">︳北士科園區</div>
+        <div class="txt">結合頂尖醫療與科技資源，產業強勢進駐，目標年產值10兆元</div>
       </div>
       <div class="fade_s8">
         <div class="t1">︳士林再生計畫</div>
-        <div class="txt">士電、新紡、士紙與捷運TOD開發案，翻轉北區計劃大未來</div>
-      </div>
-      <div class="fade_s8">
-        <div class="t1">︳北投士林科技園區</div>
-        <div class="txt">結合頂尖智慧醫療與科技資源，目標年產值10兆元</div>
+        <div class="txt">士電、新紡、士紙與捷運TOD開發案，建設軸線能像移轉</div>
       </div>
       <div class="fade_s8">
         <div class="t1">︳銀河灣計劃</div>
-        <div class="txt">蘆社大橋串連北士科園區、生態社子島，成為北方開發大型腹地</div>
+        <div class="txt">蘆社大橋串連北士科園區、生態社子島，北區發展大型腹地</div>
       </div>
     </div>
 
@@ -115,38 +115,41 @@
 
   .content {
     width: size-m(290);
-    top: size-m(440.09);
+    top: size-m(420.09);
     left: size-m(42.5);
     text-align: justify;
     @media screen and (min-width:768px) {
       width: size(630);
-      top: size(334);
+      top: size(304);
       left: size(202);
     }
 
     .t1 {
-      font-size: size-m(19);
+      font-size: size-m(21);
       line-height:1.34;
       font-weight: 700;
-      margin-bottom: size-m(12.5);
-    letter-spacing: .03em;
+      margin-bottom: size-m(9.5);
+      letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(30);
+        font-size: size(33);
         margin-bottom: size(26.5);
+        letter-spacing: .03em;
       }
     }
 
     .txt {
-      font-size: size-m(12);
-      line-height:1.7;
+      font-size: size-m(15);
+      line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
-    letter-spacing: .1em;
-      margin-bottom: size-m(49.74);
+    letter-spacing: 0em;
+    font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
-        font-size: size(16);
-        margin-bottom: size(0);
-        padding-right: size(40);
+        font-size: size(19);
+        margin-bottom: size(70);
       font-weight: 200;
+      letter-spacing: .1em;
+        line-height:1.7;
       }
     }
   }
@@ -155,43 +158,47 @@
     .fade_s8 {
       position: absolute;
       width: size-m(130);
-      top: size-m(672.33);
+      top: size-m(642.33);
       left: size-m(42.5);
       @media screen and (min-width:768px) {
-        width: size(251);
-        top: size(645);
+        width: size(271);
+        top: size(615);
         left: size(202);
       }
 
       .t1 {
-        font-size: size-m(14);
+        font-size: size-m(16);
         line-height: size-m(19);
         font-weight: 700;
-        margin-bottom: size-m(3);
-    letter-spacing: .03em;
+        margin-bottom: size-m(9);
+        letter-spacing: .03em;
         @media screen and (min-width:768px) {
-          font-size: size(25);
+          font-size: size(27);
           line-height: size(34);
           margin-bottom: size(10);
         }
       }
 
       .txt {
-        font-size: size-m(12);
-      line-height:1.7;
+      font-size: size-m(13);
+      line-height:1.5;
       font-weight: 300;
-        text-align: justify;
-        @media screen and (min-width:768px) {
-          font-size: size(14);
+      text-align: justify;
+      letter-spacing: 0em;
+      font-family: 'Noto sans TC';
+      @media screen and (min-width:768px) {
+      font-size: size(17);
       font-weight: 200;
+      letter-spacing: .1em;
+      line-height:1.7;
         }
       }
 
       &:nth-child(2) {
-        top: size-m(672.33);
+        top: size-m(642.33);
         left: size-m(202.5);
         @media screen and (min-width:768px) {
-          top: size(645);
+          top: size(615);
           left: size(536);
         }
       }
@@ -200,7 +207,7 @@
         top: size-m(769.33);
         left: size-m(42.5);
         @media screen and (min-width:768px) {
-          top: size(802);
+          top: size(782);
           left: size(202);
         }
       }
@@ -209,7 +216,7 @@
         top: size-m(769.33);
         left: size-m(202.5);
         @media screen and (min-width:768px) {
-          top: size(802);
+          top: size(782);
           left: size(536);
         }
       }

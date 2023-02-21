@@ -24,12 +24,6 @@
     <Order :setModal="setModal" />
   </div>
 
-  <!-- <FsLightbox
-    :toggler="sliderToggler"
-    :slide="slide"
-    :sources="sources2"
-  />  -->
-
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
@@ -53,6 +47,8 @@
     </div>
   </div>
 
+  <Policy />
+
   <!-- Modal -->
   <input type="checkbox" v-model="modalOpen" id="contact-modal" class="modal-toggle" />
   <div class="modal -mt-20 md:-mt-72">
@@ -67,9 +63,8 @@
           '接待會館'
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
-      }}</div>
+      <div class="text-md mt-4" v-html="modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :info.address">
+      </div>
       <!-- btn -->
       <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
@@ -104,6 +99,10 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+.text-md{
+  text-align: center;
+}
+
 .home {
   width: 100%;
   height: 100vh;
@@ -134,7 +133,7 @@
     font-weight: 500;
     @media screen and (min-width:768px) {
       height: size(50);
-      font-size: size(20);
+      font-size: size(16);
       line-height: size(29);
     }
 
@@ -143,11 +142,14 @@
       line-height: size-m(30);
       margin-right: size-m(10);
       @media screen and (min-width:768px) {
-        font-size: size(28);
+        font-size: size(18);
         line-height: size(40);
         margin-right: size(10);
       }
     }
+  }
+  .text-center{
+    text-align: center;
   }
 
   .close {
@@ -205,6 +207,7 @@ import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
+import Policy from "@/section/form/policy.vue"
 import { nextTick, onMounted, ref } from "vue"
 
 // import AOS from 'aos';
@@ -212,7 +215,6 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import FsLightbox from "fslightbox-vue/v3";
 import slide1_full from '@/section/s3/1.jpg';
 import slide2_full from '@/section/s3/2.jpg';
 import slide3_full from '@/section/s3/3.jpg';
@@ -290,16 +292,18 @@ onMounted(() => {
     smallScrollBar.addListener(ScrollTrigger.update);
     smallScrollBarRef.value = smallScrollBar;
 
-    gsap.set('.home .fade', {opacity: 0});
+    gsap.set('.home .fade', {opacity: 0, yPercent: 50});
     setTimeout(() => {
       gsap.utils.toArray(".home .fade").forEach(item => {
         gsap.to(item, {
           opacity: 1,
+          yPercent: 0,
+          duration: 0.6,
           ease: 'none',
           scrollTrigger: {
             scroller: ".home",
             trigger: item,
-            start: "center bottom",
+            start: "center 90%",
             toggleActions: "play none none reverse",
           },
         });
@@ -309,16 +313,16 @@ onMounted(() => {
         scrollTrigger: {
           scroller: ".home",
           trigger: document.querySelectorAll('.s8 .fade_s8')[0],
-          start: "top 90%",
+          start: "top 85%",
           toggleActions: "play none none reverse",
         }
       });
 
       s8TL
-        .from(document.querySelectorAll('.s8 .fade_s8')[0], { opacity: 0, duration: 0.6 }, 0)
-        .from(document.querySelectorAll('.s8 .fade_s8')[1], { opacity: 0, duration: 0.6 }, 0.2)
-        .from(document.querySelectorAll('.s8 .fade_s8')[2], { opacity: 0, duration: 0.6 }, 0.4)
-        .from(document.querySelectorAll('.s8 .fade_s8')[3], { opacity: 0, duration: 0.6 }, 0.6)
+        .from(document.querySelectorAll('.s8 .fade_s8')[0], { opacity: 0, yPercent: 50, duration: 0.6 }, 0)
+        .from(document.querySelectorAll('.s8 .fade_s8')[1], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.2)
+        .from(document.querySelectorAll('.s8 .fade_s8')[2], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.4)
+        .from(document.querySelectorAll('.s8 .fade_s8')[3], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.6)
       
       gsap.utils.toArray(".home .parallax").forEach(item => {
         gsap.set(item, {backgroundPosition: '50% 0%'});

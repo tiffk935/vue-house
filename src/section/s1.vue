@@ -7,13 +7,13 @@
     <div class="t1 absolute fade">生<br />有<br />熱<br />烈<br />，<br />藏<br />於<br />俗<br />常</div>
     <div class="t2 absolute fade">公<br />園<br />建<br />築<br />為<br />您<br />而<br />來<br />。</div>
     <div class="order-btn absolute" @click="scrollTo('.order')">立即預約</div>
-    <div class="t3 absolute md:hidden fade">德林哲人之里<br />戶戶公園首席</div>
-    <div class="t4 absolute md:hidden fade"><span>23~39坪｜2~3房</span><br />8787-8888</div>
-    <div class="t5 absolute hidden md:block fade">德林哲人之里  戶戶公園首席  23~39 坪 ｜ 2~3 房  8787-8888</div>
+    <div class="t3 absolute md:hidden fade">德林哲人之里 戶戶社子公園首席</div>
+    <div class="t4 absolute md:hidden fade">23~39坪 ｜ 2~3房 ｜ 8787-8888</div>
+    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 ｜ 23~39 坪 ｜ 2~3 房  8787-8888</div>
     <img class="group absolute md:hidden" src="@/section/s1/group-m.svg" />
     <img class="group absolute hidden md:block" src="@/section/s1/group.svg" />
     <div class="light">
-      <img class="absolute" src="@/section/s1/sun.png" />
+      <img class="absolute" src="@/section/s1/sun.jpg" />
     </div>
   </section>
 </template>
@@ -62,11 +62,11 @@
   .logo {
     width: size-m(86);
     top:calc(30% + (99 - 812 * .30) * 100vw / 375);
-    left: size-m(144.5);
+    left: size-m(148.5);
     filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
       width: size(140.74);
-      top:calc(25% + (105 - 1080 * .25) * 100vw / 1920);
+      top:calc(27% + (105 - 1080 * .25) * 100vw / 1920);
       left: size(896);
     filter: drop-shadow(0 0 size(20) #1A2E37);
     }
@@ -84,7 +84,7 @@
       width: size(36);
       top:calc(45% + (382 - 1080 * .45) * 100vw / 1920);
       left: size(963);
-      font-size: size(30);
+      font-size: size(28);
     filter: drop-shadow(0 0 size(20) #204252);
     }
   }
@@ -135,7 +135,7 @@
   .t3 {
     top: size-m(593.73);
     top:calc(80% + (593.73 - 812 * .80) * 100vw / 375);
-    left: size-m(62.85);
+    left: size-m(48.85);
     font-size: size-m(19);
     line-height: size-m(24);
     font-weight: 500;
@@ -143,24 +143,25 @@
   }
 
   .t4 {
-    top: size-m(586.73);
-    top:calc(80% + (586.73 - 812 * .80) * 100vw / 375);
-    left: size-m(185.15);
-    font-size: size-m(25);
+    top: size-m(620.73);
+    top:calc(80% + (615.73 - 812 * .80) * 100vw / 375);
+    left: size-m(48.85);
+    font-size: size-m(18);
     line-height: size-m(27);
     font-weight: 500;
-    letter-spacing: 0.02em;
+    letter-spacing: 0.04em;
 
     span {
-      font-size: size-m(16);
+      font-size: size-m(19);
       line-height: size-m(19.2);
+      margin-right: size-m(30);
     }
   }
 
   .t5 {
     @media screen and (min-width:768px) {
       top:calc(70% + (905 - 1080 * .7) * 100vw / 1920);
-      left: size(565);
+      left: size(513);
       font-size: size(29);
       line-height: size(34.8);
       font-weight: 500;
@@ -170,15 +171,15 @@
   }
 
   .group {
-    width: size-m(247.83);
-    top: size-m(649.9);
-    top:calc(80% + (649.9 - 812 * .80) * 100vw / 375);
-    left: size-m(63.11);
+    width: size-m(270.83);
+    top: size-m(652.9);
+    top:calc(80% + (645.9 - 812 * .80) * 100vw / 375);
+    left: size-m(48.85);
     filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
-      width: size(792.55);
+      width: size(870);
       top:calc(70% + (953 - 1080 * .7) * 100vw / 1920);
-      left: size(563.72);
+      left: size(513);
     filter: drop-shadow(0 0 size(20) #1A2E37);
     }
   }
@@ -192,10 +193,11 @@
     left: size-m(-368.06);
     opacity: 0.8;
     max-width: none;
-    animation: sun 6s linear infinite alternate;
+
+    //animation: sun 6s linear infinite alternate;
     @media screen and (min-width:768px) {
       transform: rotate(22.47deg);
-      width: size(1607.19);
+      width: size(1307.19);
       top: size(-657.43);
       left: size(-367.86);
     }

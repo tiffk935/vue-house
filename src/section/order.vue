@@ -16,6 +16,8 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
+              <input type="text" placeholder="信箱" class="input w-full rounded-none" :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)" />
             <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
@@ -50,7 +52,7 @@
               class="modal-button text-[#28D0C2] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
-        <Policy />
+        <!-- <Policy /> -->
 
         <!-- Recaptcha -->
         <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
@@ -120,7 +122,7 @@
 
   .form {
     width: size(920);
-    height: 225px;
+    height: 275px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -238,6 +240,7 @@
     .send {
       font-size: size-m(21);
       width: size-m(318);
+      padding-left:size-m(10);
     }
 
     .control {
@@ -248,7 +251,7 @@
 </style>
 
 <script setup>
-import Policy from "@/section/form/policy.vue"
+// import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
@@ -284,7 +287,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg", "room_type"];
+const bypass = ["msg", "room_type", "city", "area"];
 
 //中文對照
 const formDataRef = ref([
@@ -371,18 +374,7 @@ const send = () => {
     sending.value = true
 
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
+      ``,
       {
         method: "GET"
       }

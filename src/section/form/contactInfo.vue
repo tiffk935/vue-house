@@ -3,24 +3,24 @@
     <!-- <div class="border absolute"></div> -->
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-none" @click="setModal('phone')">
+      <div class="flex contact-item justify-center items-center rounded-none" @click="setModal('phone')">
         <img src="@/section/form/phone.svg" alt="德林哲里" srcset="" />
-        <div class="flex-1">{{ info.phone }}</div>
+        <div class="">{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none" @click="setModal('fb')">
+      <div class="flex contact-item justify-center items-center rounded-none" @click="setModal('fb')">
         <img src="@/section/form/messenger.svg" alt="德林哲里" srcset="" />
-        <div class="flex-1">FB 諮詢</div>
+        <div class="">FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="德林哲里" srcset="" />
-        <div class="flex-1">前往粉絲專頁</div>
+        <div class="">前往粉絲專頁</div>
       </div>
     </div>
     <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div>{{ info.address }}</div>
+        <div v-html="info.address"></div>
       </div>
-      <div class="flex contact-item justify-between items-center md:rounded-none" @click="setModal('gmap')">
+      <div class="flex contact-item justify-center items-center md:rounded-none" @click="setModal('gmap')">
         <img src="@/section/form/gmap.svg" alt="德林哲里" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -78,9 +78,9 @@
       border: 1px solid #fff;
       color: #fff;
       width: 100%;
-      padding: 0 size(55);
+      padding: size(10) size(40);
       font-size: size(16);
-      line-height: 3.8;
+      line-height: 1.5;
       letter-spacing: 0.1em;
       max-width: size(280);
       z-index: 1;
@@ -125,6 +125,7 @@
         max-height: size(27);
         filter: brightness(0) invert(1);
         transition: all .5s;
+        margin-right: size(15);
       }
 
       &.address {
@@ -189,6 +190,7 @@
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
+        
         // filter: brightness(0) invert(1);
       }
 
@@ -232,24 +234,26 @@
 
       &.address-wrap>div>div {
         line-height: 1.5;
-        padding: size-m(15) 0;
+        padding: size-m(0) 0;
       }
 
       .contact-item {
-        padding: 0 size-m(65);
+        padding: size-m(15) size-m(55);
         font-size: size-m(16);
         max-width: 100%;
-        justify-content: space-around;
+        //justify-content: space-around;
 
 
         img {
           max-width: size-m(27);
-          height: auto;
-          max-height: size-m(27);
+          max-height: size-m(25);
+          width: size-m(27);
+          height: size-m(27);
+          margin-right: size-m(10);
         }
 
         &.address {
-          padding: 0 0;
+          padding: size-m(15) 0;
 
           &::before {
             width: 100%;
