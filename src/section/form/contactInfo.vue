@@ -16,7 +16,7 @@
       </div>
       <div class="flex contact-item justify-center items-center btfanpage" @click="open1()">
         <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
-        <div >華友聯預約官網</div>
+        <div >我要預約</div>
       </div>
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap overflow-hidden">
@@ -53,7 +53,7 @@
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open1()">
       <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
-      <div>華友聯<br>預約官網</div>
+      <div>我要預約</div>
     </div>
   </div>
 
