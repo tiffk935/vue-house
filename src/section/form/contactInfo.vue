@@ -2,24 +2,28 @@
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="華友聯next21" srcset="" />
-        <div class="flex-1">{{ info.phone }}</div>
+        <div >{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="華友聯next21" srcset="" />
-        <div class="flex-1">FB 諮詢</div>
+        <div >FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="華友聯next21" srcset="" />
-        <div class="flex-1">前往粉絲專頁</div>
+        <div >前往粉絲專頁</div>
+      </div>
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open1()">
+        <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
+        <div >華友聯預約官網</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
+    <div class="address-wrap flex justify-center w-full contact-item-box no-gap overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item map-btn justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item map-btn justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -46,6 +50,10 @@
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
       <div>地圖導航</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open1()">
+      <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
+      <div>華友聯<br>預約官網</div>
     </div>
   </div>
 
@@ -114,7 +122,7 @@
       background-color: #A7A7A7;
       color: #fff;
       width: 100%;
-      padding: 0 size(55);
+      //padding: 0 size(20);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.1em;
@@ -135,6 +143,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
+        margin-right:size(10);
         filter: brightness(0) invert(1);
         transition: all .5s;
       }
@@ -210,12 +219,13 @@
     .contact-item {
       height: 100%;
       background-color: #C30D23;
-      font-size: size-m(16);
+      font-size: size-m(12);
       font-weight: 400;
       color: #fff;
 
+
       img {
-        margin-bottom: size-m(5);
+        margin-bottom: size-m(3);
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
@@ -305,6 +315,9 @@ const go = () => {
 
 const open = () => {
   window.open(info.fbLink);
+}
+const open1 = () => {
+  window.open(info.Link1);
 }
 
 const smoothScroll = inject('smoothScroll')
