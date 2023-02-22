@@ -11,7 +11,7 @@ export default {
     googleLink: "https://goo.gl/maps/FssAE4m6DZBbsDYQ7",
     phone: "07-322-2121",
     fbLink: "https://www.facebook.com/hylNext21",
-    Link1: "https://official.huakai.com.tw/ReserveConstruction/rckhbsj8",
+    Link1: "https://official.huakai.com.tw/ReserveConstruction/rckhbsj8?source=other&source_note=%E4%B8%80%E9%A0%81%E5%BC%8F%E7%B6%B2%E7%AB%99#reserve",
     fbMessage: "https://m.me/hylNext21/",
     caseName: caseName,
     houseInfos: [
