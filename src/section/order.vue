@@ -6,7 +6,7 @@
       <div class="order3 relative">
         <div class="rect md:hidden"></div>
         <!-- Title -->
-        <div class="order-title relative text-center text-[#000]">{{ info.order.title }}</div>
+        <div class="order-title relative text-center text-[#8D6F2A]">{{ info.order.title }}</div>
         <!-- Title Image -->
         <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="清景麟國家公園" srcset=""
           data-aos="fade" data-aos-duration="1000">
@@ -108,13 +108,14 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, #EAEAEA 0%, rgba(234, 234, 234, 0) 60%);
+    background: linear-gradient(180deg, #F0F9FF 0%, rgba(234, 234, 234, 0) 60%);
   }
 
   .order-title {
     font-size: size(43);
     font-weight: 500;
     margin-bottom: size(45);
+    
   }
 
   .z-10 {
