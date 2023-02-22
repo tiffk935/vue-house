@@ -2,12 +2,12 @@
     <div class="flex flex-col md:flex-row items-center justify-between bg-white">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
-                <div class="title font-['Noto_Sans_TC']">建案資訊</div>
+            <div class="info-box mx-auto mt-4 mb-4 flex flex-col items-center justify-center">
+                <div class="title font-['Noto_Serif_TC']">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item font-bold flex items-center w-full whitespace-nowrap" v-for="(item, idx) in info.houseInfos">
-                        <p class="mr-5 border-l-2 border-[#E60012] text-[#E60012] pl-2 font-bold">{{ item[0] }}</p>
-                        <img v-if="idx == 3" class='logo2' src='@/section/form/logo2.svg'>
+                        <p class="mr-3 border-l-2 border-[#0070C6] text-[#595757] pl-2 font-bold">{{ item[0] }}</p>
+                        <img v-if="idx == 10" class='logo2' src='@/section/form/logo2.svg'>
                         <p v-else class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
     .title {
         width: 100%;
         font-size: size(43);
-        font-weight: 500;
+        font-weight: 700;
         margin-bottom: size(23);
         color: #000;
     }
@@ -71,10 +71,10 @@
         }
 
         .info-items {
-            row-gap: size-m(20);
+            row-gap: size-m(17);
 
             .item {
-                font-size: size-m(14);
+                font-size: size-m(13);
             }
         }
 

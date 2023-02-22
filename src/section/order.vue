@@ -19,20 +19,10 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-              <input type="text" placeholder="年齡" class="input w-full rounded-none" :value="formData.age"
-              @input="(event) => (formData.age = event.target.value)" />
-              <select class="select w-full rounded-none" v-model="formData.budget">
-              <option value="" selected disabled>預算</option>
-              <option value="2000-2500">2000-2500</option>
-              <option value="2500-3000">2500-3000</option>
-              <option value="3000-3500">3000-3500</option>
-              <option value="3500以上">3500以上</option>
-            </select>
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
+              <option value="2房">2房</option>
               <option value="3房">3房</option>
-              <option value="3+1房">3+1房</option>
-              <option value="店面">店面</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
@@ -69,7 +59,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#000000] text-white rounded-none" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#135689] text-white rounded-none" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -113,7 +103,7 @@
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(45);
     
   }
@@ -132,7 +122,7 @@
 
   .form {
     width: size(920);
-    height: 410px;
+    height: 310px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -170,7 +160,8 @@
 
   .control {
     font-size: size(16);
-    color: #000;
+    color: #16397C;
+    font-weight: 600;
     position: relative;
   }
 }
@@ -276,8 +267,6 @@ const bypass = ["msg","age"];
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "年齡", //age
-  "預算", //budget
   "房型", //room_type
   // "信箱", //email
   "居住縣市", //city
@@ -363,7 +352,7 @@ const send = () => {
       &room_type=${formData.room_type}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=年齡:${formData.age};預算:${formData.budget};留言:${formData.msg}
+      &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}

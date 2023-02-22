@@ -1,4 +1,4 @@
-const caseName = "巴克禮OnePark"
+const caseName = "艾美新時代"
 
 export default {
     meta: {
@@ -6,21 +6,23 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台南市東區崇明路生產路口",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.3359038210615!2d120.22337065830482!3d22.96529247234698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75fdfe935897%3A0x1e1ef78865d529f7!2z5riF5pmv6bqf5be05YWL56auIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1670911072451!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/HYqM9bdzKYpUWXyK8",
-    phone: "06-2602-777",
-    fbLink: "https://www.facebook.com/100088627030121/",
-    fbMessage: "https://m.me/100088627030121/",
+    address: "台南市東區小東路196號旁（與光明街口）",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3672.6555357179136!2d120.22793899999999!3d22.999691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU5JzU4LjkiTiAxMjDCsDEzJzQwLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1677048418326!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/e1VLsqyeWzG6TDPn6",
+    phone: "06-2083366",
+    fbLink: "https://www.facebook.com/100090172361791/",
+    fbMessage: "https://m.me/100090172361791/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "清景麟地產、襄陽國際、豐鉅地產"],
-        ["基地面積", "約2027坪"],
-        ["房型規劃", "3房,3+1房"],
-        ["建築代銷", ""],
+        ["投資興建", "三地開發地產股份有限公司"],
+        ["坪數規劃", "2-3房"],
+        ["房型規劃", "22-32坪"],
+        ["聯絡電話", "06-2083366"],
+        ["代銷團隊", "悅揚國際實業有限公司"],
+        ["接待中心", "台南市東區小東路196號旁(與光明街口）"],
     ],
-    gtmCode: ["GTM-K9N5LN9","GTM-M87MK5M"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    gtmCode: ["GTM-K2FBNVJ","GTM-M87MK5M"], // 可放置多個
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
