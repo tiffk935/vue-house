@@ -246,8 +246,6 @@ const toast = useToast()
 const formData = reactive({
   name: "",
   phone: "",
-  age: "",
-  budget: "",
   room_type: "",
   // email: "",
   city: "",
@@ -261,7 +259,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","city","area"];
+const bypass = ["msg","city","area","room_type"];
 
 //中文對照
 const formDataRef = ref([
