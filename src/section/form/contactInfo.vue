@@ -2,24 +2,24 @@
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <!--div class="logo"></div-->
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="艾美新時代" srcset="" />
-        <div class="flex-1">{{ info.phone }}</div>
+        <div >{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="艾美新時代" srcset="" />
-        <div class="flex-1">FB 諮詢</div>
+        <div >FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center rounded-none btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="艾美新時代" srcset="" />
-        <div class="flex-1">前往粉絲專頁</div>
+        <div >前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-none overflow-hidden">
+    <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="艾美新時代" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -67,7 +67,7 @@
           `${info.address}`
       }}</div>
       <!-- btn -->
-      <div :id="modalType == 'phone' && $isMobile() ? 'phonegtm' : ''" class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div :id="modalType == 'phone' && $isMobile() ? 'phonegtm' : ''" class="btn btn-lg btn-color  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -111,7 +111,7 @@
       background-color: #135689;
       color: #ffffff;
       width: 100%;
-      padding: 0 size(55);
+      padding: 0 size(0);
       font-size: size(16);
       line-height: 3.8;
       font-weight:600;
@@ -128,6 +128,7 @@
         img {
 
           filter: brightness(0) invert(1);
+          
         }
       }
 
@@ -137,6 +138,11 @@
         max-height: size(27);
         filter: brightness(0) invert(1);
         transition: all .5s;
+        margin-right:size(20);
+      }
+
+      .btn-color{
+       background-color: #135689; 
       }
 
       &.address {
