@@ -21,13 +21,13 @@
               @input="(event) => (formData.phone = event.target.value)" />
               <input type="text" placeholder="年齡" class="input w-full rounded-none" :value="formData.age"
               @input="(event) => (formData.age = event.target.value)" />
-              <select class="select w-full rounded-none" v-model="formData.budget">
+              <!-- <select class="select w-full rounded-none" v-model="formData.budget">
               <option value="" selected disabled>預算</option>
               <option value="2000-2500">2000-2500</option>
               <option value="2500-3000">2500-3000</option>
               <option value="3000-3500">3000-3500</option>
               <option value="3500以上">3500以上</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="3房">3房</option>
@@ -131,7 +131,7 @@
 
   .form {
     width: size(920);
-    height: 410px;
+    height: 350px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -269,7 +269,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","age"];
+const bypass = ["msg","age","budget"];
 
 //中文對照
 const formDataRef = ref([
@@ -362,7 +362,7 @@ const send = () => {
       &room_type=${formData.room_type}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=年齡:${formData.age};預算:${formData.budget};留言:${formData.msg}
+      &msg=年齡:${formData.age};留言:${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
