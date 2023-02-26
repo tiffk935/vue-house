@@ -1,75 +1,37 @@
 <template>
   <section class="s7 relative">
-    <img loading="lazy" class="bg absolute hidden md:block" src="@/section/s6/bg.jpg" />
-    <img loading="lazy" class="bg absolute md:hidden" src="@/section/s6/bg-m.jpg" />
-    <div class="tabs absolute">
-      <div 
-        :class="{'tk-tab': true, active: activeTab === 1}"
-        @click="activeTab = 1"
+    <div class="text">
+      <div class="t1">上億豪宅配備<br>日本東和林中空樓板</div>
+      <div class="content">「豐郡京硯」以精品建築為定位，不以成本為考量，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境。</div>
+    </div>
+    <img class="img absolute md:hidden" src="@/section/s7/img-m.png" alt="">
+    <img class="img absolute hidden md:block" src="@/section/s7/img.png" alt="">
+    <div class="slider absolute">
+      <div class="name absolute">A Tranquil Life</div>
+      <swiper 
+        :spaceBetween="0"
+        :pagination="false"
+        :navigation="false"
+        :modules="modules"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        @swiper="setSwiper"
       >
-        <span>33</span>坪 鈔值居
-      </div>
-      <div 
-        :class="{'tk-tab': true, active: activeTab === 2}"
-        @click="activeTab = 2"
-      >
-        <span>42</span>坪 團圓居
+        <swiper-slide>
+          <img class="photo" src="@/section/s7/1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="photo" src="@/section/s7/2.jpg" />
+        </swiper-slide>
+      </swiper>
+      <div class="control">
+        <div class="prev" @click="slideTo('prev')"></div>
+        <div class="next" @click="slideTo('next')"></div>
       </div>
     </div>
-
-    <transition>
-      <div v-if="activeTab === 1">
-        <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
-          <div class="t1">超CP 大三房</div>
-          <div class="content">
-            買房成家輕鬆圓夢，邊間正3 房採光視野佳，<br>
-            景觀大客廳、前後大陽台，結構柱外推，無虛
-            坪走道，最高坪效格局規劃，收納好簡單。
-          </div>
-        </div>
-        <img loading="lazy" class="floor absolute" src="@/section/s7/floor1.png" />
-        <div class="vr absolute">
-          <img loading="lazy" src="@/section/s7/vr1.jpg" />
-          <div class="mask">
-            <div class="flex justify-center items-end text-white absolute">
-              <div>
-                <span>A9</span> 樣品屋
-              </div>
-              <a class="tk-link" target="_blank" href="https://vr333.8sms.tw/">請點擊VR實境看房</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </transition>
-
-    <transition>
-      <div v-if="activeTab === 2">
-        <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
-          <div class="t1">超餘裕 正四房</div>
-          <div class="content">
-            豪宅方正格局規劃、雙衛浴設計，開放式大廚<br />
-            房空間，客餐廳區域規劃，完美凝聚家的核<br />
-            心，溫馨又舒適。
-          </div>
-        </div>
-        <img loading="lazy" class="floor absolute" src="@/section/s7/floor2.png" />
-        <div class="vr absolute">
-          <img loading="lazy" src="@/section/s7/vr2.jpg" />
-          <div class="mask">
-            <div class="flex justify-center items-end text-white absolute">
-              <div>
-                <span>B2</span> 樣品屋
-              </div>
-              <a class="tk-link" target="_blank" href="https://vr336.8sms.tw/">請點擊VR實境看房</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </transition>
-
-    <div class="line1 absolute hidden md:block"></div>
-    <div class="line2 absolute hidden md:block"></div>
-
   </section>
 </template>
 
@@ -78,252 +40,211 @@
 
 .s7 {
   width: 100%;
-  height: size-m(667);
-  overflow: hidden;
+  height: size-m(885);
+  background: #40210F;
+  color: #fff;
   @media screen and (min-width:768px) {
-    height: size(900);
-  }
-
-  .v-enter-active, .v-leave-active {
-    transition: opacity .4s;
-  }
-
-  .v-enter-from, .v-leave-to {
-    opacity: 0;
-  }
-
-  .v-enter-to, .v-leave-from {
-    opacity: 1;
-  }
-
-  .bg {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-  }
-
-  .tabs {
-    width: size-m(280);
-    top: size-m(43);
-    left: size-m(52);
-    display: flex;
-    justify-content: space-between;
-    @media screen and (min-width:768px) {
-      width: size(351);
-      top: size(212);
-      left: size(1398);
-    }
-
-    .tk-tab {
-      color: #000;
-      opacity: 0.5;
-      transition: opacity .2s;
-      font-size: size-m(20);
-      font-family: 'Noto Serif TC';
-      font-weight: 700;
-      cursor: pointer;
-      position: relative;
-      @media screen and (min-width:768px) {
-        font-size: size(24);
-      }
-
-      &:hover {
-        opacity: 1;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        top: 1vw;
-        left: 0;
-        width: 100%;
-        height: size-m(16);
-        background-image: url(@/section/s7/tab-arrow.svg);
-        transform: translateY(-100%);
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-position: center center;
-        opacity: 0;
-        @media screen and (min-width:768px) {
-          top: 0.7vw;
-          height: size(16);
-        }
-      }
-
-      span {
-        font-size: size-m(25);
-        @media screen and (min-width:768px) {
-          font-size: size(36);
-        }
-      }
-
-      &.active, &.active:after {
-        opacity: 1;
-      }
-    }
+    height: size(1080);
   }
 
   .text {
-    width: 100%;
-    padding: 0 size-m(30);
-    top: size-m(106);
-    left: 0;
-    text-align: center;
+    position: absolute;
+    top: size-m(18);
+    left: size-m(32);
+    width: size-m(312);
+    height: 100%;
+    padding: size-m(85.5) size-m(0) 0 size-m(0);
     @media screen and (min-width:768px) {
-      width: size(379);
-      top: size(376);
-      left: size(1388);
-      padding: 0;
+      top: size(96);
+      left: size(1214);
+      width: auto;
+      height: auto;
+      padding: size(209) size(0) 0 size(0);
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: size-m(0);
+      width: size-m(2);
+      height: size-m(80);
+      background: linear-gradient(0.72deg, #896532 0%, #A27C47 11%, #B8915B 24%, #C09962 32%, #C39E68 39%, #CEAD7B 48%, #DFC59A 58%, #EFDCB6 66%, #DABC8D 74%, #C9A36B 81.01%, #BD9152 88.01%, #B58544 94.01%, #B3823F 99.01%);
+      @media screen and (min-width:768px) {
+        left: size(0);
+        width: size(2.5);
+        height: size(200);
+      }
     }
 
     .t1 {
       font-family: 'Noto Serif TC';
-      font-weight: 800;
+      font-weight: 600;
       font-size: size-m(25);
-      line-height: size-m(17.5);
-      margin-bottom: size-m(21);
+      line-height: size-m(35);
+      margin-bottom: size-m(11);
       @media screen and (min-width:768px) {
-        font-size: size(36);
-        line-height: size(42.48);
-        margin-bottom: size(19);
+        font-size: size(44);
+        line-height: size(62);
+        margin-bottom: size(25.5);
       }
     }
 
     .content {
-      font-size: size-m(13);
-      line-height: size-m(19.5);
+      letter-spacing: 0.1em;
+      font-size: size-m(14);
+      line-height: size-m(25);
+      text-align: justify;
+      letter-spacing: 0.01em;
       @media screen and (min-width:768px) {
-        font-size: size(18);
-        line-height: size(28.62);
+        font-size: size(20);
+        line-height: size(36);
+        width: size(314);
       }
     }
   }
 
-  .floor {
-    width: size-m(258);
-    top: size-m(218);
-    left: size-m(58);
+  .img {
+    top: size-m(333);
+    left: size-m(32);
+    width: size-m(343);
     @media screen and (min-width:768px) {
-      width: size(344);
-      top: size(544);
-      left: size(1401);
+      top: size(178);
+      left: size(354);
+      width: size(863);
     }
   }
 
-  .vr {
-    width: 100%;
-    height: size-m(263.55);
-    bottom: 0;
-    left: 0;
+  .slider {
+    top: size-m(652);
+    left: size-m(32);
+    width: size-m(273);
     @media screen and (min-width:768px) {
-      width: size(1282);
-      height: 100%;
+      top: size(668);
+      left: size(1216);
+      width: size(403);
     }
 
-    img {
+    .name {
+      top: size-m(-319);
+      left: size-m(-32);
+      transform: translateY(-100%);
+      line-height: 1;
+      padding: size-m(16) size-m(38.5);
+      background: #DE5513;
+      color: #fff;
+      font-size: size-m(12);
+      font-weight: 300;
+      white-space: nowrap;
+      @media screen and (min-width:768px) {
+        top: size(-490);
+        left: size(-863 - 54);
+        // transform: translateY(0);
+        padding: size(30.5) size(114.5);
+        font-size: size(19);
+      }
+    }
+
+    .control {
       position: absolute;
       top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .mask {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: size-m(52);
-      background: rgba(0,0,0,0.6);
-      font-family: 'Noto Serif TC';
-      font-style: normal;
-      font-weight: 700;
-      font-size: size-m(20);
-      line-height: 1;
+      right: size-m(-41);
+      width: size-m(41);
+      height: size-m(91);
+      background: #F5F5F5;
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+      padding: size-m(18) 0;
       @media screen and (min-width:768px) {
-        height: 100%;
-        font-size: size(37.71);
-        transition: height .4s;
+        right: 0;
+        top: auto;
+        bottom: size(-35);
+        width: size(175);
+        height: size(35);
+        padding: 0 size(54.6);
+        flex-direction: row;
       }
 
-      .flex {
+      .prev, .next {
+        width: size-m(15);
+        height: size-m(15);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: left center;
+        cursor: pointer;
+        @media screen and (min-width:768px) {
+          width: size(20);
+          height: size(20);
+        }
+      }
+
+      .prev {
+        background-image: url(@/section/s3/arrow-left.svg);
+      }
+
+      .next {
+        background-image: url(@/section/s3/arrow-right.svg);
+      }
+    }
+
+    .swiper-slide {
+      width: 100%;
+
+      img {
         width: 100%;
-        top: 50%;
-        transform: translate(0, -50%);
       }
 
-      span {
-        font-size: size-m(30);
-        @media screen and (min-width:768px) {
-          font-size: size(56.57);
-        }
-      }
-
-      .tk-link {
-        font-family: 'Noto Sans TC';
-        font-weight: 500;
-        font-size: size-m(15);
-        letter-spacing: 0.01em;
-        color: #DC8039;
-        margin-left: size-m(39);
-        position: relative;
-        @media screen and (min-width:768px) {
-          font-size: size(20);
-          margin-left: size(47);
-          margin-bottom: size(8.7);
-        }
-
-        &:before {
-          content: "";
-          position: absolute;
-          top: 50%;
-          left: size-m(-22 - 7);
-          transform: translate(0, -50%);
-          width: size-m(22);
-          height: size-m(13.09);
-          background-image: url(@/section/s7/vr-arrow.svg);
-          background-repeat: no-repeat;
-          background-size: contain;
-          @media screen and (min-width:768px) {
-            left: size(-24 - 7);
-            width: size(24);
-            height: size(16);
-          }
-        }
-      }
+      // .txt {
+      //   color: #fff;
+      //   font-size: size-m(12);
+      //   line-height: size-m(16);
+      //   position: absolute;
+      //   bottom: size-m(5);
+      //   right: size-m(5);
+      //   @media screen and (min-width:768px) {
+      //     font-size: size(15);
+      //     line-height: size(19);
+      //     bottom: size(10);
+      //     right: size(10);
+      //   }
+      // }
     }
-
-    &:hover .mask {
-      @media screen and (min-width:768px) {
-        height: 15%;
-      }
-    }
-
-  }
-
-  .line1, .line2 {
-    width: size(379);
-    height: size(6);
-    top: size(281);
-    left: size(1385);
-    background: #DC8039;
-  }
-
-  .line2 {
-    top: size(805);
   }
 }
-
 </style>
 
 <script>
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { Pagination, Navigation, Autoplay } from "swiper";
+
 export default {
+  components: {
+    Swiper,
+    SwiperSlide,
+  },
   data() {
     return {
-      activeTab: 1,
+      swiper: null,
+      modules: [Pagination, Navigation, Autoplay],
     }
   },
+  methods: {
+    setSwiper(swiper) {
+      this.swiper = swiper;
+    },
+    slideTo(to) {
+      if(to == 'prev') {
+        this.swiper.slidePrev();
+      } else if(to == 'next') {
+        this.swiper.slideNext();
+      }
+    },
+  }
 };
 </script>

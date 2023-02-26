@@ -1,4 +1,4 @@
-const caseName = "漫活時代2"
+const caseName = "京硯"
 
 export default {
     meta: {
@@ -6,22 +6,21 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "251新北市淡水區中正東路二段71號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14445.795530732437!2d121.4595984!3d25.1543167!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af925444440d%3A0xa2b2eb794b6ad22b!2z5ryr5rS75pmC5LujMuaOpeW-heacg-mkqA!5e0!3m2!1szh-TW!2stw!4v1671775348497!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/9CmWsbhiq9F8aVhX8",
-    phone: "02-8809-8828",
-    fbLink: "https://www.facebook.com//100066894431965/",
-    fbMessage: "https://m.me/100066894431965/",
+    address: "桃園市中壢區青埔路二段、致遠一路口",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.797487037341!2d121.21641729999999!3d25.0069964!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34682109bbaf4e0b%3A0xfc6ba9056d966e9a!2zMzIw5qGD5ZyS5biC5Lit5aOi5Y2A6Z2S5Z-U6Lev5LqM5q61!5e0!3m2!1szh-TW!2stw!4v1677303793106!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/hToHXo1BMPadUrTk9",
+    phone: "03-352-6888",
+    fbLink: "#",
+    fbMessage: "#",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "鐵冠建設機構"],
-        ["基地面積", "503坪"],
-        ["建築設計", "大序建築師事務所"],
-        ["樓層規劃", "11F/B4F"],
-        ["工程營建", "昌譽營造股份有限公司"],
-        ["房型規劃", "1-4房"],
-        ["公設擘劃", "紅林設計"],
-        ["建築代銷", "君頤廣告"],
+        ["投資興建", "豐郡建設股份有限公司"],
+        ["經紀人", "莊鵬瑜"],
+        ["建築設計", "張建鴻建築師事務所"],
+        ["經紀人字號", "(93)北縣字第000925號"],
+        ["工程營照", "當代營造"],
+        ["建照號碼", "109桃市都建照字第會壢0207-01"],
+        ["廣告銷售", "鈞驛廣告股份有限公司"],
     ],
     gtmCode: ["GTM-WT66KK9"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",

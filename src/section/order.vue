@@ -2,17 +2,12 @@
   <div class="order relative bg-[#FFDFE3] text-center">
     <div class="order1 relative">
       <div class="order2 relative">
-        <img class="leaf absolute" src="@/section/form/leaf.png" />
-        <div class="train absolute" data-aos="train">
-          <img class="block w-full" src="@/section/form/train.png" />
-        </div>
-
         <!-- Title -->
         <div class="order-title text-center text-[#000]">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="漫活時代2" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="京硯" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="漫活時代2" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="京硯" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -53,7 +48,7 @@
             class="checkbox bg-white rounded-md" />
           <p class="text-white">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button cursor-pointer hover:opacity-70 text-[#BA2E3F]">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70 text-[#FFFF00]">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -63,7 +58,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#D2630C] text-white hover:text-white rounded-full" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration" @click="send()">
           {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
@@ -87,11 +82,9 @@
   width: 100%;
 
   .order1 {
-    background-color: #D2630C;
-    background-image: url(@/section/form/bg.jpg);
+    background-color: #E45513;
     background-size: cover;
     background-position: center center;
-    padding-bottom: size(21);
     
     // .bg {
     //   display: none;
@@ -143,8 +136,14 @@
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(45);
+    background: linear-gradient(261.54deg, #C09962 0%, #EFDCB6 33.96%, #C09962 67.92%, #896532 101.88%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    font-family: 'Noto Serif TC';
   }
 
   .z-10 {
@@ -192,33 +191,15 @@
     border: 0;
     z-index: 10;
     position: relative;
+    border-radius: size(10);
+    background: linear-gradient(261.54deg, #C09962 0%, #EFDCB6 33.96%, #C09962 67.92%, #896532 101.88%);
+    color: #000;
   }
 
   .control {
     font-size: size(16);
     color: #000;
     position: relative;
-  }
-
-  .leaf {
-    width: size(1211);
-    left: size(-292);
-    bottom: size(84);
-    max-width: none;
-  }
-
-  .train {
-    width: size(1481);
-    left: size(-713);
-    bottom: size(-19);
-    transform: translate(0%, 0%);
-    transform-origin: 0% 100%;
-
-
-    img {
-      max-width: none;
-      transform: scaleX(-1);
-    }
   }
 }
 
@@ -228,12 +209,11 @@
     margin-top: size-m(0);
 
     .order1 {
-      background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(218) 0;
+      padding: size-m(40) 0;
       background-size: cover;
       background-position: center center;
     }
@@ -279,36 +259,7 @@
     .control {
       font-size: size-m(14.6);
     }
-
-    .leaf {
-      width: size-m(812);
-      left: size-m(-188);
-      bottom: 0;
-      max-width: none;
-    }
-
-    .train {
-      width: size-m(881);
-      left: size-m(-506);
-      bottom: size-m(-16);
-      transform: translate(-100%, 0%);
-      transform-origin: 0% 100%;
-
-      &[data-aos^="train"].aos-animate {
-        // animation: train 3s ease-out forwards;
-        transform: translate(0, 0);
-        transition-duration: 3s !important;
-        transition-timing-function: ease-out !important;
-      }
-
-      img {
-        max-width: none;
-        transform: scaleX(-1);
-      }
-    }
   }
-
-  
 }
 </style>
 
