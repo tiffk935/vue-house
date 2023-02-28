@@ -27,7 +27,7 @@
   </div>
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+  <div v-if="$isMobile()" class="bg-[#231815] mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="京硯" srcset="" />
@@ -209,14 +209,14 @@
       background-color: #DE5513;
       font-size: size-m(16);
       font-weight: 400;
-      color: #fff;
+      color: #231815;
 
       img {
         margin-bottom: size-m(5);
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
       }
 
     }
@@ -253,7 +253,11 @@
 
       &.address-wrap {
         margin-top: size-m(20);
-        border-radius: size-m(50);
+        border-radius: size-m(10);
+
+        &>div {
+          border-radius: 0;
+        }
       }
 
       .contact-item {
@@ -261,7 +265,7 @@
         font-size: size-m(16);
         max-width: 100%;
         justify-content: space-around;
-
+        border-radius: size-m(10);
 
         img {
           max-width: size-m(27);

@@ -1,7 +1,7 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#D2630C] text-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-white text-white">
         <!-- <div class="map"></div> -->
-        <div class="flex-1 items-center justify-center py-4 md:py-10 bg-white">
+        <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title font-['Noto_Serif_TC'] text-[#896532]">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">

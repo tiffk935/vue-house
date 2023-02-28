@@ -220,7 +220,6 @@
 
     .order-title {
       font-size: size-m(29);
-      font-weight: 500;
       margin-bottom: size-m(20);
     }
 
@@ -254,6 +253,7 @@
     .send {
       font-size: size-m(21);
       width: size-m(318);
+      border-radius: size-m(10);
     }
 
     .control {
