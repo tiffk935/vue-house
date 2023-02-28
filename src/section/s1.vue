@@ -3,7 +3,7 @@
 
     <img data-aos="fade-up" data-aos-delay="0" class="logo absolute" src="@/section/s1/logo.svg" alt="巴克禮OnePark" />
     <img data-aos="fade-up" data-aos-delay="500" class="title absolute" src="@/section/s1/title.svg" alt="巴克禮OnePark" />
-    <img  class="t2 absolute" src="@/section/s1/t2.svg" alt="巴克禮OnePark" />
+    <!-- <img  class="t2 absolute" src="@/section/s1/t2.svg" alt="巴克禮OnePark" /> -->
     <img  class="mask absolute" src="@/section/s1/mask.svg" alt="巴克禮OnePark" />
     <img  class="style1 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
     <img  class="style2 absolute hidden md:block" src="@/section/s1/style.svg" alt="巴克禮OnePark" />
