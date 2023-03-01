@@ -2,24 +2,24 @@
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'phone'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="京硯" srcset="" />
-        <div class="flex-1">{{ info.phone }}</div>
+        <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="京硯" srcset="" />
-        <div class="flex-1">FB 諮詢</div>
+        <div>FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-between items-center btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
         <img src="@/section/form/fb.svg" alt="京硯" srcset="" />
-        <div class="flex-1">前往粉絲專頁</div>
+        <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
-      <div class="flex contact-item justify-between items-center address">
+    <div class="flex justify-between w-full contact-item-box no-gap">
+      <div class="flex contact-item justify-center items-center address">
         <div>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-between items-center md:rounded-full" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="京硯" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -140,15 +140,17 @@
     .contact-item {
       background: linear-gradient(261.54deg, #C09962 0%, #EFDCB6 33.96%, #C09962 67.92%, #896532 101.88%);
       width: 100%;
-      padding: 0 size(55);
+      flex: 1;
+      padding: 1.1em 0;
       font-size: size(16);
-      line-height: 3.8;
-      letter-spacing: 0.1em;
-      max-width: size(280);
+      line-height: 1.6;//3.8
+      letter-spacing: 0.06em;
+     // max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
       border-radius: size(10);
+      gap: 1em;
 
       &:hover {
         background-color: theme('colors.color2');
@@ -166,6 +168,7 @@
         max-height: size(27);
         // filter: brightness(0) invert(1);
         transition: all .5s;
+        margin: 0;
       }
 
       &.address {
@@ -175,6 +178,7 @@
         position: relative;
         max-width: 9999px;
         justify-content: center;
+        flex:2.17;
 
         &::before {
           content: "";
@@ -184,6 +188,21 @@
           background-color: #fff;
           left: calc(100% - 4em);
           z-index: -1;
+        }
+      }
+      &.googlemap {
+        flex:1;
+      background-color: #969696;
+      border-left-width: 0;
+      //  color: #fff;
+
+        img {
+      //    filter: brightness(0) invert(1);
+        }
+
+        &:hover {
+        background-color: #7EAA46;
+          color: #fff;
         }
       }
     }
@@ -229,6 +248,7 @@
     // margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
+      gap: size-m(20);
 
     .border {
       top: size-m(13);
@@ -261,10 +281,10 @@
       }
 
       .contact-item {
-        padding: 0 size-m(65);
+        padding: 1.1em size-m(65);
         font-size: size-m(16);
         max-width: 100%;
-        justify-content: space-around;
+        white-space: nowrap;
         border-radius: size-m(10);
 
         img {
@@ -274,7 +294,8 @@
         }
 
         &.address {
-          padding: 0 0;
+          padding: 1.1em 0 1.1em 0;
+          margin: sizem(20) auto 0;
           font-size: size-m(13);
 
           &::before {
@@ -284,6 +305,10 @@
             left: 0;
           }
         }
+      &.googlemap {
+        border-top-width: 0;
+    //  border-left-width: 2px;
+      }
       }
 
       &.no-gap {
@@ -295,14 +320,15 @@
 
 .pcnav {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
   justify-content: space-between;
   align-items: center;
-  padding: size(25) size(100);
+  padding:0 size(100);
   background: #DE5513;
   z-index: 999;
+  height: size(100);
 
   img {
     margin: 0;
@@ -321,7 +347,15 @@
     img {
       height: size(31);
       cursor: pointer;
+      filter: brightness(0) invert(0);
+      transition:filter .2s ;
     }
+    > img:hover{
+      filter: brightness(0) invert(1);}
+    a:hover{
+    img {
+      filter: brightness(0) invert(1);}
+  }
   }
 }
 </style>

@@ -2,11 +2,11 @@
   <section class="s3 relative">
     <img class="circle" src="@/section/s3/circle.svg" />
     <div class="text">
-      <div class="t1">A19青塘園名宅特區　<br>開發近乎完善</div>
-      <div class="content">世界最貴豪宅皆倚綠而無價，「豐郡京硯」坐落Ａ１９青塘園美術館名宅群中，區內住宅開發率達九成，近4.9萬坪自然森呼吸，最令人驚豔的生活！</div>
+      <div class="t1" data-aos="fade-down" data-aos-delay="100">A19青塘園名宅特區　<br>開發近乎完善</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">世界最貴豪宅皆倚綠而無價，「豐郡京硯」坐落Ａ１９青塘園美術館名宅群中，區內住宅開發率達九成，近4.9萬坪自然森呼吸，最令人驚豔的生活！</div>
     </div>
-    <div class="slider absolute">
-      <div class="rect1 absolute"></div>
+    <div class="slider absolute" data-aos="fade-down" data-aos-delay="100">
+      <div class="rect1 absolute" data-aos="fade-down" data-aos-delay="200"></div>
       <div class="name absolute">Green Gold Homeland</div>
       <swiper 
         :spaceBetween="0"
@@ -55,7 +55,7 @@
 
   @keyframes circle {
     to {
-      transform: translateY(10%);
+      transform: translateY(0%);
     }
   }
 
@@ -64,6 +64,7 @@
     top: size-m(500.21);
     left: size-m(222.71);
     width: size-m(301.79);
+      transform: translateY(20%);
     animation: circle 5s linear infinite alternate forwards;
     @media screen and (min-width:768px) {
       top: size(493.21);

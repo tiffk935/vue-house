@@ -1,11 +1,11 @@
 <template>
   <section class="s6 relative">
-    <div class="text">
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="name absolute md:hidden">Art Deco</div>
-      <div class="t1">三面大氣開展<br>城市心靈座標</div>
-      <div class="content">俐落線條重新詮釋Art Deco建築美學，框景式立面語彙，構成豐富的表情與詩意氛圍，展現氣質與氣勢兼具，品味與生活交響的經典盛宴！</div>
+      <div class="t1" data-aos="fade-down" data-aos-delay="100">三面大氣開展<br>城市心靈座標</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">俐落線條重新詮釋Art Deco建築美學，框景式立面語彙，構成豐富的表情與詩意氛圍，展現氣質與氣勢兼具，品味與生活交響的經典盛宴！</div>
     </div>
-    <div class="slider absolute">
+    <div class="slider absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="name absolute hidden md:block">Art Deco</div>
       <swiper 
         :spaceBetween="0"
@@ -133,6 +133,7 @@
     top: size-m(324.5);
     left: size-m(0);
     width: size-m(375);
+    z-index: 2;
     @media screen and (min-width:768px) {
       top: size(243.11);
       left: size(789.08);

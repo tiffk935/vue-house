@@ -7,7 +7,7 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 border-l-2 border-[#896532] pl-2 text-[#896532]">{{ item[0] }}</p>
+                        <p class="mr-5 border-l-2 border-[#896532] pl-2 text-[#896532] font-bold">{{ item[0] }}</p>
                         <p class="whitespace-pre-line leading-normal text-left text-[#000]">{{ item[1] }}</p>
                     </div>
                 </div>
@@ -52,10 +52,13 @@
         }
     }
 }
+    .footer {
+        margin-bottom: size(100);
+    }
 
 @media screen and (max-width:768px) {
     .footer {
-        margin-bottom: size-m(63);
+        margin-bottom: size(17);
     }
 
     .info-box {

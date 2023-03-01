@@ -1,13 +1,13 @@
 <template>
   <section class="s5 relative">
     <img class="circle" src="@/section/s3/circle.svg" />
-    <div class="text">
-      <div class="t1">雙語教學接軌<br>學習搶占先機</div>
-      <div class="content">青埔國小、青埔國中、大園國際高中，完整12年雙語國際菁英教育，接軌國際零障礙，好學氛圍，為下一代開啟學習之鑰！</div>
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
+      <div class="t1" data-aos="fade-down" data-aos-delay="100">雙語教學接軌<br>學習搶占先機</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">青埔國小、青埔國中、大園國際高中，完整12年雙語國際菁英教育，接軌國際零障礙，好學氛圍，為下一代開啟學習之鑰！</div>
     </div>
     <div class="slider absolute">
-      <div class="name absolute">International <br>Education</div>
-      <swiper 
+      <div class="name absolute" data-aos="fade-down" data-aos-delay="300">International <br>Education</div>
+      <swiper  data-aos="fade-down" data-aos-delay="500"
         :spaceBetween="0"
         :pagination="false"
         :navigation="false"
@@ -47,9 +47,17 @@
   @media screen and (min-width:768px) {
     height: size(1080);
   }
+  @keyframes circle {
+    to {
+      transform: translateY(0%);
+    }
+  }
 
   .circle {
     display: none;
+    animation: circle 5s linear infinite alternate forwards;
+      transform: translateY(20%);
+   
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
@@ -142,8 +150,9 @@
       white-space: nowrap;
       @media screen and (min-width:768px) {
         top: size(-199);
-        left: size(0);
-        transform: translateX(-100%);
+        right: size(1100);
+        left: auto;
+       // transform: translateX(-100%);
         padding: size(44.65) size(50.15) size(643.35) size(53.85);
         font-size: size(19);
         line-height: size(21);

@@ -1,7 +1,9 @@
 <template>
   <section class="s2 relative">
     <div class="map relative">
-      <img loading="lazy" class="map1" src="@/section/s2/map.jpg" />
+      <div class="mapall relative">
+      <img loading="lazy" class="map1" src="./s2/map.jpg" />
+      <img loading="lazy" class="map2 absolute" src="./s2/map.png" /></div>
     </div>
     <div class="rect absolute"></div>
     <img loading="lazy" class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
@@ -52,6 +54,30 @@
       overflow: hidden;
     }
 
+    .mapall{
+      width: auto;
+      height: size-m(550);
+      margin-top: size-m(800 - 550);
+      max-width: none;
+      display: block;
+      @media screen and (min-width:768px) {
+        overflow: hidden;
+        width: size(1620);
+        height: auto;
+        margin-top: size(260.08);
+        margin-left: size(150);
+      }
+    }
+    img {
+      width: auto;
+      height: 100%;
+      @media screen and (min-width:768px) {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .map2{top: 0;left: 0;}
+/*
     img {
       width: auto;
       height: size-m(550);
@@ -66,6 +92,7 @@
         margin-left: size(150);
       }
     }
+    */
   }
   .hand {
     width: size-m(22.36);

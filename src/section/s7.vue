@@ -1,12 +1,12 @@
 <template>
   <section class="s7 relative">
-    <div class="text">
-      <div class="t1">上億豪宅配備<br>日本東和林中空樓板</div>
-      <div class="content">「豐郡京硯」以精品建築為定位，不以成本為考量，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境。</div>
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
+      <div class="t1" data-aos="fade-down" data-aos-delay="100">上億豪宅配備<br>日本東和林中空樓板</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">「豐郡京硯」以精品建築為定位，不以成本為考量，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境。</div>
     </div>
-    <img class="img absolute md:hidden" src="@/section/s7/img-m.png" alt="">
-    <img class="img absolute hidden md:block" src="@/section/s7/img.png" alt="">
-    <div class="slider absolute">
+    <img class="img absolute md:hidden" src="@/section/s7/img-m.png" alt="" data-aos="fade-down" data-aos-delay="300">
+    <img class="img absolute hidden md:block" src="@/section/s7/img.png" alt="" data-aos="fade-down" data-aos-delay="300">
+    <div class="slider absolute" data-aos="fade-down" data-aos-delay="500">
       <div class="name absolute">A Tranquil Life</div>
       <swiper 
         :spaceBetween="0"

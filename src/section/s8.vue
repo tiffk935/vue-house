@@ -1,12 +1,13 @@
 <template>
   <section class="s8 relative">
-    <div class="text">
-      <div class="name absolute">Best Selection</div>
-      <div class="t1">世界名品打造<br>生活極致美學</div>
-      <div class="content">精挑德、日、韓、台國際精品建材，以世界精工極致展現，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境，讓生活自然而美！</div>
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
+      <div class="name absolute" data-aos="fade-down" data-aos-delay="300">Best Selection</div>
+      <div class="t1" data-aos="fade-down" data-aos-delay="100">世界名品打造<br>生活極致美學</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">精挑德、日、韓、台國際精品建材，以世界精工極致展現，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境，讓生活自然而美！</div>
     </div>
-    <img class="rect" src="@/section/s8/rect.svg" />
-    <img class="img" src="@/section/s8/img.png" />
+    <img class="rect1" src="@/section/s8/rect.svg" data-aos="fade-down" data-aos-delay="300" />
+    <img class="rect2" src="@/section/s8/rect.svg" data-aos="fade-down" data-aos-delay="400" />
+    <img class="img" src="@/section/s8/img.png" data-aos="fade-down" data-aos-delay="500" />
   </section>
 </template>
 
@@ -105,17 +106,30 @@
     }
   }
 
-  .rect {
-    position: absolute;
-    top: size-m(526.14);
-    left: size-m(159.13);
-    width: size-m(155.87);
-    @media screen and (min-width:768px) {
-      top: size(582);
-      left: size(1220);
-      width: size(398);
-    }
+.rect1 {
+  position: absolute;
+  top: size-m(370);
+  left: size-m(20);
+  width: size-m(120);
+  filter: hue-rotate(170deg)brightness(40%);mix-blend-mode: screen;
+  @media screen and (min-width:768px) {
+    top: size(549);
+    left: size(689);
+    width: size(313);
   }
+}
+
+.rect2 {
+  position: absolute;
+  top: size-m(526.14);
+  left: size-m(159.13);
+  width: size-m(155.87); filter: brightness(90%);mix-blend-mode: screen;
+  @media screen and (min-width:768px) {
+    top: size(582);
+    left: size(1220);
+    width: size(398);
+  }
+}
 
   .img {
     position: absolute;

@@ -1,11 +1,11 @@
 <template>
   <section class="s9 relative">
-    <div class="text">
-      <img class="logo" src="@/section/s9/logo.svg" />
-      <div class="t1">豐郡建築擘造<br>用心絕不將就</div>
-      <div class="content">把房子蓋好，是身為建設產業重不能妥協的原則。時刻以購屋者的角度，用自己居住的心情，從環境、機能、安全、生活到情感5大需求面向，用心而築！</div>
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
+      <img class="logo" src="@/section/s9/logo.svg" data-aos="fade-down" data-aos-delay="100" />
+      <div class="t1" data-aos="fade-down" data-aos-delay="200">豐郡建築擘造<br>用心絕不將就</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="300">把房子蓋好，是身為建設產業重不能妥協的原則。時刻以購屋者的角度，用自己居住的心情，從環境、機能、安全、生活到情感5大需求面向，用心而築！</div>
     </div>
-    <div class="slider relative">
+    <div class="slider relative" data-aos="fade-down" data-aos-delay="500">
       <div class="name absolute">Past Case</div>
       <swiper 
         :spaceBetween="0"

@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
-  <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+  <div class="home bg-[#F1F0EE] overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">京硯</h1>
     <S1 />
     <S2 />

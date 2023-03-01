@@ -1,12 +1,12 @@
 <template>
   <section class="s4 relative">
-    <div class="text">
-      <div class="t1">商圈機捷高鐵<br>精釀生活品味</div>
-      <div class="content">擁有公園綠意、商圈生活、文化藝文，休閒出門就有，青埔最精華10分鐘內將高鐵、影城、購物中心繁華全入袋，一次擁抱！</div>
+    <div class="text" data-aos="fade-down" data-aos-delay="0" >
+      <div class="t1" data-aos="fade-down" data-aos-delay="100" >商圈機捷高鐵<br>精釀生活品味</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200" >擁有公園綠意、商圈生活、文化藝文，休閒出門就有，青埔最精華10分鐘內將高鐵、影城、購物中心繁華全入袋，一次擁抱！</div>
     </div>
     <div class="slider absolute">
-      <div class="name absolute">High society</div>
-      <swiper 
+      <div class="name absolute" data-aos="fade-down" data-aos-delay="0" >High society</div>
+      <swiper  data-aos="fade-down" data-aos-delay="300" 
         :spaceBetween="0"
         :pagination="false"
         :navigation="false"
