@@ -1,5 +1,6 @@
 <template>
   <section class="s8 relative">
+    <div class="bg absolute"><img class="hidden md:block" src="./s8/bg.png" alt=""><img class="md:hidden" src="./s8/bg-m.png" alt=""></div>
     <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="name absolute" data-aos="fade-down" data-aos-delay="300">Best Selection</div>
       <div class="t1" data-aos="fade-down" data-aos-delay="100">世界名品打造<br>生活極致美學</div>
@@ -25,7 +26,17 @@
     height: size(1080);
     background-image: url(@/section/s8/bg.jpg);
   }
+  .bg{
+    width: 100%;height: 100%;top: 0;left: 0;mix-blend-mode: overlay;
+    img{width: 100%;height: 100%;object-fit: cover;opacity: .8;
+    animation: bg 5s linear infinite alternate;}
+  }
 
+  @keyframes bg {
+    40% {
+      opacity: 0;
+    }
+  }
   .text {
     position: absolute;
     top: size-m(43);
