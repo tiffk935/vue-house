@@ -166,7 +166,7 @@
         max-width: size(27);
         height: auto;
         max-height: size(27);
-        // filter: brightness(0) invert(1);
+        filter: brightness(0) invert(0);
         transition: all .5s;
         margin: 0;
       }
@@ -235,6 +235,7 @@
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
+        filter: brightness(0) invert(0);
         // filter: brightness(0) invert(1);
       }
 

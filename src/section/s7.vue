@@ -71,7 +71,7 @@
       height: size-m(80);
       background: linear-gradient(0.72deg, #896532 0%, #A27C47 11%, #B8915B 24%, #C09962 32%, #C39E68 39%, #CEAD7B 48%, #DFC59A 58%, #EFDCB6 66%, #DABC8D 74%, #C9A36B 81.01%, #BD9152 88.01%, #B58544 94.01%, #B3823F 99.01%);
       @media screen and (min-width:768px) {
-        left: size(0);
+        left: size(5);
         width: size(2.5);
         height: size(200);
       }
