@@ -4,7 +4,7 @@
     <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="name absolute" data-aos="fade-down" data-aos-delay="300">Best Selection</div>
       <div class="t1" data-aos="fade-down" data-aos-delay="100">世界名品打造<br>生活極致美學</div>
-      <div class="content" data-aos="fade-down" data-aos-delay="200">精挑德、日、韓、台國際精品建材，以世界精工極致展現，A19區內唯一堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境，讓生活自然而美！</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">精挑德、日、韓、台國際精品建材，以世界精工極致展現，堅持日本東和林專利中空樓板，確保寧靜舒適的居住環境，讓生活自然而美！</div>
     </div>
     <img class="rect1" src="@/section/s8/rect.svg" data-aos="fade-down" data-aos-delay="300" />
     <img class="rect2" src="@/section/s8/rect.svg" data-aos="fade-down" data-aos-delay="400" />
