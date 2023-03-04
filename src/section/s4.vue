@@ -1,21 +1,51 @@
 <template>
   <section class="s4 relative">
-    <img class="bg absolute" src="@/section/s4/bg.png" />
-    <img class="deco absolute md:hidden" src="@/section/s4/deco-m.svg" />
-    <img class="deco absolute hidden md:block" src="@/section/s4/deco.png" />
-    <img class="logo absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/logo-m.svg" />
-    <img class="logo absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/logo.svg" />
-    <img class="title absolute md:hidden" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/title-m.svg" />
-    <img class="title absolute hidden md:block" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/title.svg" />
-
-    <div class="title1">
-    <div class="t1 hidden md:block" data-aos="fade-up" data-aos-delay="200">溫慶玄董事長：「自己敢住的房子，我才敢蓋；</div>
-    <div class="t1 md:hidden" data-aos="fade-up" data-aos-delay="200">溫慶玄董事長：<br>「自己敢住的房子，我才敢蓋；</div>
-    <div class="t1 br" data-aos="fade-up" data-aos-delay="200">自己願意住的房子，我才願意蓋。」</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     董事長創辦理念：低總價、高空間效率、好建材的商品，是持續以來不變的精神也是初衷。因為對於成家的夢想，我們緊緊守護，並真誠地了解：真正的好房，是買得起的好房子！<br><br>
-     在規劃之初，為建築琢磨高坪效的實用價值，以及耐震安全性的考量，我們捨棄填滿容積率而拔高建築物的經營態度，以守護家園價值為本心，致力建築符合居住需求的作品。
-      </div>
+    <img class="en" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/en.svg" />
+    <div class="title" data-aos="fade-up" data-aos-delay="0">世界の隈研吾</div>
+    <p data-aos="fade-up" data-aos-delay="0">
+      東京奧運主場館‧新國立競技場<br class="block md:hidden">設計師/國寶級建築師 隈研吾
+    </p>
+    <div class="slider" data-aos="zoom-in" data-aos-delay="0">
+      <swiper 
+        :effect="'coverflow'"
+        :centeredSlides="true"
+        :slidesPerView="'auto'"
+        :coverflowEffect="{
+          rotate: 0,
+          stretch: 0,
+          depth: 250,
+          modifier: 1,
+          slideShadows: true,
+        }"
+        :pagination="{
+          clickable: true,
+        }"
+        :modules="modulesRef"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+      >
+        <swiper-slide>
+          <img src="@/section/s4/1.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/2.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/3.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/4.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/5.jpg" />
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s4/6.jpg" />
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
@@ -23,125 +53,93 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 .s4 {
-  width: 100%;
-  height: size-m(923);
-  background: linear-gradient(180deg, #D9D9D9 76.04%, rgb(212 212 212) 100%);
+  padding: size-m(74) size-m(0) size-m(52) size-m(0);
+  text-align: center;
   @media screen and (min-width:768px) {
-    height: size(1090);
-    background: linear-gradient(180deg, #D9D9D9 0%, rgba(217, 217, 217, 0) 100%);
+    padding: size(113) size(0) size(129) size(0);
   }
 
-  .bg {
-    bottom: size-m(0);
-    left: size-m(-187);
-    width: size-m(562);
-    opacity: 0.5;
-    max-width: none;
+  .en {
+    width: size-m(328);
+    margin: 0 auto size-m(56) auto;
     @media screen and (min-width:768px) {
-      bottom: auto;
-      top: size(-38);
-      left: size(0);
-      width: size(1920);
-    }
-  }
-
-    .title1{
-    position: absolute;
-    top: size(643);
-    left:size(865);
-    width: size(481);
-
-    @media screen and (max-width:768px) {
-      text-align: center;
-      top: size-m(330);
-      left:size-m(30);
-      width: size-m(315);
-    }
-
-    .t1{
-      font-size: size(20);
-      color: #727171;
-      font-weight: 700;
-      text-align: left;
-
-      &.br{
-       margin-left: size(160);
-
-       @media screen and (max-width:768px) {
-        margin-left: size-m(16);
-      }
-      }
-
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(16);
-      }
-    }
-
-
-    .content{
-      font-size: size(16);
-      color: #727171;
-      font-weight:300;
-      margin-top: size(20);
-      text-align: left;
-      text-align: justify;
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        font-weight:500;
-      }
-    }
-
-  }
-
-
-  .deco {
-    top: size-m(222);
-    left: size-m(14);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(437);
-      left: size(476);
-      width: size(967);
-    }
-  }
-
-  .logo {
-    top: size-m(47);
-    left: size-m(81);
-    width: size-m(213);
-    @media screen and (min-width:768px) {
-      top: size(180);
-      left: size(807);
-      width: size(306);
+      width: size(786.41);
+      margin: 0 auto size(27.71) auto;
     }
   }
 
   .title {
-    top: size-m(249);
-    left: size-m(41);
-    width: size-m(292);
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(25);
+    line-height: size-m(36);
+    margin-bottom: size-m(12);
     @media screen and (min-width:768px) {
-      top: size(453);
-      left: size(643);
-      width: size(633);
+      font-size: size(38);
+      line-height: size(55);
+      margin-bottom: size(52);
     }
   }
 
-  .text {
-    top: size-m(342);
-    left: size-m(30);
-    width: size-m(315);
+  p {
+    font-weight: 400;
+    font-size: size-m(15);
+    line-height: size-m(22);
+    margin-bottom: size-m(49);
     @media screen and (min-width:768px) {
-      top: size(643);
-      left: size(867);
-      width: size(504);
+      font-size: size(18);
+      line-height: size(39);
+      margin-bottom: size(72);
+    }
+  }
+
+  .slider {
+    @media screen and (min-width:768px) {
+      padding-bottom: size(64);
+    }
+
+    .swiper {
+      overflow: visible;
+
+      .swiper-slide {
+        width: size-m(327);
+        margin: 0 5vw;
+        @media screen and (min-width:768px) {
+          width: size(1050);
+        }
+      }
+
+      .swiper-pagination {
+        bottom: -1vw;
+        height: 0;
+        display: none;
+        @media screen and (min-width:768px) {
+          display: block;
+        }
+      }
+
+      .swiper-pagination-bullet {
+        width: size(12);
+        height: size(12);
+        margin: 0 size(16);
+        opacity: 1;
+        background: #808080;
+      }
+
+      .swiper-pagination-bullet-active {
+        background: #333333;
+      }
     }
   }
 }
-
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
+import { Pagination, Autoplay, EffectCoverflow } from "swiper";
+const modulesRef = ref([Pagination, Autoplay, EffectCoverflow]);
 </script>

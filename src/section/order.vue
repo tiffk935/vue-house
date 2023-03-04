@@ -1,13 +1,13 @@
   <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
+  <div class="order relative text-center">
     <div class="order1">
       <div class="order2">
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="巴克禮onepark" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="巴克禮onepark" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -16,21 +16,21 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value">
+              <option v-for="city in cityList" :value="city.value" :key="city.label">
                 {{ city.label }}
               </option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value">
+              <option v-for="area in areaList" :value="area.value" :key="area.label">
                 {{ area.label }}
               </option>
             </select>
@@ -47,7 +47,7 @@
             class="checkbox bg-white rounded-md" />
           <p>
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button text-[#D9374B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,7 +57,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#000] text-white rounded-none" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -81,9 +81,13 @@
   width: 100%;
   // padding-top: size(115);
 
+  input, select, textarea {
+    background: #F5F5F5;
+  }
+
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
+    // background-color: #D9374B;
+    // background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
@@ -113,7 +117,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 230px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -129,7 +133,7 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #fff;
+      background-color: #D4D4D4;
       position: absolute;
     }
   }
@@ -167,8 +171,8 @@
 
     .order2 {
       padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      // background-color: #D9374B;
+      // background-image: url(@/section/form/bg-m.png);
       background-size: cover;
       background-position: center center;
     }
@@ -249,7 +253,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg","room_type"];
 
 //中文對照
 const formDataRef = ref([

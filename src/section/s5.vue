@@ -1,178 +1,116 @@
 <template>
-  <section class="s5 relative z-10">
-    <div class="bg absolute"></div>
-    <img class="house absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s5/house.png" />
-    <img class="style absolute md:hidden" src="@/section/s5/style-m.svg" />
-    <img class="style absolute hidden md:block" src="@/section/s5/style.svg" />
-    <img class="house2 absolute md:hidden" src="@/section/s5/house2-m.png" />
-    <img class="house2 absolute hidden md:block" src="@/section/s5/house2.png" />
-    <img class="style2 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/s5/style2.png" />
-    
-    <div class="bigtitle" data-aos="fade-up" data-aos-delay="200">新蔚營造 甲級營造</div>
-    <div class="title1">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">價格超值，品質卓越</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     威泰建築從土地開發、產品規劃、承建營造，每一環節群策群力緊密相扣，發揮最大功能，共同創作出最優質的作品。時刻追求新技術的經營理念，重視進度控制：訂立良好管控制度，使工程進度如期進行。重視品質管制：工地主任現場實地監督，以管控工地作業品質；並不定時派人員前往稽核以達到品質管制之目的。
-     <br>
-     每件工程都當做自已的事來施作，必求盡善盡美，以「專業、誠信、品質、效率」，創造新蔚甲級營造，值得信賴的好口碑。
-      </div>
+  <section class="s5 relative">
+    <div class="title2" data-aos="fade-up" data-aos-delay="0">
+      清景麟<img src="@/section/s5/cross.svg" />隈研吾
     </div>
-
+    <div class="title" data-aos="fade-up" data-aos-delay="0">契合了「回歸自然」的設計理念</div>
+    <p data-aos="fade-up" data-aos-delay="0">
+      「巴克禮ONE PARK」基地在低度城市化的環境內,<br>
+      本作品不只創造森林般環境, 也保留森林的記憶與大樹下生活的樹林社區,<br>
+      更為台南增添一座樹林地標。<br>
+      立面樹紋豐富視覺效果, 溫暖的光影變化創造每戶獨一無二的光影印象,<br>
+      也模糊建築與環境的界線。<br>
+      立面色調隨外在環境變化且在區域環境內不過於突兀,<br>
+      入口概念取自於傳統建築之美麗屋簷, 大屋簷姿態歡迎返家人。
+    </p>
+    <p class="en" data-aos="fade-up" data-aos-delay="0">
+      The Site Is In A Low Urbanized Environment. <br>
+      This Project Not Only Creates A Forest-oriented Environment, But Also Reminds The Scene That Living <br>
+      In A Community Where Is Under The Tree. <br>
+      What Is More, It Would Be Deemed As A Landmark For Tainan City. <br>
+      The Rich Expression Of Façade Provides A Unique Impression Of Light And Shadow. <br>
+      Additionally, The Boundary Between Architecture And Environment Would Be Blurred. <br>
+      The Color Tone Of Façade Would Change According To The Changeable Environment <br>
+      And It Would Not Be Dominant In The Site. <br>
+      The Concept Of Entrance Derives From The Beauty Of Ancient Architectural Eave. <br>
+      The Gesture Of Spreading Out Of Arm Metaphors That It Welcomes To The Home Returner.<br>
+    </p>
+    <div class="img">
+      <img class="w-full" data-aos="zoom-in" data-aos-delay="0" src="@/section/s5/img.jpg" />
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 .s5 {
-  width: 100%;
-  height: size-m(900);
+  padding: size-m(65) size-m(23) size-m(0) size-m(23);
+  text-align: center;
   @media screen and (min-width:768px) {
-    height: size(1444);
+    padding: size(107) size(0) size(99) size(0);
   }
 
-  .bg {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: size-m(746);
-    background-image: url(@/section/s5/bg-m.png);
-    background-size: 100% 100%;
+  .title2 {
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(25);
+    line-height: size-m(36);
+    margin-bottom: size-m(0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @media screen and (min-width:768px) {
-      height: size(1320);
-      background-image: url(@/section/s5/bg.png);
+      font-size: size(38);
+      line-height: size(55);
+      margin-bottom: size(0);
     }
-  }
 
-  .house {
-    top: size-m(0);
-    left: size-m(-59);
-    width: size-m(808);
-    max-width: none;
-    @media screen and (min-width:768px) {
-      top: size(-30);
-      left: size(31);
-      width: size(1872);
+    img {
+      width: size-m(16);
+      margin: 0 size-m(3);
+      @media screen and (min-width:768px) {
+        width: size(26);
+        margin: 0 size(8);
+      }
     }
   }
 
   .title {
-    top: size-m(202);
-    left: size-m(66);
-    width: size-m(247);
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(20);
+    line-height: size-m(29);
+    margin-bottom: size-m(37);
     @media screen and (min-width:768px) {
-      top: size(462);
-      left: size(591);
-      width: size(741);
+      font-size: size(38);
+      line-height: size(55);
+      margin-bottom: size(62);
     }
   }
 
-  .bigtitle{
-    position: absolute;
-    font-size: size(90);
-    color: #fff;
-    font-weight: 900;
-    left:size(590);
-    top: size(435);
-    text-shadow: rgba(0, 0, 0, 0.3) 0.05em 0.05em 0.05em;
-    @media screen and (max-width:768px) {
-    font-size: size-m(30); 
-    left:size-m(65);
-    top: size-m(195);
+  p {
+    font-weight: 400;
+    font-size: size-m(13);
+    line-height: size-m(22);
+    margin-bottom: size-m(40);
+    @media screen and (min-width:768px) {
+      font-size: size(18);
+      line-height: size(39);
+      margin-bottom: size(42);
     }
   }
 
-  .title1{
-    position: absolute;
-    top: size(650);
-    left:size(680);
-    width: size(559);
-    z-index: 5;
-    text-align: center;
-
-    @media screen and (max-width:768px) {
-      top: size-m(310);
-      left:size-m(30);
-      width: size-m(315);
-    }
-
-    .t1{
-      font-size: size(45);
-      line-height: size(70);
-      margin-bottom: size(15);
-      color: #fff;
-      font-weight: 900;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-      
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(20);
-        margin-bottom: size-m(20);
-      }
-    }
-
-
-    .content{
+  .en {
+    font-size: size-m(12);
+    line-height: size-m(19);
+    margin-bottom: size-m(98);
+    font-family: 'Noto Serif TC';
+    @media screen and (min-width:768px) {
       font-size: size(16);
-      color: #fff;
-      font-weight:300;
-      margin-top: size(15);
-      text-align: left;
-      text-align: justify;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        line-height: size-m(20);
-        font-weight:400;
-      }
-    }
-
-  }
-
-  .style {
-    top: size-m(271);
-    left: size-m(16);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(617);
-      left: size(609);
-      width: size(706);
+      line-height: size(38);
+      margin-bottom: size(82);
     }
   }
 
-  .text {
-    top: size-m(301);
-    left: size-m(32);
-    width: size-m(315);
+  .img {
+    width: calc(100% + size-m(23) + size-m(23));
+    margin: 0 size-m(-23);
     @media screen and (min-width:768px) {
-      top: size(652);
-      left: size(682);
-      width: size(559);
-    }
-  }
-
-  .house2 {
-    top: size-m(555);
-    left: 0;
-    width: 100%;
-    @media screen and (min-width:768px) {
-      top: size(702.58);
-      left: size(728);
-      width: size(1194);
-      max-width: none;
-    }
-  }
-
-  .style2 {
-    @media screen and (min-width:768px) {
-      top: size(1133);
-      left: size(170);
-      width: size(662);
+      width: size(1050);
+      margin: 0 auto;
     }
   }
 }
-
 </style>
 
 <script setup>
