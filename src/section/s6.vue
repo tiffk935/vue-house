@@ -144,7 +144,7 @@ onMounted(() => {
   window.onYouTubeIframeAPIReady = function(){
     console.log('success');
     player.value = new YT.Player('yt-player', {
-      videoId: 'KjPFFGhK46s', // 9QYtrvVb2UA
+      videoId: '9QYtrvVb2UA', // 9QYtrvVb2UA
     });
   };
 })
