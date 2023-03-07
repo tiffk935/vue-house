@@ -1,16 +1,17 @@
 <template>
   <div class="s6 relative">
-  <div class="play relative" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" @click="videoOpened = !videoOpened">
+  <div class="play relative" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" @click="openPlayer(true)">
     <img class="videobg absolute" loading="lazy" src="@/section/s6/videobg.jpg" alt="" srcset="">
     <img class="playbut relative" loading="lazy" src="@/section/s6/play.svg" alt="" srcset="">
   </div>
     <div class="player" v-bind:class="{ 'open': videoOpened }">
       <div class="video-box aspect-video">
-        <iframe src="https://www.youtube.com/embed/9QYtrvVb2UA" title="YouTube video player" frameborder="0"
+        <!-- <iframe src="https://www.youtube.com/embed/9QYtrvVb2UA" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
+          allowfullscreen></iframe> -->
+          <div id="yt-player"></div>
       </div>
-      <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="videoOpened = !videoOpened">
+      <div class="close shadow-xl font-['noto_sans_tc'] font-bold" @click="openPlayer(false)">
         返回
       </div>
     </div>
@@ -131,6 +132,29 @@
 </style>
 
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 const videoOpened = ref(false);
+const player = ref(null);
+onMounted(() => {
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScript = document.getElementsByTagName('script')[0];
+  firstScript.parentNode.insertBefore(tag, firstScript);
+
+  window.onYouTubeIframeAPIReady = function(){
+    console.log('success');
+    player.value = new YT.Player('yt-player', {
+      videoId: 'KjPFFGhK46s', // 9QYtrvVb2UA
+    });
+  };
+})
+
+function openPlayer(bool) {
+  if(bool) {
+    player.value.playVideo();
+  } else {
+    player.value.stopVideo();
+  }
+  videoOpened.value = bool;
+}
 </script>
