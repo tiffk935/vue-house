@@ -1,8 +1,8 @@
 <template>
   <section class="s3 relative">
-    <img class="en" data-aos="fade-up" data-aos-delay="0" src="@/section/s3/en.svg" />
-    <div class="title" data-aos="fade-up" data-aos-delay="0">全世界最具影響力的建築師  隈研吾</div>
-    <p data-aos="fade-up" data-aos-delay="0">
+    <img class="en" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400" src="@/section/s3/en.svg" />
+    <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">全世界最具影響力的建築師  隈研吾</div>
+    <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
       隈研吾，著名日本建築師，<br class="md:hidden">1990年設立隈研吾建築都市設計事務所（KKAA）。<br>
       <br class="md:hidden">
       至今，<br class="md:hidden">隈研吾（Kengo Kuma）的作品已遍佈全球多個國家，<br class="md:hidden">並獲得了眾多權威獎項的認可。<br>

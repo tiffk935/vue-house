@@ -1,8 +1,8 @@
 <template>
   <section class="s2 relative">
-    <div class="title" data-aos="fade-up" data-aos-delay="0">「日本．台南 隈研吾俬有宅」</div>
-    <img class="logo" data-aos="fade-up" data-aos-delay="0" src="@/section/s2/logo.svg" />
-    <p data-aos="fade-up" data-aos-delay="0">
+    <div class="title" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">「日本．台南 隈研吾俬有宅」</div>
+    <img class="logo" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" src="@/section/s2/logo.svg" />
+    <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
       全世界都在追逐的建築師、<br class="md:hidden">2020年東京奧運主場館首席設計，<br>
       <br class="md:hidden">
       建築普立茲克獎呼聲最高的候選人<br class="md:hidden">日本國寶建築師「隈研吾」<br>
@@ -16,12 +16,12 @@
       珍藏「隈研吾」獨一無二、無可取代的藝術之作，<br class="hidden md:block">
       絕無僅有的機會，只有親臨親聆、才能體會與感動。
     </p>
-    <div class="photo md:flex">
+    <div class="photo md:flex" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" >
       <div class="kkaa">
         <img src="@/section/s2/kkaa.svg" />
       </div>
       <div class="img">
-        <img data-aos="zoom-in" data-aos-delay="0" class="w-full" src="@/section/s2/img.jpg" />
+        <img class="w-full" src="@/section/s2/img.jpg" />
       </div>
     </div>
   </section>
@@ -71,19 +71,23 @@
   }
 
   .photo {
+      background: #D9D9D9;
+    align-items:stretch;
+
     @media screen and (min-width:768px) {
       flex-direction: row-reverse;
     }
 
     .kkaa {
       height: size-m(153);
-      background: #D9D9D9;
       display: flex;
       justify-content: center;
       align-items: center;
+      margin: auto;
       @media screen and (min-width:768px) {
         width: size(269);
-        height: size(494);
+        height: 100%;
+    //    height: size(494);
       }
 
       img {

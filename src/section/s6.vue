@@ -1,9 +1,12 @@
 <template>
   <div class="s6 relative">
-    <img loading="lazy" class="play" src="@/section/s6/play.webp" alt="" srcset="" @click="videoOpened = !videoOpened">
+  <div class="play relative" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" @click="videoOpened = !videoOpened">
+    <img class="videobg absolute" loading="lazy" src="@/section/s6/videobg.jpg" alt="" srcset="">
+    <img class="playbut relative" loading="lazy" src="@/section/s6/play.svg" alt="" srcset="">
+  </div>
     <div class="player" v-bind:class="{ 'open': videoOpened }">
       <div class="video-box aspect-video">
-        <iframe src="https://www.youtube.com/embed/-EEVOmxNSaM" title="YouTube video player" frameborder="0"
+        <iframe src="https://www.youtube.com/embed/9QYtrvVb2UA" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe>
       </div>
@@ -23,16 +26,23 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: url('@/section/s6/videobg.jpg');
-  background-size: cover;
   margin: size(83) auto;
+  // overflow: hidden;
 
   .play {
-    width: size(142);
+  width: size(1305);
+  height: size(733);
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
     cursor: pointer;
+    .videobg{width: 100%;height: 100%;transition:transform 10s;}
+  .playbut{
+    width: size(80);}
 
     &:hover {
-      opacity: .7;
+    .videobg{transform: scale(1.5);}
     }
   }
 
@@ -89,11 +99,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url('@/section/s6/videobg.jpg');
     margin: size-m(72) 0;
 
     .play {
-      width: size-m(84);
+    width: 100%;
+    height: size-m(210.63); 
+    
+    .playbut{
+    width: size-m(30);}
     }
 
     .player {

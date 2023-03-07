@@ -1,11 +1,11 @@
 <template>
   <section class="s4 relative">
-    <img class="en" data-aos="fade-up" data-aos-delay="0" src="@/section/s4/en.svg" />
-    <div class="title" data-aos="fade-up" data-aos-delay="0">世界の隈研吾</div>
-    <p data-aos="fade-up" data-aos-delay="0">
+    <img class="en" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400" src="@/section/s4/en.svg" />
+    <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">世界の隈研吾</div>
+    <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
       東京奧運主場館‧新國立競技場<br class="block md:hidden">設計師/國寶級建築師 隈研吾
     </p>
-    <div class="slider" data-aos="zoom-in" data-aos-delay="0">
+    <div class="slider" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000">
       <swiper 
         :effect="'coverflow'"
         :centeredSlides="true"
@@ -29,21 +29,27 @@
       >
         <swiper-slide>
           <img src="@/section/s4/1.jpg" />
+          <img src="@/section/s4/t1.png" class="name" />
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s4/2.jpg" />
+          <img src="@/section/s4/t1.png" class="name" />
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s4/3.jpg" />
+          <img src="@/section/s4/t1.png" class="name" />
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s4/4.jpg" />
+          <img src="@/section/s4/t1.png" class="name" />
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s4/5.jpg" />
+          <img src="@/section/s4/t1.png" class="name" />
         </swiper-slide>
         <swiper-slide>
           <img src="@/section/s4/6.jpg" />
+          <img src="@/section/s4/t2.png" class="name" />
         </swiper-slide>
       </swiper>
     </div>
@@ -104,8 +110,23 @@
       .swiper-slide {
         width: size-m(327);
         margin: 0 5vw;
+        .name{
+          position: absolute;
+          bottom: size-m(5);
+          right: size-m(10);
+          height:size-m(11);
+          filter: drop-shadow(0px 1px 2px #0009);
+        }
+        &.swiper-slide-active{
+          transform: translate3d(0px, 0px, 0px)rotate(0) !important;
+        }
         @media screen and (min-width:768px) {
-          width: size(1050);
+          width: size(1040);
+        .name{
+          bottom: size(10);
+          right: size(15);
+          height:size(25);
+        }
         }
       }
 

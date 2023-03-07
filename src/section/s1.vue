@@ -1,8 +1,8 @@
 <template>
   <section class="s1 text-white bg-[#D7282F] relative">
     <img class="house absolute" src="@/section/s1/house.svg" />
-    <img class="logo2 absolute" data-aos="zoom-in" data-aos-delay="0" src="@/section/s1/logo2.svg" />
-    <img class="logo1 absolute" data-aos="zoom-in" data-aos-delay="0" src="@/section/s1/logo1.svg" />
+    <img class="logo2 absolute" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s1/logo2.svg" />
+    <img class="logo1 absolute" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s1/logo1.svg" />
   </section>
 </template>
 
@@ -16,9 +16,10 @@
   }
 
   .house {
-    width: size-m(375);
+    width: size-m(429);
+    max-width: 200%;
     top: size-m(283.44);
-    left: size-m(0);
+    left: size-m(-33);
     @media screen and (min-width:768px) {
       width: size(1033.81);
       top: size(180);

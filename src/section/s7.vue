@@ -1,6 +1,6 @@
 <template>
   <section class="s7 relative">
-    <img class="logo" data-aos="zoom-in" data-aos-delay="0" src="@/section/s7/logo.svg" />
+    <img class="logo" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s7/logo.svg" />
   </section>
 </template>
 

@@ -1,10 +1,10 @@
 <template>
   <section class="s5 relative">
-    <div class="title2" data-aos="fade-up" data-aos-delay="0">
+    <div class="title2" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">
       清景麟<img src="@/section/s5/cross.svg" />隈研吾
     </div>
-    <div class="title" data-aos="fade-up" data-aos-delay="0">契合了「回歸自然」的設計理念</div>
-    <p data-aos="fade-up" data-aos-delay="0">
+    <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">契合了「回歸自然」的設計理念</div>
+    <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
       「巴克禮ONE PARK」基地在低度城市化的環境內,<br>
       本作品不只創造森林般環境, 也保留森林的記憶與大樹下生活的樹林社區,<br>
       更為台南增添一座樹林地標。<br>
@@ -13,7 +13,7 @@
       立面色調隨外在環境變化且在區域環境內不過於突兀,<br>
       入口概念取自於傳統建築之美麗屋簷, 大屋簷姿態歡迎返家人。
     </p>
-    <p class="en" data-aos="fade-up" data-aos-delay="0">
+    <p class="en" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
       The Site Is In A Low Urbanized Environment. <br>
       This Project Not Only Creates A Forest-oriented Environment, But Also Reminds The Scene That Living <br>
       In A Community Where Is Under The Tree. <br>
@@ -26,7 +26,7 @@
       The Gesture Of Spreading Out Of Arm Metaphors That It Welcomes To The Home Returner.<br>
     </p>
     <div class="img">
-      <img class="w-full" data-aos="zoom-in" data-aos-delay="0" src="@/section/s5/img.jpg" />
+      <img class="w-full" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s5/img.jpg" />
     </div>
   </section>
 </template>

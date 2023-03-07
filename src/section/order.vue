@@ -1,16 +1,16 @@
   <template>
   <div class="order relative text-center">
     <div class="order1">
-      <div class="order2">
+      <div class="order2" data-aos="fade-up">
         <!-- Title -->
-        <div class="order-title text-center">{{ info.order.title }}</div>
+        <div class="order-title text-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">{{ info.order.title }}</div>
         <!-- Title Image -->
         <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="巴克禮onepark" srcset=""
           data-aos="fade" data-aos-duration="1000">
         <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="巴克禮onepark" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
-        <div class="form mx-auto relative flex items-start justify-center">
+        <div class="form mx-auto relative flex items-start justify-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">
           <div class="left h-full flex flex-col justify-between items-center">
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" />
@@ -28,12 +28,12 @@
                 {{ city.label }}
               </option>
             </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
+         <!--   <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>居住地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area.label">
                 {{ area.label }}
               </option>
-            </select>
+            </select>  -->
           </div>
           <div class="right h-full">
             <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -42,7 +42,7 @@
         </div>
 
         <!-- Policy -->
-        <div class="flex gap-2 items-center justify-center control">
+        <div class="flex gap-2 items-center justify-center control" data-aos="fade-up" data-aos-delay="400" data-aos-duration="700">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
           <p>
@@ -53,11 +53,11 @@
         <Policy />
 
         <!-- Recaptcha -->
-        <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        <vue-recaptcha data-aos="fade-up" data-aos-delay="600" data-aos-duration="700" class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#000] text-white rounded-none" @click="send()">
+        <div data-aos="fade-up" data-aos-delay="800" data-aos-duration="700" class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#000] text-white rounded-none" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -117,16 +117,21 @@
 
   .form {
     width: size(920);
-    height: 230px;
+   // height: 230px;
     gap: size(80);
     margin-bottom: size(50);
+    align-items:stretch;
+
 
     .left {
       width: size(419);
+    gap: size(20);
     }
 
     .right {
       width: size(419);
+      margin:0 auto;
+      height:auto;
     }
 
     &::after {
@@ -269,7 +274,7 @@ const formDataRef = ref([
 ])
 
 const areaList = ref([])
-
+/*
 watch(
   () => formData.city,
   (newVal, oldVal) => {
@@ -277,6 +282,7 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
+*/
 
 const onRecaptchaVerify = () => {
   formData.r_verify = true
