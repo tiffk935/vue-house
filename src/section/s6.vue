@@ -7,7 +7,12 @@
     </div>
     <div class="slider absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="name absolute hidden md:block">Art Deco</div>
-      <swiper 
+      
+      <div class="pic">
+          <img class="photo" src="@/section/s6/1.jpg" />
+          <div class="txt">外觀3D模擬圖</div>
+        </div>
+     <!-- <swiper 
         :spaceBetween="0"
         :pagination="false"
         :navigation="false"
@@ -20,22 +25,14 @@
         @swiper="setSwiper"
       >
         <swiper-slide>
-          <img class="photo" src="@/section/s6/tmp.jpg" />
-          <div class="txt">外觀3D模擬圖</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="photo" src="@/section/s6/tmp.jpg" />
-          <div class="txt">外觀3D模擬圖</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="photo" src="@/section/s6/tmp.jpg" />
+          <img class="photo" src="@/section/s6/1.jpg" />
           <div class="txt">外觀3D模擬圖</div>
         </swiper-slide>
       </swiper>
       <div class="control">
         <div class="prev" @click="slideTo('prev')"></div>
         <div class="next" @click="slideTo('next')"></div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -104,7 +101,7 @@
       text-align: justify;
       letter-spacing: 0.01em;
       @media screen and (min-width:768px) {
-        font-size: size(20);
+        font-size: size(19);
         line-height: size(36);
         width: size(314);
       }
@@ -203,7 +200,7 @@
         background-image: url(@/section/s3/arrow-right.svg);
       }
     }
-
+    .pic,
     .swiper-slide {
       width: 100%;
 
