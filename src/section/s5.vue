@@ -2,7 +2,7 @@
   <section class="s5 relative text-white">
     <div class="p1 absolute parallax"></div>
     <div class="p2 absolute parallax"></div>
-    <div class="title absolute fade">GREEN LIGH OF<br />THE PARK</div>
+    <div class="title absolute fade">GREEN LIGHT OF<br />THE PARK</div>
     <div class="content absolute">
       <div class="fade">
         <div class="t1">戶戶獨享三千坪社子公園，<br  />生活品質等同綠金價值。</div>
