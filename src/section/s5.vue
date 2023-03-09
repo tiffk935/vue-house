@@ -10,24 +10,11 @@
       更為台南增添一座樹林地標。<br><br class="md:hidden">
       立面樹紋豐富視覺效果，<br class="md:hidden">溫暖的光影變化創造每戶獨一無二的光影體驗，<br>
       也模糊建築與環境的界線。<br><br class="md:hidden">
-<<<<<<< HEAD
-      立面色調隨外在環境變化且在與環境並存，<br>
-=======
       立面色調隨外在環境變化並與環境共存，<br>
->>>>>>> 1c873c6f3a2bd1163fcb7d28379a58d4d8bd6d00
       入口概念取自於傳統建築之美麗屋簷，<br class="md:hidden">以展臂姿態歡迎返家人。
     </p>
     <p class="en" data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">
       Located in an underdeveloped urban area,<br>
-<<<<<<< HEAD
-this project not only aims to create a forest-oriented environment but also to evoke a sense of community living among trees.<br><br class="md:hidden">
-Furthermore, it will serve as a landmark for Tainan city.<br>
-The unique expression of the building's façade creates a striking interplay of light and shadow.<br><br class="md:hidden">
-The color tone of the façade changes according to th e environment,<br class="hidden md:block">
-blending in seamlessly with its surroundings and blurring the boundary between architecture and nature.<br>
-The concept of the entrance is inspired by the beauty of ancient architectural eaves,<br class="hidden md:block">
-with the gesture of the outstretched arm symbolizing a warm welcome home.
-=======
       this project not only aims to create a forest-oriented environment but also to evoke a sense of community living among trees.<br><br class="md:hidden">
       Furthermore, it will serve as a landmark for Tainan city.<br>
       The unique expression of the building's façade creates a striking interplay of light and shadow.<br><br class="md:hidden">
@@ -35,7 +22,6 @@ with the gesture of the outstretched arm symbolizing a warm welcome home.
       blending in seamlessly with its surroundings and blurring the boundary between architecture and nature.<br><br class="md:hidden">
       The concept of the entrance is inspired by the beauty of ancient architectural eaves,<br>
       with the gesture of the outstretched arm symbolizing a warm welcome home. <br>
->>>>>>> 1c873c6f3a2bd1163fcb7d28379a58d4d8bd6d00
     </p>
     <div class="img">
       <img class="w-full" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s5/img.jpg" />
