@@ -258,7 +258,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type"];
+const bypass = ["msg","room_type","area","city"];
 
 //中文對照
 const formDataRef = ref([
