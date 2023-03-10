@@ -1,13 +1,14 @@
   <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
+  <div class="order relative bg-[#EEEEEE] text-center">
     <div class="order1">
       <div class="order2">
+        <div class="line"></div>
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <!-- <div class="order-title text-center">{{ info.order.title }}</div> -->
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="達麗天蒔" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="達麗天蒔" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -16,12 +17,12 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :value="city.value">
@@ -45,9 +46,9 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p>
+          <p class="text-[#0A534C]">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,8 +58,8 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#0A534C] text-white hover:text-white rounded-none font-['Noto_Serif_TC']" @click="send()">
+          {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
 
@@ -81,16 +82,25 @@
   width: 100%;
   // padding-top: size(115);
 
+  input, select, textarea {
+    border: 1px solid #0A534C;
+  }
+
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
   }
 
   .order2 {
-    padding: size(115) 0 size(73) 0;
+    padding: size(55) 0 size(73) 0;
+  }
+
+  .line {
+    margin: 0 auto size(91) auto;
+    width: size(1476);
+    height: 1px;
+    background: #0A534C;
   }
 
   .order-title {
@@ -113,8 +123,8 @@
 
   .form {
     width: size(920);
-    height: 300px;
-    gap: size(80);
+    height: 230px;
+    gap: size(40);
     margin-bottom: size(50);
 
     .left {
@@ -125,13 +135,13 @@
       width: size(419);
     }
 
-    &::after {
-      content: "";
-      width: size(1);
-      height: 100%;
-      background-color: #fff;
-      position: absolute;
-    }
+    // &::after {
+    //   content: "";
+    //   width: size(1);
+    //   height: 100%;
+    //   background-color: #fff;
+    //   position: absolute;
+    // }
   }
 
   .send {
@@ -166,11 +176,14 @@
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      padding: size-m(26) 0 size-m(60) 0;
       background-size: cover;
       background-position: center center;
+    }
+
+    .line {
+      margin: 0 auto size-m(67) auto;
+      width: size-m(310);
     }
 
     .order-title {
@@ -201,9 +214,9 @@
         height: size-m(100);
       }
 
-      &::after {
-        display: none;
-      }
+      // &::after {
+      //   display: none;
+      // }
     }
 
     .send {
@@ -249,7 +262,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg","room_type"];
 
 //中文對照
 const formDataRef = ref([

@@ -1,23 +1,39 @@
 <template>
-  <section class="s5 relative z-10">
-    <div class="bg absolute"></div>
-    <img class="house absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s5/house.png" />
-    <img class="style absolute md:hidden" src="@/section/s5/style-m.svg" />
-    <img class="style absolute hidden md:block" src="@/section/s5/style.svg" />
-    <img class="house2 absolute md:hidden" src="@/section/s5/house2-m.png" />
-    <img class="house2 absolute hidden md:block" src="@/section/s5/house2.png" />
-    <img class="style2 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/s5/style2.png" />
-    
-    <div class="bigtitle" data-aos="fade-up" data-aos-delay="200">新蔚營造 甲級營造</div>
-    <div class="title1">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">價格超值，品質卓越</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     威泰建築從土地開發、產品規劃、承建營造，每一環節群策群力緊密相扣，發揮最大功能，共同創作出最優質的作品。時刻追求新技術的經營理念，重視進度控制：訂立良好管控制度，使工程進度如期進行。重視品質管制：工地主任現場實地監督，以管控工地作業品質；並不定時派人員前往稽核以達到品質管制之目的。
-     <br>
-     每件工程都當做自已的事來施作，必求盡善盡美，以「專業、誠信、品質、效率」，創造新蔚甲級營造，值得信賴的好口碑。
-      </div>
+  <section class="s5 relative bg-[#EEEEEE]">
+    <div class="slider absolute" data-aos="fade-up" data-aos-delay="0">
+      <swiper 
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="false"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <img src="@/section/s5/1.jpg" />
+          <div class="text-white">捷運明德站</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img src="@/section/s5/2.jpg" />
+          <div class="text-white">捷運路線圖</div>
+        </swiper-slide>
+      </swiper>
     </div>
-
+    <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
+      <div class="title">立足北區核心樞紐<br>650米捷運明德站</div>
+      <p>
+        北士科躍升北區核心樞紐，散步650米捷運明德站。淡水信義線，一端追淡江夕照、一端牽起信義計劃，中山、大安、信義時尚與繁華盛景。<br>
+        <br>
+        環狀線北環段預計117年完工，快速銜接大直、內科園區廊帶。<br>
+        <br>
+        福國路交流道延伸線預計2023年完工，直上洲美快速道路。
+      </p>
+    </div>
+    <div class="line"></div>
   </section>
 </template>
 
@@ -25,150 +41,127 @@
 @import "@/assets/style/function.scss";
 .s5 {
   width: 100%;
-  height: size-m(900);
+  height: size-m(708);
   @media screen and (min-width:768px) {
-    height: size(1444);
+    height: size(1080);
   }
 
-  .bg {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: size-m(746);
-    background-image: url(@/section/s5/bg-m.png);
-    background-size: 100% 100%;
+  .slider {
+    width: size-m(315);
+    top: size-m(52);
+    left: size-m(30);
     @media screen and (min-width:768px) {
-      height: size(1320);
-      background-image: url(@/section/s5/bg.png);
-    }
-  }
-
-  .house {
-    top: size-m(0);
-    left: size-m(-59);
-    width: size-m(808);
-    max-width: none;
-    @media screen and (min-width:768px) {
-      top: size(-30);
-      left: size(31);
-      width: size(1872);
-    }
-  }
-
-  .title {
-    top: size-m(202);
-    left: size-m(66);
-    width: size-m(247);
-    @media screen and (min-width:768px) {
-      top: size(462);
-      left: size(591);
-      width: size(741);
-    }
-  }
-
-  .bigtitle{
-    position: absolute;
-    font-size: size(90);
-    color: #fff;
-    font-weight: 900;
-    left:size(590);
-    top: size(435);
-    text-shadow: rgba(0, 0, 0, 0.3) 0.05em 0.05em 0.05em;
-    @media screen and (max-width:768px) {
-    font-size: size-m(30); 
-    left:size-m(65);
-    top: size-m(195);
-    }
-  }
-
-  .title1{
-    position: absolute;
-    top: size(650);
-    left:size(680);
-    width: size(559);
-    z-index: 5;
-    text-align: center;
-
-    @media screen and (max-width:768px) {
-      top: size-m(310);
-      left:size-m(30);
-      width: size-m(315);
+      width: size(931);
+      top: size(142);
+      left: size(885);
     }
 
-    .t1{
-      font-size: size(45);
-      line-height: size(70);
-      margin-bottom: size(15);
-      color: #fff;
-      font-weight: 900;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-      
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(20);
-        margin-bottom: size-m(20);
+    .text-white {
+      position: absolute;
+      top: size-m(10);
+      right: size-m(10);
+      font-size: size-m(12);
+      line-height: size-m(17);
+      text-shadow: size-m(0) size-m(2) size-m(2) rgba(0, 0, 0, 0.8);
+      @media screen and (min-width:768px) {
+        top: size(10);
+        right: size(10);
+        font-size: size(22);
+        line-height: size(34);
+        text-shadow: size(0) size(2) size(2) rgba(0, 0, 0, 0.8);
       }
     }
 
+    .swiper-slide {
+      height: size-m(330);
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
 
-    .content{
-      font-size: size(16);
-      color: #fff;
-      font-weight:300;
-      margin-top: size(15);
+      img {
+        height: 100%;
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: auto;
+        }
+      }
+    }
+
+    .swiper-pagination {
+      bottom: 0;
       text-align: left;
-      text-align: justify;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        line-height: size-m(20);
-        font-weight:400;
+      padding: size-m(10);
+      line-height: 1;
+      @media screen and (min-width:768px) {
+        padding: size(30) size(20);
       }
     }
 
-  }
+    .swiper-pagination-bullet {
+      opacity: 1;
+      background: none;
+      border: size-m(1) solid #fff;
+      width: size-m(10);
+      height: size-m(10);
+      margin: 0 size-m(4);
+      @media screen and (min-width:768px) {
+        border: size(1) solid #fff;
+        width: size(14);
+        height: size(14);
+        margin: 0 size(7.5);
+      }
+    }
 
-  .style {
-    top: size-m(271);
-    left: size-m(16);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(617);
-      left: size(609);
-      width: size(706);
+    .swiper-pagination-bullet-active {
+      background: #fff;
     }
   }
 
   .text {
-    top: size-m(301);
-    left: size-m(32);
-    width: size-m(315);
-    @media screen and (min-width:768px) {
-      top: size(652);
-      left: size(682);
-      width: size(559);
-    }
-  }
-
-  .house2 {
-    top: size-m(555);
+    top: size-m(417);
     left: 0;
-    width: 100%;
+    padding: 0 size-m(31);
+    font-size: size-m(13);
+    line-height: size-m(20);
+    color: #4D4D4D;
     @media screen and (min-width:768px) {
-      top: size(702.58);
-      left: size(728);
-      width: size(1194);
-      max-width: none;
+      top: size(327);
+      left: size(218);
+      width: size(464);
+      padding: 0 size(0);
+      font-size: size(22);
+      line-height: size(34);
+    }
+
+    .title {
+      font-weight: 700;
+      font-size: size-m(20);
+      line-height: size-m(29);
+      letter-spacing: 0.06em;
+      color: #0A534C;
+      font-family: 'Noto Serif TC';
+      margin-bottom: size-m(16);
+      @media screen and (min-width:768px) {
+        font-size: size(39);
+        line-height: size(56);
+        margin-bottom: size(38);
+      }
     }
   }
 
-  .style2 {
+  .line {
+    position: absolute;
+    width: size-m(114.55);
+    height: size-m(0);
+    left: 72vw;
+    top: 117vw;
+    border: size-m(1) solid #0A534C;
+    transform: rotate(-45deg);
     @media screen and (min-width:768px) {
-      top: size(1133);
-      left: size(170);
-      width: size(662);
+      width: size(251.73);
+      left: 30vw;
+      top: 17.6vw;
+      border: size(1) solid #0A534C;
     }
   }
 }
@@ -176,4 +169,12 @@
 </style>
 
 <script setup>
+import { ref } from "vue";
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Pagination, Navigation, Autoplay } from "swiper";
+
+const modules = ref([Pagination, Navigation, Autoplay]);
 </script>
