@@ -18,7 +18,7 @@
           <div class="text-white">捷運明德站</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s5/2.jpg" />
+          <img src="@/section/s5/2.png" />
           <div class="text-white">捷運路線圖</div>
         </swiper-slide>
       </swiper>
@@ -28,12 +28,12 @@
       <p>
         北士科躍升北區核心樞紐，散步650米捷運明德站。淡水信義線，一端追淡江夕照、一端牽起信義計劃，中山、大安、信義時尚與繁華盛景。<br>
         <br>
-        環狀線北環段預計117年完工，快速銜接大直、內科園區廊帶。<br>
+        環狀線北環段預計118年完工，快速銜接大直、內科園區廊帶。<br>
         <br>
-        福國路交流道延伸線預計2023年完工，直上洲美快速道路。
+        福國路交流道延伸線直上洲美快速道路。
       </p>
     </div>
-    <div class="line"></div>
+    <img class="line" data-aos="fade-up-right" data-aos-delay="400" src="@/section/s5/line.svg" />
   </section>
 </template>
 
@@ -123,6 +123,7 @@
     padding: 0 size-m(31);
     font-size: size-m(13);
     line-height: size-m(20);
+    text-align: justify;
     color: #4D4D4D;
     @media screen and (min-width:768px) {
       top: size(327);
@@ -151,17 +152,13 @@
 
   .line {
     position: absolute;
-    width: size-m(114.55);
-    height: size-m(0);
-    left: 72vw;
-    top: 117vw;
-    border: size-m(1) solid #0A534C;
-    transform: rotate(-45deg);
+    width: size-m(83);
+    right:2vw;
+    top: 106vw;
     @media screen and (min-width:768px) {
-      width: size(251.73);
-      left: 30vw;
-      top: 17.6vw;
-      border: size(1) solid #0A534C;
+      width: size(180);
+      left: 32vw;
+      top: 13vw;
     }
   }
 }

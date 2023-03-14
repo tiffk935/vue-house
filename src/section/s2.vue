@@ -74,7 +74,7 @@
         height: size(249);
         left: size(0);
         top: size(0);
-        background-image: url(@/section/s2/08.png);
+        background-image: url(@/section/s2/08.jpg);
       }
 
       &:nth-child(2) {
@@ -82,7 +82,7 @@
         height: size(372);
         left: size(170);
         top: size(218);
-        background-image: url(@/section/s2/07.png);
+        background-image: url(@/section/s2/07.jpg);
       }
 
       &:nth-child(3) {
@@ -90,7 +90,7 @@
         height: size(333);
         left: size(634);
         top: size(63);
-        background-image: url(@/section/s2/06.png);
+        background-image: url(@/section/s2/06.jpg);
       }
 
       &:nth-child(4) {
@@ -98,7 +98,7 @@
         height: size(337);
         left: size(1002);
         top: size(228);
-        background-image: url(@/section/s2/05.png);
+        background-image: url(@/section/s2/05.jpg);
       }
 
       &:nth-child(5) {
@@ -106,7 +106,7 @@
         height: size(159);
         left: size(1286);
         top: size(0);
-        background-image: url(@/section/s2/04.png);
+        background-image: url(@/section/s2/04.jpg);
       }
 
       &:nth-child(6) {
@@ -114,7 +114,7 @@
         height: size(323);
         left: size(1432);
         top: size(228);
-        background-image: url(@/section/s2/03.png);
+        background-image: url(@/section/s2/03.jpg);
       }
 
       &:nth-child(7) {
@@ -122,7 +122,7 @@
         height: size(250);
         left: size(1902);
         top: size(64);
-        background-image: url(@/section/s2/02.png);
+        background-image: url(@/section/s2/02.jpg);
       }
 
       &:nth-child(8) {
@@ -130,7 +130,7 @@
         height: size(213);
         left: size(2225);
         top: size(367);
-        background-image: url(@/section/s2/01.png);
+        background-image: url(@/section/s2/01.jpg);
       }
 
       &:nth-child(9) {
@@ -138,7 +138,7 @@
         height: size(249);
         left: size(2424 + 0);
         top: size(0);
-        background-image: url(@/section/s2/08.png);
+        background-image: url(@/section/s2/08.jpg);
       }
 
       &:nth-child(10) {
@@ -146,7 +146,7 @@
         height: size(372);
         left: size(2424 + 170);
         top: size(218);
-        background-image: url(@/section/s2/07.png);
+        background-image: url(@/section/s2/07.jpg);
       }
 
       &:nth-child(11) {
@@ -154,7 +154,7 @@
         height: size(333);
         left: size(2424 + 634);
         top: size(63);
-        background-image: url(@/section/s2/06.png);
+        background-image: url(@/section/s2/06.jpg);
       }
 
       &:nth-child(12) {
@@ -162,7 +162,7 @@
         height: size(337);
         left: size(2424 + 1002);
         top: size(228);
-        background-image: url(@/section/s2/05.png);
+        background-image: url(@/section/s2/05.jpg);
       }
 
       &:nth-child(13) {
@@ -170,7 +170,7 @@
         height: size(159);
         left: size(2424 + 1286);
         top: size(0);
-        background-image: url(@/section/s2/04.png);
+        background-image: url(@/section/s2/04.jpg);
       }
 
       &:nth-child(14) {
@@ -178,7 +178,7 @@
         height: size(323);
         left: size(2424 + 1432);
         top: size(228);
-        background-image: url(@/section/s2/03.png);
+        background-image: url(@/section/s2/03.jpg);
       }
 
       &:nth-child(15) {
@@ -186,7 +186,7 @@
         height: size(250);
         left: size(2424 + 1902);
         top: size(64);
-        background-image: url(@/section/s2/02.png);
+        background-image: url(@/section/s2/02.jpg);
       }
 
       &:nth-child(16) {
@@ -194,7 +194,7 @@
         height: size(213);
         left: size(2424 + 2225);
         top: size(367);
-        background-image: url(@/section/s2/01.png);
+        background-image: url(@/section/s2/01.jpg);
       }
     }
 
@@ -207,7 +207,7 @@
         height: size-m(130.48);
         top: size-m(0);
         left: size-m(0);
-        background-image: url(@/section/s2/08.png);
+        background-image: url(@/section/s2/08.jpg);
       }
 
       &:nth-child(2) {
@@ -215,7 +215,7 @@
         height: size-m(194.93);
         top: size-m(114.23);
         left: size-m(89.08);
-        background-image: url(@/section/s2/07.png);
+        background-image: url(@/section/s2/07.jpg);
       }
 
       &:nth-child(3) {
@@ -223,7 +223,7 @@
         height: size-m(174.49);
         left: size-m(332.22);
         top: size-m(33.01);
-        background-image: url(@/section/s2/06.png);
+        background-image: url(@/section/s2/06.jpg);
       }
 
       &:nth-child(4) {
@@ -231,7 +231,7 @@
         height: size-m(176.59);
         left: size-m(525.05);
         top: size-m(119.47);
-        background-image: url(@/section/s2/05.png);
+        background-image: url(@/section/s2/05.jpg);
       }
 
       &:nth-child(5) {
@@ -239,7 +239,7 @@
         height: size-m(83.54);
         left: size-m(673.92);
         top: size-m(0);
-        background-image: url(@/section/s2/04.png);
+        background-image: url(@/section/s2/04.jpg);
       }
 
       &:nth-child(6) {
@@ -247,7 +247,7 @@
         height: size-m(169.71);
         left: size-m(750.43);
         top: size-m(119.8);
-        background-image: url(@/section/s2/03.png);
+        background-image: url(@/section/s2/03.jpg);
       }
 
       &:nth-child(7) {
@@ -255,7 +255,7 @@
         height: size-m(131.36);
         left: size-m(996.73);
         top: size-m(33.63);
-        background-image: url(@/section/s2/02.png);
+        background-image: url(@/section/s2/02.jpg);
       }
 
       &:nth-child(8) {
@@ -263,7 +263,7 @@
         height: size-m(130.48);
         top: size-m(0);
         left: size-m(1166 + 0);
-        background-image: url(@/section/s2/08.png);
+        background-image: url(@/section/s2/08.jpg);
       }
 
       &:nth-child(9) {
@@ -271,7 +271,7 @@
         height: size-m(194.93);
         top: size-m(114.23);
         left: size-m(1166 + 89.08);
-        background-image: url(@/section/s2/07.png);
+        background-image: url(@/section/s2/07.jpg);
       }
 
       &:nth-child(10) {
@@ -279,7 +279,7 @@
         height: size-m(174.49);
         left: size-m(1166 + 332.22);
         top: size-m(33.01);
-        background-image: url(@/section/s2/06.png);
+        background-image: url(@/section/s2/06.jpg);
       }
 
       &:nth-child(11) {
@@ -287,7 +287,7 @@
         height: size-m(176.59);
         left: size-m(1166 + 525.05);
         top: size-m(119.47);
-        background-image: url(@/section/s2/05.png);
+        background-image: url(@/section/s2/05.jpg);
       }
 
       &:nth-child(12) {
@@ -295,7 +295,7 @@
         height: size-m(83.54);
         left: size-m(1166 + 673.92);
         top: size-m(0);
-        background-image: url(@/section/s2/04.png);
+        background-image: url(@/section/s2/04.jpg);
       }
 
       &:nth-child(13) {
@@ -303,7 +303,7 @@
         height: size-m(169.71);
         left: size-m(1166 + 750.43);
         top: size-m(119.8);
-        background-image: url(@/section/s2/03.png);
+        background-image: url(@/section/s2/03.jpg);
       }
 
       &:nth-child(14) {
@@ -311,7 +311,7 @@
         height: size-m(131.36);
         left: size-m(1166 + 996.73);
         top: size-m(33.63);
-        background-image: url(@/section/s2/02.png);
+        background-image: url(@/section/s2/02.jpg);
       }
     }
   }

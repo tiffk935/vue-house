@@ -141,6 +141,7 @@
     padding: 0 size-m(31);
     font-size: size-m(13);
     line-height: size-m(20);
+    text-align: justify;
     color: #4D4D4D;
     @media screen and (min-width:768px) {
       top: size(826);

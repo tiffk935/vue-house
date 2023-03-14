@@ -104,7 +104,7 @@
         }
 
         .list {
-            font-weight: 600;
+            font-weight: 500;
             font-size: size-m(12);
             line-height: size-m(17);
             margin-bottom: size-m(74);

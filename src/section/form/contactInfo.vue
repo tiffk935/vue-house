@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="address-wrap flex justify-between w-full contact-item-box no-gap md:rounded-none overflow-hidden font-['Noto_Serif_TC']">
-      <div class="flex contact-item justify-between items-center address">
+      <div class="flex contact-item justify-between items-center address font-bold">
         <div class="text-[#0A534C]">{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">

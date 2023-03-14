@@ -1,9 +1,10 @@
 <template>
   <section class="s1 text-white bg-[#00332a] relative">
-    <img class="bg hidden md:block" src="@/section/s1/bg.png" />
-    <img class="bg md:hidden" src="@/section/s1/bg-m.png" />
+    <img class="bg hidden md:block" src="@/section/s1/bg.jpg" />
+    <img class="bg md:hidden" src="@/section/s1/bg-m.jpg" />
     <div class="bg2"></div>
     <img class="crystal absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/crystal.png" />
+    <img class="crystal1 absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/crystal.svg" />
     <div class="logo absolute" data-aos="head-up" data-aos-delay="0" data-aos-duration="1050">
       <img class="w-full" src="@/section/s1/logo.svg" />
     </div>
@@ -80,6 +81,16 @@
       left: size(867);
     }
   }
+  .crystal1 {
+    width: size-m(113);
+    top: size-m(131);
+    left: size-m(131);
+    @media screen and (min-width:768px) {
+      width: size(190);
+      top: size(254);
+      left: size(866);
+    }
+  }
 
   .logo {
     width: size-m(216.47);
@@ -105,7 +116,7 @@
   .text {
     top: size-m(441);
     left: size-m(79);
-    font-weight: 700;
+    font-weight: 600;
     overflow: hidden;
     @media screen and (min-width:768px) {
       top: size(790);

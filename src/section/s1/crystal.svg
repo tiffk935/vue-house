@@ -1,0 +1,36 @@
+<svg width="190" height="240" viewBox="0 0 190 240" xmlns="http://www.w3.org/2000/svg" fill="none">
+<linearGradient id="SVGID_1" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="220">
+	<stop offset="0" style="stop-color:#FFF0;"/>
+	<stop offset="0.5" style="stop-color:#FFF"/>
+	<stop offset="1" style="stop-color:#FFF0;"/>
+	<animate  attributeName="x1" from="-1600" to="1800" dur="8s" repeatCount="indefinite" />
+	<animate  attributeName="x2" from="-1400" to="2000" dur="8s" repeatCount="indefinite" />
+</linearGradient>
+<path style="fill:url(#SVGID_1);" d="M70.8,51.3h48.8L141,0.9l47.2,45.3l-52.6,20.9v106.5l52.6,20.6L141,239.4l-21.8-50.5H70.9l-21.8,50.5L1.9,194.1l52.6-20.9V67.1L1.9,46.2L49.1,0.9L70.8,51.3z M19.4,53.1v134l36.9,35.4h77.4l36.9-35.4v-134l-36.9-35.4H56.4L19.4,53.1zM126.6,34.5l26.5,25.6v120.1l-26.6,25.7H63.7L37,180.2V60.1l26.7-25.6H126.6z"/>
+<linearGradient id="SVGID_2" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="220">
+	<stop offset="0" style="stop-color:#FFF0;"/>
+	<stop offset="0.5" style="stop-color:#FFF"/>
+	<stop offset="1" style="stop-color:#FFF0;"/>
+	<animate  attributeName="x1" from="-1500" to="1900" dur="8s" repeatCount="indefinite" />
+	<animate  attributeName="x2" from="-1300" to="2100" dur="8s" repeatCount="indefinite" />
+</linearGradient>
+<path style="fill:url(#SVGID_2);" d="M19.4,53.1v134l36.9,35.4h77.4l36.9-35.4v-134l-36.9-35.4H56.4L19.4,53.1z M126.6,34.5l26.5,25.6v120.1l-26.6,25.7H63.7L37,180.2V60.1l26.7-25.6H126.6z M119.6,51.3H70.8L49.1,0.9H141L119.6,51.3z M135.6,67.1l52.6-20.9v148l-52.6-20.6V67.1z M54.5,173.2L1.9,194.1v-148l52.6,20.9V173.2z M141,239.4H49.1l21.8-50.5h48.3L141,239.4z"/>
+<linearGradient id="SVGID_3" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="220">
+	<stop offset="0" style="stop-color:#FFF0;"/>
+	<stop offset="0.5" style="stop-color:#FFF"/>
+	<stop offset="1" style="stop-color:#FFF0;"/>
+	<animate  attributeName="x1" from="-1800" to="1600" dur="8s" repeatCount="indefinite" />
+	<animate  attributeName="x2" from="-1200" to="2200" dur="8s" repeatCount="indefinite" />
+</linearGradient>
+<path style="fill:url(#SVGID_3);" d="M188.6,45.9L141.1,0.4H48.8L1.3,45.9v148.4
+	l47.5,45.6h92.3l47.5-45.6V45.9z M187.6,193.3l-16.4-6.5V53.5l16.4-6.6V193.3z M133.9,18.6L169.8,53l-16.5,6.6l-26.2-25.1
+	L133.9,18.6z M136.1,172.9V67.4l16.5-6.6v118.6L136.1,172.9z M119,188.4H71.1L55,173V67.3l16.1-15.4H119l16.1,15.4V173L119,188.4z
+	 M126.7,35.4l25.6,24.5l-16.5,6.6l-15.9-15.3L126.7,35.4z M118.9,50.8H71.2L64.4,35h61.3L118.9,50.8z M63.4,35.4l6.8,15.8L54.4,66.5
+	l-16.5-6.6L63.4,35.4z M54,67.4v105.5l-16.5,6.6V60.8L54,67.4z M37.9,180.4l16.5-6.6l15.9,15.3l-6.8,15.8L37.9,180.4z M71.2,189.4
+	h47.7l6.8,15.8l-61.3,0.1L71.2,189.4z M126.7,204.9l-6.8-15.8l15.9-15.3l16.5,6.6L126.7,204.9z M153.6,179.8V60.4l16.5-6.6v132.5
+	L153.6,179.8z M126.2,34H63.9l-6.8-15.8H133L126.2,34z M56.2,18.6L63,34.4L36.8,59.5l-16.5-6.6L56.2,18.6z M36.5,60.4v119.4
+	l-16.5,6.6V53.9L36.5,60.4z M20.3,187.3l16.5-6.6L63,205.9l-6.8,15.8L20.3,187.3z M63.9,206.3h62.2l6.8,15.8H57.1L63.9,206.3z
+	 M133.9,221.7l-6.8-15.8l26.2-25.1l16.5,6.6L133.9,221.7z M187.2,46l-16.4,6.6l-36.5-35L141,1.7L187.2,46z M49.9,1.4h90.4l-6.8,15.8
+	H56.7L49.9,1.4z M48.9,1.7l6.8,15.8l-36.5,35L2.8,46L48.9,1.7z M2.4,46.9l16.5,6.6v133.3l-16.5,6.6V46.9z M2.8,194.3l16.5-6.6
+	l36.5,35l-6.8,15.8L2.8,194.3z M49.9,238.9l6.8-15.8h76.7l6.8,15.8H49.9z M141,238.5l-6.8-15.8l36.5-35l16.5,6.6L141,238.5z"/>
+</svg>

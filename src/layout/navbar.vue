@@ -115,7 +115,7 @@
     z-index: 98;
     display: flex;
     justify-content: space-between;
-    backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(150%) blur(20px);
     font-weight: 700;
     @media screen and (min-width:768px) {
         height: size(87);
@@ -231,7 +231,7 @@
         span {
             font-size: size-m(16);
             white-space: nowrap;
-            font-weight: 700;
+            font-weight: 600;
             position: relative;
 
             &:after {

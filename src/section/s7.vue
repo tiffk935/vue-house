@@ -10,35 +10,35 @@
       >
         <swiper-slide>
           <div class="item">
-            <img src="@/section/s7/1.jpg" />
+            <div class="img"><img src="@/section/s7/1.jpg" /></div>
             <div class="t1">KODA ON 5TH AVE</div>
             <div class="t2">450 S Main St, Seattle, WA 98104 USA</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
-            <img src="@/section/s7/2.jpg" />
+            <div class="img"><img src="@/section/s7/2.jpg" /></div>
             <div class="t1">陽明大苑</div>
             <div class="t2">台北市士林區</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
-            <img src="@/section/s7/3.jpg" />
+            <div class="img"><img src="@/section/s7/3.jpg" /></div>
             <div class="t1">達麗101</div>
             <div class="t2">台北市信義區</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
-            <img src="@/section/s7/4.jpg" />
+            <div class="img"><img src="@/section/s7/4.jpg" /></div>
             <div class="t1">世界灣</div>
             <div class="t2">新北市淡水區</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item">
-            <img src="@/section/s7/5.jpg" />
+            <div class="img"><img src="@/section/s7/5.jpg" /></div>
             <div class="t1">達麗冶翠</div>
             <div class="t2">台中市北區</div>
           </div>
@@ -72,13 +72,13 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(@/section/s7/bg-m.png);
+    background-image: url(@/section/s7/bg-m.jpg);
     background-size: cover;
     @media screen and (min-width:768px) {
       left: size(91);
       width: size(1829);
       height: 100%;
-      background-image: url(@/section/s7/bg.png);
+      background-image: url(@/section/s7/bg.jpg);
     }
   }
 
@@ -102,6 +102,7 @@
     .swiper-slide {
       width: size-m(253 + 5);
       padding-right: size-m(5);
+      transition: all 1s;
       @media screen and (min-width:768px) {
         width: size(496 + 10);
         padding-right: size(10);
@@ -118,18 +119,23 @@
         }
 
         &:hover img {
-          filter: grayscale(0);
+          filter: grayscale(0.1);
+          transform: scale(1.3);
+        transition: filter .3s,transform 8s;
         }
       }
-
+      .img{overflow: hidden;
+        margin-bottom: size-m(13.87);
+        @media screen and (min-width:768px) {
+        margin-bottom: size(21);
+        }
+      }
       img {
         width: 100%;
-        margin-bottom: size-m(13.87);
+        margin-bottom:0;
+       // margin-bottom: size-m(13.87);
         filter: grayscale(1);
-        transition: all .2s;
-        @media screen and (min-width:768px) {
-          margin-bottom: size(21);
-        }
+        transition: filter 1s,transform 3s;
       }
 
       .t1 {
@@ -158,7 +164,7 @@
         }
       }
     }
-
+    .swiper-slide-prev{opacity: 0.3;filter: blur(1px);}
     .swiper-slide-active img {
       filter: grayscale(0);
       @media screen and (min-width:768px) {
@@ -173,6 +179,7 @@
     padding: 0 size-m(58);
     font-size: size-m(13);
     line-height: size-m(20);
+    text-align: justify;
     color: #fff;
     @media screen and (min-width:768px) {
       top: size(91);
