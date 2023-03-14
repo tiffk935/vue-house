@@ -1,6 +1,8 @@
 <template>
   <section class="s4 relative bg-[#EEEEEE]">
-    <img class="img1 absolute" src="@/section/s4/img1.jpg" data-aos="fade-up" data-aos-delay="0" />
+    <div class="img1 absolute" data-aos="fade-up" data-aos-delay="0">
+      <img src="@/section/s4/img1.jpg" /><img class="absolute" src="@/section/s4/img1.png" />
+    </div>    
     <img class="img2 absolute" src="@/section/s4/img2.jpg" data-aos="fade-up" data-aos-delay="0" />
     <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
       <div class="title">文林北路綠樹園道<br>國際北士科首席</div>
@@ -26,6 +28,9 @@
     width: size-m(315);
     top: size-m(162);
     left: size-m(30);
+    img{width: 100%;
+    &:last-child{top: 0;left: 0;}
+    }
     @media screen and (min-width:768px) {
       width: size(933);
       top: size(120);
