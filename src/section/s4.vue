@@ -3,7 +3,11 @@
     <div class="img1 absolute" data-aos="fade-up" data-aos-delay="0">
       <img src="@/section/s4/img1.jpg" /><img class="absolute" src="@/section/s4/img1.png" />
     </div>    
-    <img class="img2 absolute" src="@/section/s4/img2.jpg" data-aos="fade-up" data-aos-delay="0" />
+    <div class="img2 absolute" data-aos="fade-up" data-aos-delay="0">
+    <img src="./s4/img21.jpg" />
+    <img class="absolute" src="./s4/img22.png" />
+    <img class="absolute" src="./s4/img23.png" />
+    </div>    
     <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
       <div class="title">文林北路綠樹園道<br>國際北士科首席</div>
       <p>
@@ -42,11 +46,23 @@
     width: size-m(148);
     top: size-m(52);
     left: size-m(197);
+    overflow: hidden;
+    img{width: 100%;top: 0;left: 0;
+    &:nth-child(2){
+      animation: an 3s linear infinite;
+    }
+    }
     @media screen and (min-width:768px) {
       width: size(445);
       top: size(119);
       left: size(1256);
     }
+    @keyframes an{
+    from{transform: translate(35%,100%);
+    }
+    to{transform: translate(-30%,-100%);
+    }
+}
   }
 
   .text {
