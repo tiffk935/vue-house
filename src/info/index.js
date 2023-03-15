@@ -65,15 +65,15 @@ export default {
             target: ".s7",
             offset: "",
         },
-        {
-            name: "建築藝術",
-            target: ".s8",
-            offset: "",
-        },
-        {
-            name: "私人宅邸",
-            target: ".s9",
-            offset: "",
-        },
+        //{
+        //    name: "建築藝術",
+        //    target: ".s8",
+        //    offset: "",
+        //},
+        //{
+        //    name: "私人宅邸",
+        //    target: ".s9",
+        //    offset: "",
+        //},
     ],
 }
