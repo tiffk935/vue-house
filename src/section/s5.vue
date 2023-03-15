@@ -18,7 +18,7 @@
       this project not only aims to create a forest-oriented environment but also to evoke a sense of community living among trees.<br><br class="md:hidden">
       Furthermore, it will serve as a landmark for Tainan city.<br>
       The unique expression of the building's façade creates a striking interplay of light and shadow.<br><br class="md:hidden">
-      The color tone of the façade changes according to th e environment,<br>
+      The color tone of the façade changes according to the environment,<br>
       blending in seamlessly with its surroundings and blurring the boundary between architecture and nature.<br><br class="md:hidden">
       The concept of the entrance is inspired by the beauty of ancient architectural eaves,<br>
       with the gesture of the outstretched arm symbolizing a warm welcome home. <br>
