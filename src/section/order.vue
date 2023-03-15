@@ -17,6 +17,8 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
+              <input type="text" placeholder="信箱" class="input w-full rounded-none" :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)" />
             <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
@@ -123,7 +125,7 @@
 
   .form {
     width: size(920);
-    height: 230px;
+    height: 275px;
     gap: size(40);
     margin-bottom: size(50);
 
@@ -250,7 +252,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
-  // email: "",
+  email: "",
   city: "",
   area: "",
   msg: "",
@@ -262,14 +264,14 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type"];
+const bypass = ["msg","room_type","area","city","email"];
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  // "信箱", //email
+  "信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
