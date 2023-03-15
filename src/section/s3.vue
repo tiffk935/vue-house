@@ -1,7 +1,8 @@
 <template>
   <section class="s3 relative bg-[#EEEEEE]">
     <div class="map absolute">
-      <img class="map1" src="@/section/s3/map.jpg" />
+      <img class="map1 text" src="@/section/s3/text.png" />
+      <img class="map1" src="@/section/s3/view.jpg" />
     </div>
     <!-- <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" /> -->
     <!-- <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" /> -->
@@ -70,6 +71,13 @@
         margin-top: 0;
       }
     }
+    .text{
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        left: 0;
+        padding: 0;
+      }
   }
 
   // .hand {

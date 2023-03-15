@@ -130,7 +130,7 @@
 
         @media screen and (min-width:768px) {
             width: size(267.55);
-            height: size(56);
+            height: auto;
         }
     }
 
