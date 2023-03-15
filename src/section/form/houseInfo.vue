@@ -3,13 +3,13 @@
         <img class="bg hidden md:block" src="@/section/s1/bg.png" />
         <img class="bg md:hidden" src="@/section/s1/bg-m.png" />
         <div class="links relative">
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://www.da-li.com.tw/">
                 <img src="@/section/form/btn1.svg" alt="達麗建設官網" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://unigiants.com.tw/">
                 <img src="@/section/form/btn2.svg" alt="聯碩行銷團隊官網" />
             </a>
-            <a target="_blank" href="#">
+            <a target="_blank" href="https://www.facebook.com/unigiant/">
                 <img src="@/section/form/btn3.svg" alt="聯碩城市風格誌" />
             </a>
         </div>
