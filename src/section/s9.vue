@@ -2,7 +2,7 @@
   <section class="s9 relative text-white">
     <img class="logo absolute" src="@/section/s9/logo.svg" />
     <div class="t1 absolute">戶戶社子公園首席 北方未來正核心</div>
-    <div class="t2 absolute">23~39 坪 ｜ 2~3 房 ｜ 8787-8888</div>
+    <div class="t2 absolute">24~39 坪 ｜ 2~3 房 ｜ 8787-8888</div>
     <div class="t3 absolute">2023初春  即將公開</div>
     <img class="logo2 absolute" src="@/section/s9/logo2.svg" />
   </section>

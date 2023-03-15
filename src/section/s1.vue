@@ -8,8 +8,8 @@
     <div class="t2 absolute fade">公<br />園<br />建<br />築<br />為<br />您<br />而<br />來<br />。</div>
     <div class="order-btn absolute" @click="scrollTo('.order')">立即預約</div>
     <div class="t3 absolute md:hidden fade">德林哲人之里 戶戶社子公園首席</div>
-    <div class="t4 absolute md:hidden fade">23~39坪 ｜ 2~3房 ｜ 8787-8888</div>
-    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 ｜ 23~39 坪 ｜ 2~3 房  8787-8888</div>
+    <div class="t4 absolute md:hidden fade">24~39坪 ｜ 2~3房 ｜ 8787-8888</div>
+    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 ｜ 24~39 坪 ｜ 2~3 房  8787-8888</div>
     <img class="group absolute md:hidden" src="@/section/s1/group-m.svg" />
     <img class="group absolute hidden md:block" src="@/section/s1/group.svg" />
     <div class="light">
