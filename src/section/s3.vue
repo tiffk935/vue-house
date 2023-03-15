@@ -114,9 +114,9 @@
     padding: 0 size-m(12);
     pointer-events: none;
     @media screen and (min-width:768px) {
-      top: size(554);
-      left: size(1101);
-      font-size: size(39);
+      top: size(564);
+      left: size(1301);
+      font-size: size(29);
       line-height: size(56);
       padding: 0 0 0 size(10);
     }
@@ -136,8 +136,8 @@
     pointer-events: none;
     @media screen and (min-width:768px) {
       top: size(639);
-      left: size(1269);
-      font-size: size(39);
+      left: size(1430);
+      font-size: size(29);
       line-height: size(56);
       padding: 0 size(10);
     }
