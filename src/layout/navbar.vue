@@ -117,6 +117,7 @@
     justify-content: space-between;
     backdrop-filter: saturate(150%) blur(20px);
     font-weight: 700;
+    align-items: center;
     @media screen and (min-width:768px) {
         height: size(87);
         padding: 0 size(37) 0 size(37);
@@ -126,8 +127,10 @@
 
     .top-logo {
         width: size-m(153);
+
         @media screen and (min-width:768px) {
             width: size(267.55);
+            height: size(56);
         }
     }
 
@@ -142,7 +145,7 @@
             cursor: pointer;
             @media screen and (min-width:768px) {
                 width: auto;
-                height: size(49.74);
+                height: auto;
             }
 
             circle {
