@@ -1,26 +1,9 @@
 <template>
   <section class="s2 relative bg-[#00332a]">
     <!-- pc -->
-    <div class="gallary g1 absolute hidden md:block">
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-    </div>
+    <Gallery />
     <!-- mobile -->
-    <div class="gallary g2 absolute md:hidden">
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-      <div class="item"></div><div class="item"></div>
-    </div>
+    <GalleryMobile />
     <div class="text absolute md:flex md:justify-between md:items-end">
       <div class="title" data-aos="fade-up" data-aos-delay="0">後發先至<br>盛世之約</div>
       <div>
@@ -406,32 +389,6 @@
 </style>
 
 <script setup>
-import { gsap } from "gsap";
-import { onMounted, nextTick } from 'vue';
-
-onMounted(() => {
-  nextTick(() => {
-    const g1W = -100 * 2424 / 1920;
-    for(let i=0; i<14; i++) {
-      const item = document.querySelectorAll('.s2 .g1 .item')[i];
-      gsap.to(item, { 
-        x: g1W + 'vw', 
-        ease: "none", 
-        duration: 30, 
-        repeat: -1,
-      });
-    }
-
-    const g2W = -100 * 1166 / 375;
-    for(let i=0; i<14; i++) {
-      const item = document.querySelectorAll('.s2 .g2 .item')[i];
-      gsap.to(item, { 
-        x: g2W + 'vw', 
-        ease: "none", 
-        duration: 20, 
-        repeat: -1
-      });
-    }
-  })
-})
+import Gallery from "@/section/s2/gallery.vue";
+import GalleryMobile from "@/section/s2/galleryMobile.vue";
 </script>
