@@ -4,9 +4,9 @@
       <img src="@/section/s4/img1.jpg" /><img class="absolute" src="@/section/s4/img1.png" />
     </div>    
     <div class="img2 absolute" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s4/img21.jpg" />
-    <img class="absolute" src="./s4/img22.png" />
-    <img class="absolute" src="./s4/img23.png" />
+    <img src="./s4/img2.jpg" />
+    <!--img class="absolute" src="./s4/img22.png" /-->
+    <!--img class="absolute" src="./s4/img23.png" /-->
     </div>    
     <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
       <div class="title">文林北路綠樹園道<br>國際北士科首席</div>

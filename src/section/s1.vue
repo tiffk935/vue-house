@@ -11,7 +11,7 @@
     <div class="text absolute md:hidden" data-aos="head-up" data-aos-delay="0" data-aos-duration="1050">
       <div class="wrapper">
         <div class="t1">國際北士科<span class="text-[#E3B15F]">｜</span>文林北路首席</div>
-        <div class="t2">25-43坪 02-2823-5888</div>
+        <div class="t2">2-4房 25-43坪 2823-5888</div>
         <img class="t3" src="@/section/s1/t3-m.svg" />
         <div class="order-btn" @click="scrollTo('.order')"></div>
       </div>
@@ -20,7 +20,7 @@
       <div class="wrapper">
         <div class="flex justify-between items-end">
           <div>
-            <div class="t1">國際北士科<span class="text-[#E3B15F]">｜</span>文林北路首席<span class="text-[#E3B15F]">｜</span>25-43坪<span class="text-[#E3B15F]">｜</span>02-2823-5888</div>
+            <div class="t1">國際北士科 文林北路首席<span class="text-[#E3B15F]">｜</span>25-43坪<span class="text-[#E3B15F]">｜</span>2-4房<span class="text-[#E3B15F]">｜</span>2823-5888</div>
             <img class="t3" src="@/section/s1/t3.svg" />
           </div>
           <div class="order-btn" @click="scrollTo('.order')"></div>
@@ -137,15 +137,16 @@
       font-size: size-m(18);
       line-height: size-m(26);
       @media screen and (min-width:768px) {
-        font-size: size(33);
+        font-size: size(30);
         line-height: size(47);
+        letter-spacing: 0.05em;
       }
     }
     
     .t2 {
-      font-size: size-m(20);
+      font-size: size-m(17);
       line-height: size-m(29);
-      letter-spacing: 0.035em;
+      letter-spacing: 0.055em;
       @media screen and (min-width:768px) {
         font-size: size(33);
         letter-spacing: 0;

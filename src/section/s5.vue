@@ -18,7 +18,7 @@
           <div class="text-white">捷運明德站</div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s5/2.png" />
+          <img src="@/section/s5/2.jpg" />
           <div class="text-white">捷運路線圖</div>
         </swiper-slide>
       </swiper>
