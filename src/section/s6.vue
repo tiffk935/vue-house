@@ -43,9 +43,9 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
-      <div class="title">頂尖生醫、國際學校<br>豐饒新富領地</div>
-      <p>
+    <div class="text absolute">
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">頂尖生醫、國際學校<br>豐饒新富領地</div>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         北士科周邊擁有密集生醫資源，包含榮民總醫院、振興醫院、臺北護理學院、新光醫學中心、和信醫院、陽明醫院、陽明交通大學與衛福部國家中醫藥研究所等，歐洲學校、美國學校、日僑學校、奎山中學…國際學校優質文教，對位豐饒新富領地。
       </p>
     </div>

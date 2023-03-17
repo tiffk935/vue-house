@@ -24,9 +24,9 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
-      <div class="title">大樹寓邸，森態花園</div>
-      <p>
+    <div class="text absolute">
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">大樹寓邸，森態花園</div>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         建築致敬自然，設計結合環境裡珍貴的自然生態和北士科數位城市概念，以城市森林為主題，宛如大樹卓立文林北路大道。詩意雲山水譜寫達麗天蒔森林庭園風景，臨路退縮園道，層層綠意包覆森態花園。
       </p>
     </div>

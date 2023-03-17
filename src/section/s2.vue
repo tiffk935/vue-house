@@ -5,14 +5,14 @@
     <!-- mobile -->
     <GalleryMobile />
     <div class="text absolute md:flex md:justify-between md:items-end">
-      <div class="title" data-aos="fade-up" data-aos-delay="0">後發先至<br>盛世之約</div>
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">後發先至<br>盛世之約</div>
       <div>
-        <ul data-aos="fade-up" data-aos-delay="0">
+        <ul data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
           <li>1980年代信義計劃橫空出世，今日TAIPEI 101早已是台灣世界印象。</li>
           <li>1992年南港軟體園區肇始，東區門戶計劃推波助瀾，房價飛越百萬。</li>
           <li>2001年內湖科學園區應勢崛起，今時年產值5.2兆。</li>
         </ul>
-        <p data-aos="fade-up" data-aos-delay="0">科技聚落、大型重劃，北士科壓軸，後發先至。盛世之約，珍貴更甚，不能再錯過。</p>
+        <p data-aos="fade-up" data-aos-delay="600" data-aos-duration="1000">科技聚落、大型重劃，北士科壓軸，後發先至。盛世之約，珍貴更甚，不能再錯過。</p>
       </div>
     </div>
   </section>

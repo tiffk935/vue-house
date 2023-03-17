@@ -45,9 +45,9 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="text absolute md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-      <div class="title" data-aos="fade-up" data-aos-delay="0">全球視野<br>世界建築</div>
-      <p data-aos="fade-up" data-aos-delay="0">
+    <div class="text absolute md:flex md:justify-between md:items-start">
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">全球視野<br>世界建築</div>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         達麗從台灣到西雅圖，從建設到營建、商場，早已邁向全球化、國際化，每一座達麗建築都以與世界各大城市新建築比肩的標準檢視，跨國際推案、跨國團隊合作，不只成就達麗建築成為世界級建築，國際視野與世界觀更讓達麗跳脫單一建築個案思維，從環境與城市發展宏觀角度定位建築。
       </p>
     </div>

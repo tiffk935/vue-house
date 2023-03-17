@@ -8,9 +8,9 @@
     <!--img class="absolute" src="./s4/img22.png" /-->
     <!--img class="absolute" src="./s4/img23.png" /-->
     </div>    
-    <div class="text absolute" data-aos="fade-up" data-aos-delay="0">
-      <div class="title">文林北路綠樹園道<br>國際北士科首席</div>
-      <p>
+    <div class="text absolute">
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">文林北路綠樹園道<br>國際北士科首席</div>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         從信義計劃、內科到南軟，與經濟脈動並肩的重劃區增值潛力之大早已驗證。台北市最後一塊重劃區北士科彌足珍貴，純住宅區比例僅占約14％，更是珍稀。<br>
         <br>
         文林北路第一排，領航盛世燙金門牌，與便捷機能咫尺相連，與綠樹街廓優雅共生，鳳毛麟角般的存在，擁有一席即是贏家。

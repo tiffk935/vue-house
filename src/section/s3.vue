@@ -8,9 +8,9 @@
     <!-- <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" /> -->
     <div class="info1 absolute">台北的未來已經啟動，</div>
     <div class="info2 absolute">你必須立即行動</div>
-    <div class="text absolute md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-      <div class="title">盛世台北，就看國際北士科</div>
-      <p>
+    <div class="text absolute md:flex md:justify-between md:items-start">
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">盛世台北，就看國際北士科</div>
+      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         台北科技廊帶最後拼圖-北士科，串連內科2.0計劃、南港生技聚落計劃，台北立足國際最重要的城市戰略，下一輪繁榮盛世就看北士科。<br>
         <br>
         金仁寶集團55層全球總部，新光集團摩天雙塔，台灣工程龍頭-中鼎集團企業總部，友華生技集團、叡揚資訊、正大集團、味丹集團…，數十家上市櫃企業佈局逐鹿，十兆產值蓄勢待發。
