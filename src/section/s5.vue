@@ -5,7 +5,7 @@
     </div>
     <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">契合了「回歸自然」的設計理念</div>
     <p data-aos="fade-up" data-aos-delay="400" data-aos-duration="1000">
-      「巴克禮ONE PARK」基地位在低度城市化的環境內，<br>
+      「巴克禮 PARK」基地位在低度城市化的環境內，<br>
       本作品不只創造森林般環境，<br class="md:hidden">也保留森林的記憶與大樹下生活的樹林社區，<br>
       更為台南增添一座樹林地標。<br><br class="md:hidden">
       立面樹紋豐富視覺效果，<br class="md:hidden">溫暖的光影變化創造每戶獨一無二的光影體驗，<br>

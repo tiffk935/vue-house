@@ -5,9 +5,9 @@
         <!-- Title -->
         <div class="order-title text-center" data-aos="fade-up" data-aos-delay="0" data-aos-duration="400">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="巴克禮onepark" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="巴克禮park" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="巴克禮onepark" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="巴克禮park" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700">

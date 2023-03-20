@@ -1,4 +1,4 @@
-const caseName = "巴克禮onepark"
+const caseName = "巴克禮park"
 
 export default {
     meta: {

@@ -11,7 +11,7 @@
       打造有史以來最高規格與東京新國立競技場、根津美術館⋯國際間齊名的建築，<br class="hidden md:block">
       於台南東區「新都心重劃區」、名宅聚落，植下一棵城市建築大樹森林姿態，<br class="hidden md:block">
       展現革新思維植下前所未見的「隈研吾大樹建築」，<br class="hidden md:block">
-      就在隈研吾全球限量「巴克禮ONE PARK」<br class="hidden md:block">
+      就在隈研吾全球限量「巴克禮 PARK」<br class="hidden md:block">
       這將是台南唯一「隈研吾俬宅」，100%傳達「隈研吾」的想法與精神，<br class="hidden md:block">
       珍藏「隈研吾」獨一無二、無可取代的藝術之作，<br class="hidden md:block">
       絕無僅有的機會，只有親臨親聆、才能體會與感動。

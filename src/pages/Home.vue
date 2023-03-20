@@ -6,12 +6,12 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="巴克禮onepark" srcset="">
+    <img class="w-32" src="@/assets/loading_w.gif" alt="巴克禮park" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
-    <h1 style="display:none;">巴克禮onepark</h1>
+    <h1 style="display:none;">巴克禮park</h1>
     <S1 />
     <S2 />
     <S3 />
