@@ -58,11 +58,11 @@
       </defs>
     </svg>
 
-    <img class="logo absolute" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/logo.svg" />
-    <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="400" src="@/section/s1s2/title-m.svg" />
-    <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="400" src="@/section/s1s2/title.svg" />
-    <img class="text absolute md:hidden" data-aos="fade-in" data-aos-delay="800" src="@/section/s1s2/text-m.svg" />
-    <img class="text absolute hidden md:block" data-aos="fade-in" data-aos-delay="800" src="@/section/s1s2/text.svg" />
+    <img class="logo absolute" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/logo2.svg" />
+    <img class="title absolute hidden md:block" data-aos="fade-in" data-aos-delay="400" src="@/section/s1s2/title1.svg" />
+    <img class="title absolute md:hidden" data-aos="fade-in" data-aos-delay="400" src="@/section/s1s2/title1-m.svg" />
+    <img class="text absolute hidden md:block" data-aos="fade-in" data-aos-delay="800" src="@/section/s1s2/text2.svg" />
+    <img class="text absolute md:hidden" data-aos="fade-in" data-aos-delay="800" src="@/section/s1s2/text2-m.svg" />
     <svg @click="scrollTo('.order')" class="tk-btn absolute" viewBox="0 0 360 81" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M40.04 79.38C18.34 79.38 0.690002 61.73 0.690002 40.04C0.690002 18.35 18.34 0.690002 40.04 0.690002H319.82C341.51 0.690002 359.16 18.34 359.16 40.03C359.16 61.72 341.51 79.37 319.82 79.37H40.04V79.38Z" fill="white" class="wbg"/>
       <path d="M319.82 1.39C341.17 1.39 358.47 18.69 358.47 40.04C358.47 61.39 341.17 78.69 319.82 78.69H40.04C18.69 78.69 1.39 61.38 1.39 40.04C1.39 18.7 18.69 1.39 40.04 1.39H319.82ZM319.82 0H40.04C17.96 0 0 17.96 0 40.04C0 62.12 17.96 80.08 40.04 80.08H319.82C341.9 80.08 359.86 62.12 359.86 40.04C359.86 17.96 341.89 0 319.82 0Z" fill="#D08421"/>
@@ -82,8 +82,8 @@
     <img class="title2 absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/title2.svg" />
     <img class="circle absolute" src="@/section/s1s2/circle.svg" />
     <img class="circle-num absolute" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/circle-num.svg" />
-    <img class="title3 absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/title3-m.svg" />
-    <img class="title3 absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/title3.svg" />
+    <img class="title3 absolute hidden md:block" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/title3-2.svg" />
+    <img class="title3 absolute md:hidden" data-aos="fade-in" data-aos-delay="0" src="@/section/s1s2/title3-2-m.svg" />
     <div class="text3 absolute">從在地人的起家厝、維冠大樓重建工程，到台南首座青年公宅，宗大自1991年起扎根台南，一路以來沉著內斂，默默實踐「實在」的價值所在。以「建築」為起點，佈局「營造、製造、飯店」，建構完整的「生活產業生態系」，讓實在，無所不在。</div>
     <div id="menu-wrapper" :class="{'active': menuTabOpen === true}" >
       <div class="menu" @click="menuTabOpen==true?menuTabOpen=false:menuTabOpen=true" id="menu-btn"><span class="menu-icon"></span><span class="menu-txt"><span>menu</span><span>close</span></span></div>
@@ -361,35 +361,35 @@
   }
 
   .logo {
-    top: size-m(131);
-    left: size-m(53);
-    width: size-m(260);
+    top: size-m(152);
+    left: size-m(79);
+    width: size-m(216);
     @media screen and (min-width:768px) {
-      top: size(214);
-      left: size(661);
-      width: size(588);
+      top: size(259);
+      left: size(684);
+      width: size(551);
     }
   }
 
   .title {
-    top: size-m(230);
-    left: size-m(36);
-    width: size-m(303.75);
+    top: size-m(232);
+    left: size-m(79);
+    width: size-m(216.61);
     @media screen and (min-width:768px) {
-      top: size(445);
-      left: size(656);
-      width: size(607.14);
+      top: size(480);
+      left: size(583);
+      width: size(753);
     }
   }
 
   .text {
-    top: size-m(299);
+    top: size-m(335);
     left: size-m(43);
     width: size-m(288);
     @media screen and (min-width:768px) {
-      top: size(667);
-      left: size(485);
-      width: size(950.64);
+      top: size(589);
+      left: size(635);
+      width: size(649.3);
     }
   }
 
