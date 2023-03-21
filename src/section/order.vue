@@ -3,8 +3,8 @@
     <div class="rect absolute"></div>
     <div class="order1 relative">
       <div class="order2">
-        <img class="title hidden md:block" src="@/section/form/title.svg" alt="">
-        <img class="title md:hidden" src="@/section/form/title-m.svg" alt="">
+        <img class="title hidden md:block" src="@/section/form/title2.svg" alt="">
+        <img class="title md:hidden" src="@/section/form/title2-m.svg" alt="">
         <!-- Title -->
         <div class="order-title text-center">{{ info.order.title }}</div>
         <!-- Title Image -->
@@ -138,7 +138,7 @@
   }
 
   .title {
-    width: size(1125.52);
+    width: size(1042.2);
     margin: 0 auto;
     margin-bottom: size(130.9);
   }
@@ -234,7 +234,7 @@
     }
 
     .title {
-      width: size-m(247.68);
+      width: size-m(294);
       margin: 0 auto;
       margin-bottom: size-m(92.52);
     }
