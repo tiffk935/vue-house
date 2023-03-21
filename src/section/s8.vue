@@ -144,18 +144,18 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/1/1.png" />
-              <img class="w-full md:hidden" src="@/section/s8/1/1-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/1/1.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/1/1-m.png" />
               <div class="txt">設計團隊</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/1/2.png" />
-              <img class="w-full md:hidden" src="@/section/s8/1/2-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/1/2.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/1/2-m.png" />
               <div class="txt">台南煙波大飯店</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/1/3.png" />
-              <img class="w-full md:hidden" src="@/section/s8/1/3-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/1/3.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/1/3-m.png" />
               <div class="txt">春福煙波四季</div>
             </swiper-slide>
           </swiper>
@@ -187,18 +187,18 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/2/1.png" />
-              <img class="w-full md:hidden" src="@/section/s8/2/1-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/2/1.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/2/1-m.png" />
               <div class="txt">設計團隊</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/2/2.png" />
-              <img class="w-full md:hidden" src="@/section/s8/2/2-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/2/2.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/2/2-m.png" />
               <div class="txt">美菊麵店</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/2/3.png" />
-              <img class="w-full md:hidden" src="@/section/s8/2/3-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/2/3.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/2/3-m.png" />
               <div class="txt">留飯店</div>
             </swiper-slide>
           </swiper>
@@ -230,18 +230,18 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/3/1.png" />
-              <img class="w-full md:hidden" src="@/section/s8/3/1-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/3/1.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/3/1-m.png" />
               <div class="txt">設計團隊</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/3/2.png" />
-              <img class="w-full md:hidden" src="@/section/s8/3/2-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/3/2.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/3/2-m.png" />
               <div class="txt">崙坪文化地景園區</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/3/3.png" />
-              <img class="w-full md:hidden" src="@/section/s8/3/3-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/3/3.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/3/3-m.png" />
               <div class="txt">國泰竹北</div>
             </swiper-slide>
           </swiper>
@@ -273,18 +273,18 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/4/1.png" />
-              <img class="w-full md:hidden" src="@/section/s8/4/1-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/4/1.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/4/1-m.png" />
               <div class="txt">boven 台南館</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/4/2.png" />
-              <img class="w-full md:hidden" src="@/section/s8/4/2-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/4/2.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/4/2-m.png" />
               <div class="txt">boven 台南館</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/4/3.png" />
-              <img class="w-full md:hidden" src="@/section/s8/4/3-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/4/3.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/4/3-m.png" />
               <div class="txt">boven 台南館</div>
             </swiper-slide>
           </swiper>
@@ -316,18 +316,18 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/5/1.png" />
-              <img class="w-full md:hidden" src="@/section/s8/5/1-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/5/1.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/5/1-m.png" />
               <div class="txt">台南晶英酒店</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/5/2.png" />
-              <img class="w-full md:hidden" src="@/section/s8/5/2-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/5/2.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/5/2-m.png" />
               <div class="txt">台南晶英酒店</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full hidden md:block" src="@/section/s8/5/3.png" />
-              <img class="w-full md:hidden" src="@/section/s8/5/3-m.png" />
+              <img class="photo w-full hidden md:block" src="@/section/s8/5/3.png" />
+              <img class="photo w-full md:hidden" src="@/section/s8/5/3-m.png" />
               <div class="txt">台南晶英酒店</div>
             </swiper-slide>
           </swiper>
@@ -482,6 +482,15 @@
     }
 
     .swiper-slide {
+      .photo{
+       filter: grayscale(1) sepia(.4);
+       transition: all .4s;
+      
+       &:hover {
+      filter: none;
+      }
+      }
+      
       .txt {
         position: absolute;
         bottom: size-m(14);

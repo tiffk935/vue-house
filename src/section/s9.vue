@@ -23,50 +23,50 @@
       >
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/1.png" />
-            <img class="w-full md:hidden" src="@/section/s9/1-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/1.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/1-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/2.png" />
-            <img class="w-full md:hidden" src="@/section/s9/2-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/2.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/2-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/3.png" />
-            <img class="w-full md:hidden" src="@/section/s9/3-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/3.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/3-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/4.png" />
-            <img class="w-full md:hidden" src="@/section/s9/4-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/4.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/4-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/5.png" />
-            <img class="w-full md:hidden" src="@/section/s9/5-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/5.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/5-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/6.png" />
-            <img class="w-full md:hidden" src="@/section/s9/6-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/6.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/6-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="item w-full relative">
-            <img class="w-full hidden md:block" src="@/section/s9/7.png" />
-            <img class="w-full md:hidden" src="@/section/s9/7-m.jpg" />
+            <img class="photo w-full hidden md:block" src="@/section/s9/7.png" />
+            <img class="photo w-full md:hidden" src="@/section/s9/7-m.jpg" />
             <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
           </div>
         </swiper-slide>
@@ -161,6 +161,15 @@
       height: 100%;
       @media screen and (min-width:768px) {
         width: 100%;
+      }
+
+      .photo{
+       filter: grayscale(1) sepia(.4);
+       transition: all .4s;
+      
+       &:hover {
+      filter: none;
+      }
       }
 
       .text {
