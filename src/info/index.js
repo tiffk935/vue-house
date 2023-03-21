@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1806.417713284741!2d121.51311843361503!3d25.10743170897748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjXCsDA2JzI2LjgiTiAxMjHCsDMwJzUyLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1678843003131!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/YxaBsNpvQpfjcPLH6",
     phone: "02-2823-5888",
-    fbLink: "https://www.facebook.com/100090906972183",
-    fbMessage: "https://m.me/109159385457044",
+    fbLink: "https://www.facebook.com/dali.tianshi",
+    fbMessage: "https://m.me/dali.tianshi",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "（6177）達麗建設事業股份有限公司"],
