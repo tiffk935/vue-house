@@ -11,7 +11,7 @@ export default {
     googleLink: "https://goo.gl/maps/YxaBsNpvQpfjcPLH6",
     phone: "02-2823-5888",
     fbLink: "https://www.facebook.com/dali.tianshi",
-    fbMessage: "https://m.me/dali.tianshi",
+    fbMessage: "https://m.me/109159385457044",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "（6177）達麗建設事業股份有限公司"],
