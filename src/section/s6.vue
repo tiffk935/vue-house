@@ -6,7 +6,7 @@
   </div>
     <div class="player" v-bind:class="{ 'open': videoOpened }">
       <div class="video-box aspect-video">
-        <!-- <iframe src="https://www.youtube.com/embed/vvH3WoVL8XE" title="YouTube video player" frameborder="0"
+        <!-- <iframe src="https://www.youtube.com/embed/qxsnWOErn_U" title="YouTube video player" frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen></iframe> -->
           <div id="yt-player"></div>
@@ -144,7 +144,7 @@ onMounted(() => {
   window.onYouTubeIframeAPIReady = function(){
     console.log('success');
     player.value = new YT.Player('yt-player', {
-      videoId: 'vvH3WoVL8XE', // vvH3WoVL8XE
+      videoId: 'qxsnWOErn_U', // qxsnWOErn_U
     });
   };
 })
