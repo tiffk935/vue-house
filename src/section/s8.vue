@@ -138,7 +138,7 @@
             :navigation="false"
             :loop="true"
             :autoplay="{
-              delay: 2500,
+              delay: 4500,
               disableOnInteraction: false,
             }"
             :modules="modules"
@@ -164,7 +164,7 @@
         <div class="text absolute">
           <img class="title hidden md:block" src="@/section/s8/1/title.svg" />
           <img class="title md:hidden" src="@/section/s8/1/title-m.svg" />
-          <div data-aos="fade-in" data-aos-delay="0">視建築為人文與自然間的介質，以黃金比例切割創造立面律動。宗大青田透過美感控制，以「白、輕、透」建築語彙，回歸生活本質樣態。師出曾永信建築師事務所，曾奪國家建築金獅獎首獎、屢獲高雄園冶獎、高雄綠建築大獎。</div>
+          <div data-aos="fade-in" data-aos-delay="0">視建築為人文與自然間的介質，以黃金比例切割創造立面律動。宗大青田透過美感控制，以「白、輕、透」建築語彙，回歸生活本質樣態。師出曾永信建築師事務所，曾奪國家建築金獅獎首獎、屢獲高雄園冶獎、高雄綠建築大獎。</div>
           <div data-aos="fade-in" data-aos-delay="0" class="works"><span class="text-[#D68F41]">代表作品</span>　台南煙波大飯店、國城平實營區都更案、春福漾煙波、水容W resort、台南小城</div>
           <img class="en absolute hidden md:block" src="@/section/s8/1/en.svg" />
         </div> 
@@ -181,7 +181,7 @@
             :navigation="false"
             :loop="true"
             :autoplay="{
-              delay: 2500,
+              delay: 4500,
               disableOnInteraction: false,
             }"
             :modules="modules"
@@ -224,7 +224,7 @@
             :navigation="false"
             :loop="true"
             :autoplay="{
-              delay: 2500,
+              delay: 4500,
               disableOnInteraction: false,
             }"
             :modules="modules"
@@ -267,7 +267,7 @@
             :navigation="false"
             :loop="true"
             :autoplay="{
-              delay: 2500,
+              delay: 4500,
               disableOnInteraction: false,
             }"
             :modules="modules"
@@ -545,7 +545,7 @@
     font-size: size-m(12);
     line-height: size-m(27);
     text-align: justify;
-    letter-spacing: 0.16em;
+    letter-spacing: 0em;
     @media screen and (min-width:768px) {
       width: size(587);
       top: size(388);
