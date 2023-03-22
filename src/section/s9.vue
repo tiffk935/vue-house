@@ -136,7 +136,7 @@
     font-size: size-m(12);
     line-height: size-m(27);
     text-align: justify;
-    letter-spacing: 0.16em;
+    letter-spacing: 0em;
     @media screen and (min-width:768px) {
       top: size(225);
       left: size(182);
