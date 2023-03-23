@@ -239,28 +239,28 @@ const sources = ref([
   },
   {
     img: slide2_full,
-    year: '2015',
-    txt: '汐止區  哲人德林',
+    year: '2004',
+    txt: '中正區  泰安觀止',
   }, 
   {
     img: slide3_full,
-    year: '2015',
-    txt: '汐止區  哲人德林',
+    year: '2004',
+    txt: '士林區  圓山窗外',
   }, 
   {
     img: slide4_full,
-    year: '2015',
-    txt: '汐止區  哲人德林',
+    year: '2003',
+    txt: '中正區  青田主人',
   }, 
   {
     img: slide5_full,
-    year: '2015',
-    txt: '汐止區  哲人德林',
+    year: '2002',
+    txt: '中正區  林与堂',
   }, 
   {
     img: slide6_full,
-    year: '2015',
-    txt: '汐止區  哲人德林',
+    year: '2001',
+    txt: '中正區  青田',
   }, 
 ])
 
