@@ -234,33 +234,33 @@ const sliderToggler = ref(false)
 const sources = ref([
   {
     img: slide1_full,
-    year: '2015',
+    year: '2018',
     txt: '汐止區  哲人德林',
   },
   {
     img: slide2_full,
-    year: '2004',
+    year: '2006',
     txt: '中正區  泰安觀止',
   }, 
   {
     img: slide3_full,
     year: '2004',
-    txt: '士林區  圓山窗外',
+    txt: '士林區  圓窗窗外',
   }, 
   {
     img: slide4_full,
     year: '2003',
-    txt: '中正區  青田主人',
+    txt: '大安區  青田主人',
   }, 
   {
     img: slide5_full,
     year: '2002',
-    txt: '中正區  林与堂',
+    txt: '大安區  林与堂',
   }, 
   {
     img: slide6_full,
     year: '2001',
-    txt: '中正區  青田',
+    txt: '大安區  青田',
   }, 
 ])
 
