@@ -1,179 +1,189 @@
 <template>
-  <section class="s5 relative z-10">
-    <div class="bg absolute"></div>
-    <img class="house absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s5/house.png" />
-    <img class="style absolute md:hidden" src="@/section/s5/style-m.svg" />
-    <img class="style absolute hidden md:block" src="@/section/s5/style.svg" />
-    <img class="house2 absolute md:hidden" src="@/section/s5/house2-m.png" />
-    <img class="house2 absolute hidden md:block" src="@/section/s5/house2.png" />
-    <img class="style2 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/s5/style2.png" />
-    
-    <div class="bigtitle" data-aos="fade-up" data-aos-delay="200">新蔚營造 甲級營造</div>
-    <div class="title1">
-    <div class="t1" data-aos="fade-up" data-aos-delay="200">價格超值，品質卓越</div>
-    <div class="content" data-aos="fade-up" data-aos-delay="300">
-     威泰建築從土地開發、產品規劃、承建營造，每一環節群策群力緊密相扣，發揮最大功能，共同創作出最優質的作品。時刻追求新技術的經營理念，重視進度控制：訂立良好管控制度，使工程進度如期進行。重視品質管制：工地主任現場實地監督，以管控工地作業品質；並不定時派人員前往稽核以達到品質管制之目的。
-     <br>
-     每件工程都當做自已的事來施作，必求盡善盡美，以「專業、誠信、品質、效率」，創造新蔚甲級營造，值得信賴的好口碑。
-      </div>
+  <section class="s5 text-[#333333] bg-[#C4C3C0] relative">
+    <div class="text" data-aos="fade-down" data-aos-delay="0">
+      <div class="title-en">CONVENIENT<br>DISTRICT</div>
+      <div class="title">繁華盛宴</div>
+      <div class="desc">南紡購物中心│全台南之最，占地超過1.8公頃購物商場，同步世界，核心時尚指標</div>
+      <div class="desc">國賓影城商圈│老爺行旅、連鎖美食餐廳等商家聚集，掌握流行脈動</div>
+      <div class="desc">後甲黃昏市場│車行3分鐘輕鬆採買，熱門店家聚集，滿足家庭所需</div>
     </div>
-
+    <div class="slider">
+      <swiper 
+        :navigation="true"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <div class="img">
+            <img class="photo w-full block" src="@/section/s5/1.jpg" />
+            <div class="txt">南紡購物中心實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="photo w-full block" src="@/section/s5/2.jpg" />
+            <div class="txt">南紡購物中心實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="photo w-full block" src="@/section/s5/3.jpg" />
+            <div class="txt">南紡購物中心實景拍攝</div>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <div class="en">There little thoughts are the rustle of leaves; they have their whisper of joy in my mind.</div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s5 {
   width: 100%;
-  height: size-m(900);
+  padding: size-m(37.59) 0 size-m(21.5) 0;
   @media screen and (min-width:768px) {
-    height: size(1444);
-  }
-
-  .bg {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: size-m(746);
-    background-image: url(@/section/s5/bg-m.png);
-    background-size: 100% 100%;
-    @media screen and (min-width:768px) {
-      height: size(1320);
-      background-image: url(@/section/s5/bg.png);
-    }
-  }
-
-  .house {
-    top: size-m(0);
-    left: size-m(-59);
-    width: size-m(808);
-    max-width: none;
-    @media screen and (min-width:768px) {
-      top: size(-30);
-      left: size(31);
-      width: size(1872);
-    }
-  }
-
-  .title {
-    top: size-m(202);
-    left: size-m(66);
-    width: size-m(247);
-    @media screen and (min-width:768px) {
-      top: size(462);
-      left: size(591);
-      width: size(741);
-    }
-  }
-
-  .bigtitle{
-    position: absolute;
-    font-size: size(90);
-    color: #fff;
-    font-weight: 900;
-    left:size(590);
-    top: size(435);
-    text-shadow: rgba(0, 0, 0, 0.3) 0.05em 0.05em 0.05em;
-    @media screen and (max-width:768px) {
-    font-size: size-m(30); 
-    left:size-m(65);
-    top: size-m(195);
-    }
-  }
-
-  .title1{
-    position: absolute;
-    top: size(650);
-    left:size(680);
-    width: size(559);
-    z-index: 5;
-    text-align: center;
-
-    @media screen and (max-width:768px) {
-      top: size-m(310);
-      left:size-m(30);
-      width: size-m(315);
-    }
-
-    .t1{
-      font-size: size(45);
-      line-height: size(70);
-      margin-bottom: size(15);
-      color: #fff;
-      font-weight: 900;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-      
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(20);
-        margin-bottom: size-m(20);
-      }
-    }
-
-
-    .content{
-      font-size: size(16);
-      color: #fff;
-      font-weight:300;
-      margin-top: size(15);
-      text-align: left;
-      text-align: justify;
-      text-shadow: rgba(0, 0, 0, 0.3) 0.1em 0.1em 0.1em;
-
-      @media screen and (max-width:768px) {
-        font-size: size-m(14);
-        margin-top: size-m(10);
-        line-height: size-m(20);
-        font-weight:400;
-      }
-    }
-
-  }
-
-  .style {
-    top: size-m(271);
-    left: size-m(16);
-    width: size-m(343);
-    @media screen and (min-width:768px) {
-      top: size(617);
-      left: size(609);
-      width: size(706);
-    }
+    padding: size(114) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .text {
-    top: size-m(301);
-    left: size-m(32);
-    width: size-m(315);
+    padding: 0 size-m(42);
+    margin-bottom: size-m(24.54);
     @media screen and (min-width:768px) {
-      top: size(652);
-      left: size(682);
-      width: size(559);
+      width: size(1920 - 1260);
+      padding: 0 size(60) 0 size(104);
+      margin-bottom: 0;
+    }
+
+    .title-en {
+      font-family: 'Cormorant Garamond';
+      font-size: size-m(33);
+      line-height: size-m(30);
+      color: #A98162;
+      margin-bottom: size-m(5.5);
+      white-space: nowrap;
+      @media screen and (min-width:768px) {
+        font-size: size(52);
+        line-height: size(57);
+        margin-bottom: size(13.87);
+      }
+    }
+
+    .title {
+      font-family: 'Noto Serif TC';
+      font-weight: 700;
+      font-size: size-m(24);
+      line-height: size-m(41);
+      letter-spacing: 0.14em;
+      margin-bottom: size-m(4.36);
+      @media screen and (min-width:768px) {
+        font-size: size(40);
+        line-height: size(68);
+        margin-bottom: size(6.62);
+      }
+    }
+
+    .desc {
+      font-size: size-m(12);
+      line-height: size-m(18);
+      text-align: justify;
+      margin-bottom: size-m(10);
+      @media screen and (min-width:768px) {
+        font-size: size(18);
+        line-height: size(27);
+        margin-bottom: size(10);
+      }
     }
   }
 
-  .house2 {
-    top: size-m(555);
-    left: 0;
-    width: 100%;
-    @media screen and (min-width:768px) {
-      top: size(702.58);
-      left: size(728);
-      width: size(1194);
-      max-width: none;
+  .img {
+    .txt {
+      color: #fff;
+      font-size: size-m(12);
+      line-height: size-m(20);
+      position: absolute;
+      bottom: size-m(1);
+      right: size-m(4.5);
+      text-shadow: size-m(0) size-m(2) size-m(3) rgba(0, 0, 0, 0.7);
+      @media screen and (min-width:768px) {
+        font-size: size(15);
+        line-height: size(12);
+        bottom: size(9.5);
+        right: size(11);
+        text-shadow: size(1) size(1) size(2) rgba(0, 0, 0, 0.5);
+      }
     }
   }
 
-  .style2 {
+  .en {
+    margin-top: size-m(9.5);
+    padding: 0 size-m(87.5) 0 size-m(42.5);
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(8);
+    line-height: size-m(15);
+    color: #18618D;
     @media screen and (min-width:768px) {
-      top: size(1133);
-      left: size(170);
-      width: size(662);
+      position: absolute;
+      bottom: size(47);
+      right: size(34.77);
+      width: auto;
+      margin-top: 0;
+      padding: 0;
+      font-size: size(22);
+      line-height: size(42);
+    }
+  }
+
+  .slider {
+    @media screen and (min-width:768px) {
+      width: size(1260);
+      margin: 0;
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(41);
+      height: size-m(41);
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center center;
+      @media screen and (min-width:768px) {
+        width: size(41);
+        height: size(41);
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      background-image: url(@/section/s5/prev.svg);
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-image: url(@/section/s5/next.svg);
     }
   }
 }
-
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/effect-coverflow";
+import { Navigation, Autoplay } from "swiper";
+const modules = ref([Navigation, Autoplay]);
 </script>

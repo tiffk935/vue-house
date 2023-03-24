@@ -1,4 +1,4 @@
-const caseName = "戀JIA"
+const caseName = "艾美新時代"
 
 export default {
     meta: {
@@ -6,20 +6,20 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "桃園市大園區大觀路595號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1103474936776!2d121.18124339999999!3d25.064248799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346820af94ef7b67%3A0x11134a66fcb2bab3!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A5aSn6KeA6LevNTk16Jmf!5e0!3m2!1szh-TW!2stw!4v1658754082639!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/eamn142jKNVssys97",
-    phone: "03-3852333",
-    fbLink: "https://www.facebook.com/107771505357267/",
-    fbMessage: "https://m.me/107771505357267/",
+    address: "台南市東區小東路196號旁(與光明街交叉口)",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3672.6555357179136!2d120.22793899999999!3d22.999691!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU5JzU4LjkiTiAxMjDCsDEzJzQwLjYiRQ!5e0!3m2!1szh-TW!2stw!4v1677048418326!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/e1VLsqyeWzG6TDPn6",
+    phone: "06-2083366",
+    fbLink: "https://www.facebook.com/100090172361791/",
+    fbMessage: "https://m.me/100090172361791/",
     caseName: caseName,
     houseInfos: [
-        ["建設團隊", "威泰國際股份有限公司"],
-        ["行銷團隊", "全紘國事業有限公司"],
-        ["坪數規劃", "華厦:19-31 透天:72-88"],
-        ["聯絡電話", "03-385-2333"],
-        ["公設比例", "約22%"],
-        ["接待中心", "桃園市大園區大觀路595號"],
+        ["投資興建", "三地開發地產股份有限公司"],
+        ["坪數規劃", "2-3房"],
+        ["房型規劃", "22-32坪"],
+        ["聯絡電話", "06-2083366"],
+        ["代銷團隊", "悅揚國際實業有限公司"],
+        ["接待中心", "台南市東區小東路196號旁(與光明街交叉口)"],
     ],
     gtmCode: ["GTM-527G33V"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
@@ -32,23 +32,28 @@ export default {
     },
     navList: [
         {
-            name: "JIA 地段",
+            name: "南紡蛋黃區",
             target: ".s2",
             offset: "",
         },
         {
-            name: "JIA 品牌",
-            target: ".s4",
+            name: "壯闊基地",
+            target: ".s3",
             offset: "",
         },
         {
-            name: "JIA 美學",
-            target: ".s6",
+            name: "豐盛公設",
+            target: ".s10",
             offset: "",
         },
         {
-            name: "愛・JIA 人",
-            target: ".order",
+            name: "森林花園",
+            target: ".s12",
+            offset: "",
+        },
+        {
+            name: "企業厚實力",
+            target: ".s13",
             offset: "",
         },
     ],

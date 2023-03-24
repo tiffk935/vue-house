@@ -1,7 +1,9 @@
 <template>
     <div class="nav"
         v-bind:class="{ 'r16-9': higherScreen }">
-        <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
+        <div class="menu flex flex-col items-center justify-start z-50" v-bind:class="{ open: menuOpen }">
+            <img class="logo absolute" src="@/section/s1/logo.svg" />
+            <div class="close absolute cursor-pointer" @click="menuOpen = false"></div>
             <div class="menu-inner">
                 <div class="menu-item font-bold cursor-pointer text-white" v-for="item, i in info.navList"
                     @click="scrollTo(item.target)">
@@ -9,9 +11,14 @@
                 </div>
             </div>
         </div>
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
+        <div class="menu-btn cursor-pointer" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
-            <div class="bar z-10"></div>
+            <svg class="w-full h-auto block" width="100" height="50" viewBox="0 0 100 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M41.4013 50L0 0H130V50H41.4013Z" fill="#DD5519"/>
+                <line class="line1" x1="49.709" y1="14.5" x2="79.709" y2="14.5" stroke="white" stroke-width="3"/>
+                <line x1="49.709" y1="24.5" x2="79.709" y2="24.5" stroke="white" stroke-width="3"/>
+                <line class="line3" x1="49.709" y1="34.5" x2="79.709" y2="34.5" stroke="white" stroke-width="3"/>
+            </svg>
         </div>
     </div>
 </template>
@@ -21,62 +28,28 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    // padding: 0 size(50);
-    // height: size(80);
 
     .menu-btn {
         // position: relative;
         z-index: 1;
-        width: size(54);
-        height: size(54);
-        background: rgba(158, 47, 61, 0.9);
+        width: size(100);
+        height: size(50);
         position: fixed;
-        top: size(46);
-        left: size(47);
-        border: 1px solid #fff;
+        top: size(0);
+        right: size(0);
         z-index: 99;
 
-        .bar {
-            width: size(28);
-            height: 2px;
-            background-color: #fff;
-            // position: relative;
-            transform: all .5s;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-
-            &::after {
-                content: '';
-                width: 100%;
-                height: 2px;
-                bottom: -#{size(10)};
-                position: absolute;
-                background-color: #fff;
-                transition: all .5s;
-            }
-
-            &::before {
-                content: '';
-                width: 100%;
-                height: 2px;
-                top: -#{size(10)};
-                position: absolute;
-                background-color: #fff;
-                transition: all .5s;
-            }
+        line {
+            transition: all .2s;
         }
 
         &:hover {
-            .bar {
-                &::after {
-                    transform: translateX(10%);
-                }
+            .line1 {
+                transform: translateX(-6%);
+            }
 
-                &::before {
-                    transform: translateX(-10%);
-                }
+            .line3 {
+                transform: translateX(6%);
             }
         }
 
@@ -118,25 +91,28 @@
     .menu {
         position: fixed;
         top: size(0);
-        left: size(0);
-        background-color: #9E2F3D;
-        width: size(280);
+        right: size(0);
+        background: rgba(221, 85, 25, 0.9);
+        width: size(375);
         height: 100%;
         z-index: 99;
-        transform: translateX(-100%);
+        transform: translateX(100%);
         transition: all .5s;
-        padding: size(100) 0;
+        padding: size(242) 0 0 0;
         gap: size(20);
+        z-index: 999;
+        background-image: url(@/assets/nav-bg.svg);
+        background-size: 100% auto;
+        background-repeat: no-repeat;
 
         .menu-inner {
             width: size(128);
-            margin: 0 size(40) 0 auto;
+            margin: 0 auto;
         }
 
         .menu-item {
-            text-align: right;
-            padding: size(39) 0;
-            border-bottom: 1px solid #fff;
+            text-align: center;
+            padding: size(20) 0;
 
             &:last-child {
                 border: none;
@@ -149,13 +125,6 @@
                 white-space: nowrap;
                 transition: width .4s linear, transform .1s linear;
                 transform-origin: left center;
-            }
-
-            &:hover {
-                span {
-                    transform: scale(1.3);
-                    width: 0;
-                }
             }
         }
 
@@ -212,23 +181,10 @@
         // border-radius: 9999px;
 
         .menu-btn {
-            width: size-m(45);
-            height: size-m(45);
-            top: size-m(25);
-            left: auto;
-            right: size-m(31);
-
-            .bar {
-                width: size-m(23.33);
-
-                &::after {
-                    bottom: -#{size-m(8)};
-                }
-
-                &::before {
-                    top: -#{size-m(8)};
-                }
-            }
+            width: size-m(100);
+            height: size-m(50);
+            top: size-m(0);
+            right: size-m(0);
 
             &.open {
                 p {
@@ -267,10 +223,9 @@
 
         .menu {
             position: fixed;
-            background-color: rgba(158, 47, 61, 0.9);
             width: 100%;
-            padding: 0;
-            gap: size-m(45);
+            padding: size-m(210) 0 0 0;
+            gap: size-m(10);
 
             .menu-inner {
                 width: size-m(128);
@@ -278,7 +233,7 @@
             }
 
             .menu-item {
-                padding: size-m(28.85) 0;
+                padding: size-m(15) 0;
                 
                 span {
                     font-size: size-m(15);
@@ -288,19 +243,38 @@
                     transition: width .4s linear, transform .1s linear;
                     transform-origin: left center;
                 }
-
-                &:hover {
-                    span {
-                        transform: scale(1.3);
-                        width: 0;
-                    }
-                }
-                
             }
 
             &.open {
                 transform: translateX(0);
             }
+        }
+    }
+}
+
+.nav .menu {
+    .logo {
+        top: size-m(76.04);
+        left: size-m(119.78);
+        width: size-m(145.44);
+        @media screen and (min-width:768px) {
+            top: size(76.04);
+            left: size(119.78);
+            width: size(135.44);
+        }
+    }
+    
+    .close {
+        top: 0;
+        right: 0;
+        width: size-m(50);
+        height: size-m(50);
+        background-image: url(@/assets/nav-close.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (min-width:768px) {
+            width: size(50);
+            height: size(50);
         }
     }
 }
