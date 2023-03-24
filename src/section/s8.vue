@@ -60,7 +60,7 @@
     margin-bottom: size-m(24.54);
     @media screen and (min-width:768px) {
       width: size(1920 - 1260);
-      padding: 0 size(60);
+      padding: 0 size(40) 0 size(60);
       margin-bottom: 0;
     }
 

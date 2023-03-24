@@ -157,13 +157,13 @@
 
   .img {
     top: size-m(148.6);
-    left: size-m(-177.06);
-    width: size-m(709);
+    left: size-m(-167.06);
+    width: size-m(595);
     max-width: none;
     @media screen and (min-width:768px) {
       top: size(-11.98);
       left: size(424);
-      width: size(1782);
+      width: size(1496);
     }
   }
 

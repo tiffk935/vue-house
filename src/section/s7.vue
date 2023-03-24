@@ -57,8 +57,8 @@
     padding: 0 size-m(42);
     margin-bottom: size-m(24.54);
     @media screen and (min-width:768px) {
-      width: size(1920 - 1260);
-      padding: 0 size(60) 0 size(104);
+      width: size(1920 - 1280);
+      padding: 0 size(40) 0 size(104);
       margin-bottom: 0;
     }
 
@@ -124,7 +124,7 @@
 
   .en {
     margin-top: size-m(9.5);
-    padding: 0 size-m(87.5) 0 size-m(42.5);
+    padding: 0 size-m(27.5) 0 size-m(22.5);
     font-family: 'Noto Serif TC';
     font-weight: 700;
     font-size: size-m(8);

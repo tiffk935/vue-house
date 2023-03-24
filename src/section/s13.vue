@@ -7,7 +7,7 @@
     </div>
     <div class="slider">
       <img class="img1 md:hidden" src="@/section/s13/img1-m.svg" />
-      <img class="img1 hidden md:block" src="@/section/s13/img1.png" />
+      <img class="img1 hidden md:block" src="@/section/s13/img1.svg" />
       <img class="img2" src="@/section/s13/img2.png" />
     </div>
   </section>

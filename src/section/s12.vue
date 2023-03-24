@@ -130,7 +130,7 @@
 
   .en {
     margin-top: size-m(9.5);
-    padding: 0 size-m(62.5) 0 size-m(42.5);
+    padding: 0 size-m(27.5) 0 size-m(22.5);
     font-family: 'Noto Serif TC';
     font-weight: 700;
     font-size: size-m(8);
