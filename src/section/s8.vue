@@ -4,8 +4,8 @@
       <div class="title-en">TRANSPORTATION</div>
       <div class="title">交通主脈</div>
       <div class="desc">平實轉運站│複製台北京站，整合百貨商圈、公園，台南首座捷運站</div>
-      <div class="desc">成功大學│南台灣第一學府，漫步萬坪質感學風綠地</div>
-      <div class="desc">醫院機能│榮總台南分院、成大醫院等醫療機能在側</div>
+      <div class="desc">雙捷交會│近鄰中華東路與小東路口，卡位捷運藍線轉乘綠線軌道經濟</div>
+      <div class="desc">大灣交流道│接南科園區，連歸仁高鐵流域，南來北往無往不利</div>
     </div>
     <div class="slider">
       <swiper 
