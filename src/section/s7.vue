@@ -4,7 +4,7 @@
       <div class="title-en">GREEN IN TAINAN</div>
       <div class="title">公園綠富</div>
       <div class="desc">平實公園│2.1萬坪平實公園樹海曠原，和國際級公園平起平坐</div>
-      <div class="desc">平實運動場│平實籃球場、排球場，斥資2500萬，規劃國際級比賽場地，質感親子綠廊</div>
+      <div class="desc">平實運動場│平實籃球場、排球場，規劃國際級比賽場地，質感親子綠廊</div>
     </div>
     <div class="slider">
       <swiper 

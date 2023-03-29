@@ -1,7 +1,7 @@
 <template>
   <section class="s4 text-[#333333] bg-[#C4C3C0] relative">
     <div class="text" data-aos="fade-down" data-aos-delay="0">
-      <div class="title">澎湃新平實 繁花夢時代</div>
+      <div class="title">澎湃新平實 繁華夢時代</div>
       <div class="subtitle">休閒娛樂×公園綠海×交通轉運×醫療機能<br>面面俱到 頂規到位</div>
     </div>
     <div class="img relative">

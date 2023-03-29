@@ -23,7 +23,7 @@
         <swiper-slide>
           <div class="img">
             <img class="photo w-full block" src="@/section/s12/1.jpg" />
-            <div class="txt">宴會廳3D合成示意圖</div>
+            <div class="txt">中庭花園3D合成示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>

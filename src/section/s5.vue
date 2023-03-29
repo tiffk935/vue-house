@@ -4,7 +4,7 @@
       <div class="title-en">CONVENIENT<br>DISTRICT</div>
       <div class="title">繁華盛宴</div>
       <div class="desc">南紡購物中心│全台南之最，占地超過1.8公頃購物商場，同步世界，核心時尚指標</div>
-      <div class="desc">國賓影城商圈│老爺行旅、連鎖美食餐廳等商家聚集，掌握流行脈動</div>
+      <div class="desc">國賓影城商圈│World Gym、連鎖美食餐廳等商家聚集，掌握流行脈動</div>
       <div class="desc">後甲黃昏市場│車行3分鐘輕鬆採買，熱門店家聚集，滿足家庭所需</div>
     </div>
     <div class="slider">

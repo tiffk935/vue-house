@@ -1,7 +1,9 @@
 <template>
   <section class="s3 relative">
     <div class="map relative">
-      <img class="map1" src="@/section/s3/map.png" />
+      <img class="map1 text" src="@/section/s3/text.png" />
+      <img class="map1" src="@/section/s3/map.jpg" />
+      
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
@@ -48,6 +50,15 @@
       overflow: hidden;
     }
 
+    .text{
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      bottom:0;
+      right: 0;
+    }
+
     img {
       width: auto;
       height: size-m(667);
@@ -72,8 +83,10 @@
     transition: opacity .5s;
     animation: swing 3s linear 0s infinite;
     pointer-events: none;
+    z-index: 12;
     @media screen and (min-width:768px) {
       display: none;
+      
     }
   }
 
@@ -83,6 +96,7 @@
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
+    z-index: 10;
   }
 
   .text {

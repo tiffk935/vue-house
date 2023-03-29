@@ -4,7 +4,7 @@
       <div class="title-en">WONDERFUL AREA</div>
       <div class="title">蛋黃中的蛋黃</div>
       <div class="subtitle">南紡驕傲齊放 精彩盛宴狂歡</div>
-      <div class="desc">名符其實！台南市中心的心臟，站上國際舞台的平實特區，繁華正茂，鋒頭正盛。【艾美新時代】佔地為王，坐落平實路上，落點市中心蛋黃中的蛋黃！坐享所有熱鬧矚目豐盛而至，擁抱強勢便捷之最，翻轉房價規則，第一次就住進台南正核心！</div>
+      <div class="desc">名符其實！台南市中心的心臟，站上國際舞台的平實特區，繁華正茂，鋒頭正盛。【艾美新時代】坐落平實路上，落點市中心蛋黃中的蛋黃！坐享所有熱鬧矚目豐盛而至，擁抱強勢便捷之最，翻轉房價規則，第一次就住進台南正核心！</div>
     </div>
     <div class="img relative">
       <img class="w-full block" src="@/section/s2/img.jpg" />
