@@ -5,7 +5,7 @@
     <img class="title absolute md:hidden" src="@/section/s9/title-m.svg" />
     <img class="title absolute hidden md:block" src="@/section/s9/title.svg" />
     <div class="content absolute" data-aos="fade-in" data-aos-delay="0">四棟量體、二塊基地、一片連結你我的心田，開放式的穿透設計，以微風與陽光為養分，讓日常與綠意相遇，是如此不經意。以友善共融、自由曲徑、光合生態概念，勾勒一座未來社區，豐藏難得遼闊領地，迎接仁德美好新未來。</div>
-    <div class="slider absolute md:hidden">
+    <div class="slider absolute">
       <swiper 
         :allowTouchMove="true"
         slidesPerView="auto"
@@ -15,6 +15,9 @@
           delay: 4500,
           disableOnInteraction: false,
         }"
+        @init="tkinit"
+        @transitionStart="tktransitionStart"
+        @transitionEnd="tktransitionEnd"
         @swiper="setSwiperRef"
         :modules="modules"
       >
@@ -77,126 +80,6 @@
         <img class="w-full hidden md:block" src="@/section/s9/next.svg" />
       </div>
     </div>
-    <div class="slider2 absolute hidden md:block">
-      <div class="slider2-prev">
-        <transition> 
-          <div v-if="(currImg-1) == 1" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/1.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 2" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/2.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 3" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/3.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 4" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/4.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 5" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/5.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 6" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/6.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg-1) == 7 || currImg == 1" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/7.png" />
-          </div>
-        </transition>
-      </div>
-      <div class="slider2-active">
-        <transition>
-          <div v-if="currImg == 1" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/1.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 2" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/2.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 3" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/3.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 4" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/4.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 5" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/5.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 6" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/6.png" />
-          </div>
-        </transition>
-        <transition>
-          <div v-if="currImg == 7" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/7.png" />
-          </div>
-        </transition>
-        <div class="text">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
-      </div>
-      <div class="slider2-next">
-        <transition>  
-          <div v-if="(currImg+1) == 1 || currImg == 7" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/1.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 2" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/2.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 3" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/3.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 4" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/4.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 5" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/5.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 6" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/6.png" />
-          </div>
-        </transition>
-        <transition>  
-          <div v-if="(currImg+1) == 7" class="item w-full h-full absolute t-0 l-0">
-            <img class="photo w-full hidden md:block" src="@/section/s9/7.png" />
-          </div>
-        </transition>
-      </div>
-      <div class="slideToPrev absolute" @click="slideToPrev2">
-        <img class="w-full hidden md:block" src="@/section/s9/prev.svg" />
-      </div>
-      <div class="slideToNext absolute" @click="slideToNext2">
-        <img class="w-full hidden md:block" src="@/section/s9/next.svg" />
-      </div>
-    </div>
   </section>
 </template>
 
@@ -207,18 +90,6 @@
   height: size-m(1000);
   @media screen and (min-width:768px) {
     height: size(1375);
-  }
-
-  .v-enter-active, .v-leave-active {
-    transition: opacity .6s;
-  }
-
-  .v-enter-from, .v-leave-to {
-    opacity: 0;
-  }
-
-  .v-enter-to, .v-leave-from {
-    opacity: 1;
   }
 
   .circle {
@@ -388,102 +259,6 @@
       right: 0;
     }
   }
-
-  .slider2 {
-    width: 100%;
-    top: size(419);
-    left: 0;
-
-    .slider2-prev {
-      position: absolute;
-      width: size(454);
-      height: size(306);
-      top: size(430);
-      left: size(-183);
-      // border-radius: size(35);
-      // background: #b5b3a8;
-    }
-
-    .slider2-active {
-      position: absolute;
-      width: size(1219);
-      height: size(822);
-      top: size(0);
-      left: size(351);
-      // border-radius: size(35);
-      // background: #b5b3a8;
-    }
-
-    .slider2-next {
-      position: absolute;
-      width: size(454);
-      height: size(306);
-      top: size(430);
-      left: size(1650);
-      // border-radius: size(35);
-      // background: #b5b3a8;
-    }
-
-    .slideToPrev, .slideToNext {
-      cursor: pointer;
-      z-index: 10;
-      @media screen and (min-width:768px) {
-        width: 13vw;
-        height: size(306);
-        top: 22.4vw;
-      }
-      
-      img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: size(42);
-      }
-    }
-
-    .slideToPrev {
-      left: 0;
-    }
-
-    .slideToNext {
-      right: 0;
-    }
-
-    .photo{
-      filter: grayscale(1) sepia(.4);
-      opacity: 0.2;
-      transition: all .4s;
-      
-      &:hover {
-        filter: none;
-        opacity: 1;
-      }
-    }
-
-    .text {
-      width: 100%;
-      position: absolute;
-      top: size-m(8);
-      left: 0;
-      padding: 0 size-m(30);
-      font-size: size-m(10);
-      line-height: size-m(14);
-      text-align: center;
-      letter-spacing: 0.16em;
-      color: #fff;
-      @media screen and (min-width:768px) {
-        top: size(18);
-        padding: 0;
-        font-size: size(14);
-        line-height: size(20);
-      }
-    }
-
-    .slider2-active .photo {
-      opacity: 1;
-    }
-  }
 }
 </style>
 
@@ -492,12 +267,44 @@ import { ref } from "vue";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import { Autoplay } from "swiper";
-import { gsap } from "gsap";
 const modules = ref([Autoplay]);
 const swiperRef = ref(null);
-const currImg = ref(7);
-const interval = ref(null);
 
+function prevAll(element) {
+  var result = [];
+  while (element = element.previousElementSibling)
+    result.push(element);
+  return result;
+}
+function nextAll(element) {
+  var result = [];
+  while (element = element.nextElementSibling)
+    result.push(element);
+  return result;
+}
+function resetSlide(){
+  const prev = prevAll(document.querySelector('.s9 .swiper-slide-active'));
+  prev.forEach(el => {
+    el.querySelector('.item').style.margin = '0 0 0 auto';
+  })
+  const next = nextAll(document.querySelector('.s9 .swiper-slide-active'));
+  next.forEach(el => {
+    el.querySelector('.item').style.margin = '0 auto 0 0';
+  })
+}
+const tkinit = () => {
+  resetSlide();
+}
+const tktransitionStart = () => {
+  if(swiperRef.value){
+    resetSlide();
+  }
+}
+const tktransitionEnd = () => {
+  if(swiperRef.value){
+    resetSlide();
+  }
+}
 const setSwiperRef = (swiper) => {
   swiperRef.value = swiper;
 };
@@ -506,38 +313,5 @@ const slideToPrev = () => {
 };
 const slideToNext = () => {
   swiperRef.value.slideNext();
-};
-
-interval.value = setInterval(() => {
-  if(currImg.value == 7) {
-    currImg.value = 1;
-  }else {
-    currImg.value++;
-  }
-}, 4500);
-
-const slideToPrev2 = () => {
-  if(currImg.value == 1) {
-    currImg.value = 7;
-  }else {
-    currImg.value--;
-  }
-
-  clearInterval(interval.value);
-  interval.value = setInterval(() => {
-    slideToNext2();
-  }, 4500);
-};
-const slideToNext2 = () => {
-  if(currImg.value == 7) {
-    currImg.value = 1;
-  }else {
-    currImg.value++;
-  }
-
-  clearInterval(interval.value);
-  interval.value = setInterval(() => {
-    slideToNext2();
-  }, 4500);
 };
 </script>
