@@ -293,12 +293,16 @@
       }
 
       .photo{
-       filter: grayscale(1) sepia(.4);
        transition: all .4s;
-      
+
+      @media screen and (min-width:768px) {
+       filter: grayscale(1) sepia(.4);
+       
        &:hover {
-      filter: none;
+        filter: none;
+        }
       }
+
       }
 
       .text {
@@ -356,6 +360,7 @@
               .text {
                 opacity: 1;
               }
+              
             }
           }
         }
@@ -412,6 +417,10 @@
       left: size(351);
       // border-radius: size(35);
       // background: #b5b3a8;
+
+      .photo{
+        filter: none;  
+        }
     }
 
     .slider2-next {
@@ -450,15 +459,26 @@
       right: 0;
     }
 
-    .photo{
-      filter: grayscale(1) sepia(.4);
+    .photo{ 
+      
       opacity: 0.2;
       transition: all .4s;
+
       
       &:hover {
         filter: none;
         opacity: 1;
       }
+
+       @media screen and (min-width:768px) {
+        filter: grayscale(1) sepia(.4);
+
+
+        &:hover {
+            filter: none;
+            opacity: 1;
+        }
+       }
     }
 
     .text {
