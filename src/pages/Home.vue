@@ -245,7 +245,7 @@ const sources = ref([
   {
     img: slide3_full,
     year: '2004',
-    txt: '士林區  圓窗窗外',
+    txt: '士林區  圓山窗外',
   }, 
   {
     img: slide4_full,

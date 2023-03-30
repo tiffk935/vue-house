@@ -38,7 +38,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="p3 parallax">
-            <div class="txt"><span>2004</span>士林區  圓窗窗外</div>
+            <div class="txt"><span>2004</span>士林區  圓山窗外</div>
             <div class="mask" @click="openSlider(3)" v-if="!$isMobile()">
               <img class="zoom-icon absolute" src="@/section/s3/zoom-icon.svg" />
             </div>
