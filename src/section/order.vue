@@ -3,11 +3,11 @@
     <div class="order1">
       <div class="order2">
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center text-white font-['noto_Serif_tc']">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="美地莊園" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="美地莊園" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -16,12 +16,12 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :value="city.value">
@@ -45,9 +45,9 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p>
+          <p class="text-white font-bold">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button text-[#FFF100] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,7 +57,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#e6c57c] text-[#004239] hover:text-white hover:bg-[#be8416] rounded-none" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -82,11 +82,10 @@
   // padding-top: size(115);
 
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
+    background-color: #004239;
     background-size: cover;
     background-position: center center;
-    padding-bottom: size(21);
+    // padding-bottom: size(21);
   }
 
   .order2 {
@@ -95,7 +94,7 @@
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(45);
   }
 
@@ -113,7 +112,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 240px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -167,8 +166,7 @@
 
     .order2 {
       padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      background-color: #004239;
       background-size: cover;
       background-position: center center;
     }
@@ -249,7 +247,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg","room_type"];
 
 //中文對照
 const formDataRef = ref([
