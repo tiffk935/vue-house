@@ -12,8 +12,8 @@
       >
         <swiper-slide>
           <div class="item">
-            <img class="bg absolute md:hidden" src="@/section/s13/bg1-m.png" />
-            <img class="bg absolute hidden md:block" src="@/section/s13/bg1.png" />
+            <img class="bg absolute md:hidden" src="@/section/s13/bg1-m.jpg" />
+            <img class="bg absolute hidden md:block" src="@/section/s13/bg1.jpg" />
             <div class="title absolute">承諾工程品質 地質改良樁</div>
             <div class="content absolute">
               <div class="t1">【結構基礎】</div>
@@ -27,8 +27,8 @@
         </swiper-slide>
         <swiper-slide>
           <div class="item">
-            <img class="bg absolute md:hidden" src="@/section/s13/bg2-m.png" />
-            <img class="bg absolute hidden md:block" src="@/section/s13/bg2.png" />
+            <img class="bg absolute md:hidden" src="@/section/s13/bg2-m.jpg" />
+            <img class="bg absolute hidden md:block" src="@/section/s13/bg2.jpg" />
             <div class="title absolute">防水工法獨到 防水保固三年</div>
             <div class="content absolute">
               <div class="t1">【外牆層縫防水工法】</div>

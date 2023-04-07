@@ -1,7 +1,7 @@
 <template>
   <section class="s10 relative">
     <div class="rect absolute md:hidden"></div>
-    <img class="img absolute" src="@/section/s10/img.png" />
+    <img class="img absolute" src="@/section/s10/img.jpg" />
     <div class="title absolute" data-aos="fade-up">住一棟雙會館別墅<br class="md:hidden"><span class="hidden md:inline">&nbsp;</span>滿足您的全方位需求</div>
   </section>
 </template>
@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: size-m(182);
-    background: linear-gradient(180deg, #049CE0 82.29%, rgba(4, 156, 224, 0) 100%);
+    // background: linear-gradient(180deg, #049CE0 82.29%, rgba(4, 156, 224, 0) 100%);
   }
 
   .img {

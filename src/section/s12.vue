@@ -41,7 +41,7 @@
 
 .s12 {
   width: 100%;
-  height: size-m(665);
+  height: size-m(665);overflow: hidden;
   @media screen and (min-width:768px) {
     height: size(1080);
   }

@@ -1,6 +1,6 @@
 <template>
-  <section class="s7 bg-[#0080D9] text-white relative">
-    <img class="img absolute" src="@/section/s7/img.png" />
+  <section class="s7 text-white relative">
+    <img class="img absolute" src="@/section/s7/img.jpg" />
     <img class="title absolute" data-aos="fade-up" src="@/section/s7/title.svg" />
     <div class="line absolute"></div>
     <img class="icon absolute hidden md:block" data-aos="fade-up" src="@/section/s7/icon.svg" />
@@ -27,6 +27,7 @@
 .s7 {
   width: 100%;
   height: size-m(793);
+  background: linear-gradient(to top, #90b8db 27%,#65a8dc 41%,#238ed9 52%,#0080d9 66%);
   @media screen and (min-width:768px) {
     height: size(2180);
   }

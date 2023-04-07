@@ -133,6 +133,15 @@
       margin-bottom: size(0);
     }
   }
+  .s4,.s6{
+    .img {
+      margin-right: 0;
+      margin-left: auto;
+      @media screen and (min-width:768px) {
+        margin-right: auto;
+      }
+    }
+  }
 
   .content {
     @media screen and (min-width:768px) {

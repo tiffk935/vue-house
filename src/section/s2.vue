@@ -110,7 +110,7 @@
     height: size-m(504);
     top: size-m(-103);
     left: 0;
-    background: linear-gradient(180deg, #0168DE 79.17%, rgba(0, 134, 245, 0) 100%);
+    background: #0168DE;
     pointer-events: none;
     @media screen and (min-width:768px) {
       height: size(1218);
