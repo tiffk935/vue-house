@@ -21,7 +21,8 @@
     left: 0;
     width: 100%;
     height: size-m(182);
-    // background: linear-gradient(180deg, #049CE0 82.29%, rgba(4, 156, 224, 0) 100%);
+    background: linear-gradient(180deg, #049CE0 82.29%, rgba(4, 156, 224, 0) 100%);
+    z-index: 1;
   }
 
   .img {
@@ -49,6 +50,7 @@
     text-align: center;
     letter-spacing: 0.08em;
     color: #fff;
+    z-index: 2;
     @media screen and (min-width:768px) {
       left: size(364);
       top: size(179);
