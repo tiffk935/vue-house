@@ -3,7 +3,7 @@
     <img class="bg absolute t-0 l-0 w-full h-full object-cover" src="@/section/s14/bg.jpg" />
     <img class="text absolute md:hidden" data-aos="fade-up" src="@/section/s14/text-m.svg" />
     <img class="text absolute hidden md:block" data-aos="fade-up" src="@/section/s14/text.svg" />
-    <img class="style1 absolute" data-aos="fade-right" src="@/section/s14/style1.png" />
+    <img class="style1 absolute" data-aos="fade-right" data-aos-duration="1500" src="@/section/s14/style1.png" />
     <img class="style2 absolute" src="@/section/s14/style2.png" />
     <img class="style3 absolute" src="@/section/s14/style3.png" />
     <img class="style4 absolute" src="@/section/s14/style4.png" />
@@ -21,7 +21,7 @@
 
 .s14 {
   width: 100%;
-  height: size-m(518);
+  height: size-m(518);overflow: hidden;
   @media screen and (min-width:768px) {
     height: size(1080);
   }
@@ -41,6 +41,7 @@
     left: size-m(39);
     top: size-m(281);
     width: size-m(202);
+    filter: drop-shadow(0px 3px 5px #0003);
     @media screen and (min-width:768px) {
       width: size(319);
       left: size(197);

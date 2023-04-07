@@ -36,6 +36,7 @@
     width: size-m(154);
     left: size-m(110);
     top: size-m(60);
+    filter: drop-shadow(3px 3px 7px #059b);
     @media screen and (min-width:768px) {
       width: size(501.6);
       left: size(698);
@@ -49,6 +50,7 @@
     left: size-m(25);
     top: size-m(127);
     background: #fff;
+    box-shadow:3px 3px 7px #059b;
     @media screen and (min-width:768px) {
       width: size(1208);
       height: size(1);
@@ -61,6 +63,7 @@
     width: size-m(244.25);
     left: size-m(65);
     top: size-m(150);
+    filter: drop-shadow(3px 3px 7px #059b);
     @media screen and (min-width:768px) {
       width: size(1186.64);
       left: size(353.06);

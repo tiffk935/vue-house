@@ -2,8 +2,8 @@
   <section class="s3_s6 relative text-white bg-[#025d3e]">
     <div class="rect absolute"></div>
     <div class="top relative">
-      <img class="title-en absolute" src="@/section/s3/title-en.svg" />
-      <div class="title absolute">交織繁華交通系統<br class="md:hidden"><span class="hidden md:inline">&nbsp;</span>高速連結城市能量</div>
+      <img class="title-en absolute" data-aos="fade-up" src="@/section/s3/title-en.svg" />
+      <div class="title absolute" data-aos="fade-up" data-aos-delay="200">交織繁華交通系統<br class="md:hidden"><span class="hidden md:inline">&nbsp;</span>高速連結城市能量</div>
     </div>
 
     <div class="s3 relative">
@@ -12,8 +12,8 @@
         <img class="img" data-aos="fade-up" src="@/section/s3/img.jpg" />
         <div class="content">
           <img class="en" data-aos="fade-up" src="@/section/s3/en.svg" />
-          <div class="t1" data-aos="fade-up">繁華交通．連結城市高能量</div>
-          <div class="t2" data-aos="fade-up">永安路40米拓寬、北外環快速道路、國道8號聯通道路，三大主幹道及轉運站的擴建貫通，安南區道路交通系統更四通八達。</div>
+          <div class="t1" data-aos="fade-up" data-aos-delay="200">繁華交通．連結城市高能量</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="400">永安路40米拓寬、北外環快速道路、國道8號聯通道路，三大主幹道及轉運站的擴建貫通，安南區道路交通系統更四通八達。</div>
         </div>
       </div>
     </div>
@@ -24,8 +24,8 @@
         <img class="img" data-aos="fade-up" src="@/section/s4/img.jpg" />
         <div class="content content2">
           <img class="en" data-aos="fade-up" src="@/section/s4/en.svg" />
-          <div class="t1" data-aos="fade-up">綠心美地．國家級雋翠植感</div>
-          <div class="t2" data-aos="fade-up">
+          <div class="t1" data-aos="fade-up" data-aos-delay="200">綠心美地．國家級雋翠植感</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="400">
             【美地莊園】台南15萬坪史博館特區<br>
             第一排。萬坪磅礡綠意，盡享自然、<br>
             優質環境，樂活健康移居。
@@ -40,8 +40,8 @@
         <img class="img" data-aos="fade-up" src="@/section/s5/img.jpg" />
         <div class="content">
           <img class="en" data-aos="fade-up" src="@/section/s5/en.svg" />
-          <div class="t1" data-aos="fade-up">明星學區卡位．菁英計畫養成記</div>
-          <div class="t2" data-aos="fade-up">
+          <div class="t1" data-aos="fade-up" data-aos-delay="200">明星學區卡位．菁英計畫養成記</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="400">
             生活圈內提供豐富教育資源，就讀學區為和順國<br class="md:hidden">小、和順國中，車程約6-7分鐘，家長接送便利。
           </div>
         </div>
@@ -54,8 +54,8 @@
         <img class="img" data-aos="fade-up" src="@/section/s6/img.jpg" />
         <div class="content content2">
           <img class="en" data-aos="fade-up" src="@/section/s6/en.svg" />
-          <div class="t1" data-aos="fade-up">盎然機能，生活隨心購樂</div>
-          <div class="t2" data-aos="fade-up"> 生活機能可至安和路商圈，或到全聯福利中心安和店、大裕生鮮超市、全國生活百貨館等，車程約5-7分鐘，採買外食或生活用品皆便利。</div>
+          <div class="t1" data-aos="fade-up" data-aos-delay="200">盎然機能，生活隨心購樂</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="400"> 生活機能可至安和路商圈，或到全聯福利中心安和店、大裕生鮮超市、全國生活百貨館等，車程約5-7分鐘，採買外食或生活用品皆便利。</div>
         </div>
       </div>
     </div>
@@ -69,6 +69,7 @@
   background-image: url(@/section/s3/bg.jpg);
   background-size: cover;
   background-position: center center;
+  overflow: hidden;
 
   .rect {
     width: size-m(375);

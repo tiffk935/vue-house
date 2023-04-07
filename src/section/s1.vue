@@ -19,7 +19,7 @@
 
 .s1 {
   width: 100%;
-  height: size-m(667);
+  height: size-m(667);overflow: hidden;
   @media screen and (min-width:768px) {
     height: size(1080);
   }

@@ -21,6 +21,7 @@
 .s11 {
   width: 100%;
   height: size-m(665);
+  overflow: hidden;
   @media screen and (min-width:768px) {
     height: size(1080);
   }
@@ -30,14 +31,14 @@
     height: size-m(350);
     left: 0;
     top: 0;
-    padding: size-m(28) size-m(20) size-m(23) size-m(20);
+    padding: size-m(28) 0 size-m(23) 0;
     color: #fff;
     text-align: center;
     background: linear-gradient(189.69deg, #EDE9E5 2.54%, #CDB69C 11.9%, #BB9E7F 19.88%);
     @media screen and (min-width:768px) {
-      width: size(567);
+      width: calc(100% - #{size(1353)});
       height: size(1080);
-      padding: size(217) size(41) size(170) size(49);
+      padding: size(217) size(0) size(170) size(0);
     }
 
     .title {
@@ -90,17 +91,24 @@
         line-height: size(19);
       }
     }
+    .photo{
+        width:size-m(342);
+        margin: auto;
+      @media screen and (min-width:768px) {
+        width:size(477);
+      }
+    }
   }
 
   .img {
     width: 100%;
     height: size-m(315);
-    left: 0;
+    right: 0;
     top: size-m(350);
     @media screen and (min-width:768px) {
       width: size(1353);
       height: size(1080);
-      left: size(567);
+      right: size(0);
       top: size(0);
     }
 

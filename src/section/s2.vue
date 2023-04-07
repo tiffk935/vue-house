@@ -50,7 +50,7 @@
   .map {
     overflow-x: scroll;
     overflow-y: hidden;
-    width: 100vw;
+    width: 100%;
     @media screen and (min-width:768px) {
       overflow: hidden;
     }

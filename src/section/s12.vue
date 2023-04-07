@@ -24,7 +24,7 @@
     <div class="t1 absolute" data-aos="fade-up">24000坪低密度<br class="hidden md:block"><span class="inline md:hidden">&nbsp;</span>大闊基地</div>
     <div class="t2 absolute" data-aos="fade-up">打造一座台南從來沒有的適居別墅莊園</div>
     <div class="t3 absolute" data-aos="fade-up">擁有多重安全防護社區，藏風納氣，風生水起，<br class="md:hidden">處處是風景！</div>
-    <div class="style1" data-aos="fade-right">
+    <div class="style1" data-aos="fade-right" data-aos-duration="1500">
       <img class="absolute" src="@/section/s12/style1.png" />
     </div>
     <div class="style2">
