@@ -22,7 +22,8 @@
               <div class="t2">使用摩擦熔接型SA級鋼筋續接器，柱筋結合跳接式施工，加強抗震！</div>
             </div>
             <img class="img absolute" src="@/section/s13/img1.jpg" />
-            <img class="en absolute" src="@/section/s13/en1.svg" />
+            <img class="en absolute md:hidden" src="@/section/s13/en1m.svg" />
+            <img class="en absolute hidden md:block" src="@/section/s13/en1.svg" />
           </div>
         </swiper-slide>
         <swiper-slide>
@@ -37,7 +38,8 @@
               <div class="t2">結構體面做物理性抗裂/防水材料做化學性防水/裝修材做外斜工法排水</div>
             </div>
             <img class="img absolute" src="@/section/s13/img2.jpg" />
-            <img class="en absolute" src="@/section/s13/en2.svg" />
+            <img class="en water absolute md:hidden" src="@/section/s13/en2m.svg" />
+            <img class="en absolute hidden md:block" src="@/section/s13/en2.svg" />
           </div>
         </swiper-slide>
       </swiper>
@@ -50,7 +52,7 @@
 
 .s13 {
   width: 100%;
-  height: size-m(667);
+  height: size-m(590);
   @media screen and (min-width:768px) {
     height: size(1080);
   }
@@ -66,6 +68,7 @@
       background-repeat: no-repeat;
       background-size: size-m(13.58) auto;
       opacity: 1;
+      margin-top: sizem(15);
       @media screen and (min-width:768px) {
         width: size(60);
         height: size(60);
@@ -98,7 +101,7 @@
 
     .item {
       width: 100%;
-      height: size-m(667);
+      height: size-m(590);
       position: relative;
       @media screen and (min-width:768px) {
         height: size(1080);
@@ -177,25 +180,34 @@
 
       .img {
         width: size-m(213);
-        left: size-m(81);
-        top: size-m(266);
+        left: auto;
+        top: auto;
+        right: size-m(0);
+        bottom: size-m(0);
+        display: none;
         @media screen and (min-width:768px) {
           width: size(327);
           left: size(1460);
           top: size(410);
+          display: block;
         }
       }
 
       .en {
         width: auto;
         height: size-m(36.8);
-        left: size-m(83);
-        top: size-m(586);
+        left: auto;
+        top: size-m(246);
+        right: size-m(0);
         @media screen and (min-width:768px) {
           height: size(89.73);
           left: size(228);
           top: size(439);
         }
+      }
+
+      .water{
+        right: size-m(30);
       }
     }
   }
