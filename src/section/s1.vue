@@ -133,7 +133,7 @@
             <div class="col">
               <div class="panasonic ">
                 <div class="panasonic-box  text-lg-center text-md-center text-sm-center text-center">
-                  <img src="@/section/s1/05_brand.png" class="img-fluid img-protected mx-auto d-block mg-lg animated vanishIn" alt="Panasonic_日本原裝進口松下宅" data-appear-anim-style="vanishIn" /><img src="@/section/s1/05_title.png" class="img-fluid img-protected mx-auto mg-lg panasonic-title" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_title-m.png" class="img-fluid img-protected mx-auto mg-lg scroll-fx-down-in-fade panasonic-title-m" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_content.png" class="img-fluid img-protected mx-auto panasonic-content" alt="原裝進口Panasonic建材_艾美國際城" /><img src="@/section/s1/05_content.png" class="img-fluid img-protected mx-auto scroll-fx-down-in-fade panasonic-content-m" alt="原裝進口Panasonic建材_艾美國際城" />
+                  <img src="@/section/s1/05_brand.png" class="img-fluid img-protected mx-auto d-block mg-lg animated vanishIn" alt="Panasonic_日本原裝進口松下宅" data-appear-anim-style="vanishIn" /><!--img src="@/section/s1/05_title.png" class="img-fluid img-protected mx-auto mg-lg panasonic-title" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_title-m.png" class="img-fluid img-protected mx-auto mg-lg scroll-fx-down-in-fade panasonic-title-m" alt="日本原裝進口松下宅_艾美國際城" /--><img src="@/section/s1/05_content1.png" class="img-fluid img-protected mx-auto panasonic-content" alt="原裝進口Panasonic建材_艾美國際城" /><img src="@/section/s1/05_content1.png" class="img-fluid img-protected mx-auto scroll-fx-down-in-fade panasonic-content-m" alt="原裝進口Panasonic建材_艾美國際城" />
                 </div>
               </div>
             </div>
