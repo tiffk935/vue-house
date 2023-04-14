@@ -325,11 +325,6 @@
               <img class="photo w-full md:hidden" src="@/section/s8/5/2-m.png" />
               <div class="txt">台南晶英酒店</div>
             </swiper-slide>
-            <swiper-slide>
-              <img class="photo w-full hidden md:block" src="@/section/s8/5/3.png" />
-              <img class="photo w-full md:hidden" src="@/section/s8/5/3-m.png" />
-              <div class="txt">台南晶英酒店</div>
-            </swiper-slide>
           </swiper>
         </div>
 
