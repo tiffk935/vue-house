@@ -3,7 +3,7 @@
     <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="title-en">DELIGHTFUL LIFE</div>
       <div class="title">豐盛公設 徜徉盎然</div>
-      <div class="desc">開創豐富生活，由公設啟程！以台南深厚的文化底蘊為風格，以溫潤材質為基調，規劃有宴會廳、閱讀室、茶室、媽媽教室、健身房、運動吧等實用設施，引進自然光線和通透綠意，傳達沉穩又全齡適用的空間設計。</div>
+      <div class="desc">開創豐富生活，由公設啟程！以台南深厚的文化底蘊為風格，以溫潤材質為基調，規劃有宴會廳、閱讀室、媽媽教室、健身房、運動吧等實用設施，引進自然光線和通透綠意，傳達沉穩又全齡適用的空間設計。</div>
     </div>
     <div class="slider">
       <swiper 
@@ -15,12 +15,12 @@
         }"
         :modules="modules"
       >
-        <swiper-slide>
+        <!--swiper-slide>
           <div class="img">
             <img class="photo w-full block" src="@/section/s10/1.jpg" />
             <div class="txt">茶室3D合成示意圖</div>
           </div>
-        </swiper-slide>
+        </swiper-slide-->
         <swiper-slide>
           <div class="img">
             <img class="photo w-full block" src="@/section/s10/2.jpg" />
