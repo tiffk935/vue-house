@@ -38,7 +38,7 @@
 
   .title {
     font-family: 'Noto Serif TC';
-    font-weight: 700;
+    font-weight: 900;
     font-size: size-m(20);
     line-height: size-m(29);
     margin-bottom: size-m(11);
