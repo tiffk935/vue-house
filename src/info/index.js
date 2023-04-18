@@ -9,7 +9,7 @@ export default {
     address: "新北市中和區中山路二段188號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.919331755611!2d121.50029429999998!3d25.002856899999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9bdac708fa3%3A0x1bd3cfdab4be319a!2z6b6N55GpIC0g5Y-M5ZKM5b-D!5e0!3m2!1szh-TW!2stw!4v1671516675296!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/vbucqoET9bpqZwVE9",
-    phone: "02-2240-9666",
+    phone: "02-2570-1336",
     fbLink: "https://www.facebook.com/%E9%BE%8D%E7%91%A9-%E5%8F%8C%E5%92%8C%E5%BF%83%E4%BE%86%E4%BA%86-105009848868082/",
     fbMessage: "https://m.me/105009848868082/",
     caseName: caseName,
