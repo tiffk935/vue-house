@@ -23,9 +23,9 @@
       The concept of the entrance is inspired by the beauty of ancient architectural eaves,<br>
       with the gesture of the outstretched arm symbolizing a warm welcome home. <br>
     </p>
-    <!-- <div class="img">
+    <div class="img">
       <img class="w-full" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s5/img.jpg" />
-    </div> -->
+    </div>
   </section>
 </template>
 
