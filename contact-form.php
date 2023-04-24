@@ -492,16 +492,16 @@ document.location.replace('formThanks');
     
 <?php
 // 測試環境
-$key = 'spCSVvB2';
-$secret = 'X47bzY8SbScVBD';
-$uuid = '1jf9srle';
-$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+//$key = 'spCSVvB2';
+//$secret = 'X47bzY8SbScVBD';
+//$uuid = '1jf9srle';
+//$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
 
 // 正式環境
-// $key = 'yHhZYNgu';
-// $secret = 'ZXRfGHwSGeyn24';
-// $uuid = 'rckhbsj8';
-// $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+ $key = 'yHhZYNgu';
+ $secret = 'ZXRfGHwSGeyn24';
+ $uuid = 'rckhbsj8';
+ $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
 
 $header = array(
     'x-api-key: ' . $key,
