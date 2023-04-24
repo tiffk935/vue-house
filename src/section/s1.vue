@@ -3,17 +3,17 @@
     <div class="new_block" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="/images/new/1013/A_01.jpg">
-          <img src="/images/new/1013/A_02.png" class="word">
-          <img src="/images/new/1013/A_03.png" class="word">
+          <img src="./new/1013/A_01.jpg">
+          <img src="./new/1013/A_02.png" class="word">
+          <img src="./new/1013/A_03.png" class="word">
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding-left: 0%;padding-right: 0%;">
         <div class="row" style="margin-right: 0%;margin-left: 0%;">
           <div class="new_block_m">
-            <img src="/images/new/1013/A_01.jpg">
-            <img src="/images/new/1013/A_02.png" class="word">
-            <img src="/images/new/1013/A_03.png" class="word">
+            <img src="./new/1013/A_01.jpg">
+            <img src="./new/1013/A_02.png" class="word">
+            <img src="./new/1013/A_03.png" class="word">
           </div>
         </div>
       </div>
@@ -23,38 +23,38 @@
     <div class="new_block" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="/images/new/1013/B_01.jpg" alt=""  
+          <img src="./new/1013/B_01.jpg" alt=""  
             >
-          <img src="/images/new/P3.jpg" alt=""  
+          <img src="./new/P3.jpg" alt=""  
             >
-          <img src="/images/new/P4-1.jpg" alt=""  
+          <img src="./new/P4-1.jpg" alt=""  
             >
-          <img src="/images/new/1013/E_01.jpg" alt="" 
+          <img src="./new/1013/E_01.jpg" alt="" 
             >
-          <img src="/images/new/1013/E_02.jpg" alt="" 
+          <img src="./new/1013/E_02.jpg" alt="" 
             >
-          <img src="/images/new/1013/E_03.jpg" alt="" 
+          <img src="./new/1013/E_03.jpg" alt="" 
             >
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding-left: 0%;padding-right: 0%;">
         <div class="row" style="margin-right: 0%;margin-left: 0%;">
           <div class="new_block_m">
-            <img src="/images/new/1013/B_m_01.jpg" alt=""  
+            <img src="./new/1013/B_m_01.jpg" alt=""  
               >
-            <img src="/images/new/m/P2-2.jpg" alt=""  
+            <img src="./new/m/P2-2.jpg" alt=""  
               >
-            <img src="/images/new/m/P3.jpg" alt=""  
+            <img src="./new/m/P3.jpg" alt=""  
               >
-            <img src="/images/new/m/P4-1.jpg" alt=""  
+            <img src="./new/m/P4-1.jpg" alt=""  
               >
-            <img src="/images/new/m/P4-3-1.jpg" alt=""  
+            <img src="./new/m/P4-3-1.jpg" alt=""  
               >
-            <img src="/images/new/1013/E_01.jpg" alt="" 
+            <img src="./new/1013/E_01.jpg" alt="" 
               >
-            <img src="/images/new/1013/E_02.jpg" alt="" 
+            <img src="./new/1013/E_02.jpg" alt="" 
               >
-            <img src="/images/new/1013/E_03.jpg" alt="" >
+            <img src="./new/1013/E_03.jpg" alt="" >
           </div>
         </div>
       </div>
@@ -74,28 +74,28 @@
           <!-- Wrapper for slides -->
           <div class=" carousel-inner_H " role="listbox">
             <div class="item active">
-              <img src="/images/new/P6_b7.jpg" data-color="lightblue"
+              <img src="./new/P6_b7.jpg" data-color="lightblue"
                 alt="First Image">
               <div class="carousel-caption ">
                 <p>B7｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="/images/new/P6_d1.jpg" data-color="firebrick"
+              <img src="./new/P6_d1.jpg" data-color="firebrick"
                 alt="Second Image">
               <div class="carousel-caption">
                 <p>D1｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="/images/new/P6_d1-2.jpg" data-color="lightgreen"
+              <img src="./new/P6_d1-2.jpg" data-color="lightgreen"
                 alt="Fourth Image">
               <div class="carousel-caption">
                 <p>D1｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="/images/new/P6_e7-1.jpg" data-color="violet"
+              <img src="./new/P6_e7-1.jpg" data-color="violet"
                 alt="Third Image">
               <div class="carousel-caption">
                 <p>E7｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
@@ -114,20 +114,20 @@
         </a>
       </div>
       <!-- slider-gallery -->
-      <img src="/images/new/1013/F_dot.png" class="F_dot">
+      <img src="./new/1013/F_dot.png" class="F_dot">
     </div>
     <!-- new p7 word-->
     <div class="new_block" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="/images/new/1013/G_01.jpg" alt="" 
+          <img src="./new/1013/G_01.jpg" alt="" 
             >
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding: 0%;">
         <div class="row" style="margin: 0%;">
           <div class="new_block_m">
-            <img src="/images/new/1013/G_m_01.jpg" alt="" 
+            <img src="./new/1013/G_m_01.jpg" alt="" 
               >
           </div>
         </div>
@@ -154,61 +154,61 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner_H" role="listbox">
           <div class="item active">
-            <img src="/images/new/P7-1.jpg" data-color="lightblue" alt="First Image">
+            <img src="./new/P7-1.jpg" data-color="lightblue" alt="First Image">
             <div class="carousel-caption">
               <p>四季迎賓大廳</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-2.jpg" data-color="firebrick" alt="Second Image">
+            <img src="./new/P7-2.jpg" data-color="firebrick" alt="Second Image">
             <div class="carousel-caption">
               <p>雲天泳池</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-3.jpg" data-color="violet" alt="Third Image">
+            <img src="./new/P7-3.jpg" data-color="violet" alt="Third Image">
             <div class="carousel-caption">
               <p>風尚廚藝學堂</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-4.jpg" data-color="lightgreen" alt="Fourth Image">
+            <img src="./new/P7-4.jpg" data-color="lightgreen" alt="Fourth Image">
             <div class="carousel-caption">
               <p>日出健身房</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-5.jpg" data-color="lightgreen" alt="Fifth Image">
+            <img src="./new/P7-5.jpg" data-color="lightgreen" alt="Fifth Image">
             <div class="carousel-caption">
               <p>星光歡唱包廂</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-6.jpg" data-color="lightgreen" alt="sixth Image">
+            <img src="./new/P7-6.jpg" data-color="lightgreen" alt="sixth Image">
             <div class="carousel-caption">
               <p>戲谷童話樂園</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-7.jpg" data-color="lightgreen" alt="sevth Image">
+            <img src="./new/P7-7.jpg" data-color="lightgreen" alt="sevth Image">
             <div class="carousel-caption">
               <p>沐雲瑜珈教室</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-8.jpg" data-color="lightgreen" alt="eigth Image">
+            <img src="./new/P7-8.jpg" data-color="lightgreen" alt="eigth Image">
             <div class="carousel-caption">
               <p>靜謐交誼廳</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-9.jpg" data-color="lightgreen" alt="nine Image">
+            <img src="./new/P7-9.jpg" data-color="lightgreen" alt="nine Image">
             <div class="carousel-caption">
               <p>智者之丘書房</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/new/P7-10.jpg" data-color="lightgreen" alt="ten Image">
+            <img src="./new/P7-10.jpg" data-color="lightgreen" alt="ten Image">
             <div class="carousel-caption">
               <p>大廳廊道</p>
             </div>
@@ -234,14 +234,14 @@
       <div class="d-none d-md-block F_block_word">
         <div class="row">
           <div class="new_p12_word">
-            <img src="/images/new/P12.png">
+            <img src="./new/P12.png">
           </div>
         </div>
       </div>
       <div class="container-fluid d-sm-none1">
         <div class="row">
           <div class="new_p12_word">
-            <img src="/images/new/P12.png">
+            <img src="./new/P12.png">
           </div>
         </div>
       </div>
@@ -250,31 +250,31 @@
           style="margin-bottom: 2%;">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block" src="/images/F/F_1.jpg" alt="First slide">
+              <img class="d-block" src="./F/F_1.jpg" alt="First slide">
               <div class="carousel-caption">
                 <p>高鐵左營站</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/F/F_2.jpg" alt="Second slide">
+              <img class="d-block" src="./F/F_2.jpg" alt="Second slide">
               <div class="carousel-caption">
                 <p>高鐵左營站</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/F/F_3.jpg" alt="Third slide">
+              <img class="d-block" src="./F/F_3.jpg" alt="Third slide">
               <div class="carousel-caption">
                 <p>台鐵內惟站</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/F/F_4.jpg" alt="Fourth slide">
+              <img class="d-block" src="./F/F_4.jpg" alt="Fourth slide">
               <div class="carousel-caption">
                 <p>台鐵左營站</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/F/F_5.jpg" alt="Fifth slide">
+              <img class="d-block" src="./F/F_5.jpg" alt="Fifth slide">
               <div class="carousel-caption">
                 <p>台17線</p>
               </div>
@@ -298,14 +298,14 @@
       <div class="new_block" style="overflow: hidden;">
         <div class="d-none d-md-block">
           <div class="row" style="margin: 0%;">
-            <img src="/images/new/1013/I_01.jpg" alt="" 
+            <img src="./new/1013/I_01.jpg" alt="" 
               >
           </div>
         </div>
         <div class="container-fluid d-sm-none1" style="padding: 0%;">
           <div class="row" style="margin: 0%;">
             <div class="new_block_m">
-              <img src="/images/new/1013/I_m_01.jpg" alt="" 
+              <img src="./new/1013/I_m_01.jpg" alt="" 
                 >
             </div>
           </div>
@@ -324,31 +324,31 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner_H" role="listbox">
           <div class="item active">
-            <img src="/images/G/G_7-1.jpg" data-color="lightblue" alt="First Image">
+            <img src="./G/G_7-1.jpg" data-color="lightblue" alt="First Image">
             <div class="carousel-caption">
               <p>高雄美術館</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/G/G_6.jpg" data-color="lightblue" alt="First Image">
+            <img src="./G/G_6.jpg" data-color="lightblue" alt="First Image">
             <div class="carousel-caption">
               <p>高雄美術館</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/G/G_5.jpg" data-color="firebrick" alt="Second Image">
+            <img src="./G/G_5.jpg" data-color="firebrick" alt="Second Image">
             <div class="carousel-caption">
               <p>高雄美術館鳥瞰</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/G/G_3.jpg" data-color="violet" alt="Third Image">
+            <img src="./G/G_3.jpg" data-color="violet" alt="Third Image">
             <div class="carousel-caption">
               <p>綠園道</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/G/G_4.jpg" data-color="lightgreen" alt="Fourth Image">
+            <img src="./G/G_4.jpg" data-color="lightgreen" alt="Fourth Image">
             <div class="carousel-caption">
               <p>蓮池潭</p>
             </div>
@@ -373,13 +373,13 @@
       <div class="new_block" style="overflow: hidden;">
         <div class="d-none d-md-block">
           <div class="row" style="margin: 0%;">
-            <img src="/images/new/P14.jpg" >
+            <img src="./new/P14.jpg" >
           </div>
         </div>
         <div class="container-fluid d-sm-none1" style="padding: 0%;">
           <div class="row" style="margin: 0%;">
             <div class="new_block_m">
-              <img src="/images/new/m/P14-1.jpg">
+              <img src="./new/m/P14-1.jpg">
             </div>
           </div>
         </div>
@@ -397,25 +397,25 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner_H" role="listbox">
           <div class="item active">
-            <img src="/images/H/H_1.jpg" data-color="lightblue" alt="First Image">
+            <img src="./H/H_1.jpg" data-color="lightblue" alt="First Image">
             <div class="carousel-caption">
               <p>漢神百貨</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/H/H_2.jpg" data-color="firebrick" alt="Second Image">
+            <img src="./H/H_2.jpg" data-color="firebrick" alt="Second Image">
             <div class="carousel-caption">
               <p>百貨商圈示意</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/H/H_5.jpg" data-color="violet" alt="Third Image">
+            <img src="./H/H_5.jpg" data-color="violet" alt="Third Image">
             <div class="carousel-caption">
               <p>商圈示意</p>
             </div>
           </div>
           <div class="item">
-            <img src="/images/H/H_6.jpg" data-color="lightgreen" alt="Fourth Image">
+            <img src="./H/H_6.jpg" data-color="lightgreen" alt="Fourth Image">
             <div class="carousel-caption">
               <p>青海路商圈</p>
             </div>
@@ -438,16 +438,16 @@
     <div class="new_block" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="/images/new/1013/K_01.jpg">
-          <img src="/images/new/1013/K_02.png" class="word" 
+          <img src="./new/1013/K_01.jpg">
+          <img src="./new/1013/K_02.png" class="word" 
             >
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding: 0%;">
         <div class="row" style="margin: 0%;">
           <div class="new_block_m">
-            <img src="/images/new/1013/K_m_01.jpg">
-            <img src="/images/new/1013/K_m_02.png" class="word">
+            <img src="./new/1013/K_m_01.jpg">
+            <img src="./new/1013/K_m_02.png" class="word">
           </div>
         </div>
       </div>
@@ -456,16 +456,16 @@
     <div class="new_block" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="/images/new/1013/L_01.jpg">
-          <img src="/images/new/1013/L_02.png" class="word" 
+          <img src="./new/1013/L_01.jpg">
+          <img src="./new/1013/L_02.png" class="word" 
             >
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding: 0%;">
         <div class="row" style="margin: 0%;">
           <div class="new_block_m">
-            <img src="/images/new/1013/L_m_01.jpg">
-            <img src="/images/new/1013/L_02.png" class="word">
+            <img src="./new/1013/L_m_01.jpg">
+            <img src="./new/1013/L_02.png" class="word">
           </div>
         </div>
       </div>
@@ -474,7 +474,7 @@
     <div class="container-fluid d-none d-md-block">
       <div class="row">
         <div class="col-12 pl-0 pr-0 C_block">
-          <img class="w-100" src="/images/new/1013/M_01.jpg" alt="">
+          <img class="w-100" src="./new/1013/M_01.jpg" alt="">
         </div>
       </div>
       <div class="new_p7_note">
@@ -485,7 +485,7 @@
       <div class="row">
         <div class="pl-0 pr-0 C_M_block">
           <div class="col-12 pl-0 pr-0 C_block">
-            <img class="w-100" src="/images/new/1013/M_01.jpg" alt="">
+            <img class="w-100" src="./new/1013/M_01.jpg" alt="">
           </div>
         </div>
       </div>
@@ -499,7 +499,7 @@
       <div class="container-fluid d-sm-none1">
         <div class="row">
           <div class="new_p10_word">
-            <img src="/images/new/P10.png">
+            <img src="./new/P10.png">
           </div>
         </div>
       </div>
@@ -508,34 +508,34 @@
           <div class="new_p6_slide">
             <div class=" carousel-inner_H " role="listbox">
               <div class="item active">
-                <img src="/images/D/D_3.jpg" data-color="lightblue"
+                <img src="./D/D_3.jpg" data-color="lightblue"
                   alt="First Image">
                 <div class="carousel-caption ">
                   <p>HITO共學館</p>
                 </div>
               </div>
               <div class="item">
-                <img src="/images/D/D_4.jpg" data-color="firebrick"
+                <img src="./D/D_4.jpg" data-color="firebrick"
                   alt="Second Image">
                 <div class="carousel-caption">
                   <p>同心悅茶全齡長照站</p>
                 </div>
               </div>
               <div class="item">
-                <img src="/images/D/D_5.jpg" data-color="lightgreen"
+                <img src="./D/D_5.jpg" data-color="lightgreen"
                   alt="Fourth Image">
                 <div class="carousel-caption">
                   <p>同心悅茶全齡長照站</p>
                 </div>
               </div>
               <div class="item">
-                <img src="/images/D/D_8.jpg" data-color="violet" alt="Third Image">
+                <img src="./D/D_8.jpg" data-color="violet" alt="Third Image">
                 <div class="carousel-caption">
                   <p>華友聯家族聯歡會</p>
                 </div>
               </div>
               <div class="item">
-                <img src="/images/D/D_7.jpg" data-color="violet" alt="Third Image">
+                <img src="./D/D_7.jpg" data-color="violet" alt="Third Image">
                 <div class="carousel-caption">
                   <p style="color: black;">華友聯Family APP</p>
                 </div>
@@ -556,7 +556,7 @@
       <div class="d-none d-md-block new_p10_word_block">
         <div class="row">
           <div class="new_p10_word">
-            <img src="/images/new/P10-1.png">
+            <img src="./new/P10-1.png">
           </div>
         </div>
       </div>
@@ -564,18 +564,18 @@
     <!-- D : Block -->
     <!-- E : Block 福爾摩沙 -->
     <div style="position: relative; padding-top: 10%;padding-bottom: 10%;overflow: hidden;
-      background-image: url('/images/new/1013/back.jpg');background-repeat: no-repeat;background-size: cover;">
+      background-image: url('./new/1013/back.jpg');background-repeat: no-repeat;background-size: cover;">
       <div class="d-none d-md-block E_block_word">
         <div class="row">
           <div class="new_p11_word">
-            <img src="/images/new/P11.png">
+            <img src="./new/P11.png">
           </div>
         </div>
       </div>
       <div class="container-fluid d-sm-none1">
         <div class="row">
           <div class="new_p11_word">
-            <img src="/images/new/P11.png">
+            <img src="./new/P11.png">
           </div>
         </div>
       </div>
@@ -585,37 +585,37 @@
           data-interval="false" style="margin-bottom: 2%;">
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img class="d-block" src="/images/E/E_1.jpg" alt="First slide">
+              <img class="d-block" src="./E/E_1.jpg" alt="First slide">
               <div class="carousel-caption">
                 <p>H 會館</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/E/E_2.jpg" alt="Second slide">
+              <img class="d-block" src="./E/E_2.jpg" alt="Second slide">
               <div class="carousel-caption">
                 <p>H 會館</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/E/E_3.jpg" alt="Third slide">
+              <img class="d-block" src="./E/E_3.jpg" alt="Third slide">
               <div class="carousel-caption">
                 <p>清水漾</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/E/E_6-1.jpg" alt="Fourth slide">
+              <img class="d-block" src="./E/E_6-1.jpg" alt="Fourth slide">
               <div class="carousel-caption">
                 <p>86特區商店街</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/E/E_4.jpg" alt="Fifth slide">
+              <img class="d-block" src="./E/E_4.jpg" alt="Fifth slide">
               <div class="carousel-caption">
                 <p>卡羅幼兒園</p>
               </div>
             </div>
             <div class="carousel-item">
-              <img class="d-block" src="/images/E/E_5.jpg" alt="sixth slide">
+              <img class="d-block" src="./E/E_5.jpg" alt="sixth slide">
               <div class="carousel-caption">
                 <p>卡羅幼兒園</p>
               </div>
