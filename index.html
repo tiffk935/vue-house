@@ -22,6 +22,16 @@
     <link rel="stylesheet" href="/assets/thumb-carousel/style.css">
     <link rel='stylesheet' href="/assets/slider-gallery/bootstrap-carousel.css">
     <link rel='stylesheet' href="/assets/slider-gallery/bootstrap-touch-carousel.css">
+    <script>
+      window.addEventListener('load', function() {
+          if (window.location.hash) {
+              var target = document.querySelector(window.location.hash);
+              if (target) {
+                  target.scrollIntoView();
+              }
+          }
+      });
+      </script>
 </head>
 
 <body>
@@ -29,16 +39,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script type="module" src="/src/main.js"></script>
-    <script>
-      window.onload = function() {
-          if (window.location.hash) {
-              var target = document.querySelector(window.location.hash);
-              if (target) {
-                  target.scrollIntoView();
-              }
-          }
-      };
-      </script>
 </body>
 
 </html>

@@ -1,8 +1,7 @@
   <template>
   <div id="order" class="order relative text-center">
     <!-- Title -->
-    <div id="contact" class="absolute"></div>
-    <div class="order-title text-center text-[#C30D23]">{{ info.order.title }}</div>
+    <div id="contact" class="order-title text-center text-[#C30D23]">{{ info.order.title }}</div>
     <!-- Title Image -->
     <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="華友聯next21" srcset=""
       data-aos="fade" data-aos-duration="1000">
