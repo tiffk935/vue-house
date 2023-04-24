@@ -14,6 +14,8 @@
           @input="(event) => (formData.name = event.target.value)" maxlength="16" />
         <input type="text" placeholder="手機" class="aa-input w-full rounded-none" :value="formData.phone"
           @input="(event) => (formData.phone = event.target.value)" maxlength="10" />
+        <input type="text" placeholder="信箱" class="aa-input w-full rounded-none" :value="formData.email"
+          @input="(event) => (formData.email = event.target.value)" maxlength="255" />  
         
         <select class="aa-select w-full rounded-none" v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
@@ -31,6 +33,12 @@
           <option value="" selected disabled>居住地區</option>
           <option v-for="area in areaList" :key="area.label" :value="area.value">
             {{ area.label }}
+          </option>
+        </select>
+        <select class="aa-select w-full rounded-none" v-model="formData.source">
+          <option value="" selected disabled>消息來源</option>
+          <option v-for="source in sourceList" :key="source.label" :value="source.value">
+            {{ source.label }}
           </option>
         </select>
         <input v-if="formData.source == 'other'" type="text" placeholder="其他來源" class="aa-input w-full rounded-none" :value="formData.source_note"
@@ -104,7 +112,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 435px;
     gap: size(80);
     margin-bottom: size(50);
     padding: 3px;
