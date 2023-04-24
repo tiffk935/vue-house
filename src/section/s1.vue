@@ -3,7 +3,7 @@
     <img class="bg absolute md:hidden" src="@/section/s1/bg-m.svg" />
     <img class="bg absolute hidden md:block" src="@/section/s1/bg.svg" />
     <img class="logo absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <img class="title absolute" src="@/section/s1/title.svg" />
+    <img class="title absolute" src="@/section/s1/title3.svg" />
     <img class="star1 absolute" src="@/section/s1/star.png" />
     <img class="star2 absolute" src="@/section/s1/star.png" />
     <img class="text absolute" src="@/section/s1/text.svg" />
@@ -60,29 +60,45 @@
   }
 
   .star1 {
+    /* 
     top: size-m(307.17);
     left: size-m(142.3);
+    */
+    top: size-m(307);
+    left: size-m(147);
     width: size-m(43.67);
     mix-blend-mode: color-dodge;
     transform-origin: center center;
     animation: star 8s linear infinite;
     @media screen and (min-width:768px) {
+    /* 
       top: size(502.36);
       left: size(870.51);
+    */
+      top: size(505);
+      left: size(879);
       width: size(85.46);
     }
   }
 
   .star2 {
+    /* 
     top: size-m(305.79);
     left: size-m(156.84);
+    */
+    top: size-m(310);
+    left: size-m(160);
     width: size-m(75.91);
     mix-blend-mode: color-dodge;
     transform-origin: center center;
     animation: star 8s linear infinite;
     @media screen and (min-width:768px) {
+    /* 
       top: size(499.62);
       left: size(898.98);
+    */
+      top: size(510);
+      left: size(910);
       width: size(148.35);
     }
   }
