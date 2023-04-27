@@ -1,13 +1,24 @@
-  <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
-    <div class="order1">
-      <div class="order2">
+<template>
+  <div class="order relative bg-[#AB8E77] text-center">
+    <div class="toplogo">
+      <img class="toplogo-logo" src="@/section/s1/logo.svg" />
+      <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2602-777</div>
+    </div>
+    <div class="order1 relative">
+      <img class="style3 absolute hidden md:block" src="@/section/s1/style3.png" />
+      <img class="style2 absolute hidden md:block" src="@/section/s1/style2.png" />
+      <img class="style1 absolute hidden md:block" src="@/section/s1/style1.png" />
+      <img class="en absolute hidden md:block" src="@/section/s1/en.png" />
+      <div class="order2 relative">
+        <img class="style2 absolute md:hidden" src="@/section/s1/style2.png" />
+        <img class="style1 absolute md:hidden" src="@/section/s1/style1.png" />
+        <img class="en absolute md:hidden" src="@/section/s1/en.png" />
         <!-- Title -->
-        <div class="order-title text-center text-white">{{ info.order.title }}</div>
+        <div class="order-title text-center text-white font-['noto_Serif_tc']">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="美地莊園" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="美地莊園" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -20,7 +31,6 @@
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
-              <option value="透天">透天</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
@@ -45,9 +55,9 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p>
+          <p class="text-white font-bold">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button text-[#FFF100] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,7 +67,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#CBC8C1] text-[#333333] hover:text-white rounded-none" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -81,21 +91,82 @@
   width: 100%;
   // padding-top: size(115);
 
+  .toplogo {
+    padding: size(70) size(131) size(115) size(131);
+
+    img {
+      width: size(406);
+      margin-bottom: size(11);
+    }
+
+    .toplogo-text {
+      font-weight: 700;
+      font-size: size(40);
+      line-height: size(58);
+      text-align: left;
+      color: #fff;
+    }
+  }
+
+  .style1 {
+    left: 0;
+    bottom: 0;
+    width: 72.45vw;
+    transform-origin: bottom left;
+    @media screen and (min-width:768px) {
+      width: size(697);
+    }
+  }
+
+  .style2 {
+    left: 0;
+    bottom: 0;
+    width: 67.89333vw;
+    transform-origin: bottom left;
+    mix-blend-mode: soft-light;
+    @media screen and (min-width:768px) {
+      width: size(653);
+    }
+  }
+
+  .style3 {
+    @media screen and (min-width:768px) {
+      right: 0;
+      bottom: 0;
+      width: size(1161 - 224);
+      transform-origin: bottom right;
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  .en {
+    width: size-m(144);
+    left: size-m(84.85);
+    bottom: size-m(33.33);
+    @media screen and (min-width:768px) {
+      width: size(294);
+      left: size(346.53);
+      bottom: size(257.5);
+    }
+  }
+
+  input, select, textarea {
+    opacity: 0.8;
+  }
+
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
-    padding-bottom: size(21);
+    // padding-bottom: size(21);
   }
 
   .order2 {
-    padding: size(115) 0 size(73) 0;
+    padding: size(33) 0 size(73) 0;
   }
 
   .order-title {
     font-size: size(43);
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: size(45);
   }
 
@@ -113,7 +184,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 270px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -160,15 +231,30 @@
     // padding-top: size-m(40);
     margin-top: size-m(0);
 
+    .toplogo {
+      padding: size-m(20) size-m(24.5) size-m(0) size-m(24.5);
+
+      img {
+        width: size-m(145);
+        margin-bottom: size-m(17);
+      }
+
+      .toplogo-text {
+        font-weight: 700;
+        font-size: size-m(16);
+        line-height: size-m(23);
+        text-align: left;
+        color: #fff;
+      }
+    }
+    
     .order1 {
       background: none;
       padding-bottom: 0;
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      padding: size-m(40) 0 size-m(360) 0;
       background-size: cover;
       background-position: center center;
     }
@@ -249,7 +335,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg","room_type"];
 
 //中文對照
 const formDataRef = ref([
