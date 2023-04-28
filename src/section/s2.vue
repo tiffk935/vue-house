@@ -120,6 +120,7 @@
       font-size: size-m(22);
       line-height: size-m(32);
       margin-bottom: size-m(6);
+      white-space:nowrap;
       @media screen and (min-width:768px) {
         font-size: size(45);
         line-height: size(65);

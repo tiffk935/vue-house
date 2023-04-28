@@ -1,10 +1,10 @@
 <template>
   <section class="s1 text-white bg-[#AB8E77] relative">
-    <img class="style3 absolute hidden md:block" data-aos="zoom-in" data-aos-delay="0" src="@/section/s1/style3.png" />
-    <img class="style2 absolute" data-aos="zoom-in" data-aos-delay="200" src="@/section/s1/style2.png" />
-    <img class="style1 absolute" data-aos="zoom-in" data-aos-delay="400" src="@/section/s1/style1.png" />
+    <img class="style3 absolute hidden md:block" data-aos="zoom-in" data-aos-duration="3000" data-aos-delay="0" src="@/section/s1/style3.png" />
+    <img class="style2 absolute" data-aos="zoom-in" data-aos-delay="200" data-aos-duration="3000" src="@/section/s1/style2.png" />
+    <img class="style1 absolute" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="3000" src="@/section/s1/style1.png" />
     <img class="en absolute" src="@/section/s1/en.png" />
-    <img class="logo absolute" data-aos="zoom-in" data-aos-delay="600" src="@/section/s1/logo.svg" />
+    <img class="logo absolute" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000" src="@/section/s1/logo.svg" />
     <div class="tt absolute hidden md:block" data-aos="zoom-in" data-aos-delay="800">
       <div class="t1">隈の日本絕美藝術</div>
       <div class="t2">22-41 坪｜06-2602-777</div>
@@ -114,9 +114,10 @@
       font-size: size-m(27);
       line-height: size-m(39);
       letter-spacing: 0.04em;
+      text-align: left;
       @media screen and (min-width:768px) {
         font-weight: 700;
-        font-size: size(35);
+        font-size: size(34);
         line-height: size(51);
       }
     }

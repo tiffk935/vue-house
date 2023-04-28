@@ -41,6 +41,7 @@
     font-weight: 700;
     font-size: size-m(22);
     line-height: size-m(26);
+    white-space:nowrap;
     @media screen and (min-width:768px) {
       left: size(58.25);
       top: size(53.17);
@@ -69,7 +70,7 @@
     text-shadow: size-m(0) size-m(2) size-m(3) rgba(0, 0, 0, 0.8);
     @media screen and (min-width:768px) {
       left: size(10);
-      bottom: size(22);
+      bottom: size(10);
       font-size: size(15);
       line-height: size(18);
       text-shadow: size(0) size(2) size(3) rgba(0, 0, 0, 0.8);

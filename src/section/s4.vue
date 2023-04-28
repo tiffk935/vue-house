@@ -68,6 +68,7 @@
     font-size: size-m(22);
     line-height: size-m(32);
     color: #BD9562;
+    white-space:nowrap;
     @media screen and (min-width:768px) {
       width: auto;
       left: size(95);
@@ -125,7 +126,7 @@
     line-height: size-m(17);
     color: #fff;
     @media screen and (min-width:768px) {
-      bottom: size(14);
+      bottom: size(10);
       left: size(16);
       font-size: size(15);
       line-height: size(22);

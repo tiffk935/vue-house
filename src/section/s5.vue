@@ -42,6 +42,7 @@
     font-weight: 700;
     font-size: size-m(22);
     line-height: size-m(32);
+    white-space:nowrap;
     @media screen and (min-width:768px) {
       left: size(1038.58);
       top: size(113);
