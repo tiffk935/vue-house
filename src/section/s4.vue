@@ -10,6 +10,8 @@
       帶來朗闊棟距與視野，公園宅奇貨可居，<br />
       綠金價值等同生活品質。
     </div></div>
+    <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
+    <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
     <!--
     <div class="content-m absolute text-white md:hidden">
       推窗見綠、出門入園，<br />
