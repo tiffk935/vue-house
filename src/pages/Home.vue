@@ -14,13 +14,16 @@
     <h1 style="display:none;">德林哲里</h1>
     <S1 :smallScrollBar="smallScrollBarRef" />
     <S2 />
-    <S3 :setFsLightbox="setFsLightbox" />
+    <S3 />
     <S4 />
     <S5 />
     <S6 />
     <S7 />
-    <S8 />
+    <S8 :setFsLightbox="setFsLightbox" />
     <S9 />
+    <S10 />
+    <S11 />
+    <S12 />
     <Order :setModal="setModal" />
   </div>
 
@@ -155,7 +158,7 @@
   .close {
     width: size-m(30);
     height: size-m(30);
-    background-image: url(@/section/s3/close.svg);
+    background-image: url(@/section/s8/close.svg);
     background-repeat: no-repeat;
     background-size: size-m(25) auto;
     background-position: center center;
@@ -205,6 +208,9 @@ import S6 from "@/section/s6.vue"
 import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
+import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
+import S12 from "@/section/s12.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import Policy from "@/section/form/policy.vue"
@@ -215,12 +221,12 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import slide1_full from '@/section/s3/1.jpg';
-import slide2_full from '@/section/s3/2.jpg';
-import slide3_full from '@/section/s3/3.jpg';
-import slide4_full from '@/section/s3/4.jpg';
-import slide5_full from '@/section/s3/5.jpg';
-import slide6_full from '@/section/s3/6.jpg';
+import slide1_full from '@/section/s8/1.jpg';
+import slide2_full from '@/section/s8/2.jpg';
+import slide3_full from '@/section/s8/3.jpg';
+import slide4_full from '@/section/s8/4.jpg';
+import slide5_full from '@/section/s8/5.jpg';
+import slide6_full from '@/section/s8/6.jpg';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -309,20 +315,20 @@ onMounted(() => {
         });
       });
 
-      let s8TL = gsap.timeline({
+      let s4TL = gsap.timeline({
         scrollTrigger: {
           scroller: ".home",
-          trigger: document.querySelectorAll('.s8 .fade_s8')[0],
+          trigger: document.querySelectorAll('.s4 .fade_s4')[0],
           start: "top 85%",
           toggleActions: "play none none reverse",
         }
       });
 
-      s8TL
-        .from(document.querySelectorAll('.s8 .fade_s8')[0], { opacity: 0, yPercent: 50, duration: 0.6 }, 0)
-        .from(document.querySelectorAll('.s8 .fade_s8')[1], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.2)
-        .from(document.querySelectorAll('.s8 .fade_s8')[2], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.4)
-        .from(document.querySelectorAll('.s8 .fade_s8')[3], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.6)
+      s4TL
+        .from(document.querySelectorAll('.s4 .fade_s4')[0], { opacity: 0, yPercent: 50, duration: 0.6 }, 0)
+        .from(document.querySelectorAll('.s4 .fade_s4')[1], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.2)
+        .from(document.querySelectorAll('.s4 .fade_s4')[2], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.4)
+        .from(document.querySelectorAll('.s4 .fade_s4')[3], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.6)
       
       gsap.utils.toArray(".home .parallax").forEach(item => {
         gsap.set(item, {backgroundPosition: '50% 0%'});

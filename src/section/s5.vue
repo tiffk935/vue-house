@@ -1,18 +1,17 @@
 <template>
   <section class="s5 relative text-white">
-    <div class="p1 absolute parallax"></div>
-    <div class="p2 absolute parallax"></div>
-    <div class="title absolute fade">GREEN LIGHT OF<br />THE PARK</div>
-    <div class="content absolute">
-      <div class="fade">
-        <div class="t1">戶戶獨享三千坪社子公園，<br  />生活品質等同綠金價值。</div>
-        <div class="txt">社子地區以26平方公尺人均綠地比，居台北市所有行政區之冠，環島型河濱公園圍塑兩河文化之美， 9公里河岸綠意造就生態宜居住所。社子公園更為住戶帶來朗闊棟距視野，城市綠洲饒富興味，不僅引人入勝更陪伴家人的童年與老年</div>
+    <div class="viewbox" ref="viewbox">
+      <img ref="viewImg" src="@/section/s5/view.jpg" alt="" srcset="">
+      <div class="mask" v-bind:class="{ hide: swiped }">
+        左右滑動看全景
+        <img src="@/section/s5/finger.png" alt="" srcset="">
       </div>
-    </div>
-    <div class="leaf absolute">
-      <img class="w-full block" src="@/section/s2/frame.svg" />
-      <img class="window absolute" src="@/section/s2/leaf.gif" />
-      <img class="bird absolute" src="@/section/s5/bird.svg" />
+      <div class="content absolute">
+        <div class="fade w-full md:flex">
+          <div class="t1">轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
+          <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -22,74 +21,110 @@
 
 .s5 {
   width: 100%;
-  height: size-m(675);
+  height: size-m(817);
   font-family: 'Noto Serif TC';
-  margin-bottom: size-m(126);
   z-index: 1;
   @media screen and (min-width:768px) {
-    height: size(1080);
-    margin-bottom: size(0);
-    background: linear-gradient(250deg, #004B47 5.42%, #11A196 127.44%);
+    height: size(953);
+    background: linear-gradient(247deg, #004B47 -32.2%, #11A196 102.54%);
   }
 
-  .p1 {
-    width: size-m(210);
-    height: size-m(247.34);
-    top: size-m(100.07);
-    left: size-m(42.5);
-    background-image: url(@/section/s5/1.jpg);
-    background-size: 100% auto;
-    border-radius: 48% 48% 0px 0px;
-    @media screen and (min-width:768px) {
-      width: size(497);
-      height: size(585);
-      top: size(217.12);
-      left: size(972.79);
+  .viewbox {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #eee;
+    img {
+      height: 100%;
+      max-width: unset;
+    }
+    .mask {
+      display: none;
     }
   }
-
-  .p2 {
-    width: size-m(147);
-    height: size-m(168.6);
-    top: size-m(248.64);
-    left: size-m(185.5);
-    background-image: url(@/section/s5/2.jpg);
-    background-size: 100% auto;
-    // background-position: 0 0;
-    border-radius: 48% 48% 0px 0px;
-    @media screen and (min-width:768px) {
-      width: size(383);
-      height: size(439);
-      top: size(510.87);
-      left: size(1378.69);
-    }
+  @media screen and (max-width: 767px) {
+    .viewbox {
+      height: 100%;
+      overflow: hidden;
+      img {
+        height: 100%;
+      }
+      .mask {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        // z-index: 10;
+        display: flex;
+        justify-content: center;
+    flex-direction:column;
+        align-items: center;
+        pointer-events: none;
+        opacity: 1;
+        transition: all 1s;
+        background: rgba(0, 114, 130, 0.5);
+        
+        img {
+          height: 11vw;
+          position: relative;
+          z-index: 2;
+          margin: 3vw 0 0 15.5vw;
+          transform: translate(-13vw,-5%)rotate(-28deg);
+    animation: img 2s linear infinite alternate;
+        }
+@keyframes img {
+  to {
+    transform:translateX(0);
   }
-
-  .title {
-    top: size-m(407.66);
-    left: size-m(100.18);
-    font-size: size-m(13);
-    line-height: size-m(18);
-    color: #5CBD9E;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    @media screen and (min-width:768px) {
-      top: size(922.89);
-      left: size(1110);
-      font-size: size(34);
-      line-height: size(48);
+}
+        &::before{
+          content: "";
+          display: block;
+          position: absolute;
+          background: #FFF9;
+          top: 49.5%;
+          width: 76%;
+          height: 1px;
+        }
+        &::after{
+          content: "";
+          display: block;
+          position: absolute;
+          background: #FFF;
+          top: calc(49.6% - 1.9vw);
+          margin: 0 0 0 16vw;
+          width: 3.8vw;
+          height: 3.8vw;
+          border-radius: 50%;
+          transform:translateX(-15.5vw);
+          animation: img 2s linear infinite alternate;
+        }
+        &.hide {
+          opacity: 0;
+        }
+      }
     }
   }
 
   .content {
     width: size-m(290);
-    top: size-m(478.66);
+    top: size-m(41.79);
     left: size-m(42.5);
+    pointer-events: none;
     text-align: justify;
     @media screen and (min-width:768px) {
-      width: size(589.06);
-      top: size(494);
-      left: size(240);
+      width: size(1400.06);
+      top: size(116);
+      left: size(235);
+      display: flex;
+    }
+
+    .fade {
+      @media screen and (min-width:768px) {
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     .t1 {
@@ -112,50 +147,56 @@
     letter-spacing: 0em;
     font-family: 'Noto sans TC';
       @media screen and (min-width:768px) {
+        width: size(700);
         font-size: size(19);
-        margin-bottom: size(70);
+        margin-bottom: size(30);
       font-weight: 200;
       letter-spacing: .1em;
         line-height:1.7;
       }
     }
   }
-
-  .leaf {
-    width: size-m(88.25);
-    top: size-m(-20.88);
-    left: size-m(223.29);
-    @media screen and (min-width:768px) {
-      width: size(248.17);
-      top: size(-47.98);
-      left: size(1509.81);
-    }
-    .w-full{position: relative;z-index: 2;}
-
-    .window {
-      width: 23vw;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      filter: blur(2px);
-      @media screen and (min-width:768px) {
-        width: 12.7vw;
-      }
-    }
-
-    .bird {
-      width: size-m(51.79);
-      top: size-m(40.69);
-      left: size-m(29.54);
-      @media screen and (min-width:768px) {
-        width: size(173.05);
-        top: size(115.51);
-        left: size(83.53);
-      }
-    }
-  }
 }
+
 </style>
 
 <script setup>
+import BScroll from '@better-scroll/core'
+import { getCurrentInstance, onMounted, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const viewbox = ref()
+const viewImg = ref()
+const swiped = ref(false)
+const offsetRatio = 1.705; //調整此值設定X軸位置偏移參數
+onMounted(() => {
+  if(globals.$isMobile()){
+    viewImg.value.addEventListener('load', () => {
+      let scroll = new BScroll(viewbox.value, {
+        probeType: 2,
+        scrollX: true,
+        scrollY: true,
+        disableTouch: false,
+        disableMouse: false,
+        bindToWrapper: true,
+        eventPassthrough: "vertical",
+        bounce: false,
+      })
+      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 0);
+      setTimeout(() => {
+        scroll.on("scroll", () => {
+          swiped.value = true
+        });
+      }, 1000);
+    })
+  }
+})
+</script>
+
+<script>
+// export default {
+//   mounted() {
+//     // Use in js
+//     console.log(this.$isMobile());
+//   }
+// };
 </script>

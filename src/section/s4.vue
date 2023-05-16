@@ -1,139 +1,271 @@
 <template>
-  <section class="s4 relative parallax">
-    <div class="photo absolute md:hidden"></div>
-
-    <div class="content absolute text-white">
-    <div class="t1 text-white fade">推窗見綠、出門入園，<br />豈止珍稀而已。</div>
-    <div class="t2 text-white fade">
-      面積總計逾一公頃的社子公園，為社子<br />
-      內最大綠地公園，也為「德林哲里」住戶<br />
-      帶來朗闊棟距與視野，公園宅奇貨可居，<br />
-      綠金價值等同生活品質。
-    </div></div>
-    <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
-    <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
-    <!--
-    <div class="content-m absolute text-white md:hidden">
-      推窗見綠、出門入園，<br />
-      豈止珍稀而已。<br />
-      面積總計逾一公頃的社子公園，為社子島<br />
-      內最大綠地公園，也為「德林哲里」住戶<br />
-      帶來朗闊棟距與視野，公園宅奇貨可居，<br />
-      綠金價值等同生活品質。
+  <section class="s4 relative text-white">
+    <div class="bg absolute"></div>
+    <div class="p1 absolute parallax"></div>
+    <div class="p2 absolute parallax"></div>
+    <div class="title absolute fade">NATURE OF<br />GREEN ISLAND</div>
+    <div class="content absolute">
+      <div class="fade">
+        <div class="t1">大北區核心地利，<br class="md:hidden">台北的未來在您手中。</div>
+        <div class="txt">台北未科技產業廊帶，包含南港生技聚落、內科2.0計劃、北投士林科技園區、生態社子島及圓山新創聚落，其中生態社子島與北士科園區，成為台北市未來發展的核心命題；可開發面積約118公頃的社子島即將轉身人文永續、親水共生的明日聚落，並於2022年底完成公告徵收，台北未來50年就看這裡。</div>
+      </div>
     </div>
-    <div class="content absolute text-white hidden md:block fade"></div>
-    <div class="t1 absolute text-white hidden md:block fade">推窗見綠、出門入園，<br />豈止珍稀而已。</div>
-    <div class="t2 absolute text-white hidden md:block fade">
-      面積總計逾一公頃的社子公園，為社子島<br />
-      內最大綠地公園，也為「德林哲里」住戶<br />
-      帶來朗闊棟距與視野，公園宅奇貨可居，<br />
-      綠金價值等同生活品質。
-    </div>  -->
+    
+    <div class="grid">
+      <div class="fade_s4">
+        <div class="t1">︳北投士林科技園區</div>
+        <div class="txt">親水生態綠軸貫穿全島，輕軌與捷運北環段交通格局展開</div>
+      </div>
+      <div class="fade_s4">
+        <div class="t1">︳西區門戶計畫</div>
+        <div class="txt">士電、新紡、士紙與捷運TOD開發案，翻轉北區計劃大未來</div>
+      </div>
+      <div class="fade_s4">
+        <div class="t1">︳士林再生計畫</div>
+        <div class="txt">士電、新紡、士紙與捷運TOD開發案，翻轉北區計劃大未來</div>
+      </div>
+      <div class="fade_s4">
+        <div class="t1">︳生態社子島計劃</div>
+        <div class="txt">親水生態綠軸貫穿全島，輕軌與捷運北環段交通格局展開</div>
+      </div>
+    </div>
+
+    <div class="leaf absolute">
+      <img class="w-full block" src="@/section/s2/frame.svg" />
+      <img class="window absolute" src="@/section/s2/leaf.gif" />
+      <img class="bird1 absolute" src="@/section/s4/bird1.svg" />
+      <img class="bird2 absolute" src="@/section/s4/bird2.svg" />
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s4 {
   width: 100%;
-  height: size-m(860);
-  z-index: 1;
-  background-image: url(@/section/s4/bg-m.jpg);
-  background-size: cover;
-  background-position: 50% 50%;
+  height: size-m(986);
   font-family: 'Noto Serif TC';
-  overflow: hidden;
+  z-index: 1;
+  background: linear-gradient(335.1deg, #114C48 21.54%, #1F968B 82.78%);
   @media screen and (min-width:768px) {
     height: size(1080);
-    background-image: url(@/section/s4/bg.jpg);
+    background: linear-gradient(284.83deg, #004B47 -0.68%, #11A196 97.62%);
   }
 
-
-
-.bg01{
-  top:0;
-  width:100%;
-  height: 100%;
-  object-fit: cover;
-  background-size: 100% auto;
-  mix-blend-mode: overlay;
-  opacity: 0.6;
-}
-.bg02{
-  top:0;
-  width:100%;
-  height: 100%;
-  object-fit: cover;
-  background-size: 100% auto;  
-  mix-blend-mode: screen;
-  opacity: 0.5;
-  filter: blur(7.5px);
-}  
-  .photo {
+  .bg {
     width: 100%;
-    height: size-m(315);
-    top: size-m(135);
+    height: 100%;
+    top: 0;
     left: 0;
-    background-image: url(@/section/s4/photo.jpg);
-  background-size: cover;
-  background-position: center;
+    background: linear-gradient(180deg, rgba(0, 75, 71, 0) 0%, #004B47 100%);
+    @media screen and (min-width:768px) {
+      background: linear-gradient(180deg, #11A196 -39.64%, #004B47 95.77%);
+    }
+  }
+
+  .p1 {
+    width: size-m(210);
+    height: size-m(247.34);
+    top: size-m(55);
+    left: size-m(42.5);
+    background-image: url(@/section/s4/1.jpg);
+    background-size: 100% auto;
+    // background-position: 0 100%;
+    border-radius: 48% 48% 0px 0px;
+    @media screen and (min-width:768px) {
+      width: size(497);
+      height: size(585);
+      top: size(203);
+      left: size(973);
+    }
+  }
+
+  .p2 {
+    width: size-m(147);
+    height: size-m(168.49);
+    top: size-m(202.94);
+    left: size-m(185.5);
+    background-image: url(@/section/s4/2.jpg);
+    background-size: 100% auto;
+    // background-position: 0 0;
+    border-radius: 48% 48% 0px 0px;
+    @media screen and (min-width:768px) {
+      width: size(383);
+      height: size(439);
+      top: size(478);
+      left: size(1381 );
+    }
+  }
+
+  .title {
+    top: size-m(350.8);
+    left: size-m(110.18);
+    font-size: size-m(13);
+    line-height: size-m(18);
+    color: #5CBD9E;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    @media screen and (min-width:768px) {
+      top: size(900);
+      left: size(1167);
+      font-size: size(34);
+      line-height: size(48);
+    }
   }
 
   .content {
-    // top: size-m(509);
-    top: size-m(450);
-    left: size-m(0);
-    width: 100%;
-     // width: size-m(145);
-    display:flex;
-    height: size-m(410);
-    justify-content:center;
-    align-items:center;
-    // opacity: 0.5;
-    flex-direction:row-reverse;
-    gap:size-m(12);
-
+    width: size-m(290);
+    top: size-m(420.09);
+    left: size-m(42.5);
+    text-align: justify;
     @media screen and (min-width:768px) {
-      top: size(0);
-      left: size(1614.67);
-      width: size(209.31);
-      height: size(898.5);
-      background: linear-gradient(0deg, rgba(17, 161, 150, .7) -11.37%, rgba(0, 75, 71, 0.7) 99.89%);
-      gap:size(36);
-    flex-direction:column;
+      width: size(630);
+      top: size(304);
+      left: size(202);
     }
-  }
-  .t1 {
-    font-size: size-m(19);
-    line-height: 1.8;
-    font-weight: 500;
-    writing-mode: vertical-rl;
-    margin:auto 0;
-    padding: 0 0 5.6em;
-    white-space: nowrap;
-    @media screen and (min-width:768px) {
-      font-size: size(33);
-      line-height: 1.4;
-      margin:0 auto;
-    padding: 0;
-    }
-  }
 
-  .t2 {
-    font-size: size-m(15);
-    line-height: 1.8;
+    .t1 {
+      font-size: size-m(21);
+      line-height: 1.34;
+      font-weight: 700;
+      margin-bottom: size-m(9.5);
+      letter-spacing: .03em;
+      @media screen and (min-width:768px) {
+        font-size: size(33);
+        margin-bottom: size(26.5);
+        letter-spacing: .03em;
+      }
+    }
+
+    .txt {
+      font-size: size-m(15);
+      line-height:1.5;
+      margin-bottom: size-m(24.5);
       font-weight: 300;
-    letter-spacing: .1em;
-    writing-mode: vertical-rl;
-    font-family: 'Noto sans TC';
-    white-space: nowrap;
-      margin:auto 0;
+      letter-spacing: 0em;
+      font-family: 'Noto sans TC';
+      @media screen and (min-width:768px) {
+        font-size: size(19);
+        margin-bottom: size(70);
+        font-weight: 200;
+        letter-spacing: .1em;
+        line-height:1.7;
+      }
+    }
+  }
+
+  .grid {
+    .fade_s4 {
+      position: absolute;
+      width: size-m(130);
+      top: size-m(642.33 + 60);
+      left: size-m(42.5);
+      @media screen and (min-width:768px) {
+        width: size(271);
+        top: size(615);
+        left: size(202);
+      }
+
+      .t1 {
+        font-size: size-m(16);
+        line-height: size-m(19);
+        font-weight: 700;
+        margin-bottom: size-m(9);
+        letter-spacing: .03em;
+        @media screen and (min-width:768px) {
+          font-size: size(27);
+          line-height: size(34);
+          margin-bottom: size(10);
+        }
+      }
+
+      .txt {
+        font-size: size-m(13);
+        line-height:1.5;
+        font-weight: 300;
+        text-align: justify;
+        letter-spacing: 0em;
+        font-family: 'Noto sans TC';
+        @media screen and (min-width:768px) {
+          font-size: size(17);
+          font-weight: 200;
+          letter-spacing: .1em;
+          line-height:1.7;
+        }
+      }
+
+      &:nth-child(2) {
+        top: size-m(642.33 + 60);
+        left: size-m(202.5);
+        @media screen and (min-width:768px) {
+          top: size(615);
+          left: size(536);
+        }
+      }
+
+      &:nth-child(3) {
+        top: size-m(769.33 + 60);
+        left: size-m(42.5);
+        @media screen and (min-width:768px) {
+          top: size(782);
+          left: size(202);
+        }
+      }
+
+      &:nth-child(4) {
+        top: size-m(769.33 + 60);
+        left: size-m(202.5);
+        @media screen and (min-width:768px) {
+          top: size(782);
+          left: size(536);
+        }
+      }
+    }
+  }
+
+  .leaf {
+    width: size-m(88.25);
+    top: size-m(-71.68);
+    left: size-m(221.06);
     @media screen and (min-width:768px) {
-      font-size: size(19);
-      line-height: 1.7;
-      font-weight: 200;
-      letter-spacing: .2em;
-      margin:0 auto 1.6em auto;
+      width: size(248.17);
+      top: size(-151);
+      left: size(1536);
+    }
+
+    .w-full{position: relative;z-index: 2;}
+    .window {
+      width: 23vw;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      filter: blur(2px);
+      @media screen and (min-width:768px) {
+        width: 12.7vw;
+      }
+    }
+
+    .bird1 {
+      width: size-m(51.79);
+      top: size-m(71.65);
+      left: size-m(-11.64);
+      @media screen and (min-width:768px) {
+        width: size(145.63);
+        top: size(199.75);
+        left: size(-32.27);
+      }
+    }
+
+    .bird2 {
+      width: size-m(51.79);
+      top: size-m(71.65);
+      left: size-m(50.09);
+      @media screen and (min-width:768px) {
+        width: size(145.63);
+        top: size(199.75);
+        left: size(141.3);
+      }
     }
   }
 }
