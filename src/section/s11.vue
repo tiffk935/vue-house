@@ -37,6 +37,10 @@
           <img class="w-full block" src="@/section/s11/6.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
+        <swiper-slide>
+          <img class="w-full block" src="@/section/s11/7.jpg" />
+          <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
+        </swiper-slide>
       </swiper>
     </div>
     <div class="content absolute">

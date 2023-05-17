@@ -318,7 +318,7 @@
       margin-bottom: size-m(9);
       color: #5CBD9E;
       @media screen and (min-width:768px) {
-        font-size: size(48);
+        font-size: size(38);
         line-height: size(59);
         margin-bottom: size(9);
       }
@@ -331,7 +331,7 @@
       margin-bottom: size-m(9.5);
       letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(33);
+        font-size: size(28);
         margin-bottom: size(26.5);
       }
     }

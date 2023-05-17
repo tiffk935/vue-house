@@ -88,7 +88,7 @@
       left: size(1614.67);
       width: size(220);
       background: linear-gradient(0deg, rgba(17, 161, 150, 0.3) -11.37%, #004B47 99.89%);
-      gap: size(36);
+      gap: size(48);
       flex-direction: column;
     }
   }
@@ -115,11 +115,11 @@
     white-space: nowrap;
     margin: auto 0;
     @media screen and (min-width:768px) {
-      font-size: size(19);
+      font-size: size(17);
       line-height: 1.7;
       font-weight: 200;
       letter-spacing: .2em;
-      margin:0 auto 1.6em auto;
+      margin:0 auto 5em auto;
     }
   }
 }
