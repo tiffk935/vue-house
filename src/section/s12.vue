@@ -334,6 +334,7 @@
     &.active {
       background: #5CBD9E;
       opacity: 1;
+      z-index: 2;
     }
   }
 
