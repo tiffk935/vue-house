@@ -40,7 +40,7 @@
         </swiper-slide>
         <swiper-slide>
           <div class="p3 parallax">
-            <div class="txt">呂佳隆 建築師</div>
+            <div class="txt">徐世吉 結構技師</div>
             <div class="mask">
               <!-- <img class="zoom-icon absolute" src="@/section/s10/zoom-icon.svg" /> -->
             </div>
@@ -325,7 +325,7 @@
     }
 
     .t1 {
-      font-size: size-m(21);
+      font-size: size-m(14);
       line-height:1.34;
       font-weight: 700;
       margin-bottom: size-m(9.5);

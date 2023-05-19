@@ -48,10 +48,11 @@
     height: size-m(440);
     top: size-m(87);
     left: 0;
-    background-image: url(@/section/s9/photo.jpg);
+    background-image: url(@/section/s9/photo_m.jpg);
     background-size: cover;
     background-position: center;
     @media screen and (min-width:768px) {
+    background-image: url(@/section/s9/photo.jpg);
       height: size(1080);
       top: 0;
     }

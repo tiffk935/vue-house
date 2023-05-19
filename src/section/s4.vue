@@ -168,7 +168,7 @@
       }
 
       .t1 {
-        font-size: size-m(16);
+        font-size: size-m(13);
         line-height: size-m(19);
         font-weight: 700;
         margin-bottom: size-m(9);
@@ -181,7 +181,7 @@
       }
 
       .txt {
-        font-size: size-m(13);
+        font-size: size-m(12);
         line-height:1.5;
         font-weight: 300;
         text-align: justify;

@@ -314,6 +314,9 @@
     letter-spacing: 0.1em;
     color: #FFFFFF;
     cursor: pointer;
+    padding-bottom: size-m(5);
+      padding-left: size-m(5);
+    
     @media screen and (min-width:768px) {
       top: size(900);
       left: size(1534);
@@ -321,6 +324,8 @@
       height: size(145);
       border: size(1.88) solid #CCE3D7;
       font-size: size(70);
+      padding-bottom: size(10);
+      padding-left: size(10);
     }
 
     span {
