@@ -120,7 +120,7 @@
       font-size: size(17);
       line-height: 1.7;
       font-weight: 200;
-      letter-spacing: .2em;
+      letter-spacing: .1em;
       margin:0 auto 5em auto;
     }
   }
