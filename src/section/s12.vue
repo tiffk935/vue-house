@@ -10,29 +10,29 @@
             :navigation="true"
             :loop="true"
             :autoplay="{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }"
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-1.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/2-1.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-2.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/2-2.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-3.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/2-3.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-4.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/2-4.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-5.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/2-5.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
           </swiper>
@@ -59,29 +59,29 @@
             :navigation="true"
             :loop="true"
             :autoplay="{
-              delay: 3000,
+              delay: 5000,
               disableOnInteraction: false,
             }"
             :modules="modules"
           >
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-1.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/3-1.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-2.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/3-2.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-3.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/3-3.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-4.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/3-4.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
             <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-5.jpg" />
+              <img class="w-full block my-swiper-slide" src="@/section/s12/3-5.jpg" />
               <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
             </swiper-slide>
           </swiper>
@@ -123,7 +123,7 @@
 
   .v-enter-active,
   .v-leave-active {
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
   }
 
   .v-enter-from,
@@ -140,6 +140,11 @@
       top: size(0);
       width: size(1920);
     }
+
+    .swiper-wrapper {
+    transition: transform 1s  !important; /* 調整這個數值來改變滑動速度 */
+  }
+
 
     img {
       height: size-m(328);
@@ -209,6 +214,8 @@
       width: auto;
       @media screen and (min-width:768px) {
         right: size(27);
+        top: size(20);
+        right: size(20);
       }
 
       .swiper-pagination-bullet {
@@ -219,9 +226,9 @@
         border: size-m(1) solid #fff;
         opacity: 1;
         @media screen and (min-width:768px) {
-          width: size(16);
-          height: size(16);
-          margin: 0 size(7);
+          width: size(9);
+          height: size(9);
+          margin: 0 size(4);
           border: size(1) solid #fff;
         }
 
