@@ -120,7 +120,7 @@
     @media screen and (min-width:768px) {
       width: size(209.5);
       height: size(45.91);
-      top:calc(60% + (809 - 1080 * .6) * 100vw /1920);
+      top:calc(60% + (800 - 1080 * .6) * 100vw /1920);
       left: size(855.25);
       font-size: size(27);
       border: size(1) solid #fff;
@@ -160,7 +160,7 @@
 
   .t5 {
     @media screen and (min-width:768px) {
-      top:calc(70% + (905 - 1080 * .7) * 100vw / 1920);
+      top:calc(70% + (895 - 1080 * .7) * 100vw / 1920);
       left: size(513);
       font-size: size(29);
       line-height: size(34.8);
@@ -178,7 +178,7 @@
     filter: drop-shadow(0 0 size-m(10) #1A2E37);
     @media screen and (min-width:768px) {
       width: size(870);
-      top:calc(70% + (953 - 1080 * .7) * 100vw / 1920);
+      top:calc(70% + (943 - 1080 * .7) * 100vw / 1920);
       left: size(513);
     filter: drop-shadow(0 0 size(20) #1A2E37);
     }
