@@ -197,10 +197,10 @@
 
       &:nth-child(2) {
         top: size-m(642.33 + 60);
-        left: size-m(202.5);
+        left: size-m(201.5);
         @media screen and (min-width:768px) {
           top: size(615);
-          left: size(536);
+          left: size(558);
         }
       }
 
@@ -215,10 +215,10 @@
 
       &:nth-child(4) {
         top: size-m(769.33 + 60);
-        left: size-m(202.5);
+        left: size-m(201.5);
         @media screen and (min-width:768px) {
           top: size(782);
-          left: size(536);
+          left: size(558);
         }
       }
     }
