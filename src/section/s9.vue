@@ -115,6 +115,7 @@
     writing-mode: vertical-rl;
     white-space: nowrap;
     margin: auto 0;
+    font-family: 'Noto sans TC';
     @media screen and (min-width:768px) {
       font-size: size(17);
       line-height: 1.7;

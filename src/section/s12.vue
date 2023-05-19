@@ -254,11 +254,11 @@
       font-family: 'Noto Serif TC';
       font-size: size-m(21);
       line-height:1.34;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: size-m(9.5);
       letter-spacing: .03em;
       @media screen and (min-width:768px) {
-        font-size: size(33);
+        font-size: size(30);
         line-height: 1.4;
         margin: size(48.43) auto 0 auto;
         padding: 0;
@@ -270,7 +270,7 @@
         display: block;
         font-size: size-m(23);
         @media screen and (min-width:768px) {
-          font-size: size(36);
+          font-size: size(30);
         }
       }
     }
@@ -286,8 +286,8 @@
         font-size: size(19);
         line-height: 1.7;
         font-weight: 200;
-        letter-spacing: .2em;
-        margin:0 auto 1.6em auto;
+        letter-spacing: .1em;
+        margin:0 auto 6em auto;
         writing-mode: vertical-rl;
         white-space: nowrap;
       }

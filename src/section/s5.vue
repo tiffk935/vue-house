@@ -8,7 +8,7 @@
       </div>
       <div class="content absolute">
         <div class="fade w-full md:flex">
-          <div class="t1">轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
+          <div class="t1">社子未來轉身明日聚落，<br class="md:hidden" />大北方計劃中央點。</div>
           <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
         </div>
       </div>

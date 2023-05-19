@@ -5,7 +5,7 @@
     <div class="content absolute text-white">
     <div class="t1 text-white fade">推窗見綠、出門入園，<br />豈止珍稀而已。</div>
     <div class="t2 text-white fade">
-      面積總計逾一公頃的社子公園，為社子島<br />
+      面積總計逾一公頃的社子公園，為社子<br />
       內最大綠地公園，也為「德林哲里」住戶<br />
       帶來朗闊棟距與視野，公園宅奇貨可居，<br />
       綠金價值等同生活品質。
@@ -109,6 +109,7 @@
     writing-mode: vertical-rl;
     white-space: nowrap;
     margin: auto 0;
+    font-family: 'Noto sans TC';
     @media screen and (min-width:768px) {
       font-size: size(19);
       line-height: 1.7;

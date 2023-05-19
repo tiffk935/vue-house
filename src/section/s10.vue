@@ -72,7 +72,7 @@
     <Transition>
       <div v-if="realIndex === 1" class="content absolute fade">
         <div class="title">公設景觀 <br class="md:hidden">如榆建築設計事務所</div>
-        <div class="t1">如榆建築設計事務所</div>
+        <div class="t1">國際設計獎項肯定，跨域整合建築智識。</div>
         <div class="txt">
           如榆建築設計事務所由建築、室內、景觀與藝術等四位來自不同領域的設計師交融而成，以驚人的創作力締造多處充滿創意的佳績，經歷芝加哥、中國等地事務所的多年琢磨，於2009年在台北及上海成立「BASS Design如榆建築及設計事務所」，期許為都市創造更理想的環境品質。陳昫吟總監作品榮獲德國柏林設計獎、英國倫敦設計獎、美國IDA獎項、義大利Design Award等殊榮，凝煉人文藝術與空間美學，展演溫雅格調形塑嶄新建築風情。<br>
           <br>

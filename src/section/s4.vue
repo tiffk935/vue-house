@@ -14,11 +14,11 @@
     <div class="grid">
       <div class="fade_s4">
         <div class="t1">︳北投士林科技園區</div>
-        <div class="txt">親水生態綠軸貫穿全島，輕軌與捷運北環段交通格局展開</div>
+        <div class="txt">結合頂尖智慧醫療與科技資源，目標年產值10兆元</div>
       </div>
       <div class="fade_s4">
         <div class="t1">︳西區門戶計畫</div>
-        <div class="txt">士電、新紡、士紙與捷運TOD開發案，翻轉北區計劃大未來</div>
+        <div class="txt">台北雙子星已開工，台北車站E1、E2公辦都更總銷約750億</div>
       </div>
       <div class="fade_s4">
         <div class="t1">︳士林再生計畫</div>
