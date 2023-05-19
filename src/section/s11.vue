@@ -7,6 +7,7 @@
         }"
         :navigation="true"
         :loop="true"
+        :speed="1000"
         :autoplay="{
           delay: 5000,
           disableOnInteraction: false,
@@ -14,31 +15,31 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/1.jpg" />
+          <img class="w-full block " src="@/section/s11/1.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/2.jpg" />
+          <img class="w-full block" src="@/section/s11/2.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/3.jpg" />
+          <img class="w-full" src="@/section/s11/3.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/4.jpg" />
+          <img class="w-full" src="@/section/s11/4.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/5.jpg" />
+          <img class="w-full" src="@/section/s11/5.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/6.jpg" />
+          <img class="w-full" src="@/section/s11/6.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block my-swiper-slide" src="@/section/s11/7.jpg" />
+          <img class="w-full" src="@/section/s11/7.jpg" />
           <div class="txt">3D透視參考表現，其中之傢俱、飾品、畫作與植栽<br class="md:hidden">為情境表現，建設公司保有修正之權利。</div>
         </swiper-slide>
       </swiper>
@@ -77,9 +78,7 @@
       width: size(1091);
     }
 
-    .swiper-wrapper {
-    transition: transform 1s !important; /* 調整這個數值來改變滑動速度 */
-  }
+
 
     img {
       height: size-m(328);
