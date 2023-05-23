@@ -1,13 +1,18 @@
   <template>
   <div class="order relative bg-[#FFDFE3] text-center">
+    <img class="logo absolute hidden md:block" src="@/section/form/logo.svg" alt="蒔築" srcset="" />
+    <img class="logo absolute md:hidden" src="@/section/form/logo-m.svg" alt="蒔築" srcset="" />
+    <img class="style1 absolute" src="@/section/form/style1.svg" alt="蒔築" srcset="" />
+    <img class="style2 absolute hidden md:block" src="@/section/form/style2.svg" alt="蒔築" srcset="" />
     <div class="order1">
-      <div class="order2">
+      <div class="order2 relative">
+        <img class="style2 absolute block md:hidden" src="@/section/form/style2.svg" alt="蒔築" srcset="" />
         <!-- Title -->
         <div class="order-title text-center text-white">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="蒔築" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="蒔築" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -16,12 +21,12 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
               <option value="透天">透天</option>
-            </select>
+            </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :value="city.value">
@@ -47,7 +52,7 @@
             class="checkbox bg-white rounded-md" />
           <p>
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#FFF100] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button text-[#7EAA46] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <Policy />
@@ -57,7 +62,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#FFF100] text-[#595857] hover:text-white rounded-full" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#7EAA46] text-white rounded-full" @click="send()">
           {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
@@ -79,24 +84,44 @@
 
 .order {
   width: 100%;
+  background-color: #4B6730;
   // padding-top: size(115);
 
+  .logo {
+    width: size(1611.77);
+    left: size(129);
+    top: size(102);
+  }
+
+  .style1 {
+    width: size(1405);
+    left: size(1046);
+    top: size(196);
+  }
+
+  .style2 {
+    width: size(567.68);
+    left: size(0);
+    top: size(612);
+  }
+
   .order1 {
-    background-color: #D9374B;
-    background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
+    position: relative;
   }
 
   .order2 {
-    padding: size(115) 0 size(73) 0;
+    padding: size(526) 0 size(58) 0;
   }
 
   .order-title {
     font-size: size(43);
     font-weight: 500;
-    margin-bottom: size(45);
+    margin: 0 auto size(45) auto;
+    background: #364724;
+    width: size(920);
   }
 
   .z-10 {
@@ -113,7 +138,7 @@
 
   .form {
     width: size(920);
-    height: 300px;
+    height: 240px;
     gap: size(80);
     margin-bottom: size(50);
 
@@ -160,15 +185,33 @@
     // padding-top: size-m(40);
     margin-top: size-m(0);
 
+    .logo {
+      width: size-m(320);
+      left: size-m(26);
+      top: size-m(32);
+    }
+
+    .style1 {
+      width: size-m(592.02);
+      left: size-m(8);
+      top: size-m(207);
+      max-width: none;
+    }
+
+    .style2 {
+      width: size-m(325);
+      left: size-m(-6);
+      top: auto;
+      bottom: size-m(15);
+    }
+
     .order1 {
       background: none;
       padding-bottom: 0;
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      background-color: #D9374B;
-      background-image: url(@/section/form/bg-m.png);
+      padding: size-m(488) 0 size-m(240) 0;
       background-size: cover;
       background-position: center center;
     }
@@ -177,6 +220,7 @@
       font-size: size-m(29);
       font-weight: 500;
       margin-bottom: size-m(20);
+      background: none;
     }
 
     .order-title-img {
@@ -249,7 +293,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg"];
+const bypass = ["msg", "room_type"];
 
 //中文對照
 const formDataRef = ref([

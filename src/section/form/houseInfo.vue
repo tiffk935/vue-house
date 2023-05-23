@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#D9374B] text-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#4B6730] text-white">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
@@ -16,7 +16,7 @@
     </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.png" alt="戀JIA" srcset=""></a>
+                src="@/section/form/footerlogo.png" alt="蒔築" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
     </div>
 </template>

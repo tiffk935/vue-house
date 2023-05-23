@@ -1,4 +1,4 @@
-const caseName = "戀JIA"
+const caseName = "蒔築"
 
 export default {
     meta: {
@@ -6,20 +6,20 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "桃園市大園區大觀路595號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.1103474936776!2d121.18124339999999!3d25.064248799999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346820af94ef7b67%3A0x11134a66fcb2bab3!2zMzM35qGD5ZyS5biC5aSn5ZyS5Y2A5aSn6KeA6LevNTk16Jmf!5e0!3m2!1szh-TW!2stw!4v1658754082639!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/eamn142jKNVssys97",
-    phone: "03-3852333",
-    fbLink: "https://www.facebook.com/107771505357267/",
-    fbMessage: "https://m.me/107771505357267/",
+    address: "宜蘭縣冬山鄉梅花路802號對面",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d906.2837257866705!2d121.77094439999999!3d24.687888899999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDQxJzE2LjQiTiAxMjHCsDQ2JzE1LjQiRQ!5e0!3m2!1szh-TW!2stw!4v1684849632459!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/2hL4QH53tuDnJAa79",
+    phone: "(03)9563-888",
+    fbLink: "https://www.facebook.com/IlanCSdeveloper/",
+    fbMessage: "https://m.me/IlanCSdeveloper/",
     caseName: caseName,
     houseInfos: [
-        ["建設團隊", "威泰國際股份有限公司"],
-        ["行銷團隊", "全紘國事業有限公司"],
-        ["坪數規劃", "華厦:19-31 透天:72-88"],
-        ["聯絡電話", "03-385-2333"],
-        ["公設比例", "約22%"],
-        ["接待中心", "桃園市大園區大觀路595號"],
+        ["投資興建", "長勝國際建設有限公司"],
+        ["格局規劃", "60-67坪‧雙主臥‧四套房"],
+        ["建築設計", "張宗祺建築師事務所 / 陳宜宏設計工作室"],
+        ["超級優勢", "太陽能綠電‧電梯別墅‧社區公園"],
+        ["工程營造", "宜錦營造有限公司"],
+        ["建照號碼", "(112)(1)(3)建管建字第0004~00056號"],
     ],
     gtmCode: ["GTM-527G33V"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
@@ -32,22 +32,22 @@ export default {
     },
     navList: [
         {
-            name: "JIA 地段",
+            name: "十 樂",
             target: ".s2",
             offset: "",
         },
         {
-            name: "JIA 品牌",
-            target: ".s4",
+            name: "頂 天",
+            target: ".s3",
             offset: "",
         },
         {
-            name: "JIA 美學",
+            name: "自 由",
             target: ".s6",
             offset: "",
         },
         {
-            name: "愛・JIA 人",
+            name: "預約鑑賞",
             target: ".order",
             offset: "",
         },
