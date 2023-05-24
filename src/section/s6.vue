@@ -78,7 +78,7 @@
     color: #fff;
     @media screen and (min-width:768px) {
       left: size(1450);
-      top: size(231);
+      top: size(211);
       font-size: size(48);
       line-height: size(56);
     }
@@ -125,7 +125,7 @@
     @media screen and (min-width:768px) {
       width: size(386);
       left: size(1426);
-      top: size(308);
+      top: size(280);
       font-size: size(16);
       line-height: size(27);
     }
@@ -221,9 +221,10 @@
     z-index: 1;
     @media screen and (min-width:768px) {
       left: auto;
-      right: 0;
-      top: size(747);
-      width: size(608);
+      right: size(-100);
+      bottom: size(50);
+      top:auto;
+      width: size(580);
     }
   }
 
