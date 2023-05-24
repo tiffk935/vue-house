@@ -10,10 +10,10 @@
 </div>
     <div class="txt absolute">
       <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
-    <div class="t1">十足天地  十足人生
+    <div class="t1">十足天地  綠健社區
 </div>
     <div class="t2">｜5MINS梅花湖｜60-67坪｜太陽能電梯別墅｜</div>
-    <div class="t3" @click="scrollTo('.order')">搶先預約</div>
+    <div class="t3" @click="scrollTo('.order')">立即預約</div>
 </div>
 
 

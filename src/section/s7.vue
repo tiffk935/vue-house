@@ -78,7 +78,7 @@
   }
 
   .t2 {
-    left: size-m(57);
+    left: size-m(70);
     top: size-m(71);
     font-weight: 500;
     font-size: size-m(30);

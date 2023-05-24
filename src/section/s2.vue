@@ -1,6 +1,7 @@
 <template>
   <section class="s2 relative">
     <div class="map relative">
+      <img class="map1 text" src="@/section/s2/map1.png" />
       <img class="map1" src="@/section/s2/map.jpg" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
@@ -49,6 +50,10 @@
     width: 100vw;
     @media screen and (min-width:768px) {
       overflow: hidden;
+    }
+
+    .text{
+      position: absolute;
     }
 
     img {

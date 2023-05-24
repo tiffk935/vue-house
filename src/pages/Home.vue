@@ -17,7 +17,7 @@
     <S3S4 />
     <S5 />
     <S6 />
-    <S7 />
+    <!--S7 /-->
     <Order />
   </div>
 </template>
@@ -29,7 +29,7 @@ import S2 from "@/section/s2.vue"
 import S3S4 from "@/section/s3s4.vue"
 import S5 from "@/section/s5.vue"
 import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
+//import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -63,7 +63,7 @@ onMounted(() => {
       });
     }, 0);
 
-    const sec = ['.s2', '.s3', '.s6', '.order'];
+    const sec = ['.s2', '.s3', '.s4', '.s6', '.order'];
     sec.forEach((s, idx) => {
       ScrollTrigger.create({
         trigger: s,
@@ -71,6 +71,9 @@ onMounted(() => {
         end: "bottom bottom",
         onEnter: () => {
           document.querySelectorAll('.menu-item span')[idx].classList.add('active');
+        },
+        onLeave: () => {
+          document.querySelectorAll('.menu-item span')[idx].classList.remove('active');
         },
         onLeave: () => {
           document.querySelectorAll('.menu-item span')[idx].classList.remove('active');

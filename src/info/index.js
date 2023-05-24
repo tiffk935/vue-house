@@ -42,6 +42,11 @@ export default {
             offset: "",
         },
         {
+            name: "立 地",
+            target: ".s4",
+            offset: "",
+        },
+        {
             name: "自 由",
             target: ".s6",
             offset: "",
