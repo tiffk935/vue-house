@@ -24,7 +24,7 @@
       </swiper>
     </div>
     <div class="text absolute">
-      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">立足北區核心樞紐<br>650米捷運明德站</div>
+      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">立足北區核心樞紐<br>600米捷運明德站</div>
       <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
         北士科躍升北區核心樞紐，散步600米捷運明德站。淡水信義線，一端追淡江夕照、一端牽起信義計劃，中山、大安、信義時尚與繁華盛景。<br>
         <br>
