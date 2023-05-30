@@ -21,8 +21,8 @@ export default {
         ["工程營造", "宜錦營造有限公司"],
         ["建照號碼", "(112)(1)(3)建管建字第0004~00056號"],
     ],
-    gtmCode: ["GTM-527G33V"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    gtmCode: ["GTM-565Q52X"], // 可放置多個
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
