@@ -14,10 +14,10 @@
         <img src="@/section/form/fb.svg" alt="華友聯next21" srcset="" />
         <div >前往粉絲專頁</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open1()">
+      <!--div class="flex contact-item justify-center items-center btfanpage" @click="open1()">
         <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
         <div >我要預約</div>
-      </div>
+      </div-->
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
@@ -51,10 +51,10 @@
       <img src="@/section/form/gmap.svg" alt="華友聯next21" srcset="" />
       <div>地圖導航</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open1()">
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center" @click="open1()">
       <img src="@/section/form/globe.svg" alt="華友聯next21" srcset="" />
       <div>我要預約</div>
-    </div>
+    </div-->
   </div>
 
   <!-- Modal -->
