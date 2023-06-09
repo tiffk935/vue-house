@@ -31,16 +31,16 @@ $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
 
 // 正式環境
- $key = 'yHhZYNgu';
- $secret = 'ZXRfGHwSGeyn24';
- $uuid = 'rckhbsj8';
- $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+//  $key = 'yHhZYNgu';
+//  $secret = 'ZXRfGHwSGeyn24';
+//  $uuid = 'rckhbsj8';
+//  $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
 
 // 測試環境
-//$key = 'spCSVvB2';
-//$secret = 'X47bzY8SbScVBD';
-//$uuid = '1jf9srle';
-//$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+$key = 'spCSVvB2';
+$secret = 'X47bzY8SbScVBD';
+$uuid = '1jf9srle';
+$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
 
 $header = array(
    'x-api-key: ' . $key,
@@ -57,7 +57,8 @@ $data = array(
 );
 
 $surrTime = date('Y-m-d H:i:s');
-file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] Form POST: ' . http_build_query($data) . "\n", FILE_APPEND);
+$log = json_encode($data, JSON_UNESCAPED_UNICODE);
+file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] Form POST: ' . $log . "\n", FILE_APPEND);
 
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $api);
@@ -68,7 +69,8 @@ curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $res = curl_exec($ch); 
 curl_close($ch);
 
-file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] API Response: ' . $res . "\n", FILE_APPEND);
+$log = json_encode(json_decode($res, true), JSON_UNESCAPED_UNICODE);
+file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] API Response: ' . $log . "\n", FILE_APPEND);
 
 
 # 鳳翔 fs 客製資料：房型
