@@ -29,7 +29,48 @@ $utm_medium   = isset($_POST['utm_medium']) ? $_POST['utm_medium'] : '';
 $utm_content  = isset($_POST['utm_content']) ? $_POST['utm_content'] : '';
 $utm_campaign = isset($_POST['utm_campaign']) ? $_POST['utm_campaign'] : '';
 $datetime     = date ("Y-m-d H:i:s" , mktime(date('H'), date('i'), date('s'), date('m'), date('d'), date('Y'))) ;
-    
+
+// 正式環境
+// $key = 'yHhZYNgu';
+// $secret = 'ZXRfGHwSGeyn24';
+// $uuid = 'rckhbsj8';
+// $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+
+// 測試環境
+$key = 'spCSVvB2';
+$secret = 'X47bzY8SbScVBD';
+$uuid = '1jf9srle';
+$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
+
+$header = array(
+   'x-api-key: ' . $key,
+   'x-api-secret: ' . $secret
+);
+
+$data = array(
+   'name' => isset($_POST['name']) ? $_POST['name'] : '',
+   'telephone' => isset($_POST['phone']) ? $_POST['phone'] : '',
+   'email' => isset($_POST['email']) ? $_POST['email'] : '',
+   'note' => isset($_POST['msg']) ? $_POST['msg'] : '',
+   'source' => isset($_POST['source']) ? $_POST['source'] : '' ,
+   'source_note' => isset($_POST['source_note']) ? $_POST['source_note'] : ''
+);
+
+$surrTime = date('Y-m-d H:i:s');
+file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] Form POST: ' . http_build_query($data) . "\n", FILE_APPEND);
+
+$ch = curl_init();
+curl_setopt($ch, CURLOPT_URL, $api);
+curl_setopt($ch, CURLOPT_POST, true);
+curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
+curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$res = curl_exec($ch); 
+curl_close($ch);
+
+file_put_contents('log/'.date("Y-m-d").'.log', '[' . $surrTime . '] API Response: ' . $res . "\n", FILE_APPEND);
+
+
 # 鳳翔 fs 客製資料：房型
 $room_type        = isset($_POST['room_type']) ? $_POST['room_type'] : '';
     
@@ -483,47 +524,3 @@ document.location.replace('formThanks');
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
 </head>
 <body>
-    
-<?php
-// 正式環境
- $key = 'yHhZYNgu';
- $secret = 'ZXRfGHwSGeyn24';
- $uuid = 'rckhbsj8';
- $api = 'https://api.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
-
-
-// 測試環境
-//$key = 'spCSVvB2';
-//$secret = 'X47bzY8SbScVBD';
-//$uuid = '1jf9srle';
-//$api = 'https://api-dev.huakai.com.tw/api/2.15/external/constructions/'.$uuid.'/reserve';
-
-
-
-$header = array(
-    'x-api-key: ' . $key,
-    'x-api-secret: ' . $secret
-);
-
-$data = array(
-    'name' => isset($_POST['name']) ? $_POST['name'] : '',
-    'telephone' => isset($_POST['phone']) ? $_POST['phone'] : '',
-    'email' => isset($_POST['email']) ? $_POST['email'] : '',
-    'note' => isset($_POST['note']) ? $_POST['note'] : '',
-    'source' => isset($_POST['source']) ? $_POST['source'] : '' ,
-    'source_note' => isset($_POST['source_note']) ? $_POST['source_note'] : ''
-);
-
-$ch = curl_init();
-curl_setopt($ch, CURLOPT_URL, $api);
-curl_setopt($ch, CURLOPT_POST, true);
-curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$res = curl_exec($ch); 
-curl_close($ch);
-
-// echo $res;
-// $res = json_decode($res, true);
-// echo '<pre>'; print_r($res); echo '</pre>';
-?>
