@@ -16,9 +16,9 @@
         <!-- Title -->
         <div class="order-title text-center text-white font-['noto_Serif_tc']">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="美地莊園" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="研森" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="美地莊園" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="研森" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
