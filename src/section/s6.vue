@@ -3,6 +3,8 @@
     <div class="bg absolute"></div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">一棟一王國</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">
+      <div class="title">電梯別墅，立體空間更方便</div>
+      <div class="txt">體貼家中行動不便、銀髮族等，東方電梯優良品質保證，便利全家上下樓梯或搬重物。</div>  
       <div class="title">社區公園生機農夫</div>
       <div class="txt">出門必經社區公園主題樹，茂盛枝枒及綠意植栽，更蘊含戶戶人家蓬勃發展、開枝散葉美意；限定席次更專屬規劃田地，一圓田園夢。</div>  
       <div class="title">一墅多用置產傳富</div>
@@ -68,8 +70,8 @@
 
   .t1 {
     left: size-m(46);
-    //top: size-m(14);
-    top: size-m(84);
+    top: size-m(14);
+    //top: size-m(84);
     font-weight: 500;
     font-size: size-m(30);
     line-height: size-m(56);
@@ -77,8 +79,8 @@
     color: #fff;
     @media screen and (min-width:768px) {
       left: size(1450);
-      //top: size(211);
-      top: size(280);
+      top: size(211);
+      //top: size(280);
       font-size: size(48);
       line-height: size(56);
     }
@@ -115,8 +117,8 @@
   .t2 {
     width: size-m(314);
     left: size-m(30);
-    //top: size-m(80);
-    top: size-m(160);
+    top: size-m(80);
+    //top: size-m(160);
     font-weight: 400;
     font-size: size-m(13);
     line-height: size-m(20);
@@ -126,8 +128,8 @@
     @media screen and (min-width:768px) {
       width: size(386);
       left: size(1426);
-      //top: size(280);
-      top: size(380);
+      top: size(280);
+      //top: size(380);
       font-size: size(16);
       line-height: size(27);
     }
