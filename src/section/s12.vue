@@ -1,112 +1,28 @@
 <template>
-  <section class="s12 relative text-white">
-    <Transition>
-      <div v-if="currTab === 2">
-        <div class="slider absolute">
-          <swiper
-            :pagination="{
-              clickable: true
-            }"
-            :navigation="true"
-            :loop="true"
-            :speed="1000"
-            :autoplay="{
-              delay: 5000,
-              disableOnInteraction: false,
-            }"
-            :modules="modules"
-          >
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-1.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-2.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-3.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-4.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/2-5.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-          </swiper>
-        </div>
-        <div class="content absolute">
-          <div class="t1 fade">戶戶迎向公園綠景<span><span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">24</span>坪  <span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">2</span>房 ／ <span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">2</span>衛</span></div>
-          <div class="txt fade">
-            ‧落地景觀陽台，私納社子公園綠意<br>
-            ‧臥室低台度開窗設計，自然光通透全室<br>
-            ‧挑高<span style="display: inline; writing-mode: horizontal-tb; line-height: 1.3;">3.3</span>米，空間感受舒適不壓迫<br>
-            ‧無走道虛坪空間浪費，格局規劃坪效高<br>
-            ‧樑柱外推設計，室內格局方正好規劃
-          </div>
-        </div>
-      </div>
-    </Transition>
-    <Transition>
-      <div v-if="currTab === 3">
-        <div class="slider absolute">
-          <swiper
-            :pagination="{
-              clickable: true
-            }"
-            :navigation="true"
-            :loop="true"
-            :speed="1000"
-            :autoplay="{
-              delay: 5000,
-              disableOnInteraction: false,
-            }"
-            :modules="modules"
-          >
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-1.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-2.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-3.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-4.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="w-full block" src="@/section/s12/3-5.jpg" />
-              <div class="txt">樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、植栽畫作<br class="md:hidden">等為設計表現，實際依買賣合約書為準。</div>
-            </swiper-slide>
-          </swiper>
-        </div>
-        <div class="content absolute">
-          <div class="t1 fade">栽植家的美好故事<span><span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">39</span>坪  <span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">3</span>房 ／ <span style="display: inline; writing-mode: horizontal-tb; line-height: 1;">2</span>衛</span></div>
-          <div class="txt fade">
-            ‧雙陽台規劃，景觀陽台私納社子公園綠意<br>
-            ‧邊間三面採光，自然光通透全室<br>
-            ‧雙衛浴皆開窗，主衛規劃四件式衛浴<br>
-            ‧臥室皆可放雙人床<br>
-            ‧挑高<span style="display: inline; writing-mode: horizontal-tb; line-height: 1.3;">3.3</span>米，空間感受舒適不壓迫<br>
-            ‧樑柱外推設計，室內格局方正好規劃
-          </div>
-        </div>
-      </div>
-    </Transition>
-
-    <div :class="['tab2', 'absolute', {active: currTab === 2}]" @click="currTab = 2">
-      <div>2<span>房</span></div>
+  <section class="s12 relative">
+    <img class="grid absolute md:hidden" src="@/section/s12/grid-m.jpg" />
+    <img class="grid absolute hidden md:block" src="@/section/s12/grid.jpg" />
+    <div class="grid-t1 upup absolute">
+      <div class="tt">展宜建築的職人手工好房子<br>天母磺溪聚落稀有靜獻</div>
     </div>
-    <div :class="['tab3', 'absolute', {active: currTab === 3}]" @click="currTab = 3">
-      <div>3<span>房</span></div>
+    <div class="grid-t2 upup absolute">
+      <div class="tt">即將靜好公開 敬請期待</div>
+    </div>
+    <div class="grid-t3 upup absolute">
+      <div class="tt">歡迎預約優先品賞</div>
+    </div>
+
+    <img class="lines absolute md:hidden" src="@/section/s12/lines-m.svg" />
+    <img class="lines absolute hidden md:block" src="@/section/s12/lines.svg" />
+
+    <div class="logo upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="t1 upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="t2 upup absolute">
+      <div class="tt"></div>
     </div>
   </section>
 </template>
@@ -116,256 +32,153 @@
 
 .s12 {
   width: 100%;
-  height: size-m(797);
-  background: linear-gradient(180.82deg, #0A675F 6.4%, #11A196 93.93%);
+  height: size-m(734);
+  background-image: url(@/section/s1/bg-m.jpg);
+  background-size: cover;
+  background-position: center center;
   @media screen and (min-width:768px) {
-    height: size(1124);
-    background: #004B47;
+    height: size(1080);
+    background-image: url(@/section/s1/bg.jpg);
   }
 
-  .v-enter-active,
-  .v-leave-active {
-    transition: opacity 0.3s ease;
-  }
-
-  .v-enter-from,
-  .v-leave-to {
-    opacity: 0;
-  }
-
-  .slider {
-    position: absolute;
-    top: size-m(114);
-    left: 0;
-    width: size-m(375);
+  .grid {
+    width: size-m(297);
+    left: size-m(38);
+    top: size-m(59);
     @media screen and (min-width:768px) {
-      top: size(0);
-      width: size(1920);
-    }
-
-
-
-
-    img {
-      height: size-m(328);
-      object-fit: cover;
-      @media screen and (min-width:768px) {
-        height: size(1004);
-      }
-    }
-
-    .txt {
-      position: absolute;
-      bottom: size-m(7);
-      left: size-m(5);
-      font-family: 'Noto Sans TC';
-      font-weight: 500;
-      font-size: size-m(10);
-      line-height: size-m(12);
-      @media screen and (min-width:768px) {
-        bottom: size(13);
-        left: size(29);
-        font-size: size(13);
-        line-height: size(15);
-      }
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-      width: size-m(17);
-      height: size-m(17);
-      background-size: contain;
-      background-repeat: no-repeat;
-      @media screen and (min-width:768px) {
-        width: size(56);
-        height: size(56);
-      }
-
-      &:after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      background-position: left;
-      background-image: url(@/section/s11/arrow-left-m.svg);
-      left: size-m(6);
-      @media screen and (min-width:768px) {
-        left: size(27);
-        background-image: url(@/section/s11/arrow-left.svg);
-      }
-    }
-
-    .swiper-button-next {
-      background-position: right;
-      background-image: url(@/section/s11/arrow-right-m.svg);
-      right: size-m(6);
-      @media screen and (min-width:768px) {
-        right: size(27);
-        background-image: url(@/section/s11/arrow-right.svg);
-      }
-    }
-
-    .swiper-pagination {
-      line-height: 1;
-      top: size-m(10);
-      bottom: auto;
-      right: size-m(10);
-      left: auto;
-      width: auto;
-      @media screen and (min-width:768px) {
-        right: size(27);
-        top: size(20);
-        right: size(20);
-      }
-
-      .swiper-pagination-bullet {
-        width: size-m(8);
-        height: size-m(8);
-        margin: 0 size-m(3.6);
-        background: none;
-        border: size-m(1) solid #fff;
-        opacity: 1;
-        @media screen and (min-width:768px) {
-          width: size(9);
-          height: size(9);
-          margin: 0 size(4);
-          border: size(1) solid #fff;
-        }
-
-        &.swiper-pagination-bullet-active {
-          background: #fff;
-        }
-      }
+      width: size(1112);
+      left: size(404);
+      top: size(99);
     }
   }
 
-  .content {
-    // width: size-m(290);
-    top: size-m(506);
-    left: size-m(45);
-    text-align: justify;
-    z-index: 1;
-    @media screen and (min-width:768px) {
-      top: size(0);
-      left: size(101);
-      width: size(220);
-      background: linear-gradient(0deg, rgba(17, 161, 150, 0.3) -11.37%, #004B47 99.89%);
-      display: flex;
-      justify-content: center;
-      flex-direction: row-reverse;
-      gap: size(36);
-      flex-direction: column;
-    }
-
-    .t1 {
-      font-family: 'Noto Serif TC';
-      font-size: size-m(21);
-      line-height:1.34;
-      font-weight: 600;
-      margin-bottom: size-m(9.5);
-      letter-spacing: .03em;
-      @media screen and (min-width:768px) {
-        font-size: size(30);
-        line-height: 1.4;
-        margin: size(48.43) auto 0 auto;
-        padding: 0;
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-      }
-
-      span {
-        display: block;
-        font-size: size-m(23);
-        @media screen and (min-width:768px) {
-          font-size: size(30);
-        }
-      }
-    }
-
-    .txt {
-      font-size: size-m(15);
-      line-height:1.5;
-      margin-bottom: size-m(24.5);
-      font-weight: 300;
-      letter-spacing: 0em;
-      font-family: 'Noto sans TC';
-      @media screen and (min-width:768px) {
-        font-size: size(19);
-        line-height: 1.7;
-        font-weight: 200;
-        letter-spacing: .1em;
-        margin:0 auto 6em auto;
-        writing-mode: vertical-rl;
-        white-space: nowrap;
-      }
-    }
-  }
-
-  .tab2, .tab3 {
-    top: size-m(80);
-    left: size-m(19);
-    width: size-m(68);
-    height: size-m(68);
-    background: #AADECE;
-    border: size-m(1.88) solid #CCE3D7;
-    opacity: 0.8;
-    z-index: 1;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  .grid-t1, .grid-t2 {
+    height: size-m(36);
+    width: size-m(161);
+    left: size-m(106);
+    top: size-m(140);
     font-family: 'Noto Serif TC';
-    font-weight: 500;
-    font-size: size-m(35);
-    line-height: 1;
-    letter-spacing: 0.1em;
+    font-weight: 600;
+    font-size: size-m(13);
+    line-height: size-m(18);
+    text-align: center;
+    letter-spacing: 0.03em;
     color: #FFFFFF;
-    cursor: pointer;
-    padding-bottom: size-m(5);
-      padding-left: size-m(5);
-    
     @media screen and (min-width:768px) {
-      top: size(900);
-      left: size(1534);
-      width: size(145);
-      height: size(145);
-      border: size(1.88) solid #CCE3D7;
-      font-size: size(70);
-      padding-bottom: size(10);
-      padding-left: size(10);
-    }
-
-    span {
-      font-size: size-m(20);
-      line-height: 1;
-      @media screen and (min-width:768px) {
-        font-size: size(35);
-      }
-    }
-
-    &.active {
-      background: #5CBD9E;
-      opacity: 1;
-      z-index: 2;
+      height: size(65);
+      width: size(688);
+      left: size(616);
+      top: size(243);
+      font-size: size(30);
+      line-height: size(65);
     }
   }
 
-  .tab3 {
-    left: size-m(81);
+  .grid-t2 {
+    height: size-m(18);
+    width: size-m(138);
+    left: size-m(118);
+    top: size-m(203);
     @media screen and (min-width:768px) {
-      left: size(1659);
+      height: size(65);
+      width: size(317);
+      left: size(802);
+      top: size(308);
+    }
+  }
+
+  .grid-t3 {
+    height: size-m(18);
+    width: size-m(136);
+    left: size-m(119);
+    top: size-m(255);
+    font-family: 'Noto Serif TC';
+    font-weight: 700;
+    font-size: size-m(16);
+    line-height: size-m(18);
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    @media screen and (min-width:768px) {
+      height: size(43);
+      width: size(247);
+      left: size(837);
+      top: size(420);
+      font-weight: 600;
+      font-size: size(30);
+      line-height: size(43);
+    }
+  }
+
+  .lines {
+    width: size-m(297.14);
+    left: size-m(38);
+    top: size-m(477.89);
+    @media screen and (min-width:768px) {
+      width: size(1733);
+      left: size(91);
+      top: size(96);
+    }
+  }
+
+  .logo {
+    height: size-m(72.15576934814453);
+    width: size-m(297.1393737792969);
+    left: size-m(38);
+    top: size-m(386.16748046875);
+    @media screen and (min-width:768px) {
+      height: size(110.21810913085938);
+      width: size(454.3362121582031);
+      left: size(404.32904052734375);
+      top: size(761.1279296875);
+    }
+
+    .tt {
+      background-image: url(@/section/s12/logo.svg);
+    }
+  }
+
+  .t1 {
+    height: size-m(120.90211486816406);
+    width: size-m(296.1858825683594);
+    left: size-m(38.476318359375);
+    top: size-m(498.06591796875);
+    @media screen and (min-width:768px) {
+      height: size(109.74950408935547);
+      width: size(609.314697265625);
+      left: size(906.685302734375);
+      top: size(757.990234375);
+    }
+
+    .tt {
+      background-image: url(@/section/s12/t1-m.svg);
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/s12/t1.svg);
+      }
+    }
+  }
+
+  .t2 {
+    height: size-m(11.3754301071167);
+    width: size-m(296.0140075683594);
+    left: size-m(39.125244140625);
+    top: size-m(646.40283203125);
+    @media screen and (min-width:768px) {
+      height: size(72.21359252929688);
+      width: size(1111.989990234375);
+      left: size(404);
+      top: size(894.7861328125);
+    }
+
+    .tt {
+      background-image: url(@/section/s12/t2-m.svg);
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/s12/t2.svg);
+      }
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { Pagination, Navigation, Autoplay } from "swiper";
-const modules = ref([Pagination, Navigation, Autoplay]);
-const currTab = ref(2);
 </script>

@@ -24,6 +24,7 @@
     "smooth-scrollbar": "^8.8.1",
     "swiper": "^7.4.1",
     "vue": "^3.2.25",
+    "vue-easy-lightbox": "^1.16.0",
     "vue-lazyload": "3.0.0-rc.2",
     "vue-mobile-detection": "^2.0.1",
     "vue-recaptcha": "^2.0.2",

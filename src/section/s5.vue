@@ -1,16 +1,49 @@
 <template>
-  <section class="s5 relative text-white">
-    <div class="viewbox" ref="viewbox">
-      <img ref="viewImg" src="@/section/s5/view.jpg" alt="" srcset="">
-      <div class="mask" v-bind:class="{ hide: swiped }">
-        左右滑動看全景
-        <img src="@/section/s5/finger.png" alt="" srcset="">
-      </div>
-      <div class="content absolute">
-        <div class="fade w-full md:flex">
-          <div class="t1">社子未來轉身明日聚落，<br class="md:hidden" />大北區計劃中央點。</div>
-          <div class="txt">台北市的開發大未來，焦點將轉向為大北區，生態社子島位居核心位置，吸納北士科園區、西區門戶雙子星與銀河灣計劃，未來前景可期。</div>
-        </div>
+  <section class="s5 relative">
+    <div class="slider absolute">
+      <swiper
+        :pagination="{
+          clickable: true
+        }"
+        :navigation="false"
+        :loop="true"
+        :speed="1000"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/1.jpg" />
+          <div class="txt absolute">天母SOGO</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/1.jpg" />
+          <div class="txt absolute">天母SOGO</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/1.jpg" />
+          <div class="txt absolute">天母SOGO</div>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <img class="en absolute md:hidden" src="@/section/s3/en-m.svg" />
+    <img class="en absolute hidden md:block" src="@/section/s3/en.svg" />
+    <img class="lines absolute md:hidden" src="@/section/s3/lines-m.svg" />
+    <img class="lines absolute hidden md:block" src="@/section/s3/lines.svg" />
+    <div class="style upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="t1 upup absolute">
+      <div class="tt">天母SOGO生活圈<br>街巷間無國界美食品味</div>
+    </div>
+    <div class="t2 upup absolute">
+      <div class="tt">
+        中山北路六段生活圈，出巷到SOGO百貨<br>
+        忠誠路欒樹大道一路到高島屋、新光三越、華威天母影城<br>
+        全台最美五星級士東市場老饕採買<br>
+        滿足精品時尚、美食購物，巷弄間享異國浪漫情調
       </div>
     </div>
   </section>
@@ -18,185 +51,178 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
 .s5 {
   width: 100%;
-  height: size-m(817);
-  font-family: 'Noto Serif TC';
-  z-index: 1;
+  height: size-m(547);
+  background-image: url(@/section/s1/bg-m.jpg);
+  background-size: cover;
+  background-position: center center;
   @media screen and (min-width:768px) {
-    height: size(953);
-    background: linear-gradient(247deg, #004B47 -32.2%, #11A196 102.54%);
+    height: size(1080);
+    background-image: url(@/section/s1/bg.jpg);
   }
 
-  .viewbox {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    background: #eee;
-    img {
-      height: 100%;
-      max-width: unset;
-    }
-    .mask {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    .viewbox {
-      height: 100%;
-      overflow: hidden;
-      img {
-        height: 100%;
-      }
-      .mask {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-        // z-index: 10;
-        display: flex;
-        justify-content: center;
-    flex-direction:column;
-        align-items: center;
-        pointer-events: none;
-        opacity: 1;
-        transition: all 1s;
-        background: rgba(0, 114, 130, 0.5);
-        
-        img {
-          height: 11vw;
-          position: relative;
-          z-index: 2;
-          margin: 3vw 0 0 15.5vw;
-          transform: translate(-13vw,-5%)rotate(-28deg);
-    animation: img 2s linear infinite alternate;
-        }
-@keyframes img {
-  to {
-    transform:translateX(0);
-  }
-}
-        &::before{
-          content: "";
-          display: block;
-          position: absolute;
-          background: #FFF9;
-          top: 49.5%;
-          width: 76%;
-          height: 1px;
-        }
-        &::after{
-          content: "";
-          display: block;
-          position: absolute;
-          background: #FFF;
-          top: calc(49.6% - 1.9vw);
-          margin: 0 0 0 16vw;
-          width: 3.8vw;
-          height: 3.8vw;
-          border-radius: 50%;
-          transform:translateX(-15.5vw);
-          animation: img 2s linear infinite alternate;
-        }
-        &.hide {
-          opacity: 0;
-        }
-      }
-    }
-  }
-
-  .content {
-    width: size-m(290);
-    top: size-m(41.79);
-    left: size-m(42.5);
-    pointer-events: none;
-    text-align: justify;
+  .slider {
+    position: absolute;
+    top: size-m(46);
+    left: 0;
+    width: size-m(335);
+    height: size-m(305);
+    overflow: hidden;
     @media screen and (min-width:768px) {
-      width: size(1400.06);
-      top: size(116);
-      left: size(235);
-      display: flex;
+      top: size(152);
+      left: size(663);
+      width: size(1165);
+      height: size(776);
     }
 
-    .fade {
-      @media screen and (min-width:768px) {
-        justify-content: space-between;
-        align-items: center;
+    .swiper {
+      overflow: visible;
+
+      .swiper-pagination {
+        line-height: 1;
+        bottom: size-m(7.55);
+        @media screen and (min-width:768px) {
+          bottom: size(15);
+        }
+      }
+
+      .swiper-pagination-bullet {
+        opacity: 1;
+        background: none;
+        border: size-m(1) solid #fff;
+        width: size-m(18.9);
+        height: size-m(3.44);
+        border-radius: size-m(20);
+        @media screen and (min-width:768px) {
+          border: size(1) solid #fff;
+          width: size(49);
+          height: size(10);
+          border-radius: size(50);
+          margin: 0 size(7.5);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: #fff;
+        }
       }
     }
 
-    .t1 {
-      font-size: size-m(21);
-      line-height:1.34;
-      font-weight: 700;
-      margin-bottom: size-m(9.5);
-    letter-spacing: .03em;
+    img {
+      width: 100%;
+      height: size-m(305);
+      object-fit: cover;
       @media screen and (min-width:768px) {
-        font-size: size(33);
-        margin-bottom: size(26.5);
+        height: size(776);
       }
     }
 
     .txt {
-      font-size: size-m(15);
-      line-height:1.5;
-      margin-bottom: size-m(24.5);
-      font-weight: 300;
-    letter-spacing: 0em;
-    font-family: 'Noto sans TC';
+      right: size-m(5);
+      bottom: size-m(5);
+      font-weight: 700;
+      font-size: size-m(12);
+      line-height: size-m(17);
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      text-shadow: size-m(0) size-m(4) size-m(4) rgba(0, 0, 0, 0.25);
       @media screen and (min-width:768px) {
-        width: size(700);
-        font-size: size(19);
-        margin-bottom: size(30);
-      font-weight: 200;
-      letter-spacing: .1em;
-        line-height:1.7;
+        right: size(10);
+        bottom: size(10);
+        font-size: size(14);
+        line-height: size(20);
+        text-shadow: size(0) size(4) size(4) rgba(0, 0, 0, 0.25);
       }
     }
   }
-}
 
+  .en {
+    width: size-m(4.59);
+    left: size-m(352.98);
+    top: size-m(46);
+    @media screen and (min-width:768px) {
+      width: size(351.61);
+      left: size(99);
+      top: size(153);
+    }
+  }
+
+  .lines {
+    width: size-m(290);
+    left: size-m(42.5);
+    top: size-m(361);
+    @media screen and (min-width:768px) {
+      width: size(490);
+      height: size(775);
+      left: size(99);
+      top: size(153);
+    }
+  }
+
+  .style {
+    height: size-m(61.5);
+    width: size-m(73.12908935546875);
+    left: size-m(14.919189453125);
+    top: size-m(369.5);
+    @media screen and (min-width:768px) {
+      height: size(275);
+      width: size(327);
+      left: size(99);
+      top: size(252);
+    }
+
+    .tt {
+      background-image: url(@/section/s3/style.png);
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .t1 {
+    height: size-m(54);
+    left: size-m(120.000244140625);
+    top: size-m(373);
+    font-family: 'Noto Serif TC';
+    font-weight: 600;
+    font-size: size-m(19);
+    line-height: size-m(27);
+    letter-spacing: 0.03em;
+    color: #39684F;
+    @media screen and (min-width:768px) {
+      height: size(104);
+      left: size(99);
+      top: size(669);
+      font-size: size(36);
+      line-height: size(52);
+    }
+  }
+
+  .t2 {
+    height: size-m(104);
+    left: size-m(43.500244140625);
+    top: size-m(451.5);
+    font-family: 'Noto Serif TC';
+    font-weight: 600;
+    font-size: size-m(12);
+    line-height: size-m(19);
+    color: #526760;
+    @media screen and (min-width:768px) {
+      height: size(104);
+      left: size(99);
+      top: size(819);
+      font-size: size(18);
+      line-height: size(26);
+      color: #39684F;
+    }
+  }
+}
 </style>
 
 <script setup>
-import BScroll from '@better-scroll/core'
-import { getCurrentInstance, onMounted, ref } from 'vue';
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const viewbox = ref()
-const viewImg = ref()
-const swiped = ref(false)
-const offsetRatio = 1.705; //調整此值設定X軸位置偏移參數
-onMounted(() => {
-  if(globals.$isMobile()){
-    viewImg.value.addEventListener('load', () => {
-      let scroll = new BScroll(viewbox.value, {
-        probeType: 2,
-        scrollX: true,
-        scrollY: true,
-        disableTouch: false,
-        disableMouse: false,
-        bindToWrapper: true,
-        eventPassthrough: "vertical",
-        bounce: false,
-      })
-      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 0);
-      setTimeout(() => {
-        scroll.on("scroll", () => {
-          swiped.value = true
-        });
-      }, 1000);
-    })
-  }
-})
-</script>
-
-<script>
-// export default {
-//   mounted() {
-//     // Use in js
-//     console.log(this.$isMobile());
-//   }
-// };
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from "swiper";
+const modules = ref([Pagination, Navigation, Autoplay]);
 </script>

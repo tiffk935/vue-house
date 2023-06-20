@@ -69,16 +69,26 @@
     margin-top: size(20);
     gap: size(20);
 
-    // &.address-wrap {
-    //   border: size(3) solid #D9374B;
-    // } 
+    &.address-wrap {
+      .contact-item:not(.address) {
+        background: rgba(128, 175, 147, 0.52);
+
+        &:hover {
+          background: rgba(128, 175, 147, 1);
+        }
+      }
+
+      .address:hover {
+        cursor: default;
+        background: rgba(82, 109, 88, 0.52);
+      }
+    } 
 
     .contact-item {
-      background-color: #004B47;
-      border: 1px solid #fff;
+      background: rgba(82, 109, 88, 0.52);
       color: #fff;
       width: 100%;
-      padding: size(10) size(40);
+      padding: size(22) size(40);
       font-size: size(16);
       line-height: 1.5;
       letter-spacing: 0.1em;
@@ -89,34 +99,8 @@
       position: relative;
       overflow: hidden;
 
-      &:before {
-        content: "";
-        display: block;
-        background: hsla(0,0%,100%,.4);
-        position: absolute;
-        left: -15%;
-        top: 0;
-        width: 120%;
-        height: 100%;
-        transform: skewX(-30deg) translateX(-100%);
-        transition: -webkit-transform .4s;
-        transition: transform .4s;
-        transform-origin: 0 0;
-      }
-
       &:hover {
-        // background-color: theme('colors.color2');
-        background: #008D82;
-        color: #fff;
-
-        &:before {
-          transform: skewX(-30deg) translateX(120%);
-        }
-
-        img {
-
-          filter: brightness(0) invert(1);
-        }
+        background: rgba(128, 175, 147, 1);
       }
 
       img {
@@ -138,11 +122,6 @@
 
         &:before {
           display: none;
-        }
-
-        &:hover {
-          background: none;
-          cursor: default;
         }
 
         &::before {
@@ -172,14 +151,15 @@
     width: size-m(375);
     height: size-m(63);
     gap: size-m(1);
-    background: rgba(255, 255, 255, 0.7);
+    background-image: url(@/section/form/bg-mo.jpg);
+    background-size: cover;
 
     .contact-item {
       height: 100%;
       font-size: size-m(16);
       font-weight: 400;
-      color: #008D82;
-      border-right: 1px solid #008D82;
+      color: #fff;
+      border-right: 1px solid #fff;
 
       &:last-child {
         border-right: none;

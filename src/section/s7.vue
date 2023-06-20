@@ -1,191 +1,227 @@
 <template>
-  <section class="s7 relative text-white">
-    <!-- <div class="bg234 absolute w-full"></div> -->
-    <div class="p1 absolute parallax"></div>
-    <div class="p2 absolute parallax"></div>
-    <div class="title absolute fade">CONCENTRATE ON<br />ARCHITECTURE</div>
-    <div class="content absolute">
-      <img class="logo" src="@/section/s7/logo.svg" />
-      <div class="fade">
-        <div class="t1">北市精品規格全面移植。</div>
-        <div class="txt">德林建設機構創立於1985年，建築作品以高滿意度、高指名度聞名；以誠信專業與客戶交陪，精砌雕琢建築品味，以自訂高標準規格落籍社子公園首席。</div>
-      </div>
-      <div class="fade">
-        <div class="t1">質純精粹立地都會精華。</div>
-        <div class="txt">德林建設機構2001年「國家藝術賞」引領都市建築美學，此後開展台北都會精華區域建築美學，如中正區「青田」、「林与堂」等皆為人文質精的都市地標。</div>
-      </div>
-      <div class="fade">
-        <div class="t1">一條龍全方位整合服務。</div>
-        <div class="txt">德林建設機構認為「不需要服務，才是最好的售後服務」。從開發、營造、售服等整合性系統，一制性的高品質服務也為客戶的資產創造恆久永續的價值。</div>
-      </div>
+  <section class="s7 relative">
+    <div class="slider absolute">
+      <swiper
+        :pagination="{
+          clickable: true
+        }"
+        :navigation="false"
+        :loop="true"
+        :speed="1000"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s7/1.jpg" />
+          <div class="txt absolute">榮總醫院</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s7/1.jpg" />
+          <div class="txt absolute">榮總醫院</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s7/1.jpg" />
+          <div class="txt absolute">榮總醫院</div>
+        </swiper-slide>
+      </swiper>
     </div>
-    <div class="leaf absolute">
-      <img class="w-full block" src="@/section/s7/frame.svg" />
-      <img class="window absolute" src="@/section/s7/leaf.gif" />
-      <img class="bird absolute" src="@/section/s7/bird.svg" />
+    <img class="en absolute md:hidden" src="@/section/s3/en-m.svg" />
+    <img class="en absolute hidden md:block" src="@/section/s3/en.svg" />
+    <img class="lines absolute md:hidden" src="@/section/s3/lines-m.svg" />
+    <img class="lines absolute hidden md:block" src="@/section/s3/lines.svg" />
+    <div class="style upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="t1 upup absolute">
+      <div class="tt">天母養生綠活<br>頂級醫療資源匯聚</div>
+    </div>
+    <div class="t2 upup absolute">
+      <div class="tt">
+        陽明山麓下的天母桃花源，依山傍水、空氣清新<br>
+        榮總醫院、振興醫院、新光醫院、北醫陽明院區<br>
+        好山、好水、好環境，聚集北市高端醫療資源
+      </div>
     </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
 .s7 {
   width: 100%;
-  height: size-m(1102);
-  font-family: 'Noto Serif TC';
-  z-index: 1;
-  background: linear-gradient(191.29deg, #209589 22.21%, #096960 86.69%);
+  height: size-m(509);
+  background-image: url(@/section/s1/bg-m.jpg);
+  background-size: cover;
+  background-position: center center;
   @media screen and (min-width:768px) {
     height: size(1080);
-    background: linear-gradient(180deg, #11A196 0%, #11A196 100%, #17867C 100%);
+    background-image: url(@/section/s1/bg.jpg);
   }
 
-  .bg234 {
-    top: 0;
+  .slider {
+    position: absolute;
+    top: size-m(46);
     left: 0;
-    height: size-m(4824);
-    background: linear-gradient(113.99deg, #11A196 -15.34%, #0C887F 30.12%, #004B47 122.41%);
+    width: size-m(335);
+    height: size-m(305);
+    overflow: hidden;
     @media screen and (min-width:768px) {
-      // background: #078177;
-      display: none;
-    }
-  }
-
-  .p1 {
-    width: size-m(210);
-    height: size-m(247.34);
-    top: size-m(55);
-    left: size-m(123);
-    background-image: url(@/section/s7/1.jpg);
-    background-size: 100% auto;
-    // background-position: 0 100%;
-    border-radius: 48% 48% 0px 0px;
-    @media screen and (min-width:768px) {
-      width: size(497);
-      height: size(585);
-      top: size(145);
-      left: size(467.79);
-    }
-  }
-
-  .p2 {
-    width: size-m(147);
-    height: size-m(168.6);
-    top: size-m(189);
-    left: size-m(43);
-    background-image: url(@/section/s7/img.jpg);
-    background-size: 100% auto;
-    // background-position: 0 0;
-    border-radius: 48% 48% 0px 0px;
-    @media screen and (min-width:768px) {
-      width: size(381);
-      height: size(436.71);
-      top: size(439.9);
-      left: size(189);
-    }
-  }
-
-  .title {
-    top: size-m(340.26);
-    left: size-m(175.15);
-    font-size: size-m(13);
-    line-height: size-m(18);
-    color: #5CBD9E;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    @media screen and (min-width:768px) {
-      top: size(826.5);
-      left: size(484);
-      font-size: size(34);
-      line-height: size(48);
-    }
-  }
-
-  .content {
-    width: size-m(290);
-    top: size-m(393.91);
-    left: size-m(43);
-    text-align: justify;
-    @media screen and (min-width:768px) {
-      width: size(589.06);
-      top: size(166);
-      left: size(1120);
+      top: size(152);
+      left: size(663);
+      width: size(1165);
+      height: size(776);
     }
 
-    .logo {
-      width: size-m(114);
-      margin-bottom: size-m(24.02);
-      @media screen and (min-width:768px) {
-        width: size(240);
-        margin-bottom: size(73.84);
+    .swiper {
+      overflow: visible;
+
+      .swiper-pagination {
+        line-height: 1;
+        bottom: size-m(7.55);
+        @media screen and (min-width:768px) {
+          bottom: size(15);
+        }
+      }
+
+      .swiper-pagination-bullet {
+        opacity: 1;
+        background: none;
+        border: size-m(1) solid #fff;
+        width: size-m(18.9);
+        height: size-m(3.44);
+        border-radius: size-m(20);
+        @media screen and (min-width:768px) {
+          border: size(1) solid #fff;
+          width: size(49);
+          height: size(10);
+          border-radius: size(50);
+          margin: 0 size(7.5);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: #fff;
+        }
       }
     }
 
-    .t1 {
-      font-size: size-m(21);
-      line-height:1.34;
-      font-weight: 700;
-      margin-bottom: size-m(9.5);
-    letter-spacing: .03em;
+    img {
+      width: 100%;
+      height: size-m(305);
+      object-fit: cover;
       @media screen and (min-width:768px) {
-        font-size: size(32);
-        margin-bottom: size(26.5);
+        height: size(776);
       }
     }
 
     .txt {
-      font-size: size-m(15);
-      line-height:1.5;
-      margin-bottom: size-m(24.5);
-      font-weight: 300;
-    letter-spacing: 0em;
-    font-family: 'Noto sans TC';
+      right: size-m(5);
+      bottom: size-m(5);
+      font-weight: 700;
+      font-size: size-m(12);
+      line-height: size-m(17);
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+      text-shadow: size-m(0) size-m(4) size-m(4) rgba(0, 0, 0, 0.25);
       @media screen and (min-width:768px) {
-        font-size: size(19);
-        margin-bottom: size(70);
-      font-weight: 200;
-      letter-spacing: .1em;
-        line-height:1.7;
+        right: size(10);
+        bottom: size(10);
+        font-size: size(14);
+        line-height: size(20);
+        text-shadow: size(0) size(4) size(4) rgba(0, 0, 0, 0.25);
       }
     }
   }
 
-  .leaf {
-    width: size-m(85.25);
-    top: size-m(984.67);
-    left: size-m(73.87);
+  .en {
+    width: size-m(4.59);
+    left: size-m(352.98);
+    top: size-m(46);
     @media screen and (min-width:768px) {
-      width: size(248.17);
-      top: size(1034);
-      left: size(484);
+      width: size(351.61);
+      left: size(99);
+      top: size(153);
     }
-    .w-full{position: relative;z-index: 2;}
-    .window {
-      width: 23vw;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);filter: blur(2px);
+  }
 
-      @media screen and (min-width:768px) {
-        width: 12.7vw;
-      }
+  .lines {
+    width: size-m(290);
+    left: size-m(42.5);
+    top: size-m(361);
+    @media screen and (min-width:768px) {
+      width: size(490);
+      height: size(775);
+      left: size(99);
+      top: size(153);
+    }
+  }
+
+  .style {
+    height: size-m(61.5);
+    width: size-m(73.12908935546875);
+    left: size-m(14.919189453125);
+    top: size-m(369.5);
+    @media screen and (min-width:768px) {
+      height: size(275);
+      width: size(327);
+      left: size(99);
+      top: size(252);
     }
 
-    .bird {
-      width: size-m(51.79);
-      top: size-m(70.94);
-      left: size-m(12.3);
-      @media screen and (min-width:768px) {
-        width: size(145.63);
-        top: size(200.19);
-        left: size(34.58);
-      }
+    .tt {
+      background-image: url(@/section/s3/style.png);
+      mix-blend-mode: multiply;
+    }
+  }
+
+  .t1 {
+    height: size-m(54);
+    left: size-m(120.000244140625);
+    top: size-m(373);
+    font-family: 'Noto Serif TC';
+    font-weight: 600;
+    font-size: size-m(19);
+    line-height: size-m(27);
+    letter-spacing: 0.03em;
+    color: #39684F;
+    @media screen and (min-width:768px) {
+      height: size(104);
+      left: size(99);
+      top: size(669);
+      font-size: size(36);
+      line-height: size(52);
+    }
+  }
+
+  .t2 {
+    height: size-m(57);
+    left: size-m(43.500244140625);
+    top: size-m(451.5);
+    font-family: 'Noto Serif TC';
+    font-weight: 600;
+    font-size: size-m(12);
+    line-height: size-m(19);
+    color: #526760;
+    @media screen and (min-width:768px) {
+      height: size(78);
+      left: size(99);
+      top: size(845);
+      font-size: size(18);
+      line-height: size(26);
+      color: #39684F;
     }
   }
 }
-
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+import { Pagination, Navigation, Autoplay } from "swiper";
+const modules = ref([Pagination, Navigation, Autoplay]);
 </script>

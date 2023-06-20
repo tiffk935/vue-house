@@ -6,12 +6,12 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="德林哲里" srcset="">
+    <img class="w-32" src="@/assets/loading_w.gif" alt="展宜常閑" srcset="">
   </div>
   <!--loading end-->
-  <Nav v-if="config.showNav" />
+  <Nav v-if="config.showNav" :smallScrollBar="smallScrollBarRef" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
-    <h1 style="display:none;">德林哲里</h1>
+    <h1 style="display:none;">展宜常閑</h1>
     <S1 :smallScrollBar="smallScrollBarRef" />
     <S2 />
     <S3 />
@@ -19,33 +19,45 @@
     <S5 />
     <S6 />
     <S7 />
-    <S8 :setFsLightbox="setFsLightbox" />
+    <S8 />
     <S9 />
-    <S10 />
+    <S10 :showLightbox="showLightbox" />
     <S11 />
     <S12 />
     <Order :setModal="setModal" />
   </div>
 
+  <vue-easy-lightbox
+    :visible="visibleRef"
+    :imgs="imgsRef"
+    :index="indexRef"
+    :moveDisabled="true"
+    :rotateDisabled="true"
+    :zoomDisabled="true"
+    :pinchDisabled="true"
+    :loop="true"
+    @hide="visibleRef=false"
+  ></vue-easy-lightbox>
+
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="德林哲里" srcset="" />
+      <img src="@/section/form/phone.svg" alt="展宜常閑" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="德林哲里" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="展宜常閑" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="德林哲里" srcset="" />
+      <img src="@/section/form/pen.svg" alt="展宜常閑" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="德林哲里" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="展宜常閑" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -58,9 +70,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="德林哲里" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="德林哲里" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="德林哲里" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="展宜常閑" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="展宜常閑" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="展宜常閑" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -81,21 +93,7 @@
     </div>
   </div>
 
-  <div v-if="sliderToggler" class="tk-lightbox">
-    <div class="inner">
-      <div class="txt">
-        <div>
-          <span>{{sources[slide-1].year}}</span>{{sources[slide-1].txt}}
-        </div>
-        <div class="close" @click="sliderToggler = false"></div>
-      </div>
-      <div class="img-wrapper">
-        <div>
-          <img :src="sources[slide-1].img" :alt="sources[slide-1].year + sources[slide-1].txt">
-        </div>
-      </div>
-    </div>
-  </div>
+  
 
 </template>
 
@@ -110,6 +108,18 @@
   width: 100%;
   height: 100vh;
   overflow: auto;
+  
+  .s3, .s4, .s5, .s6, .s7, .s8, .s9, .s10, .s11, .s12 {
+    &:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.05);
+    }
+  }
 }
 .tk-lightbox {
   position: fixed;
@@ -195,6 +205,25 @@
     display: none !important;
   }
 }
+
+.vel-modal {
+  background: rgba(0,0,0,.7);
+
+  .vel-btns-wrapper .btn__close {
+    opacity: 1;
+  }
+
+  .vel-toolbar {
+    display: none;
+  }
+
+  .vel-img-title {
+    color: #fff;
+    font-size: 14px;
+    opacity: 1;
+  }
+}
+
 </style>
 
 <script setup>
@@ -214,61 +243,26 @@ import S12 from "@/section/s12.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import Policy from "@/section/form/policy.vue"
-import { nextTick, onMounted, ref } from "vue"
-
-// import AOS from 'aos';
+import { onMounted, ref  } from "vue"
 import Scrollbar from 'smooth-scrollbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-import slide1_full from '@/section/s8/1.jpg';
-import slide2_full from '@/section/s8/2.jpg';
-import slide3_full from '@/section/s8/3.jpg';
-import slide4_full from '@/section/s8/4.jpg';
-import slide5_full from '@/section/s8/5.jpg';
-import slide6_full from '@/section/s8/6.jpg';
-
+import VueEasyLightbox from 'vue-easy-lightbox';
+import slide1_full from '@/section/s10/1.jpg';
+import slide2_full from '@/section/s10/2.jpg';
+import slide3_full from '@/section/s10/3.jpg';
+import slide4_full from '@/section/s10/4.jpg';
+import slide5_full from '@/section/s10/5.jpg';
+import slide6_full from '@/section/s10/6.jpg';
+import slide7_full from '@/section/s10/7.jpg';
+import slide8_full from '@/section/s10/8.jpg';
 gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: false
+  showNav: true
 })
-const slide = ref(1)
-const sliderToggler = ref(false)
-const sources = ref([
-  {
-    img: slide1_full,
-    year: '2018',
-    txt: '汐止區  哲人德林',
-  },
-  {
-    img: slide2_full,
-    year: '2006',
-    txt: '中正區  泰安觀止',
-  }, 
-  {
-    img: slide3_full,
-    year: '2004',
-    txt: '士林區  圓山窗外',
-  }, 
-  {
-    img: slide4_full,
-    year: '2003',
-    txt: '大安區  青田主人',
-  }, 
-  {
-    img: slide5_full,
-    year: '2002',
-    txt: '大安區  林与堂',
-  }, 
-  {
-    img: slide6_full,
-    year: '2001',
-    txt: '大安區  青田',
-  }, 
-])
 
 const modalOpen = ref(false)
 const modalType = ref('')
@@ -278,12 +272,9 @@ let smallScrollBar = null;
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
-    // AOS.init();
-    // Scrollbar.init(document.querySelector('.home'));
 
     smallScrollBar = Scrollbar.init(document.querySelector('.home'), {
       damping: 0.05,
-      // alwaysShowTracks: true,
     });
 
     ScrollTrigger.scrollerProxy(".home", {
@@ -298,37 +289,53 @@ onMounted(() => {
     smallScrollBar.addListener(ScrollTrigger.update);
     smallScrollBarRef.value = smallScrollBar;
 
-    gsap.set('.home .fade', {opacity: 0, yPercent: 50});
     setTimeout(() => {
-      gsap.utils.toArray(".home .fade").forEach(item => {
-        gsap.to(item, {
-          opacity: 1,
-          yPercent: 0,
-          duration: 0.6,
-          ease: 'none',
-          scrollTrigger: {
-            scroller: ".home",
-            trigger: item,
-            start: "center 90%",
-            toggleActions: "play none none reverse",
-          },
-        });
+      gsap.utils.toArray(".home .upup").forEach(item => {
+        if(item.querySelector('.tt')) {
+          gsap.to(item.querySelector('.tt'), {
+            y: '0%',
+            duration: 1,
+            scrollTrigger: {
+              scroller: ".home",
+              trigger: item,
+              start: "center 90%",
+              toggleActions: "play none none reverse",
+            },
+          });
+        }
       });
 
-      let s4TL = gsap.timeline({
+      let s9upup = gsap.timeline({
         scrollTrigger: {
           scroller: ".home",
-          trigger: document.querySelectorAll('.s4 .fade_s4')[0],
+          trigger: '.s9 .logos',
           start: "top 85%",
           toggleActions: "play none none reverse",
         }
       });
 
-      s4TL
-        .from(document.querySelectorAll('.s4 .fade_s4')[0], { opacity: 0, yPercent: 50, duration: 0.6 }, 0)
-        .from(document.querySelectorAll('.s4 .fade_s4')[1], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.2)
-        .from(document.querySelectorAll('.s4 .fade_s4')[2], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.4)
-        .from(document.querySelectorAll('.s4 .fade_s4')[3], { opacity: 0, yPercent: 50, duration: 0.6 }, 0.6)
+      gsap.utils.toArray(".s9 .logo .tt").forEach(item => {
+        s9upup.to(item, {
+          y: '0%',
+          duration: 0.8,
+        }, '<+=0.3');
+      });
+
+      let s11upup = gsap.timeline({
+        scrollTrigger: {
+          scroller: ".home",
+          trigger: '.s11 .logos',
+          start: "top 85%",
+          toggleActions: "play none none reverse",
+        }
+      });
+
+      gsap.utils.toArray(".s11 .logo .tt").forEach(item => {
+        s11upup.to(item, {
+          y: '0%',
+          duration: 0.8,
+        }, '<+=0.3');
+      });
       
       gsap.utils.toArray(".home .parallax").forEach(item => {
         gsap.set(item, {backgroundPosition: '50% 0%'});
@@ -345,38 +352,65 @@ onMounted(() => {
           },
         });
       });
+
+      const panels = ['.s3', '.s4', '.s5', '.s6', '.s7', '.s8']; 
+      const navLinks = document.querySelectorAll('.topnav .top-btns .item');
+      const navLinksM = document.querySelectorAll('.menu .menu-item');
+      panels.forEach((panel, i) => {
+        if(document.querySelector(panel)){
+          ScrollTrigger.create({
+            scroller: ".home",
+            trigger: panel,
+            // start: "top bottom",
+            // end: "bottom bottom",
+            start: "top bottom",
+            // markers: true,
+            onEnter: () => {
+              navLinks.forEach((e) => {
+                  e.classList.remove("active");
+              });
+              navLinks[i].classList.add("active");
+
+              navLinksM.forEach((e) => {
+                  e.classList.remove("active");
+              });
+              navLinksM[i].classList.add("active");
+              // console.log(panel, 'onEnter')
+            },
+            onEnterBack: () => {
+              navLinks.forEach((e) => {
+                  e.classList.remove("active");
+              });
+              navLinks[i].classList.add("active");
+              
+              navLinksM.forEach((e) => {
+                  e.classList.remove("active");
+              });
+              navLinksM[i].classList.add("active");
+              // console.log(panel, 'onEnterBack')
+            },
+            onLeave: () => {
+              if(panel == '.s8') {
+                console.log('s8 leave')
+                navLinks[5].classList.remove("active");
+                navLinksM[5].classList.remove("active");
+              }
+              // console.log(panel, 'onLeave')
+            },
+            onLeaveBack: () => {
+              if(panel == '.s3') {
+                navLinks[0].classList.remove("active");
+                navLinksM[0].classList.remove("active");
+              }
+              // console.log(panel, 'onLeaveBack')
+            }
+          });
+        }
+      });
+
     }, 600);
-
-    window.onresize = () => {
-      if(sliderToggler.value === true){
-        setModalImg();
-      }
-    }
   };
-
 })
-
-function setFsLightbox(obj){
-  slide.value = obj.slide;
-  sliderToggler.value = obj.sliderToggler;
-  nextTick(() => {
-    setModalImg();
-  })
-}
-
-function setModalImg(){
-  const viewH = document.querySelector('.tk-lightbox').clientHeight;
-  const viewW = document.querySelector('.tk-lightbox').clientWidth;
-  const marginTop = 120 / 1080 * viewH;
-  let h = viewH - marginTop * 2 - document.querySelector('.tk-lightbox .txt').clientHeight;
-  let w = h * 688 / 768; //688*764
-  
-  if(w + 40 > viewW) {
-    document.querySelector('.tk-lightbox .img-wrapper').style.width = (viewW - 40) + 'px';
-  }else{
-    document.querySelector('.tk-lightbox .img-wrapper').style.width = w + 'px';
-  }
-}
 
 function setModal(obj){
   modalOpen.value = obj.modalOpen;
@@ -393,15 +427,27 @@ const go = () => {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-
   }
-}
-
-const open = () => {
-  window.open(info.fbLink);
 }
 
 const scrollTo = (el) => {
   smallScrollBar.scrollTo(0, document.querySelector(el).getBoundingClientRect().top, 1000);
+}
+
+const visibleRef = ref(false)
+const indexRef = ref(0)
+const imgsRef = ref([
+  { title: '展宜 詠喆', src: slide1_full },
+  { title: '展宜 拾秋', src: slide2_full },
+  { title: '展宜 摘月', src: slide3_full },
+  { title: '展宜 阿都蘭', src: slide4_full },
+  { title: '展宜 時間之外', src: slide5_full },
+  { title: '展宜 拿雲', src: slide6_full },
+  { title: '展宜 有一個圓', src: slide7_full },
+  { title: '展宜 仁愛', src: slide8_full },
+]);
+const showLightbox = (idx) => {
+  indexRef.value = idx;
+  visibleRef.value = true;
 }
 </script>

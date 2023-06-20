@@ -1,14 +1,9 @@
   <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
+  <div class="order relative text-center">
     <div class="order1">
       <div class="order2">
-        <!-- Title -->
-        <div class="order-title text-center text-white">CONTACT US</div>
-        <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="德林哲里" srcset=""
-          data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="德林哲里" srcset="" data-aos="fade"
-          data-aos-duration="1000"> -->
+        <img class="order-title hidden md:block" src="@/section/form/title.svg" />
+        <img class="order-title md:hidden" src="@/section/form/title-m.svg" />
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
@@ -16,7 +11,7 @@
               @input="(event) => (formData.name = event.target.value)" />
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
-              <input type="text" placeholder="信箱" class="input w-full rounded-none" :value="formData.email"
+              <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email"
               @input="(event) => (formData.email = event.target.value)" />
             <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
               <option value="" selected disabled>需求房型</option>
@@ -49,7 +44,7 @@
             class="checkbox bg-white rounded-md" />
           <p class="font-['Noto_Sans_TC'] text-white">
             本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#28D0C2] font-bold cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+              class="modal-button cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
         </div>
         <!-- <Policy /> -->
@@ -59,7 +54,7 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#004B47] text-white hover:text-white rounded-none" @click="send()">
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration text-white hover:text-white rounded-none" @click="send()">
           {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
@@ -84,40 +79,25 @@
   font-family: 'Noto Serif TC';
   background: #004B47;
 
-  input, select, textarea {
-    background: none;
-    border: 1px solid #fff;
-    color: #fff;
-  }
-
-  option{color: #000;}
-
   .order1 {
+    background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
-    padding-bottom: size(21);
+    padding-bottom: size(0);
   }
 
   .order2 {
-    padding: size(115) 0 size(73) 0;
+    padding: size(68) 0 size(50) 0;
   }
 
   .order-title {
-    font-size: size(43);
-    font-weight: 500;
-    margin-bottom: size(45);
+    width: size(899);
+    margin: 0 auto size(49) auto;
   }
 
   .z-10 {
     z-index: 10;
     position: relative;
-  }
-
-  .order-title-img {
-    display: block;
-    width: size(859);
-    margin: 0 auto;
-    margin-bottom: size(40);
   }
 
   .form {
@@ -153,31 +133,12 @@
     border: 0;
     z-index: 10;
     position: relative;
-    border: 1px solid #fff;
     position: relative;
     overflow: hidden;
-
-    &:before {
-      content: "";
-      display: block;
-      background: hsla(0,0%,100%,.4);
-      position: absolute;
-      left: -15%;
-      top: 0;
-      width: 120%;
-      height: 100%;
-      transform: skewX(-30deg) translateX(-100%);
-      transition: -webkit-transform .4s;
-      transition: transform .4s;
-      transform-origin: 0 0;
-    }
+    background: rgba(128, 175, 147, 0.62);
 
     &:hover {
-      background: #008D82;
-
-      &:before {
-        transform: skewX(-30deg) translateX(120%);
-      }
+      background: rgba(128, 175, 147, 1);
     }
   }
 
@@ -194,25 +155,18 @@
     margin-top: size-m(0);
 
     .order1 {
-      background: none;
+      background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(60) 0;
-      background-size: cover;
-      background-position: center center;
+      padding: size-m(40) 0 size-m(0) 0;
+      background: none;
     }
 
     .order-title {
-      font-size: size-m(29);
-      font-weight: 500;
-      margin-bottom: size-m(20);
-    }
-
-    .order-title-img {
-      width: size-m(208);
-      margin-bottom: size-m(20);
+      width: size-m(310);
+      margin: 0 auto size-m(37) auto;
     }
 
     .form {
@@ -286,15 +240,14 @@ const formData = reactive({
 const sending = ref(false)
 
 //非必填
-// const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg", "room_type", "city", "area"];
+const bypass = ["msg", "room_type"];
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
-  // "信箱", //email
+  "電子信箱", //email
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg

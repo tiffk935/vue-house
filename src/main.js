@@ -21,7 +21,6 @@ import VueSmoothScroll from "vue3-smooth-scroll"
 
 import Vue3TouchEvents from "vue3-touch-events";
 
-
 const toastOptions = {
     transition: "Vue-Toastification__fade",
     maxToasts: 5,

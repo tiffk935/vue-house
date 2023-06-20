@@ -1,312 +1,283 @@
 <template>
-  <section class="s1 relative text-white bg-[#5CBD9E]">
-    <div class="bg absolute parallax"></div>
-    <img class="bg bg01 absolute" src="@/section/s1/01.gif" />
-    <img class="bg bg02 absolute" src="@/section/s1/02.gif" />
-    <img class="logo absolute" src="@/section/s1/logo.svg" />
-    <div class="t1 absolute fade">生<br />有<br />熱<br />烈<br />，<br />藏<br />於<br />俗<br />常</div>
-    <div class="t2 absolute fade">公<br />園<br />建<br />築<br />為<br />您<br />而<br />來<br />。</div>
-    <div class="order-btn absolute" @click="scrollTo('.order')">立即預約</div>
-    <div class="t3 absolute md:hidden fade">德林哲人之里 戶戶社子公園首席</div>
-    <div class="t4 absolute md:hidden fade">24~39坪 ｜ 2~3房 ｜ 8787-8888</div>
-    <div class="t5 absolute hidden md:block fade">德林哲人之里 戶戶社子公園首席 ｜ 24~39 坪 ｜ 2~3 房  8787-8888</div>
-    <img class="group absolute md:hidden" src="@/section/s1/group-m.svg" />
-    <img class="group absolute hidden md:block" src="@/section/s1/group.svg" />
-    <div class="light">
-      <img class="absolute" src="@/section/s1/sun.jpg" />
+  <section class="s1 relative">
+    <img class="grid absolute md:hidden" src="@/section/s1/grid-m.jpg" />
+    <img class="grid absolute hidden md:block" src="@/section/s1/grid.jpg" />
+    <img class="t1 absolute md:hidden" src="@/section/s1/t1-m.svg" />
+    <img class="t1 absolute hidden md:block" src="@/section/s1/t1.svg" />
+    <div class="t2 upup absolute">
+      <div class="tt"></div>
     </div>
+    <div class="t3 upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="logo upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="line1 absolute"></div>
+    <div class="line2 absolute"></div>
+    <div class="title upup absolute">
+      <div class="tt"></div>
+    </div>
+    <div class="comingsoon upup absolute text-[#39684F]">
+      <div class="tt">
+        <div class="c1">COMING SOON</div>
+        <div class="c2">即將公開</div>
+      </div>
+    </div>
+    <div class="order-btn absolute" @click="scrollTo('.order')">預約品賞</div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-@keyframes sun {
-  to {
-    transform: skewX(0deg);
+.upup, .upup1, .upup9, .upup11 {
+  overflow: hidden;
+
+  .tt {
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    // transition: 1s all cubic-bezier(.32,0,.24,1.09);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
   }
 }
 
-.bg{
-  top:0;
-  width:100%;
-  height: 100%;
-  object-fit: cover;
-  background-image:url("@/section/s1/bg-m.jpg");
-    background-size: 100% auto;
-  @media screen and (min-width:768px) {
-  background-image:url("@/section/s1/bg.jpg");
-  }
-}
-.bg01{
-  mix-blend-mode: overlay;
-  opacity: 0.6;
-}
-.bg02{  
-  mix-blend-mode: screen;
-  opacity: 0.5;
-  filter: blur(7.5px);
-}  
 .s1 {
   width: 100%;
-  height: 100vh;
-  min-height:size-m(667);
-  max-height:size-m(812);
-  font-family: 'Noto Serif TC';
-  overflow: hidden;
+  height: size-m(677);
+  background-image: url(@/section/s1/bg-m.jpg);
+  background-size: cover;
+  background-position: center center;
   @media screen and (min-width:768px) {
-    min-height:size(800);
-    max-height:size(1080);
+    height: size(1080);
+    background-image: url(@/section/s1/bg.jpg);
   }
 
-  .logo {
-    width: size-m(86);
-    top:calc(30% + (99 - 812 * .30) * 100vw / 375);
-    left: size-m(148.5);
-    filter: drop-shadow(0 0 size-m(10) #1A2E37);
+  .bg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .grid {
+    width: size-m(295);
+    left: size-m(40);
+    top: size-m(79);
     @media screen and (min-width:768px) {
-      width: size(140.74);
-      top:calc(27% + (105 - 1080 * .25) * 100vw / 1920);
-      left: size(896);
-    filter: drop-shadow(0 0 size(20) #1A2E37);
+      width: size(713);
+      left: size(178);
+      top: size(235);
     }
   }
 
-  .t1, .t2 {
-    width: size-m(20);
-    top:calc(40% + (251 - 812 * .40) * 100vw / 375);
-    left: size-m(188.62);
-    font-size: size-m(16);
-    line-height: 1.187;
-    font-weight: 500;
-    filter: drop-shadow(0 0 size-m(10) #1A2E37);
+  .t1 {
+    width: size-m(69.87);
+    left: size-m(149.02);
+    top: size-m(107.5);
     @media screen and (min-width:768px) {
-      width: size(36);
-      top:calc(45% + (382 - 1080 * .45) * 100vw / 1920);
-      left: size(963);
-      font-size: size(28);
-    filter: drop-shadow(0 0 size(20) #204252);
+      width: size(237.53);
+      left: size(240);
+      top: size(284);
     }
   }
 
   .t2 {
-    top: size-m(267);
-    top:calc(40% + (267 - 812 * .4) * 100vw / 375);
-    left: size-m(166.38);
+    width: size-m(190.11);
+    height: size-m(66.82);
+    left: size-m(93.59);
+    top: size-m(175.4);
     @media screen and (min-width:768px) {
-      top:calc(45% + (409 - 1080 * .45) * 100vw / 1920);
-      left: size(920.14);
-    }
-  }
-
-  .order-btn {
-    width: size-m(149.47);
-    height: size-m(33);
-    top:calc(70% + (526 - 812 * .70) * 100vw / 375);
-    left: size-m(113.26);
-    font-size: size-m(19);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    letter-spacing: 0.2em;
-    font-weight: 700;
-    border-radius: 999px;
-    border: size-m(1) solid #fff;
-    background: #fff;
-    color: #004B47;
-    cursor: pointer;
-    transition: all .2s;
-    z-index: 1;
-    @media screen and (min-width:768px) {
-      width: size(209.5);
-      height: size(45.91);
-      top:calc(60% + (800 - 1080 * .6) * 100vw /1920);
-      left: size(855.25);
-      font-size: size(27);
-      border: size(1) solid #fff;
+      width: size(430.94);
+      height: size(150.41);
+      left: size(242.26);
+      top: size(501.99);
     }
 
-    &:hover {
-      background: rgba(0, 80, 75, 0.56);
-      color: #fff;
+    .tt {
+      background-image: url(@/section/s1/t2-m.svg);
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/s1/t2.svg);
+      }
     }
   }
 
   .t3 {
-    top: size-m(593.73);
-    top:calc(80% + (593.73 - 812 * .80) * 100vw / 375);
-    left: size-m(48.85);
-    font-size: size-m(19);
-    line-height: size-m(24);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
-
-  .t4 {
-    top: size-m(620.73);
-    top:calc(80% + (615.73 - 812 * .80) * 100vw / 375);
-    left: size-m(48.85);
-    font-size: size-m(18);
-    line-height: size-m(27);
-    font-weight: 500;
-    letter-spacing: 0.04em;
-
-    span {
-      font-size: size-m(19);
-      line-height: size-m(19.2);
-      margin-right: size-m(30);
-    }
-  }
-
-  .t5 {
+    width: size-m(192.94);
+    height: size-m(60.82);
+    left: size-m(91.04);
+    top: size-m(266.05);
     @media screen and (min-width:768px) {
-      top:calc(70% + (895 - 1080 * .7) * 100vw / 1920);
-      left: size(513);
-      font-size: size(29);
-      line-height: size(34.8);
-      font-weight: 500;
-      letter-spacing: 0.02em;
-    filter: drop-shadow(0 0 size(20) #1A2E37);
+      width: size(344.71);
+      height: size(48.06);
+      left: size(240);
+      top: size(704.72);
+    }
+
+    .tt {
+      background-image: url(@/section/s1/t3-m.svg);
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/s1/t3.svg);
+      }
     }
   }
 
-  .group {
-    width: size-m(270.83);
-    top: size-m(652.9);
-    top:calc(80% + (645.9 - 812 * .80) * 100vw / 375);
-    left: size-m(48.85);
-    filter: drop-shadow(0 0 size-m(10) #1A2E37);
+  .logo {
+    width: size-m(293.38);
+    height: size-m(71.24);
+    left: size-m(41.66);
+    top: size-m(394);
     @media screen and (min-width:768px) {
-      width: size(870);
-      top:calc(70% + (943 - 1080 * .7) * 100vw / 1920);
-      left: size(513);
-    filter: drop-shadow(0 0 size(20) #1A2E37);
+      width: size(708);
+      height: size(171.92);
+      left: size(1027);
+      top: size(235);
+    }
+
+    .tt {
+      background-image: url(@/section/s1/logo.svg);
     }
   }
 
-  .light img {
-    mix-blend-mode: screen;
-    transform: rotate(41.31deg);
-    transform-origin: 35% 45%;
-    width: size-m(832.67);
-    top: size-m(-341.42);
-    left: size-m(-368.06);
-    opacity: 0.8;
-    max-width: none;
-
-    //animation: sun 6s linear infinite alternate;
+  .line1 {
+    width: size-m(294.75);
+    height: size-m(1);
+    left: size-m(40);
+    top: size-m(484.88);
+    background: #26694D;
     @media screen and (min-width:768px) {
-      transform: rotate(22.47deg);
-      width: size(1307.19);
-      top: size(-657.43);
-      left: size(-367.86);
+      width: size(3);
+      height: size(713);
+      left: size(960);
+      top: size(235);
     }
   }
 
-  // .title{
-  //   position: absolute;
-  //   top: size(550);
-  //   right:size(280);
+  .line2 {
+    width: size-m(294.75);
+    height: size-m(1);
+    left: size-m(40);
+    top: size-m(633.15);
+    background: #26694D;
+    @media screen and (min-width:768px) {
+      width: size(775);
+      height: size(3);
+      left: size(960);
+      top: size(832);
+    }
+  }
 
-  //   @media screen and (max-width:768px) {
-  //     text-align: center;
-  //     top: size-m(240);
-  //     right:size-m(70);
-  //   }
+  .title {
+    width: size-m(299.02);
+    height: size-m(129.25);
+    left: size-m(37.69);
+    top: size-m(493.22);
+    @media screen and (min-width:768px) {
+      width: size(716);
+      height: size(313);
+      left: size(1025);
+      top: size(469);
+    }
 
-  //   .t1{
-  //     font-size: size(46);
-  //     color: #fff;
-  //     font-weight: 900;
-  //     margin-bottom:size(-20);
+    .tt {
+      background-image: url(@/section/s1/title.svg);
+    }
+  }
 
-  //     @media screen and (max-width:768px) {
-  //       font-size: size-m(29);
-  //       margin-bottom:size-m(-15);
-  //     }
-  //   }
+  .comingsoon {
+    width: size-m(166.68);
+    height: size-m(17.4);
+    left: size-m(40);
+    top: size-m(657.02);
+    @media screen and (min-width:768px) {
+      width: size(392);
+      height: size(40);
+      left: size(1025);
+      top: size(901);
+    }
 
-  //   .t2{
-  //     font-size: size(40);
-  //     color: #fff;
-  //     font-weight:500;
+    &>div {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      font-family: 'Noto Serif TC';
+      font-weight: 600;
+      font-size: size-m(12);
+      line-height: size-m(17);
+      @media screen and (min-width:768px) {
+        font-size: size(27);
+        line-height: size(38);
+      }
 
-  //     @media screen and (max-width:768px) {
-  //       font-size: size-m(25);
-  //     }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: size-m(101);
+        width: size-m(1);
+        height: size-m(10);
+        background: #39684F;
+        transform: translate(0, -50%);
+        @media screen and (min-width:768px) {
+          left: size(214 + 29);
+          width: size(1);
+          height: size(24);
+        }
+      }
+    }
 
-  //     span{
-  //       color: #FFF100;
-  //       font-size: size(61);
+    .c1 {
+      letter-spacing: 0.03em;
+    }
 
-  //       @media screen and (max-width:768px) {
-  //       font-size: size-m(34);
-  //     }
-  //     }
-  //   }
+    .c2 {
+      letter-spacing: 0.23em;
+    }
+  }
 
-  // }
+  .order-btn {
+    width: size-m(107);
+    height: size-m(22);
+    left: size-m(228.32);
+    top: size-m(654.51);
+    background: #0A1611;
+    font-family: 'Noto Serif TC';
+    font-weight: 600;
+    font-size: size-m(12);
+    line-height: size-m(22);
+    text-align: center;
+    letter-spacing: 0.21em;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition: all .5s;
+    @media screen and (min-width:768px) {
+      width: size(254.64);
+      height: size(54.95);
+      left: size(1480);
+      top: size(892);
+      font-size: size(23);
+      line-height: size(54.95);
+    }
 
-
-
-  // .cloud {
-  //   top: size-m(346);
-  //   left: size-m(136);
-  //   width: size-m(158);
-  //   animation: floatY 6s alternate-reverse infinite ease-in-out;
-  //   @media screen and (min-width:768px) {
-  //     top: size(126);
-  //     left: size(389);
-  //     width: size(402);
-  //   }
-  // }
-
-
-
-  // .house {
-  //   top: size-m(488);
-  //   left: size-m(35);
-  //   width: size-m(304);
-  //   @media screen and (min-width:768px) {
-  //     top: size(759);
-  //     left: size(1232);
-  //     width: size(575);
-  //   }
-  // }
-
-  // .logo {
-  //   top: size-m(62);
-  //   left: size-m(64);
-  //   width: size-m(246);
-  //   @media screen and (min-width:768px) {
-  //     top: size(382);
-  //     left: size(722.85);
-  //     width: size(448.81);
-  //   }
-  // }
-
-  // .text {
-  //   top: size-m(243);
-  //   left: size-m(68);
-  //   width: size-m(238);
-  //   @media screen and (min-width:768px) {
-  //     top: size(557);
-  //     left: size(1230);
-  //     width: size(410);
-  //   }
-  // }
+    &:hover {
+      background: #39684F;
+    }
+  }
 }
 </style>
 
 <script setup>
-import { inject } from 'vue';
+// import { inject } from 'vue';
 const props = defineProps({
   smallScrollBar: {
     type: Object
   }
 });
-const smoothScroll = inject('smoothScroll')
+// const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {
-  props.smallScrollBar.scrollTo(0, document.querySelector('.order').getBoundingClientRect().top, 1000);
+  props.smallScrollBar.scrollIntoView(document.querySelector(el));
 }
 </script>

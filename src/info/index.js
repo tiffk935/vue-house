@@ -1,4 +1,4 @@
-const caseName = "德林哲里"
+const caseName = "展宜常閑"
 
 export default {
     meta: {
@@ -6,24 +6,22 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address: "台北市士林區永平街80巷<br>（社子公園正對面）",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.3094905035878!2d121.50439911500742!3d25.09138278394559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af0043c5b8cd%3A0x6af0b6ad658df5cd!2z5b635p6X5ZOy6YeMIOaOpeW-heS4reW_gw!5e0!3m2!1szh-TW!2stw!4v1680753465807!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/Jk3vU3a7pq1kDPdaA",
-    phone: "02-8787-8888",
-    fbLink: "https://www.facebook.com/telin.zheli/",
-    fbMessage: "https://m.me/telin.zheli",
+    address: "台北市士林區磺溪街88巷9號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225.80025532365732!2d121.5238247!3d25.1084924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af6f39672c4d%3A0x4f568ae9cd525cb0!2z5bGV5a6c5bi46ZaR!5e0!3m2!1szh-TW!2stw!4v1686987013732!5m2!1szh-TW!2stw",
+    googleLink: "https://goo.gl/maps/MZLzU9H4NPpVUfNf8",
+    phone: "02-2833-6688",
+    fbLink: "#",
+    fbMessage: "#",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "德林建設股份有限公司"],
-        ["建築規劃", "呂佳隆建築師事務所"],
-        ["公設景觀", "如榆建築設計事務所"],
-        ["結構設計", "桁城工程顧問股份有限公司"],
-        ["營建工程", "輝達營造有限公司"],
-        ["建築代銷", "聯碩地產股份有限公司"],
-        ["建照號碼", "112建字第0041號"],
-        ["經 紀 人", "郭書瑋 (112)新北經字第004049號"],
-        ["建案位置", "台北市士林區永平街80巷<br class='md:hidden'>（社子公園正對面)"],
-        ["貴賓專線", "02-87878888"],
+        ['接待中心', '台北市士林區磺溪街88巷９號'],
+        ['基地位置', '台北市士林區磺溪街88巷９號'],
+        ['投資興建', '展宜建築開發股份有限公司 '],
+        ['建築設計', '三賦聯合建築師事務所'],
+        ['空間景觀', '創研空間設計有限公司'],
+        ['結構工程', '康閱印土木結構技師事務所'],
+        ['建築代銷', '聯碩行銷股份有限公司'],
+        ['建照號碼', '建字第　號'],
     ],
     gtmCode: ["GTM-PNQFGRW"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
@@ -36,23 +34,33 @@ export default {
     },
     navList: [
         {
-            name: "JIA 地段",
-            target: ".s2",
+            name: "天母富境",
+            target: ".s3",
             offset: "",
         },
         {
-            name: "JIA 品牌",
+            name: "悠遊行旅",
             target: ".s4",
             offset: "",
         },
         {
-            name: "JIA 美學",
+            name: "精品生活",
+            target: ".s5",
+            offset: "",
+        },
+        {
+            name: "國際學園",
             target: ".s6",
             offset: "",
         },
         {
-            name: "愛・JIA 人",
-            target: ".order",
+            name: "養生樂活",
+            target: ".s7",
+            offset: "",
+        },
+        {
+            name: "展宜建築",
+            target: ".s8",
             offset: "",
         },
     ],
