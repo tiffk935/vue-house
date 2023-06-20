@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="mobile-pv">
-      <div class="s1new">
+      <div class="s1new2">
         <img src="@/section/s1/A/bg_m.jpg" alt="" class="bg">
         <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
         <div class="txt">外觀示意圖</div>
