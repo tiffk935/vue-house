@@ -3,13 +3,15 @@
     <!-- A : Block 首頁 -->
     <div class=" ">
      <div class="s1new pc-pv"> 
+      <img src="@/section/s1/A/bg.jpg" alt="" class="bg">
       <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
+      <div class="txt">外觀示意圖</div>
       <div class="s1logo">
             <img src="@/section/s1/A/A_2.svg" alt="">
       </div>
       <div class="bg-img">
-      <img src="@/section/s1/A/style_1.png" alt="" class="style1">
-      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
+      <!--img src="@/section/s1/A/style_1.png" alt="" class="style1">
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2"-->
    <!--   <img src="@/section/s1/A/fl.png" alt="" class="style3">
       <img src="@/section/s1/A/fl.png" alt="" class="style4">
         <div class="bird">
@@ -19,11 +21,13 @@
     </div>
     <div class="mobile-pv">
       <div class="s1new">
+        <img src="@/section/s1/A/bg_m.jpg" alt="" class="bg">
         <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
+        <div class="txt">外觀示意圖</div>
         <div class="bg-img">
      <!--         <img src="@/section/s1/A/style_m.png" alt="" class="stylem"> --> 
-      <div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
-      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
+      <!--div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2"-->
           </div>
       <div class="s1logo">
             <img src="@/section/s1/A/m_A_2.svg" alt="">
