@@ -112,6 +112,7 @@
       position: relative;
       overflow: hidden;
       background: rgba(255, 255, 255, 0.4);
+      mix-blend-mode: multiply;
     }
 
     img {
@@ -137,6 +138,7 @@
     height: size(456);
     left: size(100);
     top: size(282);
+    mix-blend-mode: multiply;
   }
 
   .img-text {
