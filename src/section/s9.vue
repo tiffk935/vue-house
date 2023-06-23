@@ -25,12 +25,12 @@
 .s9 {
   width: 100%;
   height: size-m(361);
-  background-image: url(@/section/s1/bg-m.jpg);
+  // background-image: url(@/section/s1/bg-m.jpg);
   background-size: cover;
   background-position: center center;
   @media screen and (min-width:768px) {
     height: size(1080);
-    background-image: url(@/section/s1/bg.jpg);
+    // background-image: url(@/section/s1/bg.jpg);
   }
 
   .t1 {

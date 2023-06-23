@@ -11,12 +11,12 @@
 .s8 {
   width: 100%;
   height: size-m(386);
-  background-image: url(@/section/s1/bg-m.jpg);
+  // background-image: url(@/section/s1/bg-m.jpg);
   background-size: cover;
   background-position: center center;
   @media screen and (min-width:768px) {
     height: size(1080);
-    background: none;
+    // background: none;
   }
 
   .bg {

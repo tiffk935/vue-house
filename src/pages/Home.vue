@@ -10,7 +10,9 @@
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" :smallScrollBar="smallScrollBarRef" />
-  <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
+  <img class="main-bg md:hidden" src="@/section/s1/bg-m.jpg" />
+  <img class="main-bg hidden md:block" src="@/section/s1/bg.jpg" />
+  <div class="home overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">展宜常閑</h1>
     <S1 :smallScrollBar="smallScrollBarRef" />
     <S2 />
@@ -102,6 +104,15 @@
 
 .text-md{
   text-align: center;
+}
+
+.main-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .home {
