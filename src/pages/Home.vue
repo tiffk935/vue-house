@@ -259,14 +259,14 @@ import Scrollbar from 'smooth-scrollbar';
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import VueEasyLightbox from 'vue-easy-lightbox';
-import slide1_full from '@/section/s10/1.jpg';
-import slide2_full from '@/section/s10/2.jpg';
-import slide3_full from '@/section/s10/3.jpg';
-import slide4_full from '@/section/s10/4.jpg';
-import slide5_full from '@/section/s10/5.jpg';
-import slide6_full from '@/section/s10/6.jpg';
-import slide7_full from '@/section/s10/7.jpg';
-import slide8_full from '@/section/s10/8.jpg';
+import slide1_full from '@/section/s10/1.webp';
+import slide2_full from '@/section/s10/2.webp';
+import slide3_full from '@/section/s10/3.webp';
+import slide4_full from '@/section/s10/4.webp';
+import slide5_full from '@/section/s10/5.webp';
+import slide6_full from '@/section/s10/6.webp';
+import slide7_full from '@/section/s10/7.webp';
+import slide8_full from '@/section/s10/8.webp';
 gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true)

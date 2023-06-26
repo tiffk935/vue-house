@@ -15,16 +15,20 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/1.jpg" />
-          <div class="txt absolute">榮總醫院</div>
+          <img class="w-full object-center" src="@/section/s7/1.webp" />
+          <div class="txt absolute">台北榮民總醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/1.jpg" />
-          <div class="txt absolute">榮總醫院</div>
+          <img class="w-full object-center" src="@/section/s7/2.webp" />
+          <div class="txt absolute">振興醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/1.jpg" />
-          <div class="txt absolute">榮總醫院</div>
+          <img class="w-full object-center" src="@/section/s7/3.webp" />
+          <div class="txt absolute">陽明醫院</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s7/4.webp" />
+          <div class="txt absolute">新光醫院</div>
         </swiper-slide>
       </swiper>
     </div>
@@ -90,15 +94,16 @@
         opacity: 1;
         background: none;
         border: size-m(1) solid #fff;
-        width: size-m(18.9);
-        height: size-m(3.44);
+        width: size-m(6);
+        height: size-m(6);
         border-radius: size-m(20);
+        margin: 0 size-m(2);
         @media screen and (min-width:768px) {
           border: size(1) solid #fff;
-          width: size(49);
-          height: size(10);
+          width: size(30);
+          height: size(8);
           border-radius: size(50);
-          margin: 0 size(7.5);
+          margin: 0 size(6.5);
         }
 
         &.swiper-pagination-bullet-active {
@@ -136,9 +141,9 @@
   }
 
   .en {
-    width: size-m(4.59);
+    width: size-m(6.59);
     left: size-m(352.98);
-    top: size-m(46);
+    top: size-m(35);
     @media screen and (min-width:768px) {
       width: size(351.61);
       left: size(99);

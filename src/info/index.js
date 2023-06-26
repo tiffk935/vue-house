@@ -14,8 +14,8 @@ export default {
     fbMessage: "#",
     caseName: caseName,
     houseInfos: [
-        ['接待中心', '台北市士林區磺溪街88巷９號'],
-        ['基地位置', '台北市士林區磺溪街88巷９號'],
+        ['接待中心', '台北市士林區磺溪街88巷9號'],
+        ['基地位置', '台北市士林區磺溪街88巷9號'],
         ['投資興建', '展宜建築開發股份有限公司 '],
         ['建築設計', '三賦聯合建築師事務所'],
         ['空間景觀', '創研空間設計有限公司'],
@@ -23,8 +23,8 @@ export default {
         ['建築代銷', '聯碩行銷股份有限公司'],
         ['建照號碼', '建字第　號'],
     ],
-    gtmCode: ["GTM-PNQFGRW"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    gtmCode: ["GTM-WJJZZSM"], // 可放置多個
+    recaptcha_site_key_v3: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

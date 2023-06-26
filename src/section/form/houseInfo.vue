@@ -14,7 +14,10 @@
                     </div>
                     <div class="logos">
                         <img class="logo hidden md:block" src="@/section/form/logo.svg" />
-                        <img class="logo1" src="@/section/form/logo1.svg" />
+
+                        <a target="_blank" href="https://www.zenarchi.com/">
+                                <img class="logo1" src="@/section/form/logo1.svg" />
+                        </a>
                         <div class="flex">
                             <a target="_blank" href="https://unigiants.com.tw/">
                                 <img class="logo2" src="@/section/form/logo2.svg" alt="" />
@@ -29,11 +32,11 @@
             </div>
         </div>
     </div>
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+    <!--div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.png" alt="展宜常閑" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
-    </div>
+    </div-->
 </template>
 
 <style lang="scss">

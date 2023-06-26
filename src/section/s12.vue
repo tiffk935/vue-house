@@ -3,7 +3,7 @@
     <img class="grid absolute md:hidden" src="@/section/s12/grid-m.jpg" />
     <img class="grid absolute hidden md:block" src="@/section/s12/grid.jpg" />
     <div class="grid-t1 upup absolute">
-      <div class="tt">展宜建築的職人手工好房子<br>天母磺溪聚落稀有靜獻</div>
+      <div class="tt">展宜建築的職人手工好房子 <br class="md:hidden">天母磺溪聚落稀有靜獻</div>
     </div>
     <div class="grid-t2 upup absolute">
       <div class="tt">即將靜好公開 敬請期待</div>
@@ -54,7 +54,7 @@
 
   .grid-t1, .grid-t2 {
     height: size-m(36);
-    width: size-m(161);
+    width: size-m(170);
     left: size-m(106);
     top: size-m(140);
     font-family: 'Noto Serif TC';
@@ -66,7 +66,7 @@
     color: #FFFFFF;
     @media screen and (min-width:768px) {
       height: size(65);
-      width: size(688);
+      width: size(690);
       left: size(616);
       top: size(243);
       font-size: size(30);
@@ -76,12 +76,12 @@
 
   .grid-t2 {
     height: size-m(18);
-    width: size-m(138);
+    width: size-m(140);
     left: size-m(118);
     top: size-m(203);
     @media screen and (min-width:768px) {
       height: size(65);
-      width: size(317);
+      width: size(320);
       left: size(802);
       top: size(308);
     }
@@ -101,7 +101,7 @@
     color: #FFFFFF;
     @media screen and (min-width:768px) {
       height: size(43);
-      width: size(247);
+      width: size(249);
       left: size(837);
       top: size(420);
       font-weight: 600;

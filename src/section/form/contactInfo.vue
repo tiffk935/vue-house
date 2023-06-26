@@ -4,15 +4,15 @@
     <!-- <div class="logo"></div> -->
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center rounded-none" @click="setModal('phone')">
-        <img src="@/section/form/phone.svg" alt="德林哲里" srcset="" />
+        <img src="@/section/form/phone.svg" alt="展宜常閑" srcset="" />
         <div class="">{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none" @click="setModal('fb')">
-        <img src="@/section/form/messenger.svg" alt="德林哲里" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="展宜常閑" srcset="" />
         <div class="">FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="德林哲里" srcset="" />
+        <img src="@/section/form/fb.svg" alt="展宜常閑" srcset="" />
         <div class="">前往粉絲專頁</div>
       </div>
     </div>
@@ -21,7 +21,7 @@
         <div v-html="info.address"></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="setModal('gmap')">
-        <img src="@/section/form/gmap.svg" alt="德林哲里" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="展宜常閑" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>

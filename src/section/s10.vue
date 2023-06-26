@@ -36,42 +36,42 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/1.jpg" />
+          <img class="w-full" src="@/section/s10/1.webp" />
           <div class="txt absolute">展宜 詠喆</div>
           <div @click="showLightbox(0)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/2.jpg" />
+          <img class="w-full" src="@/section/s10/2.webp" />
           <div class="txt absolute">展宜 拾秋</div>
           <div @click="showLightbox(1)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/3.jpg" />
+          <img class="w-full" src="@/section/s10/3.webp" />
           <div class="txt absolute">展宜 摘月</div>
           <div @click="showLightbox(2)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/4.jpg" />
+          <img class="w-full" src="@/section/s10/4.webp" />
           <div class="txt absolute">展宜 阿都蘭</div>
           <div @click="showLightbox(3)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full ver" src="@/section/s10/5.jpg" />
+          <img class="w-full ver" src="@/section/s10/5.webp" />
           <div class="txt absolute">展宜 時間之外</div>
           <div @click="showLightbox(4)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/6.jpg" />
+          <img class="w-full" src="@/section/s10/6.webp" />
           <div class="txt absolute">展宜 拿雲</div>
           <div @click="showLightbox(5)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/7.jpg" />
+          <img class="w-full" src="@/section/s10/7.webp" />
           <div class="txt absolute">展宜 有一個圓</div>
           <div @click="showLightbox(6)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full ver" src="@/section/s10/8.jpg" />
+          <img class="w-full ver" src="@/section/s10/8.webp" />
           <div class="txt absolute">展宜 仁愛</div>
           <div @click="showLightbox(7)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
@@ -216,10 +216,10 @@
         border-radius: size-m(20);
         @media screen and (min-width:768px) {
           border: size(1) solid #000;
-          width: size(49);
-          height: size(10);
+          width: size(30);
+          height: size(8);
           border-radius: size(50);
-          margin: 0 size(7.5);
+          margin: 0 size(6.5);
         }
 
         &.swiper-pagination-bullet-active {

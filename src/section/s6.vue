@@ -15,16 +15,32 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s6/1.jpg" />
+          <img class="w-full object-center" src="@/section/s6/1.webp" />
           <div class="txt absolute">美國學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s6/1.jpg" />
-          <div class="txt absolute">美國學校</div>
+          <img class="w-full object-center" src="@/section/s6/2.webp" />
+          <div class="txt absolute">歐洲學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s6/1.jpg" />
-          <div class="txt absolute">美國學校</div>
+          <img class="w-full object-center" src="@/section/s6/3.webp" />
+          <div class="txt absolute">日僑學校</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s6/4.webp" />
+          <div class="txt absolute">蘭雅國民中學</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s6/5.webp" />
+          <div class="txt absolute">蘭雅國小</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s6/6.webp" />
+          <div class="txt absolute">臺北市立大學天母校區</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s6/7.webp" />
+          <div class="txt absolute">陽明大學</div>
         </swiper-slide>
       </swiper>
     </div>
@@ -90,15 +106,16 @@
         opacity: 1;
         background: none;
         border: size-m(1) solid #fff;
-        width: size-m(18.9);
-        height: size-m(3.44);
+        width: size-m(6);
+        height: size-m(6);
         border-radius: size-m(20);
+        margin: 0 size-m(2);
         @media screen and (min-width:768px) {
           border: size(1) solid #fff;
-          width: size(49);
-          height: size(10);
+          width: size(30);
+          height: size(8);
           border-radius: size(50);
-          margin: 0 size(7.5);
+          margin: 0 size(6.5);
         }
 
         &.swiper-pagination-bullet-active {
@@ -137,9 +154,9 @@
   }
 
   .en {
-    width: size-m(4.59);
+    width: size-m(6.59);
     left: size-m(16.61);
-    top: size-m(46);
+    top: size-m(35);
     @media screen and (min-width:768px) {
       width: size(351.61);
       left: size(1335);

@@ -12,7 +12,7 @@
         <img src="@/section/s11/timeline-text.svg" ref="viewImg2" />
       </div>
     </div>
-    <img class="img absolute hidden md:block" src="@/section/s11/img.png" />
+    <img class="img absolute hidden md:block" src="@/section/s11/img1.png" />
     <img class="img-text absolute hidden md:block" src="@/section/s11/img-text.svg" />
     <img class="swipe absolute md:hidden" src="@/section/s11/swipe.svg" />
     <div class="logos absolute">
@@ -111,7 +111,7 @@
       height: size-m(177);
       position: relative;
       overflow: hidden;
-      background: rgba(255, 255, 255, 0.4);
+      //background: rgba(255, 255, 255, 0.4);
       mix-blend-mode: multiply;
     }
 

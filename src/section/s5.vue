@@ -15,16 +15,44 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/1.jpg" />
+          <img class="w-full object-center" src="@/section/s5/1.webp" />
           <div class="txt absolute">天母SOGO</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/1.jpg" />
-          <div class="txt absolute">天母SOGO</div>
+          <img class="w-full object-center" src="@/section/s5/2.webp" />
+          <div class="txt absolute">新光三越</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/1.jpg" />
-          <div class="txt absolute">天母SOGO</div>
+          <img class="w-full object-center" src="@/section/s5/3.webp" />
+          <div class="txt absolute">大葉高島屋</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/4.webp" />
+          <div class="txt absolute">天玉街星巴克</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/5.webp" />
+          <div class="txt absolute">義式店面街廓</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/6.webp" />
+          <div class="txt absolute">天母異國氛圍</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/7.webp" />
+          <div class="txt absolute">天母異國氛圍</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/8.webp" />
+          <div class="txt absolute">五星級士東市場</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/9.webp" />
+          <div class="txt absolute">五星級士東市場</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s5/10.webp" />
+          <div class="txt absolute">五星級士東市場</div>
         </swiper-slide>
       </swiper>
     </div>
@@ -41,7 +69,7 @@
     <div class="t2 upup absolute">
       <div class="tt">
         中山北路六段生活圈，出巷到SOGO百貨<br>
-        忠誠路欒樹大道一路到高島屋、新光三越、華威天母影城<br>
+        忠誠路欒樹大道到高島屋、三越、華威影城<br>
         全台最美五星級士東市場老饕採買<br>
         滿足精品時尚、美食購物，巷弄間享異國浪漫情調
       </div>
@@ -91,15 +119,16 @@
         opacity: 1;
         background: none;
         border: size-m(1) solid #fff;
-        width: size-m(18.9);
-        height: size-m(3.44);
+        width: size-m(6);
+        height: size-m(6);
         border-radius: size-m(20);
+        margin: 0 size-m(2);
         @media screen and (min-width:768px) {
           border: size(1) solid #fff;
-          width: size(49);
-          height: size(10);
+          width: size(30);
+          height: size(8);
           border-radius: size(50);
-          margin: 0 size(7.5);
+          margin: 0 size(6.5);
         }
 
         &.swiper-pagination-bullet-active {
@@ -137,9 +166,9 @@
   }
 
   .en {
-    width: size-m(4.59);
+    width: size-m(6.59);
     left: size-m(352.98);
-    top: size-m(46);
+    top: size-m(35);
     @media screen and (min-width:768px) {
       width: size(351.61);
       left: size(99);
@@ -205,6 +234,7 @@
     font-size: size-m(12);
     line-height: size-m(19);
     color: #526760;
+    
     @media screen and (min-width:768px) {
       height: size(104);
       left: size(99);

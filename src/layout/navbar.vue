@@ -221,9 +221,17 @@
     }
 
     .contacts {
+
         @media screen and (min-width:768px) {
-            width: 156px;
+            width: size(180);
             justify-content: space-between;
+        }
+        svg{
+
+         @media screen and (min-width:768px) {
+            margin-left: size(15);
+        }   
+
         }
     }
 }
