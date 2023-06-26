@@ -24,7 +24,7 @@ export default {
         ['建照號碼', '建字第　號'],
     ],
     gtmCode: ["GTM-WJJZZSM"], // 可放置多個
-    recaptcha_site_key_v3: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN",
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
