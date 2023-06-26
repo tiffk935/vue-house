@@ -159,20 +159,24 @@
     </div-->
     <div class=" ">
      <div class="s1new pc-pv sg"> 
+      <img src="@/section/s1/A/bg10.jpg" alt="" class="bg">
       <div class="s1logo">
             <img src="@/section/s1/A/A_2_sg.svg" alt="">
       </div>
-      <div class="bg-img">
+      <div class="txt">外觀示意圖</div>
+      <!--div class="bg-img">
       <img src="@/section/s1/A/style_1.png" alt="" class="style1">
       <img src="@/section/s1/A/style_2.png" alt="" class="style2">
-      </div>
+      </div-->
     </div>
     <div class="mobile-pv sg">
       <div class="s1new">
+        <img src="@/section/s1/A/bg_m.jpg" alt="" class="bg">
+        <div class="txt">外觀示意圖</div>
         <div class="bg-img">
          
-      <div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
-      <img src="@/section/s1/A/style_2.png" alt="" class="style2">
+      <!--div><img src="@/section/s1/A/style_1.png" alt="" class="style1"></div>
+      <img src="@/section/s1/A/style_2.png" alt="" class="style2"-->
           </div>
       <div class="s1logo">
             <img src="@/section/s1/A/m_A_2_sg.svg" alt="">
