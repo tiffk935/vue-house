@@ -179,7 +179,7 @@
   .close {
     width: size-m(30);
     height: size-m(30);
-    background-image: url(@/section/s8/close.svg);
+    //background-image: url(@/section/s8/close.svg);
     background-repeat: no-repeat;
     background-size: size-m(25) auto;
     background-position: center center;
