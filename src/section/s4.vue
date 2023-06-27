@@ -78,7 +78,6 @@
   background-position: center center;
   @media screen and (min-width:768px) {
     height: size(1080);
-    // background-image: url(@/section/s1/bg.jpg);
   }
 
   .slider {
@@ -193,10 +192,10 @@
     }
 
     .tt {
-      background-image: url(@/section/s4/style-m.png);
+      background-image: url(@/section/s4/style.png);
       mix-blend-mode: multiply;
       @media screen and (min-width:768px) {
-        background-image: url(@/section/s3/style.png);
+        background-image: url(@/section/s4/style.png);
       }
     }
   }

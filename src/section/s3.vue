@@ -74,7 +74,7 @@
   background-position: center center;
   @media screen and (min-width:768px) {
     height: size(1080);
-    // background-image: url(@/section/s1/bg.jpg);
+    
   }
 
   .slider {

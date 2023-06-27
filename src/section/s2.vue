@@ -1,7 +1,7 @@
 <template>
   <section class="s2 relative">
     <div class="map relative" ref="viewbox">
-      <img class="map1" src="@/section/s2/map.png" ref="viewImg" />
+      <img class="map1" src="@/section/s2/map1.webp" ref="viewImg" />
     </div>
     <img :class="['hand-bg', 'absolute', 'md:hidden', {hide: swiped}]" src="@/section/s2/hand-bg.svg" />
     <img :class="['hand', 'absolute', 'md:hidden', {hide: swiped}]" src="@/section/s2/hand.svg" />
@@ -43,9 +43,10 @@
   // background-image: url(@/section/s1/bg-m.jpg);
   background-size: cover;
   background-position: center center;
+  background: #fff;
   @media screen and (min-width:768px) {
-    height: size(1080);
-    // background-image: url(@/section/s1/bg.jpg);
+    height: size(1543);
+    background: #fff;
   }
 
   .map {
