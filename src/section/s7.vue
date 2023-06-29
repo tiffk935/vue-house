@@ -23,12 +23,12 @@
           <div class="txt absolute">振興醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/3.webp" />
-          <div class="txt absolute">陽明醫院</div>
-        </swiper-slide>
-        <swiper-slide>
           <img class="w-full object-center" src="@/section/s7/4.webp" />
           <div class="txt absolute">新光醫院</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s7/3.webp" />
+          <div class="txt absolute">陽明醫院</div>
         </swiper-slide>
       </swiper>
     </div>

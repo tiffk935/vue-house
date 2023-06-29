@@ -19,20 +19,20 @@
           <div class="txt absolute">美國學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s6/2.webp" />
-          <div class="txt absolute">歐洲學校</div>
-        </swiper-slide>
-        <swiper-slide>
           <img class="w-full object-center" src="@/section/s6/3.webp" />
           <div class="txt absolute">日僑學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s6/4.webp" />
-          <div class="txt absolute">蘭雅國民中學</div>
+          <img class="w-full object-center" src="@/section/s6/2.webp" />
+          <div class="txt absolute">歐洲學校</div>
         </swiper-slide>
         <swiper-slide>
           <img class="w-full object-center" src="@/section/s6/5.webp" />
           <div class="txt absolute">蘭雅國小</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" src="@/section/s6/4.webp" />
+          <div class="txt absolute">蘭雅國民中學</div>
         </swiper-slide>
         <swiper-slide>
           <img class="w-full object-center" src="@/section/s6/6.webp" />

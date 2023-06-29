@@ -39,11 +39,7 @@
           <div class="txt absolute">台北101</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/7.webp" />
-          <div class="txt absolute">台北101</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/8.webp" />
+          <img class="w-full object-center" src="@/section/s4/9.webp" />
           <div class="txt absolute">台北車站商圈</div>
         </swiper-slide>
       </swiper>
