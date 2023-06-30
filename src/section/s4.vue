@@ -37,9 +37,9 @@
       </swiper>
     </div-->
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#C2465A]">城市 新榮景</div>
-      <div class="t2">重大願景建設 司法特區</div>
-      <div class="content">以國道三號為分界，北區鄰近土城醫院，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
+      <div class="t1 text-[#005d43]">城市 新榮景</div>
+      <div class="t2">國道北土城交流道2027完工</div>
+      <div class="content">以國道三號為分界，北區鄰近土城醫院、文教特區，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
     </div>
     <img class="tree absolute" src="@/section/s4/tree.png" />
   </section>
@@ -50,11 +50,12 @@
 
 .s4 {
   width: 100%;
+  z-index: 3;
   //height: size-m(667);
   height: size-m(387);
   @media screen and (min-width:768px) {
     //height: size(1080);
-    height: size(500);
+    height: size(300);
   }
 
   .bg {
@@ -156,17 +157,17 @@
   }
 
   .tree {
-    width: size-m(152);
+    width: size-m(182);
     //top: size-m(518);
-    top: size-m(218);
-    left: size-m(18);
+    top: size-m(208);
+    left: size-m(-40);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(345);
       //top: size(742);
       top: size(242);
-      left: size(96);
+      left: size(-50);
     }
   }
 }

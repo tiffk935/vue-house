@@ -1,9 +1,8 @@
 <template>
-  <section class="s8 bg-[#CA485D] relative">
+  <section class="s8 bg-[#005d43] relative">
     <img class="bg absolute hidden md:block" src="@/section/s8/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s8/bg-m.png" />
     <img class="tree2 absolute absolute md:hidden" src="@/section/s8/tree2.png" />
-    <img class="man absolute md:hidden" src="@/section/s8/man.png" />
     <div class="text absolute md:hidden" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">移動 快捷有感</div>
       <div class="t2">1高2快3捷運 說走就走</div>
@@ -62,10 +61,8 @@
       </div>
       <div class="item">
         <img class="tree3 absolute" src="@/section/s8/tree3.png" />
-        <img class="girl absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s8/girl.png" />
       </div>
       <div class="item">
-        <img class="man absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s8/man.png" />
         <img class="tree2 absolute" src="@/section/s8/tree2.png" />
       </div>
       <div class="item">
@@ -288,12 +285,11 @@
 
   .tree1 {
     width: size-m(154);
-    top: size-m(194);
-    left: size-m(-35);
+    top: size-m(214);
+    left: size-m(-55);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     max-width: none;
-    z-index: 11;
     @media screen and (min-width:768px) {
       width: size(312) !important;
       top: size(338);
@@ -303,15 +299,15 @@
 
   .tree2 {
     width: size-m(125);
-    top: size-m(204);
-    left: size-m(180);
+    top: size-m(234);
+    right: size-m(-50);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     max-width: none;
     @media screen and (min-width:768px) {
       width: size(246) !important;
       top: size(303);
-      left: size(19);
+      left: size(-50);
     }
   }
 

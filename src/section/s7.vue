@@ -1,5 +1,5 @@
 <template>
-  <section class="s7 bg-[#CA485D] relative">
+  <section class="s7 bg-[#005d43] relative">
     <img class="bg absolute hidden md:block" src="@/section/s7/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s7/bg-m.png" />
     <img class="tree absolute" src="@/section/s7/tree.png" />
@@ -72,8 +72,6 @@
       <div class="t2">宜居定居首選 有感慢活</div>
       <div class="content">坐藏山水，同時享受綠意環繞，最舒適的生活環境；沒有重劃區的發展黑暗期，直接給您最成熟的機能，從日常生活到周末樂活，一次搞定。</div>
     </div>
-    <img class="man absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s7/man.png" />
-    <img class="bird absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/s7/bird.svg" />
   </section>
 </template>
 
@@ -243,6 +241,7 @@
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     max-width: none;
+    opacity: .6;
     @media screen and (min-width:768px) {
       width: size(1920);
       bottom: size(-60);

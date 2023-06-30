@@ -9,7 +9,7 @@
     <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
     <div class="title" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">土城 新矽谷</div>
-      <div class="t2">司法特區 蓄勢待發</div>
+      <div class="t2">重大建設齊發</div>
       <div class="content">
         偉大始於細節，點滴匯聚成形。萬大線串起雙北科技金軸，三大智慧園區以土城為中心，司法特區啟動，注入區域建設動能，我們這一代人正看著土城崛起。
       </div>

@@ -1,11 +1,7 @@
   <template>
-  <div class="order relative bg-[#FFDFE3] text-center">
+  <div class="order relative bg-[#005d43] text-center">
     <div class="order1 relative">
       <img class="tree absolute hidden md:block" src="@/section/s14/tree.png" />
-      <img class="bird1 absolute hidden md:block" src="@/section/form/bird1.svg" />
-      <img class="bird2 absolute hidden md:block" src="@/section/form/bird2.svg" />
-      <img class="man1 absolute hidden md:block" data-aos="fade-right" data-aos-delay="0" src="@/section/form/man1.png" />
-      <img class="man2 absolute hidden md:block" data-aos="fade-left" data-aos-delay="0" src="@/section/form/man2.png" />
       <div class="order2">
         <!-- Title -->
         <div class="order-title text-center text-white">{{ info.order.title }}</div>
@@ -86,8 +82,8 @@
   // padding-top: size(115);
 
   .order1 {
-    background-color: #CA485D;
-    background-image: url(@/section/form/bg.png);
+    background-color: #005d43;
+    background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
@@ -209,7 +205,7 @@
 
     .order1 {
       // background: none;
-      background-image: url(@/section/form/bg-m.png);
+      background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
     }
 

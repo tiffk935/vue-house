@@ -1,5 +1,5 @@
 <template>
-  <section class="s6 bg-[#CA485D] relative">
+  <section class="s6 bg-[#005d43] relative">
     <img class="bg absolute hidden md:block" src="@/section/s6/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s6/bg-m.png" />
     <img class="tree absolute" src="@/section/s6/tree.png" />
@@ -9,7 +9,6 @@
       <div class="content">10分鐘內吃喝玩樂，延吉、裕民與家樂福三大商圈；15分鐘內享受21,000坪綠意；清水國小、中正國中和裕德雙語高中，人文教育自小養成。</div>
     </div>
     <img class="tree2 absolute" src="@/section/s6/tree2.png" />
-    <img class="bird absolute" src="@/section/s6/bird.svg" />
 
     <div class="slider absolute">
       <swiper 
@@ -235,7 +234,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(109, 0, 33, 0.7);
+          background: rgba(0, 58, 43, 0.7);
           transition: opacity .2s;
         }
 
@@ -304,6 +303,7 @@
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     max-width: none;
+    opacity: .6;
     @media screen and (min-width:768px) {
       width: size(1920);
       bottom: size(-60);

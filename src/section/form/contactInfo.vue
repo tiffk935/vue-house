@@ -97,7 +97,7 @@
     bottom: size(21);
     left: size(23);
     right: size(23);
-    border: size(12) solid #D9374B;
+    border: size(12) solid #005d43;
   }
 
   .logo {
@@ -122,7 +122,7 @@
 
     .contact-item {
       background-color: #E2C46C;
-      color: #CA485D;
+      color: #005d43;
       width: 100%;
       padding: 0 size(55);
       font-size: size(16);
@@ -189,7 +189,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #AD1B2D;
+      background-color: #003b2b;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
