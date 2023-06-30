@@ -22,9 +22,9 @@
     <S6 />
     <S7 />
     <S8 />
-    <S9 />
     <S10 :showLightbox="showLightbox" />
     <S11 />
+    <S9 />
     <S12 />
     <Order :setModal="setModal" />
   </div>

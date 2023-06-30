@@ -1,7 +1,7 @@
 <template>
   <section class="s11 relative">
     <div class="t1 upup absolute">
-      <div class="tt">展宜建築的職人手工好房子<br>天母磺溪聚落稀有靜獻</div>
+      <div class="tt">專挑市中心好地段精鑄作品<br>都會中一座座高抬頭率的展宜建築<br>您也許曾在街巷中駐足過</div>
     </div>
     <div class="t2 upup absolute">
       <div class="tt">展宜建築深度研究每一塊土地紋理，精挑最好的地段<br>把蓋房子當成是一種藝術創作，拒絕規格化和複製品<br>一棟棟有個性的展宜建築，在市中心地表陸續誕生</div>
@@ -58,10 +58,10 @@
   }
 
   .t1 {
-    height: size-m(54);
-    width: size-m(235);
-    left: size-m(71);
-    top: size-m(19);
+    height: size-m(84);
+    width: size-m(298);
+    left: size-m(40);
+    top: size-m(9);
     font-family: 'Noto Serif TC';
     font-weight: 600;
     font-size: size-m(19);
@@ -69,7 +69,7 @@
     text-align: center;
     letter-spacing: 0.03em;
     @media screen and (min-width:768px) {
-      height: size(104);
+      height: size(154);
       width: size(566);
       left: size(677);
       top: size(87);
@@ -82,7 +82,7 @@
     height: size-m(57);
     width: size-m(283);
     left: size-m(47);
-    top: size-m(88);
+    top: size-m(108);
     font-family: 'Noto Serif TC';
     font-weight: 600;
     font-size: size-m(12);
@@ -93,7 +93,7 @@
       height: size(78);
       width: size(437);
       left: size(742);
-      top: size(231);
+      top: size(281);
       font-size: size(18);
       line-height: size(26);
     }
