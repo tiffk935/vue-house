@@ -1,19 +1,23 @@
 <template>
-  <section class="s1 text-white bg-[#CA485D] relative">
-    <img class="bg absolute hidden md:block" src="@/section/s1/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.png" />
-    <img class="tree absolute" src="@/section/s1/tree.png" />
+  <section class="s1 text-white relative">
+    <img class="bg absolute hidden md:block" src="@/section/s1/bg.jpg" />
+    <img class="bg absolute md:hidden" src="@/section/s1/bg-m.jpg" />
+    <img class="tree absolute hidden md:block" src="@/section/s1/tree.png" />
+    <img class="tree absolute md:hidden" src="@/section/s1/tree_m.png" />
+    <img class="tree1 absolute md:hidden" src="@/section/s1/tree_m1.png" />
     <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <div class="title absolute" data-aos="fade-down" data-aos-delay="200">
-      <div class="l1">人生MVP 生活紅不讓</div>
-      <div class="l2">司法特區 × 萬坪森活｜<span class="text-[#EACA6B]">17-29坪</span></div>
+    <div class="title absolute hidden md:block" data-aos="fade-down" data-aos-delay="200">
+      <div class="l1">文教特區．純住生活．17-29坪</div>
     </div>
-    <img class="person1 absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/person1.png" />
+    <div class="title absolute md:hidden" data-aos="fade-down" data-aos-delay="200">
+      <div class="l1">文教特區．純住生活<br>17-29坪</div>
+    </div>
+    <!--img class="person1 absolute" data-aos="fade-right" data-aos-delay="0" src="@/section/s1/person1.png" />
     <img class="person2 absolute" data-aos="fade-right" data-aos-delay="200" src="@/section/s1/person2.png" />
     <div data-aos="fade-left" data-aos-delay="200">
       <img class="person3 absolute" src="@/section/s1/person3.png" />
     </div>
-    <img class="person4 absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s1/person4.png" />
+    <img class="person4 absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s1/person4.png" /-->
 
     <!-- <img class="cloud absolute md:hidden" src="@/section/s1/cloud-m.png" />
     <img class="cloud absolute hidden md:block" src="@/section/s1/cloud.png" />
@@ -58,12 +62,26 @@
   }
 
   .tree {
-    width: size-m(1059);
+    width: size-m(375);
     bottom: size-m(0);
-    left: size-m(-342);
+    left: size-m(0);
     max-width: none;
     transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
+    //animation: tree 3s alternate-reverse infinite ease-in-out;
+    @media screen and (min-width:768px) {
+      width: size(1920);
+      bottom: size(0);
+      left: size(0);
+    }
+  }
+
+  .tree1 {
+    width: size-m(375);
+    top: size-m(0);
+    left: size-m(0);
+    max-width: none;
+    transform-origin: bottom;
+    //animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(1920);
       bottom: size(0);
@@ -118,7 +136,7 @@
 
   .logo {
     width: size-m(271);
-    top: size-m(100);
+    top: size-m(190);
     left: size-m(52);
     @media screen and (min-width:768px) {
       width: size(785.52);
@@ -129,11 +147,11 @@
 
   .title {
     width: 100%;
-    top: size-m(261);
+    top: size-m(341);
     left: 0;
     text-align: center;
     font-weight: 600;
-    font-size: size-m(20);
+    font-size: size-m(23);
     @media screen and (min-width:768px) {
       top: size(600);
       font-size: size(30);

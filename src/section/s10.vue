@@ -17,8 +17,8 @@
         <div class="content">20年經驗累積，在北台灣房地產市場佔有一席之地。2004年起擴大推案，以造鎮案大基地等系列遍地開花，更經常是重劃區的開發領頭羊。</div>
       </div>
     </div>
-    <img class="tree absolute hidden md:block" src="@/section/s10/tree.svg" />
-    <img class="tree absolute md:hidden" src="@/section/s10/tree-m.svg" />
+    <!--img class="tree absolute hidden md:block" src="@/section/s10/tree.png" />
+    <img class="tree absolute md:hidden" src="@/section/s10/tree-m.svg" /-->
     <div class="abtns">
       <div class="abtn" @click="modalOpen = true; modalType = '作品'">城市<br class="md:hidden">建設</div>
       <div class="abtn" @click="modalOpen = true; modalType = '基地開發'">萬坪<br class="md:hidden">造鎮</div>
@@ -233,7 +233,7 @@
 
     .t1 {
       font-family: 'Noto Serif TC';
-      color: #C2465A;
+      color: #005d43;
       font-weight: 800;
       font-size: size-m(25);
       line-height: size-m(17);
@@ -352,8 +352,8 @@
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
-      width: size(1998);
-      top: size(146);
+      width: size(2020);
+      top: size(6);
       left: size(-53);
     }
   }

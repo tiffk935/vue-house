@@ -2,7 +2,7 @@
   <section class="s11 relative">
     <img class="bg absolute hidden md:block" src="@/section/s11/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s11/bg-m.png" />
-    <img class="tree absolute hidden md:block" src="@/section/s11/tree.svg" />
+    <img class="tree absolute hidden md:block" src="@/section/s11/tree.png" />
     <div class="slider absolute">
       <swiper 
         :spaceBetween="10"
@@ -193,7 +193,7 @@
 
       .t1 {
         font-family: 'Noto Serif TC';
-        color: #C2465A;
+        color: #005d43;
         font-weight: 800;
         font-size: size-m(25);
         line-height: size-m(17);
@@ -332,8 +332,8 @@
     @media screen and (min-width:768px) {
       position: absolute;
       width: size(292);
-      right: 0;
-      bottom: 0;
+      right: size(-50);
+      bottom: size(-80);
     }
   }
 

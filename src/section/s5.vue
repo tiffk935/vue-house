@@ -3,20 +3,18 @@
     <img class="bg absolute hidden md:block" src="@/section/s5/bg.png" />
     <img class="bg absolute md:hidden" src="@/section/s5/bg-m.png" />
     <img class="tree absolute" src="@/section/s5/tree.png" />
-    <img class="man absolute" data-aos="fade-left" data-aos-delay="0" src="@/section/s5/man.png" />
-    <img class="bird absolute hidden md:block"  data-aos="fade-left" data-aos-delay="0" src="@/section/s5/bird.svg" />
     <div class="pic1 absolute">
       <img src="@/section/s5/pic1.jpg" />
-      <div class="text-white">頂埔科技園區實景</div>
+      <div class="text-white">情境示意圖</div>
     </div>
     <div class="pic2 absolute">
       <img src="@/section/s5/pic2.jpg" />
-      <div class="text-white">遠東通訊園區實景</div>
+      <div class="text-white"></div>
     </div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#C2465A]">科技 新門戶</div>
-      <div class="t2">擁抱智慧浪潮 千億產值</div>
-      <div class="content">擁抱3大科技產業園區，中和軟體、遠東通訊及頂埔科技，進駐產業人口將近4萬人，預估產值將突破兆元，土城新矽谷準備好了。</div>
+      <div class="t1 text-[#005d43]">大學城進行式</div>
+      <div class="t2">土城核心2.0 純住文教特區</div>
+      <div class="content">大學城藝文氛圍令人嚮往，更是房價保證班。『土城核心2.0』集政府單位、萬坪公園校園、捷運商圈、大型醫院等機能於一身，增值未來無可限量。</div>
     </div>
   </section>
 </template>
@@ -27,6 +25,7 @@
 .s5 {
   width: 100%;
   height: size-m(667);
+  z-index: 2;
   @media screen and (min-width:768px) {
     height: size(1080);
   }
@@ -39,16 +38,16 @@
   }
 
   .tree {
-    width: size-m(123.49);
-    top: size-m(-63);
-    right: size-m(-10.37);
+    width: size-m(113.49);
+    top: size-m(123);
+    right: size-m(-50.37);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     z-index: 1;
     @media screen and (min-width:768px) {
       width: size(246);
-      top: size(-149.4);
-      right: size(397);
+      top: size(89.4);
+      right: size(97);
       z-index: 0;
     }
   }
@@ -72,23 +71,23 @@
 
   .pic1 {
     width: size-m(256);
-    top: size-m(24);
+    top: size-m(4);
     left: size-m(61);
     @media screen and (min-width:768px) {
       width: size(602);
-      top: size(154);
+      top: size(247);
       left: size(1063);
     }
   }
 
   .pic2 {
     width: size-m(375);
-    height: size-m(272.88);
+    height: size-m(326);
     bottom: 0;
     left: 0;
     @media screen and (min-width:768px) {
       width: size(960);
-      height: 100%;
+      height: size(835);
     }
 
     img {
@@ -118,7 +117,7 @@
 
   .text {
     width: 100%;
-    top: size-m(225);
+    top: size-m(185);
     left: 0;
     padding: 0 size-m(30);
     text-align: center;
