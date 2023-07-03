@@ -1,7 +1,5 @@
 <template>
   <section class="s11 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s11/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s11/bg-m.png" />
     <img class="tree absolute hidden md:block" src="@/section/s11/tree.png" />
     <div class="slider absolute">
       <swiper 
@@ -106,6 +104,8 @@
 .s11 {
   width: 100%;
   height: size-m(667);
+  background: url("@/section/s12/bg.jpg");
+  background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);
   }

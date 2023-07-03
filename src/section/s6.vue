@@ -1,7 +1,5 @@
 <template>
-  <section class="s6 bg-[#005d43] relative">
-    <img class="bg absolute hidden md:block" src="@/section/s6/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s6/bg-m.png" />
+  <section class="s6 relative">
     <img class="tree absolute" src="@/section/s6/tree.png" />
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">便利 全集中</div>
@@ -119,6 +117,8 @@
 .s6 {
   width: 100%;
   height: size-m(667);
+  background:#005d43  url("@/section/s8/bg.png");
+  background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);
   }

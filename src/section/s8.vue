@@ -1,7 +1,5 @@
 <template>
-  <section class="s8 bg-[#005d43] relative">
-    <img class="bg absolute hidden md:block" src="@/section/s8/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s8/bg-m.png" />
+  <section class="s8 relative">
     <img class="tree2 absolute absolute md:hidden" src="@/section/s8/tree2.png" />
     <div class="text absolute md:hidden" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">移動 快捷有感</div>
@@ -90,6 +88,8 @@
 .s8 {
   width: 100%;
   height: size-m(667);
+  background:#005d43  url("@/section/s8/bg.png");
+  background-size: auto;
   @media screen and (min-width:768px) {
     height: size(960);
   }

@@ -1,7 +1,5 @@
 <template>
   <section class="s5 relative">
-    <img class="bg absolute hidden md:block" src="@/section/s5/bg.png" />
-    <img class="bg absolute md:hidden" src="@/section/s5/bg-m.png" />
     <img class="tree absolute" src="@/section/s5/tree.png" />
     <div class="pic1 absolute">
       <img src="@/section/s5/pic1.jpg" />
@@ -26,6 +24,8 @@
   width: 100%;
   height: size-m(667);
   z-index: 2;
+  background: url("@/section/s12/bg.jpg");
+  background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);
   }

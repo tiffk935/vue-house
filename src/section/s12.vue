@@ -1,10 +1,10 @@
 <template>
   <section class="s12 relative">
-    <img class="bg absolute md:hidden" src="@/section/s12/bg-m.png" />
-    <img class="bg absolute hidden md:block" src="@/section/s12/bg.png" />
+   <!--  <img class="bg absolute md:hidden" src="@/section/s12/bg-m.png" />
+    <img class="bg absolute hidden md:block" src="@/section/s12/bg.png" />  -->
     <img class="tree absolute" src="@/section/s12/tree.png" />
     <div class="img-wrapper absolute">
-      <img class="img" src="@/section/s12/img.png" />
+      <img class="img" src="@/section/s12/img.jpg" />
       <div class="text-white">情境示意圖</div>
     </div>
     <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s12/logo.svg" />
@@ -23,6 +23,8 @@
 .s12 {
   width: 100%;
   height: size-m(667);
+  background: url("@/section/s12/bg.jpg");
+  background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);
   }
