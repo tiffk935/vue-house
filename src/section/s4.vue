@@ -39,7 +39,10 @@
       <div class="t2">國道北土城交流道2027完工</div>
       <div class="content">以國道三號為分界，北區鄰近土城醫院、文教特區，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
     </div>
-    <img class="newimg absolute" src="@/section/s4/pic1.jpg" />
+    <div class="newimg absolute">
+      <img src="@/section/s4/pic1.jpg" />
+      <div class="text-white">情境示意圖</div>
+    </div>
     <img class="tree absolute" src="@/section/s4/tree.png" />
   </section>
 </template>
@@ -155,6 +158,23 @@
       line-height: 1.7;
       @media screen and (min-width:768px) {
         font-size: size(20);
+      }
+    }
+  }
+
+  .newimg  {
+    .text-white {
+      font-size: size-m(12);
+      text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
+      position: absolute;
+      bottom: size-m(10);
+      right: size-m(10);
+      line-height: 1;
+      @media screen and (min-width:768px) {
+        font-size: size(12);
+        text-shadow: 0px 0px size(5) rgba(0, 0, 0, 0.8);
+        bottom: size(10);
+        right: size(10);
       }
     }
   }
