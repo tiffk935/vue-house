@@ -46,8 +46,8 @@
     z-index: 1;
     @media screen and (min-width:768px) {
       width: size(246);
-      top: size(89.4);
-      right: size(97);
+      top: size(19.4);
+      right: size(67);
       z-index: 0;
     }
   }
@@ -71,11 +71,11 @@
 
   .pic1 {
     width: size-m(256);
-    top: size-m(4);
+    top: size-m(155);
     left: size-m(61);
     @media screen and (min-width:768px) {
       width: size(602);
-      top: size(247);
+      top: size(639);
       left: size(1063);
     }
   }
@@ -117,13 +117,13 @@
 
   .text {
     width: 100%;
-    top: size-m(185);
+    top: size-m(0);
     left: 0;
     padding: 0 size-m(30);
     text-align: center;
     @media screen and (min-width:768px) {
-      top: size(669);
-      padding: 0 size(344) 0 size(1063);
+      top: size(327);
+      padding: 0 size(314) 0 size(1063);
       text-align: left;
     }
 
@@ -157,7 +157,7 @@
       text-align: justify;
       @media screen and (min-width:768px) {
         font-size: size(20);
-        width: size(515);
+        width: size(595);
         
       }
     }

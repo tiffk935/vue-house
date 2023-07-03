@@ -39,6 +39,7 @@
       <div class="t2">國道北土城交流道2027完工</div>
       <div class="content">以國道三號為分界，北區鄰近土城醫院、文教特區，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
     </div>
+    <img class="newimg absolute" src="@/section/s4/pic1.jpg" />
     <img class="tree absolute" src="@/section/s4/tree.png" />
   </section>
 </template>
@@ -113,14 +114,16 @@
   .text {
     width: 100%;
     //top: size-m(319);
-    top: size-m(39);
+    top: size-m(29);
     left: 0;
-    padding: 0 size-m(30);
+    padding: 0 size-m(20);
     text-align: center;
     @media screen and (min-width:768px) {
       //top: size(730);
-      top: size(100);
-      padding: 0 size(555) 0 size(509);
+      top: size(140);
+      padding: 0 size(100) 0 size(109);
+      text-align: left;
+      width: size(950);
     }
 
     .t1 {
@@ -128,7 +131,7 @@
       font-weight: 800;
       line-height: 1;
       font-family: 'Noto Serif TC';
-      margin-bottom: size-m(18);
+      margin-bottom: size-m(15);
       @media screen and (min-width:768px) {
         font-size: size(40);
         margin-bottom: size(20);
@@ -140,7 +143,7 @@
       font-weight: 700;
       line-height: 1;
       font-family: 'Noto Serif TC';
-      margin-bottom: size-m(18);
+      margin-bottom: size-m(15);
       @media screen and (min-width:768px) {
         font-size: size(30);
         margin-bottom: size(50);
@@ -157,17 +160,32 @@
   }
 
   .tree {
-    width: size-m(182);
+    width: size-m(122);
     //top: size-m(518);
-    top: size-m(208);
-    left: size-m(-40);
+    top: size-m(300);
+    left: size-m(-30);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
-      width: size(345);
+      width: size(245);
       //top: size(742);
-      top: size(242);
+      top: size(382);
       left: size(-50);
+    }
+  }
+
+  .newimg {
+    width: size-m(256);
+    //top: size-m(518);
+    top: size-m(190);
+    height: size-m(170);
+    right: size-m(58);
+    @media screen and (min-width:768px) {
+      width: size(602);
+      top: size(82);
+      right: size(237);
+      height: size(387);
+
     }
   }
 }

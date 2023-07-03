@@ -106,7 +106,7 @@
       height: size-m(391);
       object-fit: cover;
       @media screen and (min-width:768px) {
-        height: size(600);
+        height: size(820);
       }
     }
 
@@ -150,7 +150,7 @@
 
   .atabs {
     width: 100%;
-    // display: flex;
+    display: none;
     justify-content: center;
     position: absolute;
     top: size(922);
