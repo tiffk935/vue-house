@@ -28,7 +28,7 @@
         </swiper-slide>
         <swiper-slide>
           <img class="w-full object-center" src="@/section/s6/5.webp" />
-          <div class="txt absolute">蘭雅國小</div>
+          <div class="txt absolute">蘭雅國民小學</div>
         </swiper-slide>
         <swiper-slide>
           <img class="w-full object-center" src="@/section/s6/4.webp" />

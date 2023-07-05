@@ -22,6 +22,7 @@ export default {
         ['結構工程', '康閱印土木結構技師事務所'],
         ['建築代銷', '聯碩行銷股份有限公司'],
         ['建照號碼', '建字第　號'],
+        ['不動產經紀人', '戴子順（96）竹縣地經字第00150號'],
     ],
     gtmCode: ["GTM-WJJZZSM"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN",
