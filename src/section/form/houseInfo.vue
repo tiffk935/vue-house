@@ -49,9 +49,9 @@
     position: relative;
 
     .lines {
-        width: size(800);
+        width: size(820);
         left: size(130);
-        top: size(300);
+        top: size(340);
     }
 }
 
@@ -93,7 +93,7 @@
 
     .logo1 {
         height: size(29);
-        margin-bottom: size(29);
+        margin-bottom: size(19);
     }
 
     .logo2 {
