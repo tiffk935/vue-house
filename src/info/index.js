@@ -10,8 +10,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d225.80025532365732!2d121.5238247!3d25.1084924!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442af6f39672c4d%3A0x4f568ae9cd525cb0!2z5bGV5a6c5bi46ZaR!5e0!3m2!1szh-TW!2stw!4v1686987013732!5m2!1szh-TW!2stw",
     googleLink: "https://goo.gl/maps/MZLzU9H4NPpVUfNf8",
     phone: "02-2833-6688",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "https://www.facebook.com/zenarchi.tianmu",
+    fbMessage: "https://m.me/101670859636213/",
     caseName: caseName,
     houseInfos: [
         ['接待中心', '台北市士林區磺溪街88巷9號'],
