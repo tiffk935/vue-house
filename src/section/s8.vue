@@ -1,16 +1,16 @@
 <template>
-  <section class="s6 relative bg-[#00803F] text-white">
+  <section class="s8 relative bg-[#00803F] text-white">
     <div class="content">
       <div class="title md:flex md:items-end" data-aos="fade-up" data-aos-delay="0">
-        <div class="t1">天際上的</div>
-        <div class="t2">一道自然風</div>
+        <div class="t1">高規建材</div>
+        <div class="t2">致獻最愛</div>
       </div>
-      <div class="t3" data-aos="fade-up" data-aos-delay="0">清透語彙 吾印美學</div>
-      <div class="t4" data-aos="fade-up" data-aos-delay="0">【艾美綠河】站立15層視野，以明德新村的林蔭大道為靈感，退居旁觀角度，打造清透自然、織白、木紋繡起的建築形象，讓建築無違和地藏進樹海風景，將綠色風光邀進日常。</div>
+      <div class="t3" data-aos="fade-up" data-aos-delay="0">BUILDING MATERIALS</div>
+      <div class="t4" data-aos="fade-up" data-aos-delay="0">全面拔高建材規格，精選實用與美感共存的配備，獻給為認真生活的你們。</div>
     </div>
     <div class="img relative">
-      <img class="w-full" src="@/section/s6/1.jpg" />
-      <div class="img-txt absolute">3D外觀示意圖</div>
+      <img class="w-full" src="@/section/s8/1.jpg" />
+      <img class="inner absolute" src="@/section/s8/inner.svg" />
     </div>
   </section>
 </template>
@@ -18,7 +18,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s6 {
+.s8 {
   width: 100%;
   @media screen and (min-width:768px) {
     display: flex;
@@ -53,13 +53,13 @@
   }
 
   .t2 {
-    font-size: size-m(24);
+    font-size: size-m(30);
     font-family: 'Noto Serif TC';
     font-weight: 700;
     line-height: 103%; 
     margin-bottom: size-m(49);
     @media screen and (min-width:768px) {
-      font-size: size(71); 
+      font-size: size(82); 
       width: size(73);
       margin: 0;
     }
@@ -108,24 +108,26 @@
   .img {
     @media screen and (min-width:768px) {
       width: size(1170);
+      padding: 0;
+    }
 
-      img {
+    img {
+      height: size-m(366);
+      object-fit: cover;
+      @media screen and (min-width:768px) {
         height: 100%;
-        object-fit: cover;
       }
     }
-  }
 
-  .img-txt {
-    font-size: size-m(12);
-    font-weight: 500;
-    line-height: normal; 
-    left: size-m(4.5);
-    bottom: size-m(4);
-    @media screen and (min-width:768px) {
-      font-size: size(15);
-      left: size(14);
-      bottom: size(11);
+    .inner {
+      width: size-m(308);
+      height: auto;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @media screen and (min-width:768px) {
+        width: size(773.62);
+      }
     }
   }
 }
