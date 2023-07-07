@@ -10,7 +10,7 @@
       <div class="t4" data-aos="fade-up" data-aos-delay="0">台積電至高雄建廠領首，南臺灣半導體S廊帶成形，成功打入高科技產業全球供應鏈，加上亞灣5G AloT創新園區永續發展經營，高雄變身國際科技城市，無庸置疑！</div>
     </div>
     <div class="img relative">
-      <img class="w-full" src="@/section/s3/1.jpg" />
+      <img class="w-full" src="@/section/s3/1.webp" />
       <div class="img-txt absolute text-white">實景拍攝圖</div>
     </div>
   </section>

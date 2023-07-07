@@ -9,7 +9,7 @@
       <div class="t4" data-aos="fade-up" data-aos-delay="0">【艾美綠河】站立15層視野，以明德新村的林蔭大道為靈感，退居旁觀角度，打造清透自然、織白、木紋繡起的建築形象，讓建築無違和地藏進樹海風景，將綠色風光邀進日常。</div>
     </div>
     <div class="img relative">
-      <img class="w-full" src="@/section/s6/1.jpg" />
+      <img class="w-full" src="@/section/s6/1.webp" />
       <div class="img-txt absolute">3D外觀示意圖</div>
     </div>
   </section>

@@ -1,8 +1,8 @@
 <template>
   <section class="s2 relative">
     <div class="map relative">
-      <img class="map1 absolute" src="@/section/s2/map1.png" />
-      <img class="map1" src="@/section/s2/map.jpg" />
+      <img class="map1 absolute" src="@/section/s2/map1.webp" />
+      <img class="map1" src="@/section/s2/map.webp" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />

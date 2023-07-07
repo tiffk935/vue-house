@@ -60,7 +60,6 @@
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
-              <option value="透天">透天</option>
             </select>
             <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
@@ -302,13 +301,14 @@
       line-height: 103%;
       font-size: size-m(35);
       margin-bottom: size-m(16);
+      margin-top: size-m(100);
     }
 
     .t2 {
       line-height: 103%;
       font-size: size-m(17);
       letter-spacing: size-m(0.17);
-      margin-bottom: size-m(140);
+      margin-bottom: size-m(100);
     }
 
     .t3 {

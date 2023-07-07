@@ -216,6 +216,7 @@
     top: size-m(732);
     left: size-m(33);
     width: size-m(39);
+    filter: drop-shadow(size-m(0) size-m(0) size-m(1) #0000001c);
     @media screen and (min-width:768px) {
       top: size(2040);
       left: size(93);
