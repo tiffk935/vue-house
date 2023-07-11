@@ -10,7 +10,7 @@
 
 .s8 {
   width: 100%;
-  height: size-m(386);
+  height: size-m(506);
   // background-image: url(@/section/s1/bg-m.jpg);
   background-size: cover;
   background-position: center center;
@@ -21,12 +21,12 @@
 
   .bg {
     width: 100%;
-    height: size-m(290);
+    height: size-m(400);
     top: size-m(48);
     left: 0;
     background-image: url(@/section/s8/img.jpg);
     background-repeat: no-repeat;
-    background-size: auto 110%;
+    background-size: auto 100%;
     @media screen and (min-width:768px) {
       top: 0;
       height: 100%;
@@ -37,7 +37,7 @@
   .txt {
     width: size-m(239);
     left: size-m(68);
-    top: size-m(344);
+    top: size-m(455);
     font-size: size-m(9);
     line-height: size-m(13);
     text-align: center;
