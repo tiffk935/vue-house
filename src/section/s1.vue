@@ -80,12 +80,12 @@
    // transform: rotate(-40deg);
     transform-origin: 50% 50%;
   //transform:  rotate(-52deg) translate(-202%, -130%) scale(-1.25, 1.25);
-    animation: car_m 3s linear infinite;
+    animation: car_m 5s linear infinite;
     @media screen and (min-width:768px) {
     top: 10%;
     left: 86%;
     width: size(600);
-    animation: car 3s linear infinite;
+    animation: car 7s linear infinite;
     
     }
   }
