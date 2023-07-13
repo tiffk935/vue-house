@@ -12,7 +12,7 @@
       <img class="logo" data-aos="zoom-in" data-aos-duration="800" src="@/section/s1/logo.svg" alt="" srcset="">
     <div class="t1">十足天地  綠健社區
 </div>
-    <div class="t2">｜5MINS梅花湖｜60-67坪｜太陽能電梯別墅｜</div>
+    <div class="t2">｜5MINS梅花湖｜60-67坪｜電梯別墅｜</div>
     <div class="t3" @click="scrollTo('.order')">立即預約</div>
 </div>
 
@@ -119,6 +119,9 @@ color: #4B6730;
 font-weight: 900;
 font-size:2em;
 letter-spacing: 0.165em;
+  }
+  .t2{
+font-size:1.1em;margin-right: 0.3em;
   }
   .t3 {
 color: #4B6730;
