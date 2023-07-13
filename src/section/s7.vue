@@ -25,19 +25,19 @@
         >
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s7/1.webp" />
+              <img class="w-full" src="@/section/s7/1.jpg" />
               <div class="img-txt absolute">公設3D示意圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s7/2.webp" />
+              <img class="w-full" src="@/section/s7/2.jpg" />
               <div class="img-txt absolute">公設3D示意圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s7/3.webp" />
+              <img class="w-full" src="@/section/s7/3.jpg" />
               <div class="img-txt absolute">公設3D示意圖</div>
             </div>
           </swiper-slide>

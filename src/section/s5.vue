@@ -31,25 +31,25 @@
         >
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/1.webp" />
+              <img class="w-full" src="@/section/s5/1.jpg" />
               <div class="img-txt absolute text-white">實景拍攝圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/2.webp" />
+              <img class="w-full" src="@/section/s5/2.jpg" />
               <div class="img-txt absolute text-white">實景拍攝圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/3.webp" />
+              <img class="w-full" src="@/section/s5/3.jpg" />
               <div class="img-txt absolute text-white">實景拍攝圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/4.webp" />
+              <img class="w-full" src="@/section/s5/4.jpg" />
               <div class="img-txt absolute text-white">實景拍攝圖</div>
             </div>
           </swiper-slide>
@@ -70,13 +70,13 @@
         >
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/1.webp" />
+              <img class="w-full" src="@/section/s5/1.jpg" />
               <div class="img-txt absolute text-white">實景拍攝圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="img relative">
-              <img class="w-full" src="@/section/s5/2-pc.webp" />
+              <img class="w-full" src="@/section/s5/2-pc.jpg" />
               <img class="w-full absolute w-full top-0 left-0" src="@/section/s5/2-txt.svg" />
             </div>
           </swiper-slide>
