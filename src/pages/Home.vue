@@ -454,7 +454,7 @@ const imgsRef = ref([
   { title: '展宜 阿都蘭', src: slide4_full },
   { title: '展宜 時間之外', src: slide5_full },
   { title: '展宜 拿雲', src: slide6_full },
-  { title: '展宜 有一個圓', src: slide7_full },
+  { title: '展宜 有一個園', src: slide7_full },
   { title: '展宜 仁愛', src: slide8_full },
 ]);
 const showLightbox = (idx) => {

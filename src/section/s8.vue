@@ -1,7 +1,7 @@
 <template>
   <section class="s8 relative">
     <div class="bg absolute parallax"></div>
-    <div class="txt absolute">*此為廣告效果示意，為單一建物腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
+    <div class="txt absolute">*此為廣告效果示意，為單一建物電腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
   </section>
 </template>
 

@@ -67,7 +67,7 @@
         </swiper-slide>
         <swiper-slide>
           <img class="w-full" src="@/section/s10/7.webp" />
-          <div class="txt absolute">展宜 有一個圓</div>
+          <div class="txt absolute">展宜 有一個園</div>
           <div @click="showLightbox(6)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
