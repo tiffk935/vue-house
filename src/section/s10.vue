@@ -36,42 +36,50 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/1.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/1_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/1.webp" />
           <div class="txt absolute">展宜 詠喆</div>
           <div @click="showLightbox(0)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/2.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/2_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/2.webp" />
           <div class="txt absolute">展宜 拾秋</div>
           <div @click="showLightbox(1)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/3.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/3_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/3.webp" />
           <div class="txt absolute">展宜 摘月</div>
           <div @click="showLightbox(2)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/4.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/4_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/4.webp" />
           <div class="txt absolute">展宜 阿都蘭</div>
           <div @click="showLightbox(3)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full ver" src="@/section/s10/5.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/5_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/5.webp" />
           <div class="txt absolute">展宜 時間之外</div>
           <div @click="showLightbox(4)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/6.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/6_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/6.webp" />
           <div class="txt absolute">展宜 拿雲</div>
           <div @click="showLightbox(5)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s10/7.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/7_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/7.webp" />
           <div class="txt absolute">展宜 有一個園</div>
           <div @click="showLightbox(6)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full ver" src="@/section/s10/8.webp" />
+          <img class="w-full"  v-if="$isMobile()" src="@/section/s10/8_m.webp" />
+          <img class="w-full" v-else src="@/section/s10/8.webp" />
           <div class="txt absolute">展宜 仁愛</div>
           <div @click="showLightbox(7)" class="mask absolute top-0 left-0 w-full h-full"></div>
         </swiper-slide>
@@ -264,12 +272,14 @@
 </style>
 
 <script setup>
-import { ref, defineProps } from "vue"
+import { ref,getCurrentInstance,computed,defineProps } from "vue"
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from "swiper";
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 const modules = ref([Pagination, Navigation, Autoplay]);
 const props = defineProps(['showLightbox']);
 const showLightbox = (idx) => {
