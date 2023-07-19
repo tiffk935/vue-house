@@ -267,6 +267,14 @@ import slide5_full from '@/section/s10/5.webp';
 import slide6_full from '@/section/s10/6.webp';
 import slide7_full from '@/section/s10/7.webp';
 import slide8_full from '@/section/s10/8.webp';
+import slide1_full_m from '@/section/s10/1_m.webp';
+import slide2_full_m from '@/section/s10/2_m.webp';
+import slide3_full_m from '@/section/s10/3_m.webp';
+import slide4_full_m from '@/section/s10/4_m.webp';
+import slide5_full_m from '@/section/s10/5_m.webp';
+import slide6_full_m from '@/section/s10/6_m.webp';
+import slide7_full_m from '@/section/s10/7_m.webp';
+import slide8_full_m from '@/section/s10/8_m.webp';
 gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true)
@@ -447,16 +455,28 @@ const scrollTo = (el) => {
 
 const visibleRef = ref(false)
 const indexRef = ref(0)
-const imgsRef = ref([
-  { title: '展宜 詠喆', src: slide1_full },
-  { title: '展宜 拾秋', src: slide2_full },
-  { title: '展宜 摘月', src: slide3_full },
-  { title: '展宜 阿都蘭', src: slide4_full },
-  { title: '展宜 時間之外', src: slide5_full },
-  { title: '展宜 拿雲', src: slide6_full },
-  { title: '展宜 有一個園', src: slide7_full },
-  { title: '展宜 仁愛', src: slide8_full },
-]);
+const isMobile = window.matchMedia('(max-width: 768px)').matches;
+const imgsRef = ref(isMobile
+  ? [
+    { title: '展宜 詠喆', src: slide1_full_m},
+    { title: '展宜 拾秋', src: slide2_full_m},
+    { title: '展宜 摘月', src: slide3_full_m},
+    { title: '展宜 阿都蘭', src: slide4_full_m},
+    { title: '展宜 時間之外', src: slide5_full_m},
+    { title: '展宜 拿雲', src: slide6_full_m},
+    { title: '展宜 有一個園', src: slide7_full_m},
+    { title: '展宜 仁愛', src: slide8_full_m},
+  ]
+  : [
+    { title: '展宜 詠喆', src: slide1_full},
+    { title: '展宜 拾秋', src: slide2_full},
+    { title: '展宜 摘月', src: slide3_full},
+    { title: '展宜 阿都蘭', src: slide4_full},
+    { title: '展宜 時間之外', src: slide5_full},
+    { title: '展宜 拿雲', src: slide6_full},
+    { title: '展宜 有一個園', src: slide7_full},
+    { title: '展宜 仁愛', src: slide8_full},
+  ]);
 const showLightbox = (idx) => {
   indexRef.value = idx;
   visibleRef.value = true;
