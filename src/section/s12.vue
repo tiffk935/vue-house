@@ -1,7 +1,7 @@
 <template>
   <section class="s12 relative">
-    <img class="grid absolute md:hidden" src="@/section/s12/grid-m.jpg" />
-    <img class="grid absolute hidden md:block" src="@/section/s12/grid.jpg" />
+    <img class="grid absolute" v-if="$isMobile()" src="@/section/s12/grid-m.jpg" />
+    <img class="grid absolute" v-else src="@/section/s12/grid.jpg" />
     <div class="grid-t1 upup absolute">
       <div class="tt">展宜建築的職人手工好房子 <br class="md:hidden">天母磺溪聚落稀有靜獻</div>
     </div>
@@ -12,8 +12,8 @@
       <div class="tt">歡迎預約優先品賞</div>
     </div>
 
-    <img class="lines absolute md:hidden" src="@/section/s12/lines-m.svg" />
-    <img class="lines absolute hidden md:block" src="@/section/s12/lines.svg" />
+    <img class="lines absolute"  v-if="$isMobile()" src="@/section/s12/lines-m.svg" />
+    <img class="lines absolute"  v-else src="@/section/s12/lines.svg" />
 
     <div class="logo upup absolute">
       <div class="tt"></div>
@@ -180,4 +180,8 @@
 </style>
 
 <script setup>
+import { computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>

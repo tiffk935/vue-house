@@ -15,43 +15,43 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/1_m.webp" />
-          <img class="w-full object-right hidden md:block" src="@/section/s3/1.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/1_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/1.webp" />
           <div class="txt absolute">磺溪河畔綠帶</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/2_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/2.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/2_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/2.webp" />
           <div class="txt absolute">磺溪河畔步道</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/3_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/3.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/3_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/3.webp" />
           <div class="txt absolute">磺溪河畔</div>
         </swiper-slide>
          <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/4_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/4.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/4_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/4.webp" />
           <div class="txt absolute">磺溪河畔</div>
         </swiper-slide>
          <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/5_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/5.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/5_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/5.webp" />
           <div class="txt absolute">天母公園 </div>
         </swiper-slide>
          <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/6_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/6.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/6_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/6.webp" />
           <div class="txt absolute">天和公園</div>
         </swiper-slide>
          <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/7_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/7.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/7_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/7.webp" />
           <div class="txt absolute">外雙溪河濱公園 </div>
         </swiper-slide>
          <swiper-slide>
-          <img class="w-full object-right md:hidden" src="@/section/s3/8_m.webp" />
-          <img class="w-full hidden md:block" src="@/section/s3/8.webp" />
+          <img class="w-full object-right"  v-if="$isMobile()" src="@/section/s3/8_m.webp" />
+          <img class="w-full object-right"  v-else src="@/section/s3/2.webp" />
           <div class="txt absolute">東和公園</div>
         </swiper-slide>
       </swiper>
@@ -242,11 +242,14 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { computed, getCurrentInstance, ref } from 'vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>

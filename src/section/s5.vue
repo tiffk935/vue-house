@@ -15,43 +15,53 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/1.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/1_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/1.webp" />
           <div class="txt absolute">天母SOGO</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/2.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/2_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/2.webp" />
           <div class="txt absolute">新光三越</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/3.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/3_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/3.webp" />
           <div class="txt absolute">大葉高島屋</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/4.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/4_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/4.webp" />
           <div class="txt absolute">天玉街星巴克</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/5.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/5_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/5.webp" />
           <div class="txt absolute">義式店面街廓</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/6.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/6_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/6.webp" />
           <div class="txt absolute">天母異國氛圍</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/7.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/7_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/7.webp" />
           <div class="txt absolute">天母異國氛圍</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/8.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/8_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/8.webp" />
           <div class="txt absolute">五星級士東市場</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/9.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/9_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/9.webp" />
           <div class="txt absolute">五星級士東市場</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s5/10.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s5/10_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s5/10.webp" />
           <div class="txt absolute">五星級士東市場</div>
         </swiper-slide>
       </swiper>
@@ -247,11 +257,14 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { computed, getCurrentInstance, ref } from 'vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>

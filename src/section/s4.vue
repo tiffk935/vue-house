@@ -15,31 +15,38 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/1.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/1_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/1.webp" />
           <div class="txt absolute">捷運芝山站</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/2.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/2_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/2.webp" />
           <div class="txt absolute">捷運芝山站</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/3.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/3_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/3.webp" />
           <div class="txt absolute">捷運明德站 </div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/4.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/4_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/4.webp" />
           <div class="txt absolute">SOGO商圈</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/5.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/5_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/5.webp" />
           <div class="txt absolute">關渡自然公園</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/6.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/6_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/6.webp" />
           <div class="txt absolute">台北101</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s4/9.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s4/7_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s4/7.webp" />
           <div class="txt absolute">台北車站商圈</div>
         </swiper-slide>
       </swiper>
@@ -237,11 +244,14 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { computed, getCurrentInstance, ref } from 'vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>

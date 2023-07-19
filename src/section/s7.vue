@@ -15,19 +15,23 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/1.webp" />
+          <img class="w-full object-center" v-if="!$isMobile()" src="@/section/s7/1_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s7/1.webp" />
           <div class="txt absolute">台北榮民總醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/2.webp" />
+          <img class="w-full object-center" v-if="!$isMobile()" src="@/section/s7/2_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s7/2.webp" />
           <div class="txt absolute">振興醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/4.webp" />
+          <img class="w-full object-center" v-if="!$isMobile()" src="@/section/s7/3_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s7/3.webp" />
           <div class="txt absolute">新光醫院</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" src="@/section/s7/3.webp" />
+          <img class="w-full object-center" v-if="!$isMobile()" src="@/section/s7/4_m.webp" />
+          <img class="w-full object-center" v-else src="@/section/s7/4.webp" />
           <div class="txt absolute">陽明醫院</div>
         </swiper-slide>
       </swiper>
@@ -221,11 +225,14 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
+import { computed, getCurrentInstance, ref } from 'vue';
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { Pagination, Navigation, Autoplay } from "swiper";
 const modules = ref([Pagination, Navigation, Autoplay]);
+const globals = getCurrentInstance().appContext.config.globalProperties;
+
+const isMobile = computed(() => globals.$isMobile());
 </script>

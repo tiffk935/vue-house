@@ -1,9 +1,9 @@
 <template>
   <section class="s1 relative">
-    <img class="grid absolute md:hidden" src="@/section/s1/grid-m.jpg" />
-    <img class="grid absolute hidden md:block" src="@/section/s1/grid.jpg" />
-    <img class="t1 absolute md:hidden" src="@/section/s1/t1-m.svg" />
-    <img class="t1 absolute hidden md:block" src="@/section/s1/t1.svg" />
+    <img class="grid absolute" v-if="$isMobile()" src="@/section/s1/grid-m.jpg" />
+    <img class="grid absolute" v-else src="@/section/s1/grid.jpg" />
+    <img class="t1 absolute" v-if="$isMobile()" src="@/section/s1/t1-m.svg" />
+    <img class="t1 absolute" v-else src="@/section/s1/t1.svg" />
     <div class="t2 upup absolute">
       <div class="tt"></div>
     </div>
@@ -269,6 +269,9 @@
 </style>
 
 <script setup>
+import { computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 // import { inject } from 'vue';
 const props = defineProps({
   smallScrollBar: {

@@ -6,15 +6,15 @@
     <div class="t2 upup absolute">
       <div class="tt">展宜建築深度研究每一塊土地紋理，精挑最好的地段<br>把蓋房子當成是一種藝術創作，拒絕規格化和複製品<br>一棟棟有個性的展宜建築，在市中心地表陸續誕生</div>
     </div>
-    <div class="viewbox relative md:hidden" ref="viewbox">
+    <div class="viewbox relative" v-if="$isMobile()" ref="viewbox">
       <div class="inner">
         <img src="@/section/s11/timeline.png" ref="viewImg1" />
         <img src="@/section/s11/timeline-text.svg" ref="viewImg2" />
       </div>
     </div>
-    <img class="img absolute hidden md:block" src="@/section/s11/img1.png" />
-    <img class="img-text absolute hidden md:block" src="@/section/s11/img-text.svg" />
-    <img class="swipe absolute md:hidden" src="@/section/s11/swipe.svg" />
+    <img class="img absolute hidden md:block" v-if="!$isMobile()" src="@/section/s11/img1.png" />
+    <img class="img-text absolute hidden md:block" v-if="!$isMobile()" src="@/section/s11/img-text.svg" />
+    <img class="swipe absolute"  v-if="$isMobile()" src="@/section/s11/swipe.svg" />
     <div class="logos absolute">
       <div class="logo upup11">
         <div class="tt"></div>
@@ -281,16 +281,20 @@
 }
 </style>
 <script setup>
+
 import BScroll from '@better-scroll/core'
-import { onMounted, ref, nextTick } from 'vue';
+import { onMounted, ref, nextTick,computed,getCurrentInstance, } from 'vue';
 
 const viewbox = ref()
 const viewImg1 = ref()
 const viewImg2 = ref()
 const swiped = ref(false)
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 const offsetRatio = 1;
 let img1loaded = false;
 let img2loaded = false;
+
 
 onMounted(() => {
   nextTick(() => {
