@@ -1,6 +1,6 @@
 <template>
     <div class="gmap relative z-10">
-        <iframe :src="info.googleSrc" frameborder="0"></iframe>
+        <iframe src="" frameborder="0"></iframe>
     </div>
 </template>
 

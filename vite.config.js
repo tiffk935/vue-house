@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 
 import { resolve } from 'path'
 import viteImagemin from 'vite-plugin-imagemin'
+import { splitVendorChunkPlugin } from 'vite'
 
 export default defineConfig({
   resolve: {
@@ -17,6 +18,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    splitVendorChunkPlugin(),
     viteImagemin({
       gifsicle: {
         optimizationLevel: 7,

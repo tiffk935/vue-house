@@ -309,6 +309,18 @@ onMounted(() => {
     smallScrollBarRef.value = smallScrollBar;
 
     setTimeout(() => {
+
+      ScrollTrigger.create({
+        scroller: ".home",
+        trigger: ".s2",
+        start: "center center",
+        onEnter: () => {
+          if(document.querySelector('.order .gmap iframe')) {
+            document.querySelector('.order .gmap iframe').src = info.googleSrc;
+          }
+        },
+      });
+
       gsap.utils.toArray(".home .upup").forEach(item => {
         if(item.querySelector('.tt')) {
           gsap.to(item.querySelector('.tt'), {
