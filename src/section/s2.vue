@@ -10,6 +10,7 @@
       <div class="t1">台南東區新都心 國際生活在此</div>
       <div class="t2">開啟南台灣建築新高度，複製北台灣台北信義計畫區，中台灣台中市政七期的開發模式，台南東區「新都心重劃區」 限量登場!</div>
     </div>
+    <div class="name">※捷運路線審核中，僅供參考示意，<br>　若有修正依台南市捷運工程處為主</div>
   </section>
 </template>
 
@@ -150,6 +151,17 @@
       top: size(225);
       left: size(967);
       width: size(754);
+    }
+  }
+  .name{
+    position: absolute;
+    font-size: 12px;
+    bottom: 1em;
+    left:1em;
+    text-shadow: 0 0 3px #000;
+    @media screen and (min-width:768px) {
+      font-size: size(15);
+      bottom: 1.5em;
     }
   }
 }
