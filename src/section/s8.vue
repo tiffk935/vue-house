@@ -15,12 +15,29 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img src="@/section/s8/tmp.jpg" />
-          <div class="text-white">建築立面3D透視圖</div>
+          <img class="hidden md:block" src="@/section/s8/01.jpg" />
+          <img class="md:hidden" src="@/section/s8/01m.png" />
+          <div class="text-white"></div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/section/s8/tmp.jpg" />
-          <div class="text-white">建築立面3D透視圖</div>
+          <img class="hidden md:block" src="@/section/s8/02.jpg" />
+          <img class="md:hidden" src="@/section/s8/02m.png" />
+          <div class="text-white"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="hidden md:block" src="@/section/s8/03.jpg" />
+          <img class="md:hidden" src="@/section/s8/03m.png" />
+          <div class="text-white"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="hidden md:block" src="@/section/s8/04.jpg" />
+          <img class="md:hidden" src="@/section/s8/04m.png" />
+          <div class="text-white"></div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="hidden md:block" src="@/section/s8/05.jpg" />
+          <img class="md:hidden" src="@/section/s8/05m.png" />
+          <div class="text-white"></div>
         </swiper-slide>
       </swiper>
     </div>
@@ -55,9 +72,9 @@
   }
 
   .slider {
-    width: size-m(315);
+    width: size-m(330);
     top: size-m(347);
-    left: size-m(30);
+    left: size-m(20);
     @media screen and (min-width:768px) {
       width: size(1270);
       top: size(134);
@@ -97,12 +114,12 @@
 
     .swiper-pagination {
       bottom: 0;
-      text-align: left;
+      text-align: right;
       padding: size-m(10);
       line-height: 1;
       @media screen and (min-width:768px) {
         padding: size(30) size(20);
-        text-align: right;
+        text-align: left;
       }
     }
 

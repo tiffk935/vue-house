@@ -28,19 +28,31 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/25/01.jpg" />
+              <img class="md:hidden" src="@/section/s9/25/01m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/25/02.jpg" />
+              <img class="md:hidden" src="@/section/s9/25/02m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/25/03.jpg" />
+              <img class="md:hidden" src="@/section/s9/25/03m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/25/04.jpg" />
+              <img class="md:hidden" src="@/section/s9/25/04m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
           </swiper>
         </div>
         <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">須等樣品屋再補，25坪假字</div>
+          <div class="title">25坪高CP值2房</div>
           <p>
-            須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字須等樣品屋再補，25坪假字
+            達麗天蒔25坪2房平面規劃做了樑柱外移，讓格局難得的飽和方正，兩個房間都是雙人房，2 套衛浴，客餐廳尺度很好。
           </p>
         </div>
       </div>
@@ -62,19 +74,41 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/39/01.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/01m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/39/02.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/02m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/39/03.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/03m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/39/04.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/04m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/39/05.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/05m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/39/06.jpg" />
+              <img class="md:hidden" src="@/section/s9/39/06m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
           </swiper>
         </div>
         <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">須等樣品屋再補，39坪假字</div>
+          <div class="title">三面引光39坪3房</div>
           <p>
-            須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字須等樣品屋再補，39坪假字
+            達麗天蒔39坪3房有非常難得的三面引光，面寬型格局，獨立玄關，長縱深客餐廳，室內坪效高，格局寬舒宜人。
           </p>
         </div>
       </div>
@@ -96,19 +130,41 @@
             :modules="modules"
           >
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/43/01.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/01m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
             <swiper-slide>
-              <img src="@/section/s9/tmp.jpg" />
-              <div class="text-white">樣品屋3D模擬圖</div>
+              <img class="hidden md:block" src="@/section/s9/43/02.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/02m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/43/03.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/03m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/43/04.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/04m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/43/05.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/05m.jpg" />
+              <div class="text-white"></div>
+            </swiper-slide>
+            <swiper-slide>
+              <img class="hidden md:block" src="@/section/s9/43/06.jpg" />
+              <img class="md:hidden" src="@/section/s9/43/06m.jpg" />
+              <div class="text-white"></div>
             </swiper-slide>
           </swiper>
         </div>
         <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">須等樣品屋再補，43坪假字</div>
+          <div class="title">文林北路樹海43坪4房</div>
           <p>
-            須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字須等樣品屋再補，43坪假字
+            達麗天蒔43坪4房擁有文林北路樹海美景，超大50米棟距，入主北士科，不能錯過達麗天蒔4房最佳格局。
           </p>
         </div>
       </div>
