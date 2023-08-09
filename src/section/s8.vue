@@ -16,27 +16,27 @@
       >
         <swiper-slide>
           <img class="hidden md:block" src="@/section/s8/01.jpg" />
-          <img class="md:hidden" src="@/section/s8/01m.png" />
+          <img class="md:hidden" src="@/section/s8/01m.jpg" />
           <div class="text-white"></div>
         </swiper-slide>
         <swiper-slide>
           <img class="hidden md:block" src="@/section/s8/02.jpg" />
-          <img class="md:hidden" src="@/section/s8/02m.png" />
+          <img class="md:hidden" src="@/section/s8/02m.jpg" />
           <div class="text-white"></div>
         </swiper-slide>
         <swiper-slide>
           <img class="hidden md:block" src="@/section/s8/03.jpg" />
-          <img class="md:hidden" src="@/section/s8/03m.png" />
+          <img class="md:hidden" src="@/section/s8/03m.jpg" />
           <div class="text-white"></div>
         </swiper-slide>
         <swiper-slide>
           <img class="hidden md:block" src="@/section/s8/04.jpg" />
-          <img class="md:hidden" src="@/section/s8/04m.png" />
+          <img class="md:hidden" src="@/section/s8/04m.jpg" />
           <div class="text-white"></div>
         </swiper-slide>
         <swiper-slide>
           <img class="hidden md:block" src="@/section/s8/05.jpg" />
-          <img class="md:hidden" src="@/section/s8/05m.png" />
+          <img class="md:hidden" src="@/section/s8/05m.jpg" />
           <div class="text-white"></div>
         </swiper-slide>
       </swiper>
