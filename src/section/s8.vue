@@ -108,6 +108,7 @@
         object-fit: cover;
         @media screen and (min-width:768px) {
           height: auto;
+          width: 100%;
         }
       }
     }
