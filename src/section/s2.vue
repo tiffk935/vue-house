@@ -50,7 +50,7 @@
   }
 
   .logo {
-    width: size-m(174.25);
+    width: size-m(200);
     margin: 0 auto size-m(27) auto;
     @media screen and (min-width:768px) {
       width: size(331.76);
