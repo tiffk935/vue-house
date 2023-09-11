@@ -20,23 +20,23 @@
           <div class="txt absolute">美國學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/2_m.webp" />
-          <img class="w-full object-center"  v-else src="@/section/s6/2.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/3_m.webp" />
+          <img class="w-full object-center"  v-else src="@/section/s6/3.webp" />
           <div class="txt absolute">日僑學校</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/3_m.webp" />
-          <img class="w-full object-center"  v-else src="@/section/s6/3.webp" />
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/2_m.webp" />
+          <img class="w-full object-center"  v-else src="@/section/s6/2.webp" />
           <div class="txt absolute">歐洲學校</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/4_m.webp" />
-          <img class="w-full object-center"  v-else src="@/section/s6/4.webp" />
-          <div class="txt absolute">蘭雅國民小學</div>
         </swiper-slide>
         <swiper-slide>
           <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/5_m.webp" />
           <img class="w-full object-center"  v-else src="@/section/s6/5.webp" />
+          <div class="txt absolute">蘭雅國民小學</div>
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/4_m.webp" />
+          <img class="w-full object-center"  v-else src="@/section/s6/4.webp" />
           <div class="txt absolute">蘭雅國民中學</div>
         </swiper-slide>
         <swiper-slide>
@@ -47,7 +47,7 @@
         <swiper-slide>
           <img class="w-full object-center" v-if="$isMobile()" src="@/section/s6/7_m.webp" />
           <img class="w-full object-center"  v-else src="@/section/s6/7.webp" />
-          <div class="txt absolute">陽明大學</div>
+          <div class="txt absolute">陽明交通大學</div>
         </swiper-slide>
       </swiper>
     </div>
