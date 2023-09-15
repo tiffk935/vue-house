@@ -1,7 +1,8 @@
 <template>
   <section class="s1 text-white bg-[#D7282F] relative">
-    <video class="md:hidden" src="https://h35.banner.tw/mori/mo.mp4" playsinline autoplay muted loop></video>
-    <video class="hidden md:block" src="https://h35.banner.tw/mori/pc.mp4" playsinline autoplay muted loop></video>
+    <img class="house absolute" src="@/section/s1/house.svg" />
+    <img class="logo2 absolute" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s1/logo2.svg" />
+    <img class="logo1 absolute" data-aos="zoom-in" data-aos-delay="0" data-aos-duration="1000" src="@/section/s1/logo1.svg" />
   </section>
 </template>
 
@@ -9,24 +10,10 @@
 @import "@/assets/style/function.scss";
 .s1 {
   width: 100%;
-  height: calc(100vh - 63px );
-  max-height: size-m(812);
-  min-height: size-m(604);
-  background: #fff;
+  height: size-m(667);
   @media screen and (min-width:768px) {
-    height: 100vh;
-    min-height: size(900);
-    max-height: size(1080);
-
+    height: size(1080);
   }
-  
-  video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  
 
   .house {
     width: size-m(429);
@@ -65,5 +52,4 @@
 </style>
 
 <script setup>
-
 </script>

@@ -34,8 +34,10 @@
 .s5 {
   padding: size-m(65) size-m(23) size-m(0) size-m(23);
   text-align: center;
+  margin-bottom: size-m(80);
   @media screen and (min-width:768px) {
     padding: size(107) size(0) size(99) size(0);
+    margin-bottom: size-m(0);
   }
 
   .title2 {
