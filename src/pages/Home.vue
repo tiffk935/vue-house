@@ -27,7 +27,7 @@
     <S9 />
     <S12 />
     <S13 />
-    <!-- <S14 /> -->
+    <S14 />
     <Order :setModal="setModal" />
   </div>
 
@@ -254,7 +254,7 @@ import S10 from "@/section/s10.vue"
 import S11 from "@/section/s11.vue"
 import S12 from "@/section/s12.vue"
 import S13 from "@/section/s13.vue"
-// import S14 from "@/section/s14.vue"
+import S14 from "@/section/s14.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import Policy from "@/section/form/policy.vue"
