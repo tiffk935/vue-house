@@ -23,8 +23,8 @@ iframe {
     width: 100%;
     height: size(1070);
     //margin: size(60) auto;
-    background: url('@/section/s2/v.jpg') center;
-    background-size: cover;
+    //background: url('@/section/s2/v.jpg') center;
+    //background-size: cover;
 }
 
 @media screen and (max-width:768px) {
