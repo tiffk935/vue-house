@@ -1,7 +1,7 @@
 <template>
   <section class="s1 text-white bg-[#D7282F] relative">
-    <video class="md:hidden" src="https://h35.banner.tw/mori/mo.mp4" playsinline autoplay muted loop></video>
-    <video class="hidden md:block" src="https://h35.banner.tw/mori/pc.mp4" playsinline autoplay muted loop></video>
+    <video class="md:hidden" src="https://h35.banner.tw/park/mo.mp4" playsinline autoplay muted loop></video>
+    <video class="hidden md:block" src="https://h35.banner.tw/park/pc.mp4" playsinline autoplay muted loop></video>
   </section>
 </template>
 
