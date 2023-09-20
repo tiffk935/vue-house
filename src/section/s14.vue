@@ -3,14 +3,14 @@
     <div class="title absolute">
       <div class="line line1 absolute"></div>
       <div class="line line2 absolute"></div>
-      <div class="t1 upup1">
-        <div class="tt1 flex">
+      <div class="t1 upup">
+        <div class="tt flex">
           <span>展宜常閑</span>
           <span>空間展演</span>
         </div>
       </div>
-      <div class="t2 upup1">
-        <div class="tt1">
+      <div class="t2 upup">
+        <div class="tt">
           It symbolizes the humanistic environment of life and an open-minded state of mind,<br>
           laughing and talking about the beauty of daily life.</div>
       </div>
@@ -49,20 +49,22 @@
       </swiper>
     </div>
 
-    <div class="t3 upup1 absolute">
-      <div class="tt1">
+    <div class="t3 upup absolute">
+      <div class="tt">
         戶戶邊間探光3米6訂製精品<br>
         全球頂級奢華配備 客製天母高規生活
       </div>
     </div>
-    <div class="t4 upup1 absolute">
-      <div class="tt1">
+    <div class="t4 upup absolute">
+      <div class="tt">
         規劃3米6挑高自由空間，戶戶邊間採光，陽台綠意花香<br>
         燦燦陽光可以曬進生活，在理想中的家園細細品味人生<br>
         精選日本、德、英、義、美國等高端品牌建材設備<br>
         兼具實用舒適與尊榮享受，打造天母質感的高規格生活
       </div>
     </div>
+    <img class="style absolute md:hidden" src="@/section/s14/style-m.svg" alt="27坪訂製宅" />
+    <img class="style absolute hidden md:block" src="@/section/s14/style.svg" alt="27坪訂製宅" />
   </section>
 </template>
 
@@ -208,7 +210,7 @@
     @media screen and (min-width:768px) {
       left: size(75.95);
       top: size(1045.56);
-      width: size(633.05);
+      width: auto;
       display: flex;
       justify-content: flex-end;
       align-items: center;
@@ -216,6 +218,7 @@
       font-size: size(34);
       line-height: normal;
       letter-spacing: 0;
+      padding-left: size(80.05);
     }
   }
 
@@ -239,15 +242,16 @@
     }
   }
 
-  // .line {
-  //   @media screen and (min-width:768px) {
-  //     left: size(74);
-  //     top: size(740);
-  //     width: size(540);
-  //     height: size(1);
-  //     background: rgba(0, 0, 0, 0.70);
-  //   }
-  // }
+  .style {
+    left: size-m(294.66);
+    top: size-m(246);
+    width: size-m(51.72);
+    @media screen and (min-width:768px) {
+      left: size(1547.36);
+      top: size(1045);
+      width: size(288.91);
+    }
+  }
 }
 </style>
 
