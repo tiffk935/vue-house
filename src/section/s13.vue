@@ -17,13 +17,10 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full" src="@/section/s13/1.jpg" />
+          <img class="w-full" src="@/section/s13/1.webp" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s13/1.jpg" />
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full" src="@/section/s13/1.jpg" />
+          <img class="w-full" src="@/section/s13/2.webp" />
         </swiper-slide>
       </swiper>
     </div>
@@ -49,6 +46,9 @@
       </div>
     </div>
     <div class="line absolute hidden md:block"></div>
+
+    <div class="line1 absolute md:hidden"></div>
+    <div class="line2 absolute md:hidden"></div>
   </section>
 </template>
 
@@ -127,12 +127,12 @@
   }
 
   .t1 {
-    left: size-m(46);
+    left: size-m(54);
     top: size-m(274);
     text-align: center;
     color: #39684F;
     font-family: 'Noto Serif TC';
-    font-size: size-m(17);
+    font-size: size-m(15);
     font-weight: 600;
     line-height: 140%;
     letter-spacing: size-m(0.51);
@@ -172,6 +172,21 @@
       height: size(1);
       background: rgba(0, 0, 0, 0.70);
     }
+  }
+
+  .line1 {
+      left: size-m(37);
+      top: size-m(275);
+      width: size-m(1);
+      height: size-m(130);
+      background: rgba(0, 0, 0, 0.70);
+  }
+  .line2 {
+      right: size-m(37);
+      top: size-m(275);
+      width: size-m(1);
+      height: size-m(130);
+      background: rgba(0, 0, 0, 0.70);
   }
 }
 </style>

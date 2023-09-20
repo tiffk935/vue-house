@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="logos absolute">
-      <div class="logo upup9" v-for="num in 12" :key="num">
+      <div class="logo upup9" v-for="num in 16" :key="num">
         <div class="tt"></div>
       </div>
     </div>
@@ -48,7 +48,7 @@
       height: size(104.91000366210938);
       width: size(477);
       left: size(722);
-      top: size(140);
+      top: size(100);
       font-size: size(51);
       line-height: size(73);
       margin-bottom: size(17);
@@ -95,13 +95,13 @@
     @media screen and (min-width:768px) {
       width: size(1369);
       left: size(276);
-      top: size(219);
+      top: size(179);
     }
   }
 
   .logos {
     width: size-m(289);
-    height: size-m(198.11);
+    height: size-m(210.11);
     left: size-m(44);
     top: size-m(104);
     display: flex;
@@ -111,17 +111,17 @@
       height: size(597.95654296875);
       width: size(1373.661376953125);
       left: size(275.99298095703125);
-      top: size(363);
+      top: size(283);
     }
     
     .logo {
-      width: 27%;
-      height: 25%;
+      width: 21%;
+      height: 11%;
       @media screen and (min-width:768px) {
         width: 16%;
         height: 25%;
-        margin-bottom: 4.5vw;
-        margin-right: 4vw;
+        margin-bottom: 2.8vw;
+        margin-right: 3.8vw;
       }
 
       &:nth-child(4n) {
@@ -135,15 +135,15 @@
 
       &:nth-child(1) {
         .tt {
-          background-image: url(@/section/s9/logos/06.svg);
+          background-image: url(@/section/s9/logos/01.svg);
           @media screen and (min-width:768px) {
-            background-image: url(@/section/s9/logos/13.svg);
+            background-image: url(@/section/s9/logos/01.svg);
           }
         }
       }
       &:nth-child(2) {
         .tt {
-          background-image: url(@/section/s9/logos/05.svg);
+          background-image: url(@/section/s9/logos/02.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/02.svg);
           }
@@ -151,7 +151,7 @@
       }
       &:nth-child(3) {
         .tt {
-          background-image: url(@/section/s9/logos/15.svg);
+          background-image: url(@/section/s9/logos/03.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/03.svg);
           }
@@ -159,7 +159,7 @@
       }
       &:nth-child(4) {
         .tt {
-          background-image: url(@/section/s9/logos/02.svg);
+          background-image: url(@/section/s9/logos/04.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/04.svg);
           }
@@ -167,7 +167,7 @@
       }
       &:nth-child(5) {
         .tt {
-          background-image: url(@/section/s9/logos/13.svg);
+          background-image: url(@/section/s9/logos/05.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/05.svg);
           }
@@ -175,7 +175,7 @@
       }
       &:nth-child(6) {
         .tt {
-          background-image: url(@/section/s9/logos/03.svg);
+          background-image: url(@/section/s9/logos/06.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/06.svg);
           }
@@ -183,15 +183,15 @@
       }
       &:nth-child(7) {
         .tt {
-          background-image: url(@/section/s9/logos/14.svg);
+          background-image: url(@/section/s9/logos/07.svg);
           @media screen and (min-width:768px) {
-            background-image: url(@/section/s9/logos/15.svg);
+            background-image: url(@/section/s9/logos/07.svg);
           }
         }
       }
       &:nth-child(8) {
         .tt {
-          background-image: url(@/section/s9/logos/10.svg);
+          background-image: url(@/section/s9/logos/08.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/08.svg);
           }
@@ -199,15 +199,15 @@
       }
       &:nth-child(9) {
         .tt {
-          background-image: url(@/section/s9/logos/11.svg);
+          background-image: url(@/section/s9/logos/09.svg);
           @media screen and (min-width:768px) {
-            background-image: url(@/section/s9/logos/14.svg);
+            background-image: url(@/section/s9/logos/09.svg);
           }
         }
       }
       &:nth-child(10) {
         .tt {
-          background-image: url(@/section/s9/logos/04.svg);
+          background-image: url(@/section/s9/logos/10.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/10.svg);
           }
@@ -215,7 +215,7 @@
       }
       &:nth-child(11) {
         .tt {
-          background-image: url(@/section/s9/logos/08.svg);
+          background-image: url(@/section/s9/logos/11.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/11.svg);
           }
@@ -226,6 +226,38 @@
           background-image: url(@/section/s9/logos/12.svg);
           @media screen and (min-width:768px) {
             background-image: url(@/section/s9/logos/12.svg);
+          }
+        }
+      }
+      &:nth-child(13) {
+        .tt {
+          background-image: url(@/section/s9/logos/13.svg);
+          @media screen and (min-width:768px) {
+            background-image: url(@/section/s9/logos/13.svg);
+          }
+        }
+      }
+      &:nth-child(14) {
+        .tt {
+          background-image: url(@/section/s9/logos/14.svg);
+          @media screen and (min-width:768px) {
+            background-image: url(@/section/s9/logos/14.svg);
+          }
+        }
+      }
+      &:nth-child(15) {
+        .tt {
+          background-image: url(@/section/s9/logos/15.svg);
+          @media screen and (min-width:768px) {
+            background-image: url(@/section/s9/logos/15.svg);
+          }
+        }
+      }
+      &:nth-child(16) {
+        .tt {
+          background-image: url(@/section/s9/logos/16.svg);
+          @media screen and (min-width:768px) {
+            background-image: url(@/section/s9/logos/16.svg);
           }
         }
       }

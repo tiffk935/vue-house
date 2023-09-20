@@ -38,13 +38,19 @@
         :modules="modules"
       >
         <swiper-slide>
-          <img class="w-full" src="@/section/s14/1.jpg" />
+          <img class="w-full" src="@/section/s14/01.webp" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s14/1.jpg" />
+          <img class="w-full" src="@/section/s14/02.webp" />
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full" src="@/section/s14/1.jpg" />
+          <img class="w-full" src="@/section/s14/03.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full" src="@/section/s14/04.webp" />
+        </swiper-slide>
+        <swiper-slide>
+          <img class="w-full" src="@/section/s14/05.webp" />
         </swiper-slide>
       </swiper>
     </div>
@@ -92,9 +98,9 @@
     }
 
     .line {
-      width: size-m(105.73);
+      width: size-m(70.73);
       height: size-m(1);
-      top: size-m(12);
+      top: size-m(30);
       background: #000;
       @media screen and (min-width:768px) {
         width: size(386);
@@ -114,10 +120,10 @@
     .t1 {
       text-align: center;
       font-family: 'Noto Serif TC';
-      font-size: size-m(15);
+      font-size: size-m(19);
       font-weight: 600;
       line-height: normal;
-      letter-spacing: size-m(0.45);
+      letter-spacing: size-m(0.75);
       text-indent: size-m(0.45);
       @media screen and (min-width:768px) {
         font-size: size(51);
@@ -130,7 +136,7 @@
       &:before, &:after {
         content: '';
         position: absolute;
-        top: 3vw;
+        top: 3.6vw;
         left: 48.2vw;
         width: 4vw;
         height: size-m(1);
@@ -150,7 +156,7 @@
       
       .tt {
         justify-content: space-between;
-        width: size-m(141);
+        width: size-m(181);
         margin: 0 auto;
         @media screen and (min-width:768px) {
           width: size(477);

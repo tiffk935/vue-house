@@ -39,13 +39,13 @@
   }
 
   width: 100%;
-  height: size-m(656);
+  height: size-m(587);
   // background-image: url(@/section/s1/bg-m.jpg);
   background-size: cover;
   background-position: center center;
   background: #fff;
   @media screen and (min-width:768px) {
-    height: size(1543);
+    height: size(1580);
     background: #fff;
   }
 
@@ -59,22 +59,22 @@
 
     img {
       width: auto;
-      height: size-m(487);
-      margin-top: size-m(656 - 487);
+      height: size-m(587);
+      //margin-top: size-m(656 - 487);
       max-width: none;
       display: block;
       @media screen and (min-width:768px) {
         overflow: hidden;
         width: 100%;
         height: auto;
-        margin-top: size(263);
+        margin-top: size(0);
       }
     }
   }
 
   .hand {
     width: size-m(22.34);
-    top: size-m(417.22);
+    top: size-m(317.22);
     left: size-m(176.33);
     cursor: pointer;
     transition: opacity .5s;
@@ -91,7 +91,7 @@
 
   .hand-bg {
     width: 100%;
-    top: size-m(376);
+    top: size-m(276);
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
@@ -103,7 +103,7 @@
 
   .t1 {
     left: size-m(67.5);
-    top: size-m(63);
+    top: size-m(23);
     font-family: 'Noto Serif TC';
     font-weight: 600;
     font-size: size-m(19);
@@ -113,7 +113,7 @@
     text-align: center;
     @media screen and (min-width:768px) {
       left: size(695);
-      top: size(76);
+      top: size(96);
       font-size: size(42);
       line-height: size(60);
     }
@@ -121,7 +121,7 @@
 
   .t2 {
     left: size-m(65.5);
-    top: size-m(132);
+    top: size-m(92);
     font-family: 'Noto Serif TC';
     font-weight: 600;
     font-size: size-m(12);
@@ -129,7 +129,7 @@
     text-align: center;
     @media screen and (min-width:768px) {
       left: size(772);
-      top: size(224);
+      top: size(244);
       font-size: size(18);
       line-height: size(26);
     }

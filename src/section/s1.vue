@@ -20,8 +20,6 @@
     </div>
     <div class="comingsoon upup absolute text-[#39684F]">
       <div class="tt">
-        <div class="c1">COMING SOON</div>
-        <div class="c2">即將公開</div>
       </div>
     </div>
     <div class="order-btn absolute" @click="scrollTo('.order')">預約品賞</div>
@@ -77,7 +75,7 @@
     left: size-m(149.02);
     top: size-m(107.5);
     @media screen and (min-width:768px) {
-      width: size(237.53);
+      width: size(185.53);
       left: size(240);
       top: size(284);
     }
@@ -104,8 +102,8 @@
   }
 
   .t3 {
-    width: size-m(192.94);
-    height: size-m(60.82);
+    width: size-m(190.00);
+    height: size-m(66.82);
     left: size-m(91.04);
     top: size-m(266.05);
     @media screen and (min-width:768px) {
@@ -117,6 +115,7 @@
 
     .tt {
       background-image: url(@/section/s1/t3-m.svg);
+      background-size: cover;
       @media screen and (min-width:768px) {
         background-image: url(@/section/s1/t3.svg);
       }
@@ -125,18 +124,19 @@
 
   .logo {
     width: size-m(293.38);
-    height: size-m(71.24);
+    height: size-m(88.24);
     left: size-m(41.66);
     top: size-m(394);
     @media screen and (min-width:768px) {
       width: size(708);
-      height: size(171.92);
+      height: size(215.92);
       left: size(1027);
       top: size(235);
     }
 
     .tt {
       background-image: url(@/section/s1/logo.svg);
+      background-size: cover;
     }
   }
 
@@ -146,7 +146,9 @@
     left: size-m(40);
     top: size-m(484.88);
     background: #26694D;
+    display: none;
     @media screen and (min-width:768px) {
+      display: block;
       width: size(3);
       height: size(713);
       left: size(960);
@@ -187,7 +189,7 @@
 
   .comingsoon {
     width: size-m(166.68);
-    height: size-m(17.4);
+    height: size-m(20.4);
     left: size-m(40);
     top: size-m(657.02);
     @media screen and (min-width:768px) {
@@ -195,6 +197,11 @@
       height: size(40);
       left: size(1025);
       top: size(901);
+
+    }
+
+    .tt {
+      background-image: url(@/section/s1/en.svg);
     }
 
     &>div {
@@ -211,21 +218,7 @@
         line-height: size(38);
       }
 
-      &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: size-m(101);
-        width: size-m(1);
-        height: size-m(10);
-        background: #39684F;
-        transform: translate(0, -50%);
-        @media screen and (min-width:768px) {
-          left: size(214 + 29);
-          width: size(1);
-          height: size(24);
-        }
-      }
+      
     }
 
     .c1 {
@@ -242,7 +235,7 @@
     height: size-m(22);
     left: size-m(228.32);
     top: size-m(654.51);
-    background: #0A1611;
+    background: #26694D;
     font-family: 'Noto Serif TC';
     font-weight: 600;
     font-size: size-m(12);
@@ -262,7 +255,7 @@
     }
 
     &:hover {
-      background: #39684F;
+      background: #000000;
     }
   }
 }

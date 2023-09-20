@@ -61,6 +61,11 @@ export default {
         },
         {
             name: "展宜建築",
+            target: ".s10",
+            offset: "",
+        },
+        {
+            name: "常閑美學",
             target: ".s8",
             offset: "",
         },

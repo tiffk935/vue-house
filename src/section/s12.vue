@@ -3,10 +3,7 @@
     <img class="grid absolute" v-if="$isMobile()" src="@/section/s12/grid-m.jpg" />
     <img class="grid absolute" v-else src="@/section/s12/grid.jpg" />
     <div class="grid-t1 upup absolute">
-      <div class="tt">展宜建築的職人手工好房子 <br class="md:hidden">天母磺溪聚落稀有靜獻</div>
-    </div>
-    <div class="grid-t2 upup absolute">
-      <div class="tt">即將靜好公開 敬請期待</div>
+      <div class="tt">展宜建築的職人手工好房子 <br>天母磺溪聚落稀有靜獻</div>
     </div>
     <div class="grid-t3 upup absolute">
       <div class="tt">歡迎預約優先品賞</div>
@@ -64,7 +61,7 @@
     letter-spacing: 0.03em;
     color: #FFFFFF;
     @media screen and (min-width:768px) {
-      height: size(65);
+      height: size(120);
       width: size(690);
       left: size(616);
       top: size(243);
