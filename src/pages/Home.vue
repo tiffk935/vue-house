@@ -462,7 +462,7 @@ const go = () => {
 }
 
 const scrollTo = (el) => {
-  smallScrollBar.scrollTo(0, document.querySelector(el).getBoundingClientRect().top, 1000);
+  smallScrollBar.scrollIntoView(document.querySelector(el));
 }
 
 const visibleRef = ref(false)
