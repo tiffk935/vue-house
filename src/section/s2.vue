@@ -144,6 +144,7 @@
     text-align: center;
     letter-spacing: 0.01em;
     color: #FFFFFF;
+    z-index: 99;
     @media screen and (min-width:768px) {
       right: size(41);
       bottom: size(28);
