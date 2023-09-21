@@ -389,7 +389,7 @@ onMounted(() => {
         });
       });
 
-      const panels = ['.s3', '.s4', '.s5', '.s6', '.s7', '.s8']; 
+      const panels = ['.s3', '.s4', '.s5', '.s6', '.s7', '.s10', '.s8']; 
       const navLinks = document.querySelectorAll('.topnav .top-btns .item');
       const navLinksM = document.querySelectorAll('.menu .menu-item');
       panels.forEach((panel, i) => {
