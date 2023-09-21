@@ -70,7 +70,7 @@
       </div>
     </div>
     <div class="absolute line3 md:hidden"></div>
-    <img class="style absolute md:hidden" src="@/section/s14/style-m.svg" alt="27坪訂製宅" />
+    <div class="absolute line4 md:hidden"></div>
     <img class="style absolute hidden md:block" src="@/section/s14/style.svg" alt="27坪訂製宅" />
   </section>
 </template>
@@ -93,6 +93,13 @@
       height: size-m(132);
       top: size-m(290);
       left:size-m(28);
+      background: #000;
+  }
+  .line4 {
+      width: size-m(1);
+      height: size-m(132);
+      top: size-m(290);
+      right:size-m(28);
       background: #000;
   }
 
@@ -232,7 +239,7 @@
   }
 
   .t3 {
-    left: size-m(40.62);
+    left: size-m(46.62);
     top: size-m(290);
     color: #39684F;
     font-family: 'Noto Serif TC';
@@ -256,7 +263,7 @@
   }
 
   .t4 {
-    left: size-m(40.62);
+    left: size-m(46.62);
     top: size-m(350);
     // width: size-m(294);
     font-family: 'Noto Serif TC';

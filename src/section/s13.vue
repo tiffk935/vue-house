@@ -31,6 +31,8 @@
         周遭環境係電腦合成，建設公司保有建物外觀修正之權利。
       </div>
     </div>
+
+    
     <div class="t1 upup absolute">
       <div class="tt">
         德國Red Dot設計大獎團隊創作<br>
@@ -125,9 +127,17 @@
       letter-spacing: size(0.39);
     }
   }
+    .flix-center{
+      display: flex;
+      justify-items: center;
+      width: 100%;
+      @media screen and (min-width:768px) {
+        display: block;
+      }
+      }
 
-  .t1 {
-    left: size-m(54);
+   .t1 {
+    left: size-m(57);
     top: size-m(274);
     text-align: center;
     color: #39684F;
@@ -147,9 +157,10 @@
   }
 
   .t2 {
-    left: size-m(59);
+    left: size-m(63);
     top: size-m(333);
     font-family: 'Noto Serif TC';
+    text-align: center;
     font-size: size-m(12);
     font-weight: 600;
     line-height: 160%;
@@ -163,6 +174,7 @@
       letter-spacing: size(0.6);
     }
   }
+
 
   .line {
     @media screen and (min-width:768px) {
