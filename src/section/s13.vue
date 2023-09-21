@@ -137,17 +137,19 @@
       }
 
    .t1 {
-    left: size-m(57);
+    left: size-m(50);
+    right: size-m(50);
     top: size-m(274);
     text-align: center;
     color: #39684F;
     font-family: 'Noto Serif TC';
-    font-size: size-m(15);
+    font-size: size-m(16);
     font-weight: 600;
     line-height: 140%;
     letter-spacing: size-m(0.51);
     @media screen and (min-width:768px) {
       left: size(74);
+      right: auto;
       top: size(88);
       text-align: left;
       font-size: size(34);
@@ -157,7 +159,8 @@
   }
 
   .t2 {
-    left: size-m(63);
+    left: size-m(60);
+    right: size-m(60);
     top: size-m(333);
     font-family: 'Noto Serif TC';
     text-align: center;
@@ -166,6 +169,7 @@
     line-height: 160%;
     @media screen and (min-width:768px) {
       left: size(74);
+      right: auto;
       top: size(259);
       color: #39684F;
       font-size: size(20);
