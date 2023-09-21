@@ -118,19 +118,22 @@
   }
 
   .logo {
-    height: size-m(72.15576934814453);
-    width: size-m(297.1393737792969);
-    left: size-m(38);
-    top: size-m(386.16748046875);
+    width: size-m(293.38);
+    height: size-m(88.24);
+    left: size-m(41.66);
+    top: size-m(394);
     @media screen and (min-width:768px) {
-      height: size(110.21810913085938);
-      width: size(454.3362121582031);
-      left: size(404.32904052734375);
-      top: size(761.1279296875);
+      width: size(708);
+      height: size(215.92);
+      left: size(1027);
+      top: size(235);
     }
 
     .tt {
-      background-image: url(@/section/s12/logo.svg);
+      background-image: url(@/section/s1/logo.svg);
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/s12/logo.svg);
+      }
     }
   }
 
