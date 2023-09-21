@@ -183,7 +183,10 @@
     }
 
     .tt {
+      background-image: url(@/section/s1/title-m.svg);
+      @media screen and (min-width:768px) {
       background-image: url(@/section/s1/title.svg);
+    }
     }
   }
 
