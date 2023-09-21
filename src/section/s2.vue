@@ -11,7 +11,7 @@
     <div class="t2 upup absolute">
       <div class="tt">中山北路六段寧靜生活圈，無國界的天母慢城<br>鄰磺溪畔使館特區，近北士科園區國際盛世</div>
     </div>
-    <div class="info absolute text-white">空拍示意圖</div>
+    <div class="info absolute text-white">環境鳥瞰示意圖</div>
   </section>
 </template>
 
