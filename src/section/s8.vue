@@ -10,9 +10,9 @@
         </div>
       </div>
       <div class="t2 upup">
+        <img class="en absolute" src="@/section/s8/en.svg" />
         <div class="tt">
-          It symbolizes the humanistic environment of life and an open-minded state of mind,<br>
-          laughing and talking about the beauty of daily life.</div>
+          </div>
       </div>
     </div>
     <div class="bg absolute parallax"></div>
@@ -45,22 +45,28 @@
     }
 
     .line {
-      width: size-m(70.73);
+      width: size-m(50.73);
       height: size-m(1);
       top: size-m(30);
       background: #000;
       @media screen and (min-width:768px) {
         width: size(386);
         height: size(1);
-        top: size(50);
+        top: size(90);
       }
 
       &.line1 {
-        left: 0;
+        left: size-m(35);
+        @media screen and (min-width:768px) {
+        left: size(0);
+      }
       }
 
       &.line2 {
-        right: 0;
+        right: size-m(35);
+        @media screen and (min-width:768px) {
+        right: size(0);
+      }
       }
     }
 
@@ -120,6 +126,15 @@
       @media screen and (min-width:768px) {
         font-size: size(11);
         margin-top: size(7);
+      }
+
+      .en{
+        width: size-m(182);
+        left: size-m(96);
+         @media screen and (min-width:768px) {
+        width: size(470);
+        left: size(450);
+         }
       }
     }
   }

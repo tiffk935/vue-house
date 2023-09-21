@@ -10,14 +10,14 @@
         </div>
       </div>
       <div class="t2 upup">
+        <img class="en absolute" src="@/section/s8/en.svg" />
         <div class="tt">
-          It symbolizes the humanistic environment of life and an open-minded state of mind,<br>
-          laughing and talking about the beauty of daily life.</div>
+        </div>
       </div>
     </div>
     <div class="slider absolute">
       <swiper
-        :slidesPerView="1.4"
+        :slidesPerView="1.15"
         :centeredSlides="true"
         :pagination="{
           clickable: true
@@ -54,7 +54,7 @@
         </swiper-slide>
       </swiper>
     </div>
-
+    <div class="txt absolute">*此為廣告效果示意，為單一建物電腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
     <div class="t3 upup absolute">
       <div class="tt">
         戶戶邊間探光3米6訂製精品<br>
@@ -69,6 +69,7 @@
         兼具實用舒適與尊榮享受，打造天母質感的高規格生活
       </div>
     </div>
+    <div class="absolute line3 md:hidden"></div>
     <img class="style absolute md:hidden" src="@/section/s14/style-m.svg" alt="27坪訂製宅" />
     <img class="style absolute hidden md:block" src="@/section/s14/style.svg" alt="27坪訂製宅" />
   </section>
@@ -87,6 +88,14 @@
     height: size(1290);
   }
 
+  .line3 {
+      width: size-m(1);
+      height: size-m(132);
+      top: size-m(290);
+      left:size-m(28);
+      background: #000;
+  }
+
   .title {
     width: size-m(375);
     left: size-m(0);
@@ -98,22 +107,28 @@
     }
 
     .line {
-      width: size-m(70.73);
+      width: size-m(50.73);
       height: size-m(1);
       top: size-m(30);
       background: #000;
       @media screen and (min-width:768px) {
         width: size(386);
         height: size(1);
-        top: size(50);
+        top: size(90);
       }
 
       &.line1 {
-        left: 0;
+        left: size-m(35);
+        @media screen and (min-width:768px) {
+        left: size(0);
+      }
       }
 
       &.line2 {
-        right: 0;
+        right: size-m(35);
+        @media screen and (min-width:768px) {
+        right: size(0);
+      }
       }
     }
 
@@ -174,6 +189,15 @@
         font-size: size(11);
         margin-top: size(7);
       }
+
+      .en{
+        width: size-m(182);
+        left: size-m(96);
+         @media screen and (min-width:768px) {
+        width: size(470);
+        left: size(450);
+         }
+      }
     }
   }
 
@@ -193,11 +217,14 @@
 
     .swiper-slide {
       padding: 0 1vw;
+      @media screen and (min-width:768px) {
+        padding: 0 2vw 0 0vw;
+      }
+      
     }
 
     .swiper-slide img {
       height: size-m(155);
-      object-fit: cover;
       @media screen and (min-width:768px) {
         height: size(730);
       }
@@ -205,11 +232,11 @@
   }
 
   .t3 {
-    left: size-m(34.62);
-    top: size-m(295);
+    left: size-m(40.62);
+    top: size-m(290);
     color: #39684F;
     font-family: 'Noto Serif TC';
-    font-size: size-m(17);
+    font-size: size-m(16);
     font-weight: 600;
     line-height: 140%;
     letter-spacing: size-m(0.51);
@@ -229,13 +256,14 @@
   }
 
   .t4 {
-    left: size-m(34.62);
-    top: size-m(354);
+    left: size-m(40.62);
+    top: size-m(350);
     // width: size-m(294);
     font-family: 'Noto Serif TC';
     font-size: size-m(12);
     font-weight: 600;
     line-height: 160%;
+    letter-spacing: size-m(0);
     @media screen and (min-width:768px) {
       left: size(947.64);
       top: size(1041.5);
@@ -247,9 +275,28 @@
       letter-spacing: size(0.6);
     }
   }
+  .txt {
+    width: size-m(239);
+    left: size-m(28);
+    top: size-m(240);
+    font-size: size-m(9);
+    text-align: left;
+    color: #666666;
+    z-index: 10;
+    @media screen and (min-width:768px) {
+      width: auto;
+      left: size(90);
+      top: size(940);
+      font-weight: 700;
+      font-size: size(14);
+      line-height: size(20);
+      letter-spacing: 0.03em;
+      color: #FFFFFF;
+    }
+  }
 
   .style {
-    left: size-m(294.66);
+    left: size-m(300.66);
     top: size-m(246);
     width: size-m(51.72);
     @media screen and (min-width:768px) {
