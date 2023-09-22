@@ -123,10 +123,10 @@
     left: size-m(41.66);
     top: size-m(394);
     @media screen and (min-width:768px) {
-      width: size(708);
-      height: size(215.92);
-      left: size(1027);
-      top: size(235);
+      width: size(455);
+      height: size(110);
+      left: size(404);
+      top: size(762);
     }
 
     .tt {
