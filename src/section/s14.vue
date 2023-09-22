@@ -54,7 +54,7 @@
         </swiper-slide>
       </swiper>
     </div>
-    <div class="txt absolute">*此為廣告效果示意，為單一建物電腦3D透視表現，<br class="md:hidden">周遭環境係電腦合成，建設公司保有建物外觀修正之權利。</div>
+    <div class="txt absolute">*樣品屋裝潢情境參考示意圖，其中裝修建材、傢俱飾品、<br class="md:hidden">植栽畫作等為設計表現，實際依買賣合約書為準。</div>
     <div class="t3 upup absolute">
       <div class="tt">
         戶戶邊間探光3米6訂製精品<br>
