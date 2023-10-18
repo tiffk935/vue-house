@@ -1,7 +1,7 @@
 <template>
   <section class="s4 relative bg-[#EDEDED] text-[#231815]">
     <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">百億建設湧進 匯聚百億建設紅利</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">匯聚300億未來建設紅利，南紡購物中心二期、文化中心、台南國際機場、長榮桂冠酒店、崇明中小學區、 仁和國小、國立科學教育體驗未來館、台南市立醫院等利基發展條件及台糖公司亦根留府城並積極推動轉型與升級。</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">匯聚300億未來建設紅利，南紡購物中心二期、文化中心、台南國際機場、長榮桂冠酒店、崇明中小學區、 仁和國小、運動藝文休閒園區、台南市立醫院等利基發展條件及台糖公司亦根留府城並積極推動轉型與升級。</div>
     <div class="slider absolute">
       <swiper
         :loop="true"

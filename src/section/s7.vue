@@ -30,6 +30,7 @@
 .s7 {
   width: 100%;
   height: size-m(920);
+  background: #fff;
   @media screen and (min-width:768px) {
     height: size(920);
   }

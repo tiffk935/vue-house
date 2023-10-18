@@ -30,6 +30,7 @@
   width: 100%;
   height: size-m(1073);
   z-index: 1;
+  background: #FFFFFF;
   @media screen and (min-width:768px) {
     height: size(1566);
   }
