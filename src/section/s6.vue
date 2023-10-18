@@ -16,10 +16,10 @@
       <img src="@/section/s6/img3.jpg" />
       <div class="txt">健身房3D合成示意圖</div>
     </div>
-    <div class="t3 absolute">公設設計 常季設計-張立人</div>
-    <div class="img4 absolute" data-aos="fade-up" data-aos-delay="400">
+    <!--div class="t3 absolute">公設設計 常季設計-張立人</div-->
+    <!--div class="img4 absolute" data-aos="fade-up" data-aos-delay="400">
       <img src="@/section/s6/img4.jpg" />
-    </div>
+    </div-->
     <img class="style absolute" src="@/section/s6/style.png" />
   </section>
 </template>
@@ -28,7 +28,8 @@
 @import "@/assets/style/function.scss";
 .s6 {
   width: 100%;
-  height: size-m(1073);
+  height: size-m(850);
+  //height: size-m(1073);
   z-index: 1;
   background: #FFFFFF;
   @media screen and (min-width:768px) {
