@@ -1,8 +1,8 @@
 <template>
   <article class="s6">
       <div class="txt">
-        <img src="./s6/en.svg" class="en">
-        <h2 class="title font-['Noto_Serif_TC']" data-aos="zoom-in" data-aos-delay="0" >公設旅程藝境 飯店美好之域</h2>
+        <img src="./s6/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0">
+        <h2 class="title font-['Noto_Serif_TC']" data-aos="zoom-in" data-aos-delay="200" >公設旅程藝境 飯店美好之域</h2>
         </div>
 
     <div class="slider" data-aos="fade">

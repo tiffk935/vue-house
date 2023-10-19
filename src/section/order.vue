@@ -1,7 +1,7 @@
 <template>
   <div class="order relative bg-[#9E8077] text-center">
     <div class="toplogo">
-      <img class="toplogo-logo" src="@/section/s1/toplogo.svg" />
+      <img class="toplogo-logo" src="@/section/s1/toplogo.svg" data-aos="zoom-in" data-aos-delay="0" />
      <!-- <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2602-777</div> --> 
     </div>
     <div class="order1 relative">
