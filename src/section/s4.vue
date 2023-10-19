@@ -1,51 +1,11 @@
 <template>
-  <section class="s4 relative bg-[#EDEDED] text-[#231815]">
-    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">百億建設湧進 匯聚百億建設紅利</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">匯聚300億未來建設紅利，南紡購物中心二期、文化中心、台南國際機場、長榮桂冠酒店、崇明中小學區、 仁和國小、國立科學教育體驗未來館、台南市立醫院等利基發展條件及台糖公司亦根留府城並積極推動轉型與升級。</div>
-    <div class="slider absolute">
-      <swiper
-        :loop="true"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :modules="modules"
-        @init="init"
-      >
-        <swiper-slide>
-          <img class="w-full block" src="@/section/s4/1.jpg" />
-          <div class="txt">購物商場示意圖</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full block" src="@/section/s4/2.jpg" />
-          <div class="txt">車站示意圖</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full block" src="@/section/s4/3.jpg" />
-          <div class="txt">巴克禮公園實景圖</div>
-        </swiper-slide>
-        <swiper-slide>
-          <img class="w-full block" src="@/section/s4/4.jpg" />
-          <div class="txt">文化公園實景圖</div>
-        </swiper-slide>
-      </swiper>
-    </div>
-    <div class="slide-prev absolute" @click="slidePrev"></div>
-    <div class="slide-next absolute" @click="slideNext"></div>
-    <div class="img1 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img1.jpg" />
-      <div class="txt">基地旁公園實景圖</div>
-    </div>
-    <div class="img2 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img2.jpg" />
-      <div class="txt">86快速道路實景圖</div>
-    </div>
-    <div class="img3 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img3.jpg" />
-      <div class="txt">崇明國小實景圖</div>
-    </div>
-    <div class="text2">TRAFFIC</div>
-    <div class="text3">SCHOOL</div>
+  <section class="s4 relative ">
+      <div class="txt absolute">
+        <img src="./s4/en.svg" class="en">
+        <h2 class="title font-['Noto_Serif_TC']" data-aos="zoom-in" data-aos-delay="0" >中央2.0政策 運動藝文園區BOT啟動</h2>
+      </div>
+      <div class="caption">3D示意圖</div>
+
   </section>
 </template>
 
@@ -54,9 +14,42 @@
 
 .s4 {
   width: 100%;
-  height: size-m(894);
+  height: size-m(500);
+  background: url("./s4/bg.jpg") center;
+  background-size: cover;
+  //background: url("./s4/01.jpg");
+  font-size:size-m(13);
+  color: #fff;
   @media screen and (min-width:768px) {
-    height: size(960);
+    height: size(1387);
+  font-size:size(23);
+  }
+
+  .txt{
+    top: size-m(80);
+    left: 0;right: 0;
+    text-align: center;
+  line-height: 1.5;
+  @media screen and (min-width:768px) {    
+    top: size(265);
+  }
+    .en{width: size-m(310);
+  @media screen and (min-width:768px) {
+    width: size(1387);
+  }}
+    .title{font-size:1.07em;letter-spacing:0.32em;font-weight: 700;margin: 1em auto 2.5em auto;
+    
+  @media screen and (min-width:768px) {    
+    font-size:2.4em;margin: .8em auto 1.3em auto;letter-spacing:0.41em;
+  }
+    }
+    .desc{font-weight: 300;letter-spacing:0.03em;
+    text-align: justify;
+    width: size-m(285);margin: auto;
+  @media screen and (min-width:768px) {    
+    width: auto;
+    text-align: center;
+  }}
   }
 
   .t1 {
@@ -116,7 +109,7 @@
       z-index: 0;
     }
   }
-
+/*
   .txt {
     position: absolute;
     bottom: size-m(2);
@@ -131,7 +124,7 @@
       font-size: size(15);
       line-height: size(22);
     }
-  }
+  }*/
   
   .slide-prev, .slide-next {
     width: size-m(32.76);
