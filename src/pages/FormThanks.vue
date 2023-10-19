@@ -2,8 +2,8 @@
     <div class="thanks">
         <img src="https://bcp.crwdcntrl.net/5/c=13578/b=78113418" width="1" height="1" />
         <a href="/">
-            <img src="@/assets/thank-img.png" alt="研森" class="img">
-            <img src="@/assets/thank-img-hover.png" alt="研森" class="img-hover">
+            <img src="//h65.tw/img/thank-img.png" alt="研森" class="img">
+            <img src="//h65.tw/img/thank-img-hover.png" alt="研森" class="img-hover">
         </a>
     </div>
 </template>
@@ -11,7 +11,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('@/assets/thank_bg.png');
+    background: url('//h65.tw/img/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;

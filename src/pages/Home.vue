@@ -6,7 +6,7 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="研森" srcset="">
+    <img class="w-32" src="//h65.tw/img/loading_w.gif" alt="研森" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />

@@ -4,7 +4,7 @@
 </template>
 <style lang="scss" scoped>
 .bg {
-    background-image: url('@/assets/404-bg.png');
+    background-image: url('//h65.tw/img/404-bg.png');
     background-size: cover;
     background-position: center;
     width: 100vw;
@@ -13,7 +13,7 @@
 
 @media screen and (max-width: 767px) {
     .bg {
-        background-image: url('@/assets/404-bg-m.png');
+        background-image: url('//h65.tw/img/404-bg-m.png');
     }
 }
 </style>
