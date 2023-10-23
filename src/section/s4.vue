@@ -4,7 +4,7 @@
         <img src="./s4/en.svg" class="en" data-aos="zoom-in" data-aos-delay="0">
         <h2 class="title font-['Noto_Serif_TC']" data-aos="zoom-in" data-aos-delay="200" >中央2.0政策 運動藝文園區BOT啟動</h2>
       </div>
-      <div class="caption">3D示意圖</div>
+      <div class="caption">建設環境情境參考示意圖</div>
 
   </section>
 </template>

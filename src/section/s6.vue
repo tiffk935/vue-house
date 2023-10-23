@@ -120,10 +120,11 @@ const imgs = [
     img: new URL("./s6/1.jpg", import.meta.url).href,
     caption: "3D示意圖"
   },
-  {
+/*  {
     img: new URL("./s6/2.jpg", import.meta.url).href,
     caption: "3D示意圖"
   },
+  */
   {
     img: new URL("./s6/3.jpg", import.meta.url).href,
     caption: "3D示意圖"
