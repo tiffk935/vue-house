@@ -121,7 +121,7 @@ const imgs = [
     caption: "3D示意圖"
   },
   {
-    img: new URL("./s6/2.jpg", import.meta.url).href,
+    img:globals.$isMobile() ? new URL("./s6/2m.jpg", import.meta.url).href : new URL("./s6/2.jpg", import.meta.url).href,
     caption: "3D示意圖"
   },
   
