@@ -3,7 +3,7 @@
     <img class="circle" src="@/section/s3/circle.svg" />
     <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="t1" data-aos="fade-down" data-aos-delay="100">雙語教學接軌<br>學習搶占先機</div>
-      <div class="content" data-aos="fade-down" data-aos-delay="200">青埔國小、青埔國中、大園國際高中，完整12年雙語國際菁英教育，接軌國際零障礙，好學氛圍，為下一代開啟學習之鑰！</div>
+      <div class="content" data-aos="fade-down" data-aos-delay="200">青園國小、青埔國中、大園國際高中，完整12年雙語國際菁英教育，接軌國際零障礙，好學氛圍，為下一代開啟學習之鑰！</div>
     </div>
     <div class="slider absolute">
       <div class="name absolute" data-aos="fade-down" data-aos-delay="300">International <br>Education</div>
