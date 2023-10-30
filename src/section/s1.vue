@@ -5,7 +5,7 @@
     <img class="en absolute" data-aos="zoom-in" data-aos-delay="800" data-aos-offset="-300" data-aos-duration="1000" src="@/section/s1/en.png" />
     <img class="logo absolute" data-aos="zoom-in" data-aos-delay="400" data-aos-duration="1000" src="@/section/s1/logo.svg" />
     <div class="t1 absolute" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000">隈の日本絕美藝術</div>
-    <div class="caption">建築代銷：<img src="@/section/s1/slogo.svg" alt="清揚">國際實業(股)　研森大廳公設藝術品　3D示意圖｜版權所有© 清景麟建築團隊．隈研吾建築都市設計事務所 作成．提供</div>
+    <div class="caption">建築代銷：<img src="@/section/s1/slogo.svg" alt="清揚">國際實業(股)　研森大廳公設藝術品　3D示意圖<span v-if="!$isMobile()">｜</span><br v-else>版權所有© 清景麟建築團隊．隈研吾建築都市設計事務所 作成．提供</div>
   </section>
 </template>
 
@@ -90,11 +90,20 @@
 .caption{
       left:auto;
       right: .5em;text-shadow: 0 0 0 #0000;
-      filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+      text-align: right;
+      filter: drop-shadow(0px 1px 2px #77584f);
+      font-size:size-m(11);
       img{height: 1.5em;vertical-align:-.3em;}
+      @media screen and (min-width:768px) {
+        font-size:size(13);
+      }
+
 }
 }
 </style>
 
 <script setup>
+import { computed, getCurrentInstance, ref } from 'vue';
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
 </script>
