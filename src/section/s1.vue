@@ -7,11 +7,11 @@
     <img class="logo absolute" data-aos="zoom-in" data-aos-delay="600" data-aos-duration="1000" src="@/section/s1/logo.svg" />
     <div class="tt absolute hidden md:block" data-aos="zoom-in" data-aos-delay="800">
       <div class="t1">隈の日本絕美藝術</div>
-      <div class="t2">22-41 坪｜06-2602-777</div>
+      <div class="t2">22-41 坪｜06-2899-777</div>
     </div>
     <div class="tt absolute md:hidden" data-aos="zoom-in" data-aos-delay="800">
       <div class="t1">隈の日本絕美藝術 22-41 坪</div>
-      <div class="t2">06-2602-777</div>
+      <div class="t2">06-2899-777</div>
     </div>
   </section>
 </template>

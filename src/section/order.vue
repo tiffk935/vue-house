@@ -2,7 +2,7 @@
   <div class="order relative bg-[#AB8E77] text-center">
     <div class="toplogo">
       <img class="toplogo-logo" src="@/section/s1/logo.svg" />
-      <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2602-777</div>
+      <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2899-777</div>
     </div>
     <div class="order1 relative">
       <img class="style3 absolute hidden md:block" src="@/section/s1/style3.png" />
