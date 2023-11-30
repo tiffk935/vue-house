@@ -445,19 +445,15 @@ top: 15%;
 }
 .kv-brand{
 	position:absolute;
-	top:20px;
-	left:20px;right: auto;
+	bottom:20px;top: auto;
+	right:20px;
 	width:calc(100vw * 330 / 1920);
 }
-.s1_logo{
-	position:absolute;
-	bottom:20px;right: 20px;
-	width:calc(100vw * 321 / 1920);}
 .s1_txt{
 	position:absolute;
 	top:calc(20% - 3vw);
 	left:0px;right: 0px;margin: auto;
-	width:calc(100vw * 740 / 1920);}
+	width:calc(100vw * 1186 / 1920);}
 
 .change{
 	overflow:hidden;
@@ -822,6 +818,9 @@ top: 15%;
 		
 	}
 	.kv-brand{
+		bottom: 10px;
+		top: auto;
+		right: 10px;
 		width:calc(100vw * 180 / 375);
 	}
 	.s1_logo{
@@ -830,9 +829,9 @@ top: 15%;
 		width:calc(100vw * 100 / 375);}
 	.s1_txt{
 		position:absolute;
-		top:40vw;
+		top:21vw;
 		left:0px;right: 0px;margin: auto;
-		width:calc(100vw * 310 / 375);}
+		width:calc(100vw * 303 / 375);}
 
 	.change-title{
 		width:80%;
@@ -842,8 +841,8 @@ top: 15%;
 		background-size:cover;
 		background-image:url("img/00_bg-m.jpg");
 		background-position: center bottom;
-		min-height:604px;
-		height:604px;
+		min-height:calc(100vw * 667 / 375);
+		height:calc(100vw * 667 / 375);
 		display: flex;
 	}
 

@@ -12,13 +12,14 @@
             <div class="col">
               <div class="kv text-lg-center "><!-- 
                 <img src="@/section/s1/00_logo_m.png" class="mobile-view img-fluid img-protected mx-auto d-block kv-logo kv-logo-n mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" />
+                <img src="@/section/s1/00_logo.png" class="s1_logo" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" />
                 <div class="kv-title text-lg-center">
                   <img src="@/section/s1/00_title.png" class="kv-mintitle img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1 mg-sm" alt="國際最美聯手_艾美國際城" data-appear-anim-style="fadeInDown" />
                 </div>
 
                -->
-                <img src="@/section/s1/00_logo.png" class="s1_logo" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" />
-                <img src="@/section/s1/00_txt.png" class="s1_txt" alt="艾美國際城_txt" data-appear-anim-style="vanishIn" />
+                <img src="@/section/s1/00_txtm.png" class="mobile-view s1_txt" alt="艾美國際城_txt" data-appear-anim-style="vanishIn" />
+                <img src="@/section/s1/00_txt.png" class="pc-view s1_txt" alt="艾美國際城_txt" data-appear-anim-style="vanishIn" />
                 <img src="@/section/s1/00_brand.png" class="img-fluid img-protected mx-auto d-block kv-brand" alt="上揚國際｜悅揚國際" />
               </div>
             </div>
