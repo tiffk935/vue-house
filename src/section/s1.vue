@@ -11,8 +11,11 @@
           <div class="row no-gutters align-items-start">
             <div class="col">
               <div class="kv text-lg-center ">
+                <img src="@/section/s1/00_logo_m.png" class="mobile-view img-fluid img-protected mx-auto d-block kv-logo kv-logo-n mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" />
+                <img src="@/section/s1/00_logo.png" class="pc-view img-fluid img-protected mx-auto d-block kv-logo kv-logo-n mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" />
                 <div class="kv-title text-lg-center">
-                  <img src="@/section/s1/00_logo.png" class="img-fluid img-protected mx-auto d-block kv-logo mg-lg none animated vanishIn2 scroll-fx-zoom-pull animSpeedLazy animDelay02" alt="艾美國際城_LOGO" data-appear-anim-style="vanishIn" /><img src="@/section/s1/00_title.png" class="img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1 mg-sm" alt="國際最美聯手_艾美國際城" data-appear-anim-style="fadeInDown" /><img src="@/section/s1/00_subtitle.png" class="kv-subtitle img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1" alt="101團隊x蔦屋書店_艾美國際城" data-appear-anim-style="fadeInDown" />
+                  <img src="@/section/s1/00_title.png" class="kv-mintitle img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1 mg-sm" alt="國際最美聯手_艾美國際城" data-appear-anim-style="fadeInDown" />
+                  <!--img src="@/section/s1/00_subtitle.png" class="kv-subtitle img-fluid img-protected mx-auto d-block animated fadeInDown2 animDelay1" alt="101團隊x蔦屋書店_艾美國際城" data-appear-anim-style="fadeInDown" /-->
                 </div>
                 <!--img src="@/section/s1/00_eng.png" class="img-fluid img-protected mx-auto d-block eng" alt="00_logo" /--><img src="@/section/s1/00_brand.png" class="img-fluid img-protected mx-auto d-block kv-brand" alt="三地集團｜上揚國際｜悅揚國際" />
               </div>
@@ -130,7 +133,7 @@
             <div class="col">
               <div class="panasonic ">
                 <div class="panasonic-box  text-lg-center text-md-center text-sm-center text-center">
-                  <img src="@/section/s1/05_brand.png" class="img-fluid img-protected mx-auto d-block mg-lg animated vanishIn" alt="Panasonic_日本原裝進口松下宅" data-appear-anim-style="vanishIn" /><img src="@/section/s1/05_title.png" class="img-fluid img-protected mx-auto mg-lg panasonic-title" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_title-m.png" class="img-fluid img-protected mx-auto mg-lg scroll-fx-down-in-fade panasonic-title-m" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_content.png" class="img-fluid img-protected mx-auto panasonic-content" alt="原裝進口Panasonic建材_艾美國際城" /><img src="@/section/s1/05_content.png" class="img-fluid img-protected mx-auto scroll-fx-down-in-fade panasonic-content-m" alt="原裝進口Panasonic建材_艾美國際城" />
+                  <img src="@/section/s1/05_brand.png" class="img-fluid img-protected mx-auto d-block mg-lg animated vanishIn" alt="Panasonic_日本原裝進口松下宅" data-appear-anim-style="vanishIn" /><!--img src="@/section/s1/05_title.png" class="img-fluid img-protected mx-auto mg-lg panasonic-title" alt="日本原裝進口松下宅_艾美國際城" /><img src="@/section/s1/05_title-m.png" class="img-fluid img-protected mx-auto mg-lg scroll-fx-down-in-fade panasonic-title-m" alt="日本原裝進口松下宅_艾美國際城" /--><img src="@/section/s1/05_content1.png" class="img-fluid img-protected mx-auto panasonic-content" alt="原裝進口Panasonic建材_艾美國際城" /><img src="@/section/s1/05_content1.png" class="img-fluid img-protected mx-auto scroll-fx-down-in-fade panasonic-content-m" alt="原裝進口Panasonic建材_艾美國際城" />
                 </div>
               </div>
             </div>
@@ -139,6 +142,7 @@
       </div>
       <!-- bloc-5 END -->
       <!-- bloc-6 -->
+      <!--
       <div class="bloc full-width-bloc bg-08-bg d-bloc bg-center" id="bloc-6">
         <div class="container bloc-no-padding-lg bloc-no-padding">
           <div class="row no-gutters align-items-start">
@@ -157,7 +161,118 @@
           </div>
         </div>
       </div>
+      -->
       <!-- bloc-6 END -->
+      <!-- bloc-7 -->
+      <div class="bloc l-bloc full-width-bloc bloc-7" id="bloc-7">
+        <div class="container bloc-no-padding-lg bloc-no-padding">
+          <div class="row no-gutters align-items-center">
+            <div class="col">
+              <div class="brand ">
+                <div class="brand-kv ">
+                  <img src="@/section/s1/09_img.jpg" class="left-img" alt="Brand_艾美國際城" />  
+                </div>
+                <div class="brand-box  text-md-center animated fadeInRight" data-appear-anim-style="fadeInRight">
+                  <img src="@/section/s1/09_eng.png" class="img-fluid img-protected mx-auto d-block eng2" alt="Brand_艾美國際城" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none mg-md brand-title" alt="艾美國際城" />
+                  <img src="@/section/s1/09_title.png" class="img-fluid img-protected float-lg-none brand-title-m mg-md" alt="艾美國際城" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content" alt="艾美國際城" />
+                  <img src="@/section/s1/09_content.png" class="img-fluid img-protected float-lg-none brand-content-m" alt="艾美國際城" />
+
+
+                    <div class="carousel slide brand-slide" data-ride="carousel" id="new">
+                    <ol class="carousel-indicators hide-indicators">
+                      <li data-target="#new" data-slide-to="0" class="active">
+                      </li>
+                      <li data-target="#new" data-slide-to="1">
+                      </li>
+                      <li data-target="#new" data-slide-to="2">
+                      </li>
+                      <li data-target="#new" data-slide-to="3">
+                      </li>
+                      <li data-target="#new" data-slide-to="4">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item img-protected active">
+                        <img class="d-inline-block w-100" alt="高雄客運" src="@/section/s1/09_img-1.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item img-protected">
+                        <img alt="三地集團" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-nav-controls carousel-control-prev" href="#new" role="button" data-slide="prev">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path>
+                      </svg>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-nav-controls carousel-control-next" href="#new" role="button" data-slide="next">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path>
+                      </svg>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                  <div class="carousel slide brand-slide-m" data-ride="carousel" id="new">
+                    <ol class="carousel-indicators hide-indicators">
+                      <li data-target="#new" data-slide-to="0" class="active">
+                      </li>
+                      <li data-target="#new" data-slide-to="1">
+                      </li>
+                      <li data-target="#new" data-slide-to="2">
+                      </li>
+                      <li data-target="#new" data-slide-to="3">
+                      </li>
+                      <li data-target="#new" data-slide-to="4">
+                      </li>
+                      <li data-target="#new" data-slide-to="5">
+                      </li>
+                      <li data-target="#new" data-slide-to="6">
+                      </li>
+                      <li data-target="#new" data-slide-to="7">
+                      </li>
+                      <li data-target="#new" data-slide-to="8">
+                      </li>
+                      <li data-target="#new" data-slide-to="9">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner" role="listbox">
+                      <div class="carousel-item img-protected active">
+                        <img class="d-inline-block w-100" alt="艾美國際城" src="@/section/s1/09_img-1.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                      <div class="carousel-item img-protected">
+                        <img alt="艾美國際城" class="d-inline-block w-100" src="@/section/s1/09_img-2.jpg" />
+                        <div class="carousel-caption">
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-nav-controls carousel-control-prev" href="#new" role="button" data-slide="prev">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-prev-icon" d="M22,2L9,16,22,30"></path>
+                      </svg>
+                      <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-nav-controls carousel-control-next" href="#new" role="button" data-slide="next">
+                      <svg width="26" height="26" viewBox="0 0 32 32">
+                        <path class="carousel-nav-icon carousel-next-icon" d="M10.344,2l13,14-13,14"></path>
+                      </svg>
+                      <span class="sr-only">Next</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- bloc-7 END -->
       <!-- bloc-6 -->
       <div class="bloc l-bloc full-width-bloc" id="bloc-6">
         <div class="container bloc-no-padding-lg bloc-no-padding">
@@ -353,10 +468,86 @@
 
 <style lang="scss">
 // @import "@/assets/style/bootstrap.css";
-// @import "@/assets/style/style.css";
+@import "@/assets/style/style.css";
 // @import "@/assets/style/animate.css";
 
+
+
 .s1 {
+
+
+.scrollToTop{
+	width:36px;
+	height:36px;
+	padding:5px;
+	position:fixed;
+	bottom:80px;
+	right:20px;
+	opacity:0;
+	z-index:999;
+	transition: all .3s ease-in-out;
+	pointer-events:none;
+}
+
+.showScrollTop{
+	opacity: 1;
+	pointer-events:all;
+}
+.scroll-to-top-btn-icon{
+	fill: none;
+	stroke: #fff;
+	stroke-width: 2px;
+	fill-rule: evenodd;
+	stroke-linecap:round;
+}
+
+.bloc-7{
+	background-color: #b6a089;
+}
+
+.bloc-7 .eng2{
+	width: 600px;
+	height: auto;
+}
+.bloc-7 .brand-kv {
+    min-width: 52.5%;
+}
+
+.bloc-7 .brand-box{
+	padding-left: 8%;
+    padding-right: 8%;
+} 
+.bloc-7 .carousel{
+	margin-top: 5%;
+}
+
+@media (max-width: 767px){
+	.bloc-7 .brand {
+		flex-direction: column;
+	}
+	.bloc-7 .brand-box {
+		height: 350px;
+		padding-left: 10%;
+		padding-right: 10%;
+		padding-top: 0%;
+		padding-bottom: 10%;
+	}
+	.bloc-7 .eng2{
+		top:auto;
+		bottom:0;
+	}
+	.bloc-7 .brand-title-m{
+		width: 100%;
+	}
+	.bloc-7 .brand-content-m{
+		width: 100%;
+	}
+
+
+}
+
+
+
 
   h1, h2, h3, h4, h5, h6, p, label, .btn, a {
     font-family:"Noto Sans TC";
@@ -419,7 +610,7 @@
     width: 7.3958vw;
     bottom: 10vw;
     right: 1vw;
-    z-index: 1;
+    z-index: 20;
     display: none;
     filter: drop-shadow(0px 0px 7px rgba(0, 0, 0, 0.6));
 
@@ -427,8 +618,11 @@
       display: block;
     }
   }
+
   
 }
+
+
 </style>
 
 <script>
