@@ -446,8 +446,8 @@ top: 15%;
 .kv-brand{
 	position:absolute;
 	top:20px;
-	right:20px;
-	width:20%;
+	left:20px;right: auto;
+	width:330px;
 }
 .change{
 	overflow:hidden;
