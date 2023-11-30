@@ -447,8 +447,18 @@ top: 15%;
 	position:absolute;
 	top:20px;
 	left:20px;right: auto;
-	width:330px;
+	width:calc(100vw * 330 / 1920);
 }
+.s1_logo{
+	position:absolute;
+	bottom:20px;right: 20px;
+	width:calc(100vw * 321 / 1920);}
+.s1_txt{
+	position:absolute;
+	top:calc(20% - 3vw);
+	left:0px;right: 0px;margin: auto;
+	width:calc(100vw * 740 / 1920);}
+
 .change{
 	overflow:hidden;
 	position:relative;
@@ -812,8 +822,18 @@ top: 15%;
 		
 	}
 	.kv-brand{
-		width:90%;
+		width:calc(100vw * 180 / 375);
 	}
+	.s1_logo{
+		position:absolute;
+		bottom:10px;right: 10px;
+		width:calc(100vw * 100 / 375);}
+	.s1_txt{
+		position:absolute;
+		top:40vw;
+		left:0px;right: 0px;margin: auto;
+		width:calc(100vw * 310 / 375);}
+
 	.change-title{
 		width:80%;
 		margin-top: 0 !important;
@@ -821,8 +841,9 @@ top: 15%;
 	.kv{
 		background-size:cover;
 		background-image:url("img/00_bg-m.jpg");
-		background-position: center center;
-		min-height:768px;
+		background-position: center bottom;
+		min-height:604px;
+		height:604px;
 		display: flex;
 	}
 
@@ -1090,12 +1111,12 @@ top: 15%;
 		width: 75%;
 		top: 30%;
 		bottom: auto;
-	}
+	}/*
 	.kv{
 		height:1024px;
 		width:100%;
 		min-height:600px;
-	}
+	}*/
 	.kv-title03{
 		width:50%;
 	}
@@ -1160,9 +1181,11 @@ top: 15%;
 	.policy-content{
 		height:400px;
 	}
+	/*
 	.kv{
 		height:752px;
 	}
+	*/
 	.form-content{
 		width:90%;
 	}
