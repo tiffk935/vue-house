@@ -14,8 +14,8 @@
           @input="(event) => (formData.name = event.target.value)" maxlength="16" />
         <input type="text" placeholder="手機" class="aa-input w-full rounded-none" :value="formData.phone"
           @input="(event) => (formData.phone = event.target.value)" maxlength="10" />
-        <input type="text" placeholder="信箱" class="aa-input w-full rounded-none" :value="formData.email"
-          @input="(event) => (formData.email = event.target.value)" maxlength="255" />  
+        <!--input type="text" placeholder="信箱" class="aa-input w-full rounded-none" :value="formData.email"
+          @input="(event) => (formData.email = event.target.value)" maxlength="255" /-->  
         
         <select class="aa-select w-full rounded-none" v-model="formData.room_type">
           <option value="" selected disabled>需求房型</option>
@@ -23,7 +23,7 @@
           <option value="2+1房">2+1房</option>
           <option value="3+1房">3+1房</option>
         </select>
-        <select class="aa-select w-full rounded-none" v-model="formData.city">
+        <!--select class="aa-select w-full rounded-none" v-model="formData.city">
           <option value="" selected disabled>居住縣市</option>
           <option v-for="city in cityList" :key="city.label" :value="city.value">
             {{ city.label }}
@@ -34,7 +34,7 @@
           <option v-for="area in areaList" :key="area.label" :value="area.value">
             {{ area.label }}
           </option>
-        </select>
+        </select-->
         <select class="aa-select w-full rounded-none" v-model="formData.source">
           <option value="" selected disabled>消息來源</option>
           <option v-for="source in sourceList" :key="source.label" :value="source.value">
@@ -112,7 +112,7 @@
 
   .form {
     width: size(920);
-    height: 435px;
+    height: 260px;
     gap: size(80);
     margin-bottom: size(50);
     padding: 3px;
@@ -251,7 +251,7 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg", "email", "source_note","source"];
+const bypass = ["msg", "email", "source_note","source","city","area"];
 
 //中文對照
 const formDataRef = ref([
