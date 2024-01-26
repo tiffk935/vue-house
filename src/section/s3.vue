@@ -1,121 +1,280 @@
 <template>
-  <section class="s3 relative text-white bg-[#066C5C]">
-    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">臨繁華而居 與綠意共存</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">
-      2.7萬坪巴克禮生態公園 ，都市之肺!<br>
-      巴克禮生態公園都會綠帶，<br class="md:hidden">
-      輕享商圈、休閒、美食、藝文<br class="md:hidden">
-      各式日常豐美，更具未來增值潛力。
+  <section class="s3 w-full relative text-white bg-[#173868] md:flex md:items-stretch md:flex-row-reverse">
+    <div class="txt text-center md:flex md:justify-center md:items-center">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="title">渴望時尚</div>
+        <div class="subtitle">完美的顛覆 <br class="md:hidden">總和你所有的渴望</div>
+        <div class="content">
+          台北信義計畫區<br>
+          台中七期計畫區<br>
+          台南平實重劃區
+        </div>
+      </div>
     </div>
-    <img class="img absolute" src="@/section/s3/img.jpg" />
-    <div class="style1 absolute">
-      <img class="block w-full" src="@/section/s3/style1.png" />
+    <div class="pic hidden md:flex md:flex-wrap md:flex-1">
+      <div class="img relative w-full">
+        <img class="w-full block" src="@/section/s3/1.jpg" />
+        <div class="city absolute">TAINAN</div>
+        <div class="name absolute">台南平實重劃區</div>
+        <div class="en absolute">LANDMARK OF TAINAN</div>
+        <div class="info absolute">平實重劃區實景拍攝</div>
+      </div>
+      <div class="img relative w-1/2">
+        <img class="w-full h-full block" src="@/section/s3/2.jpg" />
+        <div class="city absolute">TAINAN</div>
+        <div class="name absolute">台南平實重劃區</div>
+        <div class="info absolute">台北信義計畫區示意圖</div>
+      </div>
+      <div class="img relative w-1/2">
+        <img class="w-full h-full block" src="@/section/s3/3.jpg" />
+        <div class="city absolute">TAINAN</div>
+        <div class="name absolute">台南平實重劃區</div>
+        <div class="info absolute">台中七期計畫區示意圖</div>
+      </div>
     </div>
-    <div class="style2 absolute">
-      <img class="block w-full" src="@/section/s3/style2.svg" />
+    <div class="slider md:hidden">
+      <swiper
+        :loop="true"
+        :navigation="true"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <div class="img relative h-full">
+            <img class="w-full block" src="@/section/s3/1.jpg" />
+            <div class="city absolute">TAINAN</div>
+            <div class="name absolute">台南平實重劃區</div>
+            <div class="en absolute">LANDMARK OF TAINAN</div>
+            <div class="info absolute">平實重劃區實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img relative h-full">
+            <img class="w-full block" src="@/section/s3/2.jpg" />
+            <div class="city absolute">TAINAN</div>
+            <div class="name absolute">台南平實重劃區</div>
+            <div class="info absolute">台北信義計畫區示意圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img relative h-full">
+            <img class="w-full block" src="@/section/s3/3.jpg" />
+            <div class="city absolute">TAINAN</div>
+            <div class="name absolute">台南平實重劃區</div>
+            <div class="info absolute">台中七期計畫區示意圖</div>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s3 {
+  font-size: size-m(14);
+  font-weight: 500;
+  line-height: 200%;
+  @media (min-width: 768px) {
+    font-size: size(19);
+    line-height: size(33);
+  }
 
-  @keyframes skew {
-    to {
-      transform: skewX(0deg);
+  .txt {
+    padding: size-m(50) size-m(33);
+    @media (min-width: 768px) {
+      width: calc(size(1920 - 1215));
+      padding: 0;
+    }
+
+    .title {
+      font-family: "Noto Serif TC";
+      font-size: size-m(30);
+      font-weight: 700;
+      letter-spacing: size-m(9.9);
+      margin-bottom: size-m(13);
+      padding-bottom: size-m(13);
+      position: relative;
+      line-height: normal;
+      @media (min-width: 768px) {
+        font-size: size(58);
+        letter-spacing: size(19.14);
+        margin-bottom: size(24);
+        padding-bottom: size(19);
+      }
+  
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: size-m(115);
+        height: size-m(1);
+        background: #fff;
+        @media (min-width: 768px) {
+          width: size(215);
+          height: size(1);
+        }
+      }
+    }
+
+    .subtitle {
+      font-family: "Noto Serif TC";
+      font-size: size-m(15);
+      font-weight: 700;
+      letter-spacing: size-m(4.95);
+      margin-bottom: size-m(26);
+      line-height: normal;
+      @media (min-width: 768px) {
+        font-size: size(24);
+        letter-spacing: size(7.92);
+        margin-bottom: size(43);
+      }
     }
   }
 
-  width: 100%;
-  height: size-m(510);
-  overflow: hidden;
-  @media screen and (min-width:768px) {
-    height: size(1080);
-  }
-
-  .style1 {
-    width: size-m(203);
-    left: size-m(222);
-    top: size-m(-1.17);
-    @media screen and (min-width:768px) {
-      width: size(453);
-      left: size(-94);
-      top: size(-210);
-      transform: matrix(-1, 0, 0, 1, 0, 0);
-    }
-
-    img {
-      transform: skewX(15deg);
-      animation: skew 5s linear infinite alternate;
-    }
-  }
-
-  .style2 {
-    width: size-m(141.42);
-    left: size-m(239.34);
-    top: size-m(322.6);
-    @media screen and (min-width:768px) {
-      width: size(285);
-      left: size(1679);
-      top: size(-18);
-    }
-
-    img {
-      transform: skewX(5deg);
-      transform-origin: bottom center;
-      animation: skew 4s linear infinite alternate;
-    }
-  }
-
-  .t1 {
-    left: size-m(29);
-    top: size-m(24.83);
-    font-family: 'Noto Serif TC';
+  .city {
+    font-family: "Noto Serif TC";
+    color: rgba(255, 255, 255, 0.30);
     font-weight: 700;
-    font-size: size-m(22);
-    line-height: size-m(32);
-    white-space:nowrap;
-    @media screen and (min-width:768px) {
-      left: size(277);
-      top: size(109);
-      font-size: size(45);
-      line-height: size(65);
+    line-height: normal;
+    top: size-m(-17.16);
+    right: size-m(-3.92);
+    font-size: size-m(42);
+    letter-spacing: size-m(9.66);
+    @media (min-width: 768px) {
+      top: size(-24);
+      right: size(-2 - 13.57);
+      font-size: size(59);
+      letter-spacing: size(13.57);
     }
   }
 
-  .t2 {
-    width: size-m(196);
-    left: size-m(31);
-    top: size-m(62.83);
-    font-family: 'Noto Sans TC';
-    font-weight: 400;
+  .name {
+    font-family: "Noto Serif TC";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    top: size-m(12.84);
+    right: size-m(32);
+    font-size: size-m(20);
+    letter-spacing: size-m(4.2);
+    @media (min-width: 768px) {
+      top: size(23);
+      right: size(27 - 9.18);
+      font-size: size(18);
+      letter-spacing: size(9.18);
+    }
+  }
+
+  .info {
+    bottom: size-m(4);
+    right: size-m(7);
     font-size: size-m(12);
-    line-height: size-m(17);
-    @media screen and (min-width:768px) {
-      left: size(802);
-      top: size(113);
-      font-size: size(20);
-      line-height: size(29);
+    @media (min-width: 768px) {
+      bottom: size(6);
+      right: size(9);
+      font-size: size(12);
     }
   }
 
   .img {
-    width: size-m(375);
-    height: size-m(250.03);
-    left: size-m(0);
-    top: size-m(165);
-    object-fit: cover;
-    @media screen and (min-width:768px) {
-      width: size(1920);
-      height: size(840);
-      left: size(0);
-      top: size(240);
+    margin-top: size(12);
+
+    &:nth-child(2) {
+      width: calc(50% - size(6));
+      margin-right: size(6);
+    }
+
+    &:nth-child(3) {
+      width: calc(50% - size(6));
+      margin-left: size(6);
+    }
+  }
+
+  .img:nth-child(1) {
+    margin-top: size(0);
+
+    .city {
+      @media (min-width: 768px) {
+        top: size(-33);
+        right: size(-3 - 18.86);
+        font-size: size(82);
+        letter-spacing: size(18.86);
+      }
+    }
+
+    .name {
+      @media (min-width: 768px) {
+        top: size(26);
+        right: size(35 - 19.38);
+        font-size: size(38);
+        letter-spacing: size(19.38);
+      }
+    }
+
+    .en {
+      font-family: "Noto Serif TC";
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      top: size-m(40);
+      right: size-m(32);
+      font-size: size-m(10);
+      letter-spacing: size-m(2.3);
+      @media (min-width: 768px) {
+        top: size(87);
+        right: size(67 - 7.95);
+        font-size: size(15);
+        letter-spacing: size(7.95);
+      }
+    }
+  }
+
+  .slider {
+    .swiper-wrapper {
+      align-items: stretch;
+
+      .swiper-slide {
+        height: auto;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+      width: size-m(40);
+      height: size-m(40);
+      color: #fff;
+      justify-content: flex-start;
+
+      &:after {
+        font-size: 7vw;
+      }
+    }
+
+    .swiper-button-next {
+      justify-content: flex-end;
     }
   }
 }
-
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import { Autoplay, Navigation } from "swiper";
+const modules = ref([Autoplay, Navigation]);
 </script>

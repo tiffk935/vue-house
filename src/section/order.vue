@@ -1,25 +1,27 @@
 <template>
-  <div class="order relative bg-[#AB8E77] text-center">
-    <div class="toplogo">
-      <img class="toplogo-logo" src="@/section/s1/logo.svg" />
-      <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2899-777</div>
-    </div>
+  <div class="order relative bg-[#003399] text-center">
     <div class="order1 relative">
-      <img class="style3 absolute hidden md:block" src="@/section/s1/style3.png" />
-      <img class="style2 absolute hidden md:block" src="@/section/s1/style2.png" />
-      <img class="style1 absolute hidden md:block" src="@/section/s1/style1.png" />
-      <img class="en absolute hidden md:block" src="@/section/s1/en.png" />
+      <div class="title text-white mb-3">
+        <div class="text-4xl font-bold mb-3">DREAM PARK</div>
+        若想了解更多資訊，歡迎填寫表單或來電洽詢，
+        將由專人為您服務，謝謝！
+      </div>
       <div class="order2 relative">
-        <img class="style2 absolute md:hidden" src="@/section/s1/style2.png" />
-        <img class="style1 absolute md:hidden" src="@/section/s1/style1.png" />
-        <img class="en absolute md:hidden" src="@/section/s1/en.png" />
-        <!-- Title -->
-        <div class="order-title text-center text-white font-['noto_Serif_tc']">{{ info.order.title }}</div>
-        <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="研森" srcset=""
-          data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="研森" srcset="" data-aos="fade"
-          data-aos-duration="1000"> -->
+        <!-- <div class="order-title text-center text-white font-['noto_Serif_tc']">{{ info.order.title }}</div> -->
+        <img class="line absolute" src="@/section/form/line.png" />
+        <div class="stars">
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.svg" />
+          <img class="star absolute" src="@/section/form/star.png" />
+        </div>
+        <img class="butterfly1 absolute" src="@/section/s1/butterfly1.svg" />
+        <img class="butterfly2 absolute" src="@/section/s1/butterfly2.svg" />
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
@@ -67,8 +69,8 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#CBC8C1] text-[#333333] hover:text-white rounded-none" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-transparent text-white rounded" @click="send()">
+          {{ sending ? '發送中..' : '立即預約' }}
         </div>
       </div>
 
@@ -88,80 +90,111 @@
 @import "@/assets/style/function.scss";
 
 .order {
+  overflow: hidden;
   width: 100%;
   // padding-top: size(115);
-
-  .toplogo {
-    padding: size(70) size(131) size(115) size(131);
-
-    img {
-      width: size(406);
-      margin-bottom: size(11);
-    }
-
-    .toplogo-text {
-      font-weight: 700;
-      font-size: size(40);
-      line-height: size(58);
-      text-align: left;
-      color: #fff;
-    }
-  }
-
-  .style1 {
-    left: 0;
-    bottom: 0;
-    width: 72.45vw;
-    transform-origin: bottom left;
-    @media screen and (min-width:768px) {
-      width: size(697);
-    }
-  }
-
-  .style2 {
-    left: 0;
-    bottom: 0;
-    width: 67.89333vw;
-    transform-origin: bottom left;
-    mix-blend-mode: soft-light;
-    @media screen and (min-width:768px) {
-      width: size(653);
-    }
-  }
-
-  .style3 {
-    @media screen and (min-width:768px) {
-      right: 0;
-      bottom: 0;
-      width: size(1161 - 224);
-      transform-origin: bottom right;
-      mix-blend-mode: soft-light;
-    }
-  }
-
-  .en {
-    width: size-m(144);
-    left: size-m(84.85);
-    bottom: size-m(33.33);
-    @media screen and (min-width:768px) {
-      width: size(294);
-      left: size(346.53);
-      bottom: size(257.5);
-    }
-  }
-
-  input, select, textarea {
-    opacity: 0.8;
-  }
 
   .order1 {
     background-size: cover;
     background-position: center center;
     // padding-bottom: size(21);
+    background-image: url(@/section/form/bg.jpg);
+    padding-top: size(100);
   }
 
   .order2 {
-    padding: size(33) 0 size(73) 0;
+    padding: size(33) 0 size(282) 0;
+  }
+
+  .line {
+    max-width: unset;
+    bottom: -4vw;
+    left: size(103);
+    width: size(1820);
+    mix-blend-mode: color-dodge;
+  }
+
+  .stars {
+    .star {
+      &:nth-child(1) {
+        width: size(109);
+        top: 140px;
+        left: calc(50% - size(509 + 54.5));
+        animation: 3s linear 1s infinite alternate twinkle;
+      }
+
+      &:nth-child(2) {
+        width: size(199);
+        top: -11vw;
+        left: calc(50% - size(15 + 190));
+        animation: 4s linear 0s infinite alternate twinkle;
+      }
+
+      &:nth-child(3) {
+        width: size(87);
+        top: calc(100% - 13vw);
+        left: calc(50% + size(825));
+        animation: 2.5s linear 0.5s infinite alternate twinkle;
+      }
+
+      &:nth-child(4) {
+        width: size(115);
+        top: -11vw;
+        left: calc(50% + size(447));
+        animation: 1.25s linear 1.5s infinite alternate twinkle;
+      }
+
+      &:nth-child(5) {
+        width: size(91);
+        top: calc(100% - 2vw);
+        left: calc(50% - size(406 + 45));
+        animation: 3.5s linear 0.5s infinite alternate twinkle;
+      }
+
+      &:nth-child(6) {
+        width: size(115);
+        top: 10vw;
+        left: size(0.01);
+        animation: 4s linear .7s infinite alternate twinkle;
+      }
+
+      &:nth-child(7) {
+        width: size(81);
+        top: 280px;
+        left: calc(50% + size(700));
+        animation: 4s linear 0s infinite alternate twinkle;
+      }
+
+      &:nth-child(8) {
+        width: size(125);
+        top: 540px;
+        left: calc(50% - size(230));
+        animation: 1.8s linear 0.5s infinite alternate twinkle;
+      }
+
+      &:nth-child(9) {
+        width: size(168);
+        top: 350px;
+        left: calc(50% + size(250));
+        animation: 2s linear 1.5s infinite alternate twinkle;
+      }
+    }
+  }
+
+  .butterfly1 {
+    width: size(52);
+    bottom: 18vw;
+    left: size(1643);
+    transform: translateY(80%);
+    animation: an 3s linear infinite alternate;
+  }
+
+  .butterfly2 {
+    width: size(46.47);
+    bottom: 2vw;
+    left: size(1330);
+    transform: translateY(-20%);
+    animation: an 1.5s linear infinite alternate;
   }
 
   .order-title {
@@ -173,13 +206,6 @@
   .z-10 {
     z-index: 10;
     position: relative;
-  }
-
-  .order-title-img {
-    display: block;
-    width: size(859);
-    margin: 0 auto;
-    margin-bottom: size(40);
   }
 
   .form {
@@ -215,6 +241,7 @@
     border: 0;
     z-index: 10;
     position: relative;
+    border: size(1) solid #fff;
   }
 
   .control {
@@ -227,46 +254,96 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
-    // border-radius: size-m(68) size-m(68) 0 0;
-    // padding-top: size-m(40);
     margin-top: size-m(0);
 
-    .toplogo {
-      padding: size-m(20) size-m(24.5) size-m(0) size-m(24.5);
-
-      img {
-        width: size-m(145);
-        margin-bottom: size-m(17);
-      }
-
-      .toplogo-text {
-        font-weight: 700;
-        font-size: size-m(16);
-        line-height: size-m(23);
-        text-align: left;
-        color: #fff;
-      }
+    .title {
+      width: size-m(310);
+      margin: 0 auto;
     }
     
     .order1 {
-      background: none;
+      background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
+      padding-top: size-m(60);
     }
 
     .order2 {
-      padding: size-m(40) 0 size-m(360) 0;
+      padding: size-m(40) 0 size-m(70) 0;
       background-size: cover;
       background-position: center center;
+    }
+
+    .line {
+      bottom: -36vw;
+      left: size-m(-527);
+      width: size-m(991);
+    }
+
+    .stars {
+      .star {
+        &:nth-child(1) {
+          width: size-m(34.53);
+          top: -34vw;
+          left: 82.128vw;
+        }
+
+        &:nth-child(2) {
+          width: size-m(17.79);
+          top: -35vw;
+          left: size-m(104.11);
+        }
+
+        &:nth-child(3) {
+          width: size-m(38.71);
+          top: -1vw;
+          left: size-m(47.64);
+        }
+
+        &:nth-child(4) {
+          width: size-m(34);
+          top: size-m(408);
+          left: size-m(212.5);
+        }
+
+        &:nth-child(5) {
+          width: size-m(35);
+          top: size-m(35.56);
+          left: size-m(314);
+        }
+
+        &:nth-child(6) {
+          display: none;
+        }
+
+        &:nth-child(7) {
+          display: none;
+        }
+
+        &:nth-child(8) {
+          display: none;
+        }
+
+        &:nth-child(9) {
+          display: none;
+        }
+      }
+    }
+
+    .butterfly1 {
+      width: size-m(51.98);
+      bottom: 140vw;
+      left: size-m(287);
+    }
+
+    .butterfly2 {
+      width: size-m(46.47);
+      bottom: 87vw;
+      left: size-m(56);
     }
 
     .order-title {
       font-size: size-m(29);
       font-weight: 500;
-      margin-bottom: size-m(20);
-    }
-
-    .order-title-img {
-      width: size-m(208);
       margin-bottom: size-m(20);
     }
 
@@ -295,6 +372,7 @@
     .send {
       font-size: size-m(21);
       width: size-m(318);
+      border: size-m(1) solid #fff;
     }
 
     .control {

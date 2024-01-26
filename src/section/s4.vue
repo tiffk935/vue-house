@@ -1,51 +1,134 @@
 <template>
-  <section class="s4 relative bg-[#EDEDED] text-[#231815]">
-    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">百億建設湧進 匯聚百億建設紅利</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">匯聚300億未來建設紅利，南紡購物中心二期、文化中心、台南國際機場、長榮桂冠酒店、崇明中小學區、 仁和國小、運動藝文休閒園區、台南市立醫院等利基發展條件及台糖公司亦根留府城並積極推動轉型與升級。</div>
-    <div class="slider absolute">
+  <section class="s4 w-full relative text-center text-white bg-[#173868]">
+    <div class="txt">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="title">渴望熱鬧</div>
+        <div class="subtitle">
+          熱烈之巔 繁華眼見為憑<br>
+          無以追逐的驚艷成熟
+        </div>
+        <div class="content text-left md:text-center">
+          <p>南紡購物中心／領銜台南時尚之趨，世界精品大牌，誠品生活、老爺行旅都在此</p>
+          <p>小東商圈／質感文青餐廳、小吃美食店家共存，晝夜無間斷的熱鬧精彩</p>
+          <p>國賓商圈／台南影城規模最大的國賓影城、World Gym、連鎖咖啡為您補給</p>
+          <p>後甲黃昏市場／車行3分鐘採購足家庭所需，恰恰好的輕盈豐盛</p>
+        </div>
+      </div>
+    </div>
+    <div class="pic hidden md:block relative">
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/1.jpg" />
+        <div class="info">東寧運動公園實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/2.jpg" />
+        <div class="info">南紡夢時代實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/3.jpg" />
+        <div class="info">東寧路商圈實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/4.jpg" />
+        <div class="info">情境示意圖</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/5.jpg" />
+        <div class="info">平實公園實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/6.jpg" />
+        <div class="info">南紡夢時代實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/7.jpg" />
+        <div class="info">情境示意圖</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/8.jpg" />
+        <div class="info">國賓影城實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/9.jpg" />
+        <div class="info">南紡夢時代實景拍攝</div>
+      </div>
+      <div class="img">
+        <img class="block w-full" src="@/section/s4/10.jpg" />
+        <div class="info">南紡夢時代實景拍攝</div>
+      </div>
+    </div>
+    <div class="slider md:hidden">
       <swiper
         :loop="true"
+        :navigation="true"
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
         }"
         :modules="modules"
-        @init="init"
       >
         <swiper-slide>
-          <img class="w-full block" src="@/section/s4/1.jpg" />
-          <div class="txt">購物商場示意圖</div>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/1.jpg" />
+            <div class="info">東寧運動公園實景拍攝</div>
+          </div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block" src="@/section/s4/2.jpg" />
-          <div class="txt">車站示意圖</div>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/2.jpg" />
+            <div class="info">南紡夢時代實景拍攝</div>
+          </div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block" src="@/section/s4/3.jpg" />
-          <div class="txt">巴克禮公園實景圖</div>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/3.jpg" />
+            <div class="info">東寧路商圈實景拍攝</div>
+          </div>
         </swiper-slide>
         <swiper-slide>
-          <img class="w-full block" src="@/section/s4/4.jpg" />
-          <div class="txt">文化公園實景圖</div>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/4.jpg" />
+            <div class="info">情境示意圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/5.jpg" />
+            <div class="info">平實公園實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/6.jpg" />
+            <div class="info">南紡夢時代實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/7.jpg" />
+            <div class="info">情境示意圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/8.jpg" />
+            <div class="info">國賓影城實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/9.jpg" />
+            <div class="info">南紡夢時代實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s4/10.jpg" />
+            <div class="info">南紡夢時代實景拍攝</div>
+          </div>
         </swiper-slide>
       </swiper>
     </div>
-    <div class="slide-prev absolute" @click="slidePrev"></div>
-    <div class="slide-next absolute" @click="slideNext"></div>
-    <div class="img1 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img1.jpg" />
-      <div class="txt">基地旁公園實景圖</div>
-    </div>
-    <div class="img2 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img2.jpg" />
-      <div class="txt">86快速道路實景圖</div>
-    </div>
-    <div class="img3 absolute" data-aos="fade" data-aos-delay="0">
-      <img src="@/section/s4/img3.jpg" />
-      <div class="txt">崇明國小實景圖</div>
-    </div>
-    <div class="text2">TRAFFIC</div>
-    <div class="text3">SCHOOL</div>
   </section>
 </template>
 
@@ -53,209 +136,262 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  width: 100%;
-  height: size-m(894);
-  @media screen and (min-width:768px) {
-    height: size(960);
+  font-size: size-m(14);
+  font-weight: 500;
+  line-height: 153.846%;
+  @media (min-width: 768px) {
+    font-size: size(19);
+    line-height: 190%;
+    padding-bottom: size(198);
   }
 
-  .t1 {
-    width: size-m(375 - 30 - 30);
-    left: size-m(30);
-    top: size-m(21.72);
-    font-family: 'Noto Serif TC';
-    font-weight: 700;
-    font-size: size-m(22);
-    line-height: size-m(32);
-    color: #BD9562;
-    white-space:nowrap;
-    @media screen and (min-width:768px) {
-      width: auto;
-      left: size(95);
-      top: size(123.72);
-      font-size: size(45);
-      line-height: size(65);
-    }
-  }
-
-  .t2 {
-    width: size-m(375 - 30 - 30);
-    left: size-m(30);
-    top: size-m(59.72);
-    font-weight: 400;
-    font-size: size-m(12);
-    line-height: size-m(17);
-    @media screen and (min-width:768px) {
-      width: size(900);
-      left: size(95);
-      top: size(215.72);
-      font-size: size(20);
-      line-height: size(30);
-    }
-  }
-
-  .slider {
-    width: size-m(275);
-    left: 0;
-    top: size-m(148.72);
-    @media screen and (min-width:768px) {
-      width: size(900);
-      left: size(95);
-      top: size(344.72);
-    }
-
-    img {
-      height: size-m(155);
-      object-fit: cover;
-      @media screen and (min-width:768px) {
-        height: size(507.27);
-      }
-    }
-
-    .swiper {
-      z-index: 0;
+  p {
+    margin-bottom: size-m(10);
+    @media (min-width: 768px) {
+      margin-bottom: 0;
     }
   }
 
   .txt {
-    position: absolute;
-    bottom: size-m(2);
-    left: size-m(5);
-    font-weight: 500;
-    font-size: size-m(12);
-    line-height: size-m(17);
-    color: #fff;
-    @media screen and (min-width:768px) {
-      bottom: size(10);
-      left: size(16);
-      font-size: size(15);
-      line-height: size(22);
+    padding: size-m(50) size-m(33);
+    @media (min-width: 768px) {
+      padding: size(193) 0 size(151) 0;
     }
-  }
+
+    .title {
+      font-family: "Noto Serif TC";
+      font-size: size-m(30);
+      font-weight: 700;
+      letter-spacing: size-m(9.9);
+      margin-bottom: size-m(13);
+      padding-bottom: size-m(13);
+      position: relative;
+      line-height: normal;
+      @media (min-width: 768px) {
+        font-size: size(58);
+        letter-spacing: size(19.14);
+        margin-bottom: size(24);
+        padding-bottom: size(19);
+      }
   
-  .slide-prev, .slide-next {
-    width: size-m(32.76);
-    height: size-m(32.76);
-    left: size-m(293);
-    top: size-m(270.72);
-    background-image: url(@/section/s4/left.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
-    cursor: pointer;
-    @media screen and (min-width:768px) {
-      width: size(53.83);
-      height: size(53.83);
-      left: size(859);
-      top: size(788);
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: size-m(115);
+        height: size-m(1);
+        background: #fff;
+        @media (min-width: 768px) {
+          width: size(215);
+          height: size(1);
+        }
+      }
+    }
+
+    .subtitle {
+      font-family: "Noto Serif TC";
+      font-size: size-m(15);
+      font-weight: 700;
+      letter-spacing: size-m(4.95);
+      margin-bottom: size-m(26);
+      line-height: normal;
+      @media (min-width: 768px) {
+        font-size: size(24);
+        letter-spacing: size(7.92);
+        margin-bottom: size(43);
+      }
     }
   }
 
-  .slide-next {
-    left: size-m(336.76);
-    background-image: url(@/section/s4/right.svg);
-    @media screen and (min-width:768px) {
-      left: size(930.9);
+  .pic {
+    width: size(1490);
+    height: size(1246);
+    margin: 0 auto;
+
+    .img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: size(362);
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      &:nth-child(1) {
+        height: size(720);
+
+        img {
+          object-position: -2vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(2) {
+        height: size(517);
+        top: size(720 + 14);
+        left: 0;
+
+        img {
+          object-position: -17vw;
+        }
+      }
+
+      &:nth-child(3) {
+        height: size(399);
+        top: 0;
+        left: size(1 * (362 + 14));
+
+        img {
+          object-position: -3vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(4) {
+        height: size(397);
+        top: size(399 + 14);
+        left: size(1 * (362 + 14));
+
+        img {
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(5) {
+        height: size(424);
+        top: size(399 + 14 + 397 + 14);
+        left: size(1 * (362 + 14));
+
+        img {
+          object-position: -1.5vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(6) {
+        height: size(720);
+        top: 0;
+        left: size(2 * (362 + 14));
+
+        img {
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(7) {
+        height: size(512);
+        top: size(720 + 14);
+        left: size(2 * (362 + 14));
+      }
+
+      &:nth-child(8) {
+        height: size(427);
+        top: 0;
+        left: size(3 * (362 + 14));
+
+        img {
+          object-position: -1.5vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(9) {
+        height: size(362);
+        top: size(427 + 14);
+        left: size(3 * (362 + 14));
+
+        img {
+          object-position: -5.7vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(10) {
+        height: size(437);
+        top: size(427 + 14 + 362 + 14);
+        left: size(3 * (362 + 14));
+
+        img {
+          object-position: -7vw;
+          transform: scale(1.15);
+        }
+      }
+
+      &:nth-child(1), &:nth-child(4), &:nth-child(7), &:nth-child(8) {
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: #fff;
+          opacity: 0.5;
+          transition: opacity .3s;
+        }
+
+        &:hover:after {
+          opacity: 0;
+        }
+      }
+
+      .info {
+        position: absolute;
+        bottom: size(10);
+        right: size(10);
+        font-size: size(12);
+        line-height: normal;
+      }
     }
   }
 
-  .img1 {
-    width: size-m(375);
-    height: size-m(220);
-    left: size-m(0);
-    top: size-m(333.72);
-    position: absolute;
-    @media screen and (min-width:768px) {
-      width: size(838);
-      height: size(377.14);
-      left: size(1082);
-      top: size(0);
-    }
-  }
+  .slider {
+    .img {
+      height: size-m(250);
 
-  .img2 {
-    width: size-m(220);
-    height: size-m(170);
-    left: size-m(155);
-    top: size-m(553.72);
-    position: absolute;
-    @media screen and (min-width:768px) {
-      width: size(491.63);
-      height: size(291.43);
-      left: size(1428.37);
-      top: size(377.14);
+      .info {
+        position: absolute;
+        bottom: size-m(10);
+        right: size-m(10);
+        font-size: size-m(12);
+        line-height: normal;
+      }
     }
-  }
 
-  .img3 {
-    width: size-m(220);
-    height: size-m(170);
-    left: size-m(0);
-    top: size-m(723.72);
-    position: absolute;
-    @media screen and (min-width:768px) {
-      width: size(491.63);
-      height: size(291.43);
-      left: size(1082);
-      top: size(668.57);
+    .swiper-wrapper {
+      align-items: stretch;
+
+      .swiper-slide {
+        height: auto;
+
+        img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
     }
-  }
 
-  .img1, .img2, .img3 {
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
+    .swiper-button-next, .swiper-button-prev {
+      width: size-m(40);
+      height: size-m(40);
+      color: #fff;
+      justify-content: flex-start;
+
+      &:after {
+        font-size: 7vw;
+      }
     }
-  }
 
-  .text2 {
-    width: size-m(375 - 220);
-    height: size-m(170);
-    position: absolute;
-    top: size-m(553.72);
-    left: 0;
-    font-family: 'Noto Serif TC';
-    font-weight: 600;
-    font-size: size-m(15);
-    line-height: size-m(22);
-    color: #BD9562;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF66;
-    @media screen and (min-width:768px) {
-      width: size(838 - 491.63);
-      height: size(291.43);
-      top: size(377.14);
-      left: size(1082);
-      font-size: size(26);
-      line-height: size(37);
-    }
-  }
-
-  .text3 {
-    width: size-m(375 - 220);
-    height: size-m(170);
-    position: absolute;
-    top: size-m(723.72);
-    left: size-m(220);
-    font-family: 'Noto Serif TC';
-    font-weight: 600;
-    font-size: size-m(15);
-    line-height: size-m(22);
-    color: #BD9562;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: #FFFFFF66;
-    @media screen and (min-width:768px) {
-      width: size(838 - 491.63);
-      height: size(291.43);
-      top: size(668.57);
-      left: size(1082 + 491.63);
-      font-size: size(26);
-      line-height: size(37);
+    .swiper-button-next {
+      justify-content: flex-end;
     }
   }
 }
@@ -265,24 +401,7 @@
 import { ref } from "vue"
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
-import "swiper/css/effect-coverflow";
-import { Autoplay } from "swiper";
-const modules = ref([Autoplay]);
-const swiperRef = ref(null);
-
-const init = swiper => {
-  swiperRef.value = swiper;
-}
-
-const slidePrev = () => {
-  if(swiperRef.value){
-    swiperRef.value.slidePrev();
-  }
-}
-
-const slideNext = () => {
-  if(swiperRef.value){
-    swiperRef.value.slideNext();
-  }
-}
+import 'swiper/css/navigation';
+import { Autoplay, Navigation } from "swiper";
+const modules = ref([Autoplay, Navigation]);
 </script>

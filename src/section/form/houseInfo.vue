@@ -7,8 +7,8 @@
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 font-bold border-l-2 border-[#A98162] text-[#A98162] font-['Noto_Serif_TC'] pl-2 ">{{ item[0] }}</p>
-                        <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+                        <p class="mr-5 font-bold border-l-2 border-[#003399] text-[#003399] font-['Noto_Serif_TC'] pl-2 ">{{ item[0] }}</p>
+                        <p class="whitespace-pre-line leading-normal text-left text-[#444444]">{{ item[1] }}</p>
                     </div>
                 </div>
             </div>
@@ -33,7 +33,7 @@
         font-size: size(48);
         font-weight: 700;
         margin-bottom: size(23);
-        color: #A98162;
+        color: #003399;
     }
 
     .info-items {

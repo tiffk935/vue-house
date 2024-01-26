@@ -1,110 +1,87 @@
 <template>
-  <section class="s5 relative text-white">
-    <div class="rect absolute"></div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">延續寧靜的力量「研森」最美生活</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">
-      層峰人仕與企業CEO鍾情的生活聚落<br>
-      「研森」選址環境馥雅、視野開闊，綠林聚落為鄰<br>
-      精品中的精品!
+  <section class="s5 w-full relative text-center text-white">
+    <img class="bg" src="@/section/s5/bg.jpg" />
+    <div class="mask"></div>
+    <div class="title absolute w-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">平實大布局 <br class="md:hidden">總和生活渴望</div>
+      <div class="t2">INTERNATIONAL LOCATION</div>
     </div>
-    <img class="img1 absolute" src="@/section/s5/img1.jpg" />
-    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">建築團隊 大磊聯合建築師事務所</div>
-    <img class="img2 absolute" data-aos="fade-up" data-aos-delay="0" src="@/section/s5/img2.jpg" />
+    <div class="info absolute">平實公園實景拍攝</div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
 .s5 {
-  width: 100%;
-  height: size-m(660);
-  background-image: url(@/section/s5/bg.jpg);
-  background-position: center center;
-  background-size: cover;
-  @media screen and (min-width:768px) {
-    height: size(960);
+  height: size-m(667);
+  @media (min-width: 768px) {
+    height: size(1308);
   }
 
-  .rect {
-    top: 0;
-    left: 0;
+  .bg {
     width: 100%;
     height: 100%;
-    background: #006934;
-    mix-blend-mode: multiply;
-    opacity: 0.6;
-  }
-
-  .t1 {
-    left: size-m(22);
-    top: size-m(34);
-    font-family: 'Noto Serif TC';
-    font-weight: 700;
-    font-size: size-m(22);
-    line-height: size-m(32);
-    white-space:nowrap;
-    @media screen and (min-width:768px) {
-      left: size(1038.58);
-      top: size(113);
-      font-size: size(45);
-      line-height: size(65);
+    object-fit: cover;
+    object-position: -47vw;
+    @media (min-width: 768px) {
+      object-position: 50%;
     }
   }
 
-  .t2 {
-    left: size-m(22);
-    top: size-m(70);
-    font-weight: 400;
+  .mask {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: size-m(342);
+    background: linear-gradient(180deg, #297BC6 2.27%, rgba(40, 118, 187, 0.00) 98.59%);
+    @media (min-width: 768px) {
+      height: size(503);
+    }
+  }
+
+  .title {
+    top: size-m(65);
+    left: 0;
+    font-family: "Noto Serif TC";
+    font-weight: 700;
+    @media (min-width: 768px) {
+      top: size(191);
+    }
+
+    .t1 {
+      font-size: size-m(30);
+      line-height: normal;
+      letter-spacing: size-m(9.9);
+      margin-bottom: size-m(6);
+      @media (min-width: 768px) {
+        font-size: size(60);
+        letter-spacing: size(19.8);
+        margin-bottom: size(0);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(12);
+      line-height: normal;
+      letter-spacing: size-m(4.8);
+      @media (min-width: 768px) {
+        font-size: size(20);
+        letter-spacing: size(10.6);
+      }
+    }
+  }
+
+  .info {
+    bottom: size-m(10);
+    right: size-m(10);
     font-size: size-m(12);
-    line-height: size-m(17);
-    @media screen and (min-width:768px) {
-      left: size(1038.58);
-      top: size(196.36);
-      font-size: size(20);
-      line-height: size(30);
-    }
-  }
-
-  .img1 {
-    width: size-m(325);
-    height: size-m(265);
-    left: size-m(25);
-    top: size-m(144);
-    object-fit: cover;
-    @media screen and (min-width:768px) {
-      width: size(900.18);
-      height: size(733.99);
-      left: size(95);
-      top: size(113);
-    }
-  }
-
-  .t3 {
-    left: size-m(22);
-    top: size-m(444);
-    font-family: 'Noto Serif TC';
-    font-weight: 700;
-    font-size: size-m(15);
-    line-height: size-m(22);
-    @media screen and (min-width:768px) {
-      left: size(1038.58);
-      top: size(480);
-      font-size: size(20);
-      line-height: size(29);
-    }
-  }
-
-  .img2 {
-    width: size-m(328);
-    height: size-m(132);
-    left: size-m(22);
-    top: size-m(476);
-    object-fit: cover;
-    @media screen and (min-width:768px) {
-      width: size(786.42);
-      height: size(316.49);
-      left: size(1038.58);
-      top: size(530.51);
+    line-height: normal;
+    @media (min-width: 768px) {
+      bottom: size(10);
+      right: size(10);
+      font-size: size(12);
     }
   }
 }
