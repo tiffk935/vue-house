@@ -12,8 +12,8 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">夢公園</h1>
-    <!-- <S1 /> -->
-    <!-- <S2 />
+    <S1 />
+    <S2 />
     <S3 />
     <S4 />
     <S5 />
@@ -21,7 +21,13 @@
     <S7 />
     <S8 />
     <S9 />
-    <S10 /> -->
+    <S10 />
+    <S11 />
+    <S12 />
+    <S13 />
+    <S14 />
+    <S15 />
+    <S16 />
     <Order />
   </div>
 </template>
@@ -38,6 +44,12 @@ import S7 from "@/section/s7.vue"
 import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
+import S12 from "@/section/s12.vue"
+import S13 from "@/section/s13.vue"
+import S14 from "@/section/s14.vue"
+import S15 from "@/section/s15.vue"
+import S16 from "@/section/s16.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
