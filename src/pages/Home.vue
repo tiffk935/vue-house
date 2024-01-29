@@ -28,6 +28,7 @@
     <S14 />
     <S15 />
     <S16 />
+    <S17 />
     <Order />
   </div>
 </template>
@@ -50,6 +51,7 @@ import S13 from "@/section/s13.vue"
 import S14 from "@/section/s14.vue"
 import S15 from "@/section/s15.vue"
 import S16 from "@/section/s16.vue"
+import S17 from "@/section/s17.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
@@ -67,6 +69,5 @@ onMounted(() => {
     isLoading.value = false
     AOS.init();
   };
-
 })
 </script>

@@ -136,9 +136,9 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
-  font-size: size-m(14);
+  font-size: size-m(12);
   font-weight: 500;
-  line-height: 153.846%;
+  line-height: size-m(20);
   @media (min-width: 768px) {
     font-size: size(19);
     line-height: 190%;

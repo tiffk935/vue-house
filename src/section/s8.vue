@@ -63,9 +63,9 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  font-size: size-m(14);
+  font-size: size-m(12);
   font-weight: 500;
-  line-height: 200%;
+  line-height: size-m(20);
   @media (min-width: 768px) {
     font-size: size(19);
     line-height: size(33);
@@ -143,10 +143,26 @@
     }
   }
 
-  .img img {
+  .img {
     @media (min-width: 768px) {
-      height: 100%;
-      object-fit: cover;
+      &:nth-child(2) {
+        width: calc(50% - size(5));
+        margin-top: size(10);
+        margin-right: size(5);
+      }
+
+      &:nth-child(3) {
+        width: calc(50% - size(5));
+        margin-top: size(10);
+        margin-left: size(5);
+      }
+    }
+
+    img {
+      @media (min-width: 768px) {
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
