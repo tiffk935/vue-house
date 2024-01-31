@@ -114,7 +114,7 @@
     @media (min-width: 768px) {
       position: absolute;
       top: size(868);
-      left: size(795);
+      left: size(795 - 25);
       width: size(430);
       z-index: 1;
     }
@@ -143,7 +143,9 @@
     &:nth-child(2) {
       width: size(1125);
       height: auto;
-      left: size(795);
+      // left: size(795);
+      left: auto;
+      right: 0;
       top: size(133);
     }
 

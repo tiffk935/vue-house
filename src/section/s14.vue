@@ -128,7 +128,9 @@
     &:nth-child(2) {
       width: size(958);
       height: auto;
-      left: size(962);
+      // left: size(962);
+      left: auto;
+      right: 0;
       top: size(49);
     }
 

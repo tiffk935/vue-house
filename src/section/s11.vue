@@ -52,6 +52,7 @@
 @import "@/assets/style/function.scss";
 
 .s11 {
+  overflow: hidden;
   font-size: size-m(13);
   font-weight: 500;
   line-height: size-m(20);
@@ -79,7 +80,7 @@
     @media (min-width: 768px) {
       position: absolute;
       top: size(256);
-      left: size(1188);
+      left: size(1188 - 25);
       width: size(540);
       padding: 0;
     }
@@ -130,7 +131,9 @@
     @media (min-width: 768px) {
       position: absolute;
       top: size(485);
-      left: size(1188);
+      // left: size(1188);
+      left: auto;
+      right: 0;
       width: size(732);
       margin: 0;
     }
@@ -184,7 +187,7 @@
         width: size(40);
         height: size(40);
         top: size(428);
-        left: size(1188);
+        left: size(1188 - 25);
         text-shadow: none;
       }
 
@@ -200,7 +203,7 @@
       justify-content: flex-end;
       @media (min-width: 768px) {
         right: auto;
-        left: size(1264);
+        left: size(1264 - 25);
       }
     }
   }
