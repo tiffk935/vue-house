@@ -2,7 +2,7 @@
   <section class="s10 w-full relative text-white">
     <div class="bg absolute"></div>
     <img class="cloud absolute" src="@/section/s10/cloud.png" />
-    <img class="moon absolute" src="@/section/s10/moon.png" />
+    <img class="moon absolute" src="@/section/s10/moon.png"  data-aos="fade-down" data-aos-duration="3000" data-aos-delay="200"   />
     <div class="txt absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">當渴望的夢想<br>有了家的想像</div>
     <div class="bubbles">
       <img class="bubble absolute" src="@/section/s10/bubble.png" />
@@ -55,7 +55,7 @@
   .moon {
     width: size-m(764.38);
     top: size-m(38);
-    left: size-m(-203);
+    left: size-m(-203);transform: translateY(-80%);
     @media (min-width: 768px) {
       width: size(2197.33);
       top: size(1080 - 1236);

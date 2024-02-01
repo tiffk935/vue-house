@@ -2,7 +2,8 @@
   <section class="s1 w-full relative">
     <div class="bg"></div>
     <img class="logo absolute" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <img class="gold absolute" src="@/section/s1/gold.png" />
+    <div class="gold absolute">
+    <img src="@/section/s1/gold.png" /></div>
     <div class="stars">
       <img class="star absolute" src="@/section/s1/star.svg" />
       <img class="star absolute" src="@/section/s1/star.svg" />
@@ -14,8 +15,8 @@
       <img class="star absolute" src="@/section/s1/star.svg" />
       <img class="star absolute" src="@/section/s1/star.svg" />
     </div>
-    <img class="butterfly1 absolute" src="@/section/s1/butterfly1.svg" />
-    <img class="butterfly2 absolute" src="@/section/s1/butterfly2.svg" />
+    <div class="butterfly1 absolute"><img src="@/section/s1/butterfly1.svg" /></div>
+    <div class="butterfly2 absolute"><img src="@/section/s1/butterfly2.svg" /></div>
   </section>
 </template>
 
@@ -42,12 +43,15 @@
 
 .s1 {
   overflow: hidden;
-  height: size-m(667);
+  height: 100vh;
+  min-height: size-m(667);
+  max-height: size-m(667);
   background-image: url(@/section/s1/bg.jpg);
   background-size: auto 100%;
   background-position: size-m(-204) 0;
   @media (min-width: 768px) {
-    height: size(1080);
+  min-height:size(900);
+    max-height: size(1080);
     background-position: center center;
   }
 
@@ -57,22 +61,37 @@
     left: size-m(56);
     @media (min-width: 768px) {
       width: size(506);
-      top: size(387);
+      top:calc(50% + #{size(370 - 1080 * .5)});
       left: size(707);
     }
   }
+@keyframes gold {
+  to {
+    width: 0;
+  }
+}
+.gold {
+  width: size-m(991);
+    bottom:size-m(-20);
+  right: size-m(-80);
+  max-width: none;
+  mix-blend-mode: color-dodge;
+  overflow: hidden;
+  animation:  gold  5s 3s reverse both ;
 
-  .gold {
+  @media (min-width: 768px) {
+    width: size(1820);
+    bottom:0;
+  right:size(-20);
+  }
+    img{
     width: size-m(991);
-    top: size-m(417);
-    left: size-m(-527);
     max-width: none;
-    mix-blend-mode: color-dodge;
+    float: right;
     @media (min-width: 768px) {
       width: size(1820);
-      top: size(585);
-      left: size(103);
     }
+  }
   }
 
   .stars {
@@ -184,27 +203,31 @@
   }
 
   .butterfly1 {
-    width: size-m(51.98);
-    top: size-m(392);
+    width: size-m(45);
+    bottom: size-m(220);
     left: size-m(287);
     transform: translateY(80%);
     animation: an 3s linear infinite alternate;
+    img{width: 100%;
+    transform:rotate(-55deg);}
     @media (min-width: 768px) {
-      width: size(52);
-      top: size(705.64);
+      width: size(45);
+      bottom: size(330);
       left: size(1643);
     }
   }
 
   .butterfly2 {
     width: size-m(46.47);
-    top: size-m(497);
+    bottom: size-m(120);
     left: size-m(56);
     transform: translateY(-20%);
     animation: an 1.5s linear infinite alternate;
+    img{width: 100%;
+    transform:rotate(-45deg);}
     @media (min-width: 768px) {
       width: size(46.47);
-      top: size(956);
+      bottom: size(70);
       left: size(1330);
     }
   }

@@ -21,14 +21,14 @@
       </div>
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/2.jpg" />
-        <div class="city absolute">TAINAN</div>
-        <div class="name absolute">台南平實重劃區</div>
+        <div class="city absolute">TAIPEI</div>
+        <div class="name absolute">台北信義計畫區</div>
         <div class="info absolute">台北信義計畫區示意圖</div>
       </div>
       <div class="img relative w-1/2">
         <img class="w-full h-full block" src="@/section/s3/3.jpg" />
-        <div class="city absolute">TAINAN</div>
-        <div class="name absolute">台南平實重劃區</div>
+        <div class="city absolute">TAICHUNG</div>
+        <div class="name absolute">台中七期計畫區</div>
         <div class="info absolute">台中七期計畫區示意圖</div>
       </div>
     </div>
@@ -54,16 +54,18 @@
         <swiper-slide>
           <div class="img relative h-full">
             <img class="w-full block" src="@/section/s3/2.jpg" />
-            <div class="city absolute">TAINAN</div>
-            <div class="name absolute">台南平實重劃區</div>
+            <div class="city absolute">TAIPEI</div>
+            <div class="name absolute">台北信義計畫區</div>
+            <div class="en absolute">LANDMARK OF TAIPEI</div>
             <div class="info absolute">台北信義計畫區示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img relative h-full">
             <img class="w-full block" src="@/section/s3/3.jpg" />
-            <div class="city absolute">TAINAN</div>
-            <div class="name absolute">台南平實重劃區</div>
+            <div class="city absolute">TAICHUNG</div>
+            <div class="name absolute">台中七期計畫區</div>
+            <div class="en absolute">LANDMARK OF TAICHUNG</div>
             <div class="info absolute">台中七期計畫區示意圖</div>
           </div>
         </swiper-slide>

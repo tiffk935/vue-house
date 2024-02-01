@@ -1,11 +1,11 @@
 <template>
   <section class="s9 w-full relative">
     <img class="cloud absolute" src="@/section/s9/cloud.png" />
-    <img class="moon absolute" src="@/section/s9/moon.png" />
+    <img class="moon absolute" src="@/section/s9/moon.png" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="-200"  />
     <img class="img1 absolute" src="@/section/s9/img1.png" />
     <img class="img2 absolute" src="@/section/s9/img2.png" />
-    <img class="butterfly1 absolute" src="@/section/s9/butterfly1.svg" />
-    <img class="butterfly2 absolute" src="@/section/s9/butterfly2.svg" />
+    <div class="butterfly1 absolute"><img src="@/section/s1/butterfly1.svg" /></div>
+    <div class="butterfly2 absolute"><img src="@/section/s1/butterfly2.svg" /></div>
   </section>
 </template>
 
@@ -37,7 +37,7 @@
   .moon {
     top: size-m(52.25);
     left: size-m(-194.38);
-    width: size-m(764.38);
+    width: size-m(764.38);transform: translateY(-60%);
     @media (min-width: 768px) {
       top: size(-10);
       left: size(-139);
@@ -75,10 +75,12 @@
     width: size-m(43.63);
     transform: translateY(60%);
     animation: an 4s ease-in-out alternate infinite;
+    img{width: 100%;
+    transform:rotate(-55deg);}
     @media (min-width: 768px) {
       top: size(352);
       left: size(1268);
-      width: size(63.56);
+      width: size(50);
     }
   }
 
@@ -88,10 +90,12 @@
     width: size-m(53.34);
     transform: translateY(-40%);
     animation: an 3s ease-in-out alternate infinite;
+    img{width: 100%;
+    transform:rotate(-45deg);}
     @media (min-width: 768px) {
       top: size(708);
       left: size(373);
-      width: size(89);
+      width: size(60);
     }
   }
 }
