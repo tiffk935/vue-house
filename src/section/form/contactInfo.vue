@@ -225,7 +225,7 @@
     .logo {
       width: size-m(258);
       height: size-m(87.68);
-      background-image: url("@/section/form/logo.svg");
+      //background-image: url("@/section/form/logo.svg");
       margin-bottom: size-m(39);
     }
 
