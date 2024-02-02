@@ -88,7 +88,7 @@
         <swiper-slide>
           <div class="img">
             <img class="block w-full" src="@/section/s4/10.webp" />
-            <div class="info">南紡夢時代實景拍攝</div>
+            <div class="info">南紡置地廣場實景拍攝</div>
           </div>
         </swiper-slide>
       </swiper>
