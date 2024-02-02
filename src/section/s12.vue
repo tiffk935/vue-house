@@ -68,7 +68,7 @@
   }
 
   .txt {
-    padding: size-m(50) size-m(30);
+    padding: size-m(50) size-m(25);
     z-index: 1;
     @media (min-width: 768px) {
       position: absolute;
@@ -84,11 +84,13 @@
       font-size: size-m(30);
       font-weight: 700;
       letter-spacing: size-m(6.9);
+      text-indent: size-m(6.9);
       margin-bottom: size-m(5);
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(48);
         letter-spacing: size(15.84);
+        text-indent: size-m(0);
         margin-bottom: size(3);
         padding-bottom: 0;
         transform: translateX(size(15.84))
@@ -100,6 +102,7 @@
       font-size: size-m(15);
       font-weight: 700;
       letter-spacing: size-m(4.95);
+      text-indent: size-m(4.95);
       margin-bottom: size-m(17);
       line-height: normal;
       @media (min-width: 768px) {

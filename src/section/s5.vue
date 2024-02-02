@@ -53,11 +53,13 @@
     .t1 {
       font-size: size-m(30);
       line-height: normal;
-      letter-spacing: size-m(9.9);
+      letter-spacing: size-m(9);
+      text-indent: size-m(9);
       margin-bottom: size-m(6);
       @media (min-width: 768px) {
         font-size: size(60);
         letter-spacing: size(19.8);
+        text-indent: size(19.8);
         margin-bottom: size(0);
       }
     }

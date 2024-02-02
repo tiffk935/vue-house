@@ -203,7 +203,7 @@
   }
 
   .butterfly1 {
-    width: size-m(45);
+    width: size-m(25);
     bottom: size-m(220);
     left: size-m(287);
     transform: translateY(80%);
@@ -218,7 +218,7 @@
   }
 
   .butterfly2 {
-    width: size-m(46.47);
+    width: size-m(26.47);
     bottom: size-m(120);
     left: size-m(56);
     transform: translateY(-20%);

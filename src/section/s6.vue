@@ -6,7 +6,7 @@
         <div class="subtitle">2.1萬坪平實公園 <br>無以撼動的精彩簇擁</div>
         <div class="content text-left">
           <p>平實公園／ 比美紐約中央公園綠海壯闊，2.1萬坪森度綠富，同步國際富金景觀哲學</p>
-          <p>明星學區／ 東光國小、復興國中、台南一中、成功大學等一流名校，散步就近讀</p>
+          <p>明星學區／ 東光國小、復興國中、台南一中、成功大學等一流名校就近讀</p>
           <p>成大醫院／ 近距成大醫院、榮總台南分院等醫療機能，醫生、護理從業人員優質客群</p>
         </div>
         <div class="controls hidden md:flex md:justify-end">
@@ -191,7 +191,8 @@
       font-family: "Noto Serif TC";
       font-size: size-m(30);
       font-weight: 700;
-      letter-spacing: size-m(9.9);
+      letter-spacing: size-m(9);
+      text-indent: size-m(9);
       margin-bottom: size-m(13);
       padding-bottom: size-m(13);
       position: relative;
@@ -199,6 +200,7 @@
       @media (min-width: 768px) {
         font-size: size(58);
         letter-spacing: size(19.14);
+        text-indent: size(19.14);
         margin-bottom: size(24);
         padding-bottom: size(19);
       }
@@ -223,12 +225,14 @@
       font-family: "Noto Serif TC";
       font-size: size-m(15);
       font-weight: 700;
-      letter-spacing: size-m(4.95);
+      letter-spacing: size-m(5);
+      text-indent: size-m(5);
       margin-bottom: size-m(26);
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(24);
         letter-spacing: size(7.92);
+        text-indent: size(7.92);
         margin-bottom: size(43);
       }
     }

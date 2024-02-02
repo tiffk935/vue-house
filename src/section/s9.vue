@@ -72,7 +72,7 @@
   .butterfly1 {
     top: size-m(202);
     left: size-m(285.37);
-    width: size-m(43.63);
+    width: size-m(23.63);
     transform: translateY(60%);
     animation: an 4s ease-in-out alternate infinite;
     img{width: 100%;
@@ -87,7 +87,7 @@
   .butterfly2 {
     top: size-m(493);
     left: size-m(40);
-    width: size-m(53.34);
+    width: size-m(23.34);
     transform: translateY(-40%);
     animation: an 3s ease-in-out alternate infinite;
     img{width: 100%;

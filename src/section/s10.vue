@@ -70,7 +70,7 @@
     font-size: size-m(30);
     font-weight: 700;
     line-height: normal;
-    letter-spacing: size-m(9.9);
+    letter-spacing: size-m(9);
     @media (min-width: 768px) {
       top: size(454);
       left: size(730);

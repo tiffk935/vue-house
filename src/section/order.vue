@@ -353,13 +353,13 @@
     }
 
     .butterfly1 {
-      width: size-m(51.98);
+      width: size-m(21.98);
       bottom: \50vw;
       left: size-m(287);
     }
 
     .butterfly2 {
-      width: size-m(46.47);
+      width: size-m(26.47);
       bottom: 87vw;
       left: size-m(56);
     }

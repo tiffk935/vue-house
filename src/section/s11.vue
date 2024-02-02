@@ -90,11 +90,13 @@
       font-size: size-m(30);
       font-weight: 700;
       letter-spacing: size-m(6.9);
+      text-indent: size-m(6.9);
       margin-bottom: size-m(5);
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(48);
         letter-spacing: size(15.84);
+        text-indent: size(15.84);
         margin-bottom: size(3);
         padding-bottom: 0;
       }
@@ -105,11 +107,13 @@
       font-size: size-m(15);
       font-weight: 700;
       letter-spacing: size-m(4.95);
+      text-indent: size-m(4.95);
       margin-bottom: size-m(17);
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(24);
         letter-spacing: size(7.92);
+        text-indent: size(15);
         margin-bottom: size(0);
       }
     }
@@ -128,6 +132,11 @@
   .img1 {
     width: size-m(244);
     margin: 0 auto size-m(12);
+
+    img{
+      width: 100%;
+    }
+
     @media (min-width: 768px) {
       position: absolute;
       top: size(485);

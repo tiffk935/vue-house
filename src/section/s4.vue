@@ -54,7 +54,7 @@
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/10.webp" />
-        <div class="info">南紡夢時代實景拍攝</div>
+        <div class="info">南紡置地廣場實景拍攝</div>
       </div>
     </div>
     <div class="slider md:hidden">
@@ -126,7 +126,8 @@
       font-family: "Noto Serif TC";
       font-size: size-m(30);
       font-weight: 700;
-      letter-spacing: size-m(9.9);
+      letter-spacing: size-m(9);
+      text-indent: size-m(9);
       margin-bottom: size-m(13);
       padding-bottom: size-m(13);
       position: relative;
@@ -134,6 +135,7 @@
       @media (min-width: 768px) {
         font-size: size(58);
         letter-spacing: size(19.14);
+        text-indent: size(19.14);
         margin-bottom: size(24);
         padding-bottom: size(19);
       }
@@ -158,12 +160,14 @@
       font-family: "Noto Serif TC";
       font-size: size-m(15);
       font-weight: 700;
-      letter-spacing: size-m(4.95);
+      letter-spacing: size-m(5);
+      text-indent: size-m(5);
       margin-bottom: size-m(26);
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(24);
         letter-spacing: size(7.92);
+        text-indent: size(7.92);
         margin-bottom: size(43);
       }
     }

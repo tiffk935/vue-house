@@ -15,10 +15,6 @@
       <swiper
         :loop="true"
         :navigation="false"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
         :modules="modules"
         @init="init"
       >
