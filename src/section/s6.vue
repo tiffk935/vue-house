@@ -67,15 +67,15 @@
           <swiper-slide>
             <div class="md:flex md:flex-wrap">
               <div class="img relative w-full img1">
-                <img class="w-full block" src="@/section/s6/1.jpg" />
-                <div class="info absolute"></div>
+                <img class="w-full block" src="@/section/s6/1.webp" />
+                <div class="info absolute">平實公園實景拍攝</div>
               </div>
               <div class="img relative half-left mb0 img2">
-                <img class="w-full block" src="@/section/s6/2.jpg" />
+                <img class="w-full block" src="@/section/s6/2.webp" />
                 <div class="info absolute">平實公園實景拍攝</div>
               </div>
               <div class="img relative half-right mb0 img3">
-                <img class="w-full block" src="@/section/s6/3.jpg" />
+                <img class="w-full block" src="@/section/s6/3.webp" />
                 <div class="info absolute">平實公園實景拍攝</div>
               </div>
             </div>
@@ -83,15 +83,15 @@
           <swiper-slide>
             <div class="md:flex md:flex-wrap">
               <div class="img relative half-left img4">
-                <img class="w-full block" src="@/section/s6/4.jpg" />
+                <img class="w-full block" src="@/section/s6/4.webp" />
                 <div class="info absolute">成功大學實景拍攝</div>
               </div>
               <div class="img relative half-right img5">
-                <img class="w-full block" src="@/section/s6/5.jpg" />
+                <img class="w-full block" src="@/section/s6/5.webp" />
                 <div class="info absolute">成功大學實景拍攝</div>
               </div>
               <div class="img relative w-full mb0 img6">
-                <img class="w-full block" src="@/section/s6/6.jpg" />
+                <img class="w-full block" src="@/section/s6/6.webp" />
                 <div class="info absolute">成大醫院實景拍攝</div>
               </div>
             </div>
@@ -111,37 +111,37 @@
       >
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/1.jpg" />
-            <div class="info absolute"></div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s6/2.jpg" />
+            <img class="block w-full" src="@/section/s6/1.webp" />
             <div class="info absolute">平實公園實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/3.jpg" />
+            <img class="block w-full" src="@/section/s6/2.webp" />
             <div class="info absolute">平實公園實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/4.jpg" />
+            <img class="block w-full" src="@/section/s6/3.webp" />
+            <div class="info absolute">平實公園實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="img">
+            <img class="block w-full" src="@/section/s6/4.webp" />
             <div class="info absolute">成功大學實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/5.jpg" />
+            <img class="block w-full" src="@/section/s6/5.webp" />
             <div class="info absolute">成功大學實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s6/6.jpg" />
+            <img class="block w-full" src="@/section/s6/6.webp" />
             <div class="info absolute">成大醫院實景拍攝</div>
           </div>
         </swiper-slide>

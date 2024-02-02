@@ -13,12 +13,12 @@
 
 .s2 {
   height: size-m(667);
-  background-image: url(@/section/s2/bg.jpg);
+  background-image: url(@/section/s2/bg.webp);
   background-size: auto 100%;
-  background-position: size-m(-495) 0;
+  background-position: size-m(-360) 0;
   @media (min-width: 768px) {
     height: size(1308);
-    background-position: size(-270) 0;
+    background-position: size(-0) 0;
   }
 
   .title {

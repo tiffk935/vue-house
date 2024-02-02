@@ -24,14 +24,14 @@
       >
         <swiper-slide>
           <div class="img relative">
-            <img class="hidden md:block" src="@/section/s17/1.png" />
-            <img class="md:hidden" src="@/section/s17/1-m.png" />
+            <img class="hidden md:block" src="@/section/s17/1.webp" />
+            <img class="md:hidden" src="@/section/s17/1-m.webp" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img relative">
-            <img class="hidden md:block" src="@/section/s17/2.png" />
-            <img class="md:hidden" src="@/section/s17/2-m.png" />
+            <img class="hidden md:block" src="@/section/s17/2.webp" />
+            <img class="md:hidden" src="@/section/s17/2-m.webp" />
           </div>
         </swiper-slide>
       </swiper>

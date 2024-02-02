@@ -1,6 +1,6 @@
 <template>
   <section class="s5 w-full relative text-center text-white">
-    <img class="bg" src="@/section/s5/bg.jpg" />
+    <img class="bg" src="@/section/s5/bg.webp" />
     <div class="mask"></div>
     <div class="title absolute w-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">平實大布局 <br class="md:hidden">總和生活渴望</div>

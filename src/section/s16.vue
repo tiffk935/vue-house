@@ -1,6 +1,6 @@
 <template>
   <section class="s16 w-full relative text-[#173868]">
-    <img class="bg absolute" src="@/section/s16/bg.jpg" />
+    <img class="bg absolute" src="@/section/s16/bg.webp" />
     <div class="rect absolute"></div>
     <img class="style absolute" src="@/section/s16/style.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="txt text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -58,9 +58,8 @@
 
   .txt {
     position: absolute;
-    top: 0;
-    left: 0;
-    padding: size-m(50) size-m(20);
+    top: size-m(35);
+    left: size-m(45);
     @media (min-width: 768px) {
       top: size(282);
       left: size(161);
@@ -71,9 +70,11 @@
       font-family: "Noto Serif TC";
       font-size: size-m(30);
       font-weight: 700;
-      letter-spacing: size-m(6.9);
+      letter-spacing: size-m(5);
       margin-bottom: size-m(5);
       line-height: normal;
+      text-align: center;
+      margin:  size-m(5) 0;
       @media (min-width: 768px) {
         font-size: size(48);
         letter-spacing: size(15.84);

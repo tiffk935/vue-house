@@ -1,6 +1,6 @@
 <template>
   <section class="s15 w-full relative text-[#173868]">
-    <img class="bg absolute" src="@/section/s15/bg.jpg" />
+    <img class="bg absolute" src="@/section/s15/bg.webp" />
     <div class="rect w-full absolute"></div>
     <div class="info absolute">情境示意圖</div>
     <div class="txt text-center">

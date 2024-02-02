@@ -202,7 +202,7 @@
 
   .butterfly1 {
     width: size(52);
-    bottom: 18vw;
+    bottom: 10vw;
     left: size(1643);
     transform: translateY(80%);
     animation: an 3s linear infinite alternate;
@@ -354,7 +354,7 @@
 
     .butterfly1 {
       width: size-m(51.98);
-      bottom: 140vw;
+      bottom: \50vw;
       left: size-m(287);
     }
 

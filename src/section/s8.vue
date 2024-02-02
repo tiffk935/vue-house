@@ -14,15 +14,15 @@
     </div>
     <div class="pic hidden md:flex md:flex-wrap md:flex-1">
       <div class="img relative w-full">
-        <img class="w-full block" src="@/section/s8/1.jpg" />
+        <img class="w-full block" src="@/section/s8/1.webp" />
         <div class="info absolute">台南高鐵站實景拍攝</div>
       </div>
       <div class="img relative w-1/2">
-        <img class="w-full block" src="@/section/s8/2.jpg" />
+        <img class="w-full block" src="@/section/s8/2.webp" />
         <div class="info absolute">情境示意圖</div>
       </div>
       <div class="img relative w-1/2">
-        <img class="w-full block" src="@/section/s8/3.jpg" />
+        <img class="w-full block" src="@/section/s8/3.webp" />
         <div class="info absolute">情境示意圖</div>
       </div>
     </div>
@@ -38,19 +38,19 @@
       >
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s8/1.jpg" />
+            <img class="block w-full" src="@/section/s8/1.webp" />
             <div class="info">台南高鐵站實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s8/2.jpg" />
+            <img class="block w-full" src="@/section/s8/2.webp" />
             <div class="info">情境示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s8/3.jpg" />
+            <img class="block w-full" src="@/section/s8/3.webp" />
             <div class="info">情境示意圖</div>
           </div>
         </swiper-slide>

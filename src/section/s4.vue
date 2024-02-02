@@ -17,43 +17,43 @@
     </div>
     <div class="pic hidden md:block relative">
       <div class="img">
-        <img class="block w-full" src="@/section/s4/1.jpg" />
+        <img class="block w-full" src="@/section/s4/1.webp" />
         <div class="info">東寧運動公園實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/2.jpg" />
+        <img class="block w-full" src="@/section/s4/2.webp" />
         <div class="info">南紡夢時代實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/3.jpg" />
+        <img class="block w-full" src="@/section/s4/3.webp" />
         <div class="info">東寧路商圈實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/4.jpg" />
+        <img class="block w-full" src="@/section/s4/4.webp" />
         <div class="info">情境示意圖</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/5.jpg" />
+        <img class="block w-full" src="@/section/s4/5.webp" />
         <div class="info">平實公園實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/6.jpg" />
+        <img class="block w-full" src="@/section/s4/6.webp" />
         <div class="info">南紡夢時代實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/7.jpg" />
+        <img class="block w-full" src="@/section/s4/7.webp" />
         <div class="info">情境示意圖</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/8.jpg" />
+        <img class="block w-full" src="@/section/s4/8.webp" />
         <div class="info">國賓影城實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/9.jpg" />
+        <img class="block w-full" src="@/section/s4/9.webp" />
         <div class="info">南紡夢時代實景拍攝</div>
       </div>
       <div class="img">
-        <img class="block w-full" src="@/section/s4/10.jpg" />
+        <img class="block w-full" src="@/section/s4/10.webp" />
         <div class="info">南紡夢時代實景拍攝</div>
       </div>
     </div>
@@ -69,61 +69,25 @@
       >
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/1.jpg" />
-            <div class="info">東寧運動公園實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/2.jpg" />
-            <div class="info">南紡夢時代實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/3.jpg" />
+            <img class="block w-full" src="@/section/s4/3.webp" />
             <div class="info">東寧路商圈實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/4.jpg" />
-            <div class="info">情境示意圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/5.jpg" />
-            <div class="info">平實公園實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/6.jpg" />
+            <img class="block w-full" src="@/section/s4/6.webp" />
             <div class="info">南紡夢時代實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/7.jpg" />
-            <div class="info">情境示意圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/8.jpg" />
+            <img class="block w-full" src="@/section/s4/8.webp" />
             <div class="info">國賓影城實景拍攝</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img">
-            <img class="block w-full" src="@/section/s4/9.jpg" />
-            <div class="info">南紡夢時代實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="img">
-            <img class="block w-full" src="@/section/s4/10.jpg" />
+            <img class="block w-full" src="@/section/s4/10.webp" />
             <div class="info">南紡夢時代實景拍攝</div>
           </div>
         </swiper-slide>

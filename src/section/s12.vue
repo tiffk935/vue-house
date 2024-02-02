@@ -18,11 +18,11 @@
     </div>
     <div class="imgs hidden md:block">
       <div class="img absolute">
-        <img class="block" src="@/section/s12/1.jpg" />
+        <img class="block" src="@/section/s12/1.webp" />
         <div class="info absolute">3D外觀合成示意圖</div>
       </div>
       <div class="img absolute">
-        <img class="block" src="@/section/s12/2.jpg" />
+        <img class="block" src="@/section/s12/2.webp" />
         <div class="info absolute">3D外觀合成示意圖</div>
       </div>
     </div>
@@ -38,13 +38,13 @@
       >
         <swiper-slide>
           <div class="img relative">
-            <img class="block" src="@/section/s12/1.jpg" />
+            <img class="block" src="@/section/s12/1.webp" />
             <div class="info absolute">3D外觀合成示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="img relative">
-            <img class="block" src="@/section/s12/2.jpg" />
+            <img class="block" src="@/section/s12/2.webp" />
             <div class="info absolute">3D外觀合成示意圖</div>
           </div>
         </swiper-slide>

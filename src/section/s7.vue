@@ -1,6 +1,6 @@
 <template>
   <section class="s7 w-full relative text-center text-white">
-    <img class="bg" src="@/section/s7/bg.jpg" />
+    <img class="bg" src="@/section/s7/bg.webp" />
     <div class="mask"></div>
     <div class="title absolute w-full" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">東區正核心 <br class="md:hidden">馳騁大台南</div>

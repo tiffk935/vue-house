@@ -24,8 +24,8 @@ export default {
         ["格局規劃", "2-3房"],
         ["企劃行銷", "上博國際"],
     ],
-    gtmCode: ["GTM-NDGMSK5","GTM-M87MK5M"], // 可放置多個
-    recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
+    gtmCode: ["GTM-5673NQBS"], // 可放置多個
+    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",

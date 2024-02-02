@@ -1,9 +1,9 @@
 <template>
   <section class="s9 w-full relative">
-    <img class="cloud absolute" src="@/section/s9/cloud.png" />
-    <img class="moon absolute" src="@/section/s9/moon.png" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="-200"  />
-    <img class="img1 absolute" src="@/section/s9/img1.png" />
-    <img class="img2 absolute" src="@/section/s9/img2.png" />
+    <img class="cloud absolute" src="@/section/s9/cloud.webp" />
+    <img class="moon absolute" src="@/section/s9/moon.webp" data-aos="fade-down" data-aos-duration="3000" data-aos-delay="-200"  />
+    <img class="img1 absolute" src="@/section/s9/img1.webp" />
+    <img class="img2 absolute" src="@/section/s9/img2.webp" />
     <div class="butterfly1 absolute"><img src="@/section/s1/butterfly1.svg" /></div>
     <div class="butterfly2 absolute"><img src="@/section/s1/butterfly2.svg" /></div>
   </section>
