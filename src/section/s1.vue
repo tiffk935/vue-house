@@ -2,7 +2,7 @@
   <section class="s1 w-full relative">
     <div class="bg"></div>
     <img class="logo absolute" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <div class="gold absolute">
+    <div class="gold absolute" data-aos="fade-left" data-aos-duration="3000" data-aos-delay="100">
     <img src="@/section/s1/gold.png" /></div>
     <div class="stars">
       <img class="star absolute" src="@/section/s1/star.svg" />
@@ -29,6 +29,18 @@
   }
   50% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes twinkle1 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
   }
   100% {
     opacity: 1;
@@ -72,12 +84,13 @@
 }
 .gold {
   width: size-m(991);
-    bottom:size-m(-20);
+  bottom:size-m(-20);
   right: size-m(-80);
   max-width: none;
   mix-blend-mode: color-dodge;
   overflow: hidden;
-  animation:  gold  5s 3s reverse both ;
+  //animation:  gold  5s 3s reverse both ;
+  animation: 5s ease-in-out 1s infinite alternate twinkle1;
 
   @media (min-width: 768px) {
     width: size(1820);
@@ -206,8 +219,8 @@
     width: size-m(25);
     bottom: size-m(220);
     left: size-m(287);
-    transform: translateY(80%);
-    animation: an 3s linear infinite alternate;
+    transform: translateY(50%);
+    animation: an 5s ease-in infinite alternate;
     img{width: 100%;
     transform:rotate(-55deg);}
     @media (min-width: 768px) {
@@ -221,8 +234,8 @@
     width: size-m(26.47);
     bottom: size-m(120);
     left: size-m(56);
-    transform: translateY(-20%);
-    animation: an 1.5s linear infinite alternate;
+    transform: translate(-90%, 50%);
+    animation: an 3s ease-in-out infinite alternate;
     img{width: 100%;
     transform:rotate(-45deg);}
     @media (min-width: 768px) {
