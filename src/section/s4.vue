@@ -22,7 +22,7 @@
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/2.webp" />
-        <div class="info">南紡夢時代實景拍攝</div>
+        <div class="info">南紡置地廣場實景拍攝</div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/3.webp" />
@@ -38,7 +38,7 @@
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/6.webp" />
-        <div class="info">南紡夢時代實景拍攝</div>
+        <div class="info">南紡置地廣場實景拍攝</div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/7.webp" />
@@ -50,7 +50,7 @@
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/9.webp" />
-        <div class="info">南紡夢時代實景拍攝</div>
+        <div class="info">南紡置地廣場實景拍攝</div>
       </div>
       <div class="img">
         <img class="block w-full" src="@/section/s4/10.webp" />
