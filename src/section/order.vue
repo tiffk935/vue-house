@@ -46,6 +46,14 @@
               <option value="" selected disabled>需求房型</option>
               <option value="兩房">兩房</option>
               <option value="三房">三房</option>
+              <option value="店面">店面</option>
+            </select>
+            <select class="select w-full rounded-none" v-model="formData.budget">
+              <option value="" selected disabled>購屋預算</option>
+              <option value="1000萬以下">1000萬以下</option>
+              <option value="1000~1500萬">1000~1500萬</option>
+              <option value="1500~2000萬">1500~2000萬</option>
+              <option value="1000萬以上">2000萬以上</option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
@@ -424,6 +432,7 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  budget: "",
   // email: "",
   city: "",
   area: "",
@@ -436,13 +445,14 @@ const sending = ref(false)
 
 //非必填
 // const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type"];
+const bypass = ["msg","room_type","budget"];
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "預算", //budget
   // "信箱", //email
   "居住縣市", //city
   "居住地區", //area
@@ -525,6 +535,7 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
