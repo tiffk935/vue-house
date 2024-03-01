@@ -9,7 +9,7 @@ export default {
     address: "台南市北區北安路一段314號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.103124494829!2d120.20653949999999!3d23.019985500000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77e72f4b940d%3A0xcf3de62719514af7!2z5pil56aP5a6J5a6J!5e0!3m2!1szh-TW!2stw!4v1664247386719!5m2!1szh-TW!2stw",
     googleLink: "https://g.page/CHUNFUSTUDIES?share",
-    phone: "06-283-5866",
+    phone: "06-251-1157",
     fbLink: "https://www.facebook.com/116528067724267/",
     fbMessage: "https://m.me/116528067724267/",
     caseName: caseName,
