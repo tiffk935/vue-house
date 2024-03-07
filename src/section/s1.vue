@@ -4,7 +4,7 @@
     <div class=" ">
      <div class="s1new pc-pv"> 
       <img src="@/section/s1/A/bg.jpg" alt="" class="bg">
-      <img src="@/section/s1/A/synlogo.png" alt="" class="synlogo">
+      <!--img src="@/section/s1/A/synlogo.png" alt="" class="synlogo"-->
       <div class="txt">外觀示意圖</div>
       <div class="s1logo">
             <img src="@/section/s1/A/A_2.svg" alt="">

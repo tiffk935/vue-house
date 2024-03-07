@@ -18,7 +18,7 @@ export default {
         ["規劃坪數", "24坪、28坪、36坪"],
         ["基地面績", "約637.56坪"],
         ["房型規劃", "2-3房、店面"],
-        ["廣告代銷", ""],
+        //["廣告代銷", ""],
     ],
     gtmCode: ["GTM-M87MK5M","GTM-W2BV8MK"], // 可放置多個
     recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC",
