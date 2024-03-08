@@ -1,15 +1,16 @@
 <template>
   <section class="s1 text-white relative">
-   <!--   
     <img class="bg absolute hidden md:block" src="@/section/s1/bg1.png" />
   <img class="bg absolute md:hidden" src="@/section/s1/bg-m.jpg" />
-  <img class="tree absolute hidden md:block" src="@/section/s1/tree.png" />
+   <!--   <img class="tree absolute hidden md:block" src="@/section/s1/tree.png" />
     <img class="tree absolute md:hidden" src="@/section/s1/tree_m.png" />
     <img class="tree1 absolute md:hidden" src="@/section/s1/tree_m1.png" /> --> 
-    <img class="tree absolute hidden md:block" src="@/section/s1/bottom.png" />
-    <img class="tree absolute md:hidden" src="@/section/s1/bottom_m.png" />
     <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s1/logo.svg" />
-    <div class="title absolute" data-aos="fade-down" data-aos-delay="200">千億建設啟動 純住文教特區
+    <div class="title absolute hidden md:block" data-aos="fade-down" data-aos-delay="200">
+      <div class="l1">千億建設啟動 純住文教特區</div>
+    </div>
+    <div class="title absolute md:hidden" data-aos="fade-down" data-aos-delay="200">
+      <div class="l1">千億建設啟動 純住文教特區</div>
     </div>
     <img class="logo2 absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s1/logo2.svg" />
     
@@ -47,17 +48,12 @@
 
 .s1 {
   width: 100%;
-height: calc(100vh - 63px);
-min-height:size-m(604);
-max-height:size-m(812);
-//  height: size-m(667);
+  height: size-m(667);
   font-family: 'Noto Serif TC';
   overflow: hidden;
   background: #8D3862;
   @media screen and (min-width:768px) {
-    height:100vh;
-min-height:size(900);
-max-height:size(1080);
+    height: size(1080);
   }
   .bg {
     width: 100%;
@@ -80,7 +76,7 @@ max-height:size(1080);
       left: size(0);
     }
   }
-/*
+
   .tree1 {
     width: size-m(375);
     top: size-m(0);
@@ -94,7 +90,7 @@ max-height:size(1080);
       left: size(0);
     }
   }
-
+/*
   .person1 {
     width: size-m(171.23);
     top: size-m(410);
@@ -141,44 +137,44 @@ max-height:size(1080);
   }
 */
   .logo {
-    width: size-m(275);
-    top: size-m(220);
-    top: calc(50% + #{size-m(220 - 302)});
-      left:0;
-      right: 0;
-      margin: auto;
+    width: size-m(271);
+    top: size-m(190);
+    left: size-m(52);
     @media screen and (min-width:768px) {
       width: size(900);
       top: size(350);
-    top: calc(50% + #{size(350 - 540)});
+      left: size(500);
     }
   }
 
   .title {
     width: 100%;
-    top: size-m(300);
-    top: calc(50% + #{size-m(300 - 302)});
+    top: size-m(341);
     left: 0;
     text-align: center;
     font-weight: 600;
     font-size: size-m(23);
     @media screen and (min-width:768px) {
-      top: size(560);
-    top: calc(50% + #{size(560 - 540)});
-      font-size: size(54);
+      top: size(600);
+      font-size: size(40);
+    }
+
+    .l1 {
+      font-weight: 700;
+      font-size: size-m(25);
+      @media screen and (min-width:768px) {
+        font-size: size(40);
+      }
     }
   }
   .logo2 {
-    width: size-m(60);
-    top: size-m(450);
-    top: calc(50% + #{size-m(450 - 302)});
-      left:0;
-      right: 0;
-      margin: auto;
+    width: size-m(271);
+    top: size-m(190);
+    left: size-m(52);
     @media screen and (min-width:768px) {
-      width: size(120);
-      top: size(770);
-    top: calc(50% + #{size(770 - 540)});
+      width: size(200);
+      top: size(221);
+      left: size(567);
     }
   }
 
