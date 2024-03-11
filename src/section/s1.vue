@@ -35,16 +35,11 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-
 @keyframes tree {
-  from {
-    transform: skew(-3deg)
-  }
   to {
-    transform: skew(3deg)
+    transform: skew(0)
   }
 }
-
 .s1 {
   width: 100%;
 height: calc(100vh - 63px);
@@ -53,7 +48,7 @@ max-height:size-m(812);
 //  height: size-m(667);
   font-family: 'Noto Serif TC';
   overflow: hidden;
-  background: #8D3862;
+//  background: #8D3862;
   @media screen and (min-width:768px) {
     height:100vh;
 min-height:size(900);
@@ -73,11 +68,13 @@ max-height:size(1080);
     left: size-m(0);
     max-width: none;
     transform-origin: bottom;
+    transform: skew(6deg);
+    animation: tree 3s alternate-reverse infinite ease-in-out;
     //animation: tree 3s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
-      width:100%;
+      width:108%;
       bottom: size(0);
-      left: size(0);
+      left: -4%;
     }
   }
 /*

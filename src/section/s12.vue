@@ -2,7 +2,8 @@
   <section class="s12 relative">
    <!--  <img class="bg absolute md:hidden" src="@/section/s12/bg-m.png" />
     <img class="bg absolute hidden md:block" src="@/section/s12/bg.png" />  -->
-    <img class="tree absolute" src="@/section/s12/tree.png" />
+    <div class="tree absolute"><img src="@/section/s5/tree.png" /></div>
+    
     <div class="img-wrapper absolute">
       <img class="img" src="@/section/s12/img.jpg" />
       <div class="text-white">情境示意圖</div>
@@ -10,7 +11,7 @@
     <img class="logo absolute" data-aos="fade-down" data-aos-delay="0" src="@/section/s12/logo.svg" />
     <div class="line absolute bg-[#000000] hidden md:block"></div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#005d43]">全國首創 全齡共學場域</div>
+      <div class="t1 text-[#9B7134]">全國首創 全齡共學場域</div>
       <div class="t2">友善 共融 共好 0-99歲都可以</div>
       <div class="content">當社區完工交屋後，公共設施的經營與服務將更多元和靈活，不只舉辦社區節慶活動，更以加強居民之間的交流為目的。同時打造成適合所有年齡層都能安心、放心使用的全齡場域。</div>
     </div>
@@ -38,14 +39,20 @@
   
   .tree {
     width: size-m(180);
-    bottom: size-m(253);
-    left: size-m(-10);
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
+    bottom: size-m(240);
+    right: size-m(-20);
+    transform-origin:100% 50%;
+    transform: rotate(-6deg);
+    animation: tree 5s alternate-reverse infinite ease-in-out;
+    img{width: 100%;
+    @media screen and (max-width:767px) {
+      transform: rotate(-150deg);
+    }}
     @media screen and (min-width:768px) {
       width: size(313);
-      bottom: size(-78);
+      bottom: size(0);
       left: size(-74);
+    transform-origin:0 50%;
     }
   }
 

@@ -193,7 +193,7 @@
 
       .t1 {
         font-family: 'Noto Serif TC';
-        color: #005d43;
+        color: #9B7134;
         font-weight: 800;
         font-size: size-m(25);
         line-height: size-m(17);
@@ -331,9 +331,12 @@
   .tree {
     @media screen and (min-width:768px) {
       position: absolute;
-      width: size(292);
+      width: size(350);
       right: size(-50);
       bottom: size(-80);
+    transform: rotate(6deg);
+    transform-origin: 80% 80%;
+    animation: tree 6s alternate-reverse infinite ease-in-out;
     }
   }
 

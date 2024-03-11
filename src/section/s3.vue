@@ -22,19 +22,7 @@
 .s3 {
 
   @keyframes swing {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(-15%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    75% {
-      transform: translateX(15%);
-    }
-    100% {
+    to{
       transform: translateX(0%);
     }
   }
@@ -75,8 +63,9 @@
     left: size-m(178);
     cursor: pointer;
     transition: opacity .5s;
-    animation: swing 3s linear 0s infinite;
+    animation: swing 3s linear alternate infinite;
     pointer-events: none;
+      transform: translateX(-50%);
     @media screen and (min-width:768px) {
       display: none;
     }
@@ -99,9 +88,6 @@
     @media screen and (min-width:768px) {
       height: size(714);
       opacity: 0;
-      // background: linear-gradient(180deg, #55B1FF 0%, rgba(140, 201, 255, 0) 44.27%);
-      //background: linear-gradient(180deg, rgba(39, 149, 245, 0) 12.66%, rgba(69, 164, 246, 0.365079) 38.98%, #1B92F7 100%);
-      // transform: rotate(0deg);
     }
   }
   

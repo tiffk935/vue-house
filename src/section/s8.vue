@@ -1,12 +1,11 @@
 <template>
   <section class="s8 relative">
-    <img class="tree2 absolute absolute md:hidden" src="@/section/s8/tree2.png" />
     <div class="text absolute md:hidden" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">移動 快捷有感</div>
       <div class="t2">1高2快3捷運 說走就走</div>
       <div class="content">驅車國道3號或經由台65線接軌國道1號，南來北往超順暢；板南線海山站、土城站以及萬大線二期LG10站，4分鐘就到，輕鬆遊走雙北。</div>
     </div>
-    <img class="tree1 absolute md:hidden" src="@/section/s8/tree1.png" />
+    <img class="tree1 absolute md:hidden" src="@/section/s8/tree4.png" />
     <div class="slider absolute">
       <swiper 
         :spaceBetween="10"
@@ -88,7 +87,7 @@
 .s8 {
   width: 100%;
   height: size-m(667);
-  background:#005d43  url("@/section/s8/bg.png");
+  // background:#005d43  url("@/section/s8/bg.png");
   background-size: auto;
   @media screen and (min-width:768px) {
     height: size(960);
@@ -284,29 +283,30 @@
   }
 
   .tree1 {
-    width: size-m(154);
-    top: size-m(214);
-    left: size-m(-55);
+    width: size-m(300);
+    top: size-m(190);
+    right: size-m(-40);
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
+    transform:skewX(6deg);
     max-width: none;
     @media screen and (min-width:768px) {
-      width: size(312) !important;
-      top: size(338);
-      left: size(-5);
+      width: size(450) !important;
+      top: size(300);
+      left: size(-30);
     }
   }
 
   .tree2 {
-    width: size-m(125);
-    top: size-m(234);
-    right: size-m(-50);
+    display: none;
     transform-origin: bottom;
     animation: tree 3s alternate-reverse infinite ease-in-out;
+    transform:skewX(6deg);
     max-width: none;
     @media screen and (min-width:768px) {
-      width: size(246) !important;
-      top: size(303);
+      width: size(352) !important;
+      top:auto;
+      bottom: 0;
       left: size(-50);
     }
   }
@@ -314,13 +314,15 @@
   .tree3 {
     display: none;
     transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
+    animation: tree 3s alternate infinite ease-in-out;
+    transform:skewX(-6deg);
     max-width: none;
     @media screen and (min-width:768px) {
       display: block;
-      width: size(345) !important;
-      top: size(272);
-      left: size(223);
+      width: size(355) !important;
+      top: size(200);
+      left: auto;
+      right:0;
     }
   }
 

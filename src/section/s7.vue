@@ -78,7 +78,7 @@
 .s7 {
   width: 100%;
   height: size-m(667);
-  background:#005d43  url("@/section/s8/bg.png");
+ // background:#005d43  url("@/section/s8/bg.png");
   background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);

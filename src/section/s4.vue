@@ -35,7 +35,7 @@
       </swiper>
     </div-->
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#005d43]">城市 新榮景</div>
+      <div class="t1 text-[#BC9151]">城市 新榮景</div>
       <div class="t2">國道北土城交流道2027完工</div>
       <div class="content">以國道三號為分界，北區鄰近土城醫院、文教特區，南區預計遷入新北地方法院與地檢署等機關，預估2027年完工，2030年全面啟用，帶領土城發展更上一層樓。</div>
     </div>
@@ -162,7 +162,7 @@
     }
   }
 
-  .newimg  {
+  .newimg  {z-index: 2;
     .text-white {
       font-size: size-m(12);
       text-shadow: 0px 0px size-m(5) rgba(0, 0, 0, 0.8);
@@ -180,12 +180,13 @@
   }
 
   .tree {
-    width: size-m(122);
+    width: size-m(140);
     //top: size-m(518);
-    top: size-m(300);
-    left: size-m(-30);
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
+    top: size-m(280);
+    left: size-m(-40);
+    transform-origin:0 80%;
+    transform: rotate(6deg);
+    animation: tree 5s alternate-reverse infinite ease-in-out;
     @media screen and (min-width:768px) {
       width: size(245);
       //top: size(742);

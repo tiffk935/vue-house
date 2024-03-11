@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between bg-[#005d43] text-white">
+    <div class="flex flex-col md:flex-row items-center justify-between bg-[#0003] text-white">
         <!-- <div class="map"></div> -->
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">

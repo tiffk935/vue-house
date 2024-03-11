@@ -122,7 +122,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 .s10 {
-
+/*
   @keyframes swing {
     0% {
       transform: translateX(0%);
@@ -139,7 +139,7 @@
     100% {
       transform: translateX(0%);
     }
-  }
+  }*/
 
   width: 100%;
   height: size-m(667);
@@ -203,7 +203,7 @@
     left: size-m(178);
     cursor: pointer;
     transition: opacity .5s;
-    animation: swing 3s linear 0s infinite;
+   // animation: swing 3s linear 0s infinite;
     pointer-events: none;
     @media screen and (min-width:768px) {
       display: none;
@@ -233,7 +233,7 @@
 
     .t1 {
       font-family: 'Noto Serif TC';
-      color: #005d43;
+      color: #9B7134;
       font-weight: 800;
       font-size: size-m(25);
       line-height: size-m(17);
@@ -256,7 +256,7 @@
         transform: translate(0, -50%);
         width: size-m(62);
         height: size-m(1);
-        background: #000;
+        background: #9B7134;
         @media screen and (min-width:768px) {
           width: size(150);
           height: size(1);

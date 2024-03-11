@@ -10,7 +10,7 @@
       <div class="text-white"></div>
     </div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
-      <div class="t1 text-[#005d43]">大學城進行式</div>
+      <div class="t1 text-[#9B7134]">大學城進行式</div>
       <div class="t2">土城核心2.0 純住文教特區</div>
       <div class="content">大學城藝文氛圍令人嚮往，更是房價保證班。『土城核心2.0』集政府單位、萬坪公園校園、捷運商圈、大型醫院等機能於一身，增值未來無可限量。</div>
     </div>
@@ -38,11 +38,12 @@
   }
 
   .tree {
-    width: size-m(113.49);
+    width: size-m(120);
     top: size-m(123);
-    right: size-m(-50.37);
-    transform-origin: bottom;
-    animation: tree 3s alternate-reverse infinite ease-in-out;
+    right: size-m(-30);
+    transform-origin:10% 50%;
+    transform: rotate(6deg);
+    animation: tree 4s alternate-reverse infinite ease-in-out;
     z-index: 1;
     @media screen and (min-width:768px) {
       width: size(246);
@@ -72,7 +73,7 @@
   .pic1 {
     width: size-m(256);
     top: size-m(155);
-    left: size-m(61);
+    left: size-m(61);z-index: 2;
     @media screen and (min-width:768px) {
       width: size(602);
       top: size(639);

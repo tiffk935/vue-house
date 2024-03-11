@@ -1,7 +1,7 @@
   <template>
-  <div class="order relative bg-[#005d43] text-center">
+  <div class="order relative text-center">
     <div class="order1 relative">
-      <img class="tree absolute hidden md:block" src="@/section/s14/tree.png" />
+      <img class="tree absolute hidden md:block" src="@/section/s1/bottom.png" />
       <div class="order2">
         <!-- Title -->
         <div class="order-title text-center text-white">{{ info.order.title }}</div>
@@ -82,8 +82,8 @@
   // padding-top: size(115);
 
   .order1 {
-    background-color: #005d43;
-    background-image: url(@/section/form/bg.jpg);
+  //  background-color: #005d43;
+  //  background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
     padding-bottom: size(21);
@@ -99,11 +99,12 @@
     }
 
     .tree {
-      width: size(1920);
-      bottom: size(-2);
-      left: size(0);
+      width:108%;
+      bottom: size(0);
+      left: -4%;
       max-width: none;
       transform-origin: bottom;
+    transform:skewX(6deg);
       animation: tree 3s alternate-reverse infinite ease-in-out;
     }
 
@@ -205,7 +206,7 @@
 
     .order1 {
       // background: none;
-      background-image: url(@/section/form/bg-m.jpg);
+     // background-image: url(@/section/form/bg-m.jpg);
       padding-bottom: 0;
     }
 

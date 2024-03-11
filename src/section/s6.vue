@@ -1,12 +1,13 @@
 <template>
   <section class="s6 relative">
-    <img class="tree absolute" src="@/section/s6/tree.png" />
+    <div class="tree absolute">
+    <img src="@/section/s1/bottom.png" /></div>
     <div class="text absolute" data-aos="fade-down" data-aos-delay="0">
       <div class="t1 text-[#E2C46C]">便利 全集中</div>
       <div class="t2">土城人的主場 就是這裡</div>
       <div class="content">10分鐘內吃喝玩樂，延吉、裕民與家樂福三大商圈；15分鐘內享受21,000坪綠意；清水國小、中正國中和裕德雙語高中，人文教育自小養成。</div>
     </div>
-    <img class="tree2 absolute" src="@/section/s6/tree2.png" />
+ <!--  <img class="tree2 absolute" src="@/section/s6/tree2.png" />   --> 
 
     <div class="slider absolute">
       <swiper 
@@ -117,7 +118,7 @@
 .s6 {
   width: 100%;
   height: size-m(667);
-  background:#005d43  url("@/section/s8/bg.png");
+  // background:#005d43  url("@/section/s8/bg.png");
   background-size: auto;
   @media screen and (min-width:768px) {
     height: size(1080);
@@ -234,7 +235,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background: rgba(0, 58, 43, 0.7);
+          background:#58133588;
           transition: opacity .2s;
         }
 
@@ -298,16 +299,19 @@
 
   .tree {
     width: size-m(897);
-    bottom: size-m(-14);
+    top: 0;
     left: size-m(-339);
-    transform-origin: bottom;
+    transform-origin: top;
+    transform: skewX(6deg);
     animation: tree 3s alternate-reverse infinite ease-in-out;
     max-width: none;
-    opacity: .6;
+    //opacity: .6;
+    img{
+      transform: scaleY(-1);}
     @media screen and (min-width:768px) {
-      width: size(1920);
-      bottom: size(-60);
-      left: size(0);
+      width:108%;
+      top: 0;
+      left: -4%;
     }
   }
 
