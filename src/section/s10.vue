@@ -5,8 +5,8 @@
     </div>
     <div class="text-white">茂德建設</div>
     <div class="info absolute text-white">茂德建設</div>
-    <img class="hand-bg absolute md:hidden" src="@/section/s10/hand-bg.svg" />
-    <img class="hand absolute md:hidden" src="@/section/s10/hand.svg" />
+    <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
+    <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
     <div class="text" data-aos="fade-down" data-aos-delay="0">
       <div class="t1">匠心 職人獻藝</div>
       <div class="t2">專業歷練 構築豪宅品質</div>
@@ -203,8 +203,9 @@
     left: size-m(178);
     cursor: pointer;
     transition: opacity .5s;
-   // animation: swing 3s linear 0s infinite;
+    animation: swing 3s linear alternate infinite;
     pointer-events: none;
+      transform: translateX(-50%);
     @media screen and (min-width:768px) {
       display: none;
     }
@@ -215,6 +216,7 @@
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
+    background:  linear-gradient(to bottom, #0361A000 0%,#0361A044 60%,#0361A0cc 100%);
   }
   
   .text {

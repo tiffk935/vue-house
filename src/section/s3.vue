@@ -76,6 +76,7 @@
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
+    background:  linear-gradient(to bottom, #0361A000 0%,#0361A0 100%);
   }
   .rect {
     background: linear-gradient(180deg, rgba(39, 149, 245, 0) 12.66%, rgba(69, 164, 246, 0.365079) 49.75%, #1B92F7 85.64%);
