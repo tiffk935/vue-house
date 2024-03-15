@@ -3,7 +3,7 @@
     <!-- A : Block 首頁 -->
     <div class=" ">
      <div class="s1new pc-pv"> 
-      <img src="@/section/s1/A/bg.jpg" alt="" class="bg">
+      <img src="@/section/s1/A/bga1.jpg" alt="" class="bg">
       <!--img src="@/section/s1/A/synlogo.png" alt="" class="synlogo"-->
       <div class="txt">外觀示意圖</div>
       <div class="s1logo">
@@ -21,7 +21,7 @@
     </div>
     <div class="mobile-pv">
       <div class="s1new2">
-        <img src="@/section/s1/A/bg_m.jpg" alt="" class="bg">
+        <img src="@/section/s1/A/bga1m.jpg" alt="" class="bg">
         <!--img src="@/section/s1/A/synlogo.png" alt="" class="synlogo"-->
         <div class="txt">外觀示意圖</div>
         <div class="bg-img">

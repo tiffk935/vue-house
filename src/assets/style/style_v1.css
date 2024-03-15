@@ -1603,6 +1603,7 @@ width: 100%;
   align-items: flex-start;
   justify-content: center;
   position: relative;z-index: 3;
+  filter:drop-shadow(5px 5px 5px rgba(0,0,0,.75))
 }
 
 .s1new .bg-img .style1{
