@@ -1,19 +1,17 @@
 <template>
   <section class="s1">
-    <div class="new_block" style="overflow: hidden;">
+    <div class="new_block s01" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="./new/1013/A_01.jpg">
-          <img src="./new/1013/A_02.png" class="word">
-          <img src="./new/1013/A_03.png" class="word">
+          <img src="./new/1013/a2.png">
+          <img src="./new/1013/a3.png" class="word">
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding-left: 0%;padding-right: 0%;">
         <div class="row" style="margin-right: 0%;margin-left: 0%;">
           <div class="new_block_m">
-            <img src="./new/1013/A_01.jpg">
-            <img src="./new/1013/A_02.png" class="word">
-            <img src="./new/1013/A_03.png" class="word">
+            <img src="./new/1013/a2m.png">
+            <img src="./new/1013/a3m.png" class="word">
           </div>
         </div>
       </div>
@@ -643,6 +641,12 @@
   @media screen and (max-width: 768px) {
     bottom: 2vw;
   }
+}
+.s01{
+  overflow: hidden;
+  background: linear-gradient(145deg,
+  rgba(220,160,200,1) 18%,
+  rgba(125,95,180,1) 93%);
 }
 </style>
 
