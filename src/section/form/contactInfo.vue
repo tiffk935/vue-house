@@ -15,7 +15,7 @@
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
+    <!--div class="address-wrap flex justify-between w-full contact-item-box no-gap overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>{{ info.address }}</div>
       </div>
@@ -23,7 +23,7 @@
         <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div>
+    </div-->
   </div>
 
   <!-- Mobile contact info -->
@@ -42,11 +42,11 @@
       <img src="@/section/form/pen.svg" alt="艾美國際城" srcset="" />
       <div>預約賞屋</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="@/section/form/gmap.svg" alt="艾美國際城" srcset="" />
       <div>地圖導航</div>
-    </div>
+    </div-->
   </div>
 
   <!-- Modal -->

@@ -1,8 +1,8 @@
-<template>
+<!--template>
     <div class="gmap relative z-10">
         <iframe :src="info.googleSrc" frameborder="0"></iframe>
     </div>
-</template>
+</template-->
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
