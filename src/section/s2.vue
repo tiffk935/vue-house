@@ -1,5 +1,5 @@
 <template>
-  <section class="s2 relative">
+  <section class="s2 user-n relative">
     <div class="map user-n relative" ref="map">
       <img class="map1" src="@/section/s2/map.jpg" @load="onImgLoad($event)" />
     </div>
@@ -42,8 +42,8 @@
     overflow-x: scroll;
     overflow-y: hidden;
     width: 100vw;
-      padding:size-m(0) 0 0 0;
-      background:#4FC9FC;
+    padding:size-m(0) 0 0 0;
+    background:#4FC9FC;
     @media screen and (min-width:768px) {
       overflow: hidden;
       padding:0;

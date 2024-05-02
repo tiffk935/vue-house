@@ -1,158 +1,58 @@
 <template>
-  <section class="s8 w-full relative text-[#040000]">
-    <img class="line" src="@/section/s8/line.svg" />
-    <img class="balls user-n absolute hidden md:block" src="@/section/s8/balls.webp" />
-    <div class="md:flex title" v-if="room === 2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">有光有景 寬心大格局</div>
-      <div class="t2">光空間，寬格局，逍遙大尺度！明亮舒適的起居空間，讓生活與心情輕快飛揚。</div>
+  <section class="s8 user-n w-full relative">
+    <div class="gold1 absolute"></div>
+    <div class="bg absolute"></div>
+    <div class="title relative font-['Noto_Serif_TC']" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">Perfectionism</div>
+      <div class="t2">唯有力求完美 <br class="md:hidden">方能精鑄傳世富御</div>
+      <img class="style" src="@/section/s8/style.svg" />
     </div>
-    <div class="md:flex title" v-if="room === 3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">現代簡約 極致空間展演</div>
-      <div class="t2">高坪效空間，溫馨之外更具機能，小小創意就能打造理想精品飯店宅。</div>
+    <div class="item relative">
+      <div class="img img1 relative" @click="openModal(1)">
+        <img class="block w-full h-full" src="@/section/s8/img1.jpg" />
+        <div class="img-txt absolute md:hidden">建築結構示意圖</div>
+      </div>
+      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1 text-[#776F27]">
+          <span>以耐震係數</span>
+          <span class="number">0.280G</span>
+        </div>
+        <div class="t2 text-[#4C6145] font-['Noto_Serif_TC']">守護世代安穩幸福</div>
+        <div class="t3 text-[#1F1F1F]">將最深的期許，精鑄於建築量體。「恆合中山」如一以貫的堅持，採尖端耐震工學將耐震係數提高至 0.280G，是您與家人最安心的堡壘。</div>
+      </div>
     </div>
+    <div class="item relative">
+      <div class="img img2 relative" @click="openModal(2)">
+        <img class="block w-full h-full" src="@/section/s8/img2.jpg" />
+        <div class="img-txt absolute">情境示意圖</div>
+      </div>
+      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1 text-[#776F27]">
+          <span class="number">32.4%</span>
+          <span>稀有公設比</span>
+        </div>
+        <div class="t2 text-[#4C6145] font-['Noto_Serif_TC']">難得寬裕坪數空間</div>
+        <div class="t3 text-[#1F1F1F]">恆合中山傾心為生活在忙碌城市中的您，以稀有難得的約32.4%低公設比，構築出優質寬敞的生活空間，讓從容自在充滿每一個空間角落。</div>
+      </div>
+    </div>
+    <div class="gold2 absolute"></div>
 
-    <div class="md:flex md:justify-between md:items-end">
-      <div class="slider relative">
-        <Transition>
-          <div v-if="room === 2">
-            <swiper
-              :loop="true"
-              :navigation="false"
-              :pagination="{
-                clickable: true,
-              }"
-              :autoplay="{
-                delay: 3000,
-                disableOnInteraction: false,
-              }"
-              :modules="modules"
-              @init="init1"
-            >
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/2/1.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/2/2.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/2/3.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/2/4.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/2/5.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-            </swiper>
-            <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
-            </div>
-            <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
-            </div>
+    <Transition>
+      <div v-if="showModal">
+        <div class="tk-modal">
+          <div class="tk-close" @click="showModal = false"></div>
+          <div class="img-wrapper">
+            <img v-if="img === 1" src="@/section/s8/img1.jpg" @load="onImgLoad($event)" />
+            <img v-if="img === 2" src="@/section/s8/img2.jpg" @load="onImgLoad($event)" />
           </div>
-          <div v-else>
-            <swiper
-              :loop="true"
-              :navigation="false"
-              :pagination="{
-                clickable: true,
-              }"
-              :autoplay="{
-                delay: 3000,
-                disableOnInteraction: false,
-              }"
-              :modules="modules"
-              @init="init2"
-            >
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/1.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/2.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/3.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/4.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/5.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-              <swiper-slide>
-                <div class="relative">
-                  <img src="@/section/s8/3/6.webp" />
-                  <div class="txt">實品屋實景</div>
-                </div>
-              </swiper-slide>
-            </swiper>
-            <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
-            </div>
-            <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
-            </div>
-          </div>
-        </Transition>
-      </div>
-      <div class="content md:flex md:flex-col-reverse">
-        <div class="room-btns flex justify-between items-start">
-          <div :class="{'room-btn': true, 'active': room === 2}" @click="room = 2"><span>2</span>房</div>
-          <div :class="{'room-btn': true, 'active': room === 3}" @click="room = 3"><span>3</span>房</div>
-        </div>
-        <div data-aos="fade-up" v-if="room === 2" data-aos-duration="1000" data-aos-delay="0">
-          <div class="t1">美式輕時尚，經典再造</div>
-          <div class="t2">
-            規劃完整落塵區，內外區分保持清潔。<br>
-            美式STYLE早餐檯，客廳機能多元化。<br>
-            無多餘過道，坪效運用優。<br>
-            大陽台規劃，面西視野遼闊。<br>
-            鄰房皆為透天，5F以上享無限棟距。
-          </div>
-        </div>
-        <div data-aos="fade-up" v-if="room === 3" data-aos-duration="1000" data-aos-delay="0">
-          <div class="t1">時尚新境界，魅力3房</div>
-          <div class="t2">
-            高坪效，動線流暢無虛坪<br>
-            大玄關，鞋櫃掛衣櫃從容收納<br>
-            大面窗，明亮採光心情開朗<br>
-            主臥衛浴，舒適時光輕鬆享<br>
-            獨立廚房，阻絕油煙免操心
-          </div>
+          <svg viewBox="0 0 181 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.292893 7.04289C-0.0976311 7.43342 -0.0976311 8.06658 0.292893 8.45711L6.65685 14.8211C7.04738 15.2116 7.68054 15.2116 8.07107 14.8211C8.46159 14.4305 8.46159 13.7974 8.07107 13.4069L2.41421 7.75L8.07107 2.09315C8.46159 1.70262 8.46159 1.06946 8.07107 0.678932C7.68054 0.288408 7.04738 0.288408 6.65685 0.678932L0.292893 7.04289ZM180.707 8.45711C181.098 8.06658 181.098 7.43342 180.707 7.04289L174.343 0.678932C173.953 0.288408 173.319 0.288408 172.929 0.678932C172.538 1.06946 172.538 1.70262 172.929 2.09315L178.586 7.75L172.929 13.4069C172.538 13.7974 172.538 14.4305 172.929 14.8211C173.319 15.2116 173.953 15.2116 174.343 14.8211L180.707 8.45711ZM1 8.75H180V6.75H1V8.75Z" fill="black"/>
+            <circle cx="90.5" cy="8.5" r="8.25" fill="black"/>
+            <circle cx="90.5" cy="8.5" r="5.25" fill="#39C8F0"/>
+          </svg>
         </div>
       </div>
-    </div>
+    </Transition>
   </section>
 </template>
 
@@ -160,17 +60,14 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  padding: size-m(24) 0;
-  background-image: url(@/section/s7/bg-m.webp);
-  background-size: cover;
+  padding: size-m(50.29 + 20) 0 size-m(70) 0;
   @media (min-width: 768px) {
-    padding: size(90) size(250);
-    background: none;
+    padding: size(165 + 32) 0 size(186) 0;
   }
-  
+
   .v-enter-active,
   .v-leave-active {
-    transition: opacity .4s;
+    transition: opacity .2s;
   }
 
   .v-enter-from,
@@ -183,214 +80,343 @@
     opacity: 1;
   }
 
-  .line {
-    display: none;
+  .gold1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(20);
+    background-image: url(@/section/s8/gold-m.jpg);
+    background-size: cover;
+    background-position: center center;
     @media (min-width: 768px) {
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: size(1390);
+      height: size(32);
+      background-image: url(@/section/s8/gold.jpg);
     }
   }
 
-  .balls {
-    pointer-events: none;
+  .gold2 {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(20);
+    background-image: url(@/section/s8/gold-m.jpg);
+    background-size: cover;
+    background-position: center center;
     @media (min-width: 768px) {
-      top: size(-97);
-      left: size(1075);
-      width: size(646);
+      height: size(32);
+      background-image: url(@/section/s8/gold.jpg);
     }
   }
 
-  .t1 {
-    font-size: size-m(25);
-    line-height: size-m(34);
-    color: #E5005C;
-    font-weight: 700;
-    padding: 0 size-m(30);
-    margin-bottom: size-m(20);
+  .bg {
+    top: size-m(20);
+    left: 0;
+    width: 100%;
+    height: calc(100% - size-m(20));
+    background-image: url(@/section/s8/bg-m.jpg);
+    background-size: cover;
+    background-position: center center;
     @media (min-width: 768px) {
-      font-size: size(31);
-      line-height: size(42);
-      padding: 0;
-      margin-bottom: size(19);
-    }
-  }
-
-  .t2 {
-    font-size: size-m(14);
-    line-height: 178%;
-    color: #040000;
-    padding: 0 size-m(30);
-    margin-bottom: size-m(13);
-    @media (min-width: 768px) {
-      font-size: size(18);
-      padding: 0;
-      margin-bottom: size(93);
+      top: size(32);
+      height: calc(100% - size(32));
+      background-image: url(@/section/s8/bg.jpg);
     }
   }
 
   .title {
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: size-m(40);
     @media (min-width: 768px) {
-      margin: 0 0 size(32) 0;
-      align-items: center;
+      margin-bottom: size(138);
+    }
 
-      .t1 {
-        font-size: size(58);
-        line-height: size(79);
-        margin: 0 size(48) 0 0;
+    .t1 {
+      color: rgba(76, 97, 69, 0.50);
+      font-size: size-m(14);
+      line-height: normal;
+      margin-bottom: size-m(7.34);
+      @media (min-width: 768px) {
+        font-size: size(45);
+        margin-bottom: size(20);
       }
+    }
 
-      .t2 {
-        margin: 0;
-        width: size(405);
+    .t2 {
+      color: #4C6145;
+      font-size: size-m(24);
+      line-height: 150%;
+      letter-spacing: size-m(1.44);
+      margin-bottom: size-m(14);
+      @media (min-width: 768px) {
+        font-size: size(45);
+        letter-spacing: size(2.7);
+        margin-bottom: size(28);
+      }
+    }
+
+    .style {
+      width: size-m(134);
+      margin: 0 auto;
+      @media (min-width: 768px) {
+        width: size(299);
       }
     }
   }
 
-  .slider {
-    overflow: hidden;
-    position: relative;
-    height: size-m(210);
+  .item {
+    margin-bottom: size-m(70);
     @media (min-width: 768px) {
-      width: size(991);
-      height: size(660 + 52);
-      padding-bottom: size(52);
+      margin-bottom: size(128);
+      display: flex;
+      align-items: flex-end;
+      padding-left: size(201);
     }
 
-    .swiper {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      overflow: visible;
+    &:last-child {
+      margin-bottom: 0;
     }
 
-    .swiper-slide {
-      img {
-        display: block;
-        width: 100%;
-        height: size-m(210);
-        object-fit: cover;
-        @media (min-width: 768px) {
-          height: size(660);
+    .img {
+      width: size-m(340);
+      height: size-m(290);
+      margin-bottom: size-m(9.41);
+      cursor: pointer;
+      @media (min-width: 768px) {
+        width: size(859.85);
+        height: size(474.07);
+        margin-bottom: 0;
+        margin-right: size(115);
+
+        &:hover:after {
+          opacity: 1;
         }
       }
 
-      .txt {
-        position: absolute;
-        bottom: size-m(6);
+      &:after {
+        @media (min-width: 768px) {
+          content: '';
+          position: absolute;
+          top: size(191);
+          left: size(121);
+          width: size(52);
+          height: size(52);
+          background-image: url(@/section/s6/zoom.svg);
+          background-size: contain;
+          opacity: 0;
+          transition: opacity .2s;
+        }
+      }
+
+      img {
+        object-fit: cover;
+        border-top-right-radius: size-m(50);
+        @media (min-width: 768px) {
+          border-top-right-radius: size(80);
+        }
+      }
+
+      &.img1 img {
+        object-position: 58% 50%;
+        @media (min-width: 768px) {
+          object-position: 50% 50%;
+        }
+      }
+
+      .img-txt {
+        bottom: size-m(10);
         left: size-m(10);
         color: #fff;
         font-size: size-m(12);
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: size-m(1.2);
         @media (min-width: 768px) {
-          bottom: size(15);
-          left: size(25);
-          font-size: size(16);
+          bottom: size(25);
+          left: size(40);
+          font-size: size(15);
+          letter-spacing: size(7);
+          font-weight: 400;
         }
       }
     }
 
-    .slide-prev, .slide-next {
-      width: size-m(31);
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      left: size-m(14);
-      transform: translate(0, -50%);
-      z-index: 1;
+    .content {
       @media (min-width: 768px) {
-        width: size(31);
-        top: auto;
-        bottom: 0;
-        left: 0;
-        transform: translate(0, 0);
-      }
-      
-      svg {
-        display: block;
-        width: 100%;
-
-        @media (min-width: 768px) {
-          circle {
-            fill: #E5005C;
-          }
-
-          path {
-            stroke: #fff;
-          }
-        }
+        width: size(500);
+        padding-bottom: size(80);
       }
     }
 
-    .slide-next {
-      left: auto;
-      right: size-m(14);
-      @media (min-width: 768px) {
-        right: auto;
-        left: 8.3vw;
-      }
-    }
-
-    .swiper-pagination {
-      display: none;
-      @media (min-width: 768px) {
-        display: block;
-        width: 6vw;
-        bottom: -2.5vw;
-        margin-left: 2vw;
-      }
-
-      .swiper-pagination-bullet {
-        width: size(8);
-        height: size(8);
-        margin: 0 size(5) !important;
-        background: #E5005C;
-      }
-    }
-  }
-
-  .content {
-    @media (min-width: 768px) {
-      width: size(356);
-      padding-bottom: size(52);
-    }
-  }
-  
-  .room-btns {
-    width: size-m(281);
-    margin: size-m(26) auto;
-    @media (min-width: 768px) {
-      width: size(356);
-      margin: 0;
-    }
-
-    .room-btn {
-      width: size-m(124);
-      border: size-m(1) solid #E5005C;
-      color: #E5005C;
+    .t1 {
+      position: relative;
+      padding-left: size-m(145 + 8);
+      display: flex;
+      align-items: center;
       font-size: size-m(16);
-      line-height: size-m(38);
-      text-align: center;
-      cursor: pointer;
-      transition: all .2s;
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: size-m(15);
       @media (min-width: 768px) {
-        width: size(170);
-        border: size(1) solid #E5005C;
+        padding-left: size(155 + 28);
         font-size: size(28);
-        line-height: size(50);
+        margin-bottom: size(10.5);
       }
 
-      &:hover, &.active {
-        background: #E5005C;
-        color: #fff;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translate(0, -50%);
+        width: size-m(145);
+        height: size-m(1);
+        background: #776F27;
+        @media (min-width: 768px) {
+          width: size(155);
+          height: size(1);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 55%;
+        left: size-m(145 - 2);
+        transform: translate(0, -50%);
+        width: size-m(4);
+        height: size-m(4);
+        border-radius: 50%;
+        background: #776F27;
+        @media (min-width: 768px) {
+          left: size(155 - 2);
+          width: size(4);
+          height: size(4);
+        }
       }
 
       span {
-        font-size: size-m(28);
+        &.number {
+          font-size: size-m(30);
+          font-weight: 700;
+          line-height: normal;
+          @media (min-width: 768px) {
+            font-size: size(42);
+          }
+        }
+
+        &:nth-child(1) {
+          margin-right: size-m(6.22);
+          @media (min-width: 768px) {
+            margin-right: size(15);
+          }
+        }
+      }
+    }
+
+    .t2 {
+      font-size: size-m(22);
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: size-m(13.58);
+      padding: 0 size-m(35);
+      @media (min-width: 768px) {
+        font-size: size(60);
+        margin-bottom: size(30.5);
+        padding: 0;
+      }
+    }
+
+    .t3 {
+      text-align: justify;
+      font-size: size-m(14);
+      line-height: 170%;
+      padding: 0 size-m(35);
+      @media (min-width: 768px) {
+        font-size: size(18);
+        line-height: normal;
+        padding: 0;
+      }
+    }
+  }
+
+  .tk-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 999999;
+    background: #F7F7F7;
+
+    .tk-close {
+      position: absolute;
+      top: size-m(10);
+      right: size-m(10);
+      width: size-m(40);
+      height: size-m(40);
+      cursor: pointer;
+      @media (min-width: 768px) {
+        top: size(0);
+        right: size(0);
+        width: size(90);
+        height: size(90);
+      }
+      
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+        width: size-m(25);
+        height: size-m(1);
+        background: #000;
         @media (min-width: 768px) {
-          font-size: size(32);
+          width: size(50);
+          height: size(1);
+        }
+      }
+
+      &:after {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+    }
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: size-m(180);
+      pointer-events: none;
+      transition: opacity .2s;
+      @media (min-width: 768px) {
+        display: none
+      }
+    }
+
+    .img-wrapper {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translate(0, -50%);
+      width: 100%;
+      height: calc(100% - size-m(120));
+      overflow-y: hidden;
+      overflow-x: auto;
+      @media (min-width: 768px) {
+        height: calc(100% - size(220));
+      }
+
+      img {
+        width: auto;
+        max-width: none;
+        height: 100%;
+        display: block;
+        @media (min-width: 768px) {
+          width: 100%;
+          object-fit: contain;
         }
       }
     }
@@ -399,46 +425,29 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
-const swiperRef1 = ref(null);
-const swiperRef2 = ref(null);
-const room = ref(2);
+import { ref } from "vue";
+const showModal = ref(false);
+const img = ref();
 
-const init1 = swiper => {
-  swiperRef1.value = swiper;
+function openModal(num) {
+  showModal.value = true;
+  img.value = num;
 }
 
-const slidePrev1 = () => {
-  if(swiperRef1.value){
-    swiperRef1.value.slidePrev();
-  }
-}
-
-const slideNext1 = () => {
-  if(swiperRef1.value){
-    swiperRef1.value.slideNext();
-  }
-}
-
-const init2 = swiper => {
-  swiperRef2.value = swiper;
-}
-
-const slidePrev2 = () => {
-  if(swiperRef2.value){
-    swiperRef2.value.slidePrev();
-  }
-}
-
-const slideNext2 = () => {
-  if(swiperRef2.value){
-    swiperRef2.value.slideNext();
+function onImgLoad(e) {
+  const img = e.target;
+  if (document.querySelector('.s8 .img-wrapper') && img) {
+    let status = 0;
+    let hideHand = false;
+    document.querySelector('.s8 .tk-modal svg').style.opacity = 1;
+    document.querySelector('.s8 .img-wrapper').scrollLeft = img.clientWidth * 0.4 - window.innerWidth/2;
+    document.querySelector('.s8 .img-wrapper').addEventListener("scroll", () => {
+      status++;
+      if(status > 1 && !hideHand){
+        document.querySelector('.s8 .img-wrapper').parentNode.querySelector('svg').style.opacity = 0;
+        hideHand = true;
+      }
+    });
   }
 }
 </script>

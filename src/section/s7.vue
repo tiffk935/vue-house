@@ -1,5 +1,5 @@
 <template>
-  <section class="s7 relative bg-[#509CE3]">
+  <section class="s7 user-n relative bg-[#509CE3]">
     <div class="bg1 absolute"></div>
     <div class="bg2 absolute md:hidden"></div>
     <img class="content absolute md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" src="@/section/s7/content-m.svg" />
