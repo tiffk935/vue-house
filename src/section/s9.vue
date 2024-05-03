@@ -77,7 +77,7 @@
   padding: size-m(62.22) 0 size-m(102) 0;
   background-image: url(@/section/s9/bg-m.jpg);
   background-size: cover;
-  background-size: center center;
+  background-position: center center;
   @media (min-width: 768px) {
     padding: size(134) 0 size(200) 0;
     background-image: url(@/section/s9/bg.jpg);
