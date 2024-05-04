@@ -1,16 +1,19 @@
 <template>
   <div id="order" class="order bg-[#E5005C] relative text-center">
     <div class="order-section">
+      <div class="bg">
+        <img src="@/section/s1/bg.jpg" />
+        <img src="@/section/s1/bg.jpg" />
+        <img src="@/section/s1/bg.jpg" />
+      </div>
+
+      <img class="logo hidden md:block" src="@/section/form/logo.svg" />
+      <img class="logo block md:hidden" src="@/section/form/logo-m.svg" />
+      
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
-      <!-- <div class="cus-divider"></div> -->
-
-      <!-- Title Image
-      <img class="order-title-img" src="@/section/form/ordertitle.png" alt="" srcset="">
- -->
-      <!-- Custom Image -->
-
+      
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
@@ -20,18 +23,6 @@
             <label class="row"><span>手機<span>(必填)</span></span>
               <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
             @input="(event) => (formData.phone = event.target.value)" /></label>
-
-          <label class="row" v-if="info.room_type"><span>需求房型</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-            <option value="" selected disabled>請選擇房型</option>
-            <option v-for="room in info.room_type" :value="room" v-text="room"></option>
-          </select></label>
-          <label class="row" v-if="info.budget"><span>購屋預算</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
-            <option value="" selected disabled>請選擇預算</option>
-            <option v-for="budget in info.budget" :value="budget" v-text="budget"></option>
-          </select>
-        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -70,13 +61,12 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        {{ sending? '發送中..': '立即預約' }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
     </div>
-
 
     <!-- Map -->
     <Map v-if="info.address" />
@@ -89,52 +79,52 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-
 .order-section {
   position: relative;
- // padding-top: size(406);
-   overflow: hidden;
-    min-height: size(500);
+  overflow: hidden;
+  padding-top: size(202);
+  z-index: 1;
 
-  .bg-image {
+  .bg {
     position: absolute;
-    width: 100%;
+    top: 0;
     left: 0;
-    bottom: size(50);
-    vertical-align: middle;
-  }
+    width: 300%;
+    height: 100%;
+    transform: translateX(-66.66%);
+    animation: an1 10s linear infinite reverse;
+    display: flex;
+    z-index: -1;
+    @media (min-width: 768px) {
+      animation: an1 30s linear infinite reverse;
+    }
 
+    img {
+      width: 33.3333%;
+      height: 100%;
+      object-fit: cover;
+
+      &:nth-child(2) {
+        transform: scaleX(-1);
+      }
+    }
+  }
 }
 
 .order {
   width: 100%;
-  padding-top: 0;
 
-  .bird {
-    @apply absolute;
-    width: size(155);
-    top: size(420);
-    right: size(450);
-    animation: fly 6s ease-in-out infinite alternate-reverse;
-
-    @keyframes fly {
-      from {
-        transform: skewX(-10deg) skewY(-3deg) translate(-4%, 8%) rotate(10deg);
-      }
-
-      to {
-        transform: skewX(10deg) skewY(3deg) translate(4%, -8%) rotate(0deg);
-
-      }
-    }
+  .logo {
+    position: relative;
+    width: size(902);
+    margin: 0 auto size(190);
   }
 
   .order-title {
-    font-size: size(40);
-    font-weight: 700;
+    font-size: size(43);
+    font-weight: 400;
     color: #fff;
-    padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    margin-bottom: size(4);
   }
 
   .order-title-img {
@@ -142,18 +132,9 @@
     margin-bottom: size(155);
   }
   .order-subTitle{
-    font-size: size(17);
+    font-size: size(18);
     color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-  }
-  .cus-divider {
-    margin: 0 auto;
-    width: size(300);
-    height: size(2);
-    margin-bottom: size(50);
-    background-color: #055F76;
+    line-height: 200%;
   }
 
   .form {
@@ -209,9 +190,8 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #E5005C;
-    background-color:#fff;;
-    //border: 1px solid #FFF9;
+    color: #ffffff;
+    background-color: #AE2C2D;
     border:0;
     border-radius: 0em;
 
@@ -233,18 +213,8 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    min-height: size-m(800);
     position: relative;
-    // overflow: hidden;
-   // padding-top: size-m(200);
-
-    .bg-image {
-      position: absolute;
-      width: 100%;
-      left: -#{size-m(30)};
-      bottom: size-m(590);
-    }
-
+    padding-top: size-m(136);
   }
 
   .order {
@@ -259,19 +229,9 @@
       margin-bottom: size-m(22);
     } */
 
-    .bird {
-      @apply absolute;
-      width: size-m(48.8);
-      top: size-m(205);
-      right: size-m(40);
-    }
-
-    .cus-divider {
-      margin: 0 auto;
-      width: size-m(117);
-      height: size-m(2);
-      margin-bottom: size-m(25);
-      background-color: #055F76;
+    .logo {
+      width: size-m(284);
+      margin: 0 auto size-m(100);
     }
 
     .order-title {
@@ -280,7 +240,7 @@
     }
     .order-subTitle{
       font-size: size-m(13);
-      padding-top:0;
+      padding: 0 size-m(15);
     }
 
 
@@ -361,7 +321,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "email", "room_type","budget", "city", "area"]
+const bypass = ["room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([

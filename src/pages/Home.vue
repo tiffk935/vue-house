@@ -6,13 +6,13 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="佳鋐大境" srcset="">
+    <img class="w-32" src="@/assets/loading_w.gif" alt="恆合中山" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
-    <h1 style="display:none;">佳鋐大境</h1>
-    <S1 />
+    <h1 style="display:none;">恆合中山</h1>
+    <!-- <S1 />
     <S2 />
     <S3 />
     <S4 />
@@ -22,8 +22,8 @@
     <S8 />
     <S9 />
     <S10 />
-    <S11 />
-    <!-- <Order /> -->
+    <S11 /> -->
+    <Order />
   </div>
 </template>
 
@@ -46,7 +46,7 @@ import S8 from "@/section/s8.vue"
 import S9 from "@/section/s9.vue"
 import S10 from "@/section/s10.vue"
 import S11 from "@/section/s11.vue"
-// import Order from "@/section/order.vue"
+import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 

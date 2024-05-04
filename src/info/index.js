@@ -1,4 +1,4 @@
-const caseName = "佳鋐大境"
+const caseName = "恆合中山"
 
 export default {
     meta: {
@@ -8,19 +8,22 @@ export default {
     },
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市梧棲區中華路二段",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.813058514882!2d120.5550312!3d24.2483163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151ebe57d387%3A0x8553e024331e32ed!2z5L2z6YuQ5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1705376910890!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/V5sYHiChFYQAUNZH7",
-    phone: "04-2663-0999",
-    fbLink: "https://www.facebook.com/61554748627993/",
-    fbMessage: "https://m.me/61554748627993/",
+    address: "中山區中山北路二段118-1號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.2029041335295!2d121.5227247!3d25.0611111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a943a0989e4d%3A0x3200f9c9a3e6ca4a!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrUxMTgtMeiZnw!5e0!3m2!1szh-TW!2stw!4v1714794661679!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/HVEB6ykPA8XyuZr48",
+    phone: "02-2581-5588",
+    fbLink: "#",
+    fbMessage: "#",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "佳鋐建設股份有限公司"],
-        ["營造公司", "協侑營造有限公司"],
-        ["產品規劃", "地上 15層，地下2層，245戶"],
-        ["景觀設計", "邑埕景觀設計"],
-        ["建築外觀", "曾聰憲建築師事務所"],
+        ["投資興建", "恆合建設股份有限公司"],
+        ["建築設計", "李岳軍建築師事務所"],
+        ["外觀設計", "張紘聞建築師"],
+        ["建築營造", "恆合營造股份有限公司"],
+        ["建照號碼", "113建字0041號"],
+        ["基地面積", "157坪"],
+        ["格局規劃", "1+1房～3房"],
+        ["公設比", "約32.4%"],
     ],
     gtmCode: ["GTM-KTP354Z8"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -29,8 +32,8 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "我想了解",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        title: "預約賞屋",
+        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房"],

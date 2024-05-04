@@ -123,8 +123,8 @@
     } 
 
     .contact-item {
-      background-color: #040000;
-      border: 1px solid #040000;
+      background-color: #123872;
+      border: 1px solid #123872;
       color: #ffffff;
       width: 100%;
       padding: 0 size(40);
@@ -199,7 +199,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #8BC782;
+      background-color: #AE2C2D;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
