@@ -1,6 +1,6 @@
 <template>
   <section class="s11 user-n w-full relative">
-    <img class="logo" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+    <img class="logo" src="@/section/s11/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="content">
       <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">Aesthetics</div>

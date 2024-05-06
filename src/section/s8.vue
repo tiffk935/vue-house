@@ -22,7 +22,7 @@
       </div>
     </div>
     <div class="item relative">
-      <div class="img img2 relative" @click="openModal(2)">
+      <div class="img img2 relative">
         <img class="block w-full h-full" src="@/section/s8/img2.jpg" />
         <div class="img-txt absolute">情境示意圖</div>
       </div>

@@ -3,9 +3,9 @@
         v-bind:class="{ 'r16-9': higherScreen }">
         <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
             <div class="menu-inner">
-                <div class="menu-item font-bold cursor-pointer text-white" v-for="item, i in info.navList"
+                <div class="menu-item cursor-pointer text-white" v-for="item, i in info.navList"
                     @click="scrollTo(item.target)">
-                    <span>{{ item.name }}</span>
+                    <span :class="{ 'isBtn': item.isBtn }">{{ item.name }}</span>
                 </div>
             </div>
         </div>
@@ -21,14 +21,10 @@
 @import "@/assets/style/function.scss";
 
 .nav {
-    // padding: 0 size(50);
-    // height: size(80);
     .menu-btn {
-        // position: relative;
         z-index: 1;
         width: size(90);
         height: size(90);
-        // background: rgba(139, 199, 130, 0.8);
         position: fixed;
         top: size(0);
         right: size(0);
@@ -118,20 +114,16 @@
         position: fixed;
         top: size(0);
         right: size(0);
-        background-color: rgba(139, 199, 130, 0.8);
-        backdrop-filter: blur(2px);
-        width: size(280);
+        width: size(375);
         height: 100%;
         z-index: 99;
         transform: translateX(100%);
         transition: all .5s;
         padding: size(100) 0;
         gap: size(20);
-
-        .menu-inner {
-            width: size(128);
-            margin: 0 auto;
-        }
+        background-image: url(@/assets/nav-bg.png);
+        background-size: cover;
+        background-position: center center;
 
         .menu-item {
             text-align: center;
@@ -150,6 +142,15 @@
                 transition: width .4s linear, transform .1s linear;
                 transform-origin: left center;
                 text-shadow: 0 0 .6em #2d612699 ,0 0 .15em #2d612699;
+
+                &.isBtn {
+                    font-size: size(16);
+                    line-height: 100%;
+                    letter-spacing: size(16);
+                    text-indent: size(16);
+                    background: #AE2C2D;
+                    padding: size(17.5) size(36.5 - 16);
+                }
             }
 
             // &:hover {
@@ -273,11 +274,6 @@
             padding: 0;
             gap: size-m(45);
 
-            .menu-inner {
-                width: size-m(128);
-                margin: 0 auto;
-            }
-
             .menu-item {
                 padding: size-m(15) 0;
                 
@@ -288,6 +284,13 @@
                     white-space: nowrap;
                     transition: width .4s linear, transform .1s linear;
                     transform-origin: left center;
+
+                    &.isBtn {
+                        font-size: size-m(16);
+                        letter-spacing: size-m(16);
+                        text-indent: size-m(16);
+                        padding: size-m(17.5) size-m(36.5 - 16);
+                    }
                 }
 
                 // &:hover {

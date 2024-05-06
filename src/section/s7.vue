@@ -20,6 +20,7 @@
   background-repeat: no-repeat;
   @media screen and (min-width:768px) {
     height: size(1013);
+    background-size: cover;
   }
 
   .bg1 {

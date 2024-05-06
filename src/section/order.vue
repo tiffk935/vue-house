@@ -6,9 +6,12 @@
         <img src="@/section/s1/bg.jpg" />
         <img src="@/section/s1/bg.jpg" />
       </div>
-
-      <img class="logo hidden md:block" src="@/section/form/logo.svg" />
-      <img class="logo block md:hidden" src="@/section/form/logo-m.svg" />
+      
+      <img class="logo md:hidden" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s1/logo-m.svg" />
+      <img class="logo hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s1/logo.svg" />
+      <img class="txt md:hidden" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" src="@/section/s1/txt-m.svg" />
+      <img class="txt hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" src="@/section/s1/txt.svg" />
+      <img class="logo2" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500" src="@/section/s1/logo2.svg" />
       
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -115,9 +118,17 @@
   width: 100%;
 
   .logo {
-    position: relative;
-    width: size(902);
-    margin: 0 auto size(190);
+    width: size(562.69);
+    margin: 0 auto size(78.12) auto;
+  }
+
+  .txt {
+    margin: 0 auto size(70.99) auto;
+  }
+
+  .logo2 {
+    width: size(465.2);
+    margin: 0 auto size(184) auto;;
   }
 
   .order-title {
@@ -219,19 +230,20 @@
 
   .order {
     width: 100%;
-    //padding-bottom: size-m(63);
-    // border-radius: size-m(68) size-m(68) 0 0;
-   /* padding-top: size-m(0);
-    margin-top: size-m(0);
-
-    .order-title-img {
-      width: size-m(315);
-      margin-bottom: size-m(22);
-    } */
 
     .logo {
+      width: size-m(280);
+      margin-bottom: size-m(40);
+    }
+
+    .txt {
       width: size-m(284);
-      margin: 0 auto size-m(100);
+      margin-bottom: size-m(77.45);
+    }
+
+    .logo2 {
+      width: size-m(230.54);
+      margin-bottom: size-m(100);
     }
 
     .order-title {

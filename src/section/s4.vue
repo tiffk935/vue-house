@@ -23,9 +23,11 @@
         </div>
         <div class="info relative">
           <div class="t1">Financial hub</div>
-          <div class="t2">千億資金規模  <br class="md:hidden">國際鍍金優勢</div>
-          <div class="t3">中山北路大道不僅坐擁西區大國門台北雙星，更匯聚上海商銀╳陽信銀行雙金融總部等各大金融銀行機構、國賓皇宮酒店及嘉新大樓改建案等重磅投資。</div>
-          <img class="leaf1" src="@/section/s4/leaf1.svg" />
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="t2">千億資金規模  <br class="md:hidden">國際鍍金優勢</div>
+            <div class="t3">中山北路大道不僅坐擁西區大國門台北雙星，更匯聚上海商銀╳陽信銀行雙金融總部等各大金融銀行機構、國賓皇宮酒店及嘉新大樓改建案等重磅投資。</div>
+          </div>
+          <img class="leaf1" src="@/section/s4/leaf1.svg" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="0" />
         </div>
       </div>
 
@@ -73,9 +75,11 @@
         </div>
         <div class="info relative">
           <div class="t1">Classic Elegance</div>
-          <div class="t2">中山北路二段 <br class="md:hidden">締造經典風華</div>
-          <div class="t3">40米寬裕的中山北路二段匯聚了各大五星級風華；晶華酒店、台北老爺酒店、大倉久和大飯店、LV旗艦店展現優雅氣韻以及獨特品味象徵。</div>
-          <img class="leaf2" src="@/section/s4/leaf2.svg" />
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="t2">中山北路二段 <br class="md:hidden">締造經典風華</div>
+            <div class="t3">40米寬裕的中山北路二段匯聚了各大五星級風華；晶華酒店、台北老爺酒店、大倉久和大飯店、LV旗艦店展現優雅氣韻以及獨特品味象徵。</div>
+          </div>
+          <img class="leaf2" src="@/section/s4/leaf2.svg" data-aos="fade-down-left" data-aos-duration="1000" data-aos-delay="0" />
         </div>
       </div>
 
@@ -123,9 +127,11 @@
         </div>
         <div class="info relative">
           <div class="t1">Cultural life</div>
-          <div class="t2">心中山線形公園 <br class="md:hidden">誠品南西風情</div>
-          <div class="t3">500米的心中山線形公園廊帶，聚合文青風尚與異國風情休閒場域。新光三越、誠品書店、赤峰街文創商圈等，呈現出獨有的跨文化生活聚落感。</div>
-          <img class="leaf3" src="@/section/s4/leaf3.svg" />
+          <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="t2">心中山線形公園 <br class="md:hidden">誠品南西風情</div>
+            <div class="t3">500米的心中山線形公園廊帶，聚合文青風尚與異國風情休閒場域。新光三越、誠品書店、赤峰街文創商圈等，呈現出獨有的跨文化生活聚落感。</div>
+          </div>
+          <img class="leaf3" src="@/section/s4/leaf3.svg" data-aos="fade-down-right" data-aos-duration="1000" data-aos-delay="0" />
         </div>
       </div>
     </div>

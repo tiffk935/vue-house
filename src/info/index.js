@@ -40,29 +40,40 @@ export default {
     budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
     navList: [
         {
-            name: "大城之境",
+            name: "中山市心",
+            target: ".s2",
+            offset: "",
+            isBtn: false,
+        },
+        {
+            name: "中山風華",
             target: ".s3",
             offset: "",
+            isBtn: false,
         },
         {
-            name: "大境美宅",
+            name: "雙捷奔馳",
+            target: ".s4",
+            offset: "",
+            isBtn: false,
+        },
+        {
+            name: "尖端工學",
             target: ".s5",
             offset: "",
+            isBtn: false,
         },
         {
-            name: "工藝嚴選",
-            target: ".s7",
+            name: "美學印記",
+            target: ".s6",
             offset: "",
-        },
-        {
-            name: "空間展演",
-            target: ".s8",
-            offset: "",
+            isBtn: false,
         },
         {
             name: "預約賞屋",
             target: ".order",
             offset: "",
+            isBtn: true,
         },
     ],
 }

@@ -12,7 +12,7 @@
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">恆合中山</h1>
-    <!-- <S1 />
+    <S1 />
     <S2 />
     <S3 />
     <S4 />
@@ -22,7 +22,7 @@
     <S8 />
     <S9 />
     <S10 />
-    <S11 /> -->
+    <S11 />
     <Order />
   </div>
 </template>
