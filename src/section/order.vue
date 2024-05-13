@@ -2,9 +2,9 @@
   <div id="order" class="order bg-[#E5005C] relative text-center">
     <div class="order-section">
       <div class="bg">
-        <img src="@/section/s1/bg.jpg" />
-        <img src="@/section/s1/bg.jpg" />
-        <img src="@/section/s1/bg.jpg" />
+        <img src="@/section/s1/bg.webp" />
+        <img src="@/section/s1/bg.webp" />
+        <img src="@/section/s1/bg.webp" />
       </div>
       
       <img class="logo md:hidden" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s1/logo-m.svg" />

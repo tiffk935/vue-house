@@ -32,22 +32,22 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s11/slider/1.jpg" />
+            <img src="@/section/s11/slider/1.webp" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s11/slider/2.jpg" />
+            <img src="@/section/s11/slider/2.webp" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s11/slider/3.jpg" />
+            <img src="@/section/s11/slider/3.webp" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s11/slider/4.jpg" />
+            <img src="@/section/s11/slider/4.webp" />
           </div>
         </swiper-slide>
       </swiper>
@@ -60,12 +60,12 @@
 
 .s11 {
   padding: size-m(90.59) 0 size-m(131) 0;
-  background-image: url(@/section/s11/bg-m.jpg);
+  background-image: url(@/section/s11/bg-m.webp);
   background-size: cover;
   background-position: center center;
   @media (min-width: 768px) {
     padding: size(207) 0 size(270) 0;
-    background-image: url(@/section/s11/bg.jpg);
+    background-image: url(@/section/s11/bg.webp);
   }
 
   .logo {
@@ -90,7 +90,7 @@
       width: size-m(310);
       padding: size-m(21.5) size-m(29.79) size-m(46.16) size-m(39.25);
       margin: 0 auto size-m(42) auto;
-      background-image: url(@/section/s11/bg2.jpg);
+      background-image: url(@/section/s11/bg2.webp);
       background-size: cover;
       background-position: center center;
       border-top-right-radius: size-m(80);
@@ -109,7 +109,7 @@
         left: 0;
         width: 100%;
         height: size-m(10);
-        background-image: url(@/section/s11/gold-m.jpg);
+        background-image: url(@/section/s11/gold-m.webp);
         background-size: 100% 100%;
         @media (min-width: 768px) {
           height: size(18);

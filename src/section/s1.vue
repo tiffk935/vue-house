@@ -1,9 +1,9 @@
 <template>
   <section class="s1 user-n w-full relative">
     <div class="bg">
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
-      <img src="@/section/s1/bg.jpg" />
+      <img src="@/section/s1/bg.webp" />
+      <img src="@/section/s1/bg.webp" />
+      <img src="@/section/s1/bg.webp" />
     </div>
     <img class="logo absolute md:hidden" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s1/logo-m.svg" />
     <img class="logo absolute hidden md:block" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s1/logo.svg" />

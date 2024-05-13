@@ -16,7 +16,7 @@
           <swiper-slide>
             <div class="relative">
               <div class="img img1 relative">
-                <img src="@/section/s9/slider/1.png" />
+                <img src="@/section/s9/slider/1.webp" />
                 <div class="txt">BOSCH情境示意圖</div>
                 <img class="logo" src="@/section/s9/bosch.svg" />
               </div>
@@ -25,7 +25,7 @@
           <swiper-slide>
             <div class="relative">
               <div class="img img2 relative">
-                <img src="@/section/s9/slider/2.png" />
+                <img src="@/section/s9/slider/2.webp" />
                 <div class="txt">TOTO情境示意圖</div>
                 <img class="logo" src="@/section/s9/toto.svg" />
               </div>
@@ -34,7 +34,7 @@
           <swiper-slide>
             <div class="relative">
               <div class="img img3 relative">
-                <img src="@/section/s9/slider/3.png" />
+                <img src="@/section/s9/slider/3.webp" />
                 <div class="txt">GROHE情境示意圖</div>
                 <img class="logo" src="@/section/s9/grohe.svg" />
               </div>
@@ -61,9 +61,9 @@
         <div class="t1">國際知名優質建材 <br>質感品味美學</div>
         <div class="t2">質感決定了你與別人的與眾不同。齊聚BOSCH、GROHE、TOTO、Panasonic等國際精品名牌設備，讓您的生活成為最有質感的品味美學。</div>
         <div class="slider-btns hidden md:flex">
-          <div :class="{'slider-btn': true, active: img === 1}" @click="swiperRef.slideTo(1)"><img src="@/section/s9/slider/1.png" /></div>
-          <div :class="{'slider-btn': true, active: img === 2}" @click="swiperRef.slideTo(2)"><img src="@/section/s9/slider/2.png" /></div>
-          <div :class="{'slider-btn': true, active: img === 3}" @click="swiperRef.slideTo(3)"><img src="@/section/s9/slider/3.png" /></div>
+          <div :class="{'slider-btn': true, active: img === 1}" @click="swiperRef.slideTo(1)"><img src="@/section/s9/slider/1.webp" /></div>
+          <div :class="{'slider-btn': true, active: img === 2}" @click="swiperRef.slideTo(2)"><img src="@/section/s9/slider/2.webp" /></div>
+          <div :class="{'slider-btn': true, active: img === 3}" @click="swiperRef.slideTo(3)"><img src="@/section/s9/slider/3.webp" /></div>
         </div>
       </div>
     </div>
@@ -75,12 +75,12 @@
 
 .s9 {
   padding: size-m(62.22) 0 size-m(102) 0;
-  background-image: url(@/section/s9/bg-m.jpg);
+  background-image: url(@/section/s9/bg-m.webp);
   background-size: cover;
   background-position: center center;
   @media (min-width: 768px) {
     padding: size(134) 0 size(200) 0;
-    background-image: url(@/section/s9/bg.jpg);
+    background-image: url(@/section/s9/bg.webp);
   }
 
   .inner {

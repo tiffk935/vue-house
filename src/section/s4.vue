@@ -15,7 +15,7 @@
           >
             <swiper-slide>
               <div class="relative h-full">
-                <img src="@/section/s4/img1.jpg" />
+                <img src="@/section/s4/img1.webp" />
                 <div class="txt">中山北路夜景實景拍攝</div>
               </div>
             </swiper-slide>
@@ -46,13 +46,13 @@
           >
             <swiper-slide>
               <div class="relative h-full">
-                <img src="@/section/s4/img2-1.jpg" />
+                <img src="@/section/s4/img2-1.webp" />
                 <div class="txt">晶華酒店實景拍攝</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative h-full">
-                <img src="@/section/s4/img2-2.jpg" />
+                <img src="@/section/s4/img2-2.webp" />
                 <div class="txt">台北老爺酒店實景</div>
               </div>
             </swiper-slide>
@@ -98,13 +98,13 @@
           >
             <swiper-slide>
               <div class="relative h-full">
-                <img src="@/section/s4/img3-1.jpg" />
+                <img src="@/section/s4/img3-1.webp" />
                 <div class="txt">心中山線形公園實景</div>
               </div>
             </swiper-slide>
             <swiper-slide>
               <div class="relative h-full">
-                <img src="@/section/s4/img3-2.jpg" />
+                <img src="@/section/s4/img3-2.webp" />
                 <div class="txt">誠品南西實景</div>
               </div>
             </swiper-slide>
@@ -156,12 +156,12 @@
   }
 
   padding: size-m(60) 0 size-m(122.29) 0;
-  background-image: url(@/section/s4/bg-m.jpg);
+  background-image: url(@/section/s4/bg-m.webp);
   background-size: cover;
   background-position: center center;
   @media (min-width: 768px) {
     padding: size(169) 0 size(375) 0;
-    background-image: url(@/section/s4/bg.jpg);
+    background-image: url(@/section/s4/bg.webp);
   }
 
   .slide-prev, .slide-next {

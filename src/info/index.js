@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.2029041335295!2d121.5227247!3d25.0611111!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a943a0989e4d%3A0x3200f9c9a3e6ca4a!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDkuK3lsbHljJfot6_kuozmrrUxMTgtMeiZnw!5e0!3m2!1szh-TW!2stw!4v1714794661679!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/HVEB6ykPA8XyuZr48",
     phone: "02-2581-5588",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "https://www.facebook.com/timelessforest2024",
+    fbMessage: "https://m.me/timelessforest2024/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "恆合建設股份有限公司"],
@@ -25,7 +25,7 @@ export default {
         ["格局規劃", "1+1房～3房"],
         ["公設比", "約32.4%"],
     ],
-    gtmCode: ["GTM-KTP354Z8"], // 可放置多個
+    gtmCode: ["GTM-NQLQR5Z4"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -53,19 +53,19 @@ export default {
         },
         {
             name: "雙捷奔馳",
-            target: ".s4",
-            offset: "",
-            isBtn: false,
-        },
-        {
-            name: "尖端工學",
             target: ".s5",
             offset: "",
             isBtn: false,
         },
         {
+            name: "尖端工學",
+            target: ".s8",
+            offset: "",
+            isBtn: false,
+        },
+        {
             name: "美學印記",
-            target: ".s6",
+            target: ".s11",
             offset: "",
             isBtn: false,
         },

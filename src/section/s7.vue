@@ -14,7 +14,7 @@
 .s7 {
   width: 100%;
   height: size-m(604);
-  background-image: url(@/section/s7/bg.jpg);
+  background-image: url(@/section/s7/bg.webp);
   background-size: auto size-m(494.38);
   background-position: center bottom;
   background-repeat: no-repeat;

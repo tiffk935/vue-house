@@ -1,6 +1,6 @@
 <template>
   <section class="s3 user-n w-full relative">
-    <img class="content absolute" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/content.svg" />
+    <img class="content absolute" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/content.webp" />
     <div class="txt absolute text-white">中山北路二段樹海實景拍攝</div>
   </section>
 </template>
@@ -11,7 +11,7 @@
 .s3 {
   overflow: hidden;
   height: size-m(380);
-  background-image: url(@/section/s3/bg.jpg);
+  background-image: url(@/section/s3/bg.webp);
   background-size: cover;
   background-position: center center;
   @media (min-width: 768px) {

@@ -9,7 +9,7 @@
     </div>
     <div class="item relative">
       <div class="img img1 relative" @click="openModal(1)">
-        <img class="block w-full h-full" src="@/section/s8/img1.jpg" />
+        <img class="block w-full h-full" src="@/section/s8/img1.webp" />
         <div class="img-txt absolute md:hidden">建築結構示意圖</div>
       </div>
       <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -23,7 +23,7 @@
     </div>
     <div class="item relative">
       <div class="img img2 relative">
-        <img class="block w-full h-full" src="@/section/s8/img2.jpg" />
+        <img class="block w-full h-full" src="@/section/s8/img2.webp"/>
         <div class="img-txt absolute">情境示意圖</div>
       </div>
       <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -42,8 +42,7 @@
         <div class="tk-modal">
           <div class="tk-close" @click="showModal = false"></div>
           <div class="img-wrapper">
-            <img v-if="img === 1" src="@/section/s8/img1.jpg" @load="onImgLoad($event)" />
-            <img v-if="img === 2" src="@/section/s8/img2.jpg" @load="onImgLoad($event)" />
+            <img v-if="img === 1" src="@/section/s8/img1.webp" @load="onImgLoad($event)" />
           </div>
           <svg viewBox="0 0 181 17" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0.292893 7.04289C-0.0976311 7.43342 -0.0976311 8.06658 0.292893 8.45711L6.65685 14.8211C7.04738 15.2116 7.68054 15.2116 8.07107 14.8211C8.46159 14.4305 8.46159 13.7974 8.07107 13.4069L2.41421 7.75L8.07107 2.09315C8.46159 1.70262 8.46159 1.06946 8.07107 0.678932C7.68054 0.288408 7.04738 0.288408 6.65685 0.678932L0.292893 7.04289ZM180.707 8.45711C181.098 8.06658 181.098 7.43342 180.707 7.04289L174.343 0.678932C173.953 0.288408 173.319 0.288408 172.929 0.678932C172.538 1.06946 172.538 1.70262 172.929 2.09315L178.586 7.75L172.929 13.4069C172.538 13.7974 172.538 14.4305 172.929 14.8211C173.319 15.2116 173.953 15.2116 174.343 14.8211L180.707 8.45711ZM1 8.75H180V6.75H1V8.75Z" fill="black"/>
@@ -85,12 +84,12 @@
     left: 0;
     width: 100%;
     height: size-m(20);
-    background-image: url(@/section/s8/gold-m.jpg);
+    background-image: url(@/section/s8/gold-m.webp);
     background-size: cover;
     background-position: center center;
     @media (min-width: 768px) {
       height: size(32);
-      background-image: url(@/section/s8/gold.jpg);
+      background-image: url(@/section/s8/gold.webp);
     }
   }
 
@@ -99,12 +98,12 @@
     left: 0;
     width: 100%;
     height: size-m(20);
-    background-image: url(@/section/s8/gold-m.jpg);
+    background-image: url(@/section/s8/gold-m.webp);
     background-size: cover;
     background-position: center center;
     @media (min-width: 768px) {
       height: size(32);
-      background-image: url(@/section/s8/gold.jpg);
+      background-image: url(@/section/s8/gold.webp);
     }
   }
 
@@ -113,13 +112,13 @@
     left: 0;
     width: 100%;
     height: calc(100% - size-m(20));
-    background-image: url(@/section/s8/bg-m.jpg);
+    background-image: url(@/section/s8/bg-m.webp);
     background-size: cover;
     background-position: center center;
     @media (min-width: 768px) {
       top: size(32);
       height: calc(100% - size(32));
-      background-image: url(@/section/s8/bg.jpg);
+      background-image: url(@/section/s8/bg.webp);
     }
   }
 

@@ -6,7 +6,7 @@
     <div class="line-left absolute"></div>
     <div class="line-bottom absolute"></div>
     <img class="txt absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" src="@/section/s5/txt.svg" />
-    <img class="en absolute" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0" src="@/section/s5/en.png" />
+    <img class="en absolute" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="0" src="@/section/s5/en.webp" />
   </section>
 </template>
 
@@ -16,7 +16,7 @@
 .s5 {
   width: 100%;
   height: size-m(375);
-  background-image: url(@/section/s5/bg.jpg);
+  background-image: url(@/section/s5/bg.webp);
   background-size: cover;
   background-position: center center;
   @media screen and (min-width:768px) {

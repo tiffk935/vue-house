@@ -1,7 +1,7 @@
 <template>
   <section class="s10 user-n relative">
-    <img class="bg absolute" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s10/bg.jpg" />
-    <img class="logo absolute" src="@/section/s10/logo.png" />
+    <img class="bg absolute" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s10/bg.webp" />
+    <img class="logo absolute" src="@/section/s10/logo.webp" />
   </section>
 </template>
 
