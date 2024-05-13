@@ -248,6 +248,13 @@
               border-top-right-radius: size(80);
             }
           }
+
+          &.img1 {
+            object-position: 19% center;
+            @media (min-width: 768px) {
+              object-position: 21% center;
+            }
+          }
         }
 
         .content {

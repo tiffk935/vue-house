@@ -180,16 +180,11 @@
       width: size-m(340);
       height: size-m(290);
       margin-bottom: size-m(9.41);
-      cursor: pointer;
       @media (min-width: 768px) {
         width: size(859.85);
         height: size(474.07);
         margin-bottom: 0;
         margin-right: size(115);
-
-        &:hover:after {
-          opacity: 1;
-        }
       }
 
       &:after {
@@ -212,6 +207,15 @@
         border-top-right-radius: size-m(50);
         @media (min-width: 768px) {
           border-top-right-radius: size(80);
+        }
+      }
+
+      &.img1 {
+        cursor: pointer;
+        @media (min-width: 768px) {
+          &:hover:after {
+            opacity: 1;
+          }
         }
       }
 
