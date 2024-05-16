@@ -45,7 +45,7 @@
               </select>
             </label>
             <label class="row">
-              <span>電子信箱<span>*</span></span>
+              <span>電子信箱</span>
               <input type="text" class="input w-full rounded-none" :value="formData.email"
                 @input="(event) => (formData.email = event.target.value)" />
             </label>
@@ -367,7 +367,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "room_type", "budget"]
+const bypass = ["project", "msg", "room_type", "budget", "email"]
 
 //中文對照
 const formDataRef = ref([
