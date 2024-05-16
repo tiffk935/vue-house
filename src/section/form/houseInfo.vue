@@ -10,6 +10,10 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+.footer {
+        display: none;
+    }
+
 @media screen and (max-width:768px) {
     .footer {
         margin-bottom: size-m(63);
