@@ -1,7 +1,7 @@
 <template>
     <div class="house-info bg-[#0A534C] text-white relative">
-        <img class="bg hidden md:block" src="@/section/s1/bg.png" />
-        <img class="bg md:hidden" src="@/section/s1/bg-m.png" />
+        <!-- <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
+        <!-- <img class="bg md:hidden" src="@/section/s1/bg-m.png" /> -->
         <div class="links relative">
             <a target="_blank" href="https://www.da-li.com.tw/">
                 <img src="@/section/form/btn1.svg" alt="達麗建設官網" />
@@ -28,7 +28,7 @@
 
     <!--div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/form/footerlogo.gif" alt="達麗天蒔" srcset=""></a>
+                src="@/section/form/footerlogo.gif" alt="達麗河蘊" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
     </div-->
 </template>

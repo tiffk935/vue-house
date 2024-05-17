@@ -1,4 +1,4 @@
-const caseName = "達麗天蒔"
+const caseName = "達麗河蘊"
 
 export default {
     meta: {
@@ -36,44 +36,39 @@ export default {
     },
     navList: [
         {
-            name: "盛世之約",
-            target: ".s2",
+            name: "國際北士科",
+            target: ".s1",
             offset: "",
         },
         {
-            name: "國際北士科",
+            name: "富人水岸",
             target: ".s3",
             offset: "",
         },
         {
-            name: "大道之首",
+            name: "寬裕境界",
             target: ".s4",
             offset: "",
         },
         {
-            name: "快捷之翼",
+            name: "達麗品牌",
             target: ".s5",
             offset: "",
         },
         {
-            name: "豐饒對位",
+            name: "時代經典",
             target: ".s6",
             offset: "",
         },
         {
-            name: "達麗品牌",
+            name: "私院莊園",
             target: ".s7",
             offset: "",
         },
-        //{
-        //    name: "建築藝術",
-        //    target: ".s8",
-        //    offset: "",
-        //},
-        //{
-        //    name: "私人宅邸",
-        //    target: ".s9",
-        //    offset: "",
-        //},
+        {
+           name: "私人宅邸",
+           target: ".s8",
+           offset: "",
+        },
     ],
 }

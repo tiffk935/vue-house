@@ -6,21 +6,21 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="達麗天蒔" srcset="">
+    <img class="w-32" src="@/assets/loading_w.gif" alt="達麗河蘊" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
-    <h1 style="display:none;">達麗天蒔</h1>
+    <h1 style="display:none;">達麗河蘊</h1>
     <S1 />
     <S2 />
     <S3 />
-    <S4 />
+    <!-- <S4 />
     <S5 />
     <S6 />
     <S7 />
     <S8 />
-    <S9 />
+    <S9 /> -->
     <Order />
   </div>
 </template>
@@ -52,20 +52,6 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
-
-    setTimeout(() => {
-      let status = 0;
-      let hideHand = false;
-      document.querySelector('.s3 .map').scrollLeft = document.querySelector('.s3 .map .map1').clientWidth * 0.5 - window.innerWidth/2;
-      document.querySelector('.s3 .map').addEventListener("scroll", () => {
-        status++;
-        if(status > 1 && !hideHand){
-          // document.querySelector('.s3 .hand').style.opacity = 0;
-          // document.querySelector('.s3 .hand-bg').style.opacity = 0;
-          hideHand = true;
-        }
-      });
-    }, 0);
   };
 })
 </script>

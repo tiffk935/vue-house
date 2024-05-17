@@ -4,15 +4,15 @@
     <div class="logo"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-between items-center rounded-none font-['Noto_Serif_TC']" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/form/phone.svg" alt="達麗天蒔" srcset="" />
+        <img src="@/section/form/phone.svg" alt="達麗河蘊" srcset="" />
         <div class="flex-1">{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-between items-center rounded-none font-['Noto_Serif_TC']" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/form/messenger.svg" alt="達麗天蒔" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="達麗河蘊" srcset="" />
         <div class="flex-1">FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-between items-center rounded-none font-['Noto_Serif_TC'] btfanpage" @click="open()">
-        <img src="@/section/form/fb.svg" alt="達麗天蒔" srcset="" />
+        <img src="@/section/form/fb.svg" alt="達麗河蘊" srcset="" />
         <div class="flex-1">前往粉絲專頁</div>
       </div>
     </div>
@@ -21,31 +21,31 @@
         <div class="text-[#0A534C]">{{ info.address }}</div>
       </div>
       <div class="flex contact-item justify-between items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/form/gmap.svg" alt="達麗天蒔" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="達麗河蘊" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
   </div>
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+  <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/form/phone.svg" alt="達麗天蒔" srcset="" />
+      <img src="@/section/form/phone.svg" alt="達麗河蘊" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/form/messenger.svg" alt="達麗天蒔" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="達麗河蘊" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/form/pen.svg" alt="達麗天蒔" srcset="" />
+      <img src="@/section/form/pen.svg" alt="達麗河蘊" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/form/gmap.svg" alt="達麗天蒔" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="達麗河蘊" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -56,9 +56,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="達麗天蒔" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="達麗天蒔" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="達麗天蒔" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="達麗河蘊" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="達麗河蘊" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="達麗河蘊" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
@@ -177,14 +177,19 @@
     left: 0;
     width: size-m(375);
     height: size-m(63);
-    gap: size-m(1);
 
     .contact-item {
       height: 100%;
-      background-color: #0A534C;
+      background-color: rgba(0,77,157,0.5);
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
+      backdrop-filter: blur(20px);
+      border-left: 1px solid #fff;
+
+      &:first-child {
+        border-left: none;
+      }
 
       img {
         margin-bottom: size-m(5);
