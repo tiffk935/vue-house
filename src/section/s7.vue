@@ -1,311 +1,226 @@
 <template>
-  <section class="s7 relative bg-[#EEEEEE]">
-    <div class="bg absolute"></div>
-    <div class="slider absolute" data-aos="fade-up" data-aos-delay="0">
-      <swiper 
-        :slidesPerView="'auto'"
-        :pagination="false"
-        :navigation="false"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <div class="item">
-            <div class="img"><img src="@/section/s7/1.jpg" /></div>
-            <div class="t1">KODA ON 5TH AVE</div>
-            <div class="t2">450 S Main St, Seattle, WA 98104 USA</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item">
-            <div class="img"><img src="@/section/s7/2.jpg" /></div>
-            <div class="t1">陽明大苑</div>
-            <div class="t2">台北市士林區</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item">
-            <div class="img"><img src="@/section/s7/3.jpg" /></div>
-            <div class="t1">達麗101</div>
-            <div class="t2">台北市信義區</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item">
-            <div class="img"><img src="@/section/s7/4.jpg" /></div>
-            <div class="t1">世界灣</div>
-            <div class="t2">新北市淡水區</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="item">
-            <div class="img"><img src="@/section/s7/5.jpg" /></div>
-            <div class="t1">達麗冶翠</div>
-            <div class="t2">台中市北區</div>
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
-    <div class="text absolute md:flex md:justify-between md:items-start">
-      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">全球視野<br>世界建築</div>
-      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-        <span class="subtitle">達麗建設（6177），股票上市優質團隊</span><br><br>
-        從台灣到西雅圖，從建設到營建、商場，早已邁向全球化、國際化，每一座達麗建築都以與世界各大城市新建築比肩的標準檢視，跨國際推案、跨國團隊合作，不只成就達麗建築成為世界級建築，國際視野與世界觀更讓達麗跳脫單一建築個案思維，從環境與城市發展宏觀角度定位建築。
-      </p>
-    </div>
-  </section>
+  <section class="s7 relative">
+    
+    <div class="controls">
+      <div class="btn-prev">
+        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+        </svg>
+      </div>
 
-  <div class="circle-wrapper">
-    <div class="circle"></div>  
-  </div>
+      <div class="btn-next">
+        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="slider slider1" :style="{ 'z-index': 2 }">
+      <div class="slide" :style="{ 'z-index': 2 }">
+        <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+      </div>
+      <div class="slide">
+        <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+      </div>
+    </div>
+
+    <div class="slider slider2" :style="{ 'z-index': 2 }">
+      <div class="slide" :style="{ 'z-index': 2 }">
+        <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+      </div>
+      <div class="slide">
+        <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+      </div>
+    </div>
+
+    <div class="t1">仰山、謐水、綠層次 <br>水岸森林莊園</div>
+    <div class="t2">達麗河藴凝鍊山、水、平原自然環境，成為景觀靈感元素。基地以樹列圍抱，形成森林莊園，留設內庭私院，摹寫山巒層疊、水波清流，陽明山裡的杜鵑、山櫻花、楓香…隨著季節變換色彩，散步林間小徑、閒坐花間，都市中難覓的森林自然逸趣渾然天成。</div>
+  </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 .s7 {
   width: 100%;
-  height: size-m(763);
+  padding: size-m(87) 0 size-m(49) 0;
+  font-family: 'Noto Serif TC';
   @media screen and (min-width:768px) {
-    height: size(1220);
+    height: size(1080);
+    padding: 0;
   }
 
-  .bg {
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url(@/section/s7/bg-m.jpg);
-    background-size: cover;
+  .t1 {
+    color: #002B69;
+    font-size: size-m(18);
+    line-height: size-m(26);
+    letter-spacing: .07em;
+    font-weight: 700;
+    padding: 0 size-m(52.5);
+    margin-bottom: size-m(11);
     @media screen and (min-width:768px) {
-      left: size(91);
-      width: size(1829);
-      height: 100%;
-      background-image: url(@/section/s7/bg.jpg);
+      position: absolute;
+      top: size(580.48);
+      left: size(148);
+      font-size: size(40);
+      line-height: size(57);
+      padding: 0;
+      margin-bottom: 0;
+    }
+  }
+
+  .t2 {
+    color: #000;
+    font-size: size-m(14);
+    line-height: 170%;
+    font-weight: 700;
+    padding: 0 size-m(52.5);
+    margin-bottom: size-m(47.5);
+    @media screen and (min-width:768px) {
+      position: absolute;
+      top: size(723.97);
+      left: size(148);
+      font-size: size(20);
+      padding: 0;
+      margin-bottom: 0;
+      width: size(513);
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: size-m(270);
+    margin: 0 auto size-m(23.5) auto;
+    @media screen and (min-width:768px) {
+      position: absolute;
+      top: size(154);
+      left: size(148);
+      width: size(1626);
+      margin: 0;
+    }
+
+    .btn-prev, .btn-next {
+      cursor: pointer;
+      z-index: 1;
+
+      .arrow-icon {
+        width: size-m(35);
+        transition: transform ease-in-out 0.2s;
+        vertical-align: middle;
+        @media screen and (min-width:768px) {
+          width: size(50);
+        }
+        .cir {
+          stroke-dasharray: 162;
+          stroke-dashoffset: 162;
+          transition: stroke-dashoffset ease-in-out 0.5s;
+          fill: rgba(255, 255, 255, .5);
+        }
+        .arrow {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        &:hover {
+          transform: scale(1);
+          .cir {
+            stroke-dashoffset: 0;
+          }
+          .arrow {
+            animation: arrow ease-in-out 0.5s;
+          }
+        }
+        @keyframes arrow {
+          0% {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+          30% {
+            transform: translateX(30%);
+            opacity: 0;
+          }
+          31% {
+            transform: translateX(-30%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .btn-prev {
+      transform: rotate(180deg);
     }
   }
 
   .slider {
+    position: relative;
     width: 100%;
-    top: size-m(389);
-    left: 0;
-    padding: 0 size-m(58);
+    height: size-m(218.11);
+    background: #ddd;
+    overflow: hidden;
+    margin-bottom: size-m(28.31);
     @media screen and (min-width:768px) {
-      width: size(1920 - 91);
-      top: size(444);
-      left: size(91);
-      padding: 0 size(200);
-      overflow: hidden;
+      position: absolute;
+      top: size(260);
+      left: size(806);
+      width: size(970);
+      height: size(620);
+      margin-bottom: 0;
     }
 
-    .swiper {
-      overflow: visible;
-    }
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
 
-    .swiper-slide {
-      width: size-m(253 + 5);
-      padding-right: size-m(5);
-      transition: all 1s;
-      @media screen and (min-width:768px) {
-        width: size(496 + 10);
-        padding-right: size(10);
-      }
-
-      .item {
-        width: size-m(253);
-        background: #fff;
-        padding: size-m(5) size-m(6) size-m(16.24) size-m(6);
-        cursor: grab;
-        @media screen and (min-width:768px) {
-          width: size(496);
-          padding: size(8) size(11) size(44) size(11);
-        }
-
-        &:hover img {
-          filter: grayscale(0.1);
-          transform: scale(1.3);
-        transition: filter .3s,transform 8s;
-        }
-      }
-      .img{overflow: hidden;
-        margin-bottom: size-m(13.87);
-        @media screen and (min-width:768px) {
-        margin-bottom: size(21);
-        }
-      }
       img {
         width: 100%;
-        margin-bottom:0;
-       // margin-bottom: size-m(13.87);
-        filter: grayscale(1);
-        transition: filter 1s,transform 3s;
-      }
-
-      .t1 {
-        font-family: 'Noto Serif TC';
-        font-weight: 700;
-        font-size: size-m(14);
-        line-height: size-m(20);
-        padding: 0 size-m(14);
-        @media screen and (min-width:768px) {
-          font-size: size(30);
-          line-height: size(43);
-          padding: 0 size(38);
-        }
-      }
-
-      .t2 {
-        font-weight: 400;
-        font-size: size-m(12);
-        line-height: size-m(17);
-        padding: 0 size-m(14);
-        color: #4D4D4D;
-        @media screen and (min-width:768px) {
-          font-size: size(20);
-          line-height: size(29);
-          padding: 0 size(38);
-        }
-      }
-    }
-    .swiper-slide-prev{opacity: 0.3;filter: blur(1px);}
-    .swiper-slide-active img {
-      filter: grayscale(0);
-      @media screen and (min-width:768px) {
-        filter: grayscale(1);
+        height: 100%;
+        display: block;
+        object-fit: cover;
       }
     }
   }
 
-  .text {
-    top: size-m(35);
-    left: 0;
-    padding: 0 size-m(58);
-    font-size: size-m(13);
-    line-height: size-m(20);
-    text-align: justify;
-    color: #fff;
+  .slider2 {
+    width: size-m(136);
+    height: size-m(86.65);
+    margin-bottom: size-m(39.83);
+    margin-left: size-m(52.5);
     @media screen and (min-width:768px) {
-      top: size(91);
-      left: size(293);
-      width: size(1357);
-      padding: 0 size(0);
-      font-size: size(22);
-      line-height: size(34);
+      width: size(350);
+      height: size(233);
+      margin-bottom: 0;
+      margin-left: 0;
+      position: absolute;
+      top: size(260);
+      left: size(148);
     }
 
-    .title {
-      font-weight: 700;
-      font-size: size-m(43);
-      line-height: size-m(62);
-      letter-spacing: 0.06em;
-      color: #E3B15F;
-      font-family: 'Noto Serif TC';
-      margin-bottom: size-m(36);
+    .slide .txt {
+      top: auto;
+      right: auto;
+      bottom: size-m(2);
+      left: size-m(8);
       @media screen and (min-width:768px) {
-        font-size: size(78);
-        line-height: size(98);
-        margin-bottom: size(0);
-      }
-    }
-
-    p {
-      @media screen and (min-width:768px) {
-        width: size(732);
-        
-      }
-
-      .subtitle{
-          font-size: size-m(14);
-        @media screen and (min-width:768px) {
-          font-size: size(28); 
-        }
+        bottom: size(5);
+        left: size(10);
       }
     }
   }
 }
 
-.circle-wrapper {
-  position: absolute;
-}
-
-.circle {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  border: 0px solid #d7d7d7;
-  width: 0px;
-  height: 0px;
-  border-radius: 100%;
-  opacity: 0;
-  pointer-events: none;
-  z-index: 99;
-  transition: all ease .5s;
-
-  &.active {
-    border: 1px solid #e3e3e3;
-    width: 93px;
-    height: 93px;
-    opacity: 0.8;
-
-    &:before {
-      content: "";
-      position: absolute;
-      top: 49%;
-      right: 27%;
-      width: 6px;
-      height: 6px;
-      border-top: 2px solid #ccc;
-      border-right: 2px solid #ccc;
-      -webkit-transform: rotate(45deg) translateY(-50%);
-      transform: rotate(45deg) translateY(-50%);
-      opacity: 0.8;
-    }
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 44.6%;
-      left: 28%;
-      width: 6px;
-      height: 6px;
-      border-top: 2px solid #ccc;
-      border-right: 2px solid #ccc;
-      -webkit-transform: rotate(-135deg) translateY(-50%);
-      transform: rotate(-135deg) translateY(-50%);
-      opacity: 0.8;
-    }
-  }
-}
 </style>
 
 <script setup>
-import { gsap } from "gsap";
-import { ref, onMounted, nextTick } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper";
-
-const modules = ref([Pagination, Navigation, Autoplay]);
-
-onMounted(() => {
-  nextTick(() => {
-    const slides = document.querySelectorAll('.s7 .slider .swiper-slide .item');
-    const circle = document.querySelector('.circle');
-    slides.forEach(slide => {
-      slide.addEventListener('mouseenter', function(){
-        circle.classList.add('active');
-      });
-      slide.addEventListener('mouseleave', function(){
-        circle.classList.remove('active');
-      });
-      slide.addEventListener('mousemove', function(e){
-        gsap.to('.circle-wrapper', {
-          left: e.pageX,
-          top: e.pageY,
-          duration: 0.3,
-          ease: "none"
-        });
-      });
-    });
-  });
-});
 </script>

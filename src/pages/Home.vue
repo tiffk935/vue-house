@@ -15,15 +15,39 @@
     <S1 />
     <S2 />
     <S3 />
-    <!-- <S4 />
+    <S4 />
+
     <S5 />
+
     <S6 />
     <S7 />
-    <S8 />
-    <S9 /> -->
-    <Order />
+
+    <S8 class="zIndex-1" />
+    
+    <div class="relative">
+      <div class="s9bg"></div>
+      <S9 />
+      <Order />
+    </div>
   </div>
 </template>
+
+<style lang="scss">
+  @import "@/assets/style/function.scss";
+  .s9bg {
+    position: absolute;
+    top: size-m(146);
+    left: 0;    
+    width: 100%;
+    height: calc(100% - size-m(146));
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(210,232,244,1) 28%, rgba(156,205,232,1) 54%, rgba(93,141,187,1) 100%);
+    @media screen and (min-width:768px) {
+      top: size(-148);
+      height: calc(100% + size(148));
+    }
+  }
+</style>
 
 <script setup>
 import info from "@/info"

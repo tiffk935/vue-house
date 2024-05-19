@@ -1,5 +1,5 @@
 <template>
-  <section class="s9 relative bg-[#EEEEEE]">
+  <section class="s9 relative">
     <div class="slider-tabs absolute">
       <div :class="{'slider-tab': true, 'active': currentTab == 25}" @click="clickTab(25)">
         <div><span>25</span>坪</div>
@@ -13,159 +13,139 @@
     </div>
 
     <transition>
-      <div class="content absolute" v-if="currentTab == 25">
-        <div class="slider">
-          <swiper 
-            :pagination="{
-              clickable: true,
-            }"
-            :navigation="false"
-            :loop="true"
-            :autoplay="{
-              delay: 2500,
-              disableOnInteraction: false,
-            }"
-            :modules="modules"
-          >
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/25/01.jpg" />
-              <img class="md:hidden" src="@/section/s9/25/01m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/25/02.jpg" />
-              <img class="md:hidden" src="@/section/s9/25/02m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/25/03.jpg" />
-              <img class="md:hidden" src="@/section/s9/25/03m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/25/04.jpg" />
-              <img class="md:hidden" src="@/section/s9/25/04m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-          </swiper>
+      <div class="content content25 absolute" v-if="currentTab == 25">
+        <div class="slider" :style="{ 'z-index': 2 }">
+          <div class="slide" :style="{ 'z-index': 2 }">
+            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
+            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/42b5a6/ffffff/1920x1080.png?text=pic3">
+          </div>
         </div>
-        <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">25坪高CP值2房</div>
-          <p>
-            達麗天蒔25坪2房平面規劃做了樑柱外移，讓格局難得的飽和方正，兩個房間都是雙人房，2 套衛浴，客餐廳尺度很好。
-          </p>
+
+        <div class="controls">
+          <div class="btn-prev md:hidden" @click="goPrev">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="btn-next md:hidden" @click="goNext">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="dots">
+            <template v-for="num in 3">
+              <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
+            </template>
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="t1">1文字待更換</div>
+          <div class="t2">1文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
         </div>
       </div>
     </transition>
 
     <transition>
-      <div class="content absolute" v-if="currentTab == 39">
-        <div class="slider">
-          <swiper 
-            :pagination="{
-              clickable: true,
-            }"
-            :navigation="false"
-            :loop="true"
-            :autoplay="{
-              delay: 2500,
-              disableOnInteraction: false,
-            }"
-            :modules="modules"
-          >
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/01.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/01m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/02.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/02m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/03.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/03m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/04.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/04m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/05.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/05m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/39/06.jpg" />
-              <img class="md:hidden" src="@/section/s9/39/06m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-          </swiper>
+      <div class="content content39 absolute" v-if="currentTab == 39">
+        <div class="slider" :style="{ 'z-index': 2 }">
+          <div class="slide" :style="{ 'z-index': 2 }">
+            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
+            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/42b5a6/ffffff/1920x1080.png?text=pic3">
+          </div>
         </div>
-        <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">三面引光39坪3房</div>
-          <p>
-            達麗天蒔39坪3房有非常難得的三面引光，面寬型格局，獨立玄關，長縱深客餐廳，室內坪效高，格局寬舒宜人。
-          </p>
+
+        <div class="controls">
+          <div class="btn-prev md:hidden" @click="goPrev">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="btn-next md:hidden" @click="goNext">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="dots">
+            <template v-for="num in 3">
+              <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
+            </template>
+          </div>
+        </div>
+        
+        <div class="text">
+          <div class="t1">2文字待更換</div>
+          <div class="t2">2文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
         </div>
       </div>
     </transition>
 
     <transition>
-      <div class="content absolute" v-if="currentTab == 43">
-        <div class="slider">
-          <swiper 
-            :pagination="{
-              clickable: true,
-            }"
-            :navigation="false"
-            :loop="true"
-            :autoplay="{
-              delay: 2500,
-              disableOnInteraction: false,
-            }"
-            :modules="modules"
-          >
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/01.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/01m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/02.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/02m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/03.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/03m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/04.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/04m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/05.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/05m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-            <swiper-slide>
-              <img class="hidden md:block" src="@/section/s9/43/06.jpg" />
-              <img class="md:hidden" src="@/section/s9/43/06m.jpg" />
-              <div class="text-white"></div>
-            </swiper-slide>
-          </swiper>
+      <div class="content content43 absolute" v-if="currentTab == 43">
+        <div class="slider" :style="{ 'z-index': 2 }">
+          <div class="slide" :style="{ 'z-index': 2 }">
+            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
+            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+          </div>
+          <div class="slide">
+            <img src="https://placehold.jp/200/42b5a6/ffffff/1920x1080.png?text=pic3">
+          </div>
         </div>
-        <div class="text md:flex md:justify-between md:items-start" data-aos="fade-up" data-aos-delay="0">
-          <div class="title">文林北路樹海43坪4房</div>
-          <p>
-            達麗天蒔43坪4房擁有文林北路樹海美景，超大50米棟距，入主北士科，不能錯過達麗天蒔4房最佳格局。
-          </p>
+
+        <div class="controls">
+          <div class="btn-prev md:hidden" @click="goPrev">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="btn-next md:hidden" @click="goNext">
+            <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+              <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+              <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+              <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+            </svg>
+          </div>
+
+          <div class="dots">
+            <template v-for="num in 3">
+              <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
+            </template>
+          </div>
+        </div>
+
+        <div class="text">
+          <div class="t1">3文字待更換</div>
+          <div class="t2">3文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
         </div>
       </div>
     </transition>
@@ -176,7 +156,8 @@
 @import "@/assets/style/function.scss";
 .s9 {
   width: 100%;
-  height: size-m(684);
+  height: size-m(666);
+  font-family: 'Noto Serif TC';
   @media screen and (min-width:768px) {
     height: size(1080);
   }
@@ -192,15 +173,16 @@
   }
 
   .slider-tabs {
-    width: size-m(310);
-    top: size-m(112);
-    left: size-m(32);
+    width: size-m(271);
+    top: size-m(62.17);
+    left: size-m(52);
     display: flex;
     justify-content: space-between;
     @media screen and (min-width:768px) {
-      width: size(300);
-      top: size(29);
-      left: size(225);
+      width: size(80.36);
+      top: size(90);
+      left: size(1693.39);
+      display: block;
     }
 
     .slider-tab {
@@ -210,24 +192,23 @@
       align-items: center;
       align-content: center;
       position: relative;
-      width: size-m(80);
-      height: size-m(80);
-      border: size-m(1) solid #0A534C;
-      color: #0A534C;
-      font-family: 'Noto Serif TC';
+      width: size-m(55);
+      height: size-m(55);
+      border: size-m(1) solid #666666;
+      color: #002B69;
       font-weight: 700;
-      font-size: size-m(14);
-      line-height: size-m(20);
-      letter-spacing: 0.06em;
+      font-size: size-m(10);
+      // letter-spacing: 0.06em;
       border-radius: 50%;
       cursor: pointer;
       transition: color .35s cubic-bezier(.25,.46,.45,.94) 0s,border-color .35s cubic-bezier(.25,.46,.45,.94) 0s;
       @media screen and (min-width:768px) {
-        width: size(80);
-        height: size(80);
-        border: size(1) solid #0A534C;
+        width: size(80.36);
+        height: size(80.36);
+        border: size(1) solid #666666;
         font-size: size(14);
         line-height: size(20);
+        margin-bottom: size(47.12);
       }
 
       &>div {
@@ -238,8 +219,7 @@
         line-height: 1;
 
         span {
-          font-size: size-m(30);
-          letter-spacing: 0.06em;
+          font-size: size-m(20);
           @media screen and (min-width:768px) {
             font-size: size(30);
           }
@@ -254,7 +234,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        background: #0A534C;
+        background: #002B69;
         transform: scale(0);
         transition: transform .35s cubic-bezier(.25,.46,.45,.94) 0s;
       }
@@ -269,123 +249,177 @@
       }
 
       &.active {
-        background: #0A534C;
+        background: #002B69;
         color: #fff;;
       }
     }
   }
 
   .content {
-    top: size-m(227);
+    top: size-m(146);
     width: 100%;
     @media screen and (min-width:768px) {
-      width: size(1476);
-      top: size(146);
-      left: size(222);
+      width: size(1626);
+      top: size(90);
+      left: size(148);
     }
-  }
 
-  .slider {
-    width: size-m(375);
-    margin-bottom: size-m(41);
-    @media screen and (min-width:768px) {
+    .slider {
+      position: relative;
       width: 100%;
-      margin-bottom: size(61);
-    }
-
-    .text-white {
-      position: absolute;
-      top: size-m(10);
-      right: size-m(10);
-      font-size: size-m(12);
-      line-height: size-m(17);
-      text-shadow: size-m(0) size-m(2) size-m(2) rgba(0, 0, 0, 0.8);
+      height: size-m(240);
+      margin-bottom: size-m(11.81);
+      background: #ddd;
+      overflow: hidden;
       @media screen and (min-width:768px) {
-        top: size(10);
-        right: size(10);
-        font-size: size(22);
-        line-height: size(34);
-        text-shadow: size(0) size(2) size(2) rgba(0, 0, 0, 0.8);
-      }
-    }
-
-    .swiper-slide {
-      height: size-m(239);
-      @media screen and (min-width:768px) {
-        height: auto;
+        width: size(1477);
+        height: size(716);
+        margin-bottom: size(56);
       }
 
-      img {
+      .slide {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 100%;
-        object-fit: cover;
-        @media screen and (min-width:768px) {
-          height: auto;
+        z-index: 0;
+
+        img {
           width: 100%;
+          height: 100%;
+          display: block;
+          object-fit: cover;
         }
       }
     }
 
-    .swiper-pagination {
-      bottom: 0;
-      text-align: left;
-      padding: size-m(10);
-      line-height: 1;
+    .controls {
+      display: flex;
+      justify-content: space-between;
+      width: size-m(270);
+      margin: 0 auto size-m(42.98) auto;
       @media screen and (min-width:768px) {
-        padding: size(30) size(20);
+        margin: 0;
+      }
+
+      .btn-prev, .btn-next {
+        cursor: pointer;
+        z-index: 1;
+        @media screen and (min-width:768px) {
+          top: size(606.25);
+          left: size(1725.08);
+        }
+
+        .arrow-icon {
+          width: size-m(35);
+          transition: transform ease-in-out 0.2s;
+          vertical-align: middle;
+          @media screen and (min-width:768px) {
+            width: size(59.02);
+          }
+          .cir {
+            stroke-dasharray: 162;
+            stroke-dashoffset: 162;
+            transition: stroke-dashoffset ease-in-out 0.5s;
+            fill: rgba(255, 255, 255, .5);
+          }
+          .arrow {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+          &:hover {
+            transform: scale(1);
+            .cir {
+              stroke-dashoffset: 0;
+            }
+            .arrow {
+              animation: arrow ease-in-out 0.5s;
+            }
+          }
+          @keyframes arrow {
+            0% {
+              transform: translateX(0%);
+              opacity: 1;
+            }
+            30% {
+              transform: translateX(30%);
+              opacity: 0;
+            }
+            31% {
+              transform: translateX(-30%);
+              opacity: 0;
+            }
+            100% {
+              transform: translateX(0%);
+              opacity: 1;
+            }
+          }
+        }
+      }
+
+      .btn-prev {
+        top: size-m(51);
+        transform: rotate(180deg);
+        @media screen and (min-width:768px) {
+          top: size(606.25);
+          left: size(1220);
+        }
+      }
+
+      .dots {
+        position: absolute;
+        top: size(624.98);
+        right: size(31.85);
+
+        .dot {
+          width: size(16.66);
+          height: size(16.66);
+          border: size(1) solid #666666;
+          cursor: pointer;
+          border-radius: 50%;
+          margin-bottom: size(20);
+
+          &.active {
+            background: #666666;
+          }
+        }
       }
     }
 
-    .swiper-pagination-bullet {
-      opacity: 1;
-      background: none;
-      border: size-m(1) solid #fff;
-      width: size-m(10);
-      height: size-m(10);
-      margin: 0 size-m(4);
+    .text {
+      width: size-m(270);
+      margin: 0 auto;
       @media screen and (min-width:768px) {
-        border: size(1) solid #fff;
-        width: size(14);
-        height: size(14);
-        margin: 0 size(7.5);
+        width: 100%;
+        border-top: size(1) solid #666666;
+        padding-top: size(43);
+        display: flex;
+        justify-content: space-between;
       }
-    }
 
-    .swiper-pagination-bullet-active {
-      background: #fff;
-    }
-  }
-
-  .text {
-    padding: 0 size-m(31);
-    font-size: size-m(13);
-    line-height: size-m(20);
-    text-align: justify;
-    color: #4D4D4D;
-    @media screen and (min-width:768px) {
-      width: 100%;
-      padding: 0 size(0);
-      font-size: size(22);
-      line-height: size(34);
-    }
-
-    p {
-      @media screen and (min-width:768px) {
-        width: size(859);
+      .t1 {
+        font-size: size-m(18);
+        font-weight: 700;
+        color: #002B69;
+        letter-spacing: .07em;
+        line-height: 130%;
+        margin-bottom: size-m(9.48);
+        @media screen and (min-width:768px) {
+          font-size: size(40);
+          margin-bottom: 0;
+        }
       }
-    }
 
-    .title {
-      font-weight: 700;
-      font-size: size-m(20);
-      line-height: size-m(29);
-      letter-spacing: 0.06em;
-      color: #0A534C;
-      font-family: 'Noto Serif TC';
-      margin-bottom: size-m(16);
-      @media screen and (min-width:768px) {
-        font-size: size(39);
-        line-height: size(56);
-        margin-bottom: size(0);
+      .t2 {
+        font-size: size-m(14);
+        font-weight: 700;
+        color: #000000;
+        line-height: 170%;
+        @media screen and (min-width:768px) {
+          font-size: size(20);
+          width: size(1162);
+        }
       }
     }
   }
@@ -395,17 +429,99 @@
 
 <script setup>
 import { ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Pagination, Navigation, Autoplay } from "swiper";
-
-const modules = ref([Pagination, Navigation, Autoplay]);
+import { gsap } from "gsap";
 const currentTab = ref(25);
+const currentSlide = ref(0);
+let animating = false;
 
 function clickTab(tab) {
   console.log('clickTab', tab);
   currentTab.value = tab;
+  currentSlide.value = 0;
+}
+
+function goNext() {
+  let currIdx = currentSlide.value;
+  let nextIdx;
+  
+  currentSlide.value++;
+
+  if ( currentSlide.value === document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide').length ) {
+    currentSlide.value = 0;
+  }
+
+  nextIdx = currentSlide.value;
+
+  const tl = setTimeline(currIdx, nextIdx);
+  tl.play();
+}
+
+function goPrev() {
+  let currIdx = currentSlide.value;
+  let nextIdx;
+  
+  currentSlide.value--;
+
+  if ( currentSlide.value === -1 ) {
+    currentSlide.value = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide').length - 1;
+  }
+
+  nextIdx = currentSlide.value;
+
+  const tl = setTimeline2(currIdx, nextIdx);
+  tl.play();
+}
+
+function jumpTo(idx) {
+  let currIdx = currentSlide.value;
+  let nextIdx;
+
+  currentSlide.value = idx;
+  nextIdx = currentSlide.value;
+
+  const tl = setTimeline(currIdx, nextIdx);
+  tl.play();
+}
+
+function setTimeline(currIdx, nextIdx) {
+  animating = true;
+  const nextEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[nextIdx];
+  const currEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[currIdx];
+  const tl = gsap.timeline({
+    paused: true,
+    onComplete: function() {
+      animating = false;
+    }
+  }, 0);
+
+  tl.set('.s9 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
+  tl.set(currEL, { zIndex: 1 }, 0);
+  tl.set(nextEL, { clipPath: 'polygon(160% 0, 100% 0, 100% 100%, 100% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL, { clipPath: 'polygon(-30% 0, 100% 0, 100% 100%, -30% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+
+  return tl;
+}
+
+function setTimeline2(currIdx, nextIdx) {
+  animating = true;
+  const nextEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[nextIdx];
+  const currEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[currIdx];
+  console.log('nextEL', nextEL)
+  console.log('currEL', currEL)
+  const tl = gsap.timeline({
+    paused: true,
+    onComplete: function() {
+      animating = false;
+    }
+  }, 0);
+
+  tl.set('.s9 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
+  tl.set(currEL, { zIndex: 1 }, 0);
+  tl.set(nextEL, { clipPath: 'polygon(0 0, 0% 0, 0% 100%, -30% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL, { clipPath: 'polygon(0 0, 160% 0%, 100% 100%, 0% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+
+  return tl;
 }
 </script>

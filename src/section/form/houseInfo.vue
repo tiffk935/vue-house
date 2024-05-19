@@ -1,5 +1,6 @@
 <template>
-    <div class="house-info bg-[#0A534C] text-white relative">
+    <div class="house-info text-white relative">
+        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/form/bg2.png" />
         <!-- <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
         <!-- <img class="bg md:hidden" src="@/section/s1/bg-m.png" /> -->
         <div class="links relative">
@@ -26,11 +27,11 @@
         <img class="logo2 relative" src="@/section/form/logo2.svg" />
     </div>
 
-    <!--div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.gif" alt="達麗河蘊" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
-    </div-->
+    </div>
 </template>
 
 <style lang="scss">
@@ -85,21 +86,14 @@
         }
 
         .title {
-            border: size-m(1) solid #E3B15F;
-            border-radius: size-m(10);
             font-weight: 700;
             font-size: size-m(18);
             line-height: size-m(26);
             text-align: left;
-            color: #E3B15F;
-            padding: size-m(6) size-m(11);
             @media screen and (min-width:768px) {
-                border: size(1) solid #E3B15F;
-                border-radius: size(10);
                 font-size: size(29);
                 line-height: size(42);
-                padding: size(12) size(20);
-                margin-bottom: size(12);
+                margin-bottom: size(28);
             }
         }
 
@@ -143,16 +137,10 @@
         width: 100%;
         @media screen and (min-width:768px) {
             position: absolute;
-            width: size(420);
+            width: size(418);
             top: size(701);
             left: size(128);
         }
-    }
-}
-
-@media screen and (max-width:768px) {
-    .house-info {
-        margin-bottom: size-m(63);
     }
 }
 </style>

@@ -1,20 +1,61 @@
 <template>
-  <section class="s4 relative bg-[#EEEEEE]">
-    <div class="img1 absolute" data-aos="fade-up" data-aos-delay="0">
-      <img src="@/section/s4/img1.jpg" /><img class="absolute" src="@/section/s4/img1.png" />
-    </div>    
-    <div class="img2 absolute" data-aos="fade-up" data-aos-delay="0">
-    <img src="./s4/img2.jpg" />
-    <!--img class="absolute" src="./s4/img22.png" /-->
-    <!--img class="absolute" src="./s4/img23.png" /-->
-    </div>    
-    <div class="text absolute">
-      <div class="title" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">文林北路綠樹園道<br>國際北士科首席</div>
-      <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000">
-        從信義計劃、內科到南軟，與經濟脈動並肩的重劃區增值潛力之大早已驗證。台北市最後一塊重劃區北士科彌足珍貴，純住宅區比例僅占約14％，更是珍稀。<br>
-        <br>
-        文林北路第一排，領航盛世燙金門牌，與便捷機能咫尺相連，與綠樹街廓優雅共生，鳳毛麟角般的存在，擁有一席即是贏家。
-      </p>
+  <section class="s4 relative">
+    
+    <div class="t1">寬裕，隨心所欲</div>
+    <div class="t2">基隆河從大直蜿蜒而來，與外雙溪交會出新洲美水岸綠洲，河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
+
+    <div class="controls">
+      <div class="btn-prev">
+        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+        </svg>
+      </div>
+
+      <div class="btn-next">
+        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
+          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
+          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
+          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
+        </svg>
+      </div>
+    </div>
+
+    <div class="slider slider1" :style="{ 'z-index': 2 }">
+      <div class="slide" :style="{ 'z-index': 2 }">
+        <img src="@/section/s4/1.jpg">
+        <div class="txt">蜆仔港公園</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/2.jpg">
+        <div class="txt">雙溪濕地公園</div>
+      </div>
+    </div>
+
+    <div class="slider slider2" :style="{ 'z-index': 2 }">
+      <div class="slide" :style="{ 'z-index': 2 }">
+        <img src="@/section/s4/2.jpg">
+        <div class="txt">雙溪濕地公園</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/1.jpg">
+        <div class="txt">蜆仔港公園</div>
+      </div>
+    </div>
+
+    <div class="t2 t3 z-10">
+      <span class="text-[#002B69]">二萬多坪河岸綠地—— </span><br class="md:hidden">
+      洲美公園、蜆仔港公園、雙溪濕地公園，共譜水岸城市綠洲。<br class="md:hidden">
+      <br>
+      <span class="text-[#002B69]">三座國際學校、二所名校—— </span><br class="md:hidden">
+      美國學校、日僑學校、歐洲學校、奎山中學、薇閣中學。<br class="md:hidden">
+      <br>
+      <span class="text-[#002B69]">五大醫療院所，二大醫學院校—— </span><br class="md:hidden">
+      榮民總醫院、振興醫院、臺北護理健康大學、新光醫學中心、和信醫院、陽明醫院、陽明交通大學與衛福部國家中醫藥研究所。<br class="md:hidden">
+      <br>
+      <span class="text-[#002B69]">出行條條大道—— </span><br class="md:hidden">
+      1分鐘福國路，2分鐘洲美快速道路，8分鐘中山北路。
     </div>
   </section>
 </template>
@@ -23,77 +64,191 @@
 @import "@/assets/style/function.scss";
 .s4 {
   width: 100%;
-  height: size-m(742);
+  padding: size-m(30) 0 size-m(56) 0;
+  font-family: 'Noto Serif TC';
   @media screen and (min-width:768px) {
     height: size(1080);
+    padding: 0;
   }
 
-  .img1 {
-    width: size-m(315);
-    top: size-m(162);
-    left: size-m(30);
-    img{width: 100%;
-    &:last-child{top: 0;left: 0;}
-    }
+  .t1 {
+    color: #002B69;
+    font-size: size-m(18);
+    line-height: size-m(26);
+    letter-spacing: .07em;
+    font-weight: 700;
+    padding: 0 size-m(52.5);
+    margin-bottom: size-m(11);
     @media screen and (min-width:768px) {
-      width: size(933);
-      top: size(120);
-      left: size(109);
+      position: absolute;
+      top: size(221);
+      left: size(148);
+      font-size: size(40);
+      line-height: size(57);
+      padding: 0;
+      margin-bottom: 0;
     }
   }
 
-  .img2 {
-    width: size-m(148);
-    top: size-m(52);
-    left: size-m(197);
+  .t2 {
+    color: #000;
+    font-size: size-m(14);
+    line-height: 170%;
+    font-weight: 700;
+    padding: 0 size-m(52.5);
+    margin-bottom: size-m(47.5);
+    @media screen and (min-width:768px) {
+      position: absolute;
+      top: size(296);
+      left: size(148);
+      font-size: size(20);
+      padding: 0;
+      margin-bottom: 0;
+      width: size(784);
+    }
+  }
+
+  .t3 {
+    @media screen and (min-width:768px) {
+      top: size(785);
+      left: size(990);
+    }
+  }
+
+  .controls {
+    display: flex;
+    justify-content: space-between;
+    width: size-m(270);
+    margin: 0 auto size-m(34.5) auto;
+    @media screen and (min-width:768px) {
+      position: absolute;
+      top: size(130);
+      left: size(148);
+      width: size(1626);
+      margin: 0;
+    }
+
+    .btn-prev, .btn-next {
+      cursor: pointer;
+      z-index: 1;
+
+      .arrow-icon {
+        width: size-m(35);
+        transition: transform ease-in-out 0.2s;
+        vertical-align: middle;
+        @media screen and (min-width:768px) {
+          width: size(50);
+        }
+        .cir {
+          stroke-dasharray: 162;
+          stroke-dashoffset: 162;
+          transition: stroke-dashoffset ease-in-out 0.5s;
+          fill: rgba(255, 255, 255, .5);
+        }
+        .arrow {
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        &:hover {
+          transform: scale(1);
+          .cir {
+            stroke-dashoffset: 0;
+          }
+          .arrow {
+            animation: arrow ease-in-out 0.5s;
+          }
+        }
+        @keyframes arrow {
+          0% {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+          30% {
+            transform: translateX(30%);
+            opacity: 0;
+          }
+          31% {
+            transform: translateX(-30%);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0%);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .btn-prev {
+      transform: rotate(180deg);
+    }
+  }
+
+  .slider {
+    position: relative;
+    width: 100%;
+    height: size-m(218.11);
+    background: #ddd;
     overflow: hidden;
-    img{width: 100%;top: 0;left: 0;
-    &:nth-child(2){
-      animation: an 3s linear infinite;
-    }
-    }
+    margin-bottom: size-m(35.22);
     @media screen and (min-width:768px) {
-      width: size(445);
-      top: size(119);
-      left: size(1256);
+      position: absolute;
+      top: size(491);
+      left: size(148);
+      width: size(784);
+      height: size(456);
+      margin-bottom: 0;
     }
-    @keyframes an{
-    from{transform: translate(35%,100%);
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+
+      img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .txt {
+        position: absolute;
+        top: size-m(2);
+        right: size-m(8);
+        color: #fff;
+        font-size: size-m(10);
+        font-weight: 700;
+        line-height: 170%;
+        @media screen and (min-width:768px) {
+          top: size(5);
+          right: size(10);
+          font-size: size(12);
+        }
+      }
     }
-    to{transform: translate(-30%,-100%);
-    }
-}
   }
 
-  .text {
-    top: size-m(485);
-    left: 0;
-    padding: 0 size-m(31);
-    font-size: size-m(13);
-    line-height: size-m(20);
-    text-align: justify;
-    color: #4D4D4D;
+  .slider2 {
+    margin-bottom: size-m(47.89);
     @media screen and (min-width:768px) {
-      top: size(524);
-      left: size(1256);
-      width: size(445);
-      padding: 0 size(0);
-      font-size: size(22);
-      line-height: size(34);
+      margin-bottom: 0;
+      position: absolute;
+      top: size(236);
+      left: size(990);
     }
 
-    .title {
-      font-weight: 700;
-      font-size: size-m(20);
-      line-height: size-m(29);
-      letter-spacing: 0.06em;
-      color: #0A534C;
-      font-family: 'Noto Serif TC';
-      margin-bottom: size-m(16);
+    .slide .txt {
+      top: auto;
+      right: auto;
+      bottom: size-m(2);
+      left: size-m(8);
       @media screen and (min-width:768px) {
-        font-size: size(39);
-        line-height: size(56);
-        margin-bottom: size(38);
+        bottom: size(5);
+        left: size(10);
       }
     }
   }

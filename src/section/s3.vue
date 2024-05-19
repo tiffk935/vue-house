@@ -219,6 +219,7 @@
       width: 100%;
       height: size(640);
       background-image: url(@/section/s3/bg-m.png);
+      padding: 0;
 
       &:after {
         content: '';
