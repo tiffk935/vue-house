@@ -10,15 +10,33 @@
     </div>
     <div class="img-mask absolute"></div>
     <img class="t1 absolute" src="@/section/s1/t1.svg" />
-    <img class="t2 absolute md:hidden" src="@/section/s1/t2-m.svg" />
-    <img class="t2 absolute hidden md:block" src="@/section/s1/t2.svg" />
-    <img class="order-btn absolute md:hidden" src="@/section/s1/btn-m.svg" @click="scrollTo('.order')" />
-    <img class="order-btn absolute hidden md:block" src="@/section/s1/btn.svg" @click="scrollTo('.order')" />
+
+    <div class="txt md:hidden">
+      <img class="t2 absolute" src="@/section/s1/t2-m.svg" />
+      <img class="order-btn absolute" src="@/section/s1/btn-m.svg" @click="scrollTo('.order')" />
+    </div>
+
+    <div class="txt hidden md:block">
+      <img class="t2 absolute" src="@/section/s1/t2.svg" />
+      <img class="order-btn absolute" src="@/section/s1/btn.svg" @click="scrollTo('.order')" />
+    </div>
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
+
+@keyframes mask {
+  to {
+    mask-position: 0 100%;
+  }
+}
+
+@keyframes txtfade {
+  to {
+    opacity: 1;
+  }
+}
 
 .s1 {
   width: 100%;
@@ -65,23 +83,37 @@
       left: size(521);
       width: size(874.5);
     }
+    
+    img {
+      mask-image: linear-gradient(rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 1) 100%);
+      mask-size: 100% 130%;
+      mask-repeat: no-repeat;
+      mask-position: 0 -325%;
+    }
+  }
 
-    // &:after {
-    //   content: '';
-    //   position: absolute;
-    //   top: 0;
-    //   left: 0;
-    //   width: 100%;
-    //   height: 100%;
-    //   // background: #000;
-    //   // clip-path: polygon(0 0, 100% 0, 100% 78%, 0 78%);
-    // }
+  &.animating {
+    .img img {
+      animation: mask 3s linear forwards;
+      animation-delay: 1s;
+    }
+
+    .t1 {
+      animation: txtfade 1s linear forwards;
+      animation-delay: 2s;
+    }
+
+    .txt {
+      animation: txtfade 1.5s linear forwards;
+      animation-delay: 2.5s;
+    }
   }
 
   .t1 {
     top: size-m(280.99);
     left: size-m(52);
     width: size-m(271);
+    opacity: 0;
     @media screen and (min-width:768px) {
       top: size(794.15);
       left: size(584.11);
@@ -110,6 +142,10 @@
       left: size(1546.52);
       width: size(215.8);
     }
+  }
+
+  .txt {
+    opacity: 0;
   }
 }
 </style>

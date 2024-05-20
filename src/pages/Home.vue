@@ -16,14 +16,15 @@
     <S2 />
     <S3 />
     <S4 />
-
-    <S5 />
-
-    <S6 />
-    <S7 />
-
     <div class="relative">
-      <div class="s9bg"></div>
+      <img class="s5s6bg w-full absolute left-0 md:hidden" src="@/section/s5/bg-m.png" />
+      <img class="s5s6bg w-full absolute left-0 hidden md:block" src="@/section/s5/bg.png" />
+      <S5 />
+      <S6 />
+    </div>
+    <S7 />
+    <div class="relative">
+      <div class="s8bg"></div>
       <S8 />
       <Order />
     </div>
@@ -32,7 +33,14 @@
 
 <style lang="scss">
   @import "@/assets/style/function.scss";
-  .s9bg {
+  .s5s6bg {
+    position: absolute;
+    top: size-m(190.73);
+    @media screen and (min-width:768px) {
+      top: size(367);
+    }
+  }
+  .s8bg {
     position: absolute;
     top: size-m(146);
     left: 0;    
@@ -73,6 +81,9 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
+    setTimeout(() => {
+      document.querySelector('.s1').classList.add('animating');
+    }, 1000);
   };
 })
 </script>

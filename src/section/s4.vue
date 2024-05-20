@@ -5,7 +5,7 @@
     <div class="t2">基隆河從大直蜿蜒而來，與外雙溪交會出新洲美水岸綠洲，河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
 
     <div class="controls">
-      <div class="btn-prev">
+      <div class="btn-prev" @click="goPrev">
         <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
           <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
           <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
@@ -13,7 +13,7 @@
         </svg>
       </div>
 
-      <div class="btn-next">
+      <div class="btn-next" @click="goNext">
         <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
           <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
           <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
@@ -257,4 +257,92 @@
 </style>
 
 <script setup>
+import { ref } from "vue";
+import { gsap } from "gsap";
+const currentSlide = ref(0);
+let animating = false;
+
+function goNext() {
+  let currIdx = currentSlide.value;
+  let nextIdx;
+  
+  currentSlide.value++;
+
+  if ( currentSlide.value === document.querySelectorAll('.s4 .slider1 .slide').length ) {
+    currentSlide.value = 0;
+  }
+
+  nextIdx = currentSlide.value;
+
+  const tl = setTimeline(currIdx, nextIdx);
+  tl.play();
+}
+
+function goPrev() {
+  let currIdx = currentSlide.value;
+  let nextIdx;
+  
+  currentSlide.value--;
+
+  if ( currentSlide.value === -1 ) {
+    currentSlide.value = document.querySelectorAll('.s4 .slider1 .slide').length - 1;
+  }
+
+  nextIdx = currentSlide.value;
+
+  const tl = setTimeline2(currIdx, nextIdx);
+  tl.play();
+}
+
+function setTimeline(currIdx, nextIdx) {
+  animating = true;
+  const nextEL1 = document.querySelectorAll('.s4 .slider1 .slide')[nextIdx];
+  const currEL1 = document.querySelectorAll('.s4 .slider1 .slide')[currIdx];
+  const nextEL2 = document.querySelectorAll('.s4 .slider2 .slide')[nextIdx];
+  const currEL2 = document.querySelectorAll('.s4 .slider2 .slide')[currIdx];
+  const tl = gsap.timeline({
+    paused: true,
+    onComplete: function() {
+      animating = false;
+    }
+  }, 0);
+
+  tl.set('.s4 .slider1 .slide', { zIndex: 0 }, 0);
+  tl.set(currEL1, { zIndex: 1 }, 0);
+  tl.set(nextEL1, { clipPath: 'polygon(160% 0, 100% 0, 100% 100%, 100% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL1, { clipPath: 'polygon(-30% 0, 100% 0, 100% 100%, -30% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL1, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+  tl.set(currEL2, { zIndex: 1 }, 0);
+  tl.set(nextEL2, { clipPath: 'polygon(160% 0, 100% 0, 100% 100%, 100% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL2, { clipPath: 'polygon(-30% 0, 100% 0, 100% 100%, -30% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL2, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+
+  return tl;
+}
+
+function setTimeline2(currIdx, nextIdx) {
+  animating = true;
+  const nextEL1 = document.querySelectorAll('.s4 .slider1 .slide')[nextIdx];
+  const currEL1 = document.querySelectorAll('.s4 .slider1 .slide')[currIdx];
+  const nextEL2 = document.querySelectorAll('.s4 .slider2 .slide')[nextIdx];
+  const currEL2 = document.querySelectorAll('.s4 .slider2 .slide')[currIdx];
+  const tl = gsap.timeline({
+    paused: true,
+    onComplete: function() {
+      animating = false;
+    }
+  }, 0);
+
+  tl.set('.s4 .slider1 .slide', { zIndex: 0 }, 0);
+  tl.set(currEL1, { zIndex: 1 }, 0);
+  tl.set(nextEL1, { clipPath: 'polygon(0 0, 0% 0, 0% 100%, -30% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL1, { clipPath: 'polygon(0 0, 160% 0%, 100% 100%, 0% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL1, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+  tl.set(currEL2, { zIndex: 1 }, 0);
+  tl.set(nextEL2, { clipPath: 'polygon(0 0, 0% 0, 0% 100%, -30% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
+  tl.to(nextEL2, { clipPath: 'polygon(0 0, 160% 0%, 100% 100%, 0% 100%)', duration: 1, ease: "power3.out" }, 0);
+  tl.to(nextEL2, { scale: 1, rotation: 0, duration: 1.5, ease: "power3.out" }, 0);
+
+  return tl;
+}
 </script>

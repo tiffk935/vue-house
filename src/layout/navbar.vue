@@ -223,7 +223,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 34, 31, 0.9);
+    background: rgba(0, 77, 157, 0.8);
     z-index: 99;
     display: flex;
     font-family: 'Noto Serif TC';

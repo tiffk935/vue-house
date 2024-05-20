@@ -1,5 +1,5 @@
 <template>
-  <section class="s9 relative">
+  <section class="s8 relative">
     <div class="slider-tabs absolute">
       <div :class="{'slider-tab': true, 'active': currentTab == 25}" @click="clickTab(25)">
         <div><span>25</span>坪</div>
@@ -154,7 +154,7 @@
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
-.s9 {
+.s8 {
   width: 100%;
   height: size-m(666);
   font-family: 'Noto Serif TC';
@@ -446,7 +446,7 @@ function goNext() {
   
   currentSlide.value++;
 
-  if ( currentSlide.value === document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide').length ) {
+  if ( currentSlide.value === document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide').length ) {
     currentSlide.value = 0;
   }
 
@@ -463,7 +463,7 @@ function goPrev() {
   currentSlide.value--;
 
   if ( currentSlide.value === -1 ) {
-    currentSlide.value = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide').length - 1;
+    currentSlide.value = document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide').length - 1;
   }
 
   nextIdx = currentSlide.value;
@@ -485,8 +485,8 @@ function jumpTo(idx) {
 
 function setTimeline(currIdx, nextIdx) {
   animating = true;
-  const nextEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[nextIdx];
-  const currEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[currIdx];
+  const nextEL = document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide')[nextIdx];
+  const currEL = document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide')[currIdx];
   const tl = gsap.timeline({
     paused: true,
     onComplete: function() {
@@ -494,7 +494,7 @@ function setTimeline(currIdx, nextIdx) {
     }
   }, 0);
 
-  tl.set('.s9 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
+  tl.set('.s8 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
   tl.set(currEL, { zIndex: 1 }, 0);
   tl.set(nextEL, { clipPath: 'polygon(160% 0, 100% 0, 100% 100%, 100% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
   tl.to(nextEL, { clipPath: 'polygon(-30% 0, 100% 0, 100% 100%, -30% 100%)', duration: 1, ease: "power3.out" }, 0);
@@ -505,8 +505,8 @@ function setTimeline(currIdx, nextIdx) {
 
 function setTimeline2(currIdx, nextIdx) {
   animating = true;
-  const nextEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[nextIdx];
-  const currEL = document.querySelectorAll('.s9 .content' + currentTab.value + ' .slide')[currIdx];
+  const nextEL = document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide')[nextIdx];
+  const currEL = document.querySelectorAll('.s8 .content' + currentTab.value + ' .slide')[currIdx];
   console.log('nextEL', nextEL)
   console.log('currEL', currEL)
   const tl = gsap.timeline({
@@ -516,7 +516,7 @@ function setTimeline2(currIdx, nextIdx) {
     }
   }, 0);
 
-  tl.set('.s9 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
+  tl.set('.s8 .content' + currentTab.value + ' .slide', { zIndex: 0 }, 0);
   tl.set(currEL, { zIndex: 1 }, 0);
   tl.set(nextEL, { clipPath: 'polygon(0 0, 0% 0, 0% 100%, -30% 100%)', scale: 1.1, rotation: 1, zIndex: 2 }, 0);
   tl.to(nextEL, { clipPath: 'polygon(0 0, 160% 0%, 100% 100%, 0% 100%)', duration: 1, ease: "power3.out" }, 0);
