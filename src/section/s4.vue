@@ -143,7 +143,7 @@ function onImgLoad(e) {
   if (map.value && img) {
     let status = 0;
     let hideHand = false;
-    map.value.scrollLeft = img.clientWidth * 0.5 - window.innerWidth/2;
+    map.value.scrollLeft = img.clientWidth * 0.51 - window.innerWidth/2;
     map.value.addEventListener("scroll", () => {
       status++;
       if(status > 1 && !hideHand){
