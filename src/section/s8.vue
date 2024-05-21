@@ -52,8 +52,8 @@
         </div>
 
         <div class="text">
-          <div class="t1">1文字待更換</div>
-          <div class="t2">1文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
+          <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">1文字待更換</div>
+          <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">1文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
         </div>
       </div>
     </transition>

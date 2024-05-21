@@ -5,47 +5,47 @@
       <div class="slider slider1">
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">4世界灣</div>
+          <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/5.jpg" />
-          <div class="st1">5達麗天蒔</div>
+          <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide active">
           <img src="@/section/s5/1.jpg" />
-          <div class="st1">1陽明大苑</div>
+          <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/2.jpg" />
-          <div class="st1">2達麗101</div>
+          <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/3.jpg" />
-          <div class="st1">3KODA ON 5TH AVE</div>
+          <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">4世界灣</div>
+          <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/5.jpg" />
-          <div class="st1">5達麗天蒔</div>
+          <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/1.jpg" />
-          <div class="st1">1陽明大苑</div>
+          <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/2.jpg" />
-          <div class="st1">2達麗101</div>
+          <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
       </div>
@@ -55,52 +55,52 @@
       <div class="slider slider2">
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">4世界灣</div>
+          <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/5.jpg" />
-          <div class="st1">5達麗天蒔</div>
+          <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide active">
           <img src="@/section/s5/1.jpg" />
-          <div class="st1">1陽明大苑</div>
+          <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/2.jpg" />
-          <div class="st1">2達麗101</div>
+          <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/3.jpg" />
-          <div class="st1">3KODA ON 5TH AVE</div>
+          <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">4世界灣</div>
+          <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/5.jpg" />
-          <div class="st1">5達麗天蒔</div>
+          <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/1.jpg" />
-          <div class="st1">1陽明大苑</div>
+          <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/2.jpg" />
-          <div class="st1">2達麗101</div>
+          <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/3.jpg" />
-          <div class="st1">3KODA ON 5TH AVE</div>
+          <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
         </div>
       </div>
@@ -125,8 +125,8 @@
     </div>
 
     <div class="text md:flex md:justify-between">
-      <div class="t1">成為台灣最全球化的地產開發商</div>
-      <div class="t2">達麗從台灣到西雅圖，從建設到營建、商場，早已邁向國際化，每一座達麗建築都以與世界各大城市新建築比肩的標準檢視，跨國際推案、跨國團隊合作，不只成就達麗建築成為世界級建築，國際視野與世界觀更讓達麗跳脫單一建築個案思維，從環境與城市發展宏觀角度定位建築。</div>
+      <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">成為台灣最全球化的地產開發商</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">達麗從台灣到西雅圖，從建設到營建、商場，早已邁向國際化，每一座達麗建築都以與世界各大城市新建築比肩的標準檢視，跨國際推案、跨國團隊合作，不只成就達麗建築成為世界級建築，國際視野與世界觀更讓達麗跳脫單一建築個案思維，從環境與城市發展宏觀角度定位建築。</div>
     </div>
   </section>
 </template>

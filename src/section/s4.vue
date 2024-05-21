@@ -1,8 +1,8 @@
 <template>
   <section class="s4 relative">
     
-    <div class="t1">寬裕，隨心所欲</div>
-    <div class="t2">基隆河從大直蜿蜒而來，與外雙溪交會出新洲美水岸綠洲，河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
+    <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">寬裕，隨心所欲</div>
+    <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">基隆河從大直蜿蜒而來，與外雙溪交會出新洲美水岸綠洲，河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
 
     <div class="controls">
       <div class="btn-prev" @click="goPrev">
@@ -44,7 +44,7 @@
       </div>
     </div>
 
-    <div class="t2 t3 z-10">
+    <div class="t2 t3 z-10" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
       <span class="text-[#002B69]">二萬多坪河岸綠地—— </span><br class="md:hidden">
       洲美公園、蜆仔港公園、雙溪濕地公園，共譜水岸城市綠洲。<br class="md:hidden">
       <br>

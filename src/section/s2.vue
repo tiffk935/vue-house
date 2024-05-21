@@ -7,10 +7,10 @@
     <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
     <div class="content absolute">
       <div>
-        <div class="title">北士科盛世時代</div>
-        <div class="line"></div>
+        <div class="title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">北士科盛世時代</div>
+        <div class="line" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"></div>
       </div>
-      <div class="txt">台北科技廊帶最後拼圖-北士科，串連內科2.0計劃、南港生技聚落計劃，台北立足國際最重要的城市戰略，下一輪繁榮盛世就看北士科。300億金仁寶總部動工，中鼎集團第二總部、新光雙塔一一就位，十兆產值蓄勢待發，超過30家一線建商投入建設，國際北士科超速啟動，劇力萬鈞。</div>
+      <div class="txt" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">台北科技廊帶最後拼圖-北士科，串連內科2.0計劃、南港生技聚落計劃，台北立足國際最重要的城市戰略，下一輪繁榮盛世就看北士科。300億金仁寶總部動工，中鼎集團第二總部、新光雙塔一一就位，十兆產值蓄勢待發，超過30家一線建商投入建設，國際北士科超速啟動，劇力萬鈞。</div>
     </div>
   </section>
 </template>

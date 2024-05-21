@@ -2,9 +2,9 @@
   <section class="s3 relative">
     
     <div class="content absolute">
-      <div class="t1">富人水岸，科技新創，價值未來</div>
-      <div class="t2">台北市第一個真正回歸水岸生活、融合自然的國際濱水城區</div>
-      <div class="t3">北士科94.38公頃，規劃為城市生活區、主要產業核心區及水岸融合區。新洲美水岸融合區，親水超級堤防、水岸步道、公園綠地、自行車道、遊艇碼頭…，引入水岸商業步行街區，成為台北市第一個真正回歸水岸生活、融合自然的國際化濱水城區。將以國際水岸特區為台北未來城市生活樹立嶄新典範。</div>
+      <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">富人水岸，科技新創，價值未來</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">台北市第一個真正回歸水岸生活、融合自然的國際濱水城區</div>
+      <div class="t3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">北士科94.38公頃，規劃為城市生活區、主要產業核心區及水岸融合區。新洲美水岸融合區，親水超級堤防、水岸步道、公園綠地、自行車道、遊艇碼頭…，引入水岸商業步行街區，成為台北市第一個真正回歸水岸生活、融合自然的國際化濱水城區。將以國際水岸特區為台北未來城市生活樹立嶄新典範。</div>
     </div>
 
     <div class="md:hidden">

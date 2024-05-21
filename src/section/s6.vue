@@ -1,8 +1,8 @@
 <template>
   <section class="s6 relative">
     <div class="content absolute z-10">
-      <div class="t1">浮光鑠金，凝鍊水岸時代經典</div>
-      <div class="t2">陳傳宗建築師認為建築決定都市風貌，必須隨著時光歷久彌新，具有時代性與現代感。達麗河藴建築呼應水岸，銀色金屬水平線條，層層流動，呈現浮光鑠金般的柔軟動感。1500坪大基地，全街廓開發，賦予達麗河藴在城市中被注目的尺度，簡潔大器，自有風格。</div>
+      <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">浮光鑠金，凝鍊水岸時代經典</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">陳傳宗建築師認為建築決定都市風貌，必須隨著時光歷久彌新，具有時代性與現代感。達麗河藴建築呼應水岸，銀色金屬水平線條，層層流動，呈現浮光鑠金般的柔軟動感。1500坪大基地，全街廓開發，賦予達麗河藴在城市中被注目的尺度，簡潔大器，自有風格。</div>
     </div>
 
     <div class="md:hidden">
