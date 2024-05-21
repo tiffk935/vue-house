@@ -212,13 +212,13 @@
     left: 0;
     width: 100%;
     padding: size-m(36.27) size-m(52.5) size-m(38);
-    background-image: url(@/section/s3/bg-m.png);
-    background-size: cover;
+    background-image: url(@/section/s3/bg-m.webp);
+    background-size: 100% 100%;
     font-weight: 700;
     @media screen and (min-width:768px) {
       width: 100%;
       height: size(640);
-      background-image: url(@/section/s3/bg-m.png);
+      background-image: url(@/section/s3/bg.webp);
       padding: 0;
 
       &:after {
