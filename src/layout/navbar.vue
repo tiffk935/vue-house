@@ -166,7 +166,7 @@
             cursor: pointer;
             @media screen and (min-width:768px) {
                 width: auto;
-                height: auto;
+                height:calc(13px + #{size(50 - 13)});
             }
 
             circle {

@@ -40,18 +40,11 @@
 
 .s1 {
   width: 100%;
-    @media screen and (min-width:768px) {
-      min-height: size(900);
-      max-height: size(1080);
-      height: 100vh;
-      overflow: hidden;
-    }
 
   .bg-wrapper {
     width: 290%;
     @media screen and (min-width:768px) {
       width: 100%;
-      height: 100%;
     }
 
     .bg {
@@ -61,11 +54,6 @@
       height: 0;
       padding-top: 56.22568%;
       background: #ddd;
-    @media screen and (min-width:768px) {
-      height: 100%;
-      padding: 0;
-    //  top: calc(50% + #{size(0 - 1080 * .5)});
-    }
 
       &:after {
         content: '';
@@ -82,11 +70,6 @@
         position: absolute;
         top: 0;
         left: 0;
-    @media screen and (min-width:768px) {
-      top: auto;
-      height: auto;
-        bottom:calc(50% + #{size(0 - 1080 * .5)});
-      }
       }
     }
   }
@@ -97,7 +80,6 @@
     width: size-m(306);
     @media screen and (min-width:768px) {
       top: size(223.34);
-      top: calc(50% + #{size(223.34 - 1080 * .5)});
       left: size(521);
       width: size(874.5);
     }
@@ -134,7 +116,6 @@
     opacity: 0;
     @media screen and (min-width:768px) {
       top: size(794.15);
-      top: calc(55% + #{size(794.15 - 1080 * .55)});
       left: size(584.11);
       width: size(759.14);
     }
@@ -146,7 +127,6 @@
     width: size-m(237.99);
     @media screen and (min-width:768px) {
       top: size(952.62);
-      top: calc(75% + #{size(948 - 1080 * .75)});
       left: size(157.28);
       width: size(1264.42);
     }
@@ -159,7 +139,6 @@
     cursor: pointer;
     @media screen and (min-width:768px) {
       top: size(947.9);
-      top: calc(75% + #{size(948 - 1080 * .75)});
       left: size(1546.52);
       width: size(230);
     }
