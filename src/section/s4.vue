@@ -91,20 +91,12 @@
         <div class="txt">中山北路、林蔭大道</div>
       </div>
     </div>
-
-    <div class="t2 t3 z-10" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">
-      <span class="text-[#002B69]">二萬多坪河岸綠地—— </span><br class="md:hidden">
-      洲美公園、蜆仔港公園、雙溪濕地公園，共譜水岸城市綠洲。<br class="md:hidden">
-      <br>
-      <span class="text-[#002B69]">三座國際學校、二所名校—— </span><br class="md:hidden">
-      美國學校、日僑學校、歐洲學校、奎山中學、薇閣中學。<br class="md:hidden">
-      <br>
-      <span class="text-[#002B69]">五大醫療院所，二大醫學院校—— </span><br class="md:hidden">
-      榮民總醫院、振興醫院、臺北護理健康大學、新光醫學中心、和信醫院、陽明醫院、陽明交通大學與衛福部國家中醫藥研究所。<br class="md:hidden">
-      <br>
-      <span class="text-[#002B69]">出行條條大道—— </span><br class="md:hidden">
-      1分鐘福國路，2分鐘洲美快速道路，8分鐘中山北路。
-    </div>
+    <ul class="t2 t3 z-10">
+      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0"><span class="subtitle">二萬多坪河岸綠地</span><span class="hr"></span><span class="desc">洲美公園、蜆仔港公園、雙溪濕地公園，共譜水岸城市綠洲。</span></li>
+      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><span class="subtitle">三座國際學校、二所名校</span><span class="hr"></span><span class="desc">美國學校、日僑學校、歐洲學校、奎山中學、薇閣中學。</span></li>
+      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><span class="subtitle">五大醫療院所，二大醫學院校</span><span class="hr"></span><span class="desc">榮民總醫院、振興醫院、臺北護理健康大學、新光醫學中心、和信醫院、陽明醫院、陽明交通大學與衛福部國家中醫藥研究所。</span></li>
+      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><span class="subtitle">出行條條大道</span><span class="hr"></span><span class="desc">1分鐘福國路，2分鐘洲美快速道路，8分鐘中山北路。</span></li>
+    </ul>
   </section>
 </template>
 
@@ -157,8 +149,33 @@
   }
 
   .t3 {
+    li{
+      display: flex;align-items:center;gap: .3em;
+      text-align: justify;flex-wrap: wrap;
+    line-height: 1.5;margin-top:1.3em;
+
+      .subtitle{color: #002B69; white-space: nowrap;}
+      .hr{flex: 1;height: 1px;background:#002B6999;}
+      .desc{width:100%;text-align: justify;}
+      @media screen and (min-width:768px) {
+        flex-wrap:nowrap;margin-top:.3em;
+      .desc{width:auto;}
+        &:nth-child(3){
+          display: block;
+        .hr{width: 2em;display: inline-block;vertical-align: middle; margin: auto .3em;}
+        .desc{width: auto;}
+        }
+
+      }
+    }
     @media screen and (min-width:768px) {
-      top: size(785);
+      top: size(775);
+      left: size(990);
+    }
+  }
+  .t4 {
+    @media screen and (min-width:768px) {
+      top: size(985);
       left: size(990);
     }
   }
