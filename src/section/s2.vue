@@ -24,7 +24,7 @@
           <swiper-slide>
             <div class="relative">
               <img class="block w-full" src="@/section/s2/slider/1.webp" />
-              <div class="txt">和院三井花園飯店 台北忠孝</div>
+              <div class="txt">和苑三井花園飯店 台北忠孝</div>
             </div>
           </swiper-slide>
           <swiper-slide>
