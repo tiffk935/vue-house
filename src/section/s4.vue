@@ -25,22 +25,70 @@
     <div class="slider slider1" :style="{ 'z-index': 2 }">
       <div class="slide" :style="{ 'z-index': 2 }">
         <img src="@/section/s4/1.jpg">
-        <div class="txt">蜆仔港公園</div>
+        <div class="txt">洲美蜆仔港公園</div>
       </div>
       <div class="slide">
         <img src="@/section/s4/2.jpg">
         <div class="txt">雙溪濕地公園</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/3.jpg">
+        <div class="txt">歐洲學校</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/4.jpg">
+        <div class="txt">日僑學校</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/5.jpg">
+        <div class="txt">榮民總醫院</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/6.jpg">
+        <div class="txt">新光吳火獅醫院</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/7.jpg">
+        <div class="txt">洲美快速道路</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/8.jpg">
+        <div class="txt">中山北路、林蔭大道</div>
       </div>
     </div>
 
     <div class="slider slider2" :style="{ 'z-index': 2 }">
       <div class="slide" :style="{ 'z-index': 2 }">
+        <img src="@/section/s4/1.jpg">
+        <div class="txt">洲美蜆仔港公園</div>
+      </div>
+      <div class="slide">
         <img src="@/section/s4/2.jpg">
         <div class="txt">雙溪濕地公園</div>
       </div>
       <div class="slide">
-        <img src="@/section/s4/1.jpg">
-        <div class="txt">蜆仔港公園</div>
+        <img src="@/section/s4/3.jpg">
+        <div class="txt">歐洲學校</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/4.jpg">
+        <div class="txt">日僑學校</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/5.jpg">
+        <div class="txt">榮民總醫院</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/6.jpg">
+        <div class="txt">新光吳火獅醫院</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/7.jpg">
+        <div class="txt">洲美快速道路</div>
+      </div>
+      <div class="slide">
+        <img src="@/section/s4/8.jpg">
+        <div class="txt">中山北路、林蔭大道</div>
       </div>
     </div>
 
