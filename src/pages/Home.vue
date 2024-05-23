@@ -20,12 +20,12 @@
       <img class="s5s6bg w-full absolute left-0 md:hidden" src="@/section/s5/bg-m.webp" />
       <img class="s5s6bg w-full absolute left-0 hidden md:block" src="@/section/s5/bg.webp" />
       <S5 />
-      <S6 />
+      <!--S6 /-->
     </div>
-    <S7 />
+    <!--S7 /-->
     <div class="relative">
       <div class="s8bg"></div>
-      <S8 />
+      <!--S8 /-->
       <Order />
     </div>
   </div>
@@ -42,14 +42,16 @@
   }
   .s8bg {
     position: absolute;
-    top: size-m(146);
+    //top: size-m(146);
+    top: size-m(0);
     left: 0;    
     width: 100%;
     height: calc(100% - size-m(146));
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(210,232,244,1) 28%, rgba(156,205,232,1) 54%, rgba(93,141,187,1) 100%);
     @media screen and (min-width:768px) {
-      top: size(-148);
+      //top: size(-148);
+      top: size(0);
       height: calc(100% + size(148));
     }
   }
@@ -62,9 +64,9 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
-import S8 from "@/section/s8.vue"
+//import S6 from "@/section/s6.vue"
+//import S7 from "@/section/s7.vue"
+//import S8 from "@/section/s8.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"

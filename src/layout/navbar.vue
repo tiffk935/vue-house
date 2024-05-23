@@ -157,8 +157,10 @@
 
     .top-btns {
         width: size-m(120.7);
+        
         @media screen and (min-width:768px) {
-            width: size(973.56);
+            //width: size(973.56);
+            width: size-m(130.7);
         }
 
         img, svg {
