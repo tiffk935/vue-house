@@ -219,7 +219,8 @@
     }
 
     .t3 {
-      color: #000;
+      font-weight: 500;
+      color: #333333;
       font-size: size-m(14);
       line-height: 170%;
       font-family: 'Noto Serif TC';

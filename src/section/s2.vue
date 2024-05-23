@@ -96,8 +96,8 @@
     top: size-m(467);
     left: size-m(52.5);
     font-size: size-m(14);
-    font-weight: 700;
-    color: #000000;
+    font-weight: 500;
+    color: #333333;
     font-family: 'Noto Serif TC';
     line-height: 170%;
     @media screen and (min-width:768px) {
@@ -112,6 +112,7 @@
     .title {
       color: #002B69;
       line-height: 1.2;
+      font-weight: 700;
       font-size: size-m(18);
       letter-spacing: .06em;
       margin-bottom: size-m(16);

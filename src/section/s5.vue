@@ -297,10 +297,10 @@
   }
 
   .t2 {
-    color: #000;
+    font-weight: 500;
+    color: #333333;
     font-size: size-m(14);
     line-height: 170%;
-    font-weight: 700;
     padding: 0 size-m(52);
     margin-bottom: size-m(47.5);
     @media screen and (min-width:768px) {
