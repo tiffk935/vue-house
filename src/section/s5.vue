@@ -320,10 +320,12 @@ import { gsap } from "gsap";
 const currSlideIdx = ref(0);
 let tlM, tl;
 let animating = false;
+let timer = null;
 
 onMounted(() => {
   initTLM();
   initTL();
+  goNext();
 });
 
 function initTLM() {
@@ -379,6 +381,11 @@ function initTL() {
 function goNext() {
   if ( animating ) return;
 
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
+
   currSlideIdx.value++;
   
   if ( currSlideIdx.value > 5 ) {
@@ -389,6 +396,12 @@ function goNext() {
     paused: true,
     onComplete: function() {
       animating = false;
+
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+        goNext();
+      }, 2000);
     }
   }, 0);
   subTimelineM.add( tlM.tweenFromTo(currSlideIdx.value-1, currSlideIdx.value) );
@@ -409,6 +422,11 @@ function goNext() {
 function goPrev() {
   if ( animating ) return;
 
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
+
   currSlideIdx.value--;
 
   if ( currSlideIdx.value === -1 ) {
@@ -419,6 +437,12 @@ function goPrev() {
     paused: true,
     onComplete: function() {
       animating = false;
+
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+        goNext();
+      }, 2000);
     }
   }, 0);
   subTimelineM.add( tlM.tweenFromTo(currSlideIdx.value+1, currSlideIdx.value) ); // 1, 0

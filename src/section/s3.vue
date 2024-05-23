@@ -1,6 +1,5 @@
 <template>
   <section class="s3 relative">
-    
     <div class="content absolute">
       <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">富人水岸，科技新創，價值未來</div>
       <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">台北市第一個真正回歸水岸生活、融合自然的國際濱水城區</div>
@@ -8,53 +7,11 @@
     </div>
 
     <div class="md:hidden">
-      <div class="slider-m">
-        <img class="img1" src="@/section/s3/2.jpg" />
-        <img class="img2" src="@/section/s3/1.jpg" />
-        <img class="img3" src="@/section/s3/2.jpg" />
-        <img class="img4" src="@/section/s3/1.jpg" />
-      </div>
-
-      <div class="btn-prev" @click="goPrevM">
-        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-        </svg>
-      </div>
-
-      <div class="btn-next" @click="goNextM">
-        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-        </svg>
-      </div>
+      <SliderM />
     </div>
 
     <div class="hidden md:block">
-      <div class="slider">
-        <img class="img1" src="@/section/s3/2.jpg" />
-        <img class="img2" src="@/section/s3/1.jpg" />
-        <img class="img3" src="@/section/s3/2.jpg" />
-        <img class="img4" src="@/section/s3/1.jpg" />
-      </div>
-
-      <div class="btn-prev" @click="goPrev">
-        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-        </svg>
-      </div>
-
-      <div class="btn-next" @click="goNext">
-        <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-          <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-          <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-          <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-        </svg>
-      </div>
+      <Slider />
     </div>
   </section>
 </template>
@@ -280,120 +237,6 @@
 </style>
 
 <script setup>
-import { gsap } from "gsap";
-import { onMounted } from "vue";
-
-let tl, tl_m;
-const duration = 0.6;
-onMounted(() => {
-  tl = gsap.timeline({ paused: true, defaults: {ease: "none", duration: duration} });
-  tl.addLabel('slide1', 0);
-  tl.to('.s3 .slider .img1', { left: '63.5416666667vw' }, 0);
-  tl.to('.s3 .slider .img2', { width: '48.1770833333vw', left: '7.7083333333vw' }, 0);
-  tl.to('.s3 .slider .img3', { width: '28.9583333333vw', left: '-28.9583333333vw' }, 0);
-  tl.addLabel('slide2', duration);
-  tl.set('.s3 .slider .img4', { width: '28.9583333333vw', left: '100%' }, duration);
-  tl.to('.s3 .slider .img4', { left: '63.5417vw' }, duration);
-  tl.to('.s3 .slider .img1', { width: '48.1771vw', left: '7.7083vw' }, duration);
-  tl.to('.s3 .slider .img2', { width: '28.9583vw', left: '-28.9583vw' }, duration);
-  
-  tl_m = gsap.timeline({ paused: true, defaults: {ease: "none", duration: duration} });
-  tl_m.addLabel('slide1', 0);
-  tl_m.set('.s3 .slider-m .img2', { zIndex: 1 }, 0);
-  tl_m.to('.s3 .slider-m .img1', { left: '14vw', top: 0 }, 0);
-  tl_m.to('.s3 .slider-m .img2', { width: '100%', left: 0, top: '50.6666666667vw' }, 0);
-  tl_m.to('.s3 .slider-m .img3', { width: '14vw', left: '-100vw', top: '70vw' }, 0);
-  tl_m.addLabel('slide2', duration);
-  tl_m.set('.s3 .slider-m .img2', { zIndex: 0 }, duration);
-  tl_m.set('.s3 .slider-m .img1', { zIndex: 1 }, duration);
-  tl_m.set('.s3 .slider-m .img4', { width: '49.3333333333vw', left: '100%', top: 0 }, duration);
-  tl_m.to('.s3 .slider-m .img4', { left: '14vw', top: 0 }, duration);
-  tl_m.to('.s3 .slider-m .img1', { width: '100%', left: 0, top: '50.6666666667vw' }, duration);
-  tl_m.to('.s3 .slider-m .img2', { width: '14vw', left: '-100vw', top: '70vw' }, duration);
-});
-
-let showSlide1 = true;
-let animating = false;
-
-function goNextM() {
-  if (animating) return;
-
-  showSlide1 = !showSlide1;
-  const subTimeline = gsap.timeline({
-    onComplete: function() {
-      animating = false;
-    }
-  });
-
-  if (showSlide1) {
-    subTimeline.add( tl_m.tweenFromTo('slide2', tl_m.duration()) );
-  } else {
-    subTimeline.add( tl_m.tweenFromTo('slide1', 'slide2') );
-  }
-  subTimeline.play();
-
-  animating = true;
-}
-
-function goPrevM() {
-  if (animating) return;
-
-  showSlide1 = !showSlide1;
-  const subTimeline = gsap.timeline({
-    onComplete: function() {
-      animating = false;
-    }
-  });
-
-  if (showSlide1) {
-    subTimeline.add( tl_m.tweenFromTo('slide2', 0) );
-  } else {
-    subTimeline.add( tl_m.tweenFromTo(tl_m.duration(), 'slide2') );
-  }
-
-  subTimeline.play();
-  
-  animating = true;
-}
-
-function goNext() {
-  if (animating) return;
-
-  showSlide1 = !showSlide1;
-  const subTimeline = gsap.timeline({
-    onComplete: function() {
-      animating = false;
-    }
-  });
-
-  if (showSlide1) {
-    subTimeline.add( tl.tweenFromTo('slide2', tl.duration()) );
-  } else {
-    subTimeline.add( tl.tweenFromTo('slide1', 'slide2') );
-  }
-  subTimeline.play();
-
-  animating = true;
-}
-
-function goPrev() {
-  if (animating) return;
-
-  showSlide1 = !showSlide1;
-  const subTimeline = gsap.timeline({
-    onComplete: function() {
-      animating = false;
-    }
-  });
-
-  if (showSlide1) {
-    subTimeline.add( tl.tweenFromTo('slide2', 0) );
-  } else {
-    subTimeline.add( tl.tweenFromTo(tl.duration(), 'slide2') );
-  }
-
-  subTimeline.play();
-  
-  animating = true;
-}
+import Slider from "@/section/s3/slider.vue";
+import SliderM from "@/section/s3/sliderM.vue"
 </script>

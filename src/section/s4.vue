@@ -290,14 +290,26 @@
 </style>
 
 <script setup>
-import { ref } from "vue";
+import { onMounted, ref } from "vue";
 import { gsap } from "gsap";
 const currentSlide = ref(0);
 let animating = false;
+let timer = null;
+
+onMounted(() => {
+  goNext();
+});
 
 function goNext() {
+  if (animating) return;
+
   let currIdx = currentSlide.value;
   let nextIdx;
+
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
   
   currentSlide.value++;
 
@@ -312,8 +324,15 @@ function goNext() {
 }
 
 function goPrev() {
+  if (animating) return;
+
   let currIdx = currentSlide.value;
   let nextIdx;
+
+  if (timer) {
+    clearTimeout(timer);
+    timer = null;
+  }
   
   currentSlide.value--;
 
@@ -337,6 +356,12 @@ function setTimeline(currIdx, nextIdx) {
     paused: true,
     onComplete: function() {
       animating = false;
+
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+        goNext();
+      }, 2000);
     }
   }, 0);
 
@@ -363,6 +388,12 @@ function setTimeline2(currIdx, nextIdx) {
     paused: true,
     onComplete: function() {
       animating = false;
+
+      timer = setTimeout(() => {
+        clearTimeout(timer);
+        timer = null;
+        goNext();
+      }, 2000);
     }
   }, 0);
 
