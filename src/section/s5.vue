@@ -5,48 +5,48 @@
       <div class="slider slider1">
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">世界灣</div>
-          <div class="st2">新北市淡水區</div>
-        </div>
-        <div class="slide">
-          <img src="@/section/s5/5.jpg" />
-          <div class="st1">達麗天蒔</div>
-          <div class="st2">台北市北投區</div>
-        </div>
-        <div class="slide active">
-          <img src="@/section/s5/1.jpg" />
           <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/2.jpg" />
+          <img src="@/section/s5/5.jpg" />
           <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
-        <div class="slide">
-          <img src="@/section/s5/3.jpg" />
+        <div class="slide active">
+          <img src="@/section/s5/1.jpg" />
           <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/4.jpg" />
+          <img src="@/section/s5/2.jpg" />
           <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/5.jpg" />
+          <img src="@/section/s5/3.jpg" />
           <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/1.jpg" />
+          <img src="@/section/s5/4.jpg" />
           <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/2.jpg" />
+          <img src="@/section/s5/5.jpg" />
           <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
+        </div>
+        <div class="slide">
+          <img src="@/section/s5/1.jpg" />
+          <div class="st1">KODA ON 5TH AVE</div>
+          <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
+        </div>
+        <div class="slide">
+          <img src="@/section/s5/2.jpg" />
+          <div class="st1">世界灣</div>
+          <div class="st2">新北市淡水區</div>
         </div>
       </div>
     </div>
@@ -55,53 +55,53 @@
       <div class="slider slider2">
         <div class="slide">
           <img src="@/section/s5/4.jpg" />
-          <div class="st1">世界灣</div>
-          <div class="st2">新北市淡水區</div>
+          <div class="st1">陽明大苑</div>
+          <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
           <img src="@/section/s5/5.jpg" />
-          <div class="st1">達麗天蒔</div>
-          <div class="st2">台北市北投區</div>
+          <div class="st1">達麗101</div>
+          <div class="st2">台北市信義區</div>
         </div>
         <div class="slide active">
           <img src="@/section/s5/1.jpg" />
-          <div class="st1">陽明大苑</div>
-          <div class="st2">台北市士林區</div>
-        </div>
-        <div class="slide">
-          <img src="@/section/s5/2.jpg" />
-          <div class="st1">達麗101</div>
-          <div class="st2">台北市信義區</div>
-        </div>
-        <div class="slide">
-          <img src="@/section/s5/3.jpg" />
           <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/4.jpg" />
+          <img src="@/section/s5/2.jpg" />
           <div class="st1">世界灣</div>
           <div class="st2">新北市淡水區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/5.jpg" />
+          <img src="@/section/s5/3.jpg" />
           <div class="st1">達麗天蒔</div>
           <div class="st2">台北市北投區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/1.jpg" />
+          <img src="@/section/s5/4.jpg" />
           <div class="st1">陽明大苑</div>
           <div class="st2">台北市士林區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/2.jpg" />
+          <img src="@/section/s5/5.jpg" />
           <div class="st1">達麗101</div>
           <div class="st2">台北市信義區</div>
         </div>
         <div class="slide">
-          <img src="@/section/s5/3.jpg" />
+          <img src="@/section/s5/1.jpg" />
           <div class="st1">KODA ON 5TH AVE</div>
           <div class="st2">450 S Main St, Seattle, WA 98104 USA</div>
+        </div>
+        <div class="slide">
+          <img src="@/section/s5/2.jpg" />
+          <div class="st1">世界灣</div>
+          <div class="st2">新北市淡水區</div>
+        </div>
+        <div class="slide">
+          <img src="@/section/s5/3.jpg" />
+          <div class="st1">達麗天蒔</div>
+          <div class="st2">台北市北投區</div>
         </div>
       </div>
     </div>
