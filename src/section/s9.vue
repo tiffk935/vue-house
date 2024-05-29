@@ -13,8 +13,8 @@
 
     <div class="content">
       <div>
-        <div class="t1">是金磚，必發光</div>
-        <div class="t2">
+        <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">是金磚，必發光</div>
+        <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
           信義計劃區國際金融中心<br>
           內湖科學園區、南港軟體園區高科技產業聚落<br>
           大直重劃區則定義為流行、娛樂、商業、住宅兼俱的副都心<br>
@@ -149,7 +149,7 @@
     .t2 {
       color: #000;
       font-size: size-m(14);
-      line-height: 170%;
+      line-height: 170%;font-weight: 400;
       @media screen and (min-width:768px) {
         font-size: size(20);
       }
