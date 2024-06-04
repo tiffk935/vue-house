@@ -13,15 +13,16 @@
   <div class="home bg-white overflow-hidden font-['Noto_Sans_TC']">
     <h1 style="display:none;">達麗河蘊</h1>
     <S1 />
+    <S10 />
     <S2 />
-    <S9 />
+    <!-- S9 /-->
     <S3 />
     <S4 />
     <div class="relative">
       <img class="s5s6bg w-full absolute left-0 md:hidden" src="@/section/s5/bg-m.webp" />
       <img class="s5s6bg w-full absolute left-0 hidden md:block" src="@/section/s5/bg.webp" />
       <S5 />
-      <!--S6 /-->
+      <!-- S6 /-->
     </div>
     <!--S7 /-->
     <div class="relative">
@@ -61,8 +62,9 @@
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S10 from "@/section/s10.vue"
 import S2 from "@/section/s2.vue"
-import S9 from "@/section/s9.vue"
+//import S9 from "@/section/s9.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
