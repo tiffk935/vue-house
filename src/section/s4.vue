@@ -1,8 +1,8 @@
 <template>
   <section class="s4 relative">
     
-    <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">寬裕，隨心所欲</div>
-    <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">基隆河從大直蜿蜒而來，與外雙溪交會出新洲美水岸綠洲，河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
+    <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">生活裡想要的、需要的，剛剛好，都在這裡。</div>
+    <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">河濱公園、濕地、遊艇碼頭…，依水而生，因水而美。北士科產業聚落、天母商圈、士林商圈、國際名校、優生醫療養護環境…，產業、交通、生活，心所想全部就位。</div>
 
     <div class="controls">
       <div class="btn-prev" @click="goPrev">
@@ -63,7 +63,7 @@
       <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0"><span class="subtitle">二萬多坪河岸綠地</span><span class="hr"></span><span class="desc">洲美公園、蜆仔港公園、雙溪濕地公園，共譜水岸城市綠洲。</span></li>
       <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"><span class="subtitle">三座國際學校、二所名校</span><span class="hr"></span><span class="desc">美國學校、日僑學校、歐洲學校、奎山中學、薇閣中學。</span></li>
       <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400"><span class="subtitle">五大醫療院所，二大醫學院校</span><span class="hr"></span><span class="desc">榮民總醫院、振興醫院、臺北護理健康大學、新光醫學中心、和信醫院、陽明醫院、陽明交通大學與衛福部國家中醫藥研究所。</span></li>
-      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><span class="subtitle">出行條條大道</span><span class="hr"></span><span class="desc">1分鐘福國路，2分鐘洲美快速道路，8分鐘中山北路。</span></li>
+      <li data-aos="fade-up" data-aos-duration="1500" data-aos-delay="600"><span class="subtitle">交通快速便捷</span><span class="hr"></span><span class="desc">福國路、中山北路、洲美快速道路，條條大道暢行無阻。</span></li>
     </ul>
   </section>
 </template>
@@ -91,8 +91,9 @@
       position: absolute;
       top: size(221);
       left: size(148);
-      font-size: size(40);
+      font-size: size(38);
       line-height: size(57);
+    letter-spacing: 0.03em;
       padding: 0;
       margin-bottom: 0;
     }

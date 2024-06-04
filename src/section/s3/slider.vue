@@ -1,9 +1,34 @@
 <template>
   <div class="slider">
-    <img class="img1" src="@/section/s3/2.jpg" />
+    <div class="img1">
+      <img src="@/section/s3/01.webp" />
+      <span>雙溪遊艇碼頭</span>
+    </div>
+    <div class="img2">
+      <img src="@/section/s3/02.webp" />
+      <span>雙溪遊艇碼頭</span>
+    </div>
+    <div class="img3">
+      <img src="@/section/s3/03.webp" />
+      <span>河雙21號河濱公園</span>
+    </div>
+    <div class="img4">
+      <img src="@/section/s3/04.webp" />
+      <span>河雙21號河濱公園</span>
+    </div>
+    <div class="img5">
+      <img src="@/section/s3/04.webp" />
+      <span>台北科學藝術園區-童新樂園</span>
+    </div>
+    <div class="img6">
+      <img src="@/section/s3/04.webp" />
+      <span>台北科學藝術園區-科學教育館</span>
+    </div>
+    <!-- 
     <img class="img2" src="@/section/s3/1.jpg" />
     <img class="img3" src="@/section/s3/2.jpg" />
     <img class="img4" src="@/section/s3/1.jpg" />
+   -->
   </div>
 
   <div class="btn-prev" @click="goPrev">

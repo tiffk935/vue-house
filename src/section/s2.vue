@@ -7,10 +7,10 @@
     <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
     <div class="content absolute">
       <div>
-        <div class="title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">北士科盛世時代</div>
+        <div class="title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">盛世北士科，新洲美元年</div>
         <div class="line" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200"></div>
       </div>
-      <div class="txt" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">台北科技廊帶最後拼圖-北士科，串連內科2.0計劃、南港生技聚落計劃，台北立足國際最重要的城市戰略，下一輪繁榮盛世就看北士科。300億金仁寶總部動工，中鼎集團第二總部、新光雙塔一一就位，十兆產值蓄勢待發，超過30家一線建商投入建設，國際北士科超速啟動，劇力萬鈞。</div>
+      <div class="txt" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">串連內科2.0計劃、南港生技聚落計劃，台北立足國際最重要城市戰略，下一輪繁榮盛世就看北士科。300億金仁寶總部、中鼎集團第二總部、新光雙塔一一就位，十兆產值蓄勢待發，超過30家一線建商投入建設，國際北士科超速啟動，軟橋段先發，新洲美劇力萬鈞隆重壓軸，達麗建設「新洲美元年」啟動。</div>
     </div>
   </section>
 </template>
@@ -99,10 +99,11 @@
     font-weight: 500;
     color: #333333;
     font-family: 'Noto Serif TC';
-    line-height: 170%;
+    line-height: 1.7;
+    text-align: justify;
     @media screen and (min-width:768px) {
       width: size(1628);
-      top: size(859);
+      top: size(910);
       left: size(148);
       font-size: size(20);
       display: flex;
@@ -123,7 +124,7 @@
     }
 
     .line {
-      width: size-m(200);
+      width: size-m(220);
       height: size-m(1);
       background: #666666;
       margin-bottom: size-m(13);
@@ -155,7 +156,7 @@ function onImgLoad(e) {
   if (map.value && img) {
     let status = 0;
     let hideHand = false;
-    map.value.scrollLeft = img.clientWidth * 0.45 - window.innerWidth/2;
+    map.value.scrollLeft = img.clientWidth * 0.444 - window.innerWidth/2;
     map.value.addEventListener("scroll", () => {
       status++;
       if(status > 1 && !hideHand){

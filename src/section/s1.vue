@@ -40,6 +40,9 @@
 
 .s1 {
   width: 100%;
+      min-height: size-m(604);
+      max-height: size-m(750);
+      height: calc(100vh - 16.8vw);
     @media screen and (min-width:768px) {
       min-height: size(900);
       max-height: size(1080);
@@ -48,8 +51,12 @@
     }
 
   .bg-wrapper {
-    width: 290%;
+    width: calc(169vh - 10vw);
+    min-width: size-m(1100);
+    max-width: size-m(1340);
     @media screen and (min-width:768px) {
+    min-width: 0;
+    max-width:100%;
       width: 100%;
       height: 100%;
     }
@@ -93,6 +100,7 @@
 
   .img {
     top: size-m(82.53);
+    top: calc(40% + #{size-m(83 - 604 * .4)});
     left: size-m(34.5);
     width: size-m(306);
     @media screen and (min-width:768px) {
@@ -129,6 +137,7 @@
 
   .t1 {
     top: size-m(280.99);
+    top: calc(40% + #{size-m(281 - 604 * .4)});
     left: size-m(52);
     width: size-m(271);
     opacity: 0;
@@ -142,6 +151,7 @@
 
   .t2 {
     top: size-m(350);
+    top: calc(50% + #{size-m(350 - 604 * .5)});
     left: size-m(68.5);
     width: size-m(237.99);
     @media screen and (min-width:768px) {
@@ -153,7 +163,8 @@
   }
 
   .order-btn {
-    top: size-m(493);
+   // top: size-m(493);
+    bottom: size-m(22);
     left: size-m(140);
     width: size-m(95);
     cursor: pointer;

@@ -95,6 +95,7 @@
 
     .order-title1 {
       width: size(601.55);
+      margin-bottom: 0;
     }
 
     .order-title2 {
@@ -209,6 +210,9 @@
 
       .order-title1, .order-title2 {
         width: 100%;
+      }
+      .order-title1{
+      margin-bottom: size-m(30);
       }
     }
 

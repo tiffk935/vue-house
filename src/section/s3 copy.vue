@@ -1,45 +1,18 @@
 <template>
   <section class="s3 relative">
-    <!-- 
-    <img src="./s3/p.jpg" class="t0 absolute">  -->
     <div class="content absolute">
       <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">富人水岸，科技新創，價值未來</div>
       <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">台北市第一個真正回歸水岸生活、融合自然的國際濱水城區</div>
       <div class="t3" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="400">北士科94.38公頃，規劃為城市生活區、主要產業核心區及水岸融合區。新洲美水岸融合區，親水超級堤防、水岸步道、公園綠地、自行車道、遊艇碼頭…，引入水岸商業步行街區，成為台北市第一個真正回歸水岸生活、融合自然的國際化濱水城區。將以國際水岸特區為台北未來城市生活樹立嶄新典範。</div>
     </div>
-    <div class="slider" data-aos="fade">
-      <swiper  class="slide"
-        :slidesPerView="'auto'" 
-        :spaceBetween="0"
-        :navigation="false"
-        :loop="true"
-        :speed="2000"
-        :modules="modules"
-        @swiper="onSwiper"
-      >
-        <swiper-slide  class="slide-item" v-for="img in imgs" :key="img">
-          <img :src="img.img" :alt="img.caption">
-      <span class="caption">{{ img.caption }}</span>
-        </swiper-slide>
-      </swiper>
-  <div class="btn-prev" @click="slidePrev">
-    <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-      <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-      <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-      <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-    </svg>
-  </div>
 
-  <div class="btn-next" @click="slideNext">
-    <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
-      <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
-      <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
-      <path class="arrow" d="M18.9,26h13.5 M27.6,30.8l4.8-4.8l-4.8-4.8" />
-    </svg>
-  </div>
+    <div class="md:hidden">
+      <SliderM />
     </div>
 
-
+    <div class="hidden md:block">
+      <Slider />
+    </div>
   </section>
 </template>
 
@@ -52,63 +25,114 @@
   @media screen and (min-width:768px) {
     height: size(1080);
   }
-  .t0{width: 100%;top: 0;left: 0;z-index: 3;opacity: .0;pointer-events: none;
-    
-  }
 
+  .slider-m {
+    // background: #ddd;
+    position: absolute;
+    top: size-m(51);
+    left: 0;
+    width: 100%;
+    height: size-m(469.73);
+    overflow: hidden;
+
+    img {
+      width: size-m(185);
+      position: absolute;
+      top: 0;
+      left: 100%;
+
+      &.img2 {
+        left: size-m(52.5);
+      }
+
+      &.img3 {
+        width: 100%;
+        top: size-m(190);
+        left: size-m(0);
+      }
+
+      &.img4 {
+        width: 100%;
+        top: size-m(190);
+        left: size-m(-375);
+      }
+    }
+  }
 
   .slider {
-    margin: 0 0 0 0;padding:0;
+    position: absolute;
     width: 100%;
-      height:size-m(520);
-  @media screen and (min-width:768px) {
-      height:size(700);
-      position: relative;
-      top: size(100);
-  }
-.swiper {height: 100%;padding:0;
+    top: size(101);
+    left: 0;
+    > div{
+      width: size-m(185);
+      position: absolute;
+      top: 0;
+      left: 100%;
+      img{width: 100%;}
+      span{position: absolute;top: .5em;right: 1em;color:#fff;font-size:size-m(12);
+      @media screen and (min-width:768px) {font-size:size(15);
+      }
+      
+      }
+      @media screen and (min-width:768px) {
+        width: size(556);
+      }
+      &.img2 {
+        @media screen and (min-width:768px) {
+          left: size(1220);
+        }
+      }
 
-      .swiper-slide {
-          width:size-m(375);margin: 0;height: 100%;
-          transition:transform 2s ;
-  @media screen and (min-width:768px) {
-    width:size(910);
-    transform-origin: 50% 0%;
-  }
-  img{width: 100%;height:auto;}
-  .caption{position: absolute;top: .5em;right: 1em;color:#fff;font-size:size-m(12);
-  @media screen and (min-width:768px) {
-    font-size:size(15);
-  }
-  
-  }
+      &.img3 {
+        @media screen and (min-width:768px) {
+          width: size(925);
+          left: size(148);
+        }
+      }
 
-  /* 詭異跳動的除錯 */
-  &.swiper-slide-duplicate-prev,
-  &.swiper-slide-active{
-    transform: translateY(47%);
-    @media screen and (min-width:768px) {
-      transform: translate(16%,0%);
+      &.img4 {
+        @media screen and (min-width:768px) {
+          width: size(556);
+          left: size(-556);
+        }
+      }
     }
-  }
-  &.swiper-slide-duplicate-next,
-  &.swiper-slide-duplicate-active,
-  &.swiper-slide-next,
-  &.swiper-slide-next  + .swiper-slide{
-    transform:translate(-114%,-15%)scale(.51);
-    @media screen and (min-width:768px) {
-      transform:translate(12%,0%)scale(.65);
+
+
+/*
+    img {
+      width: size-m(185);
+      position: absolute;
+      top: 0;
+      left: 100%;
+      @media screen and (min-width:768px) {
+        width: size(556);
+      }
+
+      &.img2 {
+        @media screen and (min-width:768px) {
+          left: size(1220);
+        }
+      }
+
+      &.img3 {
+        @media screen and (min-width:768px) {
+          width: size(925);
+          left: size(148);
+        }
+      }
+
+      &.img4 {
+        @media screen and (min-width:768px) {
+          width: size(556);
+          left: size(-556);
+        }
+      }
     }
+
+    */
   }
-  &.swiper-slide-prev{transform:translate(0,47%);
-    @media screen and (min-width:768px) {
-      transform: translate(-16%,0%);
-    }  
-  }
-  }
-  }
-  }
-  
 
   .btn-prev, .btn-next {
     position: absolute;
@@ -252,64 +276,6 @@
 </style>
 
 <script setup>
-import { computed, getCurrentInstance, ref } from 'vue';
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/pagination';
-import { Pagination, Navigation, Autoplay } from "swiper";
-const modules = ref([Pagination, Navigation, Autoplay]);
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-
-const isMobile = computed(() => globals.$isMobile());
-const getImg = (path) => {
-  if (!globals.$isMobile()) return new URL(`./${path}.jpg`, import.meta.url).href;
-  return new URL(`./${path}_m.jpg`, import.meta.url).href
-}
-
-const swiperInstance = ref(null);
-
-const onSwiper = (swiper) => {
-  swiperInstance.value = swiper;
-}
-
-const slidePrev = () => {
-  if (swiperInstance.value) {
-    swiperInstance.value.slidePrev();
-  }
-};
-
-const slideNext = () => {
-  if (swiperInstance.value) {
-    swiperInstance.value.slideNext();
-  }
-};
-
-const imgs = [
-  {
-    img:new URL("./s3/01.webp", import.meta.url).href ,
-    caption: "雙溪遊艇碼頭"
-  },
-  {
-    img:new URL("./s3/02.webp", import.meta.url).href ,
-    caption: "雙溪遊艇碼頭"
-  },
-  {
-    img:new URL("./s3/03.webp", import.meta.url).href ,
-    caption: "河雙21號河濱公園"
-  },
-  {
-    img:new URL("./s3/04.webp", import.meta.url).href ,
-    caption: "河雙21號河濱公園"
-  },
-  {
-    img:new URL("./s3/05.webp", import.meta.url).href ,
-    caption: "台北科學藝術園區-童新樂園"
-  },
-  {
-    img:new URL("./s3/06.webp", import.meta.url).href ,
-    caption: "台北科學藝術園區-科學教育館"
-  },
-]
+import Slider from "@/section/s3/slider.vue";
+import SliderM from "@/section/s3/sliderM.vue"
 </script>
-

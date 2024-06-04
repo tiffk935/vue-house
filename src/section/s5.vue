@@ -125,7 +125,7 @@
     </div>
 
     <div class="text md:flex md:justify-between">
-      <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">成為台灣最全球化的地產開發商</div>
+      <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">國際達麗，全球視野，世界建築</div>
       <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">達麗從台灣到西雅圖，從建設到營建、商場，早已邁向國際化，每一座達麗建築都以與世界各大城市新建築比肩的標準檢視，跨國際推案、跨國團隊合作，不只成就達麗建築成為世界級建築，國際視野與世界觀更讓達麗跳脫單一建築個案思維，從環境與城市發展宏觀角度定位建築。</div>
     </div>
   </section>
