@@ -23,14 +23,14 @@
             <label class="row"><span>居住縣市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
-              <option v-for="city in cityList" :value="city.value">
+              <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label>
             <label class="row"><span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
-              <option v-for="area in areaList" :value="area.value">
+              <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select></label>

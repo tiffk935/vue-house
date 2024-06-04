@@ -45,8 +45,8 @@
           </div>
 
           <div class="dots">
-            <template v-for="num in 3">
-              <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
+            <template v-for="num in 3" :key="num">
+              <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)" ></div>
             </template>
           </div>
         </div>
@@ -91,7 +91,7 @@
           </div>
 
           <div class="dots">
-            <template v-for="num in 3">
+            <template v-for="num in 3" :key="num">
               <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
             </template>
           </div>
@@ -137,7 +137,7 @@
           </div>
 
           <div class="dots">
-            <template v-for="num in 3">
+            <template v-for="num in 3" :key="num">
               <div :class="{ dot: true, active: currentSlide === (num - 1) }" @click="jumpTo(num - 1)"></div>
             </template>
           </div>
