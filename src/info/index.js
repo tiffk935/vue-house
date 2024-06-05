@@ -36,13 +36,13 @@ export default {
     },
     navList: [
         {
-            name: "新洲美元年",
-            target: ".s10",
+            name: "國際北士科",
+            target: ".s1",
             offset: "",
         },
         {
-            name: "國際北士科",
-            target: ".s1",
+            name: "新洲美元年",
+            target: ".s10",
             offset: "",
         },
         {
