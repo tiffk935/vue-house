@@ -374,8 +374,8 @@ onMounted(() => {
                     onLeave: () => {
                         if(panel == '.s10') {
                             console.log('s10 leave')
-                            navLinks[7].classList.remove("active");
-                            navLinksM[7].classList.remove("active");
+                            navLinks[0].classList.remove("active");
+                            navLinksM[0].classList.remove("active");
                         }
                         // console.log(panel, 'onLeave')
                     },
