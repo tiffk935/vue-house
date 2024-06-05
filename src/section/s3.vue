@@ -1,7 +1,5 @@
 <template>
   <section class="s3 relative">
-    <!-- 
-    <img src="./s3/p.jpg" class="t0 absolute">  -->
     <div class="content absolute">
       <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">富人水岸，科技新創，價值未來</div>
       <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">台北市第一個真正回歸水岸生活、融合自然的國際濱水城區</div>
@@ -14,15 +12,23 @@
         :navigation="false"
         :loop="true"
         :speed="2000"
+        :autoplay="{
+          delay: 5000,
+          disableOnInteraction: false,
+        }"
         :modules="modules"
         @swiper="onSwiper"
-      >
+        @slideChangeTransitionStart="onTransitionStart"
+        @slideChangeTransitionEnd="onTransitionEnd"
+      ><!--
+        
+      -->
         <swiper-slide  class="slide-item" v-for="img in imgs" :key="img">
           <img :src="img.img" :alt="img.caption">
       <span class="caption">{{ img.caption }}</span>
         </swiper-slide>
       </swiper>
-  <div class="btn-prev" @click="slidePrev">
+  <div :class="{'btn-prev': true, 'disabled': isTransitioning}" @click="slidePrev">
     <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
       <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
       <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
@@ -30,7 +36,7 @@
     </svg>
   </div>
 
-  <div class="btn-next" @click="slideNext">
+  <div :class="{'btn-next': true, 'disabled': isTransitioning}" @click="slideNext">
     <svg class="arrow-icon" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="#666">
       <circle stroke-width=".5" cx="26" cy="26" r="25.5" />
       <circle class="cir" stroke="#002B69" cx="26" cy="26" r="25.5" />
@@ -52,11 +58,6 @@
   @media screen and (min-width:768px) {
     height: size(1080);
   }
-  .t0{width: 100%;top: 0;left: 0;z-index: 3;opacity: .0;pointer-events: none;
-    
-  }
-
-
   .slider {
     margin: 0 0 0 0;padding:0;
     width: 100%;
@@ -70,7 +71,7 @@
 
       .swiper-slide {
           width:size-m(375);margin: 0;height: 100%;
-          transition:transform 2s ;
+          transition:transform 1.5s,opacity 1s .2s;
   @media screen and (min-width:768px) {
     width:size(910);
     transform-origin: 50% 0%;
@@ -82,25 +83,31 @@
   }
   
   }
-
-  /* 詭異跳動的除錯 */
-  &.swiper-slide-duplicate-prev,
+  /* 動態變化跟詭異跳動的除錯 */
+  opacity: 0;
+  &.swiper-slide-duplicate-active,
   &.swiper-slide-active{
-    transform: translateY(47%);
+    transform: translateY(47%);opacity: 1;
     @media screen and (min-width:768px) {
       transform: translate(16%,0%);
     }
   }
   &.swiper-slide-duplicate-next,
-  &.swiper-slide-duplicate-active,
+  &.swiper-slide-duplicate-next + .swiper-slide,
   &.swiper-slide-next,
-  &.swiper-slide-next  + .swiper-slide{
+  &.swiper-slide-next  + .swiper-slide{opacity: 1;
     transform:translate(-114%,-15%)scale(.51);
     @media screen and (min-width:768px) {
       transform:translate(12%,0%)scale(.65);
     }
   }
-  &.swiper-slide-prev{transform:translate(0,47%);
+  &.swiper-slide-duplicate-next + .swiper-slide,
+  &.swiper-slide-next  + .swiper-slide{
+    opacity: 0;
+  }
+  &.swiper-slide-duplicate-prev,
+  &.swiper-slide-prev{
+    transform:translate(0,47%);opacity: 0;
     @media screen and (min-width:768px) {
       transform: translate(-16%,0%);
     }  
@@ -122,8 +129,9 @@
     }
 
     .arrow-icon {
+      opacity: 1;
       width: size-m(35);
-      transition: transform ease-in-out 0.2s;
+      transition: transform ease-in-out 0.2s,opacity .2s;
       vertical-align: middle;
       @media screen and (min-width:768px) {
         width: size(59.02);
@@ -138,6 +146,7 @@
         transform: translateX(0%);
         opacity: 1;
       }
+      @media screen and (min-width:768px) {
       &:hover {
         transform: scale(1);
         .cir {
@@ -146,6 +155,7 @@
         .arrow {
           animation: arrow ease-in-out 0.5s;
         }
+      }
       }
       @keyframes arrow {
         0% {
@@ -166,6 +176,14 @@
         }
       }
     }
+      &.disabled{
+        cursor: progress;
+        .arrow-icon {opacity: .5;
+          .cir {
+            stroke-dashoffset: 162;
+          }
+        }
+      }
   }
 
   .btn-prev {
@@ -268,6 +286,7 @@ const getImg = (path) => {
 }
 
 const swiperInstance = ref(null);
+const isTransitioning = ref(false);
 
 const onSwiper = (swiper) => {
   swiperInstance.value = swiper;
@@ -283,6 +302,13 @@ const slideNext = () => {
   if (swiperInstance.value) {
     swiperInstance.value.slideNext();
   }
+};
+const onTransitionStart = () => {
+  isTransitioning.value = true;
+};
+
+const onTransitionEnd = () => {
+  isTransitioning.value = false;
 };
 
 const imgs = [
