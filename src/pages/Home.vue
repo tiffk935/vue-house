@@ -48,7 +48,7 @@
     top: size-m(0);
     left: 0;    
     width: 100%;
-    height: calc(100% - size-m(146));
+    height: 100%;
     background: rgb(255,255,255);
     background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(210,232,244,1) 28%, rgba(156,205,232,1) 54%, rgba(93,141,187,1) 100%);
     @media screen and (min-width:768px) {

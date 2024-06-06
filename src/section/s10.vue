@@ -28,10 +28,11 @@
     <div class="list">
       <div class="content">
         <div class="title" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0"><img src="./s10/now.svg" alt=""></div>
-        <div class="subtitle" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">北士科新洲美，<br class="md:hidden">金磚水岸，橫空出世</div>
+        <div class="subtitle" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">北士科新洲美，<br class="md:hidden">科技水岸，橫空出世</div>
           <div class="desc" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
             北投士林科技園區擁有金磚重劃發光特質<br>
-新洲美段更是大直水岸之後，台北市最具潛質的水岸富人區
+是台北科技廊帶最後拼圖<br>
+新洲美段更是北市最具潛質的水岸富人區
           </div>
       </div>
       <div class="img1" data-aos="fade" data-aos-duration="1500" data-aos-delay="200">
@@ -45,7 +46,7 @@
         </div>
         <div class="img bg-[#71aac9]">
           <img src="./s10/23.jpg" alt="" data-aos="fade" data-aos-duration="1500" data-aos-delay="600">
-          <span data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800"><img src="./s10/y4.svg" alt="">年內湖科學園區</span>
+          <span data-aos="fade-up" data-aos-duration="1500" data-aos-delay="800"><img src="./s10/y4.svg" alt="">內湖科學園區</span>
         </div>
       </div>
     </div>
