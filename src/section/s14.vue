@@ -2,7 +2,7 @@
   <section class="s14 w-full relative text-[#173868] bg-[#C8D1D5]">
     <div class="txt text-center md:text-left">
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="title">臺灣蔦屋 客製選冊</div>
+        <div class="title">社區公設 選書合作</div>
         <div class="subtitle">TSUTAYA BOOKSTORE</div>
         <hr class="md:hidden">
         <div class="content hidden md:block">

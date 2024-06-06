@@ -117,7 +117,7 @@
       line-height: normal;
       @media (min-width: 768px) {
         font-size: size(48);
-        letter-spacing: size(15.84);
+        letter-spacing: size(10.84);
         text-indent: size(15.84);
         margin-bottom: size(3);
         padding-bottom: 0;
