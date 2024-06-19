@@ -4,7 +4,7 @@
     <img class="style absolute hidden md:block" src="@/section/s9/style.svg" />
     <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="txt absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">沙鹿車站商圈</div>
-    <img class="bag absolute" src="@/section/s1/bag.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" />
+    <!-- <img class="bag absolute" src="@/section/s1/bag.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" /> -->
     <img class="label absolute hidden md:block" src="@/section/s9/label.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600" />
   </section>
 </template>

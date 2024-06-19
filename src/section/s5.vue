@@ -5,7 +5,7 @@
     </div>
     <!-- -->
     <img class="rect absolute top-0 left-0 w-full pointer-events-none md:hidden" src="@/section/s5/rect.svg" />
-    <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
+    <!-- <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" /> -->
     <img class="hand absolute md:hidden" src="@/section/s5/hand.svg" />
     <div class="text absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">新時代 Art Deco能量美學</div>

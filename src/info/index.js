@@ -1,4 +1,4 @@
-const caseName = "佳鋐大境"
+const caseName = "雍雋品"
 
 export default {
     meta: {
@@ -8,12 +8,12 @@ export default {
     },
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市梧棲區中華路二段",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.813058514882!2d120.5550312!3d24.2483163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151ebe57d387%3A0x8553e024331e32ed!2z5L2z6YuQ5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1705376910890!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/V5sYHiChFYQAUNZH7",
-    phone: "04-2663-0999",
-    fbLink: "https://www.facebook.com/61554748627993/",
-    fbMessage: "https://m.me/61554748627993/",
+    address: "台北市中正區和平西路二段48號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.7903120376435!2d121.5116826!3d25.0286013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a2c91d546f%3A0x491788dc1505af79!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5ZKM5bmz6KW_6Lev5LqM5q61NDjomZ8!5e0!3m2!1szh-TW!2stw!4v1718780535082!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/VsYxR5FvXU8Pzipm8",
+    phone: "02-8667-6688",
+    fbLink: "https://www.facebook.com/JPbotanical/",
+    fbMessage: "https://m.me/JPbotanical/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "佳鋐建設股份有限公司"],
@@ -29,12 +29,12 @@ export default {
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
-        title: "我想了解",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        title: "預約賞屋",
+        subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
+    room_type: ["早上","下午","晚上"],
+    budget: [],
     navList: [
         {
             name: "大城之境",
