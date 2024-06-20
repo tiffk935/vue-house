@@ -1,17 +1,67 @@
 <template>
   <section class="s5 relative">
-    <div class="map user-n relative" ref="map">
-      <img class="map1" src="@/section/s5/map.webp" @load="onImgLoad($event)" />
+    <div class="line md:hidden" data-aos="line" data-aos-duration="1000" data-aos-delay="0"></div>
+    <div class="content1">
+      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國際底蘊雋譽美學<br>凝練鍛造雍容御邸</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">源自於生活品味的「雋品建築」</div>
+      <div class="t3 mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        取自雋永的「雋」與匯聚眾人智慧的「品」，<br>
+        「雋品」自古即代表俊秀、超著的品格，<br>
+        蘊含精品之意。以幾何方塊構成的「品」，<br>
+        巧妙地融合建築、人與環境之間的精髓，
+      </div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「雋品建築」</div>
+      <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        厚積十年歷練，從公共建設到居住空間設計，<br>
+        在國際上屢獲大獎肯定，也深受客戶口碑推崇，<br>
+        「雋品建築」堅持講究細節，不斷突破創新，<br>
+        展現超乎預期的精緻質感與細膩品味。
+      </div>
     </div>
-    <!-- -->
-    <img class="rect absolute top-0 left-0 w-full pointer-events-none md:hidden" src="@/section/s5/rect.svg" />
-    <!-- <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" /> -->
-    <img class="hand absolute md:hidden" src="@/section/s5/hand.svg" />
-    <div class="text absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">新時代 Art Deco能量美學</div>
-      <div class="t2">全區指標級，大享開闊視野、方正美地，以名門裝飾元素Art Deco工藝御用款，表達建築優雅大器、別具特色的新時代建築風格。</div>
+
+    <div class="slider">
+      <swiper
+        :slidesPerView="'auto'"
+        :spaceBetween="0"
+        :centeredSlides="true"
+        :loop="true"
+        :navigation="false"
+        :pagination="false"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/1.jpg" />
+            <div class="txt">3D示意模擬圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/2.jpg" />
+            <div class="txt">3D示意模擬圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/3.jpg" />
+            <div class="txt">實景拍攝</div>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
-    <div class="info absolute text-white pointer-events-none">建築外觀3D情境示意圖</div>
+
+    <div class="content2">
+      <div class="flex justify-between items-end mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">《雍雋品》<br>中正區住宅大樓</div>
+        <img class="logo" src="@/section/s5/logo.png" />
+      </div>
+      <div class="en" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">JADE POSH-GATHERING GREEN, FLOURISHING OPULENCE.</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">本案位於南海路，鄰近台北植物園，規劃住宅大樓建築外觀與公設空間與整體興建，榮獲2024芬蘭Arch設計大獎Arch Design Award－金獎、米蘭設計大獎MILAN Design Awards－銀獎。得獎推介：「尊重都市既存結構，融入周遭環境，呈現地段特有的人文價值與記憶，透過自然光影述說空間的層次與故事，形塑一處安定、自在雍然、濾除塵囂的居所」以都市涵構（Contextualism）和基地紋理作為設計出發點，構築最合乎當地樣貌與形式的建築。</div>
+    </div>
   </section>
 </template>
 
@@ -19,130 +69,143 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
-  width: 100%;
-  height: size-m(557);
-  background: #E5005C;
-  @media screen and (min-width:768px) {
-    height: auto;
+  background: rgba(0, 0, 0, .06);
+  font-family: "Noto Serif TC";
+
+  .line {
+    position: absolute;
+    top: size-m(-61);
+    left: 50%;
+    width: size-m(1);
+    height: size-m(120);
+    background: #000;
   }
 
-  .map {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    width: 100vw;
-    @media screen and (min-width:768px) {
-      overflow: hidden;
-    }
-
-    img {
-      width: auto;
-      height: size-m(400);
-      margin-top: size-m(607 - 449);
-      max-width: none;
-      display: block;
-      @media screen and (min-width:768px) {
-        overflow: hidden;
-        width: 100%;
-        height: auto;
-        margin-top: 0;
-      }
-    }
-  }
-
-  .hand {
-    width: size-m(22.34);
-    top: size-m(304);
-    left: size-m(176.33);
-    cursor: pointer;
-    transition: opacity .5s;
-    animation: swing 3s linear 0s infinite;
-    pointer-events: none;
-    @media screen and (min-width:768px) {
-      display: none;
-    }
-  }
-
-  .hand-bg {
-    width: 100%;
-    //padding-top:size-m(20);
-    bottom:0;height: 100%;
-    object-fit: cover;
-
-    left: 0;
-    transition: opacity .5s;
-    pointer-events: none;
-    background: #005BB866;
-  }
-
-  .text {
-    width: 100%;
-    top: size-m(80);
-    left: 0;
+  .content1 {
     text-align: center;
-    padding: 0 size-m(30);z-index: 13;
+    padding: size-m(109) size-m(30) size-m(50) size-m(30);
     @media screen and (min-width:768px) {
-      width: size(671);
-      top: size(192);
-      left: size(960);
-      padding: 0;
-      text-align: left;
+      padding: size(160) size(0) size(115) size(0);
     }
-
+    
     .t1 {
+      color: #12352A;
       font-size: size-m(25);
-      line-height: size-m(34);
-      margin-bottom: size-m(13);
       font-weight: 700;
+      line-height: 150%;
+      letter-spacing: .04em;
+      margin-bottom: size-m(26.23);
       @media screen and (min-width:768px) {
-        font-size: size(58);
-        line-height: size(79);
-        margin-bottom: size(24);
+        font-size: size(50);
+        margin-bottom: size(68.23);
       }
     }
 
     .t2 {
-      font-size: size-m(14);
-      line-height: 178%;
+      font-size: size-m(20);
+      font-weight: 700;
+      line-height: 205%;
+      letter-spacing: .06em;
+      margin-bottom: size-m(3);
       @media screen and (min-width:768px) {
-        font-size: size(18);
-        letter-spacing: 0.04em;
+        font-size: size(23);
+        margin-bottom: size(0);
+      }
+    }
+
+    .t3 {
+      font-size: size-m(14);
+      font-weight: 600;
+      line-height: 205%;
+      letter-spacing: .07em;
+      @media screen and (min-width:768px) {
+        font-size: size(19);
       }
     }
   }
 
-  .info {
-    bottom: size-m(12);
-    right: size-m(10);
-    font-size: size-m(12);
+  .content2 {
+    padding: size-m(41.4) size-m(30) size-m(85) size-m(30);
     @media screen and (min-width:768px) {
-      bottom: size(24);
-      right: size(39);
-      font-size: size(17);
+      padding: size(61.33) size(0) size(110) size(0);
+      width: size(817.68);
+      margin: 0 auto;
+    }
+
+    .t1 {
+      color: #12352A;
+      font-size: size-m(20);
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: .04em;
+      @media screen and (min-width:768px) {
+        font-size: size(22);
+      }
+    }
+
+    .logo {
+      width: size-m(121.32);
+      @media screen and (min-width:768px) {
+        width: size(124.5);
+      }
+    }
+
+    .en {
+      color: #BBA693;
+      font-size: size-m(11);
+      line-height: 170%;
+      margin-bottom: size-m(12.75);
+      letter-spacing: -.03em;
+      @media screen and (min-width:768px) {
+        font-size: size(13);
+        margin-bottom: size(21.75);
+      }
+    }
+
+    .t2 {
+      text-align: justify;
+      font-size: size-m(14);
+      font-style: normal;
+      font-weight: 600;
+      line-height: 205%;
+      @media screen and (min-width:768px) {
+        font-size: size(16);
+      }
+    }
+  }
+
+  .swiper-slide {
+    width: size-m(315);
+    margin: 0 size-m(5);
+    @media screen and (min-width:768px) {
+      width: size(870);
+      margin: 0 size(50);
+    }
+
+    .txt {
+      position: absolute;
+      bottom: size-m(5);
+      right: size-m(8);
+      color: #FFF;
+      font-family: "Noto Sans TC";
+      font-size: size-m(12);
+      line-height: 170%;
+      @media screen and (min-width:768px) {
+        bottom: size(7.5);
+        right: size(11);
+        font-size: size(14);
+      }
     }
   }
 }
-
 </style>
 
 <script setup>
-import { ref } from 'vue';
-
-const map = ref();
-
-function onImgLoad(e) {
-  const img = e.target;
-  if (map.value && img) {
-    let status = 0;
-    let hideHand = false;
-    map.value.scrollLeft = img.clientWidth * 0.5 - window.innerWidth/2;
-    map.value.addEventListener("scroll", () => {
-      status++;
-      if(status > 1 && !hideHand){
-        map.value.parentNode.querySelector('.hand').style.opacity = 0;
-        map.value.parentNode.querySelector('.hand-bg').style.opacity = 0;
-        hideHand = true;
-      }
-    });
-  }
-}
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
 </script>

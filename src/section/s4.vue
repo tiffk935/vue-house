@@ -69,7 +69,7 @@
 
 .s4 {
   width: 100%;
-  padding: size-m(195.87) size-m(30) size-m(52.64) size-m(30);
+  padding: size-m(195.87) size-m(30) size-m(103) size-m(30);
   font-family: "Noto Serif TC";
   @media screen and (min-width:768px) {
     padding: size(152.71) size(163) size(306) size(163);
