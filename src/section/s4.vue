@@ -89,6 +89,7 @@
   .en {
     margin-bottom: size-m(30);
     text-align: right;
+    text-transform: uppercase;
     @media screen and (min-width:768px) {
       width: size(1064);
       margin-bottom: size(31.73);

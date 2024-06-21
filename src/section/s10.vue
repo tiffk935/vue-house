@@ -1,30 +1,31 @@
 <template>
-  <section class="s9 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:translate-x-[5.885vw]">
+  <section class="s10 w-full relative">
+    <div class="md:flex md:justify-center md:items-end md:flex-row-reverse md:translate-x-[-5.885vw]">
       <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s9/logo.svg" />
+        <img class="logo" src="@/section/s10/logo.svg" />
         <div class="head">
-          <div class="t1">照明設計</div>
-          <div class="t2">袁宗南 設計師</div>
+          <div class="t1">禾鼎設計</div>
+          <div class="t2">楊豪琳 設計師</div>
           <div class="labell absolute">
-            <div class="labell-en">Lighting Design</div>
-            <div class="labell-zh">燈光設計</div>
+            <div class="labell-en">interior design</div>
+            <div class="labell-zh">公設設計</div>
           </div>
         </div>
         <div class="t4">
-          燈光作為城市的導引，搭起建築與人的橋樑，融入文化與藝術，傳遞建築意象與美學，讓視覺自然聚焦，更加展現建築語彙，同時落實永續節能，在創新與在地環境中找到和諧平衡。<br>
-          <br>
-          知名業績<br>
-          新光總統傑仕堡、聯上天母、高雄遠雄the one、遠雄九五、信義之冠、敦南寓邸、晴空樹
+          空間不只是一片場域，更是情感寄託，重新解構塑造風格氛圍，憑藉設計私人精品會館20多年經驗，雕琢機能細節和流暢動線，以空間凝聚感情，分享未來故事，延伸建築多元價值。<br>
+          <br><br class="hidden md:block">
+          代表作品<br>
+          天母自在、豐基皇居、璞知溪、瑞安自在、南京御邸、開璽吾界、林口亞昕天地昕、三輝謙匯、國泰瑞安樸石、國泰層峰
         </div>
       </div>
       <div class="imgs flex justify-between">
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s9/1.jpg" />
-          <div class="txt">元利建設 四季酒店</div>
+          <img class="w-full" src="@/section/s10/1.jpg" />
+          <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
         </div>
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s9/2.jpg" />
+          <img class="w-full" src="@/section/s10/2.jpg" />
+          <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
         </div>
       </div>
     </div>
@@ -34,7 +35,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s9 {
+.s10 {
   font-family: "Noto Serif TC";
   padding-top: size-m(44);
   @media screen and (min-width:768px) {
@@ -46,20 +47,20 @@
     @media screen and (min-width:768px) {
       padding: 0;
       width: size(414);
-      margin-right: size(154);
+      margin-left: size(154);
       position: relative;
     }
   }
 
   .logo {
-    width: size-m(74);
+    width: size-m(39);
     margin-bottom: size-m(13);
     @media screen and (min-width:768px) {
-      width: size(149);
+      width: size(118);
       margin-bottom: 0;
       position: absolute;
       bottom: 0;
-      left: size(-149 - 55);
+      right: size(-65 - 110);
     }
   }
 
@@ -77,14 +78,13 @@
     .labell {
       bottom: size-m(16 + 6);
       right: 0;
+      text-align: right;
       @media screen and (min-width:768px) {
         display: flex;
         align-items: flex-start;
-        flex-direction: row-reverse;
         top: 0;
         bottom: auto;
-        left: size(-65 - 110);
-        right: auto;
+        right: size(-65 - 110);
       }
 
       .labell-en {
@@ -98,7 +98,7 @@
         @media screen and (min-width:768px) {
           font-size: size(23);
           margin-bottom: 0;
-          margin-left: size(15);
+          margin-right: size(15);
           writing-mode: vertical-lr;
         }
       }

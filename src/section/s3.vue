@@ -99,6 +99,7 @@
 
   .en {
     margin-bottom: size-m(30);
+    text-transform: uppercase;
     @media screen and (min-width:768px) {
       width: size(1157 - 30);
       margin: 0 0 size(35) auto;

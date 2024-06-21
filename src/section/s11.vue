@@ -88,6 +88,7 @@
         letter-spacing: .13em;
         writing-mode: vertical-lr;
         margin-right: size(10);
+        text-transform: uppercase;
       }
     }
 
@@ -123,6 +124,7 @@
     font-weight: 700;
     line-height: 241%;
     margin-bottom: size-m(18);
+    text-transform: uppercase;
     @media screen and (min-width:768px) {
       padding: 0 0 0 size(163);
       width: size(394 + 163);

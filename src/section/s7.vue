@@ -1,90 +1,30 @@
 <template>
-  <section class="s7 w-full relative text-[#040000]">
-    <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">全球工藝 品牌精選</div>
-    <img class="balls user-n absolute hidden md:block" src="@/section/s7/balls.webp" />
-    <div class="md:flex md:justify-between md:items-start">
-      
-      <div class="img user-n">
-      <div class="c">情境示意圖</div>
-      <img src="@/section/s7/img.jpg" /></div>
-      <div class="slider md:hidden">
-        <swiper
-          :loop="true"
-          :navigation="false"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :modules="modules"
-          @init="init1"
-        >
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/1.jpg" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/2.jpg" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/3.jpg" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/4.jpg" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/5.jpg" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/slider/6.jpg" />
-            </div>
-          </swiper-slide>
-        </swiper>
-
-        <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+  <section class="s7 w-full relative">
+    <div class="md:flex md:justify-center md:items-end md:translate-x-[5.885vw]">
+      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="logo" src="@/section/s7/logo.svg" />
+        <div class="head">
+          <div class="t1">築遠工程</div>
+          <div class="t2">張盈智 結構技師</div>
+          <div class="labell absolute">
+            <div class="labell-en">Lighting Design</div>
+            <div class="labell-zh">燈光設計</div>
+          </div>
         </div>
-        <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+        <div class="t4">
+          以藝術看待結構，創造建築新視角，在安全利基點上，解構重組力與美學。洞悉技法，完美展現穠纖合度平衡，至高標準嚴格把關。<br>
+          <br>
+          知名業績<br>
+          璞真碧湖畔、晴空樹、至仁愛、富富話合、巨大集團全球營運總部合
         </div>
       </div>
-      <div class="slider user-n hidden md:block">
-        <swiper
-          :loop="true"
-          :navigation="false"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :modules="modules"
-          @init="init2"
-        >
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/1.webp" />
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s7/2.webp" />
-            </div>
-          </swiper-slide>
-        </swiper>
-
-        <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+      <div class="imgs flex justify-between">
+        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img class="w-full" src="@/section/s7/1.jpg" />
+          <div class="txt">巨大集團全球營運總部合</div>
         </div>
-        <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+          <img class="w-full" src="@/section/s7/2.jpg" />
         </div>
       </div>
     </div>
@@ -95,115 +35,157 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  padding: size-m(24) 0;
-  background-image: url(@/section/s7/bg-m.webp);
-  background-size: cover;
-  @media (min-width: 768px) {
-    padding: size(90) size(250);
-    background: none;
+  font-family: "Noto Serif TC";
+  padding-top: size-m(44);
+  @media screen and (min-width:768px) {
+    padding: size(110) 0 size(90) 0;
   }
 
-  .t1 {
-    font-size: size-m(25);
-    line-height: size-m(34);
-    color: #E5005C;
-    font-weight: 700;
+  .content {
     padding: 0 size-m(30);
-    margin-bottom: size-m(20);
-    @media (min-width: 768px) {
-      font-size: size(58);
-      line-height: size(79);
+    @media screen and (min-width:768px) {
       padding: 0;
-      margin-bottom: size(30);
+      width: size(414);
+      margin-right: size(154);
+      position: relative;
     }
   }
 
-  .balls {
-    pointer-events: none;
-    @media (min-width: 768px) {
-      top: size(69);
-      left: size(789);
-      width: size(276);
-    }
-  }
-
-  .c{z-index: 2;
-    position: absolute;
-    font-size: size-m(12);
-    top: 0;right: 1em;
-    color:#0009;
-    @media (min-width: 768px) {
-    font-size: size(12);
-    }
-  }
-  .img {
-    position: relative;
-    width: 100%;
-    margin: 0 auto size-m(20) auto;
-    img{width: 100%;height: 100%;
-    object-fit: cover;}
-    @media (min-width: 768px) {
-      width: size(1329);
-      height:size(795);
-      margin: 0 0 0 size(-200);
-    }
-  }
-
-  .slider {
-    position: relative;
-    @media (min-width: 768px) {
-      width: size(227);
-      padding-top: size(47);
-    }
-
-    .swiper {
-      width: size-m(231);
-      margin: 0 auto;
-      @media (min-width: 768px) {
-        width: 100%;
-      }
-    }
-
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-    }
-
-    .slide-prev, .slide-next {
-      width: size-m(31);
-      cursor: pointer;
+  .logo {
+    width: size-m(74);
+    margin-bottom: size-m(13);
+    @media screen and (min-width:768px) {
+      width: size(149);
+      margin-bottom: 0;
       position: absolute;
-      top: 50%;
-      left: size-m(14);
-      transform: translate(0, -50%);
-      @media (min-width: 768px) {
-        width: size(31);
-        top: 0;
-        left: 0;
-        transform: translate(0, 0);
+      bottom: 0;
+      left: size(-149 - 55);
+    }
+  }
+
+  .head {
+    padding-bottom: size-m(16);
+    margin-bottom: size-m(18);
+    border-bottom: size-m(1) solid #000;
+    position: relative;
+    @media screen and (min-width:768px) {
+      padding-bottom: size(20);
+      margin-bottom: size(23);
+      border-bottom: size(1) solid #000;
+    }
+
+    .labell {
+      bottom: size-m(16 + 6);
+      right: 0;
+      @media screen and (min-width:768px) {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row-reverse;
+        top: size(-90);
+        bottom: auto;
+        left: size(-65 - 110);
+        right: auto;
       }
-      
-      svg {
-        display: block;
-        width: 100%;
 
-        @media (min-width: 768px) {
-          circle {
-            fill: #E5005C;
-          }
+      .labell-en {
+        color: #BBA693;
+        font-size: size-m(10);
+        font-weight: 700;
+        line-height: 132%;
+        letter-spacing: .13em;
+        margin-bottom: size-m(12);
+        text-transform: uppercase;
+        @media screen and (min-width:768px) {
+          font-size: size(23);
+          margin-bottom: 0;
+          margin-left: size(15);
+          writing-mode: vertical-lr;
+        }
+      }
 
-          path {
-            stroke: #fff;
-          }
+      .labell-zh {
+        font-size: size-m(20);
+        font-weight: 700;
+        line-height: 109%;
+        padding: size-m(5) size-m(14);
+        border: size-m(1) solid #000;
+        display: inline-block;
+        @media screen and (min-width:768px) {
+          font-size: size(37);
+          padding: size(15) size(15);
+          border: size(1) solid #000;
+          writing-mode: vertical-lr;
         }
       }
     }
+  }
 
-    .slide-next {
-      left: auto;
-      right: size-m(14);
-      @media (min-width: 768px) {
-        right: 0;
+  .t1 {
+    color: #12352A;
+    font-size: size-m(15);
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: .01em;
+    @media screen and (min-width:768px) {
+      font-size: size(30);
+    }
+  }
+
+  .t2 {
+    font-size: size-m(19);
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: -0.01em;
+    margin-bottom: size-m(2);
+    @media screen and (min-width:768px) {
+      font-size: size(40);
+      margin-bottom: size(0);
+    }
+  }
+
+  .t3 {
+    color: #12352A;
+    font-size: size-m(13);
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0.01em;
+    @media screen and (min-width:768px) {
+      font-size: size(25);
+    }
+  }
+
+  .t4 {
+    font-size: size-m(14);
+    font-weight: 600;
+    line-height: 163%;
+    margin-bottom: size-m(30);
+    @media screen and (min-width:768px) {
+      font-size: size(23);
+      margin-bottom: 0;
+    }
+  }
+
+  .imgs {
+    @media screen and (min-width:768px) {
+      width: size(849);
+    }
+
+    .img {
+      width: 48.8%;
+    }
+
+    .txt {
+      position: absolute;
+      bottom: size-m(5);
+      right: size-m(6);
+      color: #FFF;
+      font-family: "Noto Sans TC";
+      font-size: size-m(10);
+      line-height: 133%;
+      @media screen and (min-width:768px) {
+        bottom: size(8);
+        right: size(14);
+        font-size: size(14);
       }
     }
   }
@@ -211,44 +193,4 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import { Autoplay, Navigation } from "swiper";
-const modules = ref([Autoplay, Navigation]);
-const swiperRef1 = ref(null);
-const swiperRef2 = ref(null);
-
-const init1 = swiper => {
-  swiperRef1.value = swiper;
-}
-
-const slidePrev1 = () => {
-  if(swiperRef1.value){
-    swiperRef1.value.slidePrev();
-  }
-}
-
-const slideNext1 = () => {
-  if(swiperRef1.value){
-    swiperRef1.value.slideNext();
-  }
-}
-
-const init2 = swiper => {
-  swiperRef2.value = swiper;
-}
-
-const slidePrev2 = () => {
-  if(swiperRef2.value){
-    swiperRef2.value.slidePrev();
-  }
-}
-
-const slideNext2 = () => {
-  if(swiperRef2.value){
-    swiperRef2.value.slideNext();
-  }
-}
 </script>
