@@ -106,7 +106,7 @@
   .logo {
     width: 19.1145833333vw;
     height: 8.9583333333vw;
-    background-image: url("@/section/s1/logo.svg");
+    //background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
