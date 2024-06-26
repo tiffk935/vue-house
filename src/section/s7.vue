@@ -77,6 +77,7 @@
     .labell {
       bottom: size-m(16 + 6);
       right: 0;
+      text-align: right;
       @media screen and (min-width:768px) {
         display: flex;
         align-items: flex-start;
@@ -85,6 +86,7 @@
         bottom: auto;
         left: size(-65 - 110);
         right: auto;
+        
       }
 
       .labell-en {
