@@ -7,8 +7,8 @@
           <div class="t1">築遠工程</div>
           <div class="t2">張盈智 結構技師</div>
           <div class="labell absolute">
-            <div class="labell-en">Lighting Design</div>
-            <div class="labell-zh">燈光設計</div>
+            <div class="labell-en">STRUCTURE CONSULTANT</div>
+            <div class="labell-zh">結構顧問</div>
           </div>
         </div>
         <div class="t4">
