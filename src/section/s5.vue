@@ -56,7 +56,7 @@
 
     <div class="content2">
       <div class="flex justify-between items-end mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">《雍雋品》<br>中正區住宅大樓</div>
+        <div class="t1">《雍雋品》<br class="md:hidden">中正區住宅大樓</div>
         <img class="logo" src="@/section/s5/logo.png" />
       </div>
       <div class="en" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">JADE POSH-GATHERING GREEN, FLOURISHING OPULENCE.</div>

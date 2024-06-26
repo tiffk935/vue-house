@@ -141,7 +141,7 @@
       display: flex;width: 100%;
     align-items:center;
       > span{
-        width: 6em;
+        width: 7em;
         text-align: left;padding-left:1em ;
         > span{color: #F00;font-size: 12px;}
       }

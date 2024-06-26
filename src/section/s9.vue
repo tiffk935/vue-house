@@ -89,7 +89,7 @@
 
       .labell-en {
         color: #BBA693;
-        font-size: size-m(10);
+        font-size: size-m(9);
         font-weight: 700;
         line-height: 132%;
         letter-spacing: .13em;

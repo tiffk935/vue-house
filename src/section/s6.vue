@@ -127,7 +127,7 @@
 
       .labell-en {
         color: #BBA693;
-        font-size: size-m(12);
+        font-size: size-m(9);
         font-weight: 700;
         line-height: 132%;
         letter-spacing: .13em;
@@ -148,11 +148,12 @@
         padding: size-m(5) size-m(14);
         border: size-m(1) solid #000;
         display: inline-block;
-        writing-mode: vertical-lr;
+        //writing-mode: vertical-lr;
         @media screen and (min-width:768px) {
           font-size: size(37);
           padding: size(15) size(15);
           border: size(1) solid #000;
+          writing-mode: vertical-lr;
         }
       }
     }

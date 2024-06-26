@@ -22,7 +22,7 @@ export default {
         ["景觀設計", "邑埕景觀設計"],
         ["建築外觀", "曾聰憲建築師事務所"],
     ],
-    gtmCode: ["GTM-KTP354Z8"], // 可放置多個
+    gtmCode: ["GTM-W2Z2B6ND","GTM-KXCTSBDN"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

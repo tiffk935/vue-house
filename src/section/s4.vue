@@ -100,10 +100,10 @@
       display: none;
       @media screen and (min-width:768px) {
         display: block;
-        width: size(840);
+        width: size(820);
         height: size(1);
         background: #BBA693;
-        left: size(210);
+        left: size(235);
         top: 50%;
       }
     }

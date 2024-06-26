@@ -4,18 +4,17 @@
       <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <img class="logo" src="@/section/s10/logo.svg" />
         <div class="head">
-          <div class="t1">禾鼎設計</div>
-          <div class="t2">楊豪琳 設計師</div>
+          <div class="t2">富麗營造</div>
           <div class="labell absolute">
-            <div class="labell-en">interior design</div>
-            <div class="labell-zh">公設設計</div>
+            <div class="labell-en">construction project</div>
+            <div class="labell-zh">營造工程</div>
           </div>
         </div>
         <div class="t4">
-          空間不只是一片場域，更是情感寄託，重新解構塑造風格氛圍，憑藉設計私人精品會館20多年經驗，雕琢機能細節和流暢動線，以空間凝聚感情，分享未來故事，延伸建築多元價值。<br>
+          秉持初心，全新投入，是不變的信念，憑藉三十年經驗，擁有團隊各領域專業工藝和精益求精技術，以三級品管制度，搭配嚴謹審核制度，確保每一項工程達到標準，累積多年經驗及口碑，樹起業界標竿。<br>
           <br><br class="hidden md:block">
           代表作品<br>
-          天母自在、豐基皇居、璞知溪、瑞安自在、南京御邸、開璽吾界、林口亞昕天地昕、三輝謙匯、國泰瑞安樸石、國泰層峰
+          永和國光段、怡心園、勝興采悅、盛興向陽光晴、北投崇仁路、三重集美樹、環河南路住宅、中和晶悅、玖原品藏、信義THE1
         </div>
       </div>
       <div class="imgs flex justify-between">
@@ -46,7 +45,7 @@
     padding: 0 size-m(30);
     @media screen and (min-width:768px) {
       padding: 0;
-      width: size(414);
+      width: size(445);
       margin-left: size(154);
       position: relative;
     }

@@ -18,29 +18,12 @@
     </div>
     <div class="slider">
       <swiper
-        :loop="true"
         :navigation="true"
         :pagination="{
           clickable: true,
         }"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
         :modules="modules"
       >
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s11/1.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s11/1.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
-          </div>
-        </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s11/1.jpg" />
