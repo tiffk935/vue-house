@@ -212,7 +212,7 @@
         width: 100%;
       }
       .order-title1{
-      margin-bottom: size-m(30);
+      margin-bottom: size-m(3 0);
       }
     }
 
