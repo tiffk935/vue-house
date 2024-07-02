@@ -20,11 +20,11 @@
       <div class="imgs flex justify-between">
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
           <img class="w-full" src="@/section/s10/1.jpg" />
-          <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
+          <div class="txt">北投崇仁路家族新建工程</div>
         </div>
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <img class="w-full" src="@/section/s10/2.jpg" />
-          <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
+          <div class="txt">玖原品藏</div>
         </div>
       </div>
     </div>

@@ -3,8 +3,8 @@
         v-bind:class="{ 'r16-9': higherScreen }">
         <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
             <div class="menu-inner">
-                <div class="menu-item font-bold cursor-pointer text-white" v-for="item, i in info.navList"
-                    @click="scrollTo(item.target)">
+                <div class="menu-item font-bold cursor-pointer text-white" v-for="item, in info.navList"
+                    @click="scrollTo(item.target)" :key="item">
                     <span>{{ item.name }}</span>
                 </div>
             </div>

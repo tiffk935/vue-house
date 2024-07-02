@@ -30,6 +30,12 @@
             <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
           </div>
         </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s11/2.jpg" />
+            <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
+          </div>
+        </swiper-slide>
       </swiper>
     </div>
   </section>
