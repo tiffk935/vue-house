@@ -1,4 +1,4 @@
-  <template>
+<template>
   <div class="order relative md:font-['Noto_Serif_TC']">
     <img class="bg absolute bottom-[40px] left-0 w-full hidden md:block" src="@/section/form/bg.png" />
     <div class="order1">
@@ -212,7 +212,7 @@
         width: 100%;
       }
       .order-title1{
-      margin-bottom: size-m(3 0);
+      margin-bottom: size-m(30);
       }
     }
 
