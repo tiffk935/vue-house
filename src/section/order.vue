@@ -81,71 +81,96 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  width: 100%;
   padding-top: 0;
-  font-family: "Noto Serif TC";
 
   .order-section {
     position: relative;
-    padding-top: size(109);
+    padding-top: 4em;
     overflow: hidden;
     background-image: url(@/section/form/bg.jpg);
     background-size: cover;
     background-position: center center;
+    @media screen and (min-width:768px) {
+      padding-top: 5.3em;
+    }
   }
 
   .order-title {
-    font-size: size(43);
-    line-height: 144%;
+    font-size: size-m(25);
+    line-height: 1.44;
     font-weight: 700;
     color: #fff;
-    margin-bottom: size(4);
+      margin-bottom: .5em;
+    @media screen and (min-width:768px) {
+      font-size: size(50);
+    }
   }
 
   .order-subTitle {
-    font-size: size(18);
+    font-size: size-m(14);
     color: #fff;
-    margin-bottom: size(31);
+    margin: 0 auto 2em auto;
+    width: size-m(310);
+    @media screen and (min-width:768px) {
+      font-size: size(20);
+      width: auto;
+    }
   }
 
   .form {
-    width: size(920);
-    min-width: 680px;
-    //  height: 350px;
-    gap: size(80);
-    margin-top: size(45);
-    margin-bottom: size(50);
+    width: size-m(310);
+    gap: size-m(15);
+    margin: 1.43em auto;
     z-index: 50;
     align-items: stretch;
-
+    flex-direction: column;
+    line-height: 1.7;
+    @media screen and (min-width:768px) {
+      width:60em;
+    //  min-width: 680px;
+      gap: size(80);
+      flex-direction: row;
+      font-size: calc(12px + #{size(3)});
+    }
     .left {
       flex: 1;
-      gap: size(20);
-      //   width: size(419);
+      gap: 1em;
     }
-
     .right {
       flex: 1;
-      height: auto;
-      //  width: size(419);
+      height: size-m(100);
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
+      @media screen and (max-width:768px) {
+        .row{
+          height: 7em;
+        }
+      }
     }
-
-    &::after {
-      content: "";
-      width: size(1);
-      height: 100%;
-      background-color: #fff;
-      position: absolute;
+    @media screen and (min-width:768px) {
+      &::after {
+        content: "";
+        width: size(1);
+        height: 100%;
+        background-color: #fff;
+        position: absolute;
+      }
     }
-    .row{background: #FFF;border: 1px solid #CCC;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
+    .row{
+      background: #FFF;
+      border: 1px solid #CCC;
+      color: #000;
+      display: flex;
+      width: 100%;
+      align-items:center;
       > span{
         width: 7em;
-        text-align: left;padding-left:1em ;
-        > span{color: #F00;font-size: 12px;}
+        text-align: left;padding-left:1em;
+        > span{color: #F00;}
       }
-      input,select{background: inherit;flex: 1;}
+      .input,
+      .select{height: 3em;min-height: 0;}
       option{color: #666;}
       select{background:url("//h65.tw/img/select.svg") no-repeat calc(100% - .5em) 100%;
       background-size:auto 200%;
@@ -155,90 +180,37 @@
       }
       }
     }
+      input,select,textarea{background: inherit;flex: 1;font-size:1em;}
   }
 
   .send {
-    font-size:20px;
+    font-size: size-m(20);
+    width:15.5em;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
     background-color: #785A4F;
     border:0;
     border-radius: 0em;
-
-    width: 308px;
-    height:3.3em;
+    height:3.6em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
     position: relative;
     font-weight: 600;
+    @media screen and (min-width:768px) {
+      font-size: size(25);
+    }
   }
-
   .control {
-    font-size: size(16);
     color: #000;
     position: relative;
-  }
-}
-
-@media screen and (max-width:768px) {
-  .order {
-    width: 100%;
-
-    .order-section {
-      padding-top: size-m(68);
-    }
-
-    .order-title {
-      font-size: size-m(29);
-      margin-bottom: size-m(20);
-    }
-
-    .order-subTitle {
-      font-size: size-m(15);
-      width: size-m(310);
-      margin: 0 auto size-m(31) auto;
-    }
-    
-    .form {
-      width: size-m(310);
-      min-width: 0;
-      height: auto;
-      gap: size-m(15);
-      margin-bottom: size-m(20);
-      flex-direction: column;
-      margin-top: size-m(20);
-
-      .left {
-        width: 100%;
-        gap: size-m(15);
-      }
-
-      .right {
-        width: 100%;
-        height: size-m(100);
-        .row{
-          height: 7em;
-        }
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
-    .send {
-      font-size: size-m(21);
-      width: size-m(310);
-      height: size-m(72);
-    }
-
-    .control {
-      font-size: size-m(14.6);
+    @media screen and (min-width:768px) {
+      font-size: .75em;
     }
   }
 }
+
 </style>
 
 <script setup>

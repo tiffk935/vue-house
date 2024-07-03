@@ -5,7 +5,7 @@
         <img class="logo" src="@/section/s8/logo.svg" />
         <div class="head">
           <div class="t1">禾鼎設計</div>
-          <div class="t2">楊豪琳 設計師</div>
+          <div class="t2 subtitle">楊豪琳 設計師</div>
           <div class="labell absolute">
             <div class="labell-en">interior design</div>
             <div class="labell-zh">公設設計</div>
@@ -35,7 +35,6 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  font-family: "Noto Serif TC";
   padding-top: size-m(44);
   @media screen and (min-width:768px) {
     padding: size(110) 0 size(90) 0;
@@ -85,82 +84,6 @@
         bottom: auto;
         right: size(-65 - 110);
       }
-
-      .labell-en {
-        color: #BBA693;
-        font-size: size-m(9);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        margin-bottom: size-m(12);
-        text-transform: uppercase;
-        @media screen and (min-width:768px) {
-          font-size: size(23);
-          margin-bottom: 0;
-          margin-right: size(15);
-          writing-mode: vertical-lr;
-        }
-      }
-
-      .labell-zh {
-        font-size: size-m(20);
-        font-weight: 700;
-        line-height: 109%;
-        padding: size-m(5) size-m(14);
-        border: size-m(1) solid #000;
-        display: inline-block;
-        @media screen and (min-width:768px) {
-          font-size: size(37);
-          padding: size(15) size(15);
-          border: size(1) solid #000;
-          writing-mode: vertical-lr;
-        }
-      }
-    }
-  }
-
-  .t1 {
-    color: #12352A;
-    font-size: size-m(15);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: .01em;
-    @media screen and (min-width:768px) {
-      font-size: size(30);
-    }
-  }
-
-  .t2 {
-    font-size: size-m(19);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: -0.01em;
-    margin-bottom: size-m(2);
-    @media screen and (min-width:768px) {
-      font-size: size(40);
-      margin-bottom: size(0);
-    }
-  }
-
-  .t3 {
-    color: #12352A;
-    font-size: size-m(13);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.01em;
-    @media screen and (min-width:768px) {
-      font-size: size(25);
-    }
-  }
-
-  .t4 {
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 163%;
-    margin-bottom: size-m(30);
-    @media screen and (min-width:768px) {
-      font-size: size(23);
-      margin-bottom: 0;
     }
   }
 

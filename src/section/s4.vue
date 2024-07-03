@@ -8,10 +8,10 @@
     </div>
     <div class="md:flex md:justify-between md:items-end md:flex-row-reverse">
       <div class="zh md:flex md:justify-between md:items-end md:flex-row-reverse" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="zh1">交通區位</div>
+        <div class="title">交通區位</div>
         <div>
-          <div class="zh2">擁抱繁榮交通<br>輕馳 大台北核心</div>
-          <div class="zh3">
+          <div class="subtitle">擁抱繁榮交通<br>輕馳 大台北核心</div>
+          <div class="desc">
             獨坐台北市心版圖絕佳地段<br>
             擁有雙捷運優勢<br>
             近松山新店線小南門站<br>
@@ -70,7 +70,6 @@
 .s4 {
   width: 100%;
   padding: size-m(195.87) size-m(30) size-m(103) size-m(30);
-  font-family: "Noto Serif TC";
   @media screen and (min-width:768px) {
     padding: size(152.71) size(163) size(306) size(163);
   }
@@ -112,6 +111,7 @@
       color: #BBA693;
       font-size: size-m(24);
       line-height: 160%;
+      font-family: "Times New Roman", Times, serif;
       @media screen and (min-width:768px) {
         font-size: size(36);
         letter-spacing: .1em;
@@ -121,6 +121,7 @@
     .en2 {
       font-size: size-m(12);
       line-height: 170%;
+      font-family: "Times New Roman", Times, serif;
       @media screen and (min-width:768px) {
         font-size: size(13);
         letter-spacing: .13em;
@@ -138,48 +139,31 @@
       width: size(485.22);
     }
 
-    .zh1 {
+    .title {
       color: #C1AD8F;
-      font-size: size-m(25);
-      font-weight: 700;
-      line-height: 120%;
       letter-spacing: .13em;
-      margin-bottom: size-m(26.63);
       @media screen and (min-width:768px) {
         padding: 0;
-        font-size: size(51);
-        margin-bottom: 0;
         writing-mode: vertical-lr;
       }
     }
 
-    .zh2 {
-      font-size: size-m(20);
-      font-weight: 700;
-      line-height: 140%;
+    .subtitle {
       letter-spacing: .13em;
       margin-bottom: size-m(21.28);
+      margin-top: size-m(26.63);
       @media screen and (min-width:768px) {
-        font-size: size(41);
         margin-bottom: size(33.28);
       }
     }
 
-    .zh3 {
-      font-size: size-m(14);
-      font-weight: 600;
-      line-height: 205%;
+    .desc {
       letter-spacing: .06em;
-      margin-bottom: size-m(21.28);
-      @media screen and (min-width:768px) {
-        font-size: size(20);
-        margin-bottom: 0;
-      }
     }
   }
 
   .slider {
-    margin: 0 size-m(-30);
+    margin: size-m(21.28) size-m(-30) 0;
     position: relative;
     @media screen and (min-width:768px) {
       margin: 0;

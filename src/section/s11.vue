@@ -1,10 +1,10 @@
 <template>
   <section class="s11 w-full relative">
     <div class="title">
-      <div class="en hidden md:block">A decade of cultivated refinement</div>
+      <div class="en">A decade of cultivated refinement</div>
       <div class="t1">藴育十年雋刻品味<br>雍雋品</div>
     </div>
-    <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       從室內設計源起，深入建築規劃，<br>
       因懂生活的意義才能築起乘載幸福的家，<br>
       <br>
@@ -46,7 +46,6 @@
 
 .s11 {
   background: #fff;
-  font-family: "Noto Serif TC";
   @media screen and (min-width:768px) {
     padding-bottom: size(156);
   }
@@ -56,8 +55,8 @@
     height: size-m(170);
     background-image: url(@/section/s11/bg-m.png);
     background-size: 100% 100%;
-    padding-top: size-m(46);
-    padding-left: size-m(31);
+    padding-top: size-m(35);
+    padding-left: size-m(30);
     margin-bottom: size-m(27);
     @media screen and (min-width:768px) {
       height: size(896);
@@ -69,40 +68,36 @@
     }
 
     .en {
-      @media screen and (min-width:768px) {
         color: #BBA693;
-        font-size: size(23);
+        font-size: .5em;
         font-weight: 700;
-        line-height: 132%;
+        line-height: 1.32;
         letter-spacing: .13em;
-        writing-mode: vertical-lr;
-        margin-right: size(10);
+        margin-right:0.43em;
+        margin-bottom: .5em;
         text-transform: uppercase;
+      @media screen and (min-width:768px) {
+        font-size: size(23);
+        writing-mode: vertical-lr;
       }
     }
 
     .t1 {
-      font-size: size-m(20);
       font-weight: 700;
       line-height: 150%;
       letter-spacing: .13em;
       @media screen and (min-width:768px) {
-        font-size: size(51);
         writing-mode: vertical-lr;
       }
     }
   }
 
-  .t2 {
+  .desc {
     padding: 0 size-m(30);
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 164%;
     margin-bottom: size-m(30);
     @media screen and (min-width:768px) {
       padding: 0 0 0 size(163);
       width: size(420 + 163);
-      font-size: size(23);
       margin-bottom: size(40);
     }
   }

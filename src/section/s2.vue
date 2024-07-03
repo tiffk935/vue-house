@@ -8,8 +8,8 @@
     <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
     <div class="content absolute">
       <div class="line" data-aos="line" data-aos-duration="1000" data-aos-delay="0"></div>
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">涵雍植物園 <br class="md:hidden">蘊綠回家之路</div>
-      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">涵雍植物園 <br class="md:hidden">蘊綠回家之路</div>
+      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         開窗 俯瞰植物園馥域<br>
         回家 豐迎四季之美<br>
         台北市稀罕的闊綠眼界<br>
@@ -102,7 +102,6 @@
     left: 0;
     text-align: center;
     color: #DCDCDC;
-    font-family: "Noto Serif TC";
     font-weight: 600;
     @media screen and (min-width:768px) {
       top: size(63);
@@ -120,26 +119,18 @@
       }
     }
 
-    .t1 {
-      font-size: size-m(25);
-      line-height: 140%;
+    .title {
       letter-spacing: 0.18em;
       margin-bottom: size-m(15);
       @media screen and (min-width:768px) {
-        font-size: size(45);
         margin-bottom: size(30.24);
         position: relative;
         left: -0.18em;
       }
     }
 
-    .t2 {
-      font-size: size-m(14);
-      line-height: 215%;
+    .desc {
       letter-spacing: 0.09em;
-      @media screen and (min-width:768px) {
-        font-size: size(25);
-      }
     }
   }
 

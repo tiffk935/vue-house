@@ -18,7 +18,7 @@
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div><span class="font-semibold md:font-normal">接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
+        <div><span class="font-[500]">接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
@@ -162,9 +162,10 @@
         max-width: 9999px;
         justify-content: center;
         border-color: #fff;
+        /*
         border-top-left-radius: size(10);
         border-bottom-left-radius: size(10);
-
+*/
         &::before {
           content: "";
           position: absolute;
