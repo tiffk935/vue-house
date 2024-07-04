@@ -15,13 +15,13 @@
           以藝術看待結構，創造建築新視角，在安全利基點上，解構重組力與美學。洞悉技法，完美展現穠纖合度平衡，至高標準嚴格把關。<br>
           <br>
           知名業績<br>
-          璞真碧湖畔、晴空樹、至仁愛、富富話合、巨大集團全球營運總部合
+          璞真碧湖畔、晴空樹、至仁愛、富富話合、巨大集團全球營運總部
         </div>
       </div>
       <div class="imgs flex justify-between">
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
           <img class="w-full" src="@/section/s7/1.jpg" />
-          <div class="txt">巨大集團全球營運總部合</div>
+          <div class="txt">巨大集團全球營運總部</div>
         </div>
         <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
           <img class="w-full" src="@/section/s7/2.jpg" />
