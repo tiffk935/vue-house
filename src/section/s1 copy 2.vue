@@ -1,10 +1,7 @@
 <template>
   <section class="s1 text-white bg-[#D7282F] relative">
     <video class="md:hidden" src="https://h35.banner.tw/park/mo.mp4" playsinline autoplay muted loop></video>
-      <div class="video hidden md:block" >
-       <iframe data-aos="fade-up" src="https://www.youtube.com/embed/6XwbIO52frk?autoplay=1&amp;mute=1&amp;mute=1&amp;loop=1&amp;controls=0&amp;rel=0&amp;playlist=6XwbIO52frk" title="YouTube video player" frameborder="0"
-    allowfullscreen></iframe>
-      </div>
+    <video class="hidden md:block" src="https://h35.banner.tw/park/pc.mp4" playsinline autoplay muted loop></video>
   </section>
 </template>
 
@@ -17,20 +14,11 @@
   min-height: size-m(604);
   background: #fff;
   @media screen and (min-width:768px) {
-    height: size(1070);
-    min-height: 0;
+    height: 100vh;
+    min-height: size(900);
     max-height: size(1080);
 
   }
-iframe {
-   width: 100%;
-   height: 100%;
-}
-.video {
-    width: 100%;
-    height: size(1070);pointer-events: none;
-}
-
   
   video{
     width: 100%;
