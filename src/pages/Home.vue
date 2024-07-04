@@ -61,11 +61,13 @@
   .desc {
     line-height: 2;
   }
-  .en{font-family: "Times New Roman", Times, serif;}
+  .en{font-family: "Times New Roman", Times, serif;
+        font-weight: 500;}
 
   .labell {
       .labell-en {
-        color: #BBA693;font-family: "Times New Roman", Times, serif;
+        color: #BBA693;
+        font-family: "Times New Roman", Times, serif;
         font-size: size-m(10);
         font-weight: 500;
         letter-spacing: .06em;

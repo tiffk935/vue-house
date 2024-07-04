@@ -127,13 +127,14 @@
     }
 
     .en {
-      color: #BBA693;
+      color: #9b8673bb;
       font-size: size-m(11);
       line-height: 1.7;
       margin-bottom: size-m(12.75);
       letter-spacing: -.03em;
       @media screen and (min-width:768px) {
         font-size: size(13);
+        letter-spacing: .13em;
         margin-bottom: size(21.75);
       }
     }

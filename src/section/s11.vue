@@ -70,7 +70,6 @@
     .en {
         color: #BBA693;
         font-size: .5em;
-        font-weight: 700;
         line-height: 1.32;
         letter-spacing: .13em;
         margin-right:0.43em;

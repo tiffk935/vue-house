@@ -112,6 +112,7 @@
       font-size: size-m(24);
       line-height: 160%;
       font-family: "Times New Roman", Times, serif;
+      font-weight: 500;
       @media screen and (min-width:768px) {
         font-size: size(36);
         letter-spacing: .1em;
@@ -120,8 +121,9 @@
 
     .en2 {
       font-size: size-m(12);
-      line-height: 170%;
+      line-height: 1.7;
       font-family: "Times New Roman", Times, serif;
+      font-weight: 500;
       @media screen and (min-width:768px) {
         font-size: size(13);
         letter-spacing: .13em;
