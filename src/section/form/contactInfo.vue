@@ -18,7 +18,11 @@
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div><span class="font-semibold md:font-normal">接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
+        <div>
+          <!-- <span class="font-semibold md:font-normal">接待中心：</span> -->
+          <br class="md:hidden">
+          <span v-html="info.address"></span>
+        </div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
@@ -68,7 +72,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#785A4F] border-0 text-white mt-12" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#00635D] border-0 text-white mt-12" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -123,7 +127,7 @@
     } 
 
     .contact-item {
-      background-color: #785A4F;
+      background-color: #00635D;
       // border: 1px solid #040000;
       color: #ffffff;
       width: 100%;
@@ -184,7 +188,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(35%) sepia(37%) saturate(385%) hue-rotate(331deg) brightness(92%) contrast(82%);
+  img{filter: invert(30%) sepia(15%) saturate(3799%) hue-rotate(136deg) brightness(91%) contrast(101%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -201,7 +205,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #785A4F;
+      background-color: #00635D;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;

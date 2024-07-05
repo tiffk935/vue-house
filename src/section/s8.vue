@@ -1,32 +1,31 @@
 <template>
-  <section class="s8 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:flex-row-reverse md:translate-x-[-5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s8/logo.svg" />
-        <div class="head">
-          <div class="t1">禾鼎設計</div>
-          <div class="t2">楊豪琳 設計師</div>
-          <div class="labell absolute">
-            <div class="labell-en">interior design</div>
-            <div class="labell-zh">公設設計</div>
-          </div>
-        </div>
-        <div class="t4">
-          空間不只是一片場域，更是情感寄託，重新解構塑造風格氛圍，憑藉設計私人精品會館20多年經驗，雕琢機能細節和流暢動線，以空間凝聚感情，分享未來故事，延伸建築多元價值。<br>
-          <br><br class="hidden md:block">
-          代表作品<br>
-          天母自在、豐基皇居、璞知溪、瑞安自在、南京御邸、開璽吾界、林口亞昕天地昕、三輝謙匯、國泰瑞安樸石、國泰層峰
-        </div>
+  <section class="s8 w-full relative bg-[#EFEFEF]">
+    <div class="map">
+      <img src="@/section/s8/map.jpg" />
+      <div class="mask">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 63" fill="none">
+          <circle cx="31.5" cy="31.5" r="31.5" fill="white"/>
+          <path d="M29.8889 40.7778C35.9027 40.7778 40.7778 35.9027 40.7778 29.8889C40.7778 23.8751 35.9027 19 29.8889 19C23.8751 19 19 23.8751 19 29.8889C19 35.9027 23.8751 40.7778 29.8889 40.7778Z" stroke="#217036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M43.4999 43.4999L37.5791 37.5791" stroke="#217036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
       </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s8/1.jpg" />
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s8/2.jpg" />
-          <div class="txt">國泰層峰</div>
-        </div>
+    </div>
+
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">
+        公園
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 27" fill="none">
+          <path d="M19.6092 23.0634C17.0716 25.7018 14.0207 27 10.4852 27C6.94967 27 4.15545 25.7018 2.25734 23.0634C0.38774 20.5556 -0.312851 17.3734 0.127055 13.5211C0.566961 9.66875 1.99258 6.44443 4.39577 3.93662C6.88857 1.34031 9.94754 0 13.5564 0C17.1653 0 19.8821 1.34031 21.7843 3.93662C23.6172 6.44864 24.3097 9.67296 23.8738 13.5211C23.4339 17.3734 22.0124 20.5556 19.6092 23.0634ZM18.7742 5.56775C17.7559 2.80284 15.9474 1.4246 13.3975 1.4246C10.8477 1.4246 8.68893 2.80706 7.03928 5.56775C5.68698 7.78473 4.87641 10.4232 4.52611 13.5211C4.17989 16.5768 4.42836 19.2153 5.27966 21.3901C6.29796 24.1508 8.06573 25.5333 10.6563 25.5333C13.2468 25.5333 15.2875 24.1508 16.9372 21.3901C18.2854 19.2111 19.1326 16.5768 19.4829 13.5211C19.8373 10.4232 19.5847 7.78473 18.7782 5.56775H18.7742Z" fill="#217036"/>
+        </svg>
+        距離、學校<br class="md:hidden">
+        散步到燕巢市心優質生活圈
       </div>
+      <div class="t2">兒二公園 × 國小國中 × 行政中心<br class="md:hidden">交流道 × 阿公店景區</div>
+      <div class="t3">東泥建設從選地開始，即為住戶考量到生活需求，「東泥大賦」結合自然、人文、便捷的優質環境，是燕巢市中心首屈一指的優生美地。</div>
+    </div>
+    
+    <div class="slider">
+      <Slider />
     </div>
   </section>
 </template>
@@ -35,156 +34,194 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  font-family: "Noto Serif TC";
-  padding-top: size-m(44);
+  padding: size-m(48) size-m(30) size-m(74);
+  background-image: url(@/section/s8/bg.png);
+  background-size: size-m(1920) auto;
+  background-position: 32.5% 0;
+  background-repeat: no-repeat;
+  text-align: center;
   @media screen and (min-width:768px) {
-    padding: size(110) 0 size(90) 0;
+    padding: size(100) 0 size(84);
+    background-size: size(1920) auto;
   }
-
-  .content {
-    padding: 0 size-m(30);
-    @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-left: size(154);
-      position: relative;
-    }
-  }
-
-  .logo {
-    width: size-m(80);
-    margin-bottom: size-m(13);
-    @media screen and (min-width:768px) {
-      width: size(110);
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 0;
-      right: size(-65 - 110);
-    }
-  }
-
-  .head {
-    padding-bottom: size-m(16);
-    margin-bottom: size-m(18);
-    border-bottom: size-m(1) solid #000;
+  
+  .map {
+    border-radius: size-m(28);
+    height: size-m(373);
+    overflow: hidden;
     position: relative;
+    margin-bottom: size-m(31);
     @media screen and (min-width:768px) {
-      padding-bottom: size(20);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
+      width: size(1580);
+      border-radius: size(30);
+      height: auto;
+      margin: 0 auto size(47);
+      border: size(1) solid #217036;
     }
 
-    .labell {
-      bottom: size-m(16 + 6);
-      right: 0;
-      text-align: right;
+    .mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(33, 112, 54, 0.50);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
       @media screen and (min-width:768px) {
-        display: flex;
-        align-items: flex-start;
-        top: 0;
-        bottom: auto;
-        right: size(-65 - 110);
+        display: none;
       }
 
-      .labell-en {
-        color: #BBA693;
-        font-size: size-m(9);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        margin-bottom: size-m(12);
-        text-transform: uppercase;
-        @media screen and (min-width:768px) {
-          font-size: size(23);
-          margin-bottom: 0;
-          margin-right: size(15);
-          writing-mode: vertical-lr;
-        }
+      svg {
+        display: block;
+        width: size-m(63);
       }
+    }
 
-      .labell-zh {
-        font-size: size-m(20);
-        font-weight: 700;
-        line-height: 109%;
-        padding: size-m(5) size-m(14);
-        border: size-m(1) solid #000;
-        display: inline-block;
-        @media screen and (min-width:768px) {
-          font-size: size(37);
-          padding: size(15) size(15);
-          border: size(1) solid #000;
-          writing-mode: vertical-lr;
-        }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @media screen and (min-width:768px) {
+        height: auto;
       }
     }
   }
 
   .t1 {
-    color: #12352A;
-    font-size: size-m(15);
+    color: #217036;
+    font-size: size-m(25);
     font-weight: 700;
-    line-height: 150%;
-    letter-spacing: .01em;
+    letter-spacing: .02em;
+    margin-bottom: size-m(11);
     @media screen and (min-width:768px) {
-      font-size: size(30);
+      font-size: size(54);
+      letter-spacing: .04em;
+      margin-bottom: size(63);
+    }
+
+    svg {
+      display: inline-block;
+      width: size-m(24);
+      transform: translateY(size-m(-4));
+      @media screen and (min-width:768px) {
+        width: size(59);
+        transform: translateY(size(-4));
+      }
     }
   }
 
   .t2 {
-    font-size: size-m(19);
-    font-weight: 700;
+    color: #217036;
+    font-size: size-m(14);
     line-height: 150%;
-    letter-spacing: -0.01em;
-    margin-bottom: size-m(2);
+    font-weight: 700;
+    margin-bottom: size-m(19);
     @media screen and (min-width:768px) {
-      font-size: size(40);
-      margin-bottom: size(0);
+      font-size: size(34);
+      line-height: 111%;
+      margin-bottom: size(22);
     }
   }
 
   .t3 {
-    color: #12352A;
-    font-size: size-m(13);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.01em;
+    font-size: size-m(12);
+    font-weight: 500;
+    line-height: 175%;
+    margin-bottom: size-m(29);
     @media screen and (min-width:768px) {
-      font-size: size(25);
+      font-size: size(22);
+      line-height: 172%;
+      margin-bottom: size(75);
     }
   }
 
-  .t4 {
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 163%;
-    margin-bottom: size-m(30);
+  .slider {
+    position: relative;
+    margin: 0 size-m(-30);
     @media screen and (min-width:768px) {
-      font-size: size(23);
-      margin-bottom: 0;
-    }
-  }
-
-  .imgs {
-    @media screen and (min-width:768px) {
-      width: size(849);
+      margin: 0;
     }
 
-    .img {
-      width: 48.8%;
-    }
-
-    .txt {
+    &:before, &:after {
+      content: '';
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
+      top: 0;
+      width: size-m(70);
+      height: 100%;
+      z-index: 100;
       @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
+        width: size(456);
+      }
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(90deg, #EFEFEF 0%, rgba(239, 239, 239, 0.00) 100%);
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(270deg, #EFEFEF 0%, rgba(239, 239, 239, 0.00) 100%);
+    }
+
+    .slide-item {
+      width: size-m(315);
+      margin-right: size-m(20);
+      @media screen and (min-width:768px) {
+        width: size(456);
+        margin-right: size(33.27);
+      }
+
+      img {
+        width: 100%;
+        height: size-m(211);
+        @media screen and (min-width:768px) {
+          height: auto;
+        }
+      }
+      
+      .caption {
+        height: size-m(63.67);
+        background-color: #2C4C37;
+        text-align: center;
+        color: #FFF;
+        text-align: center;
+        font-family: "Noto Sans TC";
+        font-size: size-m(13);
+        font-weight: 500;
+        line-height: 140%;
+        letter-spacing: .11em;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width:768px) {
+          height: size(92);
+          font-size: size(15);
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-image: url(@/section/s8/bg2.png);
+          background-size: cover;
+          mix-blend-mode: soft-light;
+        }
+
+        span {
+          font-size: size-m(15);
+          line-height: 1;
+          @media screen and (min-width:768px) {
+            font-size: size(15);
+          }
+        }
       }
     }
   }
@@ -192,4 +229,5 @@
 </style>
 
 <script setup>
+import Slider from "@/section/s8/slider.vue"
 </script>

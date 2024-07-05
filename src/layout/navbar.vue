@@ -1,12 +1,13 @@
 <template>
-    <div class="nav"
+    <div class="nav font-['Noto_Serif_TC']"
         v-bind:class="{ 'r16-9': higherScreen }">
         <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
             <div class="menu-inner">
-                <div class="menu-item font-bold cursor-pointer text-white" v-for="item, in info.navList"
+                <div class="menu-item cursor-pointer text-white" v-for="item, in info.navList"
                     @click="scrollTo(item.target)" :key="item">
                     <span>{{ item.name }}</span>
                 </div>
+                <div class="to-order" @click="scrollTo('.order')">立即預約</div>
             </div>
         </div>
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
@@ -28,7 +29,7 @@
         z-index: 1;
         width: size(90);
         height: size(90);
-        // background: rgba(139, 199, 130, 0.8);
+        background: rgba(255, 255, 255, 0.56);
         position: fixed;
         top: size(0);
         right: size(0);
@@ -38,7 +39,7 @@
         .bar {
             width: size(38);
             height: 2px;
-            background-color: #fff;
+            background-color: #505050;
             // position: relative;
             transform: all .5s;
             position: absolute;
@@ -52,7 +53,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #505050;
                 transition: all .5s;
             }
 
@@ -62,7 +63,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #505050;
                 transition: all .5s;
             }
         }
@@ -80,6 +81,8 @@
         }
 
         &.open {
+            background: rgba(255, 255, 255, 0.001);
+
             p {
                 color: #fff;
             }
@@ -118,9 +121,9 @@
         position: fixed;
         top: size(0);
         right: size(0);
-        background-color: rgba(139, 199, 130, 0.8);
+        background-color: rgba(0, 100, 87, 0.8);
         backdrop-filter: blur(2px);
-        width: size(280);
+        width: size(375);
         height: 100%;
         z-index: 99;
         transform: translateX(100%);
@@ -129,13 +132,14 @@
         gap: size(20);
 
         .menu-inner {
-            width: size(128);
+            width: size(185);
             margin: 0 auto;
         }
 
         .menu-item {
             text-align: center;
-            padding: size(20) 0;
+            padding: size(15) 0;
+            font-weight: 600;
             // border-bottom: 1px solid #fff;
 
             &:last-child {
@@ -143,7 +147,7 @@
             }
             
             span {
-                font-size: size(24);
+                font-size: size(23);
                 width: 100%;
                 display: block;
                 white-space: nowrap;
@@ -158,6 +162,22 @@
             //         width: 0;
             //     }
             // }
+        }
+
+        .to-order {
+            margin-top: size(30);
+            border-radius: size(10);
+            border: size(1) solid #B28247;
+            background: linear-gradient(90deg, #FFE679 0%, #BB7C1A 100%);
+            color: #FFF;
+            font-family: "Noto Sans TC";
+            font-size: size(20);
+            font-weight: 400;
+            line-height: 100%;
+            letter-spacing: .1em;
+            text-align: center;
+            padding: size(15) size(37);
+            cursor: pointer;
         }
 
         &.open {
@@ -268,7 +288,7 @@
 
         .menu {
             position: fixed;
-            background-color: rgba(139, 199, 130, 0.8);
+            background-color: rgba(0, 100, 87, 0.8);
             width: 100%;
             padding: 0;
             gap: size-m(45);
@@ -279,10 +299,10 @@
             }
 
             .menu-item {
-                padding: size-m(15) 0;
+                padding: size-m(10) 0;
                 
                 span {
-                    font-size: size-m(24);
+                    font-size: size-m(18);
                     width: 100%;
                     display: block;
                     white-space: nowrap;
@@ -296,7 +316,15 @@
                 //         width: 0;
                 //     }
                 // }
-                
+
+            }
+
+            .to-order {
+                margin-top: size-m(20);
+                border-radius: size-m(10);
+                border: size-m(1) solid #B28247;
+                font-size: size-m(16);
+                padding: size-m(15) size-m(26);
             }
 
             &.open {

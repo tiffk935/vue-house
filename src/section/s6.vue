@@ -1,39 +1,58 @@
 <template>
-  <section class="s6 w-full relative">
-    <div class="title flex justify-center items-end">
-      <div>雋品團隊</div>
-      <div class="en">Professional</div>
-    </div>
-    <div class="md:flex md:justify-center md:items-end md:flex-row-reverse md:translate-x-[-5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s6/logo.svg" />
-        <div class="head">
-          <div class="t1">田中建築</div>
-          <div class="t2">田中純夫 一級建築士</div>
-          <div class="t3">
-            40年以上營造經驗<br>
-            400年歷史日本竹中工務店前所長
-          </div>
-          <div class="labell absolute">
-            <div class="labell-en">structure Design</div>
-            <div class="labell-zh">結構設計</div>
-          </div>
+  <section class="s6 w-full relative text-white">
+    <img class="bg" src="@/section/s6/bg.jpg" />
+    <div class="rect1"></div>
+    <div class="rect2"></div>
+    <div class="rect3 hidden md:block"></div>
+
+    <div class="md:flex md:justify-between md:items-stretch">
+      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div>
+          <div class="t1">醫療新未來</div>
+          <div class="t2">約8分鐘到義大醫院，<br class="hidden md:block">南臺灣國際級準醫學中心</div>
+          <div class="t3">連續四次通過「JCI國際醫院及學術醫學中心」評鑑，是中南部唯一升格準醫學中心的大型醫院。</div>
         </div>
-        <div class="t4">
-          將經驗內化對建築美學的極致要求，以日系建築規範，親自監工與技術執導，著重於看不到的細節品質，打造長期恆久安心、安全、舒適的建築。<br>
-          <br>
-          知名業績<br>
-          樸建築、璞山鄰、璞水瑟、富富話合、至仁愛
+        <div class="dots">
+          <div :class="{ active: activeIdx === 0 }" @click="slideTo(0)"></div>
+          <div :class="{ active: activeIdx === 1 }" @click="slideTo(1)"></div>
+          <div :class="{ active: activeIdx === 2 }" @click="slideTo(2)"></div>
         </div>
       </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s6/1.jpg" />
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s6/2.jpg" />
-          <div class="txt">富富話合</div>
-        </div>
+      <div class="slider">
+        <swiper
+          :loop="true"
+          :navigation="false"
+          :pagination="false"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+          :modules="modules"
+          @init="init"
+          @slideChange="slideChange"
+        >
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s6/1.jpg" />
+              <div class="txt">義大醫院實景圖</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s6/2.jpg" />
+              <div class="txt">義大醫院實景圖</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s6/3.jpg" />
+              <div class="txt">義大醫院實景圖</div>
+            </div>
+          </swiper-slide>
+        </swiper>
+
+        <div class="slide-prev" @click="slidePrev"></div>
+        <div class="slide-next" @click="slideNext"></div>
       </div>
     </div>
   </section>
@@ -43,188 +62,202 @@
 @import "@/assets/style/function.scss";
 
 .s6 {
-  font-family: "Noto Serif TC";
-  padding-top: size-m(41);
+  width: 100%;
+  height: size-m(667);
+  padding: size-m(54) size-m(30) 0;
+  z-index: 1;
   @media screen and (min-width:768px) {
-    padding: size(83) 0 size(131) 0;
+    height: size(801);
+    padding: size(119) 0 size(121) size(170);
   }
 
-  .title {
-    margin-bottom: size-m(57);
+  .bg {
+    position: absolute;
+    top: size-m(152);
+    left: size-m(-18);
+    width: size-m(727);
+    max-width: none;
+    z-index: -1;
     @media screen and (min-width:768px) {
-      margin-bottom: size(91);
-    }
-
-    div {
-      font-size: size-m(25);
-      font-weight: 700;
-      line-height: 150%;
-      letter-spacing: .15em;
-      margin-right: size-m(5);
-      @media screen and (min-width:768px) {
-        font-size: size(54);
-        margin-right: size(20);
-      }
-    }
-
-    .en {
-      color: #BBA693;
-      font-size: size-m(20);
-      line-height: 170%;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      @media screen and (min-width:768px) {
-        font-size: size(37);
-      }
+      top: 0;
+      left: 0;
+      width: 100%;
     }
   }
 
-  .content {
-    padding: 0 size-m(30);
+  .rect1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(388);
+    background: linear-gradient(0deg, #000 50%, rgba(0, 0, 0, 0.00) 100%);
+    z-index: -1;
     @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-left: size(154);
-      position: relative;
+      height: size(304);
+      background: linear-gradient(0deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
     }
   }
 
-  .logo {
-    width: size-m(44);
-    margin-bottom: size-m(29);
+  .rect2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(306);
+    background: linear-gradient(180deg, #171C37 53.5%, rgba(23, 28, 55, 0.00) 100%);
+    z-index: -1;
     @media screen and (min-width:768px) {
-      // display: none;
-      width: size(109);
-      margin-bottom: 0;
+      width: size(540);
+      height: 100%;
+      background: linear-gradient(90deg, #171C37 0%, rgba(23, 28, 55, 0.00) 100%);
+    }
+  }
+
+  .rect3 {
+    @media screen and (min-width:768px) {
       position: absolute;
-      bottom: 0;
-      right: size(-65 - 110);
+      top: 0;
+      right: 0;
+      width: size(540);
+      height: 100%;
+      background: linear-gradient(270deg, #171C37 0%, rgba(23, 28, 55, 0.00) 100%);
     }
   }
 
-  .head {
-    padding-bottom: size-m(23);
-    margin-bottom: size-m(19);
-    border-bottom: size-m(1) solid #000;
-    position: relative;
+  .text {
     @media screen and (min-width:768px) {
-      padding-bottom: size(32);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
-    }
-
-    .labell {
-      bottom: size-m(23 + 4);
-      right: 0;
-      text-align: right;
-      @media screen and (min-width:768px) {
-        display: flex;
-        align-items: flex-start;
-        top: 0;
-        bottom: auto;
-        right: size(-65 - 110);
-      }
-
-      .labell-en {
-        color: #BBA693;
-        font-size: size-m(9);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        margin-bottom: size-m(12);
-        text-transform: uppercase;
-        @media screen and (min-width:768px) {
-          font-size: size(23);
-          margin-bottom: 0;
-          margin-right: size(15);
-          writing-mode: vertical-lr;
-        }
-      }
-
-      .labell-zh {
-        font-size: size-m(20);
-        font-weight: 700;
-        line-height: 109%;
-        padding: size-m(5) size-m(14);
-        border: size-m(1) solid #000;
-        display: inline-block;
-        //writing-mode: vertical-lr;
-        @media screen and (min-width:768px) {
-          font-size: size(37);
-          padding: size(15) size(15);
-          border: size(1) solid #000;
-          writing-mode: vertical-lr;
-        }
-      }
+      width: size(287);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
   }
 
   .t1 {
-    color: #12352A;
-    font-size: size-m(15);
+    color: #00B294;
+    font-size: size-m(25);
     font-weight: 700;
-    line-height: 150%;
-    letter-spacing: .01em;
+    letter-spacing: .02em;
+    padding-bottom: size-m(15);
+    margin-bottom: size-m(13);
+    border-bottom: size-m(1) solid #00B294;
     @media screen and (min-width:768px) {
-      font-size: size(30);
+      font-size: size(54);
+      letter-spacing: .04em;
+      padding-bottom: size(19);
+      margin-bottom: size(19);
+      border-bottom: size(1) solid #00B294;
     }
   }
 
   .t2 {
-    font-size: size-m(19);
+    color: #00B294;
+    text-align: center;
+    font-size: size-m(14);
     font-weight: 700;
     line-height: 150%;
-    letter-spacing: -0.01em;
-    margin-bottom: size-m(2);
+    margin-bottom: size-m(13);
     @media screen and (min-width:768px) {
-      font-size: size(40);
-      margin-bottom: size(6);
+      text-align: left;
+      font-size: size(24);
+      line-height: 158%;
+      margin-bottom: size(56);
+      letter-spacing: .02em;
     }
   }
 
   .t3 {
-    color: #12352A;
-    font-size: size-m(13);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.01em;
+    text-align: justify;
+    font-size: size-m(12);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
+    margin-bottom: size-m(112);
     @media screen and (min-width:768px) {
-      font-size: size(25);
-    }
-  }
-
-  .t4 {
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 163%;
-    margin-bottom: size-m(30);
-    @media screen and (min-width:768px) {
-      font-size: size(23);
+      font-size: size(20);
+      line-height: 190%;
       margin-bottom: 0;
+      letter-spacing: .11em;
     }
   }
 
-  .imgs {
+  .slider {
+    position: relative;
+    margin: 0 size-m(-30);
+    padding: 0 size-m(30);
     @media screen and (min-width:768px) {
-      width: size(849);
+      margin: 0;
+      padding: 0;
+      width: size(998);
     }
 
-    .img {
-      width: 48.8%;
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: size-m(330);
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: auto;
+        }
+      }
+
+      .txt {
+        position: absolute;
+        bottom: size-m(10);
+        right: size-m(10);
+        text-shadow: 0 size-m(4) size-m(4) rgba(0, 0, 0, 0.55);
+        font-size: size-m(12);
+        font-weight: 600;
+        @media screen and (min-width:768px) {
+          bottom: size(12);
+          right: size(22);
+          text-shadow: 0 size(4) size(4) rgba(0, 0, 0, 0.55);
+          font-size: size(15);
+        }
+      }
     }
 
-    .txt {
+    .slide-prev, .slide-next {
+      width: size-m(30);
+      height: size-m(30);
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-position: center;
+      background-repeat: no-repeat;
       @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
+        display: none;
+      }
+
+      &.slide-prev {
+        left: 0;
+        background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.4594 23.1383C10.9963 23.6753 11.8669 23.6753 12.4039 23.1383C12.9409 22.6013 12.9409 21.7307 12.4039 21.1937L3.32256 12.1124L12.4039 3.03105C12.9409 2.49408 12.9409 1.62348 12.4039 1.08651C11.8669 0.549536 10.9963 0.549536 10.4594 1.08651L0.40575 11.1401C-0.131221 11.6771 -0.131221 12.5477 0.40575 13.0847L10.4594 23.1383Z" fill="white"/></svg>');
+      }
+
+      &.slide-next {
+        right: 0;
+        background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.54063 1.08681C2.00366 0.549839 1.13306 0.549839 0.596088 1.08681C0.0591166 1.62378 0.0591166 2.49438 0.596088 3.03135L9.67743 12.1127L0.596088 21.194C0.0591166 21.731 0.0591166 22.6016 0.596088 23.1386C1.13306 23.6756 2.00366 23.6756 2.54063 23.1386L12.5943 13.085C13.1312 12.548 13.1312 11.6774 12.5943 11.1404L2.54063 1.08681Z" fill="white"/></svg>');
+      }
+    }
+  }
+
+  .dots {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: flex;
+
+      div {
+        width: size(15);
+        height: size(15);
+        border: size(1) solid #fff;
+        border-radius: 50%;
+        margin-right: size(10);
+        cursor: pointer;
+
+        &.active {
+          background: #fff;
+        }
       }
     }
   }
@@ -232,4 +265,39 @@
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
+const swiperRef = ref(null);
+const activeIdx = ref(0);
+
+const init = swiper => {
+  swiperRef.value = swiper;
+}
+
+const slidePrev = () => {
+  if(swiperRef.value){
+    swiperRef.value.slidePrev();
+  }
+}
+
+const slideNext = () => {
+  if(swiperRef.value){
+    swiperRef.value.slideNext();
+  }
+}
+
+const slideChange = swiper => {
+  if(swiperRef.value){
+    activeIdx.value = swiper.realIndex;
+  }
+}
+
+const slideTo = idx => {
+  swiperRef.value.slideTo(idx + 1);
+}
 </script>

@@ -1,4 +1,4 @@
-const caseName = "雍雋品"
+const caseName = "東泥大賦"
 
 export default {
     meta: {
@@ -6,21 +6,24 @@ export default {
         description: caseName,
         keywords: caseName,
     },
-    address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
-    address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台北市中正區和平西路二段48號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.7903120376435!2d121.5116826!3d25.0286013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a2c91d546f%3A0x491788dc1505af79!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5ZKM5bmz6KW_6Lev5LqM5q61NDjomZ8!5e0!3m2!1szh-TW!2stw!4v1718780535082!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/VsYxR5FvXU8Pzipm8",
-    phone: "02-8667-6688",
-    fbLink: "https://www.facebook.com/JPbotanical/",
-    fbMessage: "https://m.me/JPbotanical/",
+    address1: "",//按鈕區的--- 如空白會只呈現地址
+    address2: "",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "高雄市燕巢區中民路393巷28號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14713.007466300809!2d120.3670153!3d22.7931294!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e139614c0990f%3A0x5f59e6c6c408c85!2z5p2x5rOlLeWkp-izpg!5e0!3m2!1szh-TW!2stw!4v1720081343826!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/knSsspkn3YKwHMtS7",
+    phone: "07-353-7988",
+    fbLink: "#",
+    fbMessage: "#",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "佳鋐建設股份有限公司"],
-        ["營造公司", "協侑營造有限公司"],
-        ["產品規劃", "地上 15層，地下2層，245戶"],
-        ["景觀設計", "邑埕景觀設計"],
-        ["建築外觀", "曾聰憲建築師事務所"],
+        ["投資建設", "東泥建設股份有限公司"],
+        ["企劃銷售", "慧謀廣告有限公司"],
+        ["建造執照", "(110)高市工建築字第00532-01號等27個"],
+        ["接待會館", "高雄市燕巢區中民路393巷28號"],
+        ["營造公司", "順裕營造有限公司"],
+        ["建築設計", "鍾佳霖建築師事務所"],
+        ["使用執照", "(113)高市工建築使字第00088號等27個"],
+        ["聯絡電話", "07-353-7988"],
     ],
     gtmCode: ["GTM-W2Z2B6ND","GTM-KXCTSBDN"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
@@ -33,32 +36,42 @@ export default {
         subTitle: "若想了解更多資訊，歡迎填寫表單或來電洽詢，將由專人為您服務，謝謝！",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["早上","下午","晚上"],
+    room_type: ["兩房","三房"],
     budget: [],
     navList: [
         {
-            name: "大城之境",
+            name: "燕巢核心",
+            target: ".s2",
+            offset: "",
+        },
+        {
+            name: "耀眼未來",
             target: ".s3",
             offset: "",
         },
         {
-            name: "大境美宅",
-            target: ".s5",
-            offset: "",
-        },
-        {
-            name: "工藝嚴選",
-            target: ".s7",
-            offset: "",
-        },
-        {
-            name: "空間展演",
+            name: "優質機能",
             target: ".s8",
             offset: "",
         },
         {
-            name: "預約賞屋",
-            target: ".order",
+            name: "自然藝墅",
+            target: ".s9",
+            offset: "",
+        },
+        {
+            name: "質感空間",
+            target: ".s11",
+            offset: "",
+        },
+        {
+            name: "名品建材",
+            target: ".s12",
+            offset: "",
+        },
+        {
+            name: "精工品牌",
+            target: ".s13",
             offset: "",
         },
     ],

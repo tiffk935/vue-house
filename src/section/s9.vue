@@ -1,31 +1,42 @@
 <template>
-  <section class="s9 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:translate-x-[5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s9/logo.svg" />
-        <div class="head">
-          <div class="t1">照明設計</div>
-          <div class="t2">袁宗南 設計師</div>
-          <div class="labell absolute">
-            <div class="labell-en">Lighting Design</div>
-            <div class="labell-zh">燈光設計</div>
+  <section class="s9 w-full relative bg-[#EFEFEF]">
+    <div class="slider">
+      <swiper
+        :loop="true"
+        :navigation="true"
+        :pagination="{
+          clickable: true,
+        }"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s9/1.jpg" />
+            <div class="txt">3D外觀示意圖</div>
           </div>
-        </div>
-        <div class="t4">
-          燈光作為城市的導引，搭起建築與人的橋樑，融入文化與藝術，傳遞建築意象與美學，讓視覺自然聚焦，更加展現建築語彙，同時落實永續節能，在創新與在地環境中找到和諧平衡。<br>
-          <br>
-          知名業績<br>
-          新光總統傑仕堡、聯上天母、高雄遠雄the one、遠雄九五、信義之冠、敦南寓邸、晴空樹
-        </div>
-      </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s9/1.jpg" />
-          <div class="txt">元利建設 四季酒店</div>
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s9/2.jpg" />
-        </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s9/2.jpg" />
+            <div class="txt">建築實景拍攝圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s9/3.jpg" />
+            <div class="txt">3D外觀示意圖</div>
+          </div>
+        </swiper-slide>
+      </swiper>
+    </div>
+    <div class="content">
+      <div class="md:flex md:justify-between" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">白派風尚、光影空間<br>自然系公園藝墅</div>
+        <div class="t2">世界建築大師理查．麥爾，以光影幾何美學，打造配合四季變化的白派建築，其作品如羅馬千禧教堂、巴塞隆納當代藝術博物館等，皆是世界級藝術地標。「東泥大賦」承襲白派建美學，以純白立面、光影格柵，結合幾何型語彙，建構出建築的簡潔力道，配合自然光影，共譜出生活的卓然品味。</div>
       </div>
     </div>
   </section>
@@ -35,157 +46,128 @@
 @import "@/assets/style/function.scss";
 
 .s9 {
-  font-family: "Noto Serif TC";
-  padding-top: size-m(44);
-  @media screen and (min-width:768px) {
-    padding: size(110) 0 size(90) 0;
-  }
-
-  .content {
-    padding: 0 size-m(30);
-    @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-right: size(154);
-      position: relative;
-    }
-  }
-
-  .logo {
-    width: size-m(74);
-    margin-bottom: size-m(13);
-    @media screen and (min-width:768px) {
-      width: size(149);
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 0;
-      left: size(-149 - 55);
-    }
-  }
-
-  .head {
-    padding-bottom: size-m(16);
-    margin-bottom: size-m(18);
-    border-bottom: size-m(1) solid #000;
-    position: relative;
-    @media screen and (min-width:768px) {
-      padding-bottom: size(20);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
-    }
-
-    .labell {
-      bottom: size-m(16 + 6);
-      right: 0;
+  .slider {
+    .swiper-pagination {
+      display: none;
       @media screen and (min-width:768px) {
         display: flex;
-        align-items: flex-start;
-        flex-direction: row-reverse;
-        top: 0;
-        bottom: auto;
-        left: size(-65 - 110);
-        right: auto;
+        line-height: 1;
+        left: size(90);
+        bottom: size(40);
       }
 
-      .labell-en {
-        color: #BBA693;
-        font-size: size-m(9);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        margin-bottom: size-m(12);
-        text-transform: uppercase;
-        @media screen and (min-width:768px) {
-          font-size: size(23);
-          margin-bottom: 0;
-          margin-left: size(15);
-          writing-mode: vertical-lr;
+      .swiper-pagination-bullet {
+        margin: 0;
+        border-radius: 0;
+        width: size(45.61);
+        height: size(8.5);
+        background: none;
+        border-top: size(1) solid #fff;
+        border-bottom: size(1) solid #fff;
+        opacity: 1;
+
+        &:first-child {
+          border-left: size(1) solid #fff;
+          border-top-left-radius: size(10);
+          border-bottom-left-radius: size(10);
         }
-      }
 
-      .labell-zh {
-        font-size: size-m(20);
-        font-weight: 700;
-        line-height: 109%;
-        padding: size-m(5) size-m(14);
-        border: size-m(1) solid #000;
-        display: inline-block;
-        @media screen and (min-width:768px) {
-          font-size: size(37);
-          padding: size(15) size(15);
-          border: size(1) solid #000;
-          writing-mode: vertical-lr;
+        &:last-child {
+          border-right: size(1) solid #fff;
+          border-top-right-radius: size(10);
+          border-bottom-right-radius: size(10);
+        }
+
+        &.swiper-pagination-bullet-active {
+          background: #fff;
+          border-radius: size(10);
         }
       }
     }
-  }
 
-  .t1 {
-    color: #12352A;
-    font-size: size-m(15);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: .01em;
-    @media screen and (min-width:768px) {
-      font-size: size(30);
-    }
-  }
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(40);
+      height: size-m(40);
+      background-repeat: no-repeat;
+      @media screen and (min-width:768px) {
+        display: none;
+      }
 
-  .t2 {
-    font-size: size-m(19);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: -0.01em;
-    margin-bottom: size-m(2);
-    @media screen and (min-width:768px) {
-      font-size: size(40);
-      margin-bottom: size(0);
-    }
-  }
+      &:after {
+        display: none;
+      }
 
-  .t3 {
-    color: #12352A;
-    font-size: size-m(13);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.01em;
-    @media screen and (min-width:768px) {
-      font-size: size(25);
-    }
-  }
+      &.swiper-button-prev {
+        left: 0;
+        background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.4594 23.1383C10.9963 23.6753 11.8669 23.6753 12.4039 23.1383C12.9409 22.6013 12.9409 21.7307 12.4039 21.1937L3.32256 12.1124L12.4039 3.03105C12.9409 2.49408 12.9409 1.62348 12.4039 1.08651C11.8669 0.549536 10.9963 0.549536 10.4594 1.08651L0.40575 11.1401C-0.131221 11.6771 -0.131221 12.5477 0.40575 13.0847L10.4594 23.1383Z" fill="white"/></svg>');
+        background-position: size-m(7) center;
+      }
 
-  .t4 {
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 163%;
-    margin-bottom: size-m(30);
-    @media screen and (min-width:768px) {
-      font-size: size(23);
-      margin-bottom: 0;
-    }
-  }
-
-  .imgs {
-    @media screen and (min-width:768px) {
-      width: size(849);
+      &.swiper-button-next {
+        right: 0;
+        background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.54063 1.08681C2.00366 0.549839 1.13306 0.549839 0.596088 1.08681C0.0591166 1.62378 0.0591166 2.49438 0.596088 3.03135L9.67743 12.1127L0.596088 21.194C0.0591166 21.731 0.0591166 22.6016 0.596088 23.1386C1.13306 23.6756 2.00366 23.6756 2.54063 23.1386L12.5943 13.085C13.1312 12.548 13.1312 11.6774 12.5943 11.1404L2.54063 1.08681Z" fill="white"/></svg>');
+        background-position: right size-m(7) center;
+      }
     }
 
-    .img {
-      width: 48.8%;
+    img {
+      height: size-m(460);
+      object-fit: cover;
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
     }
 
     .txt {
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
+      bottom: size-m(10);
+      right: size-m(10);
       color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
+      text-shadow: 0 size-m(4) size-m(4) rgba(0, 0, 0, 0.55);
+      font-size: size-m(12);
+      font-weight: 600;
       @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
+        bottom: size(10);
+        right: size(10);
+        text-shadow: 0 size(4) size(4) rgba(0, 0, 0, 0.55);
+        font-size: size(15);
+      }
+    }
+  }
+
+  .content {
+    padding: size-m(27) size-m(30) size-m(49);
+    @media screen and (min-width:768px) {
+      padding: size(68) size(170) size(59);
+    }
+
+    .t1 {
+      font-size: size-m(25);
+      font-weight: 700;
+      letter-spacing: .02em;
+      padding-bottom: size-m(18);
+      margin-bottom: size-m(13);
+      border-bottom: size-m(1) solid #000;
+      @media screen and (min-width:768px) {
+        font-size: size(54);
+        letter-spacing: .04em;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: none;
+        border-right: size(1) solid #000;
+        padding-right: size(42);
+        width: size(578);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(12);
+      font-weight: 500;
+      line-height: 175%;
+      @media screen and (min-width:768px) {
+        font-size: size(22);
+        letter-spacing: .11em;
+        width: size(956);
       }
     }
   }
@@ -193,4 +175,11 @@
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
 </script>

@@ -1,33 +1,21 @@
 <template>
-  <section class="s7 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:translate-x-[5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s7/logo.svg" />
-        <div class="head">
-          <div class="t1">築遠工程</div>
-          <div class="t2">張盈智 結構技師</div>
-          <div class="labell absolute">
-            <div class="labell-en">STRUCTURE CONSULTANT</div>
-            <div class="labell-zh">結構顧問</div>
-          </div>
-        </div>
-        <div class="t4">
-          以藝術看待結構，創造建築新視角，在安全利基點上，解構重組力與美學。洞悉技法，完美展現穠纖合度平衡，至高標準嚴格把關。<br>
-          <br>
-          知名業績<br>
-          璞真碧湖畔、晴空樹、至仁愛、富富話合、巨大集團全球營運總部合
-        </div>
+  <section class="s7 w-full relative bg-[#000000] text-white">
+    <img class="bg" src="@/section/s7/bg.jpg" />
+    <div class="rect"></div>
+    <div class="grid relative">
+      <div>
+        <div class="t1">繁榮新未來</div>
+        <div class="t2">燕巢市心商圈<br>食衣住行育樂一次到位</div>
       </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s7/1.jpg" />
-          <div class="txt">巨大集團全球營運總部合</div>
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s7/2.jpg" />
-        </div>
+      <img class="light" src="@/section/s7/light.svg" />
+    </div>
+    <div class="t3">
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        緊鄰公園、近幼兒園、國小國中、市場、農會超市、<br>
+        戶政事務所、郵局、交流道、阿公店風景區等。
       </div>
     </div>
+    <div class="info">燕巢市中心實景圖</div>
   </section>
 </template>
 
@@ -35,160 +23,128 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  font-family: "Noto Serif TC";
-  padding-top: size-m(44);
+  width: 100%;
+  height: size-m(667);
+  padding: size-m(80) size-m(30);
   @media screen and (min-width:768px) {
-    padding: size(110) 0 size(90) 0;
+    height: size(801);
+    padding: 0;
   }
 
-  .content {
-    padding: 0 size-m(30);
+  .bg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(349);
+    object-fit: cover;
+    object-position: left;
     @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-right: size(154);
-      position: relative;
+      height: 100%;
     }
   }
 
-  .logo {
-    width: size-m(74);
-    margin-bottom: size-m(13);
+  .rect {
+    position: absolute;
+    bottom: size-m(99);
+    left: 0;
+    width: 100%;
+    height: size-m(311);
+    background: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.00) 100%);
     @media screen and (min-width:768px) {
-      width: size(149);
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 0;
-      left: size(-149 - 55);
+      display: none;
     }
   }
 
-  .head {
-    padding-bottom: size-m(16);
-    margin-bottom: size-m(18);
-    border-bottom: size-m(1) solid #000;
+  .grid {
+    width: 100%;
+    padding: size-m(28) 0;
+    background: rgba(255,255,255,0.3);
+    text-align: center;
+    margin-bottom: size-m(35);
+    border-radius: size-m(20);
     position: relative;
     @media screen and (min-width:768px) {
-      padding-bottom: size(20);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      bottom: size(183);
+      left: size(743);
+      margin-bottom: 0;
+      width: size(433.82);
+      height: size(433.82);
+      border-radius: 50%;
     }
 
-    .labell {
-      bottom: size-m(16 + 6);
-      right: 0;
-      text-align: right;
+    .light {
+      display: none;
       @media screen and (min-width:768px) {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row-reverse;
-        top: size(-90);
-        bottom: auto;
-        left: size(-65 - 110);
-        right: auto;
-        
-      }
-
-      .labell-en {
-        color: #BBA693;
-        font-size: size-m(9);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        margin-bottom: size-m(12);
-        text-transform: uppercase;
-        @media screen and (min-width:768px) {
-          font-size: size(23);
-          margin-bottom: 0;
-          margin-left: size(15);
-          writing-mode: vertical-lr;
-        }
-      }
-
-      .labell-zh {
-        font-size: size-m(20);
-        font-weight: 700;
-        line-height: 109%;
-        padding: size-m(5) size-m(14);
-        border: size-m(1) solid #000;
-        display: inline-block;
-        @media screen and (min-width:768px) {
-          font-size: size(37);
-          padding: size(15) size(15);
-          border: size(1) solid #000;
-          writing-mode: vertical-lr;
-        }
+        display: block;
+        position: absolute;
+        top: size(-36);
+        right: size(-45.18);
+        width: size(210);
+        mix-blend-mode: screen;
       }
     }
-  }
 
-  .t1 {
-    color: #12352A;
-    font-size: size-m(15);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: .01em;
-    @media screen and (min-width:768px) {
-      font-size: size(30);
+    .t1 {
+      font-size: size-m(30);
+      font-weight: 700;
+      letter-spacing: .04em;
+      margin-bottom: size-m(15);
+      @media screen and (min-width:768px) {
+        font-size: size(54);
+        margin-bottom: size(20);
+      }
     }
-  }
 
-  .t2 {
-    font-size: size-m(19);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: -0.01em;
-    margin-bottom: size-m(2);
-    @media screen and (min-width:768px) {
-      font-size: size(40);
-      margin-bottom: size(0);
+    .t2 {
+      font-size: size-m(15);
+      font-weight: 600;
+      letter-spacing: .02em;
+      @media screen and (min-width:768px) {
+        font-size: size(24);
+      }
     }
   }
 
   .t3 {
-    color: #12352A;
+    position: relative;
+    border-top: size-m(1) solid #fff;
+    border-bottom: size-m(1) solid #fff;
+    padding: size-m(18) 0 size-m(24);
     font-size: size-m(13);
-    font-weight: 700;
-    line-height: 150%;
-    letter-spacing: 0.01em;
+    font-weight: 500;
+    line-height: 161.538%;
+    letter-spacing: .04em;
     @media screen and (min-width:768px) {
-      font-size: size(25);
-    }
-  }
-
-  .t4 {
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 163%;
-    margin-bottom: size-m(30);
-    @media screen and (min-width:768px) {
-      font-size: size(23);
-      margin-bottom: 0;
-    }
-  }
-
-  .imgs {
-    @media screen and (min-width:768px) {
-      width: size(849);
-    }
-
-    .img {
-      width: 48.8%;
-    }
-
-    .txt {
+      width: size(670);
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
-      @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
-      }
+      top: size(184);
+      right: 0;
+      border-top: size(1) solid #fff;
+      border-bottom: size(1) solid #fff;
+      padding: size(174) 0 size(182);
+      font-size: size(20);
+      letter-spacing: .11em;
+    }
+  }
+
+  .info {
+    position: absolute;
+    bottom: size-m(10);
+    left: size-m(10);
+    text-shadow: 0 size-m(4) size-m(4) rgba(0, 0, 0, 0.55);
+    font-size: size-m(12);
+    font-weight: 600;
+    @media screen and (min-width:768px) {
+      bottom: size(155);
+      left: size(163);
+      text-shadow: 0 size(4) size(4) rgba(0, 0, 0, 0.55);
+      font-size: size(15);
     }
   }
 }

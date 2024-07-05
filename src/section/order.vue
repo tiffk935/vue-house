@@ -1,6 +1,10 @@
 <template>
   <div id="order" class="order relative text-center">
+    <OrderBgSvg class="z-[-1]" />
+    <div class="rect"></div>
     <div class="order-section">
+      <img class="logo" src="@/section/form/logo.svg" />
+
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
@@ -16,12 +20,6 @@
           </label>
           <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
             <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
-          </label>
-          <label class="row" v-if="info.room_type"><span>可預約時間</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-              <option value="" selected disabled>請選擇時間</option>
-              <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
-            </select>
           </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
@@ -48,9 +46,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#BBA693] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#A67219] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -61,14 +59,13 @@
 
       <!-- Send -->
       <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        {{ sending? '發送中..': '立即預約' }}
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
     </div>
-
-
+    
     <!-- Map -->
     <Map v-if="info.address" />
 
@@ -84,27 +81,40 @@
   width: 100%;
   padding-top: 0;
   font-family: "Noto Serif TC";
+  padding-top: size(64);
+  position: relative;
+  z-index: 1;
+
+  .rect {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60vw;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.3) 40%, rgba(255, 255, 255, 0) 100%);
+  }
 
   .order-section {
     position: relative;
-    padding-top: size(109);
     overflow: hidden;
-    background-image: url(@/section/form/bg.jpg);
-    background-size: cover;
-    background-position: center center;
+  }
+
+  .logo {
+    width: size(240.62);
+    margin: 0 auto size(57);
   }
 
   .order-title {
     font-size: size(43);
     line-height: 144%;
-    font-weight: 700;
-    color: #fff;
+    font-weight: 600;
+    color: #3E3A39;
     margin-bottom: size(4);
   }
 
   .order-subTitle {
     font-size: size(18);
-    color: #fff;
+    color: #3E3A39;
     margin-bottom: size(31);
   }
 
@@ -162,7 +172,7 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #785A4F;
+    background-color: #00635D;
     border:0;
     border-radius: 0em;
 
@@ -185,9 +195,11 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
+    padding-top: size-m(95);
 
-    .order-section {
-      padding-top: size-m(68);
+    .logo {
+      width: size-m(167);
+      margin: 0 auto size-m(55);
     }
 
     .order-title {
@@ -246,6 +258,7 @@ import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
+import OrderBgSvg from "@/section/form/orderbg.vue"
 
 import info from "@/info"
 
@@ -278,7 +291,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "room_type","budget"]
 
 //中文對照
 const formDataRef = ref([

@@ -1,43 +1,53 @@
 <template>
-  <section class="s11 w-full relative">
-    <div class="title">
-      <div class="en hidden md:block">A decade of cultivated refinement</div>
-      <div class="t1">藴育十年雋刻品味<br>雍雋品</div>
+  <section class="s11 w-full relative text-[#3E3A39]">
+    <div class="md:flex md:justify-between md:items-end">
+      <div class="slider text-white">
+        <swiper
+          :loop="true"
+          :navigation="false"
+          :pagination="false"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+          :modules="modules"
+          @init="init"
+          @slideChange="slideChange"
+        >
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/1.jpg" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <div class="txt2">氣派大面寬，迎賓客餐廳。</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/2.jpg" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <div class="txt2">美饌饗宴，風機能廚房。</div>
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/3.jpg" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <div class="txt2">靜謐隱私，整層大主臥。</div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1">多元規劃、上質空間<br>砌築生活的無限可能</div>
+        <div class="t2">為全面進化燕巢地區的建築品質，「東泥大賦」以市中心前所未見的大案氣勢，落實社區整體開發，全區採臨路透天別墅、車庫別墅社區、雙車電梯豪墅等多元規劃，融合友善空間設計、三代空間格局、名品建材配置，為您精雕深具品味的上質藝墅之美。</div>
+        <div class="dots">
+          <div :class="{ active: activeIdx === 0 }" @click="slideTo(0)"></div>
+          <div :class="{ active: activeIdx === 1 }" @click="slideTo(1)"></div>
+          <div :class="{ active: activeIdx === 2 }" @click="slideTo(2)"></div>
+        </div>
+      </div>
     </div>
-    <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      從室內設計源起，深入建築規劃，<br>
-      因懂生活的意義才能築起乘載幸福的家，<br>
-      <br>
-      選址於中正南海特區，<br>
-      人文歷史、豐饒綠意、精英匯聚之地。<br>
-      百年風情之間，<br>
-      細品摹寫雋永傳承的溫潤建築......
-    </div>
-    <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      Inspired by interior design, we delve into architectural planning, understanding life's essence to craft homes that nurture happiness. Nestled in the Zhongzheng Nanhai Special Zone, where culture, history, and nature converge, our spaces embody timeless elegance, weaving together tradition and modernity seamlessly.
-    </div>
-    <div class="slider">
-      <swiper
-        :navigation="true"
-        :pagination="{
-          clickable: true,
-        }"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s11/1.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s11/2.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖 僅供參考</div>
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
+    <div class="rect"></div>
   </section>
 </template>
 
@@ -45,153 +55,141 @@
 @import "@/assets/style/function.scss";
 
 .s11 {
-  background: #fff;
-  font-family: "Noto Serif TC";
+  width: 100%;
+  height: size-m(562);
+  background-image: url(@/section/s10/bg.jpg);
+  background-size: cover;
+  z-index: 1;
   @media screen and (min-width:768px) {
-    padding-bottom: size(156);
+    height: size(801);
+    padding: size(106) size(150) size(119) size(140);
   }
 
-  .title {
-    width: 100%;
-    height: size-m(170);
-    background-image: url(@/section/s11/bg-m.png);
-    background-size: 100% 100%;
-    padding-top: size-m(46);
-    padding-left: size-m(31);
-    margin-bottom: size-m(27);
+  .text {
+    padding: 0 size-m(30);
     @media screen and (min-width:768px) {
-      height: size(896);
-      background-image: url(@/section/s11/bg.png);
-      padding-top: size(167);
-      padding-left: size(160);
-      margin-bottom: size(88);
+      padding: 0;
+      width: size(520);
       display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
+  }
 
-    .en {
-      @media screen and (min-width:768px) {
-        color: #BBA693;
-        font-size: size(23);
-        font-weight: 700;
-        line-height: 132%;
-        letter-spacing: .13em;
-        writing-mode: vertical-lr;
-        margin-right: size(10);
-        text-transform: uppercase;
-      }
-    }
-
-    .t1 {
-      font-size: size-m(20);
-      font-weight: 700;
-      line-height: 150%;
-      letter-spacing: .13em;
-      @media screen and (min-width:768px) {
-        font-size: size(51);
-        writing-mode: vertical-lr;
-      }
+  .t1 {
+    font-size: size-m(25);
+    font-weight: 700;
+    letter-spacing: .02em;
+    padding-bottom: size-m(18);
+    margin-bottom: size-m(13);
+    border-bottom: size-m(1) solid #3E3A39;
+    @media screen and (min-width:768px) {
+      font-size: size(54);
+      letter-spacing: .04em;
+      padding-bottom: size(38);
+      margin-bottom: size(38);
+      border-bottom: size(1) solid #3E3A39;
     }
   }
 
   .t2 {
-    padding: 0 size-m(30);
-    font-size: size-m(14);
-    font-weight: 600;
-    line-height: 164%;
-    margin-bottom: size-m(30);
+    text-align: justify;
+    font-size: size-m(12);
+    font-style: normal;
+    font-weight: 500;
+    line-height: 175%;
     @media screen and (min-width:768px) {
-      padding: 0 0 0 size(163);
-      width: size(420 + 163);
-      font-size: size(23);
-      margin-bottom: size(40);
-    }
-  }
-
-  .t3 {
-    padding: 0 size-m(30);
-    font-size: size-m(11);
-    font-weight: 700;
-    line-height: 241%;
-    margin-bottom: size-m(18);
-    text-transform: uppercase;
-    @media screen and (min-width:768px) {
-      padding: 0 0 0 size(163);
-      width: size(394 + 163);
-      font-size: size(14);
-      margin-bottom: 0;
+      font-size: size(22);
+      line-height: 190%;
+      margin-bottom: size(96);
     }
   }
 
   .slider {
-    width: 100%;
+    position: relative;
+    margin-bottom: size-m(23);
     @media screen and (min-width:768px) {
-      width: size(1036);
-      position: absolute;
-      left: size(722);
-      bottom: size(156);
+      width: size(1024);
+      margin: 0;
     }
 
-    .swiper-pagination {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: block;
-        line-height: 1;
-        bottom: size(27);
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: size-m(277);
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: auto;
+        }
+      }
 
-        .swiper-pagination-bullet {
-          opacity: 1;
-          background: none;
-          width: size(20);
-          height: size(20);
-          border: size(1) solid #fff;
-          margin: 0 size(12);
+      .txt1 {
+        position: absolute;
+        top: size-m(10);
+        right: size-m(10);
+        text-shadow: 0 size-m(4) size-m(4) rgba(0, 0, 0, 0.55);
+        font-size: size-m(12);
+        font-weight: 600;
+        @media screen and (min-width:768px) {
+          top: size(13);
+          right: size(25);
+          text-shadow: 0 size(4) size(4) rgba(0, 0, 0, 0.55);
+          font-size: size(15);
+          letter-spacing: .08em;
+        }
+      }
 
-          &.swiper-pagination-bullet-active {
-            background: #fff;
-          }
+      .txt2 {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        padding: size-m(4) size-m(9);
+        background: linear-gradient(90deg, #231815 0%, rgba(0, 0, 0, 0.00) 100%);
+        font-family: "Noto Sans TC";
+        font-size: size-m(12);
+        font-weight: 500;
+        line-height: 208.333%;
+        letter-spacing: .08em;
+        @media screen and (min-width:768px) {
+          padding: size(15) size(28);
+          font-size: size(20);
         }
       }
     }
+  }
 
-    .swiper-button-next, .swiper-button-prev {
-      width: size-m(45);
-      height: size-m(45);
-      background-size: size-m(12.8) auto;
-      background-repeat: no-repeat;
-      @media screen and (min-width:768px) {
-        display: none;
-      }
+  .dots {
+    display: none;
+    @media screen and (min-width:768px) {
+      display: flex;
+      justify-content: flex-end;
 
-      &:after {
-        display: none;
+      div {
+        width: size(15);
+        height: size(15);
+        border: size(1) solid #595757;
+        border-radius: 50%;
+        margin-right: size(10);
+        cursor: pointer;
+
+        &.active {
+          background: #595757;
+        }
       }
     }
+  }
 
-    .swiper-button-prev {
-      left: 0;
-      background-image: url(@/section/s11/arrow-prev.svg);
-      background-position: size-m(7) center;
-    }
-
-    .swiper-button-next {
-      right: 0;
-      background-image: url(@/section/s11/arrow-next.svg);
-      background-position: right size-m(7) center;
-    }
-
-    .txt {
-      position: absolute;
-      bottom: size-m(6);
-      right: size-m(6);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(12);
-      line-height: 133%;
-      @media screen and (min-width:768px) {
-        bottom: size(12);
-        right: size(16);
-        font-size: size(14);
-      }
+  .rect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(101);
+    background: linear-gradient(0deg, #EFEFEF 0%, rgba(239, 239, 239, 0.00) 100%);
+    z-index: -1;
+    @media screen and (min-width:768px) {
+      height: size(217);
     }
   }
 }
@@ -205,4 +203,20 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from "swiper";
 const modules = ref([Autoplay, Navigation, Pagination]);
+const swiperRef = ref(null);
+const activeIdx = ref(0);
+
+const init = swiper => {
+  swiperRef.value = swiper;
+}
+
+const slideChange = swiper => {
+  if(swiperRef.value){
+    activeIdx.value = swiper.realIndex;
+  }
+}
+
+const slideTo = idx => {
+  swiperRef.value.slideTo(idx + 1);
+}
 </script>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 210 210" style="background:#000">
+<style>
+.an1{
+  animation: sc 1s alternate infinite;
+  transform-origin: center;
+  }
+.an2{
+  animation: sc 1s alternate-reverse infinite;
+  transform-origin: center;
+  }
+@keyframes sc {
+  0% {
+     transform:scale(1);
+  }
+  100% {
+     transform:scale(.5);
+  }
+}
+</style>
+<defs>
+<radialGradient id="grad" gradientUnits="userSpaceOnUse">
+<stop offset="0" stop-color="white"/>
+<stop offset="0.07" stop-color="#E6CDA4"/>
+<stop offset="0.14" stop-color="#CD9D4B"/>
+<stop offset="0.19" stop-color="#AF8236"/>
+<stop offset="0.3" stop-color="#63491E"/>
+<stop offset="0.43" stop-color="#2D1F0D"/>
+<stop offset="0.6" stop-color="#0D0703"/>
+<stop offset="1" stop-color="#040000"/>
+</radialGradient>
+</defs>
+<g>
+<radialGradient id="paint0" cx="105" cy="105" r="70"  xlink:href="#grad"/>
+<circle id="circle1" style="opacity:0.89;fill:url(#paint0);mix-blend-mode:screen" cx="105" cy="105" r="80" />
+<g class="an1">
+<use xlink:href="#circle1" transform="matrix(.1, 0, 0, 1.6, 94.5, -60)" />
+<use xlink:href="#circle1" transform="matrix(1.6, 0, 0, .1, -60, 94.5)" />
+</g>
+<radialGradient id="paint1" cx="105" cy="105" r="80" xlink:href="#grad" />
+<path class="an2" style="opacity:0.89;fill:url(#paint1);mix-blend-mode:screen" d="M149.4,60.7L117,89.1c-7,5.8-17.2,5.8-24.1-0.1L60.7,60.4l28.4,32.4c5.8,7,5.8,17.2-0.1,24.1l-28.6,32.2l32.4-28.4c7-5.8,17.2-5.8,24.1,0.1l32.2,28.6L120.7,117c-5.8-7-5.8-17.2,0.1-24.1L149.4,60.7z"/>
+	<animateTransform
+            attributeName="transform"
+            begin="0s"
+            dur="10s"
+            type="rotate"
+            from="0 105 105"
+            to="360 105 105"
+            repeatCount="indefinite"
+        /> 
+</g>
+</svg>
