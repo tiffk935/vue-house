@@ -11,7 +11,7 @@
       選址於中正南海特區，<br>
       人文歷史、豐饒綠意、精英匯聚之地。<br>
       百年風情之間，<br>
-      細品摹寫雋永傳承的溫潤建築......
+      細品摹寫雋永傳承的溫潤建築.......
     </div>
     <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       Inspired by interior design, we delve into architectural planning, understanding life's essence to craft homes that nurture happiness. Nestled in the Zhongzheng Nanhai Special Zone, where culture, history, and nature converge, our spaces embody timeless elegance, weaving together tradition and modernity seamlessly.
