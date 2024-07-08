@@ -1,6 +1,8 @@
 <template>
     <div class="nav font-['Noto_Serif_TC']"
         v-bind:class="{ 'r16-9': higherScreen }">
+        <div class="mbg fixed z-10" @click="menuOpen = !menuOpen"
+        v-bind:class="{ 'open': menuOpen }"></div>
         <div class="menu flex flex-col items-center justify-center z-50" v-bind:class="{ open: menuOpen }">
             <div class="menu-inner">
                 <div class="menu-item cursor-pointer text-white" v-for="item, in info.navList"
@@ -24,6 +26,11 @@
 .nav {
     // padding: 0 size(50);
     // height: size(80);
+    .mbg{top: 0;left: 0;width: 100%;height: 100%;background:linear-gradient(90deg, #0000 0%,#0006 75%);
+        transform: translateX(100%);
+        transition:transform .5s ;
+        &.open {
+            transform: translateX(0%);}}
     .menu-btn {
         // position: relative;
         z-index: 1;

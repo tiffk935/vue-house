@@ -1,13 +1,13 @@
 <template>
   <section class="s4 w-full relative bg-[#EFEFEF]">
     <div class="content">
-      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">交通新未來</div>
-        <div class="t2">橋科預計2025年完工，鴻海、日月光等大廠進駐，<br>未來燕巢可說是北高雄蛋黃區。</div>
-        <div class="t3">途經 文藻、左營高中、高雄大學、義大醫學院、<br class="hidden md:block">樹德科大、榮總、義大、佛光山。</div>
+      <div class="text">
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">交通新未來</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="200">橋科預計2025年完工，鴻海、日月光等大廠進駐，<br>未來燕巢可說是北高雄蛋黃區。</div>
+        <div class="t3" data-aos="fade-up" data-aos-delay="400">途經 文藻、左營高中、高雄大學、義大醫學院、<br class="hidden md:block">樹德科大、榮總、義大、佛光山。</div>
       </div>
       <div class="img relative">
-        <img src="@/section/s4/img.jpg" />
+        <img src="@/section/s4/img.jpg" data-aos="zoom-out" data-aos-delay="200"/>
         <div class="mask1 absolute"></div>
         <div class="mask2 absolute"></div>
         <div class="info absolute">高雄捷運示意圖</div>
@@ -89,6 +89,7 @@
 
   .img {
     width: 100%;
+  overflow: hidden;
     @media screen and (min-width:768px) {
       position: absolute;
       top: 0;

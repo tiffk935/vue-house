@@ -20,6 +20,9 @@
           <label class="row"><span>手機<span><!--(必填)--></span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
+          <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
+            <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
+          </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -82,12 +85,11 @@
   font-family: "Noto Serif TC";
   padding-top: size(64);
   position: relative;
-  overflow: hidden;
   z-index: 1;
     background: url("@/section/form/orderbg.jpg") center bottom;
     background-size: cover;
 .orderbg{
-  position: absolute;bottom: 0;left: -21.3%;opacity:.7;width: 142.7%;max-width:none;}
+  position: absolute;bottom: 0;left: -21.3%;opacity:.7;width: 142.7%;z-index: 5;max-width:none;}
   .rect {
     position: absolute;
     top: 0;
@@ -147,7 +149,7 @@
       content: "";
       width: size(1);
       height: 100%;
-      background-color: #0003;
+      background-color: #fff;
       position: absolute;
     }
     .row{background: #FFF;border: 1px solid #CCC;color: #000;
@@ -199,7 +201,6 @@
   .order {
     width: 100%;
     padding-top: size-m(95);
-.orderbg{left: -335.5%;opacity:.7;width: 771%;}
 
     .logo {
       width: size-m(167);

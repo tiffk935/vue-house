@@ -1,10 +1,10 @@
 <template>
   <section class="s3 w-full relative bg-[#EFEFEF]">
     <div class="content">
-      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">科技新未來</div>
-        <div class="t2">橋科預計2025年完工，鴻海、日月光等大廠進駐，<br>未來燕巢可說是北高雄蛋黃區。</div>
-        <div class="t3">引進半導體、精準健康、智慧機械、航太及產業創新等產業，<br class="hidden md:block">預計年產值達1800億元，創造約1.1萬個就業機會。</div>
+      <div class="text">
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">科技新未來</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="200">橋科預計2025年完工，鴻海、日月光等大廠進駐，<br>未來燕巢可說是北高雄蛋黃區。</div>
+        <div class="t3" data-aos="fade-up" data-aos-delay="400">引進半導體、精準健康、智慧機械、航太及產業創新等產業，<br class="hidden md:block">預計年產值達1800億元，創造約1.1萬個就業機會。</div>
       </div>
       <div class="img relative">
         <img src="@/section/s3/img.jpg" />

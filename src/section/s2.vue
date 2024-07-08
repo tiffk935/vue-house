@@ -7,9 +7,9 @@
     <img class="hand-bg absolute md:hidden" src="@/section/s2/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s2/hand.svg" />
     <div class="content absolute">
-      <div class="t1 md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「燕巢市中心」橋科前哨站<br>五大發展領航新未來</div>
-      <div class="t1 hidden md:block" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「燕巢市中心」橋科前哨站，五大發展領航新未來</div>
-      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1 md:hidden" data-aos="fade-up" data-aos-delay="0">「燕巢市中心」橋科前哨站<br>五大發展領航新未來</div>
+      <div class="t1 hidden md:block" data-aos="fade-up" data-aos-delay="0">「燕巢市中心」橋科前哨站，五大發展領航新未來</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">
         立足南部S廊帶軸心點 — 橋科特區前，<br class="md:hidden">
         匯集科技、捷運、文教、醫療、市心商圈五大發展，<br>
         不僅是高雄新宜居城市，更是北高飛漲蛋黃區。
@@ -152,7 +152,7 @@ function onImgLoad(e) {
   if (map.value && img) {
     let status = 0;
     let hideHand = false;
-    map.value.scrollLeft = img.clientWidth * 0.39 - window.innerWidth/2;
+    map.value.scrollLeft = img.clientWidth * 0.373 - window.innerWidth/2;
     map.value.addEventListener("scroll", () => {
       status++;
       if(status > 1 && !hideHand){

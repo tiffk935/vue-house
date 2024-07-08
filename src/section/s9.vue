@@ -34,9 +34,9 @@
       </swiper>
     </div>
     <div class="content">
-      <div class="md:flex md:justify-between" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">白派風尚、光影空間<br>自然系公園藝墅</div>
-        <div class="t2">世界建築大師理查．麥爾，以光影幾何美學，打造配合四季變化的白派建築，其作品如羅馬千禧教堂、巴塞隆納當代藝術博物館等，皆是世界級藝術地標。「東泥大賦」承襲白派建美學，以純白立面、光影格柵，結合幾何型語彙，建構出建築的簡潔力道，配合自然光影，共譜出生活的卓然品味。</div>
+      <div class="md:flex md:justify-between">
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">白派風尚、光影空間<br>自然系公園藝墅</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="200">世界建築大師理查．麥爾，以光影幾何美學，打造配合四季變化的白派建築，其作品如羅馬千禧教堂、巴塞隆納當代藝術博物館等，皆是世界級藝術地標。「東泥大賦」承襲白派建美學，以純白立面、光影格柵，結合幾何型語彙，建構出建築的簡潔力道，配合自然光影，共譜出生活的卓然品味。</div>
       </div>
     </div>
   </section>

@@ -6,11 +6,11 @@
     <div class="rect3 hidden md:block"></div>
 
     <div class="md:flex md:justify-between md:items-stretch">
-      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="text">
         <div>
-          <div class="t1">醫療新未來</div>
-          <div class="t2">約8分鐘到義大醫院，<br class="hidden md:block">南臺灣國際級準醫學中心</div>
-          <div class="t3">連續四次通過「JCI國際醫院及學術醫學中心」評鑑，是中南部唯一升格準醫學中心的大型醫院。</div>
+          <div class="t1" data-aos="fade-up" data-aos-delay="0">醫療新未來</div>
+          <div class="t2" data-aos="fade-up" data-aos-delay="200">約8分鐘到義大醫院，<br class="hidden md:block">南臺灣國際級準醫學中心</div>
+          <div class="t3" data-aos="fade-up" data-aos-delay="400">連續四次通過「JCI國際醫院及學術醫學中心」評鑑，是中南部唯一升格準醫學中心的大型醫院。</div>
         </div>
         <div class="dots">
           <div :class="{ active: activeIdx === 0 }" @click="slideTo(0)"></div>

@@ -1,16 +1,16 @@
 <template>
   <section class="s12 w-full relative bg-[#EFEFEF] text-[#3E3A39]">
     <div class="bg">
-      <img src="@/section/s12/bg.jpg" />
+      <img src="@/section/s12/bg.jpg" data-aos="zoom-out" data-aos-delay="200" />
       <div class="rect"></div>
       <div class="info">情境示意圖</div>
     </div>
 
     <div class="content relative">
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">上選名品建材 <br class="md:hidden">完美呈現精緻生活感受</div>
-      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">秉持著東泥建設對於品質的嚴格要求，「東泥大賦」由內到外，全棟採用國內外知名<br class="hidden md:block">建材，以近乎苛求的美學工藝，賦予空間上質品味，細雕琢出新世代別墅的完美典範</div>
-      <img class="logo md:hidden" src="@/section/s12/logo-m.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-      <img class="logo hidden md:block" src="@/section/s12/logo.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">上選名品建材 <br class="md:hidden">完美呈現精緻生活感受</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">秉持著東泥建設對於品質的嚴格要求，「東泥大賦」由內到外，全棟採用國內外知名<br class="hidden md:block">建材，以近乎苛求的美學工藝，賦予空間上質品味，細雕琢出新世代別墅的完美典範</div>
+      <img class="logo md:hidden" src="@/section/s12/logo-m.png" data-aos="fade-up" data-aos-delay="400" />
+      <img class="logo hidden md:block" src="@/section/s12/logo.png" data-aos="fade-up" data-aos-delay="400" />
     </div>
   </section>
 </template>
@@ -31,6 +31,7 @@
     bottom: 0;
     right: 0;
     width: size-m(438);
+    overflow: hidden;
     @media screen and (min-width:768px) {
       width: size(1083);
     }
@@ -51,7 +52,7 @@
 
     .info {
       position: absolute;
-      top: size-m(-11);
+      top: size-m(0);
       right: size-m(18);
       color: #727171;
       font-size: size-m(12);

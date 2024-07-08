@@ -67,7 +67,10 @@ const config = ref({
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
-    AOS.init();
+    AOS.init({
+      offset: 0,
+      duration: 1000
+    });
   };
 })
 </script>

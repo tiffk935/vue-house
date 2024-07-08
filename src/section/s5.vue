@@ -1,16 +1,16 @@
 <template>
   <section class="s5 w-full relative text-white">
     <div class="rect absolute top-0 left-0 w-full h-full"></div>
-    <div class="md:flex md:flex-row-reverse md:justify-between" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="md:flex md:flex-row-reverse md:justify-between" data-aos="fade-up" data-aos-delay="0">
       <div class="t1">文教新未來</div>
       <div class="t2"><span>7</span>分鐘到義大醫學院，設全台少見「醫學科技學院」</div>
     </div>
     <div class="imgs hidden md:flex md:justify-between">
-      <img src="@/section/s5/1.jpg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" />
-      <img src="@/section/s5/2.jpg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200" />
-      <img src="@/section/s5/3.jpg" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400" />
+      <img src="@/section/s5/1.jpg" data-aos="zoom-in" data-aos-delay="0" />
+      <img src="@/section/s5/2.jpg" data-aos="zoom-in" data-aos-delay="200" />
+      <img src="@/section/s5/3.jpg" data-aos="zoom-in" data-aos-delay="400" />
     </div>
-    <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">結合醫學與智慧科技，培育全方位醫療科技人才，包含生物醫學工程學系（所）等八大醫科學系等。</div>
+    <div class="t3" data-aos="fade-up" data-aos-delay="0">結合醫學與智慧科技，培育全方位醫療科技人才，包含生物醫學工程學系（所）等八大醫科學系等。</div>
     <div class="slider">
       <swiper
         :loop="true"
@@ -210,7 +210,7 @@
     font-size: size-m(12);
     font-weight: 600;
     @media screen and (min-width:768px) {
-      bottom: size(108);
+      bottom: size(143);
       left: size(171);
       color: #FFF;
       text-shadow: 0 size(4) size(4) rgba(0, 0, 0, 0.55);

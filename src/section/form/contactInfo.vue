@@ -166,8 +166,6 @@
         max-width: 9999px;
         justify-content: center;
         border-color: #fff;
-        border-top-left-radius: size(10);
-        border-bottom-left-radius: size(10);
 
         &::before {
           content: "";

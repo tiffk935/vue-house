@@ -1,6 +1,5 @@
 <template>
   <svg class="absolute top-0 left-0 w-full h-full object-cover" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1600" preserveAspectRatio="xMinYMin slice">
-    <image x="-189" y="0" width="2400" height="1600" href="@/section/form/bg.jpg"></image>
     <linearGradient id="p1" gradientUnits="userSpaceOnUse" x1="45" y1="56" x2="508" y2="294">
       <stop  offset="0" style="stop-color:#FFF0"/>
       <stop  offset="0.5" style="stop-color:#FFFF"/>

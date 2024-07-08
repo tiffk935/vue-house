@@ -19,7 +19,7 @@
     </div>
     <img class="logo" src="@/section/s14/logo.svg" />
     <div class="rect2"></div>
-    <img class="light hidden md:block" src="@/section/s7/light.svg" />
+    <img class="light" src="@/section/s7/light.svg" />
   </section>
 </template>
 
@@ -66,7 +66,7 @@
     width: size-m(315);
     margin: 0 auto size-m(24);
     font-size: size-m(12);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 150%;
     @media screen and (min-width:768px) {
       width: size(832);
@@ -79,7 +79,7 @@
     width: size-m(349);
     margin: 0 auto;
     font-size: size-m(12);
-    font-weight: 600;
+    font-weight: 500;
     line-height: 216.667%;
     @media screen and (min-width:768px) {
       width: size(632);
@@ -114,12 +114,15 @@
   }
 
   .light {
+    position: absolute;
+    mix-blend-mode: screen;
+      top: size-m(450);
+      right: size-m(-60);
+      width: size-m(170);
     @media screen and (min-width:768px) {
-      position: absolute;
       top: size(348);
       right: size(170);
       width: size(210);
-      mix-blend-mode: screen;
     }
   }
 }

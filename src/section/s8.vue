@@ -1,32 +1,40 @@
 <template>
   <section class="s8 w-full relative bg-[#EFEFEF]">
+    <img class="bg_ani absolute" src="@/section/s1/bg_ani.svg" />
     <div class="map">
       <img src="@/section/s8/map.jpg" />
-      <div class="mask">
+      <div class="mask" @click="s8open = true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 63" fill="none">
-          <circle cx="31.5" cy="31.5" r="31.5" fill="white"/>
-          <path d="M29.8889 40.7778C35.9027 40.7778 40.7778 35.9027 40.7778 29.8889C40.7778 23.8751 35.9027 19 29.8889 19C23.8751 19 19 23.8751 19 29.8889C19 35.9027 23.8751 40.7778 29.8889 40.7778Z" stroke="#217036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M43.4999 43.4999L37.5791 37.5791" stroke="#217036" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="31.5" cy="31.5" r="31.5" fill="#fffc" stroke-width="1" stroke="#fff" />
+          <path d="M37.6,37.6C47.8,27.4,32.4,12,22.2,22.2C11.9,32.4,27.3,47.8,37.6,37.6z M43.5,43.5l-5.9-5.9" stroke="#217036" stroke-width="2.5" stroke-linecap="round" />
         </svg>
       </div>
     </div>
 
-    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">
-        公園
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 27" fill="none">
-          <path d="M19.6092 23.0634C17.0716 25.7018 14.0207 27 10.4852 27C6.94967 27 4.15545 25.7018 2.25734 23.0634C0.38774 20.5556 -0.312851 17.3734 0.127055 13.5211C0.566961 9.66875 1.99258 6.44443 4.39577 3.93662C6.88857 1.34031 9.94754 0 13.5564 0C17.1653 0 19.8821 1.34031 21.7843 3.93662C23.6172 6.44864 24.3097 9.67296 23.8738 13.5211C23.4339 17.3734 22.0124 20.5556 19.6092 23.0634ZM18.7742 5.56775C17.7559 2.80284 15.9474 1.4246 13.3975 1.4246C10.8477 1.4246 8.68893 2.80706 7.03928 5.56775C5.68698 7.78473 4.87641 10.4232 4.52611 13.5211C4.17989 16.5768 4.42836 19.2153 5.27966 21.3901C6.29796 24.1508 8.06573 25.5333 10.6563 25.5333C13.2468 25.5333 15.2875 24.1508 16.9372 21.3901C18.2854 19.2111 19.1326 16.5768 19.4829 13.5211C19.8373 10.4232 19.5847 7.78473 18.7782 5.56775H18.7742Z" fill="#217036"/>
-        </svg>
-        距離、學校<br class="md:hidden">
-        散步到燕巢市心優質生活圈
+    <div>
+      <div class="t1" data-aos="fade-up" data-aos-delay="0">
+        公園<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 27" fill="#217036">
+          <path d="M10.7,27c-16,0-12.8-27,2.9-27C29.7,0,25.8,27,10.7,27z M19.6,10.7c0-14.3-15.3-11.8-15.3,5C4.4,31,19.6,28,19.6,10.7z"/>
+        </svg>距離、學校<br class="md:hidden">散步到燕巢市心優質生活圈
       </div>
-      <div class="t2">兒二公園 × 國小國中 × 行政中心<br class="md:hidden">交流道 × 阿公店景區</div>
-      <div class="t3">東泥建設從選地開始，即為住戶考量到生活需求，「東泥大賦」結合自然、人文、便捷的優質環境，是燕巢市中心首屈一指的優生美地。</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">兒二公園 × 國小國中 × 行政中心<br class="md:hidden">交流道 × 阿公店景區</div>
+      <div class="t3" data-aos="fade-up" data-aos-delay="400">東泥建設從選地開始，即為住戶考量到生活需求，「東泥大賦」結合自然、人文、便捷的優質環境，是燕巢市中心首屈一指的優生美地。</div>
     </div>
     
     <div class="slider">
       <Slider />
     </div>
+    
+  <!-- Modal -->
+  <input type="checkbox" v-model="s8open" id="s8-modal" class="modal-toggle" />
+  <div class="modal boxbg">
+      <label for="s8-modal" class="mbg absolute"></label>
+      <label for="s8-modal" class="btn fixed">✕</label>
+    <div class="s8-box">
+    <img src="./s8/map.jpg" alt="map" >
+    </div>
+  </div>
+
   </section>
 </template>
 
@@ -35,15 +43,31 @@
 
 .s8 {
   padding: size-m(48) size-m(30) size-m(74);
-  background-image: url(@/section/s8/bg.png);
-  background-size: size-m(1920) auto;
-  background-position: 32.5% 0;
+  background-image: url(@/section/s8/bg.webp);
+  background-size: size-m(1000) auto;
+  background-position: 20% 0;
   background-repeat: no-repeat;
-  text-align: center;
+  text-align: center;overflow: hidden;
   @media screen and (min-width:768px) {
     padding: size(100) 0 size(84);
     background-size: size(1920) auto;
   }
+    .bg_ani {
+      top: size-m(-188);
+      left: size-m(-125);
+     // bottom: size-m(-16);
+      width: size-m(1120);
+      height:size-m(622);
+      max-width: none;
+      transform: rotate(180deg);
+      @media screen and (min-width:768px) {
+        top: size(-363);
+        left: size(-5);
+       // bottom: size(-18);
+        width:112.5%;
+        height:size(1200);
+      }
+    }
   
   .map {
     border-radius: size-m(28);
@@ -106,6 +130,7 @@
       display: inline-block;
       width: size-m(24);
       transform: translateY(size-m(-4));
+      margin: 0 .15em;
       @media screen and (min-width:768px) {
         width: size(59);
         transform: translateY(size(-4));
@@ -225,9 +250,21 @@
       }
     }
   }
+  .s8-box{
+    height:95%;
+    width:100%;
+    img{height: 100%;max-width: none;}
+  }
+  .modal{
+    .mbg{top: 0;left: 0;width: 100%;height: 100%;}
+    .btn{top:size-m(10);right:size-m(10);border-radius: 50%;
+    background: #444C;border: 0;}
+  }
 }
 </style>
 
 <script setup>
-import Slider from "@/section/s8/slider.vue"
+import { ref, nextTick } from 'vue';
+
+const s8open = ref(false);
 </script>

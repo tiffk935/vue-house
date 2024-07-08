@@ -10,8 +10,8 @@
         pagination: false,
         easing: 'linear',
         direction: 'ltr',
-        speed: isMobile ? 3000 : 4000, // 調整跑馬燈速度請改前面值，speed/interval須一致
-        interval: isMobile ? 3000 : 4000,  // 調整跑馬燈速度請改前面值，speed/interval須一致
+        speed: isMobile ? 4000 : 5000, // 調整跑馬燈速度請改前面值，speed/interval須一致
+        interval: isMobile ? 4000 : 5000,  // 調整跑馬燈速度請改前面值，speed/interval須一致
         gap: 0,
         type: 'loop',
         snap: false,

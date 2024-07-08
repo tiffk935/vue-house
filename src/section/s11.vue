@@ -37,9 +37,9 @@
           </swiper-slide>
         </swiper>
       </div>
-      <div class="text" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">多元規劃、上質空間<br>砌築生活的無限可能</div>
-        <div class="t2">為全面進化燕巢地區的建築品質，「東泥大賦」以市中心前所未見的大案氣勢，落實社區整體開發，全區採臨路透天別墅、車庫別墅社區、雙車電梯豪墅等多元規劃，融合友善空間設計、三代空間格局、名品建材配置，為您精雕深具品味的上質藝墅之美。</div>
+      <div class="text">
+        <div class="t1" data-aos="fade-up" data-aos-delay="0">多元規劃、上質空間<br>砌築生活的無限可能</div>
+        <div class="t2" data-aos="fade-up" data-aos-delay="200">為全面進化燕巢地區的建築品質，「東泥大賦」以市中心前所未見的大案氣勢，落實社區整體開發，全區採臨路透天別墅、車庫別墅社區、雙車電梯豪墅等多元規劃，融合友善空間設計、三代空間格局、名品建材配置，為您精雕深具品味的上質藝墅之美。</div>
         <div class="dots">
           <div :class="{ active: activeIdx === 0 }" @click="slideTo(0)"></div>
           <div :class="{ active: activeIdx === 1 }" @click="slideTo(1)"></div>

@@ -2,15 +2,15 @@
   <section class="s7 w-full relative bg-[#000000] text-white">
     <img class="bg" src="@/section/s7/bg.jpg" />
     <div class="rect"></div>
-    <div class="grid relative">
+    <div class="grid relative" data-aos="fade-up" data-aos-delay="0">
       <div>
         <div class="t1">繁榮新未來</div>
         <div class="t2">燕巢市心商圈<br>食衣住行育樂一次到位</div>
       </div>
-      <img class="light" src="@/section/s7/light.svg" />
+      <img class="light" src="@/section/s7/light.svg"  data-aos="fade" duration="3000" />
     </div>
-    <div class="t3">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="t3" data-aos="fade-up" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="400">
         緊鄰公園、近幼兒園、國小國中、市場、農會超市、<br>
         戶政事務所、郵局、交流道、阿公店風景區等。
       </div>
@@ -64,6 +64,7 @@
     margin-bottom: size-m(35);
     border-radius: size-m(20);
     position: relative;
+    mix-blend-mode: screen;
     @media screen and (min-width:768px) {
       padding: 0;
       display: flex;
@@ -79,14 +80,16 @@
     }
 
     .light {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: block;
         position: absolute;
+        mix-blend-mode: screen;
+        transform: translate(-100%,0%)scale(.3);
+        top: size-m(-75);right:size-m(-50);
+        width: size-m(150);
+      @media screen and (min-width:768px) {
         top: size(-36);
+      transform: translate(-100%,-80%)scale(.3);
         right: size(-45.18);
         width: size(210);
-        mix-blend-mode: screen;
       }
     }
 

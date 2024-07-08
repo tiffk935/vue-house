@@ -1,19 +1,19 @@
 <template>
   <section class="s10 w-full relative text-white">
-    <img class="tree hidden md:block" src="@/section/s10/tree.png" />
+    <img class="tree hidden md:block" src="@/section/s10/tree.jpg" />
     <img class="tree md:hidden" src="@/section/s10/tree-m.png" />
-    <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">綠意盎然、藏風納光<br>會呼吸的友善建築</div>
+    <div class="t1" data-aos="fade-up" data-aos-delay="0">綠意盎然、藏風納光<br>會呼吸的友善建築</div>
     
     <div class="imgs hidden md:flex md:justify-between">
-      <div class="relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0">
+      <div class="relative" data-aos="zoom-in" data-aos-delay="0">
         <img src="@/section/s10/1.jpg" />
         <div class="txt">玻璃帷幕透景陽台，延請自然風光入室，<br class="md:hidden">讓生活時時都有美好感受。</div>
       </div>
-      <div class="relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="200">
+      <div class="relative" data-aos="zoom-in" data-aos-delay="200">
         <img src="@/section/s10/2.jpg" />
         <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br class="md:hidden">減少開電扇、電燈、冷暖氣的時間。</div>
       </div>
-      <div class="relative" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
+      <div class="relative" data-aos="zoom-in" data-aos-delay="400">
         <img src="@/section/s10/3.jpg" />
         <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br class="md:hidden">減少開電扇、電燈、冷暖氣的時間。</div>
       </div>
@@ -57,7 +57,8 @@
       <div class="slide-next" @click="slideNext"></div>
     </div>
 
-    <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">東泥建設以人為本，精雕自然和諧的親綠空間，由於基地緊鄰公園綠樹，特別規劃玻璃帷幕及節能深窗，讓室內不受到太陽光直接照射，避免炙熱，於夏天時感受陣陣徐風吹來，每一口呼吸都是涼涼的清新好空氣、靜謐的空間裡，處處充滿著宜人的舒適感受。</div>
+    <div class="t2 block md:hidden " data-aos="fade-up" data-aos-delay="0">東泥建設從選地開始，即為住戶考量到生活需求，「東泥大賦」結合自然、人文、便捷的優質環境，是燕巢市中心首屈一指的優生美地。</div>
+    <div class="t2 hidden md:block " data-aos="fade-up" data-aos-delay="0">東泥建設以人為本，精雕自然和諧的親綠空間，由於基地緊鄰公園綠樹，特別規劃玻璃帷幕及節能深窗，讓室內不受到太陽光直接照射，避免炙熱，於夏天時感受陣陣徐風吹來，每一口呼吸都是涼涼的清新好空氣、靜謐的空間裡，處處充滿著宜人的舒適感受。</div>
   </section>
 </template>
 

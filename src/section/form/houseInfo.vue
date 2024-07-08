@@ -1,11 +1,11 @@
 <template>
-    <div class="flex flex-col md:flex-row items-center justify-between">
+    <div class="flex flex-col md:flex-row items-center justify-between relative z-5">
         <div class="flex-1 items-center justify-center py-4 md:py-10">
             <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item flex items-center w-full whitespace-nowrap"
-                        v-for="item in info.houseInfos">
+                        v-for="item in info.houseInfos" :key="item">
                         <p class="mr-5 font-bold border-l-4 border-[#BBA693] text-[#3E3A39] pl-2 ">{{ item[0] }}</p>
                         <p class="whitespace-pre-line leading-normal text-left text-[#3E3A39]">{{ item[1] }}</p>
                     </div>
@@ -13,7 +13,7 @@
             </div>
         </div>
     </div>
-    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
+    <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626] relative z-5">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.gif" alt="Lixin" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
