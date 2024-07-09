@@ -19,8 +19,7 @@
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div>
-          <!-- <span class="font-semibold md:font-normal">接待中心：</span> -->
-          <br class="md:hidden">
+          <span v-if="info.address1">{{ info.address1 }}：</span>
           <span v-html="info.address"></span>
         </div>
       </div>
@@ -65,11 +64,11 @@
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-          '接待會館'
+      `${info.address2?info.address2:'導航地址'}`
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+      `${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-[#00635D] border-0 text-white mt-12" @click="go()" v-bind:class="{
@@ -267,7 +266,7 @@
         }
 
         &.address {
-          padding: size-m(10) 0;
+          padding: size-m(20) 0;
 
           &::before {
             width: 100%;
@@ -279,6 +278,7 @@
           div {
             line-height: 1.3;
           }
+          span{display: block;white-space: nowrap;}
         }
       }
 

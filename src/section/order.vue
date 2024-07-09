@@ -84,10 +84,10 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+.orderbg{
     background: url("@/section/form/orderbg.jpg") center bottom;
     background-size: cover;
-.orderbg{
-  position: absolute;bottom: 0;left: -21.3%;opacity:.7;width: 142.7%;max-width:none;}
+  position: absolute;bottom: 0;left:0;opacity:1;width: 100%;max-width:none;}
   .rect {
     position: absolute;
     top: 0;
@@ -199,7 +199,8 @@
   .order {
     width: 100%;
     padding-top: size-m(95);
-.orderbg{left: -335.5%;opacity:.7;width: 771%;}
+    margin-bottom: size-m(63);
+.orderbg{left: - 300%;width:700%;}
 
     .logo {
       width: size-m(167);
