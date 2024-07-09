@@ -2,10 +2,10 @@
   <div id="order" class="order relative text-center">
      <!--  <OrderBgSvg class="z-[-1]" /> -->
        
-      <img class="orderbg" src="@/section/form/orderbg.svg" />
+      <img class="orderbg" src="@/section/form/orderbg.svg" loading="lazy" />
     <div class="rect"></div>
     <div class="order-section">
-      <img class="logo" src="@/section/s1/logo.svg" />
+      <img class="logo" src="@/section/s1/logo.svg" loading="lazy" />
 
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>

@@ -1,6 +1,6 @@
 <template>
   <section class="s7 w-full relative bg-[#000000] text-white">
-    <img class="bg" src="@/section/s7/bg.jpg" />
+    <img class="bg" src="@/section/s7/bg.jpg" loading="lazy" />
     <div class="rect"></div>
     <div class="grid relative" data-aos="fade-up" data-aos-delay="0">
       <div>

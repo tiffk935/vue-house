@@ -5,8 +5,8 @@
       <div class="line hidden md:block"></div>
     </div>
     <div class="t2" data-aos="fade-up" data-aos-delay="200">東泥建設蓋給自己住的心情，細細琢磨建築的每一公分，從結構、柱、鋼筋、混凝土到防水工程，皆以穩紮穩打的大匠精神，將精工品質推升到頂規標準，讓您買到的不只是別墅的美麗外表，更有材實料的厚實內在。</div>
-    <img class="ooo md:hidden" src="@/section/s13/ooom.svg" data-aos="zoom-in" data-aos-delay="400" />
-    <img class="ooo hidden md:block" src="@/section/s13/ooo.svg" data-aos="zoom-in" data-aos-delay="400" />
+    <img class="ooo md:hidden" src="@/section/s13/ooom.svg" data-aos="zoom-in" data-aos-delay="400" loading="lazy" />
+    <img class="ooo hidden md:block" src="@/section/s13/ooo.svg" data-aos="zoom-in" data-aos-delay="400" loading="lazy" />
   </section>
 </template>
 

@@ -1,20 +1,20 @@
 <template>
   <section class="s10 w-full relative text-white">
-    <img class="tree hidden md:block" src="@/section/s10/tree.jpg" />
-    <img class="tree md:hidden" src="@/section/s10/tree-m.png" />
+    <img class="tree hidden md:block" src="@/section/s10/tree.jpg" loading="lazy" />
+    <img class="tree md:hidden" src="@/section/s10/tree-m.png" loading="lazy" />
     <div class="t1" data-aos="fade-up" data-aos-delay="0">綠意盎然、藏風納光<br>會呼吸的友善建築</div>
     
     <div class="imgs hidden md:flex md:justify-between">
       <div class="relative" data-aos="zoom-in" data-aos-delay="0">
-        <img src="@/section/s10/1.jpg" />
+        <img src="@/section/s10/1.jpg" loading="lazy" />
         <div class="txt">玻璃帷幕透景陽台，延請自然風光入室，<br class="md:hidden">讓生活時時都有美好感受。</div>
       </div>
       <div class="relative" data-aos="zoom-in" data-aos-delay="200">
-        <img src="@/section/s10/2.jpg" />
+        <img src="@/section/s10/2.jpg" loading="lazy" />
         <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br class="md:hidden">減少開電扇、電燈、冷暖氣的時間。</div>
       </div>
       <div class="relative" data-aos="zoom-in" data-aos-delay="400">
-        <img src="@/section/s10/3.jpg" />
+        <img src="@/section/s10/3.jpg" loading="lazy" />
         <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br class="md:hidden">減少開電扇、電燈、冷暖氣的時間。</div>
       </div>
     </div>
@@ -35,19 +35,19 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s10/1.jpg" />
+            <img src="@/section/s10/1.jpg" loading="lazy" />
             <div class="txt">玻璃帷幕透景陽台，延請自然風光入室，<br>讓生活時時都有美好感受。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s10/2.jpg" />
+            <img src="@/section/s10/2.jpg" loading="lazy" />
             <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br>減少開電扇、電燈、冷暖氣的時間。</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s10/3.jpg" />
+            <img src="@/section/s10/3.jpg" loading="lazy" />
             <div class="txt">大尺度落地深窗，避免太陽西曬，為室內降溫，<br>減少開電扇、電燈、冷暖氣的時間。</div>
           </div>
         </swiper-slide>

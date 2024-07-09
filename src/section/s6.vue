@@ -1,6 +1,6 @@
 <template>
   <section class="s6 w-full relative text-white">
-    <img class="bg" src="@/section/s6/bg.jpg" />
+    <img class="bg" src="@/section/s6/bg.jpg" loading="lazy" />
     <div class="rect1"></div>
     <div class="rect2"></div>
     <div class="rect3 hidden md:block"></div>

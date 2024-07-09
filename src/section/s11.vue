@@ -16,14 +16,14 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s11/1.jpg" />
+              <img src="@/section/s11/1.jpg" loading="lazy" />
               <div class="txt1">3D透視裝潢參考圖</div>
               <div class="txt2">氣派大面寬，迎賓客餐廳。</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s11/2.jpg" />
+              <img src="@/section/s11/2.jpg" loading="lazy" />
               <div class="txt1">3D透視裝潢參考圖</div>
               <div class="txt2">美饌饗宴，風機能廚房。</div>
             </div>

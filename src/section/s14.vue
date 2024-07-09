@@ -1,7 +1,7 @@
 <template>
   <section class="s14 w-full relative bg-[#000000] text-[#FBF1CA]">
     <div class="rect md:hidden"></div>
-    <img class="t1" src="@/section/s14/t1.svg" />
+    <img class="t1" src="@/section/s14/t1.svg" loading="lazy" />
     <div class="t2">
       創立於1956年，股票上市公司－東南水泥集團，是高鐵、捷運、南二高及各重大建設<br>
       所採用水泥品牌之一。為實現台灣建築新理想，特創建 「東泥建設」，期許為新世代淬鍊出富貴三代的榮耀家園。
@@ -17,9 +17,9 @@
       ◆  獲經濟部標準檢驗局頒發使用正字標記逾50年榮譽狀。<br>
       ◆  榮獲高雄市國稅局頒發2010年度開立統一發票績優營業人獎。
     </div>
-    <img class="logo" src="@/section/s14/logo.svg" />
+    <img class="logo" src="@/section/s14/logo.svg" loading="lazy" />
     <div class="rect2"></div>
-    <img class="light" src="@/section/s7/light.svg" />
+    <img class="light" src="@/section/s7/light.svg" loading="lazy" />
   </section>
 </template>
 
