@@ -62,7 +62,7 @@
   padding-top: size-m(54);
   @media screen and (min-width:768px) {
     height: size(801);
-    background-size: 120% auto;
+    background-size: 100% auto;
     background-position: left bottom;
     padding: size(92) size(171) 0;
   }

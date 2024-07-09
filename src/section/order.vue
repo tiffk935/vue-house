@@ -5,7 +5,7 @@
       <img class="orderbg" src="@/section/form/orderbg.svg" />
     <div class="rect"></div>
     <div class="order-section">
-      <img class="logo" src="@/section/form/logo.svg" />
+      <img class="logo" src="@/section/s1/logo.svg" />
 
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -295,7 +295,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["project", "msg", "room_type","budget"]
+const bypass = ["project", "msg", "room_type","budget","email"]
 
 //中文對照
 const formDataRef = ref([
