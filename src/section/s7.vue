@@ -7,7 +7,7 @@
         <div class="t1">繁榮新未來</div>
         <div class="t2">燕巢市心商圈<br>食衣住行育樂一次到位</div>
       </div>
-      <img class="light" src="@/section/s7/light.svg"  data-aos="fade" duration="3000" />
+      <img class="light" src="@/section/s7/light.svg" loading="lazy" data-aos="fade" duration="3000" />
     </div>
     <div class="t3" data-aos="fade-up" data-aos-delay="200">
       <div data-aos="fade-up" data-aos-delay="400">

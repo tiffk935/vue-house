@@ -6,9 +6,9 @@
       <div class="t2"><span>7</span>分鐘到義大醫學院，設全台少見「醫學科技學院」</div>
     </div>
     <div class="imgs hidden md:flex md:justify-between">
-      <img src="@/section/s5/1.jpg" data-aos="zoom-in" data-aos-delay="0" />
-      <img src="@/section/s5/2.jpg" data-aos="zoom-in" data-aos-delay="200" />
-      <img src="@/section/s5/3.jpg" data-aos="zoom-in" data-aos-delay="400" />
+      <img src="@/section/s5/1.jpg" data-aos="zoom-in" data-aos-delay="0" loading="lazy" />
+      <img src="@/section/s5/2.jpg" data-aos="zoom-in" data-aos-delay="200" loading="lazy" />
+      <img src="@/section/s5/3.jpg" data-aos="zoom-in" data-aos-delay="400" loading="lazy" />
     </div>
     <div class="t3" data-aos="fade-up" data-aos-delay="0">結合醫學與智慧科技，培育全方位醫療科技人才，包含生物醫學工程學系（所）等八大醫科學系等。</div>
     <div class="slider">

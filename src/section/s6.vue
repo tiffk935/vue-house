@@ -33,19 +33,19 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s6/1.jpg" />
+              <img src="@/section/s6/1.jpg" loading="lazy" />
               <div class="txt">義大醫院實景圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s6/2.jpg" />
+              <img src="@/section/s6/2.jpg" loading="lazy" />
               <div class="txt">義大醫院實景圖</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s6/3.jpg" />
+              <img src="@/section/s6/3.jpg" loading="lazy" />
               <div class="txt">義大醫院實景圖</div>
             </div>
           </swiper-slide>

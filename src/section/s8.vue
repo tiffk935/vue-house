@@ -31,7 +31,7 @@
       <label for="s8-modal" class="mbg absolute"></label>
       <label for="s8-modal" class="btn fixed">✕</label>
     <div class="s8-box">
-    <img src="./s8/map.jpg" alt="map" >
+    <img src="./s8/map.jpg" alt="map" loading="lazy" >
     </div>
   </div>
 

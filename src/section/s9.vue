@@ -15,19 +15,19 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s9/1.jpg" />
+            <img src="@/section/s9/1.jpg" loading="lazy" />
             <div class="txt">3D外觀示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s9/2.jpg" />
+            <img src="@/section/s9/2.jpg" loading="lazy" />
             <div class="txt">建築實景拍攝圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s9/3.jpg" />
+            <img src="@/section/s9/3.jpg" loading="lazy" />
             <div class="txt">3D外觀示意圖</div>
           </div>
         </swiper-slide>
