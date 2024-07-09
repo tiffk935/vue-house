@@ -1,8 +1,7 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="//h65.tw/img/thank-img.png" alt="thank" class="img">
-            <img src="//h65.tw/img/thank-img-hover.png" alt="thank" class="img-hover">
+            感謝您的來電<br>回首頁
         </a>
     </div>
 </template>
@@ -10,13 +9,12 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('//h65.tw/img/thank_bg.png');
-    background-size: cover;
-    background-position: center;
+    background: #CCC;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
     a {
         .img {

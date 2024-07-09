@@ -1,0 +1,27 @@
+<svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style type="text/css">
+  @keyframes an1 {
+    to {
+      transform: rotate(0);
+    }
+  }
+  .an{
+      transform-origin: 50%;
+      transform: rotate(-360deg);
+    animation: an1 2s linear infinite;}
+	path{stroke-width:10;fill:none;stroke:#000;}
+</style>
+<g class="an">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="68.2391" y1="8.5217" x2="68.2391" y2="91.4783">
+	<stop  offset="0" style="stop-color:#0000"/>
+	<stop  offset="0.8" style="stop-color:#0008"/>
+</linearGradient>
+<path style="stroke:url(#SVGID_1_);" d="M50,13.5c20.1,0,36.5,16.3,36.5,36.5S70.1,86.5,50,86.5"/>
+<linearGradient id="SVGID_2" gradientUnits="userSpaceOnUse" x1="31.7609" y1="91.4783" x2="31.7609" y2="8.5217">
+	<stop  offset="0.2" style="stop-color:#0008"/>
+	<stop  offset="1" style="stop-color:#000"/>
+</linearGradient>
+<path style="stroke:url(#SVGID_2);" d="M50,86.5c-20.1,0-36.5-16.3-36.5-36.5S29.9,13.5,50,13.5"/>
+<circle fill="#000" cx="50" cy="13.5" r="5"/>
+</g>
+</svg>

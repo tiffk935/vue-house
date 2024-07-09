@@ -25,8 +25,8 @@
 
 </defs>
 <use xlink:href="#circle" x="87.5" y="0" />
-<use xlink:href="#circle" x="1.5" y="147.5 " transform=" rotate(-45, 74, 220)" />
-<use xlink:href="#circle" x="173.5" y="147.5 " transform=" rotate(-90, 246, 220)" />
+<use xlink:href="#circle" x="1.5" y="147.5" />
+<use xlink:href="#circle" x="173.5" y="147.5" />
 
 <path fill="#12C2FF" d="M43.3,214.7c-2.2,1.5-6,0.8-6.4-2.2l1.4-0.5c1.2,4.6,10,0.6-0.1-2.5c-4.1-4.2,5.2-7.1,6.2-2.2l-1.4,0.6
 	c-0.2-2.1-4.3-2.3-4.3-0.3C40.2,209.5,47.7,210.1,43.3,214.7L43.3,214.7z M55.6,215.3l-1.2-2.9h-4.7l-1.2,2.9H47l4.4-10.6h1.5
@@ -155,9 +155,9 @@
 	c-0.2,0.5-0.4,1-0.6,1.5h6.8v1.4H275v2.4h4.3v1.3H275v2.4h4.3v1.3H275v3.1h-1.4v-10.5h-0.9c-0.6,1.1-1.1,2-1.9,3.2l-1.1-1.1
 	c1.5-2.1,2.2-3.6,3.1-6.2L274.1,222.2L274.1,222.2z"/>
 <linearGradient id="ll" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="200" y2="100">
-	<stop  offset="0" style="stop-color:#FFF0"/>
-	<stop  offset="0.5" style="stop-color:#FFFF"/>
-	<stop  offset="1" style="stop-color:#FFF0"/>
+	<stop  offset="0" stop-color="#FFF0"/>
+	<stop  offset="0.5" stop-color="#FFFF"/>
+	<stop  offset="1" stop-color="#FFF0"/>
 	<animate attributeName="x1" from="-200" to="1000" dur="3s"  repeatCount="indefinite"/>
 	<animate attributeName="x2" from="0" to="1200" dur="3s"  repeatCount="indefinite"/>
 </linearGradient>

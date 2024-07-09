@@ -1,7 +1,7 @@
 <template>
   <section class="s12 w-full relative bg-[#EFEFEF] text-[#3E3A39]">
     <div class="bg">
-      <img src="@/section/s12/bg.jpg" loading="lazy" data-aos="zoom-out" data-aos-delay="200" />
+      <img src="@/section/s12/bg.jpg" data-aos="zoom-out" data-aos-delay="200" />
       <div class="rect"></div>
       <div class="info">情境示意圖</div>
     </div>
@@ -35,7 +35,7 @@
     @media screen and (min-width:768px) {
       width: size(1083);
     }
-
+    img{width: 100%;}
     .rect {
       position: absolute;
       top: 0;

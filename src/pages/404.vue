@@ -1,21 +1,19 @@
 <template>
     <div class="bg">
+        網站出了點問題<br>團隊正在全力修復中!
     </div>
 </template>
 <style lang="scss" scoped>
 .bg {
-    background-image: url('//h65.tw/img/404-bg.png');
-    background-size: cover;
-    background-position: center;
+    background: #CCC;
     width: 100vw;
     height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    text-align: center;
 }
 
-@media screen and (max-width: 767px) {
-    .bg {
-        background-image: url('//h65.tw/img/404-bg-m.png');
-    }
-}
 </style>
 
 <script>

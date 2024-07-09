@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14713.007466300809!2d120.3670153!3d22.7931294!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e139614c0990f%3A0x5f59e6c6c408c85!2z5p2x5rOlLeWkp-izpg!5e0!3m2!1szh-TW!2stw!4v1720081343826!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/knSsspkn3YKwHMtS7",
     phone: "07-353-7988",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "//www.facebook.com/61557073910546",
+    fbMessage: "//m.me/61557073910546",
     caseName: caseName,
     houseInfos: [
         ["投資建設", "東泥建設股份有限公司"],
