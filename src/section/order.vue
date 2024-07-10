@@ -1,6 +1,6 @@
 <template>
   <div class="order relative md:font-['Noto_Serif_TC']">
-    <img class="bg absolute bottom-[40px] left-0 w-full hidden md:block" src="@/section/form/bg.png" />
+    <img class="bg absolute bottom-0 left-0 w-full hidden md:block" src="@/section/form/bg.png" />
     <div class="order1">
       <div class="order2">
         <!-- Title -->
