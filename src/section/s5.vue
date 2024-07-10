@@ -3,7 +3,7 @@
     <div class="line md:hidden" data-aos="line" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="content1">
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國際底蘊雋譽美學<br>凝練鍛造雍容御邸</div>
-      <div class="subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">源自於生活品味的「雋品建築」</div>
+      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">源自於生活品味的「雋品建築」</div>
       <div class="desc mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         取自雋永的「雋」與匯聚眾人智慧的「品」，<br class="md:hidden">「雋品」自古即代表俊秀、超著的品格，<br>
         蘊含精品之意。以幾何方塊構成的「品」，<br class="md:hidden">巧妙地融合建築、人與環境之間的精髓。
@@ -113,9 +113,7 @@
     .subtitle {
       letter-spacing: .06em;
       margin-bottom: .3em;
-      font-size:size-m(14);
       @media screen and (min-width:768px) {
-      font-size:size(20);
       }
     }
 
