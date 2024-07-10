@@ -32,19 +32,37 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/1.jpg" />
-            <div class="txt">3D示意模擬圖</div>
+            <div class="txt">雍雋品 3D示意模擬圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/2.jpg" />
-            <div class="txt">3D示意模擬圖</div>
+            <div class="txt">雋品天母天玉街案 3D示意模擬圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/3.jpg" />
-            <div class="txt">實景拍攝</div>
+            <div class="txt">南亞停一·停車場 實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/04.jpg" />
+            <div class="txt">政大圖書館 實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/05.jpg" />
+            <div class="txt">大安室內設計案 實景拍攝</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s5/06.jpg" />
+            <div class="txt">汐止室內設計案 實景拍攝</div>
           </div>
         </swiper-slide>
       </swiper>
