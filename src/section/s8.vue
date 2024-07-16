@@ -2,7 +2,7 @@
   <section class="s8 w-full relative bg-[#EFEFEF]">
     <img class="bg_ani absolute" src="@/section/s1/bg_ani.svg" />
     <div class="map">
-      <img src="@/section/s8/map.jpg" loading="lazy" />
+      <img v-lazy="mapImage" alt="map">
       <div class="mask" @click="s8open = true">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 63 63" fill="none">
           <circle cx="31.5" cy="31.5" r="31.5" fill="#fffc" stroke-width="1" stroke="#fff" />
@@ -31,7 +31,7 @@
       <label for="s8-modal" class="mbg absolute"></label>
       <label for="s8-modal" class="btn fixed">✕</label>
     <div class="s8-box">
-    <img src="./s8/map.jpg" alt="map" loading="lazy" >
+      <img v-lazy="mapImage" alt="map">
     </div>
   </div>
 
@@ -264,7 +264,9 @@
 </style>
 
 <script setup>
-import { ref, nextTick } from 'vue';
+import { ref } from 'vue';
 
 const s8open = ref(false);
+import mapImage from './s8/map.jpg';
+
 </script>
