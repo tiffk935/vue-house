@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 user-n w-full relative bg-[#931F1C]">
+  <section class="s6 user-n w-full relative bg-[#931F1C]">
     <div class="content">
       <div class="slider">
         <swiper
@@ -17,31 +17,31 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/1.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s6/slider/1.jpg" />
+              <div class="txt">心中山線形公園</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/2.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s6/slider/2.jpg" />
+              <div class="txt">心中山線形公園</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/3.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s6/slider/3.jpg" />
+              <div class="txt">心中山線形公園</div>
             </div>
           </swiper-slide>
         </swiper>
-        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s4/en-m.svg" />
-        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s4/en.svg" />
+        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s6/en-m.svg" />
+        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s6/en.svg" />
       </div>
       <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <img class="circle" src="@/section/s4/circle.png" />
-        <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">雙捷運中山站130米 <br>繁華以您為中心</div>
-        <div class="t2 text-center md:text-left text-[#E9C468]">EVERYTHING START FROM HERE</div>
-        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">若說住近捷運是夢寐以求，雙捷運必定是僅存碩果。位居都心核心圈十字交點，坐擁雙捷運保值絕佳利基點，微距離130米進站捷運，成就代代相傳的永恆資產價值。</div>
+        <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">緊鄰2.7公里綠軸 <br>線形公園第一排</div>
+        <div class="t2 text-center md:text-left text-[#E9C468]">WALKING ALONG THE GREEN AXIS</div>
+        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">寬敞舒適的丘坡束道，總面積達1萬8000坪，約6公頃的遊步道，重現銀座「步行者天國」雍容感。人潮絡繹不絕的「心中山線形公園」，已是新型態指標遊憩場域。</div>
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s4 {
+.s6 {
   width: 100%;
 
   .swiper-slide {

@@ -2,11 +2,11 @@
   <section class="s1 user-n w-full relative">
     <div class="rect absolute w-full left-0 bottom-0 bg-[#931F1C]"></div>
 
-    <img class="logo absolute md:hidden" src="@/section/s1/logo.svg" />
+    <img class="logo absolute md:hidden" src="@/assets/nav-logo.svg" />
     <img class="logo2 absolute md:hidden" src="@/section/s1/logo2.svg" />
 
-    <img class="img absolute md:hidden" src="@/section/s1/img-m.webp" />
-    <img class="img absolute hidden md:block" src="@/section/s1/img.webp" />
+    <img class="img absolute md:hidden" src="@/section/s1/img-m.jpg" />
+    <img class="img absolute hidden md:block" src="@/section/s1/img.jpg" />
     
 
     <img class="title absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="100" src="@/section/s1/title-m.svg" />
@@ -73,9 +73,9 @@
   }
 
   .logo {
-    top: size-m(26.83);
-    left: size-m(37);
-    width: size-m(168);
+    top: size-m(26);
+    left: size-m(40);
+    width: size-m(146);
   }
 
   .logo2 {
@@ -99,14 +99,14 @@
   }
 
   .title {
-    top: size-m(220.77);
-    left: size-m(257.75);
-    width: size-m(85);
+    top: size-m(210);
+    left: size-m(256);
+    width: size-m(71);
     filter: drop-shadow(2px 2px 5px #000);
     @media (min-width: 768px) {
-      top: size(638.42);
-      left: size(1060.26);
-      width: size(720.61);
+      top: size(342 + 160);
+      left: size(1182);
+      width: size(582.3);
       filter: drop-shadow(2px 2px 5px #000);
     }
   }
@@ -138,7 +138,7 @@
   }
 
   .en {
-    top: size(559);
+    top: size(485);
     left: size(83);
     width: size(14);
   }

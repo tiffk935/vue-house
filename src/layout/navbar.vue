@@ -5,10 +5,13 @@
                 <img class="nav-logo" src="@/assets/nav-logo.svg" />
             </div>
             <div class="nav-item cursor-pointer" @click="scrollTo('.s2')">
-                <div>宏普建設<span class="text-[#A32424]">×</span>三井不動產</div>
+                <div>台日雙強</div>
             </div>
             <div class="nav-item cursor-pointer" @click="scrollTo('.s3')">
                 <div>東京質地</div>
+            </div>
+            <div class="nav-item cursor-pointer" @click="scrollTo('.s9')">
+                <div>酒店式寓所</div>
             </div>
             <div class="nav-item cursor-pointer" @click="scrollTo('.order')">
                 <div>預約表單</div>
@@ -116,7 +119,7 @@
             align-items: center;
             font-size: size(21);
             font-weight: 600;
-            letter-spacing: .23em;
+            letter-spacing: .17em;
             font-family: "Noto Serif TC";
             color: #000;
         }
@@ -124,7 +127,7 @@
         .nav-item {
             &>div {
                 border-left: size(1) solid #A32424;
-                padding: 0 size(34);
+                padding: 0 size(28);
                 cursor: pointer;
             }
 
@@ -134,8 +137,8 @@
         }
 
         .nav-logo {
-            width: size(179.73);
-            margin-right: size(53.27);
+            width: size(196.87);
+            margin-right: size(45);
         }
 
         .nav-logo2 {

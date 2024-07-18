@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 user-n w-full relative bg-[#931F1C]">
+  <section class="s5 user-n w-full relative bg-white">
     <div class="content">
       <div class="slider">
         <swiper
@@ -17,31 +17,31 @@
         >
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/1.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s5/slider/1.jpg" />
+              <div class="txt">台北南西商圈</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/2.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s5/slider/2.jpg" />
+              <div class="txt">台北南西商圈</div>
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img class="block w-full" src="@/section/s4/slider/3.jpg" />
-              <div class="txt">捷運中山站</div>
+              <img class="block w-full" src="@/section/s5/slider/3.jpg" />
+              <div class="txt">台北南西商圈</div>
             </div>
           </swiper-slide>
         </swiper>
-        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s4/en-m.svg" />
-        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s4/en.svg" />
+        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s5/en-m.svg" />
+        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s5/en.svg" />
       </div>
       <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <img class="circle" src="@/section/s4/circle.png" />
-        <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">雙捷運中山站130米 <br>繁華以您為中心</div>
-        <div class="t2 text-center md:text-left text-[#E9C468]">EVERYTHING START FROM HERE</div>
-        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">若說住近捷運是夢寐以求，雙捷運必定是僅存碩果。位居都心核心圈十字交點，坐擁雙捷運保值絕佳利基點，微距離130米進站捷運，成就代代相傳的永恆資產價值。</div>
+        <div class="t1 text-center md:text-left font-['Noto_Serif_TC']">三越、誠品、赤峰街 <br>潮人聚場盡在咫尺</div>
+        <div class="t2 text-center md:text-left text-[#E9C468]">READY TO BE SURPRISED</div>
+        <div class="t3 text-justify font-['Noto_Serif_TC']">南西商圈見證古今繁華，時髦地位始終如一！<br class="md:hidden">從專櫃新品、櫥窗選品到文創巷弄，眾人遠道而來的目的地，就是 J PARK 的生活核心，您與美好的距離，咫尺而已。</div>
       </div>
     </div>
   </section>
@@ -50,7 +50,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s4 {
+.s5 {
   width: 100%;
 
   .swiper-slide {
@@ -77,11 +77,11 @@
   .content {
     padding: 0 0 size-m(65) 0;
     @media (min-width: 768px) {
-      padding: size(121) size(180) size(137) size(185);
+      padding: size(121) size(187) size(137) size(181);
       display: flex;
       justify-content: space-between;
       align-items: center;
-      flex-direction: row-reverse;
+      // flex-direction: row-reverse;
     }
 
     .slider {
@@ -128,12 +128,11 @@
         position: absolute;
         bottom: size-m(18.9);
         left: size-m(29.8);
-        width: size-m(148);
+        width: size-m(166);
         z-index: 1;
         @media (min-width: 768px) {
           top: size(-30);
-          left: auto;
-          right: size(-45.57);
+          left: size(-73.57 - 15.43);
           width: size(73.57);
           filter: drop-shadow(2px 2px 5px #00000041);
         }
@@ -143,7 +142,7 @@
     .content-inner {
       @media (min-width: 768px) {
         position: relative;
-        width: size(533);
+        width: size(455);
       }
 
       .circle {
@@ -151,8 +150,8 @@
         @media (min-width: 768px) {
           display: block;
           position: absolute;
-          top: size(12);
-          left: size(-25);
+          top: size(-96);
+          left: size(440);
           width: size(115.5);
         }
       }
@@ -165,8 +164,6 @@
       letter-spacing: 0.08em;
       margin-bottom: size-m(21);
       @media (min-width: 768px) {
-        // width: size(388);
-        padding-left: size(135);
         font-size: size(41);
         line-height: size(59);
         margin-bottom: size(20);
@@ -180,7 +177,6 @@
       letter-spacing: 0.16em;
       margin-bottom: size-m(24);
       @media (min-width: 768px) {
-        padding-left: size(135);
         font-size: size(18);
         line-height: size(26);
         margin-bottom: size(73);

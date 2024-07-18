@@ -1,54 +1,13 @@
 <template>
-  <section class="s3 user-n w-full relative bg-[#931F1C]">
-    <div class="content">
-      <div class="slider">
-        <swiper
-          :effect="'fade'"
-          :speed="1000"
-          :loop="true"
-          :pagination="{
-            clickable: true,
-          }"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :modules="modules"
-        >
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/1.webp" />
-              <div class="txt">新光三越 台北南西</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/2.webp" />
-              <div class="txt">誠品⽣活南西</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/3.webp" />
-              <div class="txt">捷運中山站</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img class="block w-full" src="@/section/s3/slider/4.webp" />
-              <div class="txt">⼼中山線形公園</div>
-            </div>
-          </swiper-slide>
-        </swiper>
-        <img class="en absolute md:hidden" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/en-m.svg" />
-        <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s3/en.svg" />
-      </div>
-      <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
-        <img class="circle" src="@/section/s3/circle.png" />
-        <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">迷上台北的理由 盡在咫尺</div>
-        <div class="t2 text-center md:text-left text-[#E9C468]">READY TO BE SURPRISED</div>
-        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">入榜英國文化刊物 《Time Out》 全球最酷街區，馳騁三越百貨的潮流之上、沉迷誠品南西的文藝氣韻、走讀五星飯店的聯合競演、感受心中山公園的四季更迭。中山站的尺度，始於你的腳步！</div>
-      </div>
+  <section class="s3 user-n w-full relative">
+    <div class="img img1">
+      <img class="bg block w-full" src="@/section/s3/1.jpg" />
+      <img class="en absolute" src="@/section/s3/en1.svg" />
+    </div>
+    <div class="img img2">
+      <img class="bg block w-full" src="@/section/s3/2.jpg" />
+      <img class="en absolute md:hidden" src="@/section/s3/en2-m.svg" />
+      <img class="en absolute hidden md:block" src="@/section/s3/en2.svg" />
     </div>
   </section>
 </template>
@@ -58,154 +17,72 @@
 
 .s3 {
   width: 100%;
+  @media (min-width: 768px) {
+    height: size(915);
+  }
 
-  .swiper-slide {
-    .txt {
+  .img {
+    @media (min-width: 768px) {
       position: absolute;
-      top: size-m(13);
-      right: size-m(23);
-      color: #fff;
-      font-size: size-m(11);
-      line-height: size-m(16);
-      letter-spacing: -0.04em;
-      font-weight: 500;
+      top: 0;
+      width: size(1068);
+      height: 100%;
+
+      &:hover .bg {
+        filter: grayscale(0);
+      }
+    }
+
+    .bg {
+      filter: grayscale(1);
+      transition: filter .4s;
       @media (min-width: 768px) {
-        top: auto;
-        bottom: size(21);
-        left: size(30);
-        right: auto;
-        font-size: size(17);
-        line-height: size(25);
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &.show .bg {
+      filter: grayscale(0);
+    }
+  }
+  
+  .img1 {
+    clip-path: polygon(0 0, 100% 0, 100% 68.54%, 0% 100%);
+    @media (min-width: 768px) {
+      left: 0;
+      clip-path: polygon(0 0, 100% 0, 77% 100%, 0% 100%);
+    }
+
+    .en {
+      top: size-m(35);
+      left: size-m(37);
+      width: size-m(239);
+      @media (min-width: 768px) {
+        top: size(102);
+        left: size(75);
+        width: size(727.79);
       }
     }
   }
 
-  .content {
-    padding: 0 0 size-m(65) 0;
+  .img2 {
+    margin-top: -26vw;
+    clip-path: polygon(0 31.46%, 100% 0, 100% 100%, 0 100%);
     @media (min-width: 768px) {
-      padding: size(121) size(180) size(137) size(185);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-direction: row-reverse;
+      right: 0;
+      margin-top: 0;
+      clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
-    .slider {
-      position: relative;
-      margin-bottom: size-m(57);
+    .en {
+      bottom: size-m(35);
+      right: size-m(37);
+      width: size-m(236);
       @media (min-width: 768px) {
-        width: size(935);
-        margin-bottom: 0;
-      }
-
-      .swiper-pagination {
-        line-height: 1;
-        width: auto;
-        left: auto;
-        right: size-m(39);
-        bottom: size-m(23.75);
-        @media (min-width: 768px) {
-          left: auto;
-          right: size(30);
-          bottom: size(21);
-        }
-
-        .swiper-pagination-bullet {
-          background: none;
-          border: size-m(1) solid #fff;
-          opacity: 1;
-          width: size-m(11.25);
-          height: size-m(11.25);
-          margin: 0 size-m(5);
-          @media (min-width: 768px) {
-            border-width: size(1);
-            width: size(13);
-            height: size(13);
-            margin: 0 size(6);
-          }
-
-          &.swiper-pagination-bullet-active {
-            background: #fff;
-          }
-        }
-      }
-
-      .en {
-        position: absolute;
-        bottom: size-m(18.9);
-        left: size-m(29.8);
-        width: size-m(148);
-        z-index: 1;
-        filter: drop-shadow(2px 2px 5px #000);
-        @media (min-width: 768px) {
-          top: size(-30);
-          left: auto;
-          right: size(-45.57);
-          width: size(73.57);
-          filter: drop-shadow(2px 2px 5px #00000041);
-        }
-      }
-    }
-
-    .content-inner {
-      @media (min-width: 768px) {
-        position: relative;
-        width: size(473);
-      }
-
-      .circle {
-        display: none;
-        @media (min-width: 768px) {
-          display: block;
-          position: absolute;
-          top: size(12);
-          left: size(-25);
-          width: size(115.5);
-        }
-      }
-    }
-
-    .t1 {
-      font-size: size-m(19);
-      line-height: size-m(27);
-      font-weight: 600;
-      letter-spacing: 0.14em;
-      margin-bottom: size-m(9);
-      @media (min-width: 768px) {
-        // width: size(388);
-        padding-left: size(135);
-        font-size: size(41);
-        line-height: size(59);
-        margin-bottom: size(20);
-      }
-    }
-
-    .t2 {
-      font-size: size-m(9.5);
-      line-height: size-m(14);
-      font-weight: 500;
-      letter-spacing: 0.16em;
-      margin-bottom: size-m(24);
-      @media (min-width: 768px) {
-        padding-left: size(135);
-        font-size: size(18);
-        line-height: size(26);
-        margin-bottom: size(73);
-      }
-    }
-
-    .t3 {
-      font-size: size-m(11);
-      line-height: 201.1%;
-      font-weight: 600;
-      letter-spacing: -0.01em;
-      width: size-m(295);
-      margin: 0 auto;
-      @media (min-width: 768px) {
-        font-size: size(20);
-        letter-spacing: 0.11em;
-        margin: 0;
-        width: size(455);
+        bottom: size(86);
+        right: size(76);
+        width: size(341.73);
       }
     }
   }
@@ -213,11 +90,55 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/pagination';
-import 'swiper/css/effect-fade';
-import { Autoplay, Pagination, EffectFade } from "swiper";
-const modules = ref([Autoplay, Pagination, EffectFade]);
+import { onMounted } from 'vue';
+
+onMounted(() => {
+  function isFullyVisible(element) {
+    const rect = element.getBoundingClientRect();
+    const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+    const windowWidth = (window.innerWidth || document.documentElement.clientWidth);
+
+    const isVisible = (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= windowHeight &&
+        rect.right <= windowWidth
+    );
+
+    return isVisible;
+  }
+
+  function checkImgs() {
+    const img1 = document.querySelector('.s3 .img1');
+    const img2 = document.querySelector('.s3 .img2');
+
+    if (isFullyVisible(img1)) {
+      img1.classList.add('show');
+    } else {
+      img1.classList.remove('show');
+    }
+
+    if (isFullyVisible(img2)) {
+      img2.classList.add('show');
+    } else {
+      img2.classList.remove('show');
+    }
+  }
+
+  const media = window.matchMedia("(min-width: 768px)");
+
+  media.addEventListener("change", function() {
+    if (media.matches) {
+      document.querySelector('.s3 .img1').remove('show');
+      document.querySelector('.s3 .img2').remove('show');
+    } else {
+      checkImgs();
+    }
+  });
+
+  window.addEventListener('scroll', function() {
+    if (media.matches) return;
+    checkImgs();
+  });
+});
 </script>

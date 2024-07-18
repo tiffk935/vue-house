@@ -63,18 +63,17 @@
         <img class="en absolute hidden md:block" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/en.svg" />
       </div>
       <div class="content-inner" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">和苑三井經驗 中山站再現</div>
+        <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">台日雙強北市首發<br class="md:hidden"> 全方位都心資產</div>
         <div class="t2 text-center md:text-left text-[#959595]">GATHERING GOOD AND HONOR</div>
         <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] md:hidden">
-          和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
-          <br>
-          台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
+          和苑飯店是合作起點，中山南西是年度亮點！<br>
+          宏普建設(2536.TW)與三井不動產集團台日雙強品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，在中山站130米微距離精雕細琢，邀您邂逅城市新未來。
         </div>
 
         <div class="t3 text-justify text-[#000000] font-['Noto_Serif_TC'] hidden md:block">
-          和苑飯店是起點，中山南西是亮點，宏普建設（2536.TW）與<br>三井不動產（TYO:8801）的北市足跡，首度跨足上質日感街區。<br>
+          和苑飯店是合作起點，中山南西是年度亮點！<br>
           <br>
-          台日雙上市品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，將在中山站旁精雕細琢，邀您邂逅城市新未來。
+          宏普建設(2536.TW)與三井不動產集團台日雙強品牌，合計逾百年經驗，以都市再造眼界，回應新時代變革，在中山站130米微距離精雕細琢，邀您邂逅城市新未來。
         </div>
         <img class="logo" src="@/section/s2/logo.svg" />
       </div>
@@ -234,7 +233,7 @@
       font-size: size-m(19);
       line-height: size-m(27);
       font-weight: 600;
-      letter-spacing: 0.14em;
+      letter-spacing: 0.03em;
       margin-bottom: size-m(9);
       @media (min-width: 768px) {
         font-size: size(41);
