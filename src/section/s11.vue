@@ -18,21 +18,42 @@
             <div class="relative">
               <img src="@/section/s11/1.jpg" loading="lazy" />
               <div class="txt1">3D透視裝潢參考圖</div>
-              <div class="txt2">氣派大面寬，迎賓客餐廳。</div>
+             <!-- <div class="txt2">氣派大面寬，迎賓客餐廳。</div> --> 
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
               <img src="@/section/s11/2.jpg" loading="lazy" />
               <div class="txt1">3D透視裝潢參考圖</div>
-              <div class="txt2">美饌饗宴，風機能廚房。</div>
+              <!-- <div class="txt2">美饌饗宴，風機能廚房。</div> -->
             </div>
           </swiper-slide>
           <swiper-slide>
             <div class="relative">
-              <img src="@/section/s11/3.jpg" />
+              <img src="@/section/s11/3.jpg" loading="lazy" />
               <div class="txt1">3D透視裝潢參考圖</div>
-              <div class="txt2">靜謐隱私，整層大主臥。</div>
+              <!-- <div class="txt2">靜謐隱私，整層大主臥。</div> -->
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/4.jpg" loading="lazy" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <!-- <div class="txt2">靜謐隱私，整層大主臥。</div> -->
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/5.jpg" loading="lazy" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <!-- <div class="txt2">靜謐隱私，整層大主臥。</div> -->
+            </div>
+          </swiper-slide>
+          <swiper-slide>
+            <div class="relative">
+              <img src="@/section/s11/6.jpg" loading="lazy" />
+              <div class="txt1">3D透視裝潢參考圖</div>
+              <!-- <div class="txt2">靜謐隱私，整層大主臥。</div> -->
             </div>
           </swiper-slide>
         </swiper>
@@ -44,6 +65,9 @@
           <div :class="{ active: activeIdx === 0 }" @click="slideTo(0)"></div>
           <div :class="{ active: activeIdx === 1 }" @click="slideTo(1)"></div>
           <div :class="{ active: activeIdx === 2 }" @click="slideTo(2)"></div>
+          <div :class="{ active: activeIdx === 3 }" @click="slideTo(3)"></div>
+          <div :class="{ active: activeIdx === 4 }" @click="slideTo(4)"></div>
+          <div :class="{ active: activeIdx === 5 }" @click="slideTo(5)"></div>
         </div>
       </div>
     </div>

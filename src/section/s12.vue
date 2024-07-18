@@ -21,7 +21,7 @@
 .s12 {
   width: 100%;
   height: size-m(715);
-  font-family: "Noto Sans TC";
+ // font-family: "Noto Sans TC";
   @media screen and (min-width:768px) {
     height: size(601);
   }
@@ -79,6 +79,7 @@
       font-size: size-m(25);
       letter-spacing: .02em;
       margin-bottom: size-m(15);
+      font-weight: 600;
       @media screen and (min-width:768px) {
         font-size: size(40);
         margin-bottom: size(10);
