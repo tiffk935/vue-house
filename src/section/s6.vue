@@ -41,7 +41,7 @@
         <img class="circle" src="@/section/s4/circle.png" />
         <div class="t1 text-center md:text-left text-white font-['Noto_Serif_TC']">緊鄰2.7公里綠軸 <br>線形公園第一排</div>
         <div class="t2 text-center md:text-left text-[#E9C468]">WALKING ALONG THE GREEN AXIS</div>
-        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">寬敞舒適的丘坡束道，總面積達1萬8000坪，約6公頃的遊步道，重現銀座「步行者天國」雍容感。人潮絡繹不絕的「心中山線形公園」，已是新型態指標遊憩場域。</div>
+        <div class="t3 text-justify text-white font-['Noto_Serif_TC']">寬敞舒適的丘坡束道，總面積達1萬8000坪，約6公頃的遊步道，重現銀座「步行者天國」雍容感。人潮絡繹不絕的「心中山線形公園」，已是新型態指標遊憩場域。</div>
       </div>
     </div>
   </section>
