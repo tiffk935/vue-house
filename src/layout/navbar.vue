@@ -10,9 +10,9 @@
             <div class="nav-item cursor-pointer" @click="scrollTo('.s3')">
                 <div>東京質地</div>
             </div>
-            <div class="nav-item cursor-pointer" @click="scrollTo('.s9')">
+            <!--div class="nav-item cursor-pointer" @click="scrollTo('.s9')">
                 <div>酒店式寓所</div>
-            </div>
+            </div-->
             <div class="nav-item cursor-pointer" @click="scrollTo('.order')">
                 <div>預約表單</div>
             </div>
@@ -143,7 +143,8 @@
 
         .nav-logo2 {
             width: size(681.63);
-            margin-left: size(68);
+            //margin-left: size(68);
+            margin-left: size(208);
         }
     }   
 

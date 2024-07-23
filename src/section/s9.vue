@@ -8,7 +8,7 @@
     <div class="content bg-[#EBECC5]">
       <div class="md:flex md:justify-between md:items-center" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">
         <div>
-          <div class="t1 text-center md:text-left text-[#931F1C] font-['Noto_Serif_TC']">上質都心贏者圈  全能資產一期一會</div>
+          <div class="t1 text-center md:text-left text-[#000] font-['Noto_Serif_TC']">上質都心贏者圈 <br class="md:hidden"> 全能資產一期一會</div>
           <div class="t2 text-center md:text-left text-[#CCB071]">OWN THE CITY, MEET THE FUTURE</div>
         </div>
         <div class="t3 text-justify font-['Noto_Serif_TC']">古今交織的魅力韻味，因雙捷運十字交會，格外閃耀。一席核心資產，難得；雙線捷運交會，稀有；三越誠品在側，絕版！精打細算的時代贏家，理當讓全球通膨速度，跟不上你的穩健態度。</div>
