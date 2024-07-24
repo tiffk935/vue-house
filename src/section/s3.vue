@@ -10,6 +10,10 @@
       <img class="en absolute hidden md:block" src="@/section/s3/en2.svg" />
     </div>
   </section>
+  <div class="s3-style relative md:hidden">
+    <img class="style absolute bottom-0 left-0" src="@/section/s3/style.svg" />
+    <img class="circle absolute" src="@/section/s2/circle.png" />
+  </div>
 </template>
 
 <style lang="scss">
@@ -85,6 +89,33 @@
         width: size(341.73);
       }
     }
+  }
+}
+
+.s3-style {
+  width: 100%;
+  height: size-m(140);
+  z-index: 1;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: size-m(135);
+    background: linear-gradient(0deg, rgba(235, 236, 197, 0.50) 48%, rgba(235, 245, 207, 0.00) 92%);
+    z-index: -1;
+  }
+
+  .style {
+    width: size-m(270);
+  }
+
+  .circle {
+    top: size-m(43);
+    left: size-m(177);
+    width: size-m(63);
   }
 }
 </style>
