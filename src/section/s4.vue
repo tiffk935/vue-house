@@ -4,7 +4,7 @@
       <div class="text">
         <div class="t1" data-aos="fade-up" data-aos-delay="0">交通新未來</div>
         <div class="t2" data-aos="fade-up" data-aos-delay="200">捷運紫線計劃，串聯高雄大學城、兩大醫療中心</div>
-        <div class="t3" data-aos="fade-up" data-aos-delay="400">「捷運紫線計畫」途經 文藻、左營高中、高雄大學、<br class="hidden md:block">義大醫學院、樹德科大、榮總、義大、佛光山。</div>
+        <div class="t3" data-aos="fade-up" data-aos-delay="400">「紫線預計規劃車站」途經 文藻、左營高中、高雄大學、<br class="hidden md:block">義大醫學院、樹德科大、榮總、義大、佛光山。</div>
       </div>
       <div class="img relative">
         <img src="@/section/s4/img.jpg" data-aos="zoom-out" data-aos-delay="200"/>
