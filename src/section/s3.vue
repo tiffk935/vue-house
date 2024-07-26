@@ -55,7 +55,7 @@
     clip-path: polygon(0 0, 100% 0, 100% 68.54%, 0% 100%);
     @media (min-width: 768px) {
       left: 0;
-      clip-path: polygon(0 0, 100% 0, 77% 100%, 0% 100%);
+      clip-path: polygon(0 0, 100% 0, 77.5% 100%, 0% 100%);
     }
 
     .en {
@@ -76,7 +76,7 @@
     @media (min-width: 768px) {
       right: 0;
       margin-top: 0;
-      clip-path: polygon(23% 0, 100% 0, 100% 100%, 0% 100%);
+      clip-path: polygon(22.5% 0, 100% 0, 100% 100%, 0% 100%);
     }
 
     .en {
