@@ -4,7 +4,8 @@
       <img class="style1 absolute left-0 bottom-0" src="@/section/s2/style1.svg" />
       <img class="style2 absolute right-0 bottom-0" src="@/section/s2/style2.svg" />
       <img class="circle absolute" src="@/section/s2/circle.png" />
-      <div class="text absolute top-0 left-0 w-full" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">時代の進化と呼応する</div>
+      <img class="title absolute" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0" src="@/section/s2/title.svg" />
+      <!--div class="text absolute top-0 left-0 w-full" data-aos="cuscus" data-aos-duration="1000" data-aos-delay="0">時代の進化と呼応する</div-->
     </div>
     <div class="content">
       <div class="slider">
@@ -117,6 +118,17 @@
       width: size(115.5);
       bottom: size(194);
       right: size(232.5);
+    }
+  }
+
+  .title {
+    top: size-m(35);
+    width: size-m(276);
+    left: size-m(50);
+    @media (min-width: 768px) {
+      top: size(98);
+      width: size(744);
+      left: size(564);
     }
   }
 

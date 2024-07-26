@@ -152,7 +152,7 @@
           display: block;
           position: absolute;
           top: size(12);
-          left: size(-25);
+          left: size(-140);
           width: size(115.5);
         }
       }
@@ -166,7 +166,7 @@
       margin-bottom: size-m(21);
       @media (min-width: 768px) {
         // width: size(388);
-        padding-left: size(135);
+        //padding-left: size(135);
         font-size: size(41);
         line-height: size(59);
         margin-bottom: size(20);
@@ -180,7 +180,7 @@
       letter-spacing: 0.16em;
       margin-bottom: size-m(24);
       @media (min-width: 768px) {
-        padding-left: size(135);
+        //padding-left: size(135);
         font-size: size(18);
         line-height: size(26);
         margin-bottom: size(73);
