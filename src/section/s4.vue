@@ -151,8 +151,8 @@
         @media (min-width: 768px) {
           display: block;
           position: absolute;
-          top: size(12);
-          left: size(-140);
+          top: size(-150);
+          left: size(-60);
           width: size(115.5);
         }
       }
