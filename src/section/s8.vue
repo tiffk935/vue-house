@@ -17,7 +17,7 @@
           <path d="M10.7,27c-16,0-12.8-27,2.9-27C29.7,0,25.8,27,10.7,27z M19.6,10.7c0-14.3-15.3-11.8-15.3,5C4.4,31,19.6,28,19.6,10.7z"/>
         </svg>距離、學校<br class="md:hidden">散步到燕巢市心優質生活圈
       </div>
-      <div class="t2" data-aos="fade-up" data-aos-delay="200">兒二公園 × 國小國中 × 行政中心<br class="md:hidden">交流道 × 阿公店景區</div>
+      <div class="t2" data-aos="fade-up" data-aos-delay="200">兒二公園 × 國小國中 × 行政中心<br class="md:hidden">交流道 × 阿公店風景區</div>
       <div class="t3" data-aos="fade-up" data-aos-delay="400">東泥建設從選地開始，即為住戶考量到生活需求，「東泥大賦」結合自然、人文、便捷的優質環境，是燕巢市中心首屈一指的優生美地。</div>
     </div>
     

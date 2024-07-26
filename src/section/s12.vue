@@ -3,7 +3,7 @@
     <div class="bg">
       <img src="@/section/s12/bg.jpg" data-aos="zoom-out" data-aos-delay="200" loading="lazy" />
       <div class="rect"></div>
-      <div class="info">情境示意圖</div>
+      <!-- <div class="info">情境示意圖</div> -->
     </div>
 
     <div class="content relative">
