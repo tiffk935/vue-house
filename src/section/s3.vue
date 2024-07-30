@@ -1,7 +1,7 @@
 <template>
   <section class="s3 relative">
     <div class="map user-n relative" ref="map">
-      <img class="map1" src="@/section/s3/map.webp" @load="onImgLoad($event)" />
+      <img class="map1" src="@/section/s3/map.png" @load="onImgLoad($event)" />
     </div>
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s3/hand.svg" />
@@ -63,6 +63,7 @@
       }
     }
   }
+  .map1{background: url("./s3/map.webp");background-size: cover;}
 
   .hand {
     width: size-m(22.34);

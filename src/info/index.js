@@ -1,4 +1,4 @@
-const caseName = "佳鋐大境"
+const caseName = "佳鋐首耀"
 
 export default {
     meta: {
@@ -17,12 +17,12 @@ export default {
     caseName: caseName,
     houseInfos: [
         ["投資興建", "佳鋐建設股份有限公司"],
-        ["營造公司", "協侑營造有限公司"],
-        ["產品規劃", "地上 15層，地下2層，245戶"],
-        ["景觀設計", "邑埕景觀設計"],
-        ["建築外觀", "曾聰憲建築師事務所"],
+        ["經紀人", "蔡明儒(112)北市經證字第02517號"],
+        ["建造執照", "111中都建字第00895號"],
+        ["建築設計", "蔡智勸建築師事務所"],
+        ["企劃銷售", "昕華廣告有限公司"]
     ],
-    gtmCode: ["GTM-KTP354Z8"], // 可放置多個
+    gtmCode: ["GTM-KLHKDVV6"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
@@ -34,7 +34,7 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["兩房","三房"],
-    budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
+    budget: ["900-1,000萬","1,100-1,200萬","1,200-1,300萬","1,300-1,400萬","1,400-1,500萬"],
     navList: [
         {
             name: "大城之境",

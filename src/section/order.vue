@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order bg-[#E5005C] relative text-center">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -209,7 +209,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #E5005C;
+    color: #EC6300;
     background-color:#fff;;
     //border: 1px solid #FFF9;
     border:0;

@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 w-full relative bg-[#E5005C] text-white">
+  <section class="s4 w-full relative text-white">
     <img class="ball-orange1 absolute" src="@/section/balls/orange.png" />
     <img class="ball-orange2 absolute" src="@/section/balls/orange.png" />
     <img class="ball-orange3 absolute hidden md:block" src="@/section/balls/orange.png" />
@@ -9,8 +9,8 @@
     <img class="ball-green1 absolute" src="@/section/balls/green.png" />
     <img class="ball-green2 absolute hidden md:block" src="@/section/balls/green.png" />
     <img class="ball-green3 absolute hidden md:block" src="@/section/balls/green.png" />
-    <img class="ball-blue1 absolute" src="@/section/balls/blue.png" />
-    <img class="ball-blue2 absolute" src="@/section/balls/blue.png" />
+   <!--  <img class="ball-blue1 absolute" src="@/section/balls/blue.png" />
+    <img class="ball-blue2 absolute" src="@/section/balls/blue.png" /> -->
     <img class="ball-yellow1 absolute" src="@/section/balls/yellow.png" />
 
     <div class="md:flex md:justify-between md:items-end">
@@ -80,15 +80,15 @@
           </swiper>
         </div>
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
     <div class="main-map hidden md:block">
-      <img class="block w-full" src="@/section/s4/map1.png" />
+      <img class="block w-full" src="@/section/s4/map1.webp" />
     </div>
     <div class="slider2">
       <swiper
@@ -153,10 +153,10 @@
         </swiper-slide>
       </swiper>
       <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
       </div>
       <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
       </div>
     </div>
     <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
@@ -166,22 +166,22 @@
         <div class="t2 bt2 hidden md:block">【大境】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
       </div>
       <div class="map-preview" @click="clickMap(2)">
-        <img class="block w-full" src="@/section/s4/map-preview.jpg" />
+        <img class="block w-full" src="@/section/s4/map-preview.png" />
       </div>
     </div>
   </section>
 
-  <div v-if="showPop" id="s4-popup" class="bg-[#E5005C] text-white">
+  <div v-if="showPop" id="s4-popup" class="bg-[#EC6300] text-white">
     <svg @click="showPop = false" class="popup-close md:hidden" viewBox="0 0 28 28" fill="none" stroke="#FFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M1,1l26,26 M27,1L1,27"/></svg>
     <svg @click="showPop = false" class="popup-close hidden md:block" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="23.7109" cy="24.0303" r="23.2109" fill="white"/>
-      <path d="M12.9683 34.904L34.2587 13.6136" stroke="#E5005C" stroke-width="2" stroke-linecap="round"/>
-      <path d="M12.9683 13.6136L34.2587 34.904" stroke="#E5005C" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12.9683 34.904L34.2587 13.6136" stroke="#EC6300" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12.9683 13.6136L34.2587 34.904" stroke="#EC6300" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <div class="txt">左右滑動可看全圖</div>
     <div class="img">
-      <img v-if="map === 1" src="@/section/s4/map1.png" @load="onImgLoad($event)" />
-      <img v-if="map === 2" src="@/section/s4/map2.png" @load="onImgLoad($event)" />
+      <img v-if="map === 1" src="@/section/s4/map1.webp" @load="onImgLoad($event)" />
+      <img v-if="map === 2" src="@/section/s4/map2.webp" @load="onImgLoad($event)" />
     </div>
   </div>
 </template>
@@ -192,7 +192,7 @@
 .s4 {
   padding: size-m(70) 0 size-m(50);
   @media (min-width: 768px) {
-    padding: size(63) size(210) size(280);
+    padding: size(63) size(210) size(100);
   }
 
   .ball-orange1 {
@@ -578,6 +578,8 @@
     width: size-m(315);
     margin: size-m(29) auto 0;
     cursor: pointer;
+    background: url("./s4/map2.webp");
+    background-size: cover;
     @media (min-width: 768px) {
       width: size(395.03);
       margin: 0 size(41) 0 0;
@@ -592,7 +594,7 @@
   width: 100%;
   height: 100%;
   z-index: 99999999;
-  padding: size-m(76) 0 size-m(84);
+  padding: size-m(40) 0 size-m(40);
   @media (min-width: 768px) {
     top: 50%;
     left: 50%;
@@ -611,8 +613,8 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    height: size-m(306);
-    background: linear-gradient(180deg, #9C003F 0%, #E5005C 100%);
+    height: size-m(200);
+    background:#9C003F;
     transform: rotate(180deg);
     @media (min-width: 768px) {
       display: none;
@@ -621,8 +623,8 @@
 
   .popup-close {
     position: absolute;
-    top: size-m(32);
-    right: size-m(27);
+    top: size-m(7);
+    right: size-m(7);
     width: size-m(26);
     cursor: pointer;
     z-index: 1;
@@ -635,11 +637,11 @@
 
   .txt {
     position: absolute;
-    bottom: size-m(27);
+    bottom: size-m(7);
     left: 0;
     width: 100%;
     text-align: center;
-    font-size: size-m(20);
+    font-size: size-m(18);
     font-weight: 700;
     @media (min-width: 768px) {
       display: none

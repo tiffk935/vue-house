@@ -1,5 +1,5 @@
 <template>
-  <section class="s6 w-full relative bg-[#E5005C] text-white">
+  <section class="s6 w-full relative text-white">
     <img class="line absolute top-0 left-0 w-full md:hidden" src="@/section/s6/line.svg">
     <img class="line absolute top-0 right-0 hidden md:block" src="@/section/s6/line2.svg">
     <div class="ccontainer">
