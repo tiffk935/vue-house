@@ -86,8 +86,8 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #E5005C;}
-.hover\:bg-color2:hover{background-color:#a00040;}
+.bg-color1{background-color: #EC6300;}
+.hover\:bg-color2:hover{background-color:#b34a00;}
 
 .contact-info {
   width: size(1200);
@@ -182,7 +182,7 @@
   }
 }
 .modal-box{
-  img{filter:invert(23%) sepia(95%) saturate(7481%) hue-rotate(329deg) brightness(88%) contrast(105%);
+  img{filter:invert(39%) sepia(92%) saturate(2100%) hue-rotate(7deg) brightness(98%) contrast(102%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }

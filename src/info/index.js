@@ -37,12 +37,18 @@ export default {
     budget: ["900-1,000萬","1,100-1,200萬","1,200-1,300萬","1,300-1,400萬","1,400-1,500萬"],
     navList: [
         {
-            name: "大城之境",
+            name: "佳鋐首耀",
             target: ".s3",
             offset: "",
         },
         {
-            name: "大境美宅",
+            name: "首耀之境",
+            target: ".s3",
+            offset: "",
+        },
+        /*
+        {
+            name: "首耀美宅",
             target: ".s5",
             offset: "",
         },
@@ -56,6 +62,7 @@ export default {
             target: ".s8",
             offset: "",
         },
+        */
         {
             name: "預約賞屋",
             target: ".order",
