@@ -26,10 +26,11 @@
   }
 
   .img {
+    position: relative;
     @media (min-width: 768px) {
       position: absolute;
       top: 0;
-      width: size(1068);
+      width: size(1070);
       height: 100%;
 
       &:hover .bg {
@@ -52,10 +53,10 @@
   }
   
   .img1 {
-    clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
+   // clip-path: polygon(0 0, 100% 0, 100% 69%, 0% 100%);
     @media (min-width: 768px) {
       left: 0;
-      clip-path: polygon(0 0, 100% 0, 77.9% 100%, 0% 100%);
+   //   clip-path: polygon(0 0, 100% 0, 77.9% 100%, 0% 100%);
     }
 
     .en {
@@ -78,6 +79,28 @@
       margin-top: 0;
       clip-path: polygon(22.1% 0, 100% 0, 100% 100%, 0% 100%);
     }
+    &::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: 0;
+    width: 100%;
+    height: 3px;// 線條粗細需-1
+    background: #FFFC;
+    pointer-events: none;
+    z-index: 5;
+    transform-origin: 100% 100%;
+    transform: skewY(-14.7deg);
+    @media (min-width: 768px) {
+
+    top: 0;
+    left: -1px;
+    width: 3px;// 線條粗細需-1
+    height: 100%;
+    transform: skewX(-14.5deg);
+    }
+
+}
 
     .en {
       bottom: size-m(35);
