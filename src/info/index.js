@@ -25,7 +25,7 @@ export default {
         ["使用執照", "(113)高市工建築使字第00088號等27個"],
         ["聯絡電話", "07-353-7988"],
     ],
-    gtmCode: ["GTM-W2Z2B6ND","GTM-KXCTSBDN","GTM-PGF3THPV"], // 可放置多個
+    gtmCode: ["GTM-PGF3THPV"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
