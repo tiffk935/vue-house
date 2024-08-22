@@ -1,5 +1,6 @@
 <template>
   <section class="s1 user-n w-full relative">
+    <img src="@/section/s6/badge.png" class="badge_" alt="" srcset="">
     <div class="bg absolute">
       <img class="block w-full h-full" src="@/section/s1/bg.webp" />
     </div>
@@ -97,6 +98,19 @@
     height: size(1080);
   }
 
+  .badge_ {
+    @apply z-10 absolute;
+    left: 0;
+    top: 0;
+    width: size(130);
+    height: size(130);
+
+    @media (max-width: 768px) {
+      width: size-m(71);
+      height: size-m(71);
+    }
+  }
+
   .bg {
     top: 0;
     left: size-m(-662.95);
@@ -180,7 +194,7 @@
     width: size-m(13.36);
     @media (min-width: 768px) {
       top: size(70);
-      left: size(91);
+      left: size(127);
       width: size(19.38);
     }
   }
