@@ -13,9 +13,7 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#EC6300]">
     <h1 style="display:none;">佳鋐大境</h1>
     <S1 />
-   <!-- 
-    <S2 />
-    --> 
+    <S2 /> 
     <S3 />
     <S4 />
    <!--   <S5 />
@@ -47,7 +45,7 @@
 
 <script setup>
 import S1 from "@/section/s1.vue"
-// import S2 from "@/section/s2.vue"
+import S2 from "@/section/s2.vue"
 // mport S22 from "@/section/s22.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
