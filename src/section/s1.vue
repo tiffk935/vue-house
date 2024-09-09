@@ -24,18 +24,19 @@
     </div>
     <img class="jp absolute" src="@/section/s1/jp.svg" />
     <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <div class="order-btn absolute text-white" @click="scrollTo('.order')">
+    <div class="order-btn absolute text-white" @click="scrollTo('.order')" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" >
       <div>立即預約</div>
       <svg class="arrow" viewBox="0 0 21 11" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M20 1L15.2512 5.42791L10.5023 9.85116L5.75349 5.42791L1 1" stroke="white" stroke-miterlimit="10"/>
       </svg>
     </div>
-    <div class="content absolute md:flex md:justify-between md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    <div class="content absolute md:flex md:justify-between md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400" data-aos-offset="-200">
       <div class="md:flex md:items-center">
-        <div class="t1">核心商道 捷運綠徑 傳承富寓</div>
-        <div class="t2">北投站350米 31-39坪｜邊間3房</div>
+        <div class="t1"><span>68坪捷運金店面</span>  正中央南路核心商圈</div>
+        <div class="t2"><span>捷運北投站350米</span>｜傳承富寓31-39坪｜邊間3房｜</div>
       </div>
-      <img class="block w-full" src="@/section/s1/info.svg" />
+      <img class="hidden md:block w-full" src="@/section/s1/info.svg" />
+      <img class="md:hidden w-full" src="@/section/s1/infom.svg" />
     </div>
   </section>
 
@@ -94,8 +95,12 @@
 .s1 {
   width: 100%;
   height: size-m(740);
+ // background: url("./s1/mo.jpg");
+ // background-size: 100% auto;
   @media (min-width: 768px) {
-    height: size(1080);
+    height: 100vh;
+    min-height: size(900);
+    max-height: size(1080);
   }
 
   .badge_ {
@@ -115,7 +120,7 @@
     top: 0;
     left: size-m(-662.95);
     width: size-m(1316.77);
-    height: 100%;
+    height: 100%;//opacity: 0;
     @media (min-width: 768px) {
       left: 0;
       width: 100%;
@@ -150,6 +155,7 @@
 
   .links {
     top: size(69);
+    top: calc(15% + #{size(69 - 1080 * .15)});
     right: size(82);
 
     .item {
@@ -200,22 +206,24 @@
   }
 
   .logo {
-    top: size-m(90);
-    left: size-m(144);
-    width: size-m(87.07);
+    top: size-m(55);
+    left: size-m(139);
+    width: size-m(96);
     @media (min-width: 768px) {
       top: size(209);
+      top: calc(40% + #{size(209 - 1080 * .4)});
       left: size(890);
       width: size(139.77);
     }
   }
 
   .order-btn {
-    top: size-m(402);
+    top: size-m(385);
     left: size-m(152);
     cursor: pointer;
     @media (min-width: 768px) {
       top: size(743);
+      top: calc(40% + #{size(743 - 1080 * .4)});
       left: size(892);
     }
 
@@ -243,20 +251,22 @@
 
   .content {
     color: #fff;
-    top: size-m(495);
-    left: size-m(55);
+    top: size-m(464);
+    left: size-m(48);
     text-align: center;
     @media (min-width: 768px) {
       top: size(900);
-      left: size(234);
-      width: size(1500);
+      top: calc(60% + #{size(920 - 1080 * .6)});
+      left: size(50);
+      white-space: nowrap;
+      // width: size(1600);
     }
 
     .t1 {
-      font-size: size-m(20);
+      font-size: size-m(28);
       font-weight: 500;
-      line-height: normal;
-      letter-spacing: size-m(1.4);
+      line-height: 1.7;
+      letter-spacing:0.08em;
       margin-bottom: size-m(10);
       @media (min-width: 768px) {
         font-size: size(37);
@@ -264,25 +274,42 @@
         margin-bottom: 0;
         margin-right: size(35);
       }
+      @media (max-width: 767px) {
+        border-bottom: 1px solid #fff5;
+        span{
+          display: block;
+          font-size: 1.3em;    
+          letter-spacing:0.05em;
+          border-bottom: 1px solid #fff5;
+        }
+      }
     }
 
     .t2 {
-      font-size: size-m(16);
+      font-size: size-m(20);
       line-height: normal;
-      letter-spacing: size-m(2.4);
-      margin-bottom: size-m(13);
+      letter-spacing: 0em;
+      margin-bottom: size-m(8);
       @media (min-width: 768px) {
         font-size: size(30);
-        letter-spacing: size(4.5);
+        letter-spacing: size(3);
         margin-bottom: 0;
+      }
+      @media (max-width: 767px) {
+        span{
+          display: block;
+          font-size: 1.6em;   
+          letter-spacing: 0.1em;       
+        }
       }
     }
 
     img {
-      width: size-m(268.4);
+      width: size-m(140);
       margin: 0 auto;
       @media (min-width: 768px) {
         width: size(365.4);
+        margin: 0 auto 0 size(10);
       }
     }
   }
