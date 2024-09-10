@@ -20,39 +20,8 @@
           <li><div>唯一支線通行溫泉觀光，新北投站攜行人流金脈</div></li>
         </ol>
       </div>
-      
-      <div class="slider">
-        <swiper
-          :loop="true"
-          :navigation="true"
-          :pagination="{
-            clickable: true
-          }"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :modules="modules"
-        >
-          <swiper-slide>
-            <div class="img relative">
-              <img class="w-full" src="./s4/1.webp" />
-              <div class="txt absolute">捷運北投站實景</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="img relative">
-              <img class="w-full" src="./s4/2.webp" />
-              <div class="txt absolute">捷運奇岩站實景</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="img relative">
-              <img class="w-full" src="./s4/3.webp" />
-              <div class="txt absolute">捷運北投站實景</div>
-            </div>
-          </swiper-slide>
-        </swiper>
+      <div class="img relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="w-full" src="@/section/s4/img.webp" />
       </div>
     </div>
   </section>
@@ -189,61 +158,6 @@
     }
   }
 
-  .slider {
-    @media (min-width: 768px) {
-      width: size(1017);
-    }
-
-    .swiper-pagination {
-      width: auto;
-      line-height: 1;
-      margin: 0;
-      bottom: size-m(13.67);
-      padding-left: size-m(17 - 2.92);
-      @media (min-width: 768px) {
-        bottom: size(32.7);
-        padding-left: size(36 - 7.915);
-      }
-
-      .swiper-pagination-bullet {
-        width: size-m(3.43);
-        height: size-m(3.43);
-        background: #fff;
-        opacity: 1;
-        margin: 0 size-m(2.92);
-        @media (min-width: 768px) {
-          width: size(9.3);
-          height: size(9.3);
-          margin: 0 size(7.915);
-        }
-
-        &.swiper-pagination-bullet-active {
-          background: #C30D23;
-        }
-      }
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-      width: size-m(5.73);
-      height: size-m(16.45);
-      background-size: contain;
-      @media (min-width: 768px) {
-        display: none;
-      }
-
-      &::after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      background-image: url(@/section/s2/arrow-prev.svg);
-    }
-
-    .swiper-button-next {
-      background-image: url(@/section/s2/arrow-next.svg);
-    }
-  }
   .img {
     img {
       width: 100%;
@@ -265,10 +179,10 @@
       line-height: 163.6%;
       letter-spacing: size-m(0.22);
       @media (min-width: 768px) {
-        bottom: 1em;
-        right: 1.5em;
-        font-size: size(20);
-        letter-spacing:0.06em;
+        bottom: size(33);
+        right: size(49);
+        font-size: size(24);
+        letter-spacing: size(0.48);
       }
     }
   }
@@ -276,11 +190,4 @@
 </style>
 
 <script setup>
-import { ref } from "vue";
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
 </script>
