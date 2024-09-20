@@ -13,9 +13,9 @@
         <div class="txt absolute">建築外觀3D情境示意圖</div>
       </div>
       <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">幸福時光 每天來點正能量</div>
-        <div class="t2 p2 md:hidden">生活需要儀式感！精心規劃藝術門廳、閱覽區、健身房、童話館，下班放學生活超紓壓！</div>
-        <div class="t2 p2 hidden md:block">生活需要儀式感！精心規劃的藝術門廳、閱覽區、健身房、童話館、戶外遊戲區，讓下班放學後的生活超紓壓，全家大小各擁一片天地，享受專屬你的休閒樂趣！</div>
+        <div class="t1">藝術與生活<br>光華內蘊，飯店風華公設 </div>
+        <div class="t2 p2 md:hidden">擷取歐洲飯店設計精華，將奢華與時尚完美揉合，華麗不失氣質，品味與態度缺一不可，一步一驚艷，璀璨交織，深入上流國度，全齡化心靈場域。</div>
+        <div class="t2 p2 hidden md:block">擷取歐洲飯店設計精華，將奢華與時尚完美揉合，華麗不失氣質，品味與態度缺一不可，一步一驚艷，璀璨交織，深入上流國度，全齡化心靈場域。</div>
       </div>
     </div>
     <div class="slider">
@@ -37,31 +37,43 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/1.webp" />
-            <div class="txt">雅石迎賓門廳示意圖</div>
+            <div class="txt">銀玥藝術門廳（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/2.webp" />
-            <div class="txt">澄心交誼空間示意圖</div>
+            <div class="txt">文品交誼廳（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/3.webp" />
-            <div class="txt">維尼童話館示意圖</div>
+            <div class="txt">奇朵媽媽教室（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/4.webp" />
-            <div class="txt">原創會議室示意圖</div>
+            <div class="txt">墨心閱覽空間（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/5.webp" />
-            <div class="txt">柏克健身房示意圖</div>
+            <div class="txt">沐夏歡樂遊戲室（3D模擬示意圖）</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s6/slider/6.webp" />
+            <div class="txt">波爾有氧健身房（3D模擬示意圖）</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s6/slider/7.webp" />
+            <div class="txt">童話森林故事屋（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
       </swiper>

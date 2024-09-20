@@ -8,8 +8,8 @@
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s5/hand.svg" />
     <div class="text absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">新時代 Art Deco能量美學</div>
-      <div class="t2">全區指標級，大享開闊視野、方正美地，以名門裝飾元素Art Deco工藝御用款，表達建築優雅大器、別具特色的新時代建築風格。</div>
+      <div class="t1">凌空仰望 國際美學雋永品味</div>
+      <div class="t2">落款核心大道、接軌國際風采，晴空下，三大量體以泱泱沈穩之姿矗立城市美境。金屬、磁磚、玻璃高雅配色、挑高天際線以石材、格柵細緻勾勒，俐落的當代工藝手法，呈現立面富麗而優雅的層次樣貌。</div>
     </div>
     <div class="info absolute text-white pointer-events-none">建築外觀3D情境示意圖</div>
   </section>
