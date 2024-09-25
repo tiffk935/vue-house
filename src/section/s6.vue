@@ -4,9 +4,9 @@
     <img class="line absolute top-0 right-0 hidden md:block" src="@/section/s6/line2.svg">
     <div class="ccontainer">
       <div class="md:flex md:items-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1">千坪陽光花園 奢華散步</div>
-        <div class="t2 md:hidden">收藏一座奢華花園！蝶飛鳥鳴、花樹雲影，彷彿漫步大自然中，感受陽光綠意美好風景。</div>
-        <div class="t2 hidden md:block">奢華就是在家收藏一座大花園！蝶飛鳥鳴、花樹雲影，漫步在精心植栽的大自然裡，感受陽光綠意帶來的美好風景。</div>
+        <div class="t1">陽光四季花園，與日光共舞</div>
+        <div class="t2 md:hidden">用雙排喬木禮遇住戶的散步時光，在自家花園中享受四季風情，大樹喬木、扶疏灌木、石階步道，大方尺度為生活增添風采。</div>
+        <div class="t2 hidden md:block">用雙排喬木禮遇住戶的散步時光，在自家花園中享受四季風情，大樹喬木、扶疏灌木、石階步道，大方尺度為生活增添風采。</div>
       </div>
       <div class="img relative">
         <img class="block w-full" src="@/section/s6/img.webp">

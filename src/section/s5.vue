@@ -8,7 +8,7 @@
     <img class="hand-bg absolute md:hidden" src="@/section/s3/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s5/hand.svg" />
     <div class="text absolute text-white" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">凌空仰望 國際美學雋永品味</div>
+      <div class="t1">凌空仰望<br>國際美學雋永品味</div>
       <div class="t2">落款核心大道、接軌國際風采，晴空下，三大量體以泱泱沈穩之姿矗立城市美境。金屬、磁磚、玻璃高雅配色、挑高天際線以石材、格柵細緻勾勒，俐落的當代工藝手法，呈現立面富麗而優雅的層次樣貌。</div>
     </div>
     <div class="info absolute text-white pointer-events-none">建築外觀3D情境示意圖</div>
@@ -76,20 +76,21 @@
 
   .text {
     width: 100%;
-    top: size-m(80);
+    top: size-m(10);
     left: 0;
     text-align: center;
     padding: 0 size-m(30);z-index: 13;
     @media screen and (min-width:768px) {
-      width: size(671);
-      top: size(192);
-      left: size(960);
+      width: size(600);
+      top: size(292);
+      left: size(1200);
       padding: 0;
       text-align: left;
+      text-shadow: 0.1em 0.1em 0.2em black
     }
 
     .t1 {
-      font-size: size-m(25);
+      font-size: size-m(23);
       line-height: size-m(34);
       margin-bottom: size-m(13);
       font-weight: 700;
@@ -101,7 +102,7 @@
     }
 
     .t2 {
-      font-size: size-m(14);
+      font-size: size-m(13);
       line-height: 178%;
       @media screen and (min-width:768px) {
         font-size: size(18);
