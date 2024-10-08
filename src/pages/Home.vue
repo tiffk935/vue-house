@@ -14,6 +14,7 @@
     <h1 style="display:none;">達麗河蘊</h1>
     <S1 />
     <S10 />
+    <S11 />
     <S2 />
     <!-- S9 /-->
     <S3 />
@@ -63,6 +64,7 @@
 import info from "@/info"
 import S1 from "@/section/s1.vue"
 import S10 from "@/section/s10.vue"
+import S11 from "@/section/s11.vue"
 import S2 from "@/section/s2.vue"
 //import S9 from "@/section/s9.vue"
 import S3 from "@/section/s3.vue"
