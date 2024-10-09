@@ -340,7 +340,7 @@
       right: size-m(14);
       @media (min-width: 768px) {
         right: auto;
-        left: 8.3vw;
+        left: 9.3vw;
       }
     }
 
@@ -348,7 +348,7 @@
       display: none;
       @media (min-width: 768px) {
         display: block;
-        width: 6vw;
+        width: 7vw;
         bottom: -2.5vw;
         margin-left: 2vw;
       }
