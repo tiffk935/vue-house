@@ -51,10 +51,10 @@
         </swiper>
 
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#E5005C" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
       <div class="slider user-n hidden md:block">
@@ -81,10 +81,10 @@
         </swiper>
 
         <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#EC6300" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#E5005C" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#EC6300" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
@@ -96,8 +96,8 @@
 
 .s7 {
   padding: size-m(24) 0;
-  background-image: url(@/section/s7/bg-m.webp);
-  background-size: cover;
+  // background-image: url(@/section/s7/bg-m.webp);
+  // background-size: cover;
   @media (min-width: 768px) {
     padding: size(90) size(250);
     background: none;
@@ -106,7 +106,7 @@
   .t1 {
     font-size: size-m(25);
     line-height: size-m(34);
-    color: #E5005C;
+    color: #EC6300;
     font-weight: 700;
     padding: 0 size-m(30);
     margin-bottom: size-m(20);
@@ -189,7 +189,7 @@
 
         @media (min-width: 768px) {
           circle {
-            fill: #E5005C;
+            fill: #EC6300;
           }
 
           path {
