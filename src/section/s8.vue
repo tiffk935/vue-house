@@ -4,7 +4,7 @@
       <div :class="{'slider-tab': true, 'active': currentTab == 25}" @click="clickTab(25)">
         <div><span>25</span>坪</div>
       </div>
-      <div :class="{'slider-tab': true, 'active': currentTab == 39}" @click="clickTab(37)">
+      <div :class="{'slider-tab': true, 'active': currentTab == 37}" @click="clickTab(37)">
         <div><span>37</span>坪</div>
       </div>
       <!--div :class="{'slider-tab': true, 'active': currentTab == 43}" @click="clickTab(43)">
@@ -15,8 +15,14 @@
     <transition>
       <div class="content content25 absolute" v-if="currentTab == 25">
         <div class="slider" :style="{ 'z-index': 2 }">
-          <div class="slide" :style="{ 'z-index': 2 }">
+          <div class="slide">
             <img src="@/section/s8/25/01.jpg">
+          </div>
+          <div class="slide">
+            <img src="@/section/s8/25/02.jpg">
+          </div>
+          <div class="slide">
+            <img src="@/section/s8/25/03.jpg">
           </div>
         </div>
 
@@ -53,12 +59,19 @@
 
     <transition>
       <div class="content content39 absolute" v-if="currentTab == 37">
+
         <div class="slider" :style="{ 'z-index': 2 }">
-          <div class="slide" :style="{ 'z-index': 2 }">
-            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
+          <div class="slide">
             <img src="@/section/s8/37/01.jpg">
           </div>
+          <div class="slide">
+            <img src="@/section/s8/37/02.jpg">
+          </div>
+          <div class="slide">
+            <img src="@/section/s8/37/03.jpg">
+          </div>
         </div>
+
 
         <div class="controls">
           <div class="btn-prev md:hidden" @click="goPrev">
