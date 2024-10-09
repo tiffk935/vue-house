@@ -130,7 +130,7 @@
       background: #666666;
       margin-bottom: size-m(13);
       @media screen and (min-width:768px) {
-        width: size(461);
+        width: size(549);
         height: size(1);
         background: #666666;
         margin-bottom: size(0);
@@ -139,7 +139,7 @@
 
     .txt {
       @media screen and (min-width:768px) {
-        width: size(1036);
+        width: size(980);
       }
     }
   }

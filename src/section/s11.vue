@@ -96,7 +96,7 @@
 
     .txt {
       @media screen and (min-width:768px) {
-        width: size(1036);
+        width: size(1045);
       }
     }
   }

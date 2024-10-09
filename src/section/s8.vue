@@ -398,8 +398,8 @@
 
       .t2 {
         font-size: size-m(14);
-        font-weight: 700;
-        color: #000000;
+        font-weight: 500;
+        color: #333333;
         line-height: 170%;
         @media screen and (min-width:768px) {
           font-size: size(20);
