@@ -160,7 +160,7 @@
         
         @media screen and (min-width:768px) {
             //width: size(973.56);
-            width: size-m(130.7);
+            width: size-m(190.7);
         }
 
         img, svg {
@@ -336,7 +336,7 @@ onMounted(() => {
     });
 
     nextTick(() => {
-        const panels = ['.s1', '.s3', '.s4', '.s5', '.s6', '.s7', '.s8']; 
+        const panels = ['.s10', '.s11', '.s2', '.s12', '.s3', '.s4', '.s5', '.s8']; 
         const navLinks = document.querySelectorAll('.topnav .top-btns .item');
         const navLinksM = document.querySelectorAll('.menu .menu-item');
         panels.forEach((panel, i) => {
@@ -372,15 +372,15 @@ onMounted(() => {
                         // console.log(panel, 'onEnterBack')
                     },
                     onLeave: () => {
-                        if(panel == '.s10') {
-                            console.log('s10 leave')
+                        if(panel == '.s8') {
+                            console.log('s8 leave')
                             navLinks[0].classList.remove("active");
                             navLinksM[0].classList.remove("active");
                         }
                         // console.log(panel, 'onLeave')
                     },
                     onLeaveBack: () => {
-                        if(panel == '.s2') {
+                        if(panel == '.s10') {
                             navLinks[0].classList.remove("active");
                             navLinksM[0].classList.remove("active");
                         }

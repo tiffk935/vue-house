@@ -36,13 +36,23 @@ export default {
     },
     navList: [
         {
-            name: "國際北士科",
-            target: ".s1",
+            name: "新洲美元年",
+            target: ".s10",
             offset: "",
         },
         {
-            name: "新洲美元年",
-            target: ".s10",
+            name: "北區門戶",
+            target: ".s11",
+            offset: "",
+        },
+        {
+            name: "國際北士科",
+            target: ".s2",
+            offset: "",
+        },
+        {
+            name: "一高二快三捷",
+            target: ".s12",
             offset: "",
         },
         {
@@ -70,10 +80,10 @@ export default {
         //    target: ".s7",
         //    offset: "",
         //},
-        //{
-        //   name: "私人宅邸",
-        //   target: ".s8",
-        //   offset: "",
-        //},
+        {
+           name: "私人宅邸",
+           target: ".s8",
+           offset: "",
+        },
     ],
 }

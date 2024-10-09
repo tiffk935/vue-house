@@ -4,26 +4,19 @@
       <div :class="{'slider-tab': true, 'active': currentTab == 25}" @click="clickTab(25)">
         <div><span>25</span>坪</div>
       </div>
-      <div :class="{'slider-tab': true, 'active': currentTab == 39}" @click="clickTab(39)">
-        <div><span>39</span>坪</div>
+      <div :class="{'slider-tab': true, 'active': currentTab == 39}" @click="clickTab(37)">
+        <div><span>37</span>坪</div>
       </div>
-      <div :class="{'slider-tab': true, 'active': currentTab == 43}" @click="clickTab(43)">
+      <!--div :class="{'slider-tab': true, 'active': currentTab == 43}" @click="clickTab(43)">
         <div><span>43</span>坪</div>
-      </div>
+      </div-->
     </div>
 
     <transition>
       <div class="content content25 absolute" v-if="currentTab == 25">
         <div class="slider" :style="{ 'z-index': 2 }">
           <div class="slide" :style="{ 'z-index': 2 }">
-            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
-            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
-          </div>
-          <div class="slide">
-            <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
-          </div>
-          <div class="slide">
-            <img src="https://placehold.jp/200/42b5a6/ffffff/1920x1080.png?text=pic3">
+            <img src="@/section/s8/25/01.jpg">
           </div>
         </div>
 
@@ -52,24 +45,18 @@
         </div>
 
         <div class="text">
-          <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">1文字待更換</div>
-          <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">1文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
+          <div class="t1" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="0">理想型住宅，永遠比你想的更好</div>
+          <div class="t2" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">達麗河藴25坪2房是驚喜的兩大雙人房、雙衛浴，主人房雙人大套房極致奢華尺度。33-38坪3房，面寬型格局，每一席都是漂亮邊間，不只全室無暗房、通風採光好，更做到雙衛浴都開窗，大宅獨立封閉式廚房配置。高坪效規劃，達麗河藴每一席都有剛剛好的舒適感，比想像中的更好。</div>
         </div>
       </div>
     </transition>
 
     <transition>
-      <div class="content content39 absolute" v-if="currentTab == 39">
+      <div class="content content39 absolute" v-if="currentTab == 37">
         <div class="slider" :style="{ 'z-index': 2 }">
           <div class="slide" :style="{ 'z-index': 2 }">
             <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
-            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
-          </div>
-          <div class="slide">
-            <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
-          </div>
-          <div class="slide">
-            <img src="https://placehold.jp/200/42b5a6/ffffff/1920x1080.png?text=pic3">
+            <img src="@/section/s8/37/01.jpg">
           </div>
         </div>
 
@@ -98,19 +85,16 @@
         </div>
         
         <div class="text">
-          <div class="t1">2文字待更換</div>
-          <div class="t2">2文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換文字待更換</div>
+          <div class="t1">理想型住宅，永遠比你想的更好</div>
+          <div class="t2">達麗河藴25坪2房是驚喜的兩大雙人房、雙衛浴，主人房雙人大套房極致奢華尺度。33-38坪3房，面寬型格局，每一席都是漂亮邊間，不只全室無暗房、通風採光好，更做到雙衛浴都開窗，大宅獨立封閉式廚房配置。高坪效規劃，達麗河藴每一席都有剛剛好的舒適感，比想像中的更好。</div>
         </div>
       </div>
     </transition>
 
+    <!--
     <transition>
       <div class="content content43 absolute" v-if="currentTab == 43">
-        <div class="slider" :style="{ 'z-index': 2 }">
-          <div class="slide" :style="{ 'z-index': 2 }">
-            <!-- <img src="https://picsum.photos/1920/1080?random=1"> -->
-            <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
-          </div>
+        <div class="slider" :style="{ 'z-index': 2 }">    
           <div class="slide">
             <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
           </div>
@@ -149,6 +133,7 @@
         </div>
       </div>
     </transition>
+    -->
   </section>
 </template>
 
@@ -418,7 +403,7 @@
         line-height: 170%;
         @media screen and (min-width:768px) {
           font-size: size(20);
-          width: size(1162);
+          width: size(1000);
         }
       }
     }
