@@ -58,7 +58,7 @@
     </transition>
 
     <transition>
-      <div class="content content39 absolute" v-if="currentTab == 37">
+      <div class="content content37 absolute" v-if="currentTab == 37">
 
         <div class="slider" :style="{ 'z-index': 2 }">
           <div class="slide">
