@@ -229,9 +229,10 @@
     }
 
     .t2 {
-      color: #000;
+      color: #333333;
       font-size: size-m(14);
       line-height: 170%;
+      font-weight: 500;
       font-family: 'Noto Serif TC';
       @media screen and (min-width:768px) {
         position: absolute;
