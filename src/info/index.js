@@ -70,16 +70,16 @@ export default {
             target: ".s5",
             offset: "",
         },
-        //{
-        //    name: "時代經典",
-        //    target: ".s6",
-        //    offset: "",
-        //},
-        //{
-        //    name: "私院莊園",
-        //    target: ".s7",
-        //    offset: "",
-        //},
+        {
+            name: "時代經典",
+            target: ".s6",
+            offset: "",
+        },
+        {
+            name: "私院莊園",
+            target: ".s7",
+            offset: "",
+        },
         {
            name: "私人宅邸",
            target: ".s8",

@@ -7,10 +7,10 @@
 
     <div class="md:hidden">
       <div class="slider-m">
-        <img class="img1" src="https://placehold.jp/200/D99B4C/ffffff/925x730.png?text=DAY" />
-        <img class="img2" src="https://placehold.jp/200/dd6699/ffffff/925x730.png?text=NIGHT" />
-        <img class="img3" src="https://placehold.jp/200/D99B4C/ffffff/925x730.png?text=DAY" />
-        <img class="img4" src="https://placehold.jp/200/dd6699/ffffff/925x730.png?text=NIGHT" />
+        <img class="img1" src="@/section/s6/01.jpg" />
+        <img class="img2" src="@/section/s6/02.jpg" />
+        <img class="img3" src="@/section/s6/01.jpg" />
+        <img class="img4" src="@/section/s6/02.jpg" />
       </div>
 
       <div class="btn-next" @click="goNextM">
@@ -26,10 +26,10 @@
 
     <div class="hidden md:block">
       <div class="slider">
-        <img class="img1" src="https://placehold.jp/200/D99B4C/ffffff/925x730.png?text=DAY" />
-        <img class="img2" src="https://placehold.jp/200/dd6699/ffffff/925x730.png?text=NIGHT" />
-        <img class="img3" src="https://placehold.jp/200/D99B4C/ffffff/925x730.png?text=DAY" />
-        <img class="img4" src="https://placehold.jp/200/dd6699/ffffff/925x730.png?text=NIGHT" />
+        <img class="img1" src="@/section/s6/01.jpg" />
+        <img class="img2" src="@/section/s6/02.jpg" />
+        <img class="img3" src="@/section/s6/01.jpg" />
+        <img class="img4" src="@/section/s6/02.jpg" />
       </div>
 
       <div class="btn-next" @click="goNext">

@@ -21,19 +21,31 @@
 
     <div class="slider slider1" :style="{ 'z-index': 2 }">
       <div class="slide" :style="{ 'z-index': 2 }">
-        <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+        <img src="@/section/s7/01.jpg">
       </div>
       <div class="slide">
-        <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+        <img src="@/section/s7/02.jpg">
+      </div>
+      <div class="slide">
+        <img src="@/section/s7/03.jpg">
+      </div>
+      <div class="slide">
+        <img src="@/section/s7/04.jpg">
       </div>
     </div>
 
     <div class="slider slider2" :style="{ 'z-index': 2 }">
       <div class="slide" :style="{ 'z-index': 2 }">
-        <img src="https://placehold.jp/200/D99B4C/ffffff/1920x1080.png?text=pic2">
+        <img src="@/section/s7/04.jpg">
       </div>
       <div class="slide">
-        <img src="https://placehold.jp/200/dd6699/ffffff/1920x1080.png?text=pic1">
+        <img src="@/section/s7/01.jpg">
+      </div>
+      <div class="slide">
+        <img src="@/section/s7/02.jpg">
+      </div>
+      <div class="slide">
+        <img src="@/section/s7/03.jpg">
       </div>
     </div>
 

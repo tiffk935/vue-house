@@ -159,8 +159,8 @@
         width: size-m(120.7);
         
         @media screen and (min-width:768px) {
-            //width: size(973.56);
-            width: size-m(190.7);
+            width: size(1203.56);
+            
         }
 
         img, svg {
@@ -336,7 +336,7 @@ onMounted(() => {
     });
 
     nextTick(() => {
-        const panels = ['.s10', '.s11', '.s2', '.s12', '.s3', '.s4', '.s5', '.s8']; 
+        const panels = ['.s10', '.s11', '.s2', '.s12', '.s3', '.s4', '.s5','.s6','.s7', '.s8']; 
         const navLinks = document.querySelectorAll('.topnav .top-btns .item');
         const navLinksM = document.querySelectorAll('.menu .menu-item');
         panels.forEach((panel, i) => {
