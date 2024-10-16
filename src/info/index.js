@@ -9,8 +9,8 @@ export default {
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區中華路二段",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3637.813058514882!2d120.5550312!3d24.2483163!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151ebe57d387%3A0x8553e024331e32ed!2z5L2z6YuQ5aSn5aKD5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1705376910890!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/V5sYHiChFYQAUNZH7",
+    googleSrc: "ttps://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7275.623400147625!2d120.54920068896632!3d24.248363800000007!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469151e5e7cd347%3A0x48e3f5caa9dfaead!2z5L2z6YuQ6aaW6ICA!5e0!3m2!1szh-TW!2stw!4v1729047443086!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/ExcMVpJAJSGK9che7",
     phone: "04-2663-0999",
     fbLink: "https://www.facebook.com/61554748627993/",
     fbMessage: "https://m.me/61554748627993/",

@@ -55,7 +55,7 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s6/slider/4.webp" />
-            <div class="txt">墨心閱覽空間（3D模擬示意圖）</div>
+            <div class="txt">覓靖會議室（3D模擬示意圖）</div>
           </div>
         </swiper-slide>
         <swiper-slide>
@@ -78,17 +78,15 @@
         </swiper-slide>
       </swiper>
       <div class="slide-prev" @click="slidePrev">
-        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="15.5" cy="15.5" r="15.5" transform="matrix(-1 0 0 1 31 0)" fill="white"/>
-          <path d="M18.7295 24.5416L8.39616 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M18.7295 5.8124L8.39616 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
+          <path d="M18.7295 24.5416L8.39616 14.8541 M18.7295 5.8124L8.39616 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <div class="slide-next" @click="slideNext">
-        <svg viewBox="0 0 32 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
           <circle cx="15.5" cy="15.5" r="15.5" fill="white"/>
-          <path d="M12.2705 24.5416L22.6038 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-          <path d="M12.2705 5.8124L22.6038 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M12.2705 24.5416L22.6038 14.8541 M12.2705 5.8124L22.6038 14.8541" stroke="#EC6300" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <img class="mask md:hidden pointer-events-none absolute w-full bottom-0 left-0" src="@/section/s6/mask.svg" />
@@ -279,7 +277,7 @@
         top: auto;
         bottom: 0;
         left: 50%;
-        transform: translate(calc(-50% - 3.7vw), 0);
+        transform: translate(calc(-50% - 4.7vw), 0);
       }
       
       svg {
@@ -294,7 +292,7 @@
       @media (min-width: 768px) {
         left: 50%;
         right: auto;
-        transform: translate(calc(-50% + 3.7vw), 0);
+        transform: translate(calc(-50% + 4.7vw), 0);
       }
     }
 

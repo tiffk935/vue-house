@@ -163,7 +163,7 @@
       <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">一快雙軌三高 動能大利多</div>
         <div class="t2 bt2  md:hidden">距藍線B4站僅約1km，收納⼤台中⽣活版圖。快速銜接台61快、三國道，往返全台好便捷！</div>
-        <div class="t2 bt2 hidden md:block">【大境】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
+        <div class="t2 bt2 hidden md:block">【首耀】距離藍線B4站僅約1Km，東西悠遊，接軌綠線，收納大台中精華生活。開車出門暢行台灣大道、中華路，銜接台61快、串連三國道，往返全台、通勤中科產業鍊，條條大路快意馳騁。</div>
       </div>
       <div class="map-preview" @click="clickMap(2)">
         <img class="block w-full" src="@/section/s4/map-preview.png" />
