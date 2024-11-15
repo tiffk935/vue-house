@@ -2,7 +2,7 @@
   <section class="s7 relative bg-[#CFD9D0]">
     <div class="t1 absolute text-white" data-aos="fade-up" data-aos-delay="0">INTERIOR <br class="hidden md:block">DESIGN</div>
     <img class="line absolute" src="@/section/s3/line.svg" />
-    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">蒔築美好大四房</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">美好大四房</div>
     <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">60-67坪闊綽大空間，有天有地質感生活，豪宅級空間感，一樓玄關與客餐廳，氣派接待親友。除了舒適大主臥，依不同需求可規劃子女房、孝親房、客房，享受快樂歡聚！</div>
     <div class="t4 absolute"><span>A1戶</span>室內配置參考示意圖</div>
     <div class="tk-btns absolute">

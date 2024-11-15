@@ -1,18 +1,18 @@
   <template>
   <div class="order relative bg-[#FFDFE3] text-center">
-    <img class="logo absolute hidden md:block" src="@/section/form/logo.svg" alt="蒔築" srcset="" />
-    <img class="logo absolute md:hidden" src="@/section/form/logo-m.svg" alt="蒔築" srcset="" />
-    <img class="style1 absolute" src="@/section/form/style1.svg" alt="蒔築" srcset="" />
-    <img class="style2 absolute hidden md:block" src="@/section/form/style2.svg" alt="蒔築" srcset="" />
+    <img class="logo absolute hidden md:block" src="@/section/form/logo.svg" alt="小城故事8" srcset="" />
+    <img class="logo absolute md:hidden" src="@/section/form/logo-m.svg" alt="小城故事8" srcset="" />
+    <img class="style1 absolute" src="@/section/form/style1.svg" alt="小城故事8" srcset="" />
+    <img class="style2 absolute hidden md:block" src="@/section/form/style2.svg" alt="小城故事8" srcset="" />
     <div class="order1">
       <div class="order2 relative">
-        <img class="style2 absolute block md:hidden" src="@/section/form/style2.svg" alt="蒔築" srcset="" />
+        <img class="style2 absolute block md:hidden" src="@/section/form/style2.svg" alt="小城故事8" srcset="" />
         <!-- Title -->
         <div class="order-title text-center text-white">{{ info.order.title }}</div>
         <!-- Title Image -->
-        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="蒔築" srcset=""
+        <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="小城故事8" srcset=""
           data-aos="fade" data-aos-duration="1000">
-        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="蒔築" srcset="" data-aos="fade"
+        <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="小城故事8" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
@@ -88,7 +88,7 @@
   // padding-top: size(115);
 
   .logo {
-    width: size(1611.77);
+    width: size(1750);
     left: size(129);
     top: size(102);
   }
@@ -186,7 +186,7 @@
     margin-top: size-m(0);
 
     .logo {
-      width: size-m(320);
+      width: size-m(340);
       left: size-m(26);
       top: size-m(32);
     }

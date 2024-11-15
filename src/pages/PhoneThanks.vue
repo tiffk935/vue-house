@@ -1,8 +1,8 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img.png" alt="蒔築" class="img">
-            <img src="~@/assets/thank-img-hover.png" alt="蒔築" class="img-hover">
+            <img src="~@/assets/thank-img.png" alt="thank" class="img">
+            <img src="~@/assets/thank-img-hover.png" alt="thank" class="img-hover">
         </a>
     </div>
 </template>

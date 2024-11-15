@@ -110,7 +110,7 @@ text-align: center;
   }
 
   .logo {
-    width: size(229);
+    width: size(280);
     margin: 0 auto;
     margin-bottom: .7em;
   }

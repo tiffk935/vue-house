@@ -9,7 +9,7 @@
     <div class="title" data-aos="fade-up" data-aos-delay="0">
       <div class="t1">CHOOSE</div>
       <img class="t2" src="@/section/s2/best.svg" />
-      <div class="content">揮別高樓大廈、水泥叢林，最佳的蒔築人生，從榮歸故里、開創新局；抑或卸甲歸田換個身分，親近自然樂活自在。</div>
+      <div class="content">揮別高樓大廈、水泥叢林，最佳的人生，從榮歸故里、開創新局；抑或卸甲歸田換個身分，親近自然樂活自在。</div>
     </div>
     <div class="info absolute text-white">環境空拍示意圖</div>
   </section>
