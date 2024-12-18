@@ -21,15 +21,19 @@ $ogType = 'website';
 ?>
 <title><?php echo $docTitle; ?></title>
 <meta name="description" content="<?php echo $docDesc ?>">
-<meta name="keywords" content="<?php echo $keyWords ?>">
-<meta property="og:locale" content="zh_TW" />
-<meta property="og:image" content="https://<?php echo $src; ?>/img/og1.jpg" />
-<meta property="og:type" content="<?php echo $ogType ?>" />
-<meta property="og:title" content="<?php echo $docTitle; ?>" />
-<meta property="og:description" content="<?php echo $docDesc ?>" />
-<meta property="og:site_name" content="<?php echo $siteName; ?>" />
-<meta name="twitter:description" content="<?php echo $docDesc ?>" />
-<meta name="twitter:title" content="<?php echo $docTitle; ?>" />
-<meta itemprop="name" content="<?php echo $docTitle; ?>">
-<meta itemprop="description" content="<?php echo $docDesc ?>">
+    <meta name="keywords" content="<?php echo $keyWords ?>">
+    <meta property="og:locale" content="zh_TW" />
+    <meta property="og:type" content="<?php echo $ogType ?>" />
+    <meta property="og:title" content="<?php echo $docTitle; ?>" />
+    <meta property="og:description" content="<?php echo $docDesc ?>" />
+    <meta property="og:site_name" content="<?php echo $siteName; ?>" />
+    <meta property="og:image" content="https://<?php echo $src; ?>/og.jpg" />
+    <meta property="og:url" content="https://<?php echo $src; ?>" />
+    <meta name="twitter:description" content="<?php echo $docDesc ?>" />
+    <meta name="twitter:title" content="<?php echo $docTitle; ?>" />
+    <meta itemprop="name" content="<?php echo $docTitle; ?>" />
+    <meta itemprop="description" content="<?php echo $docDesc ?>" />
+    <?php if ($fbDomain) : ?>
+        <meta name='facebook-domain-verification' content="<?php echo $fbDomain ?>" />
+    <?php endif; ?>
 <?php echo $p0 ?>
