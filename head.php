@@ -23,6 +23,7 @@ $ogType = 'website';
 <meta name="description" content="<?php echo $docDesc ?>">
 <meta name="keywords" content="<?php echo $keyWords ?>">
 <meta property="og:locale" content="zh_TW" />
+<meta property="og:image" content="https://<?php echo $src; ?>/img/og1.jpg" />
 <meta property="og:type" content="<?php echo $ogType ?>" />
 <meta property="og:title" content="<?php echo $docTitle; ?>" />
 <meta property="og:description" content="<?php echo $docDesc ?>" />
