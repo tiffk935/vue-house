@@ -72,31 +72,38 @@
           <!-- Wrapper for slides -->
           <div class=" carousel-inner_H " role="listbox">
             <div class="item active">
-              <img src="./new/P6_b7.jpg" data-color="lightblue"
+              <img src="./new/1230/01.jpg" data-color="lightblue"
                 alt="First Image">
               <div class="carousel-caption ">
-                <p>B7｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
+                <p>B1｜實品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="./new/P6_d1.jpg" data-color="firebrick"
+              <img src="./new/1230/02.jpg" data-color="firebrick"
                 alt="Second Image">
               <div class="carousel-caption">
-                <p>D1｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
+                <p>B2｜實品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="./new/P6_d1-2.jpg" data-color="lightgreen"
+              <img src="./new/1230/03.jpg" data-color="lightgreen"
                 alt="Fourth Image">
               <div class="carousel-caption">
-                <p>D1｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
+                <p>B2｜實品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
             <div class="item">
-              <img src="./new/P6_e7-1.jpg" data-color="violet"
+              <img src="./new/1230/04.jpg" data-color="violet"
                 alt="Third Image">
               <div class="carousel-caption">
-                <p>E7｜樣品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
+                <p>D9｜實品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
+              </div>
+            </div>
+            <div class="item">
+              <img src="./new/1230/05.jpg" data-color="violet"
+                alt="Third Image">
+              <div class="carousel-caption">
+                <p>D9｜實品屋實景拍攝，其裝潢及空間表現僅為裝修參考</p>
               </div>
             </div>
           </div>
@@ -152,63 +159,63 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner_H" role="listbox">
           <div class="item active">
-            <img src="./new/P7-1.jpg" data-color="lightblue" alt="First Image">
+            <img src="./new/1230_public/01.jpg" data-color="lightblue" alt="First Image">
             <div class="carousel-caption">
-              <p>四季迎賓大廳</p>
+              <p>大廳廊道 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-2.jpg" data-color="firebrick" alt="Second Image">
+            <img src="./new/1230_public/02.jpg" data-color="firebrick" alt="Second Image">
             <div class="carousel-caption">
-              <p>雲天泳池</p>
+              <p>日出健身房 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-3.jpg" data-color="violet" alt="Third Image">
+            <img src="./new/1230_public/03.jpg" data-color="violet" alt="Third Image">
             <div class="carousel-caption">
-              <p>風尚廚藝學堂</p>
+              <p>四季迎賓大廳 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-4.jpg" data-color="lightgreen" alt="Fourth Image">
+            <img src="./new/1230_public/04.jpg" data-color="lightgreen" alt="Fourth Image">
             <div class="carousel-caption">
-              <p>日出健身房</p>
+              <p>沐雲瑜珈教室 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-5.jpg" data-color="lightgreen" alt="Fifth Image">
+            <img src="./new/1230_public/05.jpg" data-color="lightgreen" alt="Fifth Image">
             <div class="carousel-caption">
-              <p>星光歡唱包廂</p>
+              <p>星光歡唱包廂 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-6.jpg" data-color="lightgreen" alt="sixth Image">
+            <img src="./new/1230_public/06.jpg" data-color="lightgreen" alt="sixth Image">
             <div class="carousel-caption">
-              <p>戲谷童話樂園</p>
+              <p>風尚廚藝學堂 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-7.jpg" data-color="lightgreen" alt="sevth Image">
+            <img src="./new/1230_public/07.jpg" data-color="lightgreen" alt="sevth Image">
             <div class="carousel-caption">
-              <p>沐雲瑜珈教室</p>
+              <p>智者之丘書房 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-8.jpg" data-color="lightgreen" alt="eigth Image">
+            <img src="./new/1230_public/08.jpg" data-color="lightgreen" alt="eigth Image">
             <div class="carousel-caption">
-              <p>靜謐交誼廳</p>
+              <p>雲天泳池 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-9.jpg" data-color="lightgreen" alt="nine Image">
+            <img src="./new/1230_public/09.jpg" data-color="lightgreen" alt="nine Image">
             <div class="carousel-caption">
-              <p>智者之丘書房</p>
+              <p>靜謐交誼廳 成屋實景拍攝</p>
             </div>
           </div>
           <div class="item">
-            <img src="./new/P7-10.jpg" data-color="lightgreen" alt="ten Image">
+            <img src="./new/1230_public/10.jpg" data-color="lightgreen" alt="ten Image">
             <div class="carousel-caption">
-              <p>大廳廊道</p>
+              <p>戲谷童話樂園 成屋實景拍攝</p>
             </div>
           </div>
         </div>
