@@ -12,6 +12,7 @@
   <Nav v-if="config.showNav" />
   <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#EC6300]">
     <h1 style="display:none;">佳鋐首耀</h1>
+    <img class="og" src="@/section/og.jpg" alt="og" >
     <S1 />
     <S2 /> 
     <S3 />
@@ -42,6 +43,11 @@
       background-size: cover;
     @media (min-width: 768px) {
     }
+  }
+
+  .og{
+    position: absolute;
+    z-index: -99;
   }
 </style>
 
