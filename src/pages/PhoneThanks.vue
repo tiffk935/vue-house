@@ -1,8 +1,8 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="//h65.tw/img/thank-img.png" alt="thank" class="img">
-            <img src="//h65.tw/img/thank-img-hover.png" alt="thank" class="img-hover">
+            <img src="//h35.banner.tw/img/thank-img.png" alt="thank" class="img">
+            <img src="//h35.banner.tw/img/thank-img-hover.png" alt="thank" class="img-hover">
         </a>
     </div>
 </template>
@@ -10,7 +10,7 @@
 .thanks {
     width: 100vw;
     height: 100vh;
-    background: url('//h65.tw/img/thank_bg.png');
+    background: url('//h35.banner.tw/img/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
