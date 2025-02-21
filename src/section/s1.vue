@@ -1,135 +1,141 @@
 <template>
-  <section class="s1 text-white bg-[#D9374B] relative">
-    <img data-aos="fade-left" data-aos-delay="0" class="people absolute" src="@/section/s1/people.png">
-    <h1><img data-aos="zoom-in" data-aos-delay="200" class="main absolute" src="@/section/s1/main.svg" alt="威泰錢都20 戀JIA NEW HOUSE"></h1>
-    <h3 class="text-[#FFF100] absolute">航空城-客運園區 飛向未來！</h3>
-    <h2 data-aos="flip-left" data-aos-delay="400" class="absolute text-center">重劃新星<span class="hidden md:inline"> </span><span>大園新都心</span></h2>
-    <h4 class="absolute text-center">
-      <span class="line1">
-        <span class="text-[#FFF100]">國中小學區</span> X <span class="text-[#FFF100]">低密度綠活</span> X <span class="text-[#FFF100]">減擔好室</span>
-      </span>
-      <br>
-      <span class="line2">
-        <span class="text-[#FFF100]">S</span>mile house, <span class="text-[#FFF100]">S</span>imple life, <span class="text-[#FFF100]">S</span>tart new future
-      </span>
-    </h4>
-    <p data-aos="flip-left" data-aos-delay="600" class="absolute text-center">
-      從1 到20，一步一腳印<br class="md:hidden"><span class="hidden md:inline">，</span>威泰錢都20 期，用心圓夢！<br>
-      圓從1 期開始的建築初衷<br class="md:hidden"><span class="hidden md:inline">─</span>實用家居的起造者<br>
-      圓每個為夢想奮鬥的您<br class="md:hidden"><span class="hidden md:inline">，</span>一個薪享室成的居所
-    </p>
-  </section>
+  <article class="s1">
+    <img
+      class="logo"
+      src="@/section/s1/logo.svg"
+      alt="logo"
+      data-aos="fade-up"
+      data-aos-delay="0"
+    />
+    <img class="t1" src="@/section/s1/t1new.png" alt="" 
+      data-aos="fade-up"
+      data-aos-delay="200"/>
+    <div class="vid">
+      <video autoplay loop muted playsinline v-if="!isMobile" src="https://h35.banner.tw/fongyi-huili/pc.mp4"></video>
+      <video autoplay loop muted playsinline v-else src="https://h35.banner.tw/fongyi-huili/mobile.mp4"></video>
+
+    </div>
+  </article>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/style/function.scss";
 
 .s1 {
-  width: 100%;
-  height: size-m(736);
-  font-weight: 500;
-  @media screen and (min-width:768px) {
-    height: size(1080);
-  }
+  @apply w-full relative;
+  @apply bg-cover bg-bottom bg-no-repeat;
+  @apply flex flex-col items-center justify-center;
+  color: #653f28;
+  height:100vh;
+  min-height: size(900);
+  max-height: size(1080);
+  background-image: linear-gradient(180deg, #83CCD3 38.5%, #7AC5CB 62.5%, #5FB3BD 76%, #4EA8B3 86%, #45A0B2 100%);
   
-  .people {
-    top: size-m(283);
-    left: size-m(151);
-    width: size-m(180);
-    @media screen and (min-width:768px) {
-      top: size(132);
-      left: size(198);
-      width: size(416);
-    }
+  // background-image: url("@/section/s1/bg.jpg");
+ // padding-bottom: size(207);
+  padding-top: size(105);
+  gap: size(136.45);
+  .cloth1{
+    width: 106vw;
+   // top: size(-770);
+    top: calc(50% + #{size(-770 - 1080 * .5)});
+    left: 13.4vw;
+    transform: rotate(5deg)translateX(10%);
+    img{width: 100%;}
+  }
+  .cloth2{
+    width: 116.7vw;
+    // top: size(-670);
+    top: calc(50% + #{size(-670 - 1080 * .5)});
+    left: -31.8vw;
+    transform: rotate(-10deg)translateX(-10%);
+  img{width: 100%;transform: rotate(51.1deg);opacity: 0.55;}
   }
 
-  .main {
-    top: size-m(40);
-    left: size-m(45);
-    width: size-m(288);
-    @media screen and (min-width:768px) {
-      top: size(346);
-      left: size(189);
-      width: size(618);
-    }
+  .logo {
+    width: size(559);
+    position: absolute;
+    top:size(250);
   }
-  
-  h3 {
-    left: size-m(45);
-    top: size-m(251);
-    line-height: size-m(29);
-    font-size: 5vw;
-    @media screen and (min-width:768px) {
-      left: size(189);
-      top: size(787);
-      line-height: size(71);
-      font-size: 2.48vw;
-    }
-  }
-  
-  h2 {
-    left: size(1013);
-    top: size(435);
-    line-height: size(107);
-    font-weight: 900;
-    font-size: 3.95vw;
-    @media screen and (max-width:767px) {
-      width: size-m(200);
-      left: size-m(131);
-      top: size-m(379);
-      font-size: 13vw;
-      line-height: 15vw;
-
-      span {
-        font-size: 10.6vw;
-        line-height: 1;
-      }
-    }
-  }
-
-  h4 {
-    left: size(960);
-    top: size(548);
-    line-height: size(58);
-    font-size: 2.06vw;
-     
-    @media screen and (max-width:767px) {
-      left: size-m(112);
-      top: size-m(493);
-      line-height: 5vw;
-
-      .line1 {
-        font-size: 3.77vw;
-      }
-        
-      .line2 {
-        font-size: 3.17vw;
-      }
-    }
-  }
-  
-  p {
-    left: size-m(136);
-    top: size-m(550);
-    font-size: 4vw;
-    line-height: 7.2vw;
-    @media screen and (min-width:768px) {
-      left: size(993);
-      top: size(706);
-      font-size: 1.6vw;
-      line-height: 2.7vw;
-    }
+  .t1 {
+    width: size(251);
+    position: absolute;
+    top: size(600);
   }
 }
 
+/* 螢幕尺寸標準 */
+/* 平板尺寸 */
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+}
+
+@media screen and (max-width: 767px) {
+  .s1 {
+    @apply bg-top;
+    height: calc(100vh - 63px);
+    min-height: sizem(667);
+    max-height: sizem(667);
+   // background-image: url("@/section/s1/bgm.jpg");
+ //   padding-bottom: sizem(127.5);
+  padding-top: sizem(0);
+  padding-bottom: sizem(20);
+    gap: sizem(160);
+  .cloth1{
+        width: 237vw;
+        top: -89.5vw;
+        left: -30.6vw;
+        img{transform: rotate(-1deg);height:sizem(700);}
+  }
+  .cloth2{
+        width: 300vw;
+        top: -91.5vw;
+        left: -176.8vw;
+  img{transform: rotate(55deg);opacity: 0.55;}
+  }
+
+
+    .logo {
+      width: sizem(260);
+      position: absolute;
+      z-index: 99;
+      top:sizem(200);
+
+    }
+    .t1 {
+      width: sizem(150);
+      z-index: 99;
+      top:sizem(350);
+    }
+
+    .vid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  }
+}
 </style>
 
 <script setup>
-// import { inject } from 'vue';
-// const smoothScroll = inject('smoothScroll')
-// const scrollTo = (el) => {
-//   smoothScroll({
-//     scrollTo: document.querySelector(el)
-//   })
-// }
+import { computed, getCurrentInstance, ref, inject, onMounted } from "vue"
+const globals = getCurrentInstance().appContext.config.globalProperties
+
+const smoothScroll = inject("smoothScroll")
+const isMobile = computed(() => globals.$isMobile())
 </script>
