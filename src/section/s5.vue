@@ -304,7 +304,7 @@ const imgs = [
   },
   {
     img: new URL("../section/s5/7.webp", import.meta.url).href,
-    caption: "TAIGER CITY",
+    caption: "TIGER CITY",
   },
   {
     img: new URL("../section/s5/8.webp", import.meta.url).href,

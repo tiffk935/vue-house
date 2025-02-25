@@ -230,13 +230,13 @@ const imgs = [
     img: globals.$isMobile()
     ? new URL("../section/s6/3m.webp", import.meta.url).href
       : new URL("../section/s6/3.webp", import.meta.url).href,
-    caption: "文心公園",
+    caption: "文心森林公園",
   },
   {
     img: globals.$isMobile()
     ? new URL("../section/s6/4m.webp", import.meta.url).href
       : new URL("../section/s6/4.webp", import.meta.url).href,
-    caption: "文心公園",
+    caption: "文心森林公園",
   },
 ]
 </script>
