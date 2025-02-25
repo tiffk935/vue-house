@@ -76,7 +76,8 @@
         </div>
       </div>
 
-      <div class="t4 text-center hidden md:block s2_manu" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年，榮獲國家金質獎</div>
+      <div class="s2_manu">
+      <div class="t4 text-center hidden md:block" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年，榮獲國家金質獎</div>
       <div class="t4 text-center md:hidden" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年<br>榮獲國家金質獎</div>
 
       <div class="swiper-section">
@@ -190,6 +191,7 @@
           </div>
           <img class="en" src="@/section/s2/en.png" alt="" srcset="" />
         </div>
+      </div>
       </div>
     </div>
 
