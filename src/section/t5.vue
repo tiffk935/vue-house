@@ -234,11 +234,11 @@
 const imgs = [
   {
     img: new URL("../section/t5/1.jpg", import.meta.url).href,
-    caption: 'LOBBY迎賓大廳 3D模擬圖'
+    caption: 'Lobby務業櫃檯  3D模擬圖'
   },
   {
     img: new URL("../section/t5/2.jpg", import.meta.url).href,
-    caption: 'Lobby務業櫃檯  3D模擬圖'
+    caption: 'LOBBY迎賓大廳 3D模擬圖'
   },
   {
     img: new URL("../section/t5/3.jpg", import.meta.url).href,

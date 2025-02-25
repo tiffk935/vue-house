@@ -74,7 +74,7 @@ export default {
     },
     {
       name: "立即預約",
-      target: ".order",
+      target: ".order-form-content",
       offset: "",
       isOrder: true,
     },

@@ -48,7 +48,10 @@
       font-size: sizem(12);
       letter-spacing: .06em;
       @media screen and (min-width:768px) {
-        display: none;
+        //display: none;
+      font-size: size(16);
+      left: size(20);
+      bottom: size(20);
       }
     }
   }
