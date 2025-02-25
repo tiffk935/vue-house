@@ -76,7 +76,7 @@
         </div>
       </div>
 
-      <div class="t4 text-center hidden md:block" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年，榮獲國家金質獎</div>
+      <div class="t4 text-center hidden md:block s2_manu" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年，榮獲國家金質獎</div>
       <div class="t4 text-center md:hidden" data-aos="fade-up" data-aos-delay="0">全國唯一連續24年<br>榮獲國家金質獎</div>
 
       <div class="swiper-section">
@@ -196,7 +196,7 @@
 
 
 
-    <div class="last-swiper">
+    <div class="last-swiper s3_manu">
       <div class="ttt1 hidden md:block" data-aos="fade-up" data-aos-delay="0">五星飯店標竿，將創立豐生活百貨</div>
       <div class="ttt1 md:hidden" data-aos="fade-up" data-aos-delay="0">五星飯店標竿<br>將創立豐生活百貨</div>
 
@@ -367,6 +367,7 @@
       display: flex;
       align-items: center;
       margin-bottom: size(14);
+      
 
       .line {
         width: size(73);
@@ -715,7 +716,7 @@
     }
     .swiper-box {
       @apply relative;
-      width: size(1570);
+      width: size(1550);
       height: size(749);
       padding: size(14) size(16);
       margin: 0 auto;
@@ -793,7 +794,8 @@
       
       .sec1-title2 {
         font-size: sizem(20);
-        margin-bottom: sizem(28);
+        margin-bottom: sizem(17);
+        justify-content: center;
 
         .line {
           width: sizem(53);
@@ -862,7 +864,7 @@
         }
 
         &.sec1-item6 {
-          width: sizem(120);
+          width: sizem(125);
           top: sizem(457);
           right: sizem(207);
         }

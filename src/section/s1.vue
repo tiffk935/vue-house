@@ -78,7 +78,7 @@
    // background-image: url("@/section/s1/bgm.jpg");
  //   padding-bottom: sizem(127.5);
   padding-top: sizem(0);
-  padding-bottom: sizem(20);
+  //padding-bottom: sizem(20);
     gap: sizem(160);
   .cloth1{
         width: 237vw;

@@ -11,7 +11,7 @@
         src="@/section/s6/en.png"
         alt=""
       />
-      <div class="t3" data-aos="fade-up" data-aos-delay="200">
+      <div class="t3" data-aos="fade-up" data-aos-delay="200" v-if="isMobile">
         為您將台中七期的森林綠馥備妥安放，文心森林公園的綠意盎然、假日出遊的首選之地，<br />
         搭配禮惠公園與南屯公園的悠然鮮氧，這裡的生活時光，是一份無可取代的鮮氧森活式。
       </div>
@@ -215,19 +215,27 @@ const splide = ref()
 
 const imgs = [
   {
-    img: new URL("../section/s6/1.webp", import.meta.url).href,
+    img: globals.$isMobile()
+      ? new URL("../section/s6/1m.webp", import.meta.url).href
+      : new URL("../section/s6/1.webp", import.meta.url).href,
     caption: "南屯公園",
   },
   {
-    img: new URL("../section/s6/2.webp", import.meta.url).href,
+    img: globals.$isMobile()
+    ? new URL("../section/s6/2m.webp", import.meta.url).href
+      : new URL("../section/s6/2.webp", import.meta.url).href,
     caption: "南屯公園",
   },
   {
-    img: new URL("../section/s6/3.webp", import.meta.url).href,
+    img: globals.$isMobile()
+    ? new URL("../section/s6/3m.webp", import.meta.url).href
+      : new URL("../section/s6/3.webp", import.meta.url).href,
     caption: "文心公園",
   },
   {
-    img: new URL("../section/s6/4.webp", import.meta.url).href,
+    img: globals.$isMobile()
+    ? new URL("../section/s6/4m.webp", import.meta.url).href
+      : new URL("../section/s6/4.webp", import.meta.url).href,
     caption: "文心公園",
   },
 ]

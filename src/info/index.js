@@ -39,37 +39,37 @@ export default {
   navList: [
     {
       name: "金質品牌",
-      target: ".s2",
+      target: ".s2_manu",
       offset: "",
     },
     {
       name: "五星標竿",
-      target: ".s3",
+      target: ".s3_manu",
       offset: "",
     },
     {
       name: "國際七期",
-      target: ".s5",
+      target: ".s3",
       offset: "",
     },
     {
       name: "城心地段",
-      target: ".s6",
+      target: ".s4",
       offset: "",
     },
     {
       name: "繁華精彩",
-      target: ".s7",
+      target: ".s5",
       offset: "",
     },
     {
       name: "鮮氧體會",
-      target: ".s8",
+      target: ".s6",
       offset: "",
     },
     {
       name: "名匠之作",
-      target: ".s9",
+      target: ".s7",
       offset: "",
     },
     {

@@ -66,7 +66,7 @@
   .content {
     padding: sizem(38) sizem(30);
     @media screen and (min-width:768px) {
-      padding: size(160) 0 0 0;
+      padding: size(110) 0 0 0;
     }
 
     .t1 {
@@ -86,6 +86,7 @@
       width: sizem(286);
       margin: 0 auto;
       margin-bottom: sizem(20);
+      mix-blend-mode: screen;
       @media screen and (min-width:768px) {
         width: size(1468.27);
         margin-bottom: size(60);
@@ -97,8 +98,8 @@
       line-height: sizem(22);
       letter-spacing: .05em;
       @media screen and (min-width:768px) {
-        font-size: size(27);
-        line-height: size(48);
+        font-size: size(23);
+        line-height: size(40);
       }
     }
   }
