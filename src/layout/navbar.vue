@@ -450,5 +450,6 @@ const scrollTo = (el, index) => {
     scrollTo: document.querySelector(el),
   })
   activeMenuIdx.value = index
+  menuOpen.value = false
 }
 </script>
