@@ -9,7 +9,7 @@
         <img class="art w-full hidden md:block" src="@/section/t1/art.svg" />
 
         <div class="t2 text-[#86807B]" data-aos="fade-up" data-aos-delay="0">
-          豐邑機構豐藝館自2008年創立以來<br>
+          豐邑集團豐藝館自2008年創立以來<br>
           長期秉持著「愛與分享」的精神<br>
           致力建構台灣本土藝術美學展示平台<br>
           創造「藝術生活化、生活藝術化」的優質環境<br>
