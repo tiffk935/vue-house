@@ -95,9 +95,9 @@
         <div class="modal-box py-12 relative flex flex-col items-center justify-center">
             <label for="contact-modal2" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
             <!-- icon -->
-            <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="達麗河蘊" srcset="" />
-            <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="達麗河蘊" srcset="" />
-            <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="達麗河蘊" srcset="" />
+            <img class="h-12" v-if="modalType == 'phone'" src="@/section/formphone.svg" alt="達麗河蘊" srcset="" />
+            <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/formmessenger.svg" alt="達麗河蘊" srcset="" />
+            <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/formgmap.svg" alt="達麗河蘊" srcset="" />
             <!-- title -->
             <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
                 '接待會館'
