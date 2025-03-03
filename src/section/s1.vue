@@ -6,19 +6,19 @@
     </div>
     <div class="links absolute hidden md:flex">
       <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'gmap'">
-        <img class="icon mr-1" src="//h65.tw/img/form/gmap.svg" alt="gmap" />
+        <img class="icon mr-1" src="@/section/form/gmap.svg" alt="gmap" />
         <div>LOCATION</div>
       </div>
       <div class="item flex items-center text-white" @click="open()">
-        <img class="icon mr-1" src="//h65.tw/img/form/fb.svg" alt="fb" />
+        <img class="icon mr-1" src="@/section/form/fb.svg" alt="fb" />
         <div>FACEBOOK</div>
       </div>
       <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'fb'">
-        <img class="icon mr-1" src="//h65.tw/img/form/messenger.svg" alt="messenger" />
+        <img class="icon mr-1" src="@/section/form/messenger.svg" alt="messenger" />
         <div>MESSAGE</div>
       </div>
       <div class="item flex items-center text-white" @click="modalOpen = true; modalType = 'phone'">
-        <img class="icon mr-1" src="//h65.tw/img/form/phone.svg" alt="phone" />
+        <img class="icon mr-1" src="@/section/form/phone.svg" alt="phone" />
         <div>CONTACT US</div>
       </div>
     </div>
@@ -47,9 +47,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="s1-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="//h65.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h65.tw/img/form/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h65.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
