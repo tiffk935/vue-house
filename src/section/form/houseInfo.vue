@@ -1,17 +1,17 @@
 <template>
     <div class="house-info text-white relative">
-        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/formbg2.png" />
+        <img class="bg absolute bottom-[40px] left-0 w-full md:hidden" src="@/section/form/bg2.png" />
         <!-- <img class="bg hidden md:block" src="@/section/s1/bg.png" /> -->
         <!-- <img class="bg md:hidden" src="@/section/s1/bg-m.png" /> -->
         <div class="links relative">
             <a target="_blank" href="https://www.da-li.com.tw/">
-                <img src="@/section/formbtn1.svg" alt="達麗建設官網" />
+                <img src="@/section/form/btn1.svg" alt="達麗建設官網" />
             </a>
             <a target="_blank" href="https://unigiants.com.tw/">
-                <img src="@/section/formbtn2.svg" alt="聯碩行銷團隊官網" />
+                <img src="@/section/form/btn2.svg" alt="聯碩行銷團隊官網" />
             </a>
             <a target="_blank" href="https://www.facebook.com/unigiant/">
-                <img src="@/section/formbtn3.svg" alt="聯碩城市風格誌" />
+                <img src="@/section/form/btn3.svg" alt="聯碩城市風格誌" />
             </a>
         </div>
         <div class="content relative">
@@ -24,12 +24,12 @@
                 </div>
             </div>
         </div>
-        <img class="logo2 relative" src="@/section/formlogo2.svg" />
+        <img class="logo2 relative" src="@/section/form/logo2.svg" />
     </div>
 <!--
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
-                src="@/section/formfooterlogo.gif" alt="達麗河蘊" srcset=""></a>
+                src="@/section/form/footerlogo.gif" alt="達麗河蘊" srcset=""></a>
         <a href="https://www.h65.tw/admin/test/login" target="_blank"><p class="text-white text-xs">網頁製作</p></a>
     </div>  -->
 </template>

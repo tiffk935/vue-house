@@ -1,12 +1,12 @@
 <template>
   <div class="order relative md:font-['Noto_Serif_TC']">
-    <img class="bg absolute bottom-0 left-0 w-full hidden md:block" src="@/section/formbg.png" />
+    <img class="bg absolute bottom-0 left-0 w-full hidden md:block" src="@/section/form/bg.png" />
     <div class="order1">
       <div class="order2">
         <!-- Title -->
         <div class="order-title md:flex md:justify-between">
-          <img class="order-title1" src="@/section/formorder-title1.svg" />
-          <img class="order-title2" src="@/section/formorder-title2.svg" />
+          <img class="order-title1" src="@/section/form/order-title1.svg" />
+          <img class="order-title2" src="@/section/form/order-title2.svg" />
         </div>
         <!-- Form -->
         <div class="form mx-auto relative flex justify-center">
@@ -162,7 +162,7 @@
       }
 
       select{
-        background: url("@/section/formselect.svg") no-repeat calc(100% - .5em) 100%;
+        background: url("@/section/form/select.svg") no-repeat calc(100% - .5em) 100%;
         background-size: auto 200%;
         transition: background .3s;
         &:focus{
@@ -256,10 +256,10 @@
 </style>
 
 <script setup>
-import Policy from "@/section/formpolicy.vue"
-import ContactInfo from "@/section/formcontactInfo.vue"
-import Map from "@/section/formmap.vue"
-import HouseInfo from "@/section/formhouseInfo.vue"
+import Policy from "@/section/form/policy.vue"
+import ContactInfo from "@/section/form/contactInfo.vue"
+import Map from "@/section/form/map.vue"
+import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
 

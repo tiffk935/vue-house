@@ -2,15 +2,15 @@
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
-        <img src="@/section/formform/phone.svg" alt="phone" srcset="" />
+        <img src="@/section/form/phone.svg" alt="phone" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
-        <img src="@/section/formform/messenger.svg" alt="messenger" srcset="" />
+        <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
         <div>FB 諮詢</div>
       </div>
       <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
-        <img src="@/section/formform/fb.svg" alt="fb" srcset="" />
+        <img src="@/section/form/fb.svg" alt="fb" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
@@ -19,7 +19,7 @@
         <div><span v-html="info.address"></span></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="@/section/formform/gmap.svg" alt="gmap" srcset="" />
+        <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
         <div>Google地圖導航</div>
       </div>
     </div>
@@ -29,21 +29,21 @@
   <div v-if="$isMobile()" class="mo-contact-info flex justify-between w-full contact-item-box items-center">
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'phone'">
-      <img src="@/section/formform/phone.svg" alt="phone" srcset="" />
+      <img src="@/section/form/phone.svg" alt="phone" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="@/section/formform/messenger.svg" alt="messenger" srcset="" />
+      <img src="@/section/form/messenger.svg" alt="messenger" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="@/section/formform/pen.svg" alt="pen" srcset="" />
+      <img src="@/section/form/pen.svg" alt="pen" srcset="" />
       <div>預約賞屋</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'gmap'">
-      <img src="@/section/formform/gmap.svg" alt="gmap" srcset="" />
+      <img src="@/section/form/gmap.svg" alt="gmap" srcset="" />
       <div>地圖導航</div>
     </div>
   </div>
@@ -54,9 +54,9 @@
     <div class="modal-box py-12 relative flex flex-col items-center justify-center">
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
-      <img class="h-12" v-if="modalType == 'phone'" src="@/section/formform/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/formform/messenger.svg" alt="messenger" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/formform/gmap.svg" alt="gmap" srcset="" />
+      <img class="h-12" v-if="modalType == 'phone'" src="@/section/form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="@/section/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="@/section/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
           '接待會館'
