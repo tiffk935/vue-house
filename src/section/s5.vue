@@ -1,81 +1,39 @@
 <template>
   <section class="s5 relative">
-    <div class="line md:hidden" data-aos="line" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="content1">
-      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國際底蘊雋譽美學<br>凝練鍛造雍容御邸</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">源自於生活品味的「雋品建築」</div>
-      <div class="desc mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        取自雋永的「雋」與匯聚眾人智慧的「品」，<br class="md:hidden">「雋品」自古即代表俊秀、超著的品格，<br>
-        蘊含精品之意。以幾何方塊構成的「品」，<br class="md:hidden">巧妙地融合建築、人與環境之間的精髓。
-      </div>
-      <div class="subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「雋品建築」</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        厚積十年歷練，從公共建設到居住空間設計，<br class="md:hidden">在國際上屢獲大獎肯定，也深受客戶口碑推崇，<br>
-        「雋品建築」堅持講究細節，不斷突破創新，<br class="md:hidden">展現超乎預期的精緻質感與細膩品味。
-      </div>
+    <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1 text-[#6E4D3B] font-['Noto_Serif_TC']">國際頂規精品建材<br>工藝美學生活饗宴</div>
+      <div class="t2">媲美精品豪宅規格，精選國際指標建材，兼具專業<br class="hidden md:block">工藝與品味美學，讓生活的每一個角落都無懈可擊。</div>
     </div>
-
-    <div class="slider">
-      <swiper
-        :slidesPerView="'auto'"
-        :spaceBetween="0"
-        :centeredSlides="true"
-        :loop="true"
-        :navigation="false"
-        :pagination="false"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
+    <div class="marquee">
+      <Splide
+        :options="{
+          autoWidth: true,
+          arrows: false,
+          autoplay: true,
+          pagination: false,
+          drag: true,
+          interval: 5000,
+          speed: 5000,
+          snap: false,
+          easing: 'linear',
+          gap: 0,
+          type: 'loop',
+          perMove: 1
         }"
-        :modules="modules"
       >
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/1.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/2.jpg" />
-            <div class="txt">雋品天母天玉街案 3D示意模擬圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/3.jpg" />
-            <div class="txt">南亞停一·停車場 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/04.jpg" />
-            <div class="txt">政大圖書館 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/05.jpg" />
-            <div class="txt">大安室內設計案 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/06.jpg" />
-            <div class="txt">汐止室內設計案 實景拍攝</div>
-          </div>
-        </swiper-slide>
-      </swiper>
+        <SplideSlide><img src="@/section/s5/logo/01.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/02.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/03.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/04.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/05.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/06.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/07.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/08.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/09.svg" /></SplideSlide>
+        <SplideSlide><img src="@/section/s5/logo/10.svg" /></SplideSlide>
+      </Splide>
     </div>
-
-    <div class="content2">
-      <div class="flex justify-between items-end mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1 subtitle">《雍雋品》<br class="md:hidden">中正區住宅大樓</div>
-        <img class="logo" src="@/section/s5/logo.png" />
-      </div>
-      <div class="en" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">JADE POSH-GATHERING GREEN, FLOURISHING OPULENCE.</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">本案位於南海路，鄰近台北植物園，規劃住宅大樓建築外觀與公設空間與整體興建，榮獲2024芬蘭Arch設計大獎Arch Design Award－金獎、米蘭設計大獎MILAN Design Awards－銀獎。得獎推介：「尊重都市既存結構，融入周遭環境，呈現地段特有的人文價值與記憶，透過自然光影述說空間的層次與故事，形塑一處安定、自在雍然、濾除塵囂的居所」以都市涵構（Contextualism）和基地紋理作為設計出發點，構築最合乎當地樣貌與形式的建築。</div>
-    </div>
+    <div class="img"></div>
   </section>
 </template>
 
@@ -83,118 +41,106 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
-  background: rgba(0, 0, 0, .06);
-
-  .line {
-    position: absolute;
-    top: size-m(-61);
-    left: 50%;
-    width: size-m(1);
-    height: size-m(120);
-    background: #000;
+  background: #E3DCCC;
+  padding: size-m(90) 0 0 0;
+  @media screen and (min-width:768px) {
+    padding: size(97) 0 0 0;
   }
 
-  .content1 {
+  .t1 {
+    font-size: size-m(24);
+    line-height: size-m(38);
     text-align: center;
-    padding: size-m(109) size-m(30) size-m(50) size-m(30);
+    font-weight: 600;
+    letter-spacing: .18em;
+    margin: 0 0 size-m(10) 0;
+    text-align: center;
     @media screen and (min-width:768px) {
-      padding: size(160) size(0) size(115) size(0);
-    }
-    
-    .title {
-      color: #12352A;
-      letter-spacing: .04em;
-      margin-bottom: size-m(26.23);
-      @media screen and (min-width:768px) {
-        margin-bottom: size(68.23);
-      }
-    }
-
-    .subtitle {
-      letter-spacing: .06em;
-      margin-bottom: .3em;
-      @media screen and (min-width:768px) {
-      }
-    }
-
-    .desc {
-      letter-spacing: .07em;
+      font-size: size(52);
+      line-height: size(85);
+      margin: 0 0 size(70) 0;
+      letter-spacing: .2em;
     }
   }
 
-  .content2 {
-    padding: size-m(41.4) size-m(30) size-m(85) size-m(30);
+  .t2 {
+    padding: 0 size-m(30);
+    font-size: size-m(13);
+    line-height: size-m(26);
+    letter-spacing: .03em;
+    text-align: justify;
+    margin-bottom: size-m(79);
     @media screen and (min-width:768px) {
-      padding: size(61.33) size(0) size(110) size(0);
-      width: size(817.68);
-      margin: 0 auto;
-    }
-
-    .subtitle {
-      color: #12352A;
-      font-weight: 700;
-      line-height: 150%;
-      letter-spacing: .04em;
-    }
-
-    .logo {
-      width: size-m(121.32);
-      @media screen and (min-width:768px) {
-        width: size(124.5);
-      }
-    }
-
-    .en {
-      color: #9b8673bb;
-      font-size: size-m(11);
-      line-height: 1.7;
-      margin-bottom: size-m(12.75);
-      letter-spacing: -.03em;
-      @media screen and (min-width:768px) {
-        font-size: size(13);
-        letter-spacing: .13em;
-        margin-bottom: size(21.75);
-      }
-    }
-
-    .desc {
-      text-align: justify;
-      font-style: normal;
+      padding: 0;
+      font-size: size(23);
+      line-height: size(41);
+      width: size(545);
+      margin: 0 auto size(116) auto;
     }
   }
 
-  .swiper-slide {
-    width: size-m(315);
-    margin: 0 size-m(5);
+  .marquee {
+    padding: size-m(16) 0;
+    background: #BB8A5A;
+    position: relative;
     @media screen and (min-width:768px) {
-      width: size(870);
-      margin: 0 size(50);
+      padding: size(42) 0;
     }
 
-    .txt {
+    &:before, &:after {
+      content: '';
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(8);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(12);
-      line-height: 170%;
+      top: 0;
+      width: size-m(38);
+      height: 100%;
+      mix-blend-mode: multiply;
       @media screen and (min-width:768px) {
-        bottom: size(7.5);
-        right: size(11);
-        font-size: size(14);
+        width: size(194);
       }
+    }
+
+    &:before {
+      left: 0;
+      background: linear-gradient(270deg, rgba(187,131,98,0) 0%, rgba(186,130,97,0.03) 14%, rgba(185,128,96,0.11) 29%, rgba(183,125,94,0.24) 45%, rgba(180,122,92,0.42) 62%, rgba(176,117,88,0.66) 80%, rgba(171,111,84,0.95) 97%, rgba(171,110,84,1) 100%);
+    }
+
+    &:after {
+      right: 0;
+      background: linear-gradient(90deg, rgba(187,131,98,0) 0%, rgba(186,130,97,0.03) 14%, rgba(185,128,96,0.11) 29%, rgba(183,125,94,0.24) 45%, rgba(180,122,92,0.42) 62%, rgba(176,117,88,0.66) 80%, rgba(171,111,84,0.95) 97%, rgba(171,110,84,1) 100%);
+    }
+
+    .splide__slide {
+      height: size-m(19);
+      margin-right: size-m(50);
+      @media screen and (min-width:768px) {
+        height: size(42);
+        margin-right: size(100);
+      }
+
+      img {
+        display: block;
+        width: auto;
+        height: 100%;
+      }
+    }
+  }
+
+  .img {
+    width: 100%;
+    height: size-m(305);
+    background-image: url(@/section/s5/img-m.jpg);
+    background-size: cover;
+    background-position: bottom center;
+    @media screen and (min-width:768px) {
+      height: size(485);
+      background-image: url(@/section/s5/img.jpg);
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
+// import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+// const globals = getCurrentInstance().appContext.config.globalProperties;
+// const isMobile = computed(() => globals.$isMobile());
 </script>

@@ -1,75 +1,16 @@
 <template>
-  <section class="s3 w-full relative">
-    <img class="style absolute" src="@/section/s3/style.png" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
-    <div class="en relative">
-      <div class="line absolute" data-aos="line-left" data-aos-duration="1000" data-aos-delay="0"></div>
-      <div class="en1" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">EDUCATION</div>
-      <div class="en2" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="0">Create a Bright Future for Your Children</div>
-    </div>
-    <div class="md:flex md:justify-between md:items-end">
-      <div class="zh md:flex md:justify-between md:items-end" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="title">生活機能</div>
-        <div>
-          <div class="subtitle">孕育雍和<br>成就 孩子的未來</div>
-          <div class="desc">
-            百年悠久歷史<br>
-            見證著南海特區人文風骨<br>
-            始終名列台北優質學區排行榜<br>
-            百年建中、南門國中、國語實小<br>
-            重視教育的家庭，<br>
-            選擇啟發思考的成長環境<br>
-            氣質從小蘊養，教育傳承雍雅文化精髓
-          </div>
-        </div>
+  <section class="s3 user-n w-full relative">
+    <div class="wrapper">
+      <img class="en block" src="@/section/s3/en.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+      <div class="pic">
+        <img class="txt block" src="@/section/s3/txt.svg" />
+        <img class="img block" src="@/section/s3/img.jpg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="a3 block" src="@/section/s3/A3.svg" />
+        <div class="line hidden md:block"></div>
       </div>
-      <div class="slider">
-        <swiper
-          :loop="true"
-          :navigation="false"
-          :pagination="{
-            clickable: true,
-          }"
-          :autoplay="{
-            delay: 3000,
-            disableOnInteraction: false,
-          }"
-          :modules="modules"
-          @init="init"
-        >
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s3/1.jpg" />
-              <div class="txt">國語實驗國民小學</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s3/2.jpg" />
-              <div class="txt">建國中學</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s3/3.jpg" />
-              <div class="txt">南海藝廊</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s3/4.jpg" />
-              <div class="txt">南門國中雙語教育學校</div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="relative">
-              <img src="@/section/s3/5.jpg" />
-              <div class="txt">臺灣博物館南門園區</div>
-            </div>
-          </swiper-slide>
-        </swiper>
-
-        <div class="slide-prev" @click="slidePrev"></div>
-        <div class="slide-next" @click="slideNext"></div>
+      <div class="t" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="t1 text-[#6E4D3B] font-['Noto_Serif_TC']">A3雙捷交匯<br>一站9分鐘 直達北車</div>
+        <div class="t2">桃園機場捷運A3站、環狀線Y20站，雙捷黃金交匯，進化城市動能。只要一站，抵達台北車站；同一線，抵達國門桃園機場；隨捷運三環六線到位，串連士林、內科，加上快速道路、國道系統，以及規劃中的溪北轉運站，未來雙北國際樞紐即在眼前。</div>
       </div>
     </div>
   </section>
@@ -80,213 +21,146 @@
 
 .s3 {
   width: 100%;
-  padding: size-m(173) size-m(30) size-m(58) size-m(30);
+  background: #E3DCCC;
+  padding: size-m(42) 0 size-m(53) 0;
   @media screen and (min-width:768px) {
-    padding: size(266.44) size(163) size(174) size(163);
+    height: size(1080);
   }
 
-  .style {
-    top: size-m(70.76);
-    left: size-m(193.5);
-    width: size-m(161.63);
+  .wrapper {
     @media screen and (min-width:768px) {
-      top: size(230.42);
-      left: size(245.63);
-      width: size(344.37);
+      width: size(1413);
+      position: absolute;
+      top: size(168);
+      left: size(231);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row-reverse;
     }
   }
 
   .en {
-    margin-bottom: size-m(30);
-    text-transform: uppercase;
+    width: size-m(246.1);
+    margin: 0 auto size-m(28);
     @media screen and (min-width:768px) {
-      width: size(1157 - 30);
-      margin: 0 0 size(35) auto;
-      text-align: right;
-    }
-
-    .line {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: block;
-        width: size(884 - 30);
-        height: size(1);
-        background: #BBA693;
-        left: 0;
-        top: 50%;
-      }
-    }
-
-    .en1 {
-      color: #BBA693;
-      font-size: size-m(24);
-      font-family: "Times New Roman", Times, serif;
-      font-weight: 500;
-      @media screen and (min-width:768px) {
-        font-size: size(36);
-        letter-spacing: .1em;
-      }
-    }
-
-    .en2 {
-      font-size: size-m(12);
-      font-family: "Times New Roman", Times, serif;
-      font-weight: 500;
-      @media screen and (min-width:768px) {
-        font-size: size(13);
-        letter-spacing: .13em;
-      }
-    }
-  }
-
-  .zh {
-    padding-left: size-m(21.42);
-    border-left: size-m(1) solid #BBA693;
-    @media screen and (min-width:768px) {
-      padding: 0;
-      border: none;
-      width: size(485.22);
-    }
-
-    .title {
-      color: #C1AD8F;
-      letter-spacing: .13em;
-      @media screen and (min-width:768px) {
-        padding: 0;
-        writing-mode: vertical-lr;
-      }
-    }
-
-    .subtitle {
-      letter-spacing: .13em;
-      margin-bottom: size-m(21.28);
-      margin-top: size-m(26.63);
-      @media screen and (min-width:768px) {
-        margin-bottom: size(33.28);
-      }
-    }
-
-    .desc {
-      letter-spacing: .06em;
-    }
-  }
-
-  .slider {
-    margin:size-m(21.28) size-m(-30) 0;
-    position: relative;
-    @media screen and (min-width:768px) {
-      margin: 0;
-      width: size(950);
-      padding-bottom: size(50);
-      transform: translateY(size(50));
-      overflow: hidden;
-    }
-
-    .slide-prev, .slide-next {
-      width: size-m(30);
-      height: size-m(30);
+      width: size(710);
       position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      cursor: pointer;
-      background-size: size-m(12.8) auto;
-      background-repeat: no-repeat;
-      @media screen and (min-width:768px) {
-        display: none;
-      }
-    }
-
-    .slide-prev {
+      top: 0;
       left: 0;
-      background-image: url(@/section/s3/arrow-prev.svg);
-      background-position: size-m(7) center;
     }
+  }
 
-    .slide-next {
-      right: 0;
-      background-image: url(@/section/s3/arrow-next.svg);
-      background-position: right size-m(7) center;
-    }
+  .pic {
+    position: relative;
+    width: size-m(337);
+    height: size-m(277);
+    background: #B8805A;
+    margin: 0 0 size-m(47) auto;
+    @media screen and (min-width:768px) {
+      width: size(428.14);
+      height: size(739.52);
+      background: #B8805A;
+      margin: 0;
 
-    .swiper {
-      width: size-m(315);
-      margin: 0 auto;
-      @media screen and (min-width:768px) {
-        width: 100%;
-        overflow: visible;
-      }
-
-      .swiper-pagination {
-        display: none;
-        @media screen and (min-width:768px) {
-          display: block;
-          line-height: 1;
-          margin: 0;
-          bottom: -2vw;
-          display: flex;
-          justify-content: flex-end;
-
-          .swiper-pagination-bullet {
-            width: size(20);
-            height: size(20);
-            margin: 0 0 0 size(10);
-            background: none;
-            opacity: 1;
-            border: size(4) solid rgba(0,0,0,0.2);
-
-            &.swiper-pagination-bullet-active {
-              border-color: #C1AD8F;
-            }
-          }
-        }
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: size(84);
+        height: 100%;
+        background: linear-gradient(90deg, rgba(187,131,98,0) 0%, rgba(186,130,97,0.03) 14%, rgba(185,128,96,0.11) 29%, rgba(183,125,94,0.24) 45%, rgba(180,122,92,0.42) 62%, rgba(176,117,88,0.66) 80%, rgba(171,111,84,0.95) 97%, rgba(171,110,84,1) 100%);
+        mix-blend-mode: multiply;
       }
     }
 
     .txt {
+      width: size-m(127);
       position: absolute;
-      bottom: size-m(10);
-      right: size-m(10);
-      background: rgba(0,0,0,0.7);
-      padding: 0 size-m(10);
-      line-height: size-m(20);
-      font-size: size-m(12);
-      color: #fff;
-      font-family: "Noto Sans TC";
+      bottom: size-m(11);
+      left: size-m(173);
       @media screen and (min-width:768px) {
-        bottom: size(10);
-        right: size(20);
-        padding: 0 size(10);
-        line-height: size(24);
-        font-size: size(14);
+        width: size(272.07);
+        bottom: size(58);
+        left: auto;
+        right: size(114);
       }
+    }
+
+    .img {
+      width: size-m(305.55);
+      position: absolute;
+      top: size-m(-5);
+      left: size-m(-5);
+      box-shadow: size-m(0) size-m(4) size-m(18) rgba(0,0,0,.25);
+      max-width: none;
+      @media screen and (min-width:768px) {
+        width: size(631);
+        top: size(123);
+        left: auto;
+        right: size(114);
+        box-shadow: size(0) size(4) size(18) rgba(0,0,0,.25);
+      }
+    }
+
+    .a3 {
+      position: absolute;
+      top: size-m(-5);
+      right: 0;
+      width: size-m(91.63);
+      @media screen and (min-width:768px) {
+        top: size(-2);
+        width: size(243.75);
+        right: size(8);
+      }
+    }
+
+    .line {
+      position: absolute;
+      bottom: size(34);
+      right: size(114);
+      width: size(48);
+      height: size(1);
+      background: #fff;
+    }
+  }
+
+  .t {
+    @media screen and (min-width:768px) {
+      width: size(565);
+    }
+  }
+
+  .t1 {
+    font-size: size-m(24);
+    line-height: size-m(38);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .18em;
+    margin: 0 0 size-m(10) 0;
+    @media screen and (min-width:768px) {
+      font-size: size(52);
+      line-height: size(85);
+      margin: 0 0 size(70) 0;
+      letter-spacing: .2em;
+    }
+  }
+
+  .t2 {
+    padding: 0 size-m(36);
+    font-size: size-m(13);
+    line-height: size-m(26);
+    letter-spacing: .03em;
+    text-align: justify;
+    @media screen and (min-width:768px) {
+      padding: 0;
+      font-size: size(23);
+      line-height: size(41);
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
-const swiperRef = ref(null);
-
-const init = swiper => {
-  swiperRef.value = swiper;
-}
-
-const slidePrev = () => {
-  if(swiperRef.value){
-    swiperRef.value.slidePrev();
-  }
-}
-
-const slideNext = () => {
-  if(swiperRef.value){
-    swiperRef.value.slideNext();
-  }
-}
 </script>

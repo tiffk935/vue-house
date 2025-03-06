@@ -16,7 +16,7 @@
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
+    <!-- <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
         <div><span class="font-[500]">接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
       </div>
@@ -24,29 +24,29 @@
         <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
-    </div>
+    </div> -->
   </div>
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <div>撥打電話</div>
+      <div>CONTACT US</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]" @click="scrollTo('.order')">
+      <img src="//h35.banner.tw/img//form/pen.svg" alt="pen" srcset="" />
+      <div>RESERVATION</div>
+    </div>
+    <div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
-      <div>FB 諮詢</div>
+      <div>MESSAGE</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img//form/pen.svg" alt="pen" srcset="" />
-      <div>預約賞屋</div>
-    </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]"
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
-      <div>地圖導航</div>
+      <div>LOCATION</div>
     </div>
   </div>
 
@@ -90,10 +90,9 @@
 .hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
-  width: size(1200);
-  padding: size(68) size(160) size(50) size(160);
-  // margin-top: size(73);
+  width: 680px;
   position: relative;
+  margin: 60px auto;
 
   // .border {
   //   top: size(21);
@@ -123,18 +122,19 @@
     } 
 
     .contact-item {
-      background-color: #785A4F;
+      background-color: #DFC36C;
       // border: 1px solid #040000;
-      color: #ffffff;
-      width: 100%;
+      color: #6E4D3B;
+      font-weight: 700;
+      width: 33.333%;
       padding: 0 size(40);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.1em;
-      max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      border-radius: size(10);
 
       &:hover {
         background-color: #303640;
@@ -150,7 +150,7 @@
         height: auto;
         max-height: size(27);
         transition: all .5s;
-        filter: brightness(0) invert(1);
+        filter: invert(27%) sepia(6%) saturate(3933%) hue-rotate(337deg) brightness(96%) contrast(73%);
         margin-right: size(10);
       }
 
@@ -185,7 +185,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(35%) sepia(37%) saturate(385%) hue-rotate(331deg) brightness(92%) contrast(82%);
+  img{filter: invert(27%) sepia(6%) saturate(3933%) hue-rotate(337deg) brightness(96%) contrast(73%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -202,17 +202,16 @@
 
     .contact-item {
       height: 100%;
-      background-color: #785A4F;
-      font-size: size-m(16);
+      font-size: size-m(11);
       font-weight: 400;
-      color: #fff;
+      background-color: #DFC36C;
 
       img {
         margin-bottom: size-m(5);
         max-width: size-m(16.5);
         height: auto;
         max-height: size-m(16.5);
-        filter: brightness(0) invert(1);
+        filter: invert(27%) sepia(6%) saturate(3933%) hue-rotate(337deg) brightness(96%) contrast(73%);
       }
 
     }
@@ -253,6 +252,7 @@
       }
 
       .contact-item {
+        width: 100%;
         padding: 0 size-m(65);
         font-size: size-m(16);
         max-width: 100%;

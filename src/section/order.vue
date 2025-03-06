@@ -5,24 +5,27 @@
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
       <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
 
+      <div class="order-title2 text-[#DFC36C] font-['Noto_Serif_TC']">A3潛能新富域<br>覓得價值、美學<br class="md:hidden">與生活的完美交集</div>
+      <img class="en block" src="@/section/form/en.svg" />
+
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row"><span>姓名<span><!--(必填)--></span></span>
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
+            <input type="text" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
           </label>
           <label class="row"><span>手機<span><!--(必填)--></span></span>
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
+            <input type="text" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
           <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
-            <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
+            <input type="text" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
           </label>
-          <label class="row" v-if="info.room_type"><span>可預約時間</span>
+          <!-- <label class="row" v-if="info.room_type"><span>可預約時間</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
               <option value="" selected disabled>請選擇時間</option>
               <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
             </select>
-          </label>
+          </label> -->
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -44,33 +47,42 @@
         </div>
       </div>
 
-      <!-- Policy -->
-      <div class="flex gap-2 items-center justify-center control">
-        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
-          本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#BBA693] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-        </p>
-      </div>
-      <Policy />
+      <div class="others">
+        <div>
+          <!-- Policy -->
+          <div class="flex gap-2 justify-center md:justify-start items-center control">
+            <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
+              class="checkbox bg-white rounded-md" />
+            <p class="text-[#fff]">
+              本人知悉並同意<label for="policy-modal"
+                class="modal-button text-white cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            </p>
+          </div>
+          <Policy />
 
-      <!-- Recaptcha -->
-      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+          <!-- Recaptcha -->
+          <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+            @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+        </div>
 
-      <!-- Send -->
-      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        <!-- Send -->
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
+          {{ sending? '發送中..': '立即預約' }}
+        </div>
       </div>
 
       <!-- Contact Info -->
       <ContactInfo />
+
+      <div class="order-bottom">
+        <div class="order-bottom-bg"></div>
+        <img class="bottom-txt block md:hidden" src="@/section/form/bottom-txt-m.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="bottom-txt hidden md:block" src="@/section/form/bottom-txt.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+      </div>
     </div>
 
-
     <!-- Map -->
-    <Map v-if="info.address" />
+    <!-- <Map v-if="info.address" /> -->
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -81,17 +93,15 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  padding-top: 0;
-
   .order-section {
     position: relative;
-    padding-top: 4em;
+    padding-top: size-m(56);
     overflow: hidden;
-    background-image: url(@/section/form/bg.jpg);
+    background-image: url(@/section/form/bg.png);
     background-size: cover;
     background-position: center center;
     @media screen and (min-width:768px) {
-      padding-top: 5.3em;
+      padding-top: size(75);
     }
   }
 
@@ -117,6 +127,30 @@
     }
   }
 
+  .order-title2 {
+    font-size: size-m(24);
+    line-height: size-m(38);
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: .18em;
+    margin-bottom: size-m(25);
+    @media screen and (min-width:768px) {
+      font-size: size(52);
+      line-height: size(85);
+      letter-spacing: .2em;
+      margin-bottom: size(31);
+    }
+  }
+
+  .en {
+    width: size-m(305);
+    margin: 0 auto size-m(40) auto;
+    @media screen and (min-width:768px) {
+      width: size(850);
+      margin: 0 auto size(55) auto;
+    }
+  }
+
   .form {
     width: size-m(310);
     gap: size-m(15);
@@ -126,8 +160,8 @@
     flex-direction: column;
     line-height: 1.7;
     @media screen and (min-width:768px) {
-      width:60em;
-    //  min-width: 680px;
+      width: 90%;
+      max-width: 680px;
       gap: size(80);
       flex-direction: row;
       font-size: calc(12px + #{size(3)});
@@ -148,19 +182,18 @@
         }
       }
     }
-    @media screen and (min-width:768px) {
-      &::after {
-        content: "";
-        width: size(1);
-        height: 100%;
-        background-color: #fff;
-        position: absolute;
-      }
-    }
+    // @media screen and (min-width:768px) {
+    //   &::after {
+    //     content: "";
+    //     width: size(1);
+    //     height: 100%;
+    //     background-color: #fff;
+    //     position: absolute;
+    //   }
+    // }
     .row{
-      background: #FFF;
-      border: 1px solid #CCC;
-      color: #000;
+      border: 1px solid #fff;
+      color: #fff;
       display: flex;
       width: 100%;
       align-items:center;
@@ -181,6 +214,29 @@
       }
     }
       input,select,textarea{background: inherit;flex: 1;font-size:1em;}
+
+      input, textarea {
+        &::placeholder {
+          color: #fff;
+          opacity: 1; /* Firefox */
+        }
+      }
+  }
+
+  .others {
+    @media screen and (min-width:768px) {
+      width: 90%;
+      max-width: 680px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: size(80);
+    }
+  }
+
+  iframe {
+    display: block;
   }
 
   .send {
@@ -188,8 +244,8 @@
     width:15.5em;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #fff;
-    background-color: #785A4F;
+    color: #6E4D3B;
+    background-color: #DFC36C;
     border:0;
     border-radius: 0em;
     height:3.6em;
@@ -199,7 +255,11 @@
     position: relative;
     font-weight: 600;
     @media screen and (min-width:768px) {
-      font-size: size(25);
+      font-size: 24px;
+      width: 320px;
+      height: 78px;
+      margin: 0 0 4px 0;
+      border-radius: 10px;
     }
   }
   .control {
@@ -207,6 +267,41 @@
     position: relative;
     @media screen and (min-width:768px) {
       font-size: .75em;
+    }
+  }
+  .order-bottom {
+    position: relative;
+    width: 100%;
+    height: size-m(213);
+    display: flex;
+    justify-content: center;
+    @media screen and (min-width:768px) {
+      height: size(328);
+    }
+
+    .order-bottom-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(@/section/form/bottom-bg-m.svg);
+      background-size: auto 100%;
+      background-position: bottom center;
+      mix-blend-mode: multiply;
+      @media screen and (min-width:768px) {
+        background-image: url(@/section/form/bottom-bg.svg);
+      }
+    }
+
+    .bottom-txt {
+      position: relative;
+      width: size-m(294);
+      margin-top: size-m(44);
+      @media screen and (min-width:768px) {
+        width: size(963);
+        margin-top: size(125);
+      }
     }
   }
 }
