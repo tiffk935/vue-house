@@ -85,7 +85,7 @@
     left: 0;
     transition: opacity .5s;
     pointer-events: none;
-    background: #942a0066;
+    background: #3336;
   }
 
   .title {

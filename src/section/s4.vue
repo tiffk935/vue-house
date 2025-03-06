@@ -80,10 +80,10 @@
           </swiper>
         </div>
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#e5005c" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#e5005c" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
@@ -153,10 +153,10 @@
         </swiper-slide>
       </swiper>
       <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#e5005c" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
       </div>
       <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#EC6300" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#FFF" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#e5005c" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
       </div>
     </div>
     <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
@@ -171,12 +171,12 @@
     </div>
   </section>
 
-  <div v-if="showPop" id="s4-popup" class="bg-[#EC6300] text-white">
+  <div v-if="showPop" id="s4-popup" class="bg-[#e5005c] text-white">
     <svg @click="showPop = false" class="popup-close md:hidden" viewBox="0 0 28 28" fill="none" stroke="#FFF" stroke-width="2" xmlns="http://www.w3.org/2000/svg"><path d="M1,1l26,26 M27,1L1,27"/></svg>
     <svg @click="showPop = false" class="popup-close hidden md:block" viewBox="0 0 47 48" fill="none" xmlns="http://www.w3.org/2000/svg">
       <circle cx="23.7109" cy="24.0303" r="23.2109" fill="white"/>
-      <path d="M12.9683 34.904L34.2587 13.6136" stroke="#EC6300" stroke-width="2" stroke-linecap="round"/>
-      <path d="M12.9683 13.6136L34.2587 34.904" stroke="#EC6300" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12.9683 34.904L34.2587 13.6136" stroke="#e5005c" stroke-width="2" stroke-linecap="round"/>
+      <path d="M12.9683 13.6136L34.2587 34.904" stroke="#e5005c" stroke-width="2" stroke-linecap="round"/>
     </svg>
     <div class="txt">左右滑動可看全圖</div>
     <div class="img">

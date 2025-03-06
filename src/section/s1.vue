@@ -59,7 +59,7 @@
   .logo{position: relative;
     width: size(670);}
   .t1{
-    width: size(525);margin-bottom: size(20);
+    width: size(545);margin-bottom: size(20);
     @media screen and (min-width: 767px) {
       filter: drop-shadow(0.1vw 0.3vw 0.5 vw rgba(0, 0, 0, 0.65));
       }
@@ -134,7 +134,7 @@ animation: ball 5s ease-in-out alternate infinite;}
   .logo{position: relative;
     width: size-m(283);margin-bottom: size-m(15);}
   .t1{
-    width: size-m(222);margin: auto;margin-bottom: size-m(17);
+    width: size-m(283);margin: auto;margin-bottom: size-m(17);
   }
   .t2{
     width: size-m(226);margin: auto;

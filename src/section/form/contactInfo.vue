@@ -86,7 +86,7 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #EC6300;}
+.bg-color1{background-color: #e5005c;}
 .hover\:bg-color2:hover{background-color:#b34a00;}
 
 .contact-info {

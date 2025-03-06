@@ -209,7 +209,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #EC6300;
+    color: #e5005c;
     background-color:#fff;;
     //border: 1px solid #FFF9;
     border:0;

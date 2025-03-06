@@ -10,7 +10,7 @@
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
-  <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#EC6300]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#e5005c]">
     <h1 style="display:none;">佳鋐首耀</h1>
     <img class="og" src="@/section/og.jpg" alt="og" >
     <S1 />

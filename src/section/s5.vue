@@ -21,7 +21,7 @@
 .s5 {
   width: 100%;
   height: size-m(557);
-  background: #EC6300;
+  background: #e5005c;
   @media screen and (min-width:768px) {
     height: auto;
   }
