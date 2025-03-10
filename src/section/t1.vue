@@ -16,11 +16,11 @@
           積極推廣藝術、文化、公益美學與教育活動。
         </div>
         <div class="pics">
-          <img src="@/section/t1/pic1.jpg" data-aos="fade-up" data-aos-delay="0" />
-          <img src="@/section/t1/pic2.jpg" data-aos="fade-up" data-aos-delay="100" />
+          <img src="@/section/t1/pic1.webp" data-aos="fade-up" data-aos-delay="0" />
+          <img src="@/section/t1/pic2.webp" data-aos="fade-up" data-aos-delay="100" />
         </div>
       </div>
-      <img class="main-pic" src="@/section/t1/main-pic.jpg" />
+      <img class="main-pic" src="@/section/t1/main-pic.webp" />
       <div class="small absolute text-white">漢宇花開_青春芳華 楊鼎獻個展</div>
     </div>
   </article>
@@ -31,7 +31,7 @@
 
 .st1 {
   padding: sizem(75) 0 0 0;
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: auto 100%;
   @media screen and (min-width: 767px) {
     padding: size(38) 0 size(63) size(145);

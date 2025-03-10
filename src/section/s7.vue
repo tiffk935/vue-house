@@ -85,7 +85,7 @@
 .s7 {
   @apply w-full relative text-white bg-cover flex flex-col justify-start items-center;
   padding: size(132) 0 size(190 + 100) 0;
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: 100% auto;
   .t {
     @apply pointer-events-none relative z-10;

@@ -17,7 +17,7 @@
           </div>
         </div>
 
-        <img class="pic block" src="@/section/t6/pic.png" />
+        <img class="pic block" src="@/section/t6/pic.webp" />
       </div>
     </div>
   </article>
@@ -28,7 +28,7 @@
 
 .st6 {
   padding: sizem(86) sizem(30) sizem(35) sizem(30);
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: auto 100%;
   @media screen and (min-width: 767px) {
     padding: size(64) 0 size(74) 0;

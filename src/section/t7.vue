@@ -1,6 +1,6 @@
 <template>
   <article class="st7 relative">
-    <img class="bg" src="@/section/t7/bg.jpg" />
+    <img class="bg" src="@/section/t7/bg.webp" />
     <div class="rect"></div>
     <img class="txt" src="@/section/t7/txt.svg" data-aos="fade-up" data-aos-delay="0" />
     <div class="info">中庭花園景觀3D模擬圖</div>

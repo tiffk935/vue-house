@@ -35,7 +35,7 @@
     bottom: 0;
     left: 0;
     height: sizem(598);
-    background-image: url(@/section/t4/pic.jpg);
+    background-image: url(@/section/t4/pic.webp);
     background-size: cover;
     background-position: bottom center;
     @media screen and (min-width:768px) {

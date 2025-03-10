@@ -694,7 +694,7 @@
   .last-swiper {
     @apply text-center;
     width: 100%;
-    background-image: url(@/section/s2/sec2-bg.jpg);
+    background-image: url(@/section/s2/sec2-bg.webp);
     background-size: 100% auto;
     padding: size(137) 0 size(33) 0;
     .ttt1 {
@@ -1097,7 +1097,7 @@ const onMove = (val, val2) => {
 }
 const imgs = [
   {
-    img: new URL("../section/s2/11.jpg", import.meta.url).href,
+    img: new URL("../section/s2/11.webp", import.meta.url).href,
     caption: "豐邑A8市政核心",
   },
   {
@@ -1136,27 +1136,23 @@ const imgs = [
     img: new URL("../section/s2/5.webp", import.meta.url).href,
     caption: "浩瀚 景立方 台中北屯",
   },
-  // {
-  //   img: new URL("../section/s2/10.jpg", import.meta.url).href,
-  //   caption: "豐邑TOP+ 高雄前金",
-  // },
 ]
 
 const imgs2 = [
   {
-    img: new URL("../section/s2/a1.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a1.webp", import.meta.url).href,
     caption: "新竹喜來登大飯店",
   },
   {
-    img: new URL("../section/s2/a2.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a2.webp", import.meta.url).href,
     caption: "MOXY飯店",
   },
   {
-    img: new URL("../section/s2/a3.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a3.webp", import.meta.url).href,
     caption: "台中逢甲商旅La Vida Hotel",
   },
   {
-    img: new URL("../section/s2/a4.jpg", import.meta.url).href,
+    img: new URL("../section/s2/a4.webp", import.meta.url).href,
     caption: "FUNLIFE豐生活購物中心",
   },
 ]

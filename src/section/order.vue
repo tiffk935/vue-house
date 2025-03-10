@@ -144,7 +144,7 @@
 
   .ad {
     width: size(903);
-    background-image: url(@/section/form/pic.jpg);
+    background-image: url(@/section/form/pic.webp);
     background-position: bottom center;
     background-size: cover;
 

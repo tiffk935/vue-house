@@ -83,7 +83,7 @@
   height: size(1706);
   padding-right: size(60);
   padding-top: size(48);
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: 100% auto;
 
   .i {

@@ -49,7 +49,7 @@
 
 .st2 {
   padding: sizem(78) 0 0 0;
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: auto 100%;
   @media screen and (min-width: 767px) {
     padding: size(60) calc(size(145) - 16px) 0 0;
@@ -187,19 +187,19 @@
 <script setup>
 const imgs = [
   {
-    img: new URL("../section/t2/1.jpg", import.meta.url).href,
+    img: new URL("../section/t2/1.webp", import.meta.url).href,
   },
   {
-    img: new URL("../section/t2/2.jpg", import.meta.url).href,
+    img: new URL("../section/t2/2.webp", import.meta.url).href,
   },
   {
-    img: new URL("../section/t2/3.jpg", import.meta.url).href,
+    img: new URL("../section/t2/3.webp", import.meta.url).href,
   },
   {
-    img: new URL("../section/t2/4.jpg", import.meta.url).href,
+    img: new URL("../section/t2/4.webp", import.meta.url).href,
   },
   {
-    img: new URL("../section/t2/5.jpg", import.meta.url).href,
+    img: new URL("../section/t2/5.webp", import.meta.url).href,
   },
 ]
 </script>

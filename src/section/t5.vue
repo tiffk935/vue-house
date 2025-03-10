@@ -52,7 +52,7 @@
 
 .st5 {
   padding: sizem(65) sizem(30) 0 sizem(30);
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: auto 100%;
   @media screen and (min-width: 767px) {
     padding: size(256) 0 size(139) 0;
@@ -233,23 +233,23 @@
 <script setup>
 const imgs = [
   {
-    img: new URL("../section/t5/1.jpg", import.meta.url).href,
+    img: new URL("../section/t5/1.webp", import.meta.url).href,
     caption: 'Lobby務業櫃檯  3D模擬圖'
   },
   {
-    img: new URL("../section/t5/2.jpg", import.meta.url).href,
+    img: new URL("../section/t5/2.webp", import.meta.url).href,
     caption: 'LOBBY迎賓大廳 3D模擬圖'
   },
   {
-    img: new URL("../section/t5/3.jpg", import.meta.url).href,
+    img: new URL("../section/t5/3.webp", import.meta.url).href,
     caption: '前廣場景觀 3D模擬圖'
   },
   {
-    img: new URL("../section/t5/4.jpg", import.meta.url).href,
+    img: new URL("../section/t5/4.webp", import.meta.url).href,
     caption: '健身房 3D模擬圖'
   },
   {
-    img: new URL("../section/t5/5.jpg", import.meta.url).href,
+    img: new URL("../section/t5/5.webp", import.meta.url).href,
     caption: '圖書閱覽區 3D模擬圖'
   },
 ]

@@ -110,7 +110,7 @@
 .s5 {
   @apply w-full relative;
   @apply flex items-center justify-between;
-  background-image: url(@/section/s2/sec2-bg.jpg);
+  background-image: url(@/section/s2/sec2-bg.webp);
   background-size: 100% auto;
   padding: size(106) size(145) size(91) 0;
 
