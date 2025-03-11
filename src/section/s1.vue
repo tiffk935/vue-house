@@ -3,15 +3,17 @@
     <div class="new_block s01" style="overflow: hidden;">
       <div class="d-none d-md-block">
         <div class="row" style="margin: 0%;">
-          <img src="./new/1013/a2.png">
-          <img src="./new/1013/a3.png" class="word">
+          <img src="./new/0311/bg.webp">
+          <img src="./new/0311/title.svg" class="word">
+          <img src="./new/0311/logoicon.svg" class="logoicon">
         </div>
       </div>
       <div class="container-fluid d-sm-none1" style="padding-left: 0%;padding-right: 0%;">
         <div class="row" style="margin-right: 0%;margin-left: 0%;">
           <div class="new_block_m">
-            <img src="./new/1013/a2m.png">
-            <img src="./new/1013/a3m.png" class="word">
+            <img src="./new/0311/bgm.webp">
+          <img src="./new/0311/title.svg" class="word">
+          <img src="./new/0311/logoicon.svg" class="logoicon">
           </div>
         </div>
       </div>
@@ -649,6 +651,33 @@
     bottom: 2vw;
   }
 }
+.word{
+  width: 40% !important;
+  position: absolute;
+  top:10%;
+  left: 30%;
+
+  @media screen and (max-width: 768px) {
+  width: 80% !important;
+  top:15%;
+  left: 10%;
+  }
+}
+
+.logoicon{
+  width: 20% !important;
+  position: absolute;
+  top:2%;
+  right: 2%;
+
+  @media screen and (max-width: 768px) {
+  width: 60% !important;
+  right: 19%;
+  top:auto;
+  bottom:2%;
+  }
+}
+
 .s01{
   overflow: hidden;
   background: linear-gradient(145deg,
