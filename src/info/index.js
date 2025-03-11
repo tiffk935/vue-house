@@ -48,11 +48,6 @@ export default {
       offset: "",
     },
     {
-      name: "國際七期",
-      target: ".s3",
-      offset: "",
-    },
-    {
       name: "城心地段",
       target: ".s4",
       offset: "",
