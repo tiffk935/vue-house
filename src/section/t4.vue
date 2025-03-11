@@ -9,12 +9,11 @@
       <img class="en block md:hidden" src="@/section/t4/en-m.svg" />
       <img class="en hidden md:block" src="@/section/t4/en.svg" />
       <div class="t2">
-        將七期綠覆最高的綠藝，融入建築繆思<br>
-        在過程中向上延展，<br>
-        賦予感官視聽一份嶄新維度的體驗<br>
-        並以跳層綠幕的建築語彙，<br>
-        讓日常時光充滿生命力與森活力<br>
-        隨即您會發現，身心的嚮往、家園的想望，正是如此
+        七期超稀有千坪面積、大街廓開發！<br>
+南屯少見完整基地，單層規劃4戶雙電梯，<br>
+全棟純住優質居，戶戶邊間，標配3面採光更適居<br>
+社區延續文心森林、禮惠公園、南屯公園<br>
+將森活感完美移植，新家園就從這裡開始！
       </div>
     </div>
   </article>
