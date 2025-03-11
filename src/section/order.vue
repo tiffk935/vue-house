@@ -76,8 +76,8 @@
 
       <div class="order-bottom">
         <div class="order-bottom-bg"></div>
-        <img class="bottom-txt block md:hidden" src="@/section/form/bottom-txt-m.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
-        <img class="bottom-txt hidden md:block" src="@/section/form/bottom-txt.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="bottom-txt block md:hidden" src="@/section/form/bottom-txt-m.svg" data-aos="fade" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" />
+        <img class="bottom-txt hidden md:block" src="@/section/form/bottom-txt.svg" data-aos="fade" data-aos-duration="1000" data-aos-anchor-placement="top-bottom" />
       </div>
     </div>
 
@@ -278,6 +278,7 @@
     height: size-m(213);
     display: flex;
     justify-content: center;
+    align-items: center;
     @media screen and (min-width:768px) {
       height: size(328);
     }
