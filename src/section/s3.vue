@@ -4,8 +4,9 @@
       <img class="en block" src="@/section/s3/en.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
       <div class="pic">
         <img class="txt block" src="@/section/s3/txt.svg" />
-        <img class="img block" src="@/section/s3/img.jpg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="img block" src="@/section/s3/img.webp" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
         <img class="a3 block" src="@/section/s3/A3.svg" />
+        <div class="caption">實景拍攝美化圖</div>
         <div class="line hidden md:block"></div>
       </div>
       <div class="t" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -73,6 +74,19 @@
         background: linear-gradient(90deg, rgba(187,131,98,0) 0%, rgba(186,130,97,0.03) 14%, rgba(185,128,96,0.11) 29%, rgba(183,125,94,0.24) 45%, rgba(180,122,92,0.42) 62%, rgba(176,117,88,0.66) 80%, rgba(171,111,84,0.95) 97%, rgba(171,110,84,1) 100%);
         mix-blend-mode: multiply;
       }
+    }
+
+    .caption{
+      font-size: size-m(11);
+      color: #fff;
+      position: absolute;
+      right:  size-m(50);
+      bottom: size-m(50);
+       @media screen and (min-width:768px) {
+        font-size: size(12);
+        right:  size(130);
+      bottom: size(130);
+       }
     }
 
     .txt {

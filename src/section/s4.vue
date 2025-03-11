@@ -8,7 +8,7 @@
       <div v-for="(item, itemIdx) in list" class="item md:flex md:justify-between">
         <div class="person flex">
           <div class="person-photo" data-aos="fade" data-aos-duration="1000" data-aos-delay="0">
-            <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/person.jpg`)" />
+            <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/person.webp`)" />
           </div>
           <div class="person-info">
             <div class="person-info-title text-[#DFC36C] font-['Noto_Serif_TC']">{{item.person.title}}</div>
@@ -18,7 +18,7 @@
         <div class="md:flex md:flex-col-reverse md:justify-end">
           <div class="photos">
             <div v-for="(photoItem, photoItemIdx) in item.photos" class="photo relative" data-aos="fade-up" data-aos-duration="1000" :data-aos-delay="photoItemIdx * 200">
-              <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/photo${photoItemIdx + 1}.jpg`)" />
+              <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/photo${photoItemIdx + 1}.webp`)" />
               <!-- <div class="photo-name absolute" :style="{color: photoItem.nameColor ?? null}">{{photoItem.name}}</div> -->
               <div class="photo-name absolute" v-html="photoItem.name" :style="{color: photoItem.nameColor ?? null}"></div>
               <div class="photo-info absolute">{{photoItem.info}}</div>
@@ -41,12 +41,12 @@
 .s4 {
   color: #fff;
   background: #C68865;
-  background-image: url(@/section/s4/bg-m.jpg);
+  background-image: url(@/section/s4/bg-m.webp);
   background-size: cover;
   background-position: center center;
   padding: size-m(14) 0 size-m(73) 0;
   @media screen and (min-width:768px) {
-    background-image: url(@/section/s4/bg.jpg);
+    background-image: url(@/section/s4/bg.webp);
     padding: size(90) 0 size(221) 0;
   }
 

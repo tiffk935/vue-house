@@ -90,7 +90,7 @@
 .hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
-  width: 680px;
+  width: 900px;
   position: relative;
   margin: 60px auto;
 
@@ -137,7 +137,7 @@
       border-radius: size(10);
 
       &:hover {
-        background-color: #303640;
+        background-color: #582f19;
         color: #fff;
 
         img {

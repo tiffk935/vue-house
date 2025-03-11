@@ -159,9 +159,10 @@
     align-items: stretch;
     flex-direction: column;
     line-height: 1.7;
+    font-size:size-m(13);
     @media screen and (min-width:768px) {
       width: 90%;
-      max-width: 680px;
+      max-width: 900px;
       gap: size(80);
       flex-direction: row;
       font-size: calc(12px + #{size(3)});
@@ -224,14 +225,16 @@
   }
 
   .others {
+    font-size: size-m(14);
     @media screen and (min-width:768px) {
       width: 90%;
-      max-width: 680px;
+      max-width: 900px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
       gap: size(80);
+      font-size: size(20);
     }
   }
 

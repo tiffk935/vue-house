@@ -4,7 +4,8 @@
       <img class="en block" src="@/section/s2/en.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
       <div class="pic">
         <img class="txt block" src="@/section/s2/txt.svg" />
-        <img class="img block" src="@/section/s2/img.png" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="img block" src="@/section/s2/img.webp" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <div class="caption">實景拍攝美化圖</div>
         <div class="line hidden md:block"></div>
       </div>
       <div class="t" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -72,6 +73,20 @@
         mix-blend-mode: multiply;
       }
     }
+
+    .caption{
+      font-size: size-m(11);
+      color: #fff;
+      position: absolute;
+      right:  size-m(10);
+      bottom: size-m(50);
+       @media screen and (min-width:768px) {
+        font-size: size(12);
+        right:  size(-290);
+      bottom: size(130);
+       }
+    }
+
 
     .txt {
       width: size-m(126);

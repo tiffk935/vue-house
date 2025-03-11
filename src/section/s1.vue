@@ -18,13 +18,13 @@
   width: 100%;
   height: size-m(667);
   background: #C68865;
-  background-image: url(@/section/s1/bg-m.jpg);
+  background-image: url(@/section/s1/bg-m.webp);
   background-size: cover;
   background-position: center center;
   padding: size-m(13) 0 0 0;
   @media screen and (min-width:768px) {
     height: size(1080);
-    background-image: url(@/section/s1/bg.jpg);
+    background-image: url(@/section/s1/bg.webp);
     padding: size(13) 0 0 0;
   }
 

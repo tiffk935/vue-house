@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d903.7903120376435!2d121.5116826!3d25.0286013!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9a2c91d546f%3A0x491788dc1505af79!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5ZKM5bmz6KW_6Lev5LqM5q61NDjomZ8!5e0!3m2!1szh-TW!2stw!4v1718780535082!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/VsYxR5FvXU8Pzipm8",
     phone: "02-2914-5888",
-    fbLink: "#",
-    fbMessage: "#",
+    fbLink: "https://www.facebook.com/61573126301169/",
+    fbMessage: "https://m.me/61573126301169/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "佳鋐建設股份有限公司"],
@@ -22,7 +22,7 @@ export default {
         ["景觀設計", "邑埕景觀設計"],
         ["建築外觀", "曾聰憲建築師事務所"],
     ],
-    gtmCode: ["GTM-W2Z2B6ND","GTM-KXCTSBDN"], // 可放置多個
+    gtmCode: ["GTM-W4SNV34K"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

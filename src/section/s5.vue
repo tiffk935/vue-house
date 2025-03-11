@@ -128,12 +128,12 @@
   .img {
     width: 100%;
     height: size-m(305);
-    background-image: url(@/section/s5/img-m.jpg);
+    background-image: url(@/section/s5/img-m.webp);
     background-size: cover;
     background-position: bottom center;
     @media screen and (min-width:768px) {
       height: size(485);
-      background-image: url(@/section/s5/img.jpg);
+      background-image: url(@/section/s5/img.webp);
     }
   }
 }
