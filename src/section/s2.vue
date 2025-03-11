@@ -4,7 +4,7 @@
       <img class="en block" src="@/section/s2/en.svg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
       <div class="pic">
         <img class="txt block" src="@/section/s2/txt.svg" />
-        <img class="img block" src="@/section/s2/img.webp" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="img block" src="@/section/s2/img.jpg" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
         <div class="caption">實景拍攝美化圖</div>
         <div class="line hidden md:block"></div>
       </div>
