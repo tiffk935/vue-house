@@ -51,7 +51,7 @@
     font-size: size-m(24);
     line-height: size-m(38);
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .18em;
     margin: 0 0 size-m(10) 0;
     text-align: center;

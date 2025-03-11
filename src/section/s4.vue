@@ -64,7 +64,7 @@
     font-size: size-m(24);
     line-height: size-m(38);
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .18em;
     margin: 0 0 size-m(13) 0;
     @media screen and (min-width:768px) {
@@ -145,7 +145,7 @@
           .person-info-title {
             font-size: size-m(20);
             line-height: size-m(38);
-            font-weight: 600;
+            font-weight: 500;
             letter-spacing: .18em;
             @media screen and (min-width:768px) {
               display: none;
@@ -245,7 +245,7 @@
         .person-info-title {
           font-size: size(49);
           line-height: size(59);
-          font-weight: 600;
+          font-weight: 500;
           letter-spacing: .15em;
         }
 

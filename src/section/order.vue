@@ -131,7 +131,7 @@
     font-size: size-m(24);
     line-height: size-m(38);
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: .18em;
     margin-bottom: size-m(25);
     @media screen and (min-width:768px) {
