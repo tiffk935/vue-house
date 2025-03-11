@@ -354,16 +354,16 @@ const list = [
     photos: [
       {
         name: '大同區　寶國建築',
-        info: '實景拍攝圖',
+        info: '3D示意圖',
       },
       {
         name: '新莊區　群曜維美',
-        info: '實景拍攝圖',
+        info: '3D示意圖',
         nameColor: '#000'
       },
       {
         name: '桃園市　大亮睦粼',
-        info: '實景拍攝圖',
+        info: '3D示意圖',
       },
     ],
   },
@@ -375,12 +375,12 @@ const list = [
     photos: [
       {
         name: '中山區　昀集柏寓',
-        info: '實景拍攝圖',
+        info: '3D示意圖',
         nameColor: '#000'
       },
       {
         name: '中山區　昀集柏寓',
-        info: '實景拍攝圖',
+        info: '3D示意圖',
       },
       {
         name: '奎克咖啡　台中惠中店',
