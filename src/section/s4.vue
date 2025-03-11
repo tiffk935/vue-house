@@ -8,7 +8,7 @@
       <div v-for="(item, itemIdx) in list" class="item md:flex md:justify-between">
         <div class="person flex">
           <div class="person-photo" data-aos="fade" data-aos-duration="1000" data-aos-delay="0">
-            <img class="w-full block" :src="item.person.photo" />
+            <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/person.webp`)" />
           </div>
           <div class="person-info">
             <div class="person-info-title text-[#DFC36C] font-['Noto_Serif_TC']">{{item.person.title}}</div>
@@ -18,30 +18,15 @@
         <div class="md:flex md:flex-col-reverse md:justify-end">
           <div class="photos">
             <div v-for="(photoItem, photoItemIdx) in item.photos" class="photo relative" data-aos="fade-up" data-aos-duration="1000" :data-aos-delay="photoItemIdx * 200">
-              <img class="w-full block" :src="photoItem.photo" />
-              <!-- <div class="photo-name absolute" :style="{color: photoItem.nameColor ?? null}">{{photoItem.name}}</div> -->
+              <img class="w-full block" :src="getImg(`./s4/${itemIdx + 1}/photo${photoItemIdx + 1}.webp`)" />
               <div class="photo-name absolute" v-html="photoItem.name" :style="{color: photoItem.nameColor ?? null}"></div>
               <div class="photo-info absolute">{{photoItem.info}}</div>
             </div>
           </div>
           <div class="ens flex" data-aos="fade" data-aos-duration="1000" data-aos-delay="0">
             <div class="person-info-title hidden md:block text-[#DFC36C] font-['Noto_Serif_TC']">{{item.person.title}}</div>
-            <template v-if="itemIdx === 0">
-              <img class="en-main block" src="@/section/s4/1/en.svg" />
-              <img class="en-small block" src="@/section/s4/1/en-small.svg" />
-            </template>
-            <template v-if="itemIdx === 1">
-              <img class="en-main block" src="@/section/s4/2/en.svg" />
-              <img class="en-small block" src="@/section/s4/2/en-small.svg" />
-            </template>
-            <template v-if="itemIdx === 2">
-              <img class="en-main block" src="@/section/s4/3/en.svg" />
-              <img class="en-small block" src="@/section/s4/3/en-small.svg" />
-            </template>
-            <template v-if="itemIdx === 3">
-              <img class="en-main block" src="@/section/s4/4/en.svg" />
-              <img class="en-small block" src="@/section/s4/4/en-small.svg" />
-            </template>
+            <img class="en-main block" :src="getImg(`./s4/${itemIdx + 1}/en.svg`)" />
+            <img class="en-small block" :src="getImg(`./s4/${itemIdx + 1}/en-small.svg`)" />
           </div>
         </div>
       </div>
@@ -357,29 +342,28 @@
 </style>
 
 <script setup>
+const images = import.meta.globEager('./s4/**/*.*');
+const getImg = path => images[path]?.default || '';
+
 const list = [
   {
     person: {
       title: '雕塑城市記憶',
       desc: '建築規劃 王成維建築師<br>王成維建築師事務所',
-      photo: new URL('./s4/1/person.webp', import.meta.url).href
     },
     photos: [
       {
         name: '大同區　寶國建築',
         info: '實景拍攝圖',
-        photo: new URL('./s4/1/photo1.webp', import.meta.url).href,
       },
       {
         name: '新莊區　群曜維美',
         info: '實景拍攝圖',
-        photo: new URL('./s4/1/photo2.webp', import.meta.url).href,
         nameColor: '#000'
       },
       {
         name: '桃園市　大亮睦粼',
         info: '實景拍攝圖',
-        photo: new URL('./s4/1/photo3.webp', import.meta.url).href,
       },
     ],
   },
@@ -387,24 +371,20 @@ const list = [
     person: {
       title: '注入文化美學',
       desc: '公設設計 徐嫡嬪總監<br>沐易設計有限公司',
-      photo: new URL('./s4/2/person.webp', import.meta.url).href
     },
     photos: [
       {
         name: '中山區　昀集柏寓',
         info: '實景拍攝圖',
-        photo: new URL('./s4/2/photo1.webp', import.meta.url).href,
         nameColor: '#000'
       },
       {
         name: '中山區　昀集柏寓',
         info: '實景拍攝圖',
-        photo: new URL('./s4/2/photo2.webp', import.meta.url).href,
       },
       {
         name: '奎克咖啡　台中惠中店',
         info: '實景拍攝圖',
-        photo: new URL('./s4/2/photo3.webp', import.meta.url).href,
         nameColor: '#000'
       },
     ],
@@ -413,24 +393,20 @@ const list = [
     person: {
       title: '燈光映照詩意',
       desc: '燈光設計 賴雨農總監<br>十聿照明設計有限公司',
-      photo: new URL('./s4/3/person.webp', import.meta.url).href
     },
     photos: [
       {
         name: '台北101',
         info: '實景拍攝圖',
-        photo: new URL('./s4/3/photo1.webp', import.meta.url).href,
       },
       {
         name: '高雄萬豪酒店',
         info: '實景拍攝圖',
-        photo: new URL('./s4/3/photo2.webp', import.meta.url).href,
         nameColor: '#000'
       },
       {
         name: '曼谷瑰麗酒店',
         info: '實景拍攝圖',
-        photo: new URL('./s4/3/photo3.webp', import.meta.url).href,
         nameColor: '#000'
       },
     ],
@@ -438,25 +414,21 @@ const list = [
   {
     person: {
       title: '業界防水權威',
-      desc: `防水保固<br>大信防水工程有限公司`,
-      photo: new URL('./s4/4/person.webp', import.meta.url).href
+      desc: `防水保固<img src="${getImg('./s4/4/logo.svg')}"><br>大信防水工程有限公司`,
     },
     photos: [
       {
         name: '華固天鑄',
         info: '實景拍攝圖',
-        photo: new URL('./s4/4/photo1.webp', import.meta.url).href,
         nameColor: '#000'
       },
       {
         name: '和平大苑',
         info: '實景拍攝圖',
-        photo: new URL('./s4/4/photo2.webp', import.meta.url).href,
       },
       {
         name: '元利<span>O<br>N<br>E<br>　<br>P<br>A<br>R<br>K</span>',
         info: '實景拍攝圖',
-        photo: new URL('./s4/4/photo3.webp', import.meta.url).href,
         nameColor: '#000'
       },
     ],
