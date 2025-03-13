@@ -12,7 +12,7 @@
       <swiper-slide>
         <div class="item">
           <div class="pic">
-            <img src="@/assets/home/banner/img-m.png" />
+            <img src="@/assets/home/banner/img-m.webp" />
           </div>
           <div class="info">
             <div>
@@ -25,8 +25,8 @@
       <swiper-slide>
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision/banner/img-m.png" />
-            <img class="pc" src="@/assets/enter/img1.png" />
+            <img class="mob" src="@/assets/vision/banner/img-m.webp" />
+            <img class="pc" src="@/assets/enter/img1.webp" />
           </div>
           <div class="info">
             <div>
@@ -42,8 +42,8 @@
       <div class="item-wrapper">
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/home/banner/img-m.png" />
-            <img class="pc" src="@/assets/enter/img1.png" />
+            <img class="mob" src="@/assets/home/banner/img-m.webp" />
+            <img class="pc" src="@/assets/enter/img1.webp" />
           </div>
           <div class="info">
             <div>
@@ -56,8 +56,8 @@
       <div class="item-wrapper">
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision/banner/img-m.png" />
-            <img class="pc" src="@/assets/enter/img2.png" />
+            <img class="mob" src="@/assets/vision/banner/img-m.webp" />
+            <img class="pc" src="@/assets/enter/img2.webp" />
           </div>
           <div class="info">
             <div>
@@ -81,7 +81,7 @@
   width: 100%;
   height: calc(100% - func.size-m(74));
   background: #fff;
-  background-image: url(@/assets/enter/bg-m.png);
+  background-image: url(@/assets/enter/bg-m.webp);
   background-size: 100% auto;
   background-position: center;
   z-index: 1;
@@ -120,7 +120,7 @@
     .item-wrapper {
       width: 50%;
       background: #fff;
-      background-image: url(@/assets/enter/bg.png);
+      background-image: url(@/assets/enter/bg.webp);
       background-size: 100% 100%;
     }
   }

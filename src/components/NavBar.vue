@@ -1,13 +1,13 @@
 <template>
   <div class="nav-bg" v-if="mobOpen" @click="mobOpen = false"></div>
   <header>
-    <RouterLink class="logo" to="/"><img src="@/assets/logo.png" /></RouterLink>
+    <RouterLink class="logo" to="/"><img src="@/assets/logo.webp" /></RouterLink>
     <div class="mob-toogle" @click="mobOpen = true">
       <span></span><span></span><span></span>
     </div>
     <nav class="mob-nav" :class="{open: mobOpen}">
       <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink>
-      <RouterLink to="/vision#order" @click="mobOpen = false" style="color: #269161;">預約表單</RouterLink>
+      <RouterLink to="/vision#order" @click="mobOpen = false">預約表單</RouterLink>
     </nav>
     <nav class="pc-nav">
       <ul>
@@ -17,7 +17,7 @@
             <li><RouterLink to="/vision#info">展覽資訊</RouterLink></li>
             <li><RouterLink to="/vision#preview">展覽預告</RouterLink></li>
             <li><RouterLink to="/vision#about">關於策展</RouterLink></li>
-            <li><RouterLink to="/vision#order" style="color: #269161;">預約表單</RouterLink></li>
+            <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
           </ul>
         </li>
         <li><RouterLink class="order-btn" to="/vision#order">預約表單</RouterLink></li>
@@ -143,6 +143,18 @@ header {
         color: #fff;
         background: #269D45;
         padding: func.size(11);
+        border: 1px solid #269D45;
+
+
+        &:hover{
+          background: #FFF;
+        }
+      }
+
+      &:hover{
+      color: #269D45;
+      transition:.3s;  
+      
       }
     }
 

@@ -39,7 +39,7 @@ footer {
     left: 0;
     width: 100%;
     height: func.size-m(5);
-    background-image: url(@/assets/footer-line.jpg);
+    background-image: url(@/assets/footer-line.webp);
     background-size: auto 100%;
     background-position: center center;
     @media screen and (min-width:768px) {
@@ -124,6 +124,7 @@ footer {
       text-decoration: none;
       border-radius: func.size-m(100);
       overflow: hidden;
+      border:1px solid #269D45;
       @media screen and (min-width:768px) {
         font-size: func.size(18);
         line-height: func.size(18);
@@ -140,14 +141,21 @@ footer {
         width: 100%;
         height: 100%;
         mix-blend-mode: multiply;
-        background-image: url(@/assets/mask.jpg);
+        background-image: url(@/assets/mask.webp);
         background-size: 39% auto;
         background-position: 23% 0;
+      }
+
+      &:hover{
+        color: #269D45;
+        background: #fff;
+        transition:.3s;
       }
       
       span {
         position: relative;
         z-index: 1;
+        
       }
     }
 
@@ -155,6 +163,7 @@ footer {
       width: func.size-m(23);
       height: func.size-m(23);
       background: #D3D3D3;
+      border: 1px solid #269d4600;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -170,6 +179,11 @@ footer {
         @media screen and (min-width:768px) {
           height: func.size(25);
         }
+      }
+
+      &:hover{
+        border: 1px solid #269D45;
+        transition:.3s;
       }
     }
 
@@ -200,6 +214,13 @@ footer {
         margin: 0 func.size(10);
       }
 
+      &:hover{
+        background: #000;
+        transition:.3s;
+        
+        }
+
+
       &:before {
         content: '';
         position: absolute;
@@ -208,7 +229,7 @@ footer {
         width: 100%;
         height: 100%;
         mix-blend-mode: multiply;
-        background-image: url(@/assets/mask.jpg);
+        background-image: url(@/assets/mask.webp);
         background-size: 39% auto;
         background-position: 23% 0;
       }
@@ -229,6 +250,8 @@ footer {
           width: func.size(29);
           height: func.size(19);
         }
+
+        
       }
     }
   }

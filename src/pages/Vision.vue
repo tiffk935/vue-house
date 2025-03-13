@@ -1,7 +1,7 @@
 <template>
   <section class="banner">
-    <img class="img mob" src="@/assets/vision/banner/img-m.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <img class="img pc" src="@/assets/vision/banner/img.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+    <img class="img mob" src="@/assets/vision/banner/img-m.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+    <img class="img pc" src="@/assets/vision/banner/img.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <img class="txt mob" src="@/assets/vision/banner/txt-m.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="onder-btn" @click="scrollToEl('#order')">立即預約</div>
   </section>
@@ -20,7 +20,7 @@
         @swiper="onSwiper"
       >
         <swiper-slide>
-          <img src="@/assets/vision/about/1.jpg" />
+          <img src="@/assets/vision/about/1.webp" />
           <div>
             <div class="t1">
               <span>脈絡</span><br>
@@ -39,7 +39,7 @@
           </div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/vision/about/2.jpg" />
+          <img src="@/assets/vision/about/2.webp" />
           <div>
             <div class="t1">
               <span>新生</span><br>
@@ -61,7 +61,7 @@
           </div>
         </swiper-slide>
         <swiper-slide>
-          <img src="@/assets/vision/about/3.jpg" />
+          <img src="@/assets/vision/about/3.webp" />
           <div>
             <div class="t1">
               <span>集成</span><br>
@@ -89,16 +89,16 @@
   <section id="preview">
     <h2>展覽預告</h2>
     <div class="pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="mob" src="@/assets/vision/preview/pic-m.jpg" />
-      <img class="pc" src="@/assets/vision/preview/pic.jpg" />
+      <img class="mob" src="@/assets/vision/preview/pic-m.webp" />
+      <img class="pc" src="@/assets/vision/preview/pic.webp" />
     </div>
   </section>
 
   <section id="info">
     <h2>展覽資訊</h2>
     <div class="pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="mob" src="@/assets/vision/info/pic-m.png" />
-      <img class="pc" src="@/assets/vision/info/pic.png" />
+      <img class="mob" src="@/assets/vision/info/pic-m.webp" />
+      <img class="pc" src="@/assets/vision/info/pic.webp" />
     </div>
     <div class="container">
       <div class="line"></div>
@@ -318,6 +318,12 @@ h2 {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+    }
+
+    &:hover{
+     background: #219664;
+    color: #fff;
+    transition:.3s;
     }
   }
 }
@@ -579,6 +585,7 @@ h2 {
       width: func.size-m(39);
       height: func.size-m(39);
       background: #E8E8E8;
+      border: 1px solid #21966300;
       border-radius: 50%;
       display: flex;
       justify-content: center;
@@ -587,6 +594,12 @@ h2 {
         width: func.size(80);
         height: func.size(80);
       }
+
+      &:hover{
+        border: 1px solid #219664;
+        transition:.3s;
+      }
+
     }
 
     img {
@@ -938,6 +951,11 @@ h2 {
         padding: func.size(27) 0;
         border: func.size(1) solid #299644;
       }
+      &:hover{
+       background: #fff;
+      color: #299644; 
+      transition:.3s;
+    }
     }
   }
 }

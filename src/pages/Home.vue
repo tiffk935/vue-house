@@ -5,7 +5,7 @@
     <section class="banner">
       <div class="title-m" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-      <img class="style" src="@/assets/home/banner/style.png" />
+      <img class="style" src="@/assets/home/banner/style.webp" />
       <div class="info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
       <img class="logoicon" src="@/assets/home/banner/logoicon.svg" />
       <RouterLink class="onder-btn" to="/vision#order">立即預約</RouterLink>
@@ -17,10 +17,10 @@
       </div>
       <div class="marquee-wrapper">
         <div class="marquee marquee1">
-          <img v-for="num in 4" src="@/assets/home/about/pic1.jpg" />
+          <img v-for="num in 4" src="@/assets/home/about/pic1.webp" />
         </div>
         <div class="marquee marquee2">
-          <img v-for="num in 4" src="@/assets/home/about/pic2.jpg" />
+          <img v-for="num in 4" src="@/assets/home/about/pic2.webp" />
         </div>
       </div>
       <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -35,8 +35,8 @@
         <h2>國城作品</h2>
       </div>
       <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="pc" src="@/assets/home/work/pic.jpg" />
-        <img class="mob" src="@/assets/home/work/pic-m.jpg" />
+        <img class="pc" src="@/assets/home/work/pic.webp" />
+        <img class="mob" src="@/assets/home/work/pic-m.webp" />
       </div>
       <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t1">港都豪宅建築的定潮者</div>
@@ -64,8 +64,8 @@
         <h2>平實團隊</h2>
       </div>
       <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="pc" src="@/assets/home/team/pic.png" />
-        <img class="mob" src="@/assets/home/team/pic-m.png" />
+        <img class="pc" src="@/assets/home/team/pic.webp" />
+        <img class="mob" src="@/assets/home/team/pic-m.webp" />
       </div>
       <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t3">｜敬請期待</div>
@@ -77,8 +77,8 @@
         <h2>平實建築</h2>
       </div>
       <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="pc" src="@/assets/home/archi/pic.png" />
-        <img class="mob" src="@/assets/home/archi/pic-m.png" />
+        <img class="pc" src="@/assets/home/archi/pic.webp" />
+        <img class="mob" src="@/assets/home/archi/pic-m.webp" />
       </div>
       <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         <div class="t3">｜敬請期待</div>
@@ -188,7 +188,7 @@ h2 {
     left: func.size-m(53);
     width: func.size-m(267.52);
     height: func.size-m(135);
-    background-image: url(@/assets/home/banner/img-m.png);
+    background-image: url(@/assets/home/banner/img-m.webp);
     @include bg-contain;
     @media screen and (min-width:768px) {
       display: none;
@@ -268,6 +268,12 @@ h2 {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+
+      &:hover{
+        background: #219664;
+        color: #fff;
+        transition:.3s;
+      }
     }
   }
 }
@@ -308,9 +314,9 @@ h2 {
         animation: marquee 30s linear infinite;
       }
 
-      &.marquee1 {
+      &.marquee2 {
         img {
-          animation-delay: 2s;
+          animation-delay: -2s;
         }
       }
     }
@@ -356,7 +362,7 @@ h2 {
       height: func.size-m(273);
       background: #ddd;
       overflow: hidden;
-      background-image: url(@/assets/home/area/pic.jpg);
+      background-image: url(@/assets/home/area/pic.webp);
       background-size: 100% auto;
       background-repeat: no-repeat;
       background-position: 0 80%;
