@@ -43,11 +43,11 @@
       <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
       <div>MESSAGE</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]"
+    <!--div class="flex flex-1 flex-col contact-item justify-center items-center text-[#6E4D3B]"
       @click="modalOpen = true; modalType = 'gmap'">
       <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
       <div>LOCATION</div>
-    </div>
+    </div-->
   </div>
 
   <!-- Modal -->
