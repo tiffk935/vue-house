@@ -445,28 +445,38 @@ h2 {
 </style>
 
 <script setup>
-import { onMounted, ref } from "vue";
+import { nextTick, onMounted, ref } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Enter from '@/components/Enter.vue';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const showEnterSection = ref(true);
 
 const setShowEnterSection = (bool) => {
   showEnterSection.value = bool;
+
+  if ( !bool ) {
+    nextTick(() => {
+      console.log('nextTick');
+      
+      if ( document.querySelector('.area .parallax') ) {
+        console.log('aaaa');
+        
+        setTimeout(() => {
+          gsap.to('.area .parallax', {
+            backgroundPositionY: '30%',
+            scrollTrigger: {
+              trigger: '.area .parallax',
+              start: 'top bottom',
+              scrub: 0.2,
+              end: 'top top',
+            }
+          });
+        }, 50);
+      }
+    });
+  }
 }
-
-gsap.registerPlugin(ScrollTrigger);
-
-onMounted(() => {
-  gsap.to('.area .parallax', {
-    backgroundPositionY: '30%',
-    scrollTrigger: {
-      trigger: '.area .parallax',
-      start: 'top bottom',
-      scrub: 0.2,
-      end: 'top top',
-    }   
-  });
-});
 </script>

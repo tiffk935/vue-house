@@ -38,6 +38,7 @@ body {
 main {
   position: relative;
   min-height: 100vh;
+  z-index: 2;
 
   &#page-home {
     min-height: auto;

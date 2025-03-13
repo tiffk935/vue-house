@@ -79,7 +79,7 @@ footer {
     border-top: func.size-m(1) solid #000;
     border-bottom: func.size-m(1) solid #000;
     padding: func.size-m(12) 0;
-    margin-bottom: func.size-m(16);
+    margin-bottom: func.size-m(55);
     @media screen and (min-width:768px) {
       font-size: func.size(19);
       line-height: func.size(32);
@@ -104,6 +104,16 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: func.size-m(23);
+    z-index: 99;
+    @media screen and (min-width:768px) {
+      position: static;
+      padding-bottom: 0;
+    }
 
     a {
       display: block;
