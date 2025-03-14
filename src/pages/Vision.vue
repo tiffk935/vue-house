@@ -137,7 +137,7 @@
           <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
           <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" /></a>
           <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
-          <a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a>
+          <!--a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
           <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
         </div>
       </div>
@@ -600,7 +600,8 @@ h2 {
     display: flex;
     justify-content: space-between;
     @media screen and (min-width:768px) {
-      width: func.size(570);
+      //width: func.size(570);
+      width: func.size(470);
     }
 
     a {

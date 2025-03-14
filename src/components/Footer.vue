@@ -9,7 +9,7 @@
         <div class="btns">
           <RouterLink class="onder-btn" to="/vision#order"><span>預約表單</span></RouterLink>
           <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
-          <a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a>
+          <!--a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
           <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
           <a class="circle" target="_blank" :href="info.googleLink"><img src="@/assets/icon-map.svg" /></a>
           <div class="line"></div>
@@ -106,8 +106,8 @@ footer {
     align-items: center;
     position: fixed;
     bottom: func.size-m(20);
-    //right: func.size-m(10);
-    left: func.size-m(38);
+    //left: func.size-m(38);
+    left: func.size-m(55);            
     //width: 100%;
     //margin-bottom: func.size-m(23);
     z-index: 99;
