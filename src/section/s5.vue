@@ -28,7 +28,6 @@
         <SplideSlide><img src="@/section/s5/logo/05.svg" /></SplideSlide>
         <SplideSlide><img src="@/section/s5/logo/06.svg" /></SplideSlide>
         <SplideSlide><img src="@/section/s5/logo/07.svg" /></SplideSlide>
-        <SplideSlide><img src="@/section/s5/logo/08.svg" /></SplideSlide>
         <SplideSlide><img src="@/section/s5/logo/09.svg" /></SplideSlide>
         <SplideSlide><img src="@/section/s5/logo/10.svg" /></SplideSlide>
       </Splide>
