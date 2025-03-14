@@ -17,7 +17,8 @@
           <div class="info">
             <div>
               <img src="@/assets/enter/txt1-m.svg" />
-              <div class="enter-btn" @click="props.setShowEnterSection(false)">點擊了解更多</div>
+              <!-- <div class="enter-btn" @click="props.setShowEnterSection(false)">點擊了解更多</div> -->
+              <RouterLink class="enter-btn" to="/gem">點擊了解更多</RouterLink>
             </div>
           </div>
         </div>
@@ -48,7 +49,8 @@
           <div class="info">
             <div>
               <img src="@/assets/enter/txt1-m.svg" />
-              <div class="enter-btn" @click="props.setShowEnterSection(false)">點擊了解更多</div>
+              <!-- <div class="enter-btn" @click="props.setShowEnterSection(false)">點擊了解更多</div> -->
+              <RouterLink class="enter-btn" to="/gem">點擊了解更多</RouterLink>
             </div>
           </div>
         </div>
