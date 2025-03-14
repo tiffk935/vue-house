@@ -30,11 +30,17 @@
             <div class="t3">讓舊有的美好，轉化成當代，<br>傳承到未來。</div>
             <div class="line"></div>
             <div class="t4">代謝｜保存與延續  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5">
-              ● 營區內原生老樹保留移植 <br class="mob">
+            <div class="t5 pc">
+              ● 營區內原生老樹保留移植
               ● 工兵群營舍建築轉身文化資產 <br>
-              ● 從軍事防衛到氣候防衛 <br class="mob">
+              ● 從軍事防衛到氣候防衛
               ● 日治競馬場與南紡後甲舊廠 
+            </div>
+            <div class="t5 mob">
+              ●　營區內原生老樹保留移植 <br>
+              ●　工兵群營舍建築轉身文化資產 <br>
+              ●　從軍事防衛到氣候防衛 <br>
+              ●　日治競馬場與南紡後甲舊廠 
             </div>
           </div>
         </swiper-slide>
@@ -49,14 +55,23 @@
             <div class="t3">多樣性是偉大城市的基本價值。</div>
             <div class="line"></div>
             <div class="t4">架構｜共創社會公共價值  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5">
-              ● 什麼是「公辦」都市更新 <br class="mob">
+            <div class="t5 pc">
+              ● 什麼是「公辦」都市更新
               ● 城市設計創造生活願景 <br>
-              ● TOD導向城市更新 <br class="mob">
-              ● 府城的遠景 <br class="mob">
+              ● TOD導向城市更新
+              ● 府城的遠景
               ● 東區綠核心 <br>
-              ● 點線面三維整合 <br class="mob">
+              ● 點線面三維整合
               ● 成大文教生活圈 
+            </div>
+            <div class="t5 mob">
+              ●　什麼是「公辦」都市更新 <br>
+              ●　城市設計創造生活願景 <br>
+              ●　TOD導向城市更新 <br>
+              ●　府城的遠景 <br>
+              ●　東區綠核心 <br>
+              ●　點線面三維整合 <br>
+              ●　成大文教生活圈 
             </div>
           </div>
         </swiper-slide>
@@ -71,12 +86,19 @@
             <div class="t3">唯有城市由眾人創造，<br>城市才能滋養眾人。</div>
             <div class="line"></div>
             <div class="t4">願景｜東台南新富聚落  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5">
-              ● 從人居視角看都市複合機能 <br class="mob">
+            <div class="t5 pc">
+              ● 從人居視角看都市複合機能
               ● 平實重劃區，堪稱集大成 <br>
-              ● 平實森林轉運站與藍綠雙捷運預定 <br class="mob">
+              ● 平實森林轉運站與藍綠雙捷運預定
               ● 商業特區串連南紡未來開發 <br>
               ● 退縮開放謙讓，讓生活走進來
+            </div>
+            <div class="t5 mob">
+              ●　從人居視角看都市複合機能 <br>
+              ●　平實重劃區，堪稱集大成 <br>
+              ●　平實森林轉運站與藍綠雙捷運預定 <br>
+              ●　商業特區串連南紡未來開發 <br>
+              ●　退縮開放謙讓，讓生活走進來
             </div>
           </div>
         </swiper-slide>
@@ -304,16 +326,16 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(670 + 165);
-      left: func.size(1438);
+      top: func.size(670 + 124);
+      left: func.size(1490);
       border: func.size(5) solid #219664;
       background: #fff;
       text-decoration: none;
       color: #000;
-      font-size: func.size(31);
+      font-size: func.size(23);
       letter-spacing: .18em;
-      width: func.size(293);
-      height: func.size(70);
+      width: func.size(253);
+      height: func.size(50);
       display: flex;
       justify-content: center;
       align-items: center;
@@ -441,7 +463,7 @@ h2 {
         font-weight: 500;
         line-height: 149.2%;
         @media screen and (min-width:768px) {
-          font-size: func.size(12);
+          font-size: func.size(15);
           line-height: func.size(34);
           letter-spacing: .05em;
         }
