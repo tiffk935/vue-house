@@ -105,14 +105,22 @@ footer {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-bottom: func.size-m(23);
+    bottom: func.size-m(20);
+    //right: func.size-m(10);
+    left: func.size-m(38);
+    //width: 100%;
+    //margin-bottom: func.size-m(23);
     z-index: 99;
+    background: #ffffff;
+    padding: func.size-m(10);
+    border-radius: func.size-m(30);
     @media screen and (min-width:768px) {
       position: static;
-      padding-bottom: 0;
+      padding: 0;
+      bottom: auto;
+      left: auto;
+      background: #ffffff00;
+      
     }
 
     a {
