@@ -84,7 +84,7 @@
   background-image: url(@/assets/enter/bg-m.webp);
   background-size: 100% auto;
   background-position: center;
-  z-index: 99;
+  z-index: 998;
   @media screen and (min-width:768px) {
     top: func.size(165);
     height: calc(100% - func.size(165));
