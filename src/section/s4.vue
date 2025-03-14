@@ -402,7 +402,6 @@ const list = [
       {
         name: '高雄萬豪酒店',
         info: '實景拍攝圖',
-        nameColor: '#000'
       },
       {
         name: '曼谷瑰麗酒店',
