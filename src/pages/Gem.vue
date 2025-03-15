@@ -12,14 +12,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <h2>關於國城</h2>
     </div>
-    <div class="marquee-wrapper">
-      <div class="marquee marquee1">
-        <img v-for="num in 4" src="@/assets/home/about/pic1.webp" />
-      </div>
-      <div class="marquee marquee2">
-        <img v-for="num in 4" src="@/assets/home/about/pic2.webp" />
-      </div>
-    </div>
+    <Marquee />
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">走在前，讓後面跟上來</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
@@ -294,28 +287,6 @@ h2 {
     @media screen and (min-width:768px) {
       margin: func.size(80) 0 func.size(59) 0;
     }
-
-    .marquee {
-      height: func.size-m(118.5);
-      background: #ddd;
-      display: flex;
-      overflow: hidden;
-      @media screen and (min-width:768px) {
-        height: func.size(229.5);
-      }
-
-      img {
-        width: auto;
-        height: 100%;
-        /* animation: marquee 30s linear infinite; */
-      }
-
-      /* &.marquee2 {
-        img {
-          animation-delay: -2s;
-        }
-      } */
-    }
   }
 }
 
@@ -444,19 +415,11 @@ h2 {
 import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Marquee from "@/components/Marquee.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-
-  const marquee1TL = gsap.timeline({ repeat: -1, paused: true });
-  marquee1TL.to('.about .marquee1 img', { xPercent: -100, duration: 30, ease: 'none' });
-  const marquee2TL = gsap.timeline({ repeat: -1, paused: true });
-  marquee2TL.to('.about .marquee2 img', { xPercent: -100, duration: 30, ease: 'none' });
-  marquee2TL.seek(2);
-  marquee1TL.play();
-  marquee2TL.play();
-
   setTimeout(() => {
     gsap.to('.area .parallax', {
       backgroundPositionY: '30%',
