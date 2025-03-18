@@ -260,6 +260,27 @@ $time_end        = isset($_POST['time_end']) ? $_POST['time_end'] : '';
 
     //檢查沒問題才寄出信件
     if ($bCheck == true) { //if start
+        $ctwData = array(
+            'cCustomerName' => $name,     // 客戶名稱
+            'cMobile' => $phone,          // 連絡電話
+            'cAddress1' => $city,         // 縣市
+            'cAddress2' => $area,         // 鄉鎮
+            'cRemark' => $msg,            // 備註
+            'cEmail' => $user_email,      // 電子信箱
+            'cBuildCaseName' => '豐邑匯禮' // 建案管理的建案名稱
+        );
+        $ctwHeader = array(
+            'accept: text/plain',
+            'Content-Type: application/json'
+        );
+        $ch = curl_init('https://ctw-api-a6cef6dffcbuh8am.japaneast-01.azurewebsites.net/api/PhonePreOrder/ShareSaveData');
+        curl_setopt($ch, CURLOPT_POST, true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'POST');
+        curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($ctwData));
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, $ctwHeader);
+        curl_exec($ch);
+        curl_close($ch);
 
       # 添加到 Googlde 資料DB Start
         try {
