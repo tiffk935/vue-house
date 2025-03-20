@@ -534,12 +534,11 @@ const send = () => {
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
-      &room_type=${formData.room_type}
       &budget=${formData.budget}
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
+      &msg=${formData.room_type}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
