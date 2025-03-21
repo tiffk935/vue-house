@@ -9,7 +9,7 @@
     </div>
     <div class="list">
       <article v-for="(item, idx) in list">
-        <a href="#">
+        <RouterLink to="/single">
           <img :src="getImg(`../assets/news/${idx + 1}/thumbnail.jpg`)" />
           <h3>{{ item.title }}</h3>
           <div class="meta">
@@ -17,7 +17,7 @@
             <div class="line"></div>
             <div class="more">READ MORE+</div>
           </div>
-        </a>
+        </RouterLink>
       </article>
     </div>
     <div class="pagination">
