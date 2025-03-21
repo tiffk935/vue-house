@@ -11,6 +11,8 @@
 </template>
 
 <style lang="scss">
+@use "@/assets/style/function.scss" as func;
+
 * {
   box-sizing: border-box;
 }
@@ -21,6 +23,12 @@ body {
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 #page-bg {
@@ -37,10 +45,10 @@ body {
 
 main {
   position: relative;
-  min-height: 100vh;
-
-  &#page-home {
-    min-height: auto;
+  flex: 1;
+  padding: func.size-m(74) 0 0 0;
+  @media screen and (min-width:768px) {
+    padding: func.size(165) 0 0 0;
   }
 }
 </style>

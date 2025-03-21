@@ -297,18 +297,18 @@ h2 {
 .banner {
   position: relative;
   width: 100%;
-  height: func.size-m(667);
+  height: func.size-m(667 - 74);
   @media screen and (min-width:768px) {
-    height: func.size(1080);
+    height: func.size(1080 - 165);
   }
 
   .img {
     position: absolute;
-    top: func.size-m(135);
+    top: func.size-m(61);
     left: func.size-m(92);
     width: func.size-m(189);
     @media screen and (min-width:768px) {
-      top: func.size(411);
+      top: func.size(192);
       left: func.size(177);
       width: func.size(1566);
     }
@@ -316,7 +316,7 @@ h2 {
 
   .txt {
     position: absolute;
-    top: func.size-m(480);
+    top: func.size-m(406);
     left: func.size-m(57);
     width: func.size-m(262);
   }
@@ -326,7 +326,7 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(670 + 124);
+      top: func.size(629);
       left: func.size(1490);
       border: func.size(5) solid #219664;
       background: #fff;

@@ -1,22 +1,12 @@
 <template>
-  <section class="banner">
-    <img class="mob" src="@/assets/pinshi-team/banner-m.jpg" />
-    <img class="pc" src="@/assets/pinshi-team/banner.jpg" />
+  <section>
+    <div class="banner">
+      <img class="mob" src="@/assets/pinshi-team/banner-m.jpg" />
+      <img class="pc" src="@/assets/pinshi-team/banner.jpg" />
+    </div>
+    <div class="coming-soon">敬請期待｜coming soon</div>
   </section>
-  <div class="coming-soon">敬請期待｜coming soon</div>
 </template>
-
-<style lang="scss">
-@use "@/assets/style/function.scss" as func;
-
-#page-pinshiTeam  {
-  background: #fff;
-  padding-bottom: func.size-m(49);
-  @media screen and (min-width:768px) {
-    padding-bottom: func.size(95);
-  }
-}
-</style>
 
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
@@ -35,10 +25,18 @@
   }
 }
 
-.banner {
-  margin: func.size-m(74 + 75) 0 func.size-m(113) 0;
+section {
+  background: #fff;
+  padding: func.size-m(75) 0 func.size-m(49) 0;
   @media screen and (min-width:768px) {
-    margin: func.size(165 + 181) 0 func.size(156) 0;
+    padding: func.size(181) 0 func.size(95) 0;
+  }
+}
+
+.banner {
+  margin-bottom: func.size-m(113);
+  @media screen and (min-width:768px) {
+    margin-bottom: func.size(156);
   }
 
   img {

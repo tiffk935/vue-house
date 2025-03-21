@@ -31,9 +31,9 @@
 }
 
 .banner {
-  margin: func.size-m(74) 0 func.size-m(27) 0;
+  padding: 0 0 func.size-m(27) 0;
   @media screen and (min-width:768px) {
-    margin: func.size(165) 0 func.size(44) 0;
+    padding: 0 0 func.size(44) 0;
   }
 
   img {

@@ -1,9 +1,11 @@
 <template>
-  <section class="banner">
-    <img class="mob" src="@/assets/home/archi/pic-m.webp" />
-    <img class="pc" src="@/assets/home/archi/pic.webp" />
+  <section>
+    <div class="banner">
+      <img class="mob" src="@/assets/home/archi/pic-m.webp" />
+      <img class="pc" src="@/assets/home/archi/pic.webp" />
+    </div>
+    <div class="coming-soon">敬請期待｜coming soon</div>
   </section>
-  <div class="coming-soon">敬請期待｜coming soon</div>
 </template>
 
 <style lang="scss" scoped>
@@ -23,10 +25,17 @@
   }
 }
 
-.banner {
-  margin: func.size-m(74 + 134) 0 func.size-m(120) 0;
+section {
+  padding: func.size-m(134) 0 func.size-m(49) 0;
   @media screen and (min-width:768px) {
-    margin: func.size(165 + 273) 0 func.size(232) 0;
+    padding: func.size(273) 0 func.size(95) 0;
+  }
+}
+
+.banner {
+  margin-bottom: func.size-m(120);
+  @media screen and (min-width:768px) {
+    margin-bottom: func.size(232);
   }
 
   img {
