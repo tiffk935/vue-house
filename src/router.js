@@ -11,6 +11,7 @@ const routes = [
   { path: '/pinshi-team', name: 'pinshiTeam', component: () => import ("./pages/PinshiTeam.vue") },
   { path: '/pinshi-architecture', name: 'pinshiArchitecture', component: () => import ("./pages/PinshiArchitecture.vue") },
   { path: '/news', name: 'news', component: () => import ("./pages/News.vue") },
+  { path: '/:pathMatch(.*)*', name: '404', component: import ("./pages/NotFound.vue") },
 ]
 
 const router = createRouter({
