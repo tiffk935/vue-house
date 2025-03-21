@@ -6,8 +6,16 @@
       <span></span><span></span><span></span>
     </div>
     <nav class="mob-nav" :class="{open: mobOpen}">
-      <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink>
-      <RouterLink to="/vision#order" @click="mobOpen = false">預約表單</RouterLink>
+      <div>
+        <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink>
+        <RouterLink to="/team" @click="mobOpen = false">關於國城</RouterLink>
+        <RouterLink to="/work" @click="mobOpen = false">國城作品</RouterLink>
+        <RouterLink to="/pinshi" @click="mobOpen = false">平實特區</RouterLink>
+        <RouterLink to="/pinshi-team" @click="mobOpen = false">平實團隊</RouterLink>
+        <RouterLink to="/pinshi-architecture" @click="mobOpen = false">平實建築</RouterLink>
+        <RouterLink to="/news" @click="mobOpen = false">最新消息</RouterLink>
+        <RouterLink to="/vision#order" @click="mobOpen = false">預約表單</RouterLink>
+      </div>
     </nav>
     <nav class="pc-nav">
       <ul>
@@ -20,6 +28,12 @@
             <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
           </ul>
         </li>
+        <!-- <li><RouterLink to="/team">關於國城</RouterLink></li>
+        <li><RouterLink to="/work">國城作品</RouterLink></li>
+        <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
+        <li><RouterLink to="/pinshi-team">平實團隊</RouterLink></li>
+        <li><RouterLink to="/pinshi-architecture">平實建築</RouterLink></li>
+        <li><RouterLink to="/news">最新消息</RouterLink></li> -->
         <li><RouterLink class="order-btn" to="/vision#order">預約表單</RouterLink></li>
       </ul>
     </nav>
@@ -86,6 +100,9 @@ header {
     background: rgba(255, 255, 255, .8);
     padding: func.size-m(42 - 24) 0 func.size-m(19) 0;
     display: none;
+    overflow-y: auto;
+    max-height: calc(100vh - func.size-m(74));
+    max-height: calc(100svh - func.size-m(74));
 
     &.open {
       display: block;
@@ -94,20 +111,25 @@ header {
       }
     }
 
-    &:after {
-      content: '';
-      position: absolute;
-      left: func.size-m(26);
-      bottom: func.size-m(14);
-      width: func.size-m(188);
-      height: func.size-m(4);
-      background: #000;
+    & > div {
+      position: relative;
+      padding-bottom: func.size-m(28);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: func.size-m(26);
+        bottom: func.size-m(14);
+        width: func.size-m(188);
+        height: func.size-m(4);
+        background: #000;
+      }
     }
 
     a {
       color: #000;
       display: block;
-      padding: func.size-m(24) func.size-m(26) func.size-m(24) func.size-m(50);
+      padding: func.size-m(20) func.size-m(26) func.size-m(20) func.size-m(50);
       text-align: right;
       font-size: func.size-m(23);
       font-weight: 500;
@@ -181,7 +203,7 @@ header {
       
       & > li {
         position: relative;
-        margin-right: func.size(91);
+        margin-right: func.size(60);
 
         &:last-child {
           margin-right: 0;
