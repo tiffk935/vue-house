@@ -7,6 +7,9 @@ const routes = [
   { path: '/vision', name: 'vision', component: () => import ("./pages/Vision.vue") },
   { path: '/team', name: 'team', component: () => import ("./pages/Team.vue") },
   { path: '/work', name: 'work', component: () => import ("./pages/Work.vue") },
+  { path: '/gallary', name: 'gallary', component: () => import ("./pages/Gallary.vue") },
+  { path: '/pinshi-team', name: 'pinshiTeam', component: () => import ("./pages/PinshiTeam.vue") },
+  { path: '/pinshi-architecture', name: 'pinshiArchitecture', component: () => import ("./pages/PinshiArchitecture.vue") },
 ]
 
 const router = createRouter({
