@@ -1,12 +1,9 @@
 <template>
   <div id="page-bg"></div>
-
   <NavBar />
-
   <main :id="`page-${$route.name}`">
     <RouterView />
   </main>
-
   <Footer />
 </template>
 

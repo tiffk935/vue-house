@@ -12,6 +12,7 @@ const routes = [
   { path: '/pinshi-architecture', name: 'pinshiArchitecture', component: () => import ("./pages/PinshiArchitecture.vue") },
   { path: '/news', name: 'news', component: () => import ("./pages/News.vue") },
   { path: '/single', name: 'single', component: () => import ("./pages/Single.vue") },
+  { path: '/order', name: 'order', component: () => import ("./pages/Order.vue") },
   { path: '/:pathMatch(.*)*', name: '404', component: import ("./pages/NotFound.vue") },
 ]
 
