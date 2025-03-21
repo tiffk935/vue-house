@@ -117,7 +117,7 @@ body {
   margin: 0%;
 }
 .new_block img {
-  width: 100%;
+  width: 100% !important;
 }
 .new_block_m img {
   width: 100%;

@@ -651,6 +651,8 @@
     bottom: 2vw;
   }
 }
+.s01{
+
 .word{
   width: 40% !important;
   position: absolute;
@@ -677,6 +679,11 @@
   bottom:2%;
   }
 }
+
+}
+
+
+
 
 .s01{
   overflow: hidden;
