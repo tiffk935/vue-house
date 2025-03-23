@@ -8,6 +8,7 @@ const routes = [
   { path: '/team', name: 'team', component: () => import ("./pages/Team.vue") },
   { path: '/work', name: 'work', component: () => import ("./pages/Work.vue") },
   { path: '/gallary', name: 'gallary', component: () => import ("./pages/Gallary.vue") },
+  { path: '/pinshi', name: 'pinshi', component: () => import ("./pages/Pinshi.vue") },
   { path: '/pinshi-team', name: 'pinshiTeam', component: () => import ("./pages/PinshiTeam.vue") },
   { path: '/pinshi-architecture', name: 'pinshiArchitecture', component: () => import ("./pages/PinshiArchitecture.vue") },
   { path: '/news', name: 'news', component: () => import ("./pages/News.vue") },
