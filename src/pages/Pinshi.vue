@@ -225,8 +225,8 @@ img {
         width: calc(100% - func.size-m(30));
         margin-right: func.size-m(10);
         @media screen and (min-width:768px) {
-          width: 100%;
-          margin-right: 0;
+          width: func.size(651);
+          margin-right: func.size(25);
         }
       }
     }

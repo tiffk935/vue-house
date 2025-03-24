@@ -1,8 +1,19 @@
 <template>
   <footer>
     <div class="container">
-      <div class="logo">
-        <img src="@/assets/logo2.svg" />
+      <div>
+        <div class="logo">
+          <img src="@/assets/logo2.svg" />
+        </div>
+        <div class="links">
+          <RouterLink to="/vision">平實城市願景館</RouterLink>
+          <RouterLink to="/team">關於國城</RouterLink>
+          <RouterLink to="/work">國城作品</RouterLink>
+          <RouterLink to="/pinshi">平實特區</RouterLink>
+          <RouterLink to="/pinshi-team">平實團隊</RouterLink>
+          <RouterLink to="/pinshi-architecture">平實建築</RouterLink>
+          <RouterLink to="/news">最新消息</RouterLink>
+        </div>
       </div>
       <div>
         <div class="info"><b>平實城市願景館</b>｜<br>台南市 東區後甲二路／平實二街口</div>
@@ -59,9 +70,9 @@ footer {
   }
 
   .logo {
-    margin-bottom: func.size-m(38);
+    margin-bottom: func.size-m(25);
     @media screen and (min-width:768px) {
-      margin-bottom: 0;
+      margin-bottom: func.size(47);
     }
 
     img {
@@ -69,6 +80,32 @@ footer {
       width: func.size-m(155);
       @media screen and (min-width:768px) {
         width: func.size(455);
+      }
+    }
+  }
+
+  .links {
+    margin-bottom: func.size-m(26);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: func.size-m(10) func.size-m(24);
+    @media screen and (min-width:768px) {
+      margin-bottom: 0;
+      justify-content: flex-start;
+      gap: func.size(10) func.size(48);
+    }
+
+    a {
+      color: #000;
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-decoration: none;
+      @media screen and (min-width:768px) {
+        font-size: func.size(20);
+        font-weight: 500;
+        letter-spacing: .02em;
       }
     }
   }

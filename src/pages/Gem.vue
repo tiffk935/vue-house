@@ -16,7 +16,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">走在前，讓後面跟上來</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
-      <div class="t3">｜敬請期待</div>
+      <div class="t3">｜<RouterLink to="/team">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -31,7 +31,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">港都豪宅建築的定潮者</div>
       <div class="t2">想把最好的都帶進台灣來，這條路我們走了13年</div>
-      <div class="t3">｜敬請期待</div>
+      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -45,7 +45,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1"><span>平實公園特區，<br>台南最好的都在這裡。</span></div>
       <div class="t2">要說府城最好的人文居住環境在哪？非東區莫屬。<br class="mob">而台南東區裡最美好的未來，在平實公園特區！</div>
-      <div class="t3">｜敬請期待</div>
+      <div class="t3">｜<RouterLink to="/pinshi">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -58,7 +58,7 @@
       <img class="mob" src="@/assets/home/team/pic-m.webp" />
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t3">｜敬請期待</div>
+      <div class="t3">｜<RouterLink to="/pinshi-team">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -71,7 +71,7 @@
       <img class="mob" src="@/assets/home/archi/pic-m.webp" />
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t3">｜敬請期待</div>
+      <div class="t3">｜<RouterLink to="/pinshi-architecture">閱讀更多</RouterLink></div>
     </div>
   </section>
 </template>
@@ -146,6 +146,11 @@ h2 {
     border-bottom: func.size(1) solid #000;
     letter-spacing: .12em;
     margin-top: -2.2vw;
+  }
+  
+  a {
+    color: inherit;
+    text-decoration: none;
   }
 }
 

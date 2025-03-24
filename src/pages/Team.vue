@@ -7,8 +7,8 @@
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
     </div>
     <div class="tabs">
-      <div class="tab" @click="tab = '巨擎團隊'">巨擎團隊</div>
-      <div class="tab" @click="tab = '米其林團隊'">米其林團隊</div>
+      <div class="tab" :class="{active: tab === '巨擎團隊'}" @click="tab = '巨擎團隊'">巨擎團隊</div>
+      <div class="tab" :class="{active: tab === '米其林團隊'}" @click="tab = '米其林團隊'">米其林團隊</div>
     </div>
 
     <Transition>
@@ -35,7 +35,7 @@
             <img :src="getImg(`../assets/team/2/${idx + 1}.webp`)" />
             <img class="icon" v-if="item.icon" src="@/assets/team/icon.svg" />
           </div>
-          <div>
+          <div class="info">
             <div>
               <div class="title">{{item.title}}</div>
               <div class="desc">{{item.desc}}</div>
@@ -137,6 +137,10 @@
         &:hover {
           background: #000;
           color: #fff;
+        }
+
+        &.active {
+          font-weight: 700;
         }
       }
     }
