@@ -1,20 +1,20 @@
 <template>
   <div class="nav-bg" v-if="mobOpen" @click="mobOpen = false"></div>
   <header>
-    <RouterLink class="logo" to="/"><img src="@/assets/logo.webp" /></RouterLink>
+    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/logo.webp" /></RouterLink>
     <div class="mob-toogle" @click="mobOpen = true">
       <span></span><span></span><span></span>
     </div>
     <nav class="mob-nav" :class="{open: mobOpen}">
       <div>
         <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink>
-        <!-- <RouterLink to="/team" @click="mobOpen = false">關於國城</RouterLink>
+        <RouterLink to="/team" @click="mobOpen = false">關於國城</RouterLink>
         <RouterLink to="/work" @click="mobOpen = false">國城作品</RouterLink>
         <RouterLink to="/pinshi" @click="mobOpen = false">平實特區</RouterLink>
         <RouterLink to="/pinshi-team" @click="mobOpen = false">平實團隊</RouterLink>
         <RouterLink to="/pinshi-architecture" @click="mobOpen = false">平實建築</RouterLink>
-        <RouterLink to="/news" @click="mobOpen = false">最新消息</RouterLink> -->
-        <RouterLink to="/vision#order" @click="mobOpen = false">預約表單</RouterLink>
+        <RouterLink to="/news" @click="mobOpen = false">最新消息</RouterLink>
+        <RouterLink to="/order" @click="mobOpen = false">預約表單</RouterLink>
       </div>
     </nav>
     <nav class="pc-nav">
@@ -28,13 +28,13 @@
             <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
           </ul>
         </li>
-        <!-- <li><RouterLink to="/team">關於國城</RouterLink></li>
+        <li><RouterLink to="/team">關於國城</RouterLink></li>
         <li><RouterLink to="/work">國城作品</RouterLink></li>
         <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
         <li><RouterLink to="/pinshi-team">平實團隊</RouterLink></li>
         <li><RouterLink to="/pinshi-architecture">平實建築</RouterLink></li>
-        <li><RouterLink to="/news">最新消息</RouterLink></li> -->
-        <li><RouterLink class="order-btn" to="/vision#order">預約表單</RouterLink></li>
+        <li><RouterLink to="/news">最新消息</RouterLink></li>
+        <li><RouterLink class="order-btn" to="/order">預約表單</RouterLink></li>
       </ul>
     </nav>
   </header>
