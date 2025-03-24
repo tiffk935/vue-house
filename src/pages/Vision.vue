@@ -355,7 +355,7 @@ h2 {
         font-weight: 500;
         line-height: 149.2%;
         @media screen and (min-width:768px) {
-          font-size: func.size(15);
+          font-size: func.size(20);
           line-height: func.size(34);
           letter-spacing: .05em;
         }

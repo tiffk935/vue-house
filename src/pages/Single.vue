@@ -19,7 +19,7 @@
         </div>
       </div>
       <div class="bottom">
-        <RouterLink class="prev-page-link" to="/single">
+        <RouterLink class="prev-page-link" to="/news">
           <svg viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M42.1052 0.927246H1" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>
             <path d="M1 0.927246L12.8859 12.8132" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>

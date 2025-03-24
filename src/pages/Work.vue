@@ -1,7 +1,7 @@
 <template>
   <section class="banner">
-    <img class="mob" src="@/assets/work/banner-m.jpg" />
-    <img class="pc" src="@/assets/work/banner.jpg" />
+    <img class="mob" src="@/assets/work/banner-m.webp" />
+    <img class="pc" src="@/assets/work/banner.webp" />
   </section>
   <section class="content">
     <div class="title">
@@ -11,7 +11,7 @@
     <div class="work-list-title">【 作品列表 】</div>
     <RouterLink to="/gallary">
       <div class="work">
-        <img class="pic" src="@/assets/work/pic.jpg" />
+        <img class="pic" src="@/assets/work/pic.webp" />
         <div class="logo">
           <img src="@/assets/work/logo.svg" />
         </div>

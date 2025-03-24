@@ -1,8 +1,8 @@
 <template>
   <section>
     <div class="banner">
-      <img class="mob" src="@/assets/pinshi-team/banner-m.jpg" />
-      <img class="pc" src="@/assets/pinshi-team/banner.jpg" />
+      <img class="mob" src="@/assets/pinshi-team/banner-m.webp" />
+      <img class="pc" src="@/assets/pinshi-team/banner.webp" />
     </div>
     <div class="coming-soon">敬請期待｜coming soon</div>
   </section>
@@ -26,7 +26,7 @@
 }
 
 section {
-  background: #fff;
+  //background: #fff;
   padding: func.size-m(75) 0 func.size-m(49) 0;
   @media screen and (min-width:768px) {
     padding: func.size(181) 0 func.size(95) 0;

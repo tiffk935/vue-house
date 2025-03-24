@@ -8,6 +8,7 @@
         <div class="info"><b>平實城市願景館</b>｜<br>台南市 東區後甲二路／平實二街口</div>
         <div class="btns">
           <RouterLink class="onder-btn" to="/vision#order"><span>預約表單</span></RouterLink>
+          <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
           <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
           <!--a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
           <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
@@ -106,8 +107,8 @@ footer {
     align-items: center;
     position: fixed;
     bottom: func.size-m(20);
-    //left: func.size-m(38);
-    left: func.size-m(55);            
+    left: func.size-m(38);
+    //left: func.size-m(55);            
     //width: 100%;
     //margin-bottom: func.size-m(23);
     z-index: 99;

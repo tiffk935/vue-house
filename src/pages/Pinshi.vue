@@ -22,7 +22,7 @@
         @slideChange="s1OnSlideChange"
       >
         <swiper-slide v-for="num in Object.keys(s1Images).length">
-          <img :src="getImg('s1', `../assets/pinshi/s1/${num}.jpg`)" />
+          <img :src="getImg('s1', `../assets/pinshi/s1/${num}.webp`)" />
         </swiper-slide>
       </swiper>
       <div class="pagi">
@@ -51,7 +51,7 @@
         @slideChange="s2OnSlideChange"
       >
         <swiper-slide v-for="num in Object.keys(s2Images).length">
-          <img :src="getImg('s2', `../assets/pinshi/s2/${num}.jpg`)" />
+          <img :src="getImg('s2', `../assets/pinshi/s2/${num}.webp`)" />
         </swiper-slide>
       </swiper>
       <div class="pagi">
@@ -68,7 +68,7 @@
   </section>
 
   <section class="s3 tem-1">
-    <img class="style" src="@/assets/pinshi/s3.jpg" />
+    <img class="style" src="@/assets/pinshi/s3.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>基地特性</div>
@@ -79,7 +79,7 @@
   </section>
 
   <section class="s4 tem-2">
-    <img class="style" src="@/assets/pinshi/s4.jpg" />
+    <img class="style" src="@/assets/pinshi/s4.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>公園綠地</div>
@@ -90,7 +90,7 @@
   </section>
 
   <section class="s5 tem-1">
-    <img class="style" src="@/assets/pinshi/s5.jpg" />
+    <img class="style" src="@/assets/pinshi/s5.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>十字軸線</div>
@@ -101,7 +101,7 @@
   </section>
 
   <section class="s6 tem-2">
-    <img class="style" src="@/assets/pinshi/s6.jpg" />
+    <img class="style" src="@/assets/pinshi/s6.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>捷運轉運</div>
@@ -112,7 +112,7 @@
   </section>
 
   <section class="s7 tem-2">
-    <img class="style" src="@/assets/pinshi/s7.jpg" />
+    <img class="style" src="@/assets/pinshi/s7.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>時尚購物</div>
@@ -123,7 +123,7 @@
   </section>
 
   <section class="s8 tem-1">
-    <img class="style" src="@/assets/pinshi/s8.jpg" />
+    <img class="style" src="@/assets/pinshi/s8.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>優質學區</div>
@@ -134,7 +134,7 @@
   </section>
 
   <section class="s9 tem-2">
-    <img class="style" src="@/assets/pinshi/s9.jpg" />
+    <img class="style" src="@/assets/pinshi/s9.webp" />
     <div class="tem-txt">
       <div class="t1">
         <div>醫療資源</div>

@@ -1,15 +1,15 @@
 <template>
   <section class="banner">
-    <img class="mob" src="@/assets/work/banner-m.jpg" />
-    <img class="pc" src="@/assets/work/banner.jpg" />
+    <img class="mob" src="@/assets/work/banner-m.webp" />
+    <img class="pc" src="@/assets/work/banner.webp" />
   </section>
   <section class="content">
     <div class="title">
       <div class="t1">港都豪宅建築的定潮者</div>
       <div class="t2">想把最好的都帶進台灣來，這條路我們走了13年</div>
     </div>
-    <img class="gallary mob" src="@/assets/work/gallary-m.jpg" />
-    <img class="gallary pc" src="@/assets/work/gallary.jpg" />
+    <img class="gallary mob" src="@/assets/work/gallary-m.webp" />
+    <img class="gallary pc" src="@/assets/work/gallary.webp" />
   </section>
 </template>
 

@@ -2,7 +2,7 @@
   <section id="contact">
     <div class="title"><span>CONTACT US</span>聯絡我們</div>
     <div class="flex">
-      <img class="pic" src="@/assets/pic.png" />
+      <img class="pic" src="@/assets/pic.webp" />
       <div class="info">
         <div class="flex2">
           <div class="left">

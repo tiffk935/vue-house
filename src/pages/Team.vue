@@ -15,7 +15,7 @@
       <div class="items" v-if="tab === '巨擎團隊'">
         <div class="item" v-for="(item, idx) in list1" data-aos="fade-up" data-aos-duration="1000" :data-aos-delay="idx * 200">
           <div class="photo">
-            <img :src="getImg(`../assets/team/1/${idx + 1}.jpg`)" />
+            <img :src="getImg(`../assets/team/1/${idx + 1}.webp`)" />
           </div>
           <div class="info">
             <div>
@@ -32,7 +32,7 @@
       <div class="items" v-if="tab === '米其林團隊'">
         <div class="item" v-for="(item, idx) in list2" data-aos="fade-up" data-aos-duration="1000" :data-aos-delay="idx * 200">
           <div class="photo">
-            <img :src="getImg(`../assets/team/2/${idx + 1}.jpg`)" />
+            <img :src="getImg(`../assets/team/2/${idx + 1}.webp`)" />
             <img class="icon" v-if="item.icon" src="@/assets/team/icon.svg" />
           </div>
           <div>
@@ -131,6 +131,7 @@
         @media screen and (min-width:768px) {
           border: func.size(1) solid #000;
           padding: func.size(14);
+          font-size: func.size(30);
         }
 
         &:hover {
