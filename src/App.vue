@@ -1,13 +1,15 @@
 <template>
-  <div id="page-bg"></div>
-
-  <NavBar />
-
-  <main :id="`page-${$route.name}`">
-    <RouterView />
-  </main>
-
-  <Footer />
+  <template v-if="$route.fullPath === '/formThanks'">
+    <RouterView :key="$route.path" />
+  </template>
+  <template v-else>
+    <div id="page-bg"></div>
+    <NavBar />
+    <main :id="`page-${$route.name}`">
+      <RouterView :key="$route.path" />
+    </main>
+    <Footer />
+  </template>
 </template>
 
 <style lang="scss">

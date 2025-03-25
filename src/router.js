@@ -6,6 +6,7 @@ const routes = [
   { path: '/gem', name: 'gem', component: () => import ("./pages/Gem.vue") },
   { path: '/vision', name: 'vision', component: () => import ("./pages/Vision.vue") },
   { path: '/team', name: 'team', component: () => import ("./pages/Team.vue") },
+  { path: '/formThanks', name: 'formThanks', component: () => import ("./pages/FormThanks.vue") },
 ]
 
 const router = createRouter({
