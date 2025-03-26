@@ -3,14 +3,16 @@
     <div class="top">
       <div class="title"><span>NEWS</span>最新消息</div>
       <div class="tabs">
-        <div class="tab active"><a href="">消息新聞</a></div>
-        <div class="tab"><a href="">專題研究</a></div>
+        <div class="tab" :class="{active: type === '消息新聞'}"><RouterLink to="/news">消息新聞</RouterLink></div>
+        <div class="tab" :class="{active: type === '專題研究'}"><RouterLink to="/projects">專題研究</RouterLink></div>
       </div>
     </div>
     <div class="list">
-      <article v-for="(item, idx) in list">
-        <RouterLink to="/single">
-          <img :src="getImg(`../assets/news/${idx + 1}/thumbnail.jpg`)" />
+      <article v-for="item in list">
+        <RouterLink :to="item.link">
+          <div class="photo">
+            <img :src="getImg(item.thumbnail)" />
+          </div>
           <h3>{{ item.title }}</h3>
           <div class="meta">
             <div class="date">{{ item.date }}</div>
@@ -20,11 +22,30 @@
         </RouterLink>
       </article>
     </div>
-    <div class="pagination">
-      <template v-for="num in 7">
-        <a :class="{ active: num === 1 }" href="">{{ num }}</a>
-      </template>
-    </div>
+
+    <!-- <pagination
+      v-if="list.length > 0"
+      v-model="currPage"
+      :records="typeList.length"
+      :per-page="perPage"
+      :options="{
+        chunk: 5,
+        hideCount: true
+      }"
+      @paginate="onClickPagination($event)"
+    /> -->
+
+    <vue-awesome-paginate
+      :total-items="typeList.length"
+      :items-per-page="6"
+      :max-pages-shown="3"
+      v-model="currPage"
+      @click="onClickPagination"
+      prev-button-content="<<"
+      next-button-content=">>"
+      type="button"
+      :link-url="`/${type}/page/[page]`"
+    />
   </section>
 </template>
 
@@ -137,12 +158,23 @@ section {
         }
       }
 
-      img {
-        display: block;
+      .photo {
         width: 100%;
+        height: 0;
+        padding-top: 68.615%;
+        position: relative;
         margin-bottom: func.size-m(7);
         @media screen and (min-width:768px) {
           margin-bottom: func.size(23);
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
 
@@ -196,68 +228,93 @@ section {
       }
     }
   }
+}
+</style>
 
-  .pagination {
-    display: flex;
-    justify-content: center;
-    padding-bottom: func.size-m(21);
-    border-bottom: func.size-m(1) solid #000;
+<style lang="scss">
+@use "@/assets/style/function.scss" as func;
+
+.pagination-container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding-bottom: func.size-m(21);
+  border-bottom: func.size-m(1) solid #000;
+  @media screen and (min-width:768px) {
+    justify-content: flex-end;
+    padding-bottom: func.size(17);
+    border-bottom: func.size(1) solid #000;
+  }
+  
+  li {
+    display: block;
+    margin-right: func.size-m(7);
     @media screen and (min-width:768px) {
-      justify-content: flex-end;
-      padding-bottom: func.size(17);
-      border-bottom: func.size(1) solid #000;
+      margin-right: func.size(7);
     }
 
-    a {
-      color: #C8C9CA;
-      font-size: func.size-m(21);
-      padding: 0 func.size-m(4);
-      margin-right: func.size-m(7);
-      @media screen and (min-width:768px) {
-        font-size: func.size(37);
-        padding: 0 func.size(4);
-        margin-right: func.size(7);
-      }
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      &.active {
-        color: #000;
-      }
+    &:last-child {
+      margin-right: 0;
     }
+  }
+  
+  button {
+    color: #C8C9CA;
+    font-size: func.size-m(21);
+    padding: 0 func.size-m(4);
+    appearance: none;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-family: inherit;
+    @media screen and (min-width:768px) {
+      font-size: func.size(37);
+      padding: 0 func.size(4);
+    }
+  }
+
+  .active-page {
+    color: #000;
   }
 }
 </style>
 
 <script setup>
+import { ref } from 'vue';
+import news from '@/info/news';
+// import Pagination from 'v-pagination-3';
+import { useRoute, useRouter } from 'vue-router';
+import "vue-awesome-paginate/dist/style.css";
+
+const router = useRouter();
+const route = useRoute();
+
+let type = '消息新聞';
+let typeSlug = 'news';
+if (route.path === '/projects' || route.path === '/projects/' || route.path.substring(0, 9) === '/projects') {
+  type = '專題研究';
+  typeSlug = 'projects';
+}
+
+const typeList = news.filter(item => item.type === type);
+const currPage = ref(parseInt(route.params.page) || 1);
+const perPage = 6;
+const list = ref([]);
+
 const images = import.meta.glob('../assets/news/**/*.*', { eager: true });
 const getImg = path => images[path]?.default || '';
-const list = [
-  {
-    title: '國城建設台南都更聯貸近175億今簽約將蓋12棟住宅大樓',
-    date: '2024.10.08',
-  },
-  {
-    title: '國城建設攜手高興昌 拿下高雄 2 捷運聯開案 2025年動工',
-    date: '2024.03.27',
-  },
-  {
-    title: '高雄之光米其林雙星餐廳後繼有好料 國城集團再開高檔粵菜中餐廳',
-    date: '2024.03.21',
-  },
-  {
-    title: '【開箱國城】6個細節深入《定潮》：高雄人的極致嚮往',
-    date: '2024.10.08',
-  },
-  {
-    title: '【平實超展開】臺南人也不知道的平實重劃區 ？解密區域發展脈絡',
-    date: '2024.03.27',
-  },
-  {
-    title: '【產業超白話】公辦都更的難與喃，國城建設：重來一次還是會這麼做',
-    date: '2024.03.27',
-  },
-];
+
+const fetchList = page => {
+  const offset = perPage * (page - 1);
+  list.value = typeList.filter((item, idx) => idx >= offset && idx < offset + perPage);
+}
+
+fetchList(currPage.value);
+
+const onClickPagination = (page) => {
+  router.push(`/${typeSlug}/page/${page}`);
+}
 </script>

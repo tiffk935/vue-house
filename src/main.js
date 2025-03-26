@@ -5,6 +5,7 @@ import Toast from 'vue-toastification'
 import 'vue-toastification/dist/index.css'
 import { createGtm } from '@gtm-support/vue-gtm'
 import { createVfm } from 'vue-final-modal'
+import VueAwesomePaginate from "vue-awesome-paginate"
 import info from './info'
 
 createApp(App)
@@ -27,4 +28,5 @@ createApp(App)
     })
   )
   .use(createVfm())
+  .use(VueAwesomePaginate)
   .mount('#app')

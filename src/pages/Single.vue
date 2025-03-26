@@ -1,25 +1,32 @@
 <template>
   <section>
     <div class="title"><span>NEWS</span>最新消息</div>
-    <article>
-      <h1>國城建設台南都更聯貸近175億今簽約將蓋12棟住宅大樓</h1>
+    <article v-if="data">
+      <h1>{{ data.title }}</h1>
       <div class="detail">
-        <img class="cover" src="@/assets/news/1/thumbnail.jpg" />
+        <div class="slider">
+          <swiper
+            :modules="modules"
+            loop
+            :autoplay="{
+              delay: 3000,
+              disableOnInteraction: false,
+            }"
+          >
+            <swiper-slide v-for="slide in data.slider">
+              <img :src="getImg(slide)" />
+            </swiper-slide>
+          </swiper>
+        </div>
+        
         <div class="content">
           <PerfectScrollbar ref="scrollbar">
-            【記者林巧雁／台北報導】<br>
-            <br>
-            <br>
-            第一銀行與合庫銀、土銀今日完成主辦國城建設174.9億元聯貸簽約，聯貸資金主要支應台南市東區平實段4筆土地都市更新，由國城建設擔任本都更案實施者，基地位於台南市東區文教區，面積約8683坪，將興建12棟大樓住宅，其中一棟回饋予台南市政府作為公宅。<br>
-            <br>
-            一銀主辦國城建設174.9億元聯貸，由合庫銀董事長林衍茂（左1）、國城建設董事長蔡麗環（左2）、一銀董事長邱月琴（中）、國城建設總裁洪平森（右2）及土銀董事長何英明（右1）代表簽約。<br>
-            <br>
-            此都更案將提昇國有地的經濟效益與都市更新價值，加速達成土地資產活化與都市環境更新等目的，為大眾創造宜居、舒適、便利之生活空間。
+            <div v-html="data.content"></div>
           </PerfectScrollbar>
         </div>
       </div>
       <div class="bottom">
-        <RouterLink class="prev-page-link" to="/news">
+        <div class="prev-page-link" @click="router.back()">
           <svg viewBox="0 0 49 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M42.1052 0.927246H1" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>
             <path d="M1 0.927246L12.8859 12.8132" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>
@@ -27,11 +34,11 @@
             <path d="M42.1037 12.7173H28.791" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>
           </svg>
           <span>回上一頁</span>
-        </RouterLink>
-        <div class="next-post">
+        </div>
+        <div class="next-post" v-if="data.nextLink && data.nextTitle">
           <div class="next-post-sub">
             <span>Next  NEWS</span>
-            <RouterLink class="next-post-wrapper" to="/single">
+            <RouterLink class="next-post-wrapper" :to="data.nextLink">
               <div class="next-post-label">下一則</div>
               <svg viewBox="0 0 75 13" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M0 11.897H74.02" stroke="#21100B" stroke-width="0.75" stroke-miterlimit="10"/>
@@ -39,7 +46,7 @@
               </svg>
             </RouterLink>
           </div>
-          <RouterLink class="next-post-title" to="/single">國城建設攜手高興昌 拿下高雄 2 捷運聯開案 2025年動工</RouterLink>
+          <RouterLink class="next-post-title" :to="data.nextLink">{{ data.nextTitle }}</RouterLink>
         </div>
       </div>
     </article>
@@ -141,13 +148,17 @@ section {
     }
   }
 
-  .cover {
-    display: block;
+  .slider {
     width: 100%;
     margin-bottom: func.size-m(34);
     @media screen and (min-width:768px) {
       width: func.size(631);
       margin-bottom: 0;
+    }
+
+    img {
+      width: 100%;
+      display: block;
     }
   }
 
@@ -181,6 +192,7 @@ section {
       display: flex;
       align-items: center;
       margin-bottom: func.size-m(73);
+      cursor: pointer;
       @media screen and (min-width:768px) {
         margin-bottom: 0;
       }
@@ -248,6 +260,7 @@ section {
           display: block;
           font-size: func.size(27);
           margin-right: func.size(40);
+          white-space: nowrap;
         }
       }
 
@@ -274,16 +287,39 @@ section {
 </style>
 
 <script setup>
+import news from '@/info/news';
 import { ref, onMounted } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 import { PerfectScrollbar } from 'vue3-perfect-scrollbar';
+import { Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+const modules = ref([Autoplay]);
+
+const router = useRouter();
+const route = useRoute();
+
+const link = '/news/' + route.params.link || '';
+const post = news.filter(item => item.link === link);
 
 const scrollbar = ref(null);
+const data = ref(null);
 
-onMounted(() => {
-  if (scrollbar.value) {
-    window.onresize = () => {
-      scrollbar.value.ps.update();
+const images = import.meta.glob('../assets/news/**/*.*', { eager: true });
+const getImg = path => images[path]?.default || '';
+
+if (post.length === 0) {
+  router.push(`/404`);
+} else {
+  data.value = post[0];
+  console.log( post[0]);
+  
+  onMounted(() => {
+    if (scrollbar.value) {
+      window.onresize = () => {
+        scrollbar.value.ps.update();
+      }
     }
-  }
-});
+  });
+}
 </script>

@@ -579,8 +579,8 @@ const send = () => {
       body: presend,
     }).then((response) => {
       if (response.status === 200) {
-        // window.location.href = "formThanks";
-        toast.success(`表單已送出，感謝您的填寫`)
+        window.location.href = "/formThanks";
+        // toast.success(`表單已送出，感謝您的填寫`)
       }
       sending.value = false
     });

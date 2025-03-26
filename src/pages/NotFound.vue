@@ -17,6 +17,7 @@
     font-size: 100px;
     font-weight: 900;
     letter-spacing: .06em;
+    mix-blend-mode: multiply;
   }
 }
 </style>

@@ -11,9 +11,13 @@ const routes = [
   { path: '/pinshi', name: 'pinshi', component: () => import ("./pages/Pinshi.vue") },
   { path: '/pinshi-team', name: 'pinshiTeam', component: () => import ("./pages/PinshiTeam.vue") },
   { path: '/pinshi-architecture', name: 'pinshiArchitecture', component: () => import ("./pages/PinshiArchitecture.vue") },
-  { path: '/news', name: 'news', component: () => import ("./pages/News.vue") },
-  { path: '/single', name: 'single', component: () => import ("./pages/Single.vue") },
+  { path: '/news', component: () => import ("./pages/News.vue") },
+  { path: '/projects', component: () => import ("./pages/News.vue") },
+  { path: '/news/page/:page(\\d+)', component: () => import ("./pages/News.vue") },
+  { path: '/projects/page/:page(\\d+)', component: () => import ("./pages/News.vue") },
+  { path: '/news/:link', name: 'single', component: () => import ("./pages/Single.vue") },
   { path: '/order', name: 'order', component: () => import ("./pages/Order.vue") },
+  { path: '/formThanks', name: 'formThanks', component: () => import ("./pages/FormThanks.vue") },
   { path: '/:pathMatch(.*)*', name: '404', component: import ("./pages/NotFound.vue") },
 ]
 
