@@ -166,14 +166,14 @@ h2 {
 .banner {
   position: relative;
   width: 100%;
-  height: func.size-m(667);
+  height: func.size-m(667 - 74);
   @media screen and (min-width:768px) {
-    height: func.size(1080);
+    height: func.size(1080 - 165);
   }
   
   .title-m {
     position: absolute;
-    top: func.size-m(94 + 74);
+    top: func.size-m(94);
     left: func.size-m(53);
     width: func.size-m(267.52);
     height: func.size-m(135);
@@ -189,7 +189,7 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(347);
+      top: func.size(182);
       left: func.size(475);
       width: func.size(1014.69);
       height: func.size(192.55);
@@ -203,7 +203,7 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(614);
+      top: func.size(449);
       left: func.size(475);
       width: func.size(1014);
     }
@@ -211,14 +211,14 @@ h2 {
   
   .info {
     position: absolute;
-    top: func.size-m(391);
+    top: func.size-m(317);
     left: func.size-m(54);
     width: func.size-m(266.9);
     height: func.size-m(86.91);
     background-image: url(@/assets/home/banner/txt-m.svg);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(831);
+      top: func.size(666);
       left: func.size(223);
       width: func.size(1067.44);
       height: func.size(133.23);
@@ -228,11 +228,11 @@ h2 {
   
   .logoicon {
     position: absolute;
-    top: func.size-m(552);
+    top: func.size-m(478);
     left: func.size-m(131);
     width: func.size-m(113);
     @media screen and (min-width:768px) {
-      top: func.size(939.98);
+      top: func.size(774.98);
       left: func.size(1436);
       width: func.size(293.82);
     }
@@ -243,7 +243,7 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(670 + 165);
+      top: func.size(670);
       left: func.size(1438);
       border: func.size(5) solid #219664;
       background: #fff;

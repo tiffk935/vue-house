@@ -7,6 +7,7 @@ const routes = [
   { path: '/vision', name: 'vision', component: () => import ("./pages/Vision.vue") },
   { path: '/team', name: 'team', component: () => import ("./pages/Team.vue") },
   { path: '/formThanks', name: 'formThanks', component: () => import ("./pages/FormThanks.vue") },
+  { path: '/:pathMatch(.*)*', name: '404', component: import ("./pages/NotFound.vue") },
 ]
 
 const router = createRouter({

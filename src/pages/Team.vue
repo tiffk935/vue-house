@@ -7,8 +7,8 @@
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
     </div>
     <div class="tabs">
-      <div class="tab" @click="tab = '巨擎團隊'">巨擎團隊</div>
-      <div class="tab" @click="tab = '米其林團隊'">米其林團隊</div>
+      <div class="tab" :class="{active: tab === '巨擎團隊'}" @click="tab = '巨擎團隊'">巨擎團隊</div>
+      <div class="tab" :class="{active: tab === '米其林團隊'}" @click="tab = '米其林團隊'">米其林團隊</div>
     </div>
 
     <Transition>
@@ -35,7 +35,7 @@
             <img :src="getImg(`../assets/team/2/${idx + 1}.jpg`)" />
             <img class="icon" v-if="item.icon" src="@/assets/team/icon.svg" />
           </div>
-          <div>
+          <div class="info">
             <div>
               <div class="title">{{item.title}}</div>
               <div class="desc">{{item.desc}}</div>
@@ -68,9 +68,9 @@
   }
 
   .marquee-wrapper {
-    margin: func.size-m(74) 0 func.size-m(27) 0;
+    padding: 0 0 func.size-m(27) 0;
     @media screen and (min-width:768px) {
-      margin: func.size(85 + 165) 0 func.size(67) 0;
+      padding: func.size(85) 0 func.size(67) 0;
     }
   }
 
@@ -131,11 +131,16 @@
         @media screen and (min-width:768px) {
           border: func.size(1) solid #000;
           padding: func.size(14);
+          font-size: func.size(30);
         }
 
         &:hover {
           background: #000;
           color: #fff;
+        }
+
+        &.active {
+          font-weight: 700;
         }
       }
     }
@@ -270,6 +275,8 @@ import { ref } from "vue";
 import Marquee from "@/components/Marquee.vue";
 const tab = ref('巨擎團隊'); // 米其林團隊
 const images = import.meta.glob('../assets/team/**/*.*', { eager: true });
+console.log(images);
+
 const getImg = path => images[path]?.default || '';
 const list1 = [
   {
