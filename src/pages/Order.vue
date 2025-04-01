@@ -167,7 +167,7 @@
 }
 
 #order {
-  padding: func.size-m(30) 0 func.size-m(127) 0;
+  padding: func.size-m(30) 0 func.size-m(60) 0;
   @media screen and (min-width:768px) {
     padding: func.size(98) 0 func.size(216) 0;
   }

@@ -370,7 +370,7 @@
   width: 100%;
   height: func.size-m(230);
   background: #ddd;
-  margin-bottom: func.size-m(21);
+  margin-bottom: func.size-m(60);
   @media screen and (min-width:768px) {
     width: func.size(1311);
     height: func.size(529);

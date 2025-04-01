@@ -4,7 +4,7 @@
       <div class="title"><span>NEWS</span>最新消息</div>
       <div class="tabs">
         <div class="tab" :class="{active: type === '消息新聞'}"><RouterLink to="/news">消息新聞</RouterLink></div>
-        <div class="tab" :class="{active: type === '專題研究'}"><RouterLink to="/projects">專題研究</RouterLink></div>
+        <!--div class="tab" :class="{active: type === '專題研究'}"><RouterLink to="/projects">專題研究</RouterLink></div-->
       </div>
     </div>
     <div class="list">

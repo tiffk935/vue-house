@@ -218,7 +218,7 @@ h2 {
     @media screen and (min-width:768px) {
       display: block;
       position: absolute;
-      top: func.size(629);
+      top: func.size(574);
       left: func.size(1490);
       border: func.size(5) solid #219664;
       background: #fff;
@@ -530,7 +530,7 @@ h2 {
 }
 
 #order {
-  padding: func.size-m(30 + 30) 0 func.size-m(127) 0;
+  padding: func.size-m(30 + 30) 0 func.size-m(60) 0;
   @media screen and (min-width:768px) {
     padding: func.size(65 + 74) 0 func.size(197) 0;
   }
