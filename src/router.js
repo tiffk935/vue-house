@@ -18,7 +18,7 @@ const routes = [
   { path: '/news/:link', name: 'single', component: () => import ("./pages/Single.vue") },
   { path: '/order', name: 'order', component: () => import ("./pages/Order.vue") },
   { path: '/formThanks', name: 'formThanks', component: () => import ("./pages/FormThanks.vue") },
-  { path: '/:pathMatch(.*)*', name: '404', component: import ("./pages/NotFound.vue") },
+  { path: '/:pathMatch(.*)*', name: '404', component: () => import ("./pages/NotFound.vue") },
 ]
 
 const router = createRouter({
