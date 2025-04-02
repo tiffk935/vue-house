@@ -4,7 +4,7 @@ export default [
     title: '全台大都更時代來臨　台南平實特區集萬千寵愛於一身',     // 標題
     type: '消息新聞',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '../assets/news/1/01.webp',                // 列表頁封面圖
-    date: '2024.10.08',                                         // 日期，與順序無關
+    date: '2025.02.20',                                         // 日期，與順序無關
     slider: [                                                   // 輪播圖
       '../assets/news/1/01.webp',
     ],
