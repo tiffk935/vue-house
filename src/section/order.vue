@@ -1,5 +1,7 @@
 <template>
   <div id="order" class="order relative text-center">
+    <div class="cir3 absolute hidden md:block"></div>
+
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -207,6 +209,49 @@
     @media screen and (min-width:768px) {
       font-size: .75em;
     }
+  }
+
+  .cir1 {
+    top: size-m(-39);
+    right: size-m(-70);
+    width: size-m(197);
+    height: size-m(197);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(7vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(-73);
+      right: auto;
+      left: size(-188 - 180);
+      width: size(192);
+      height: size(192);
+      transform: translateY(3vw);
+    }
+  }
+
+  .cir2 {
+    top: size(-97);
+    right: size(-97);
+    width: size(97);
+    height: size(97);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.7;
+    transform: translateY(-3vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+  }
+
+  .cir3 {
+    top: size(139);
+    right: size(149);
+    width: size(149);
+    height: size(149);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.4;
+    transform: translateY(-5vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
   }
 }
 

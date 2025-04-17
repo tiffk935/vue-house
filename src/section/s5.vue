@@ -4,6 +4,8 @@
     <div class="train absolute"></div>
     <img class="line absolute md:hidden" src="@/section/s5/line-m.svg" />
     <img class="line absolute hidden md:block" src="@/section/s5/line.svg" />
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">蘆洲捷運站5分鐘<br>輕軌F06站散步圈</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">擁3高4捷4特快交通路網</div>
     <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」車行約5分鐘一橋就到蘆洲捷運站，散步3分鐘抵輕軌F06站，未來一站就到蘆洲。享強大交通動能鄰近中和新蘆線、環狀線、機場線、五泰輕軌4捷串聯大台北。出門轉彎直上台64，快接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，南來北往東西暢行通勤首選。</div>
@@ -284,6 +286,42 @@
         right: size(-82);
         background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       }
+    }
+  }
+
+  .cir1 {
+    top: size-m(-81);
+    right: size-m(-59);
+    width: size-m(148);
+    height: size-m(148);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    transform: translateY(15vw);
+    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(-148);
+      right: size(225);
+      width: size(264);
+      height: size(264);
+      transform: translateY(5vw);
+    }
+  }
+
+  .cir2 {
+    top: size-m(46);
+    left: size-m(-205);
+    width: size-m(268);
+    height: size-m(268);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(20vw);
+    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(160);
+      left: size(-375);
+      width: size(540);
+      height: size(540);
+      transform: translateY(8vw);
     }
   }
 }

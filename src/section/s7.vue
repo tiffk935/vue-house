@@ -1,5 +1,7 @@
 <template>
   <section class="s7 user-n w-full relative">
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
     <div class="img1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="w-full block" src="@/section/s7/img1.jpg" />
       <div class="txt absolute">校園情境圖</div>
@@ -136,6 +138,44 @@
       top: size(660);
       left: size(1164);
       font-size: size(16);
+    }
+  }
+
+  .cir1 {
+    top: size-m(54);
+    right: size-m(-119);
+    width: size-m(200);
+    height: size-m(200);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.4;
+    transform: translateY(-15vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(184);
+      right: size(820);
+      width: size(246);
+      height: size(246);
+      transform: translateY(5vw);
+      z-index: 1;
+    }
+  }
+
+  .cir2 {
+    top: size-m(696);
+    right: size-m(-42);
+    width: size-m(85);
+    height: size-m(85);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(10vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(707);
+      right: size(-193);
+      width: size(438);
+      height: size(438);
+      transform: translateY(5vw);
     }
   }
 }

@@ -4,8 +4,13 @@
       <img class="map1" src="@/section/s4/map.jpg" @load="onImgLoad($event)" />
       <img class="map2 absolute top-0 left-0 w-full pointer-events-none" src="@/section/s4/map2.svg" />
     </div>
+    
     <img class="hand-bg absolute md:hidden" src="@/section/s4/hand-bg.svg" />
     <img class="hand absolute md:hidden" src="@/section/s4/hand.svg" />
+
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
+
     <div class="content absolute">
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">新蘆特區正核心 <br class="md:hidden">洲子洋天選地標</div>
     </div>
@@ -16,25 +21,32 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.s4 {
-  @keyframes swing {
-    0% {
-      transform: translateX(0%);
-    }
-    25% {
-      transform: translateX(-15%);
-    }
-    50% {
-      transform: translateX(0%);
-    }
-    75% {
-      transform: translateX(15%);
-    }
-    100% {
-      transform: translateX(0%);
-    }
+@keyframes swing {
+  0% {
+    transform: translateX(0%);
   }
+  25% {
+    transform: translateX(-15%);
+  }
+  50% {
+    transform: translateX(0%);
+  }
+  75% {
+    transform: translateX(15%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
 
+@keyframes ball {
+  to {
+    transform: translateY(0);
+  }
+}
+
+.s4 {
+  overflow: hidden;
   height: size-m(667);
   @media screen and (min-width:768px) {
     height: auto;
@@ -118,6 +130,42 @@
       font-weight: 700;
       line-height: 160%;
       letter-spacing: .05em;
+    }
+  }
+
+  .cir1 {
+    top: size-m(-117);
+    right: size-m(9);
+    width: size-m(149);
+    height: size-m(149);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(30vw);
+    animation: ball 10s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(-208);
+      right: size(721);
+      width: size(266);
+      height: size(266);
+      transform: translateY(10vw);
+    }
+  }
+
+  .cir2 {
+    top: size-m(89);
+    left: size-m(-11.5);
+    width: size-m(36);
+    height: size-m(36);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(15vw);
+    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(196);
+      left: size(151);
+      width: size(63);
+      height: size(63);
+      transform: translateY(5vw);
     }
   }
 }

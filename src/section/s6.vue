@@ -1,6 +1,9 @@
 <template>
   <section class="s6 user-n w-full relative">
     <img class="line absolute md:hidden" src="@/section/s6/line-m.svg" />
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
+    <div class="cir3 absolute"></div>
     <div class="content">
       <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙公園左擁右抱<br>水岸樂活新版圖</div>
       <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">近享424公頃<br>大台北都會公園水岸風光</div>
@@ -55,7 +58,6 @@
 @import "@/assets/style/function.scss";
 
 .s6 {
-  overflow: hidden;
   background: #fff;
   @media screen and (min-width:768px) {
     height: size(1365);
@@ -71,12 +73,11 @@
       height: auto;
     }
   }
-
+  
   .line {
-    top: size-m(-201);
-    left: size-m(-144);
-    width: size-m(501);
-    max-width: none;
+    top: 0;
+    left: 0;
+    width: size-m(357);
   }
 
   .t1 {
@@ -287,6 +288,63 @@
       @media screen and (min-width:768px) {
         right: size(250);
       }
+    }
+  }
+
+  .cir1 {
+    top: size-m(-90);
+    right: size-m(-172);
+    width: size-m(232);
+    height: size-m(232);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(-15vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(-246);
+      right: size(-251);
+      width: size(450);
+      height: size(450);
+      transform: translateY(5vw);
+    }
+  }
+
+  .cir2 {
+    top: size-m(138);
+    left: size-m(-12.3);
+    width: size-m(46);
+    height: size-m(46);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    transform: translateY(-10vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(250);
+      left: size(1002);
+      width: size(240);
+      height: size(240);
+      transform: translateY(-5vw);
+    }
+  }
+
+  .cir3 {
+    top: size-m(468);
+    right: size-m(24);
+    width: size-m(151);
+    height: size-m(151);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.8;
+    transform: translateY(-10vw);
+    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(858);
+      right: auto;
+      left: size(-190);
+      width: size(363);
+      height: size(363);
+      transform: translateY(-5vw);
+      z-index: 1;
     }
   }
 }

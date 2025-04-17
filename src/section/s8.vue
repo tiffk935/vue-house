@@ -1,6 +1,9 @@
 <template>
   <section class="s8 user-n w-full relative">
     <div class="bg absolute"></div>
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
+    <div class="cir3 absolute"></div>
     <div class="en absolute">CONVENIENT LIVING AMENITIES</div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
@@ -269,6 +272,61 @@
         right: size(-82);
         background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       }
+    }
+  }
+
+  .cir1 {
+    top: size-m(131);
+    left: size-m(-8.5);
+    width: size-m(39);
+    height: size-m(39);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    opacity: 0.7;
+    transform: translateY(-5vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(152);
+      left: size(-67);
+      width: size(200);
+      height: size(200);
+    }
+  }
+
+  .cir2 {
+    top: size-m(430);
+    right: size-m(-38.5);
+    width: size-m(140);
+    height: size-m(140);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    transform: translateY(-5vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(1161);
+      right: size(-87);
+      width: size(124);
+      height: size(124);
+      background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+      z-index: 1;
+    }
+  }
+
+  .cir3 {
+    top: size-m(756);
+    left: size-m(-4);
+    width: size-m(90);
+    height: size-m(90);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    transform: translateY(5vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    z-index: 1;
+    @media screen and (min-width:768px) {
+      top: size(1091);
+      left: size(219);
+      width: size(140);
+      height: size(140);
     }
   }
 }

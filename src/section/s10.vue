@@ -1,5 +1,9 @@
 <template>
   <section class="s10 w-full relative">
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute"></div>
+    <div class="cir3 absolute"></div>
+    <div class="cir4 absolute hidden md:block"></div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">近400坪全齡會所<br>渡假飯店生活享受</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">回家就像在度假！</div>
     <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">一樣公設比「日進學」就是要給你更棒更頂級的尊榮享受！洲子洋唯一，近400坪全齡會所，接待大廳、健身房、閱讀區、會議室、閱覽室、桌球室、KTV、瑜伽教室、廚藝教室、信箱區、宴會廳…日系美學質感生活，坐擁星級飯店規劃，體驗全家人幸福親子時光，一次擁有最完美的生活享受「日進學」！</div>
@@ -262,6 +266,73 @@
         background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       }
     }
+  }
+
+  .cir1 {
+    top: size-m(18);
+    right: size-m(-10);
+    width: size-m(99);
+    height: size-m(99);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.4;
+    transform: translateY(-10vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(187);
+      right: size(-40);
+      width: size(200);
+      height: size(200);
+      transform: translateY(-5vw);
+    }
+  }
+
+  .cir2 {
+    top: size-m(363);
+    left: size-m(-88);
+    width: size-m(139);
+    height: size-m(139);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    transform: translateY(10vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(55);
+      left: size(-48);
+      width: size(280);
+      height: size(280);
+      transform: translateY(5vw);
+    }
+  }
+
+  .cir3 {
+    top: size-m(651);
+    right: size-m(59);
+    width: size-m(48);
+    height: size-m(48);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    transform: translateY(10vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    @media screen and (min-width:768px) {
+      top: size(1100);
+      right: size(504);
+      width: size(98);
+      height: size(98);
+      transform: translateY(-5vw);
+    }
+  }
+
+  .cir4 {
+    top: size(787);
+    left: size(360);
+    width: size(245);
+    height: size(245);
+    border-radius: 50%;
+    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    opacity: 0.7;
+    transform: translateY(3vw);
+    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
   }
 }
 </style>

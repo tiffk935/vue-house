@@ -1,7 +1,7 @@
 <template>
-  <div class="contact-info mx-auto flex flex-col items-center justify-between">
-    <!-- <div class="border absolute"></div> -->
-    <!-- <div class="logo"></div> -->
+  <div class="contact-info mx-auto flex flex-col items-center justify-between relative">
+    <div class="cir1 absolute"></div>
+    <div class="cir2 absolute hidden md:block"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
@@ -91,7 +91,7 @@
 
 .contact-info {
   width: size(1000);
-  padding: size(68) 0 size(50) 0;
+  padding: size(35 + 50) 0 size(50) 0;
   // margin-top: size(73);
   position: relative;
 
