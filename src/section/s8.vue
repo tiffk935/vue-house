@@ -1,32 +1,54 @@
 <template>
-  <section class="s8 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:flex-row-reverse md:translate-x-[-5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s8/logo.svg" />
-        <div class="head">
-          <div class="t1">禾鼎設計</div>
-          <div class="t2 subtitle">楊豪琳 設計師</div>
-          <div class="labell absolute">
-            <div class="labell-en">interior design</div>
-            <div class="labell-zh">公設設計</div>
+  <section class="s8 user-n w-full relative">
+    <div class="bg absolute"></div>
+    <div class="en absolute">CONVENIENT LIVING AMENITIES</div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需步遠求。</div>
+    <div class="slider absolute">
+      <swiper
+        :slidesPerView="'auto'"
+        :spaceBetween="0"
+        :centeredSlides="true"
+        :loop="true"
+        :navigation="false"
+        :pagination="{
+          clickable: true
+        }"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+        @swiper="setSwiper"
+      >
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s8/1.jpg" />
+            <div class="txt">凌雲路商圈</div>
           </div>
-        </div>
-        <div class="t4">
-          空間不只是一片場域，更是情感寄託，重新解構塑造風格氛圍，憑藉設計私人精品會館20多年經驗，雕琢機能細節和流暢動線，以空間凝聚感情，分享未來故事，延伸建築多元價值。<br>
-          <br><br class="hidden md:block">
-          代表作品<br>
-          天母自在、豐基皇居、璞知溪、瑞安自在、南京御邸、開璽吾界、林口亞昕天地昕、三輝謙匯、國泰瑞安樸石、國泰層峰
-        </div>
-      </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s8/1.jpg" />
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s8/2.jpg" />
-          <div class="txt">國泰層峰</div>
-        </div>
-      </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s8/2.jpg" />
+            <div class="txt">商圈情境圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s8/3.jpg" />
+            <div class="txt">商圈情境圖</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s8/4.jpg" />
+            <div class="txt">成泰路商圈</div>
+          </div>
+        </swiper-slide>
+      </swiper>
+      <div class="btn-prev" @click="slidePrev"></div>
+      <div class="btn-next" @click="slideNext"></div>
     </div>
   </section>
 </template>
@@ -35,79 +57,217 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  padding-top: size-m(44);
+  height: size-m(817);
   @media screen and (min-width:768px) {
-    padding: size(110) 0 size(90) 0;
+    height: size(1198);
   }
 
-  .content {
-    padding: 0 size-m(30);
+  .bg {
+    bottom: 0;
+    left: size-m(-334);
+    width: size-m(736.15);
+    height: size-m(210);
+    background-image: url(@/section/s8/bg.png);
+    background-position: left bottom;
+    background-size: 100% auto;
     @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-left: size(154);
-      position: relative;
+      left: 0;
+      width: size(1921);
+      height: size(548);
     }
   }
 
-  .logo {
-    width: size-m(80);
-    margin-bottom: size-m(13);
+  .en {
+    top: size-m(76);
+    left: size-m(20);
+    font-size: size-m(13);
+    font-weight: 300;
+    line-height: 180%;
+    letter-spacing: .35em;
+    white-space: nowrap;
     @media screen and (min-width:768px) {
-      width: size(110);
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 0;
-      right: size(-65 - 110);
-    }
-  }
+      top: size(153);
+      left: size(470);
+      font-size: size(33);
+      letter-spacing: .53em;
 
-  .head {
-    padding-bottom: size-m(16);
-    margin-bottom: size-m(18);
-    border-bottom: size-m(1) solid #000;
-    position: relative;
-    @media screen and (min-width:768px) {
-      padding-bottom: size(20);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
-    }
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        width: size(127);
+        height: size(1);
+        background: #514E4E;
+      }
 
-    .labell {
-      bottom: size-m(16 + 6);
-      right: 0;
-      text-align: right;
-      @media screen and (min-width:768px) {
-        display: flex;
-        align-items: flex-start;
-        top: 0;
-        bottom: auto;
-        right: size(-65 - 110);
+      &:before {
+        left: size(-23);
+        transform: translate(-100%, -50%);
+      }
+
+      &:after {
+        right: calc(size(-23) + .53em);
+        transform: translate(100%, -50%);
       }
     }
   }
 
-  .imgs {
+  .t1 {
+    top: size-m(163);
+    left: size-m(36);
+    font-size: size-m(28);
+    font-weight: 700;
+    line-height: 123%;
+    letter-spacing: .05em;
+    text-align: justify;
     @media screen and (min-width:768px) {
-      width: size(849);
+      top: size(424);
+      left: size(200);
+      font-size: size(62);
+    }
+  }
+
+  .t2 {
+    width: size-m(310);
+    top: size-m(271);
+    left: size-m(36);
+    font-size: size-m(18);
+    color: #7E151A;
+    font-family: "Noto Sans TC";
+    font-weight: 700;
+    line-height: 160%;
+    @media screen and (min-width:768px) {
+      width: size(545);
+      top: size(650);
+      left: size(200);
+      font-size: size(38);
+    }
+  }
+
+  .t3 {
+    width: size-m(310);
+    top: size-m(310);
+    left: size-m(36);
+    text-align: justify;
+    font-family: "Noto Sans TC";
+    font-size: size-m(14);
+    line-height: 180%;
+    letter-spacing: .05em;
+    @media screen and (min-width:768px) {
+      width: size(545);
+      top: size(739);
+      left: size(200);
+      font-size: size(16);
+    }
+  }
+
+  .slider {
+    width: size-m(310.5);
+    top: size-m(480);
+    left: size-m(36);
+    @media screen and (min-width:768px) {
+      width: size(900);
+      top: size(431 - 47);
+      left: size(831);
+      z-index: 1;
+      padding-top: size(47);
+      overflow: hidden;
     }
 
-    .img {
-      width: 48.8%;
-    }
-
-    .txt {
-      position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
+    .swiper {
+      z-index: initial;
       @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
+        overflow: visible;
+      }
+
+      * {
+        z-index: initial;
+      }
+    }
+
+    .swiper-pagination {
+      display: none;
+      @media screen and (min-width:768px) {
+        display: flex;
+        margin: 0;
+        line-height: 1;
+        bottom: auto;
+        top: size(-47);
+        justify-content: flex-end;
+      }
+
+      .swiper-pagination-bullet {
+        width: size(70);
+        height: size(7);
+        background: #B3B3B3;
+        border-radius: size(10);
+        opacity: .5;
+
+        &.swiper-pagination-bullet-active {
+          opacity: 1;
+        }
+      }
+    }
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        height: size-m(207);
+        display: block;
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: size(600);
+        }
+      }
+
+      .txt {
+        position: absolute;
+        bottom: size-m(3);
+        left: size-m(10);
+        color: #FFF;
+        text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
+        font-family: "Noto Sans TC";
+        font-size: size-m(12);
+        line-height: 180%;
+        @media screen and (min-width:768px) {
+          bottom: size(3);
+          left: size(10);
+          text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
+          font-size: size(15);
+        }
+      }
+    }
+
+    .btn-prev, .btn-next {
+      width: size-m(29);
+      height: size-m(29);
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-repeat: no-repeat;
+      background-size: size-m(6.22) auto;
+      background-position: center;
+      cursor: pointer;
+      @media screen and (min-width:768px) {
+        display: none;
+      }
+    }
+
+    .btn-prev {
+      left: size-m(-29);
+      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21588 2.44922L2.43987 14.8508C1.85338 16.1126 1.85338 17.9574 2.43987 19.2192L8.21588 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      @media screen and (min-width:768px) {
+        left: size(-82);
+        background-image: url('data:image/svg+xml,<svg width="21" height="86" viewBox="0 0 21 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.4875 2L3.2375 36.89C1.5875 40.44 1.5875 45.63 3.2375 49.18L19.4875 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      }
+    }
+
+    .btn-next {
+      right: size-m(-29);
+      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.78406 2.44922L7.56007 14.8508C8.14656 16.1126 8.14656 17.9574 7.56007 19.2192L1.78406 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      @media screen and (min-width:768px) {
+        right: size(-82);
+        background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       }
     }
   }
@@ -115,4 +275,24 @@
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
+const swiperRef = ref();
+
+const setSwiper = swiper => {
+  swiperRef.value = swiper;
+}
+
+const slidePrev = () => {
+  swiperRef.value.slidePrev();
+}
+
+const slideNext = () => {
+  swiperRef.value.slideNext();
+}
 </script>

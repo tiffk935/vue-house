@@ -8,16 +8,16 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span><!--(必填)--></span></span>
+          <label class="row"><span>姓名<span>(必填)</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
           </label>
-          <label class="row"><span>手機<span><!--(必填)--></span></span>
+          <label class="row"><span>手機<span>(必填)</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
           <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
             <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
           </label>
-          <label class="row" v-if="info.room_type"><span>可預約時間</span>
+          <label class="row" v-if="info.room_type"><span>可聯絡的時段</span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
               <option value="" selected disabled>請選擇時間</option>
               <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
@@ -48,9 +48,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#BBA693] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#E50012] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -81,39 +81,37 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  padding-top: 0;
+  font-family: "Noto Sans TC";
 
   .order-section {
     position: relative;
-    padding-top: 4em;
+    padding-top: size-m(20);
     overflow: hidden;
-    background-image: url(@/section/form/bg.jpg);
-    background-size: cover;
-    background-position: center center;
     @media screen and (min-width:768px) {
-      padding-top: 5.3em;
+      padding-top: size(41);
     }
   }
 
   .order-title {
-    font-size: size-m(25);
-    line-height: 1.44;
+    font-family: "Noto Serif TC";
+    font-size: size-m(28);
     font-weight: 700;
-    color: #fff;
-      margin-bottom: .5em;
+    margin-bottom: size-m(20);
     @media screen and (min-width:768px) {
-      font-size: size(50);
+      font-size: size(62);
+      margin-bottom: 0;
     }
   }
 
   .order-subTitle {
-    font-size: size-m(14);
-    color: #fff;
-    margin: 0 auto 2em auto;
-    width: size-m(310);
+    color: #666;
+    font-size: size-m(13);
+    line-height: size-m(24);
+    margin-bottom: size-m(20);
     @media screen and (min-width:768px) {
-      font-size: size(20);
-      width: auto;
+      font-size: size(18);
+      line-height: size(36);
+      margin-bottom: size(31);
     }
   }
 
@@ -126,7 +124,7 @@
     flex-direction: column;
     line-height: 1.7;
     @media screen and (min-width:768px) {
-      width:60em;
+      width: size(1000);
     //  min-width: 680px;
       gap: size(80);
       flex-direction: row;
@@ -159,7 +157,7 @@
     }
     .row{
       background: #FFF;
-      border: 1px solid #CCC;
+      border: 1px solid #666;
       color: #000;
       display: flex;
       width: 100%;
@@ -189,9 +187,9 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #785A4F;
+    background-color: #666;
     border:0;
-    border-radius: 0em;
+    border-radius: size-m(20);
     height:3.6em;
     line-height: 3.3;
     z-index: 10;
@@ -200,6 +198,7 @@
     font-weight: 600;
     @media screen and (min-width:768px) {
       font-size: size(25);
+      border-radius: size(20);
     }
   }
   .control {
@@ -246,17 +245,17 @@ const formData = reactive({
   area: "",
   msg: "",
   policyChecked: false,
-  r_verify: true,
+  r_verify: false,
 })
 
 //非必填
-const bypass = ["project", "msg", "room_type","budget", "city", "area"]
+const bypass = ["email","project", "msg", "room_type","budget", "city", "area"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "房型", //room_type
+  "預約時段", //room_type
   "預算", //budget
   "建案", //project
   "信箱", //email

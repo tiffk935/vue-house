@@ -1,18 +1,18 @@
 <template>
-    <!-- <div class="flex flex-col md:flex-row items-center justify-between bg-[#E5005C]">
+    <div class="flex flex-col md:flex-row items-center justify-between">
         <div class="flex-1 items-center justify-center py-4 md:py-10">
-            <div class="info-box mx-auto mt-4 flex flex-col items-center justify-center">
+            <div class="info-box mx-auto flex flex-col items-center justify-center">
                 <div class="title">建案資訊</div>
                 <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
                     <div class="item flex items-center w-full whitespace-nowrap"
                         v-for="item in info.houseInfos">
-                        <p class="mr-5 font-bold border-l-2 border-white text-white pl-2 ">{{ item[0] }}</p>
-                        <p class="whitespace-pre-line leading-normal text-left text-white">{{ item[1] }}</p>
+                        <p class="mr-5 font-bold border-l-2 border-[#514E4E] pl-2 ">{{ item[0] }}</p>
+                        <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
                     </div>
                 </div>
             </div>
         </div>
-    </div> -->
+    </div>
     <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
         <a href="https://www.lixin.com.tw/" target="_blank"><img class="hover:opacity-50"
                 src="@/section/form/footerlogo.gif" alt="Lixin" srcset=""></a>
@@ -32,7 +32,7 @@
         font-size: size(48);
         font-weight: 700;
         margin-bottom: size(23);
-        color: #fff;
+        font-family: "Noto Serif TC";
     }
 
     .info-items {

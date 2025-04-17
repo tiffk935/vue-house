@@ -18,7 +18,7 @@
     </div>
     <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
       <div class="flex contact-item justify-between items-center address">
-        <div><span class="font-[500]">接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
+        <div><span>接待中心：</span><br class="md:hidden"><span v-html="info.address"></span></div>
       </div>
       <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
         <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
@@ -68,7 +68,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#785A4F] border-0 text-white mt-12" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#666] border-0 text-white mt-12" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -90,8 +90,8 @@
 .hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
-  width: size(1200);
-  padding: size(68) size(160) size(50) size(160);
+  width: size(1000);
+  padding: size(68) 0 size(50) 0;
   // margin-top: size(73);
   position: relative;
 
@@ -120,18 +120,22 @@
 
     &.address-wrap {
       margin-top: size(20);
+
+      .contact-item:nth-child(2) {
+        width: 23vw;
+      }
     } 
 
     .contact-item {
-      background-color: #785A4F;
-      // border: 1px solid #040000;
+      background-color: #666;
+      border: 1px solid #666;
       color: #ffffff;
       width: 100%;
       padding: 0 size(40);
       font-size: size(16);
       line-height: 3.8;
       letter-spacing: 0.1em;
-      max-width: size(280);
+      /* max-width: size(280); */
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
@@ -161,7 +165,6 @@
         position: relative;
         max-width: 9999px;
         justify-content: center;
-        border-color: #fff;
         /*
         border-top-left-radius: size(10);
         border-bottom-left-radius: size(10);
@@ -185,7 +188,7 @@
   }
 }
 .modal-box{
-  img{filter: invert(35%) sepia(37%) saturate(385%) hue-rotate(331deg) brightness(92%) contrast(82%);
+  img{filter: invert(40%) sepia(0%) saturate(1050%) hue-rotate(224deg) brightness(96%) contrast(89%);
   //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -202,7 +205,8 @@
 
     .contact-item {
       height: 100%;
-      background-color: #785A4F;
+      background-color: #7E151A;
+      background: linear-gradient(180deg, #7E151A 0%, #E4262F 100%);
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -221,7 +225,7 @@
   .contact-info {
     width: size-m(375);
     height: auto;
-    padding: size-m(50) size-m(32);
+    padding: size-m(110) size-m(32) size-m(50) size-m(32);
     // margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
@@ -250,6 +254,10 @@
         // border-radius: size-m(50);
         margin-top: size-m(20);
         // border: size-m(4) solid #e6c57c;
+
+        .contact-item:nth-child(2) {
+          width: 100%;
+        }
       }
 
       .contact-item {
@@ -298,21 +306,16 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-    setTimeout(() => {
-      window.location.href = "phoneThanks";
-    }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {
     window.open(info.googleLink);
-
   }
 }
 
 const open = () => {
   window.open(info.fbLink);
 }
-
 
 const smoothScroll = inject('smoothScroll')
 const scrollTo = (el) => {

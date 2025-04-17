@@ -7,6 +7,21 @@
                     @click="scrollTo(item.target)" :key="item">
                     <span>{{ item.name }}</span>
                 </div>
+                <div 
+                    class="menu-item menu-item-full font-bold cursor-pointer text-white"
+                    @click="modalOpen = true; modalType = 'phone'; menuOpen = false;">
+                    <span>立即來電</span>
+                </div>
+                <div 
+                    class="menu-item menu-item-full font-bold cursor-pointer text-white"
+                    @click="modalOpen = true; modalType = 'gmap'; menuOpen = false;">
+                    <span>地圖導航</span>
+                </div>
+                <div 
+                    class="menu-item menu-item-full font-bold cursor-pointer text-white"
+                    @click="scrollTo('.order')">
+                    <span>立即預約</span>
+                </div>
             </div>
         </div>
         <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
@@ -14,6 +29,36 @@
             <div class="bar z-10"></div>
         </div>
     </div>
+
+    <!-- Modal -->
+  <input type="checkbox" v-model="modalOpen" id="nav-modal" class="modal-toggle" />
+  <div class="modal -mt-20 md:-mt-72">
+    <div class="modal-box py-12 relative flex flex-col items-center justify-center">
+      <label for="nav-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
+      <!-- icon -->
+      <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
+      <!-- title -->
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+          '接待會館'
+      }}</div>
+      <!-- content -->
+      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+          `接待中心：${info.address}`
+      }}</div>
+      <!-- btn -->
+      <div class="btn btn-lg bg-[#666] border-0 text-white mt-12" @click="go()" v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+            '開啟導航'
+        }}</div>
+    </div>
+  </div>
 </template>
 
 
@@ -38,7 +83,7 @@
         .bar {
             width: size(38);
             height: 2px;
-            background-color: #fff;
+            background-color: #666;
             // position: relative;
             transform: all .5s;
             position: absolute;
@@ -52,7 +97,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #666;
                 transition: all .5s;
             }
 
@@ -62,7 +107,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #666;
                 transition: all .5s;
             }
         }
@@ -118,9 +163,11 @@
         position: fixed;
         top: size(0);
         right: size(0);
-        background-color: rgba(139, 199, 130, 0.8);
+        /* background-color: rgba(139, 199, 130, 0.8); */
+        background: #E50012;
+        background: linear-gradient(90deg, #E50012 0%, #7E151A 100%);
         backdrop-filter: blur(2px);
-        width: size(280);
+        width: size(375);
         height: 100%;
         z-index: 99;
         transform: translateX(100%);
@@ -128,36 +175,40 @@
         padding: size(100) 0;
         gap: size(20);
 
-        .menu-inner {
-            width: size(128);
-            margin: 0 auto;
+        &:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(@/section/form/bg.svg);
+            background-size: cover;
+            z-index: -1;
         }
 
         .menu-item {
             text-align: center;
-            padding: size(20) 0;
-            // border-bottom: 1px solid #fff;
+            margin-bottom: size(20);
 
             &:last-child {
-                border: none;
+                margin-bottom: 0;
             }
             
             span {
-                font-size: size(24);
+                font-size: size(18);
+                line-height: size(47);
                 width: 100%;
                 display: block;
                 white-space: nowrap;
-                transition: width .4s linear, transform .1s linear;
-                transform-origin: left center;
-                text-shadow: 0 0 .6em #2d612699 ,0 0 .15em #2d612699;
             }
+        }
 
-            // &:hover {
-            //     span {
-            //         transform: scale(1.3);
-            //         width: 0;
-            //     }
-            // }
+        .menu-item-full {
+            background: #fff;
+            color: #7E151A;
+            width: size(232);
+            padding: 0;
         }
 
         &.open {
@@ -267,22 +318,23 @@
         }
 
         .menu {
+            width: 100%;
             position: fixed;
-            background-color: rgba(139, 199, 130, 0.8);
             width: 100%;
             padding: 0;
             gap: size-m(45);
 
-            .menu-inner {
-                width: size-m(128);
-                margin: 0 auto;
+            &:before {
+                background-image: url(@/section/form/bg-m.svg);
             }
 
             .menu-item {
-                padding: size-m(15) 0;
+                margin-bottom: size-m(10);
                 
                 span {
-                    font-size: size-m(24);
+                    font-size: size-m(18);
+                    line-height: size-m(36);
+                    letter-spacing: .15em;
                     width: 100%;
                     display: block;
                     white-space: nowrap;
@@ -299,6 +351,16 @@
                 
             }
 
+            .menu-item-full {
+                width: size-m(232);
+                padding: 0;
+                margin-top: size-m(20);
+                
+                span {
+                    line-height: size-m(40);
+                }
+            }
+
             &.open {
                 transform: translateX(0);
             }
@@ -311,6 +373,8 @@
 import { inject, getCurrentInstance, onMounted, ref } from 'vue';
 import info from "@/info"
 
+const modalOpen = ref(false);
+const modalType = ref('');
 const menuOpen = ref(false)
 
 const globals = getCurrentInstance().appContext.config.globalProperties
@@ -338,5 +402,19 @@ const scrollTo = (el) => {
         scrollTo: document.querySelector(el)
     })
     menuOpen.value = false;
+}
+
+const go = () => {
+  if (modalType.value == 'phone') {
+    window.location.href = `tel:${info.phone.replace("-", "")}`;
+  } else if (modalType.value == 'fb') {
+    window.open(info.fbMessage);
+  } else if (modalType.value == 'gmap') {
+    window.open(info.googleLink);
+  }
+}
+
+const open = () => {
+  window.open(info.fbLink);
 }
 </script>

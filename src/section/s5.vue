@@ -1,21 +1,15 @@
 <template>
-  <section class="s5 relative">
-    <div class="line md:hidden" data-aos="line" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="content1">
-      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國際底蘊雋譽美學<br>凝練鍛造雍容御邸</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">源自於生活品味的「雋品建築」</div>
-      <div class="desc mb-6" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        取自雋永的「雋」與匯聚眾人智慧的「品」，<br class="md:hidden">「雋品」自古即代表俊秀、超著的品格，<br>
-        蘊含精品之意。以幾何方塊構成的「品」，<br class="md:hidden">巧妙地融合建築、人與環境之間的精髓。
-      </div>
-      <div class="subtitle" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「雋品建築」</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        厚積十年歷練，從公共建設到居住空間設計，<br class="md:hidden">在國際上屢獲大獎肯定，也深受客戶口碑推崇，<br>
-        「雋品建築」堅持講究細節，不斷突破創新，<br class="md:hidden">展現超乎預期的精緻質感與細膩品味。
-      </div>
-    </div>
-
-    <div class="slider">
+  <section class="s5 user-n w-full relative">
+    <div class="bg absolute"></div>
+    <div class="train absolute"></div>
+    <img class="line absolute md:hidden" src="@/section/s5/line-m.svg" />
+    <img class="line absolute hidden md:block" src="@/section/s5/line.svg" />
+    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">蘆洲捷運站5分鐘<br>輕軌F06站散步圈</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">擁3高4捷4特快交通路網</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」車行約5分鐘一橋就到蘆洲捷運站，散步3分鐘抵輕軌F06站，未來一站就到蘆洲。享強大交通動能鄰近中和新蘆線、環狀線、機場線、五泰輕軌4捷串聯大台北。出門轉彎直上台64，快接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，南來北往東西暢行通勤首選。</div>
+    <div class="t4 absolute">交通が便利</div>
+    <div class="t5 absolute">CONVNEIENT TRANSPORT</div>
+    <div class="slider absolute">
       <swiper
         :slidesPerView="'auto'"
         :spaceBetween="0"
@@ -28,53 +22,29 @@
           disableOnInteraction: false,
         }"
         :modules="modules"
+        @swiper="setSwiper"
       >
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/1.jpg" />
-            <div class="txt">雍雋品 3D示意模擬圖</div>
+            <div class="txt">五泰輕軌示意圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/2.jpg" />
-            <div class="txt">雋品天母天玉街案 3D示意模擬圖</div>
+            <div class="txt">國道一號實景圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s5/3.jpg" />
-            <div class="txt">南亞停一·停車場 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/04.jpg" />
-            <div class="txt">政大圖書館 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/05.jpg" />
-            <div class="txt">大安室內設計案 實景拍攝</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s5/06.jpg" />
-            <div class="txt">汐止室內設計案 實景拍攝</div>
+            <div class="txt">捷運蘆洲站實景圖</div>
           </div>
         </swiper-slide>
       </swiper>
-    </div>
-
-    <div class="content2">
-      <div class="flex justify-between items-end mb-2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div class="t1 subtitle">《雍雋品》<br class="md:hidden">中正區住宅大樓</div>
-        <img class="logo" src="@/section/s5/logo.png" />
-      </div>
-      <div class="en" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">JADE POSH-GATHERING GREEN, FLOURISHING OPULENCE.</div>
-      <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">本案位於南海路，鄰近台北植物園，規劃住宅大樓建築外觀與公設空間與整體興建，榮獲2024芬蘭Arch設計大獎Arch Design Award－金獎、米蘭設計大獎MILAN Design Awards－銀獎。得獎推介：「尊重都市既存結構，融入周遭環境，呈現地段特有的人文價值與記憶，透過自然光影述說空間的層次與故事，形塑一處安定、自在雍然、濾除塵囂的居所」以都市涵構（Contextualism）和基地紋理作為設計出發點，構築最合乎當地樣貌與形式的建築。</div>
+      <div class="btn-prev" @click="slidePrev"></div>
+      <div class="btn-next" @click="slideNext"></div>
     </div>
   </section>
 </template>
@@ -82,107 +52,237 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+@keyframes train {
+  55% {
+    transform: translateX(calc(var(--trainX, 200%) * 0.2));
+  }
+  65% {
+    transform: translateX(calc(var(--trainX, 200%) * 0.2));
+  }
+  100% {
+    transform: translateX(var(--trainX, 200%));
+  }
+}
+
 .s5 {
-  background: rgba(0, 0, 0, .06);
+  height: size-m(945);
+  @media screen and (min-width:768px) {
+    height: size(1081);
+  }
+
+  .bg {
+    width: size-m(519.77);
+    height: size-m(261);
+    top: size-m(656);
+    left: size-m(-47);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url(@/section/s5/bg.png);
+    @media screen and (min-width:768px) {
+      width: size(932);
+      height: size(468);
+      top: size(510);
+      left: size(847);
+    }
+  }
+
+  .train {
+    width: size-m(820.76);
+    height: size-m(81);
+    top: size-m(840);
+    // left: size-m(-520);
+    left: size-m(-820.76);
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    background-position: center;
+    background-image: url(@/section/s5/train.png);
+    animation: train 4s infinite;
+    --trainX: 160%;
+    @media screen and (min-width:768px) {
+      width: size(1297);
+      height: size(128);
+      top: size(867);
+      // left: size(115);
+      left: size(-515);
+      animation-duration: 5s;
+      --trainX: 200%;
+    }
+  }
 
   .line {
-    position: absolute;
-    top: size-m(-61);
-    left: 50%;
-    width: size-m(1);
-    height: size-m(120);
-    background: #000;
-  }
-
-  .content1 {
-    text-align: center;
-    padding: size-m(109) size-m(30) size-m(50) size-m(30);
+    top: size-m(150);
+    left: size-m(-44);
+    width: size-m(468);
+    max-width: none;
+    /* display: none; */
     @media screen and (min-width:768px) {
-      padding: size(160) size(0) size(115) size(0);
-    }
-    
-    .title {
-      color: #12352A;
-      letter-spacing: .04em;
-      margin-bottom: size-m(26.23);
-      @media screen and (min-width:768px) {
-        margin-bottom: size(68.23);
-      }
-    }
-
-    .subtitle {
-      letter-spacing: .06em;
-      margin-bottom: .3em;
-      @media screen and (min-width:768px) {
-      }
-    }
-
-    .desc {
-      letter-spacing: .07em;
+      top: size(430.5);
+      left: size(-1);
+      width: size(1863.98);
     }
   }
 
-  .content2 {
-    padding: size-m(41.4) size-m(30) size-m(85) size-m(30);
+  .t1 {
+    top: size-m(60);
+    left: size-m(82);
+    font-size: size-m(28);
+    font-weight: 700;
+    line-height: 123%;
+    letter-spacing: .05em;
+    text-align: justify;
     @media screen and (min-width:768px) {
-      padding: size(61.33) size(0) size(110) size(0);
-      width: size(817.68);
-      margin: 0 auto;
-    }
-
-    .subtitle {
-      color: #12352A;
-      font-weight: 700;
-      line-height: 150%;
-      letter-spacing: .04em;
-    }
-
-    .logo {
-      width: size-m(121.32);
-      @media screen and (min-width:768px) {
-        width: size(124.5);
-      }
-    }
-
-    .en {
-      color: #9b8673bb;
-      font-size: size-m(11);
-      line-height: 1.7;
-      margin-bottom: size-m(12.75);
-      letter-spacing: -.03em;
-      @media screen and (min-width:768px) {
-        font-size: size(13);
-        letter-spacing: .13em;
-        margin-bottom: size(21.75);
-      }
-    }
-
-    .desc {
-      text-align: justify;
-      font-style: normal;
+      top: size(240);
+      left: size(192);
+      font-size: size(62);
     }
   }
 
-  .swiper-slide {
-    width: size-m(315);
-    margin: 0 size-m(5);
+  .t2 {
+    width: size-m(250);
+    top: size-m(168);
+    left: size-m(82);
+    font-size: size-m(18);
+    color: #7E151A;
+    font-family: "Noto Sans TC";
+    font-weight: 700;
+    line-height: 160%;
     @media screen and (min-width:768px) {
-      width: size(870);
-      margin: 0 size(50);
+      width: size(555);
+      top: size(494);
+      left: size(192);
+      font-size: size(38);
+    }
+  }
+
+  .t3 {
+    width: size-m(250);
+    top: size-m(207);
+    left: size-m(82);
+    text-align: justify;
+    font-family: "Noto Sans TC";
+    font-size: size-m(14);
+    line-height: 180%;
+    letter-spacing: .05em;
+    @media screen and (min-width:768px) {
+      width: size(555);
+      top: size(583);
+      left: size(192);
+      font-size: size(16);
+    }
+  }
+
+  .t4 {
+    top: size-m(525);
+    left: size-m(40);
+    color: #999;
+    font-size: size-m(28);
+    font-weight: 200;
+    line-height: 160%;
+    letter-spacing: .12em;
+    @media screen and (min-width:768px) {
+      top: size(130);
+      left: size(962);
+      font-size: size(60);
+    }
+  }
+
+  .t5 {
+    top: size-m(560);
+    left: size-m(40);
+    color: #999;
+    font-size: size-m(16);
+    font-weight: 300;
+    line-height: 160%;
+    letter-spacing: .12em;
+    @media screen and (min-width:768px) {
+      top: size(193);
+      left: size(962);
+      font-size: size(50);
+    }
+  }
+
+  .slider {
+    width: size-m(310);
+    top: size-m(578);
+    left: size-m(32);
+    @media screen and (min-width:768px) {
+      width: size(880);
+      top: size(248);
+      left: size(907);
     }
 
-    .txt {
+    .swiper, .swiper * {
+      z-index: initial;
+    }
+
+    .swiper-slide {
+      border-radius: size-m(20);
+      overflow: hidden;
+      @media screen and (min-width:768px) {
+        border-radius: size(60);
+      }
+
+      img {
+        width: 100%;
+        height: size-m(203);
+        display: block;
+        object-fit: cover;
+        @media screen and (min-width:768px) {
+          height: size(575);
+        }
+      }
+
+      .txt {
+        position: absolute;
+        bottom: size-m(3);
+        left: size-m(12);
+        color: #FFF;
+        text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
+        font-family: "Noto Sans TC";
+        font-size: size-m(12);
+        line-height: 180%;
+        @media screen and (min-width:768px) {
+          bottom: size(3);
+          left: size(12);
+          text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
+          font-size: size(12);
+        }
+      }
+    }
+
+    .btn-prev, .btn-next {
+      width: size-m(29);
+      height: size-m(29);
       position: absolute;
-      bottom: size-m(5);
-      right: size-m(8);
-      color: #FFF;
-      font-family: "Noto Sans TC";
-      font-size: size-m(12);
-      line-height: 170%;
+      top: 50%;
+      transform: translate(0, -50%);
+      background-repeat: no-repeat;
+      background-size: size-m(6.22) auto;
+      background-position: center;
+      cursor: pointer;
       @media screen and (min-width:768px) {
-        bottom: size(7.5);
-        right: size(11);
-        font-size: size(14);
+        width: size(82);
+        height: size(82);
+        background-size: size(17.5) auto;
+      }
+    }
+
+    .btn-prev {
+      left: size-m(-29);
+      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21588 2.44922L2.43987 14.8508C1.85338 16.1126 1.85338 17.9574 2.43987 19.2192L8.21588 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      @media screen and (min-width:768px) {
+        left: size(-82);
+        background-image: url('data:image/svg+xml,<svg width="21" height="86" viewBox="0 0 21 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.4875 2L3.2375 36.89C1.5875 40.44 1.5875 45.63 3.2375 49.18L19.4875 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      }
+    }
+
+    .btn-next {
+      right: size-m(-29);
+      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.78406 2.44922L7.56007 14.8508C8.14656 16.1126 8.14656 17.9574 7.56007 19.2192L1.78406 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+      @media screen and (min-width:768px) {
+        right: size(-82);
+        background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
       }
     }
   }
@@ -197,4 +297,17 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from "swiper";
 const modules = ref([Autoplay, Navigation, Pagination]);
+const swiperRef = ref();
+
+const setSwiper = swiper => {
+  swiperRef.value = swiper;
+}
+
+const slidePrev = () => {
+  swiperRef.value.slidePrev();
+}
+
+const slideNext = () => {
+  swiperRef.value.slideNext();
+}
 </script>

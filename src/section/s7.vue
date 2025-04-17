@@ -1,32 +1,16 @@
 <template>
-  <section class="s7 w-full relative">
-    <div class="md:flex md:justify-center md:items-end md:translate-x-[5.885vw]">
-      <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="logo" src="@/section/s7/logo.svg" />
-        <div class="head">
-          <div class="t1">築遠工程</div>
-          <div class="t2 subtitle">張盈智 結構技師</div>
-          <div class="labell absolute">
-            <div class="labell-en">STRUCTURE CONSULTANT</div>
-            <div class="labell-zh">結構顧問</div>
-          </div>
-        </div>
-        <div class="t4">
-          以藝術看待結構，創造建築新視角，在安全利基點上，解構重組力與美學。洞悉技法，完美展現穠纖合度平衡，至高標準嚴格把關。<br>
-          <br>
-          知名業績<br>
-          璞真碧湖畔、晴空樹、至仁愛、富富話合、巨大集團全球營運總部
-        </div>
-      </div>
-      <div class="imgs flex justify-between">
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img class="w-full" src="@/section/s7/1.jpg" />
-          <div class="txt">巨大集團全球營運總部</div>
-        </div>
-        <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-          <img class="w-full" src="@/section/s7/2.jpg" />
-        </div>
-      </div>
+  <section class="s7 user-n w-full relative">
+    <div class="img1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="w-full block" src="@/section/s7/img1.jpg" />
+      <div class="txt absolute">校園情境圖</div>
+    </div>
+    <div class="en absolute">BILINGUAL CAMPUS</div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙語校園第一排<br>輕鬆贏在起跑點</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">下樓就到校，上學免煩惱！</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」正面樹人百年文風鬱鬱的「成州國小」，面對全球化趨勢積極推動雙語校園計畫，讓孩童在學習中自然而然與世界接軌，沐浴知識同時涵養世界，愛子心切家庭首選！</div>
+    <div class="img2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="w-full block" src="@/section/s7/img2.jpg" />
+      <div class="txt absolute">成州國小實景圖</div>
     </div>
   </section>
 </template>
@@ -35,83 +19,123 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  padding-top: size-m(44);
+  height: size-m(723);
   @media screen and (min-width:768px) {
-    padding: size(110) 0 size(90) 0;
+    height: size(822);
   }
 
-  .content {
-    padding: 0 size-m(30);
-    @media screen and (min-width:768px) {
-      padding: 0;
-      width: size(414);
-      margin-right: size(154);
-      position: relative;
-    }
-  }
-
-  .logo {
-    width: size-m(74);
-    margin-bottom: size-m(13);
-    @media screen and (min-width:768px) {
-      width: size(149);
-      margin-bottom: 0;
-      position: absolute;
-      bottom: 0;
-      left: size(-149 - 55);
-    }
-  }
-
-  .head {
-    padding-bottom: size-m(16);
-    margin-bottom: size-m(18);
-    border-bottom: size-m(1) solid #000;
-    position: relative;
-    @media screen and (min-width:768px) {
-      padding-bottom: size(20);
-      margin-bottom: size(23);
-      border-bottom: size(1) solid #000;
-    }
-
-    .labell {
-      bottom: size-m(16 + 6);
-      right: 0;
-      text-align: right;
-      @media screen and (min-width:768px) {
-        display: flex;
-        align-items: flex-start;
-        flex-direction: row-reverse;
-        top: size(-90);
-        bottom: auto;
-        left: size(-65 - 110);
-        right: auto;
-        
-      }
-    }
-  }
-
-  .imgs {
-    @media screen and (min-width:768px) {
-      width: size(849);
-    }
-
-    .img {
-      width: 48.8%;
-    }
-
+  .img1, .img2 {
     .txt {
-      position: absolute;
-      bottom: size-m(5);
-      right: size-m(6);
+      bottom: size-m(2);
+      left: size-m(10);
       color: #FFF;
+      text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
       font-family: "Noto Sans TC";
-      font-size: size-m(10);
-      line-height: 133%;
+      font-size: size-m(12);
+      line-height: 180%;
       @media screen and (min-width:768px) {
-        bottom: size(8);
-        right: size(14);
-        font-size: size(14);
+        bottom: 0;
+        left: size(10);
+        text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
+        font-size: size(15);
+        line-height: 180%;
       }
+    }
+  }
+
+  .img1 {
+    top: size-m(-24);
+    left: size-m(32);
+    width: size-m(200);
+    @media screen and (min-width:768px) {
+      top: size(-35);
+      left: size(193);
+      width: size(460);
+    }
+  }
+
+  .img2 {
+    top: size-m(515);
+    left: size-m(32);
+    width: size-m(310);
+    @media screen and (min-width:768px) {
+      top: size(307);
+      left: size(193);
+      width: size(767);
+    }
+  }
+
+  .en {
+    top: size-m(171);
+    left: size-m(38);
+    font-size: size-m(12);
+    font-weight: 300;
+    line-height: 180%;
+    letter-spacing: .19em;
+    @media screen and (min-width:768px) {
+      top: size(305);
+      left: size(1170);
+      font-size: size(25);
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: calc(size(-8) + .19em);
+        transform: translate(100%, -50%);
+        width: size(110);
+        height: size(1);
+        background: #514E4E;
+      }
+    }
+  }
+
+  .t1 {
+    top: size-m(193);
+    left: size-m(32);
+    font-size: size-m(28);
+    font-weight: 700;
+    line-height: 123%;
+    letter-spacing: .05em;
+    text-align: justify;
+    @media screen and (min-width:768px) {
+      top: size(345);
+      left: size(1164);
+      font-size: size(62);
+    }
+  }
+
+  .t2 {
+    width: size-m(310);
+    top: size-m(301);
+    left: size-m(32);
+    font-size: size-m(18);
+    color: #7E151A;
+    font-family: "Noto Sans TC";
+    font-weight: 700;
+    line-height: 160%;
+    @media screen and (min-width:768px) {
+      width: size(555);
+      top: size(571);
+      left: size(1164);
+      font-size: size(38);
+    }
+  }
+
+  .t3 {
+    width: size-m(310);
+    top: size-m(340);
+    left: size-m(32);
+    text-align: justify;
+    font-family: "Noto Sans TC";
+    font-size: size-m(14);
+    line-height: 180%;
+    letter-spacing: .05em;
+    @media screen and (min-width:768px) {
+      width: size(555);
+      top: size(660);
+      left: size(1164);
+      font-size: size(16);
     }
   }
 }
