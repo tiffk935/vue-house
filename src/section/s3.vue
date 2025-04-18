@@ -1,8 +1,6 @@
 <template>
   <section class="s3 user-n w-full relative">
-    <div class="vid">
-      <video src="https://h35.banner.tw/yjp/pc.mov" playsinline autoplay muted loop></video>
-    </div>
+    <video class="block w-full" src="https://h35.banner.tw/yjp/pc.mov" playsinline autoplay muted loop></video>
   </section>
 </template>
 
@@ -10,20 +8,13 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  .vid {
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 0;
-    padding-top: 56.25%;
-    position: relative;
-
-    video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+    height: 100%;
   }
 }
 </style>
