@@ -1,12 +1,12 @@
 <template>
-  <section class="s9 user-n w-full relative">
-    <div class="cir1 absolute"></div>
-    <div class="cir2 absolute"></div>
-    <div class="cir3 absolute hidden md:block"></div>
-    <div class="cir4 absolute hidden md:block"></div>
-    <div class="t1">日系精工輕豪宅<br class="md:hidden"><span class="hidden md:inline">　</span>超完美千坪基地</div>
-    <div class="t2 font-['Noto_Sans_TC']">預算有限，空間無限！「日進學」讓你買得更大、住得更好！出門就是雙語校園，蘆洲捷運只要5分鐘，日系精工美學建築，27項全齡化優質公設，生活中所有美好想像，「日進學」通通幫你實現，晉級有房人生，圓夢趁現在！</div>
-    <div class="info absolute">建物3D透視</div>
+  <section class="s9 user-n w-full relative md:flex md:justify-between">
+    <div class="content relative">
+      <img class="logo absolute" src="@/section/s9/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="main absolute" src="@/section/s9/main.png" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="t1 absolute" src="@/section/s9/t1.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="title absolute" src="@/section/s1/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+    </div>
+    <Map v-if="info.address" />
   </section>
 </template>
 
@@ -14,117 +14,63 @@
 @import "@/assets/style/function.scss";
 
 .s9 {
-  background: #2A3257;
-  height: size-m(667);
-  color: #FFF;
-  padding: size-m(60) size-m(32) 0 size-m(32);
-  background-image: url(@/section/s9/bg.jpg);
-  background-size: size-m(841) auto;
-  background-position: size-m(-232) bottom;
-  background-repeat: no-repeat;
-  @media screen and (min-width:768px) {
-    height: size(1080);
-    padding: size(118) size(367) 0 size(367);
-    background-size: cover;
-    background-position: left bottom;
-  }
+  background: #9F223D;
 
-  .t1 {
-    text-align: center;
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 123%;
-    letter-spacing: .05em;
-    margin-bottom: size-m(23);
+  .content {
+    height: size-m(579);
     @media screen and (min-width:768px) {
-      font-size: size(62);
-      margin-bottom: size(27);
+      width: size(960);
+      height: size(1080);
     }
-  }
 
-  .t2 {
-    text-align: justify;
-    font-size: size-m(14);
-    line-height: 180%;
-    letter-spacing: .05em;
-    @media screen and (min-width:768px) {
-      font-size: size(20);
+    .logo {
+      top: size-m(30);
+      left: size-m(86);
+      width: size-m(203);
+      @media screen and (min-width:768px) {
+        top: size(72);
+        left: size(253);
+        width: size(454.17);
+      }
     }
-  }
 
-  .info {
-    bottom: size-m(1);
-    left: size-m(10);
-    color: #FFF;
-    text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
-    font-family: "Noto Sans TC";
-    font-size: size-m(12);
-    line-height: 180%;
-    @media screen and (min-width:768px) {
-      display: none;
+    .main {
+      top: size-m(136);
+      left: size-m(115);
+      width: size-m(144);
+      @media screen and (min-width:768px) {
+        top: size(312);
+        left: size(362);
+        width: size(236);
+      }
     }
-  }
 
-  .cir1 {
-    top: size-m(-10);
-    right: size-m(61.5);
-    width: size-m(36);
-    height: size-m(36);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(-14);
-      right: size(573);
-      width: size(57);
-      height: size(57);
-      transform: translateY(3vw);
+    .t1 {
+      top: size-m(296);
+      left: size-m(134);
+      width: size-m(106.47);
+      @media screen and (min-width:768px) {
+        top: size(604);
+        left: size(412);
+        width: size(137);
+      }
     }
-  }
 
-  .cir2 {
-    top: size-m(280);
-    right: size-m(-11);
-    width: size-m(72);
-    height: size-m(72);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    opacity: 0.5;
-    transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(88);
-      right: size(154);
-      width: size(94);
-      height: size(94);
-      transform: translateY(5vw);
+    .title {
+      top: size-m(417.45);
+      left: size-m(60);
+      width: size-m(255.22);
+      @media screen and (min-width:768px) {
+        top: size(780);
+        left: size(215);
+        width: size(529.1);
+      }
     }
-  }
-
-  .cir3 {
-    top: size(76);
-    left: size(43);
-    width: size(87);
-    height: size(87);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-  }
-
-  .cir4 {
-    top: size(132);
-    left: size(370);
-    width: size(43);
-    height: size(43);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(2vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
   }
 }
 </style>
 
 <script setup>
+import info from '@/info';
+import Map from '@/section/form/map.vue';
 </script>

@@ -1,7 +1,5 @@
 <template>
   <div class="contact-info mx-auto flex flex-col items-center justify-between relative">
-    <div class="cir1 absolute"></div>
-    <div class="cir2 absolute hidden md:block"></div>
     <div class="flex justify-between w-full contact-item-box">
       <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
         <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
@@ -90,8 +88,8 @@
 .hover\:bg-color2:hover{background-color:#a00040;}
 
 .contact-info {
-  width: size(1000);
-  padding: size(35 + 50) 0 size(50) 0;
+  width: size(1470);
+  padding: size(35 + 50) 0 size(117) 0;
   // margin-top: size(73);
   position: relative;
 
@@ -123,13 +121,19 @@
 
       .contact-item:nth-child(2) {
         width: 23vw;
+        background: #9F223D;
+        color: #fff;
+
+        img {
+          filter: brightness(0) invert(1);
+        }
       }
     } 
 
     .contact-item {
-      background-color: #666;
-      border: 1px solid #666;
-      color: #ffffff;
+      background-color: #fff;
+      border: 1px solid #9F223D;
+      color: #000;
       width: 100%;
       padding: 0 size(40);
       font-size: size(16);
@@ -154,7 +158,8 @@
         height: auto;
         max-height: size(27);
         transition: all .5s;
-        filter: brightness(0) invert(1);
+        // filter: brightness(0) invert(1);
+        filter: invert(17%) sepia(48%) saturate(3887%) hue-rotate(329deg) brightness(92%) contrast(91%);
         margin-right: size(10);
       }
 
@@ -205,8 +210,7 @@
 
     .contact-item {
       height: 100%;
-      background-color: #7E151A;
-      background: linear-gradient(180deg, #7E151A 0%, #E4262F 100%);
+      background-color: #800F27;
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;
@@ -225,7 +229,7 @@
   .contact-info {
     width: size-m(375);
     height: auto;
-    padding: size-m(110) size-m(32) size-m(50) size-m(32);
+    padding: size-m(100) size-m(32) size-m(86) size-m(32);
     // margin-top: size-m(60);
     position: relative;
     justify-content: flex-start;
@@ -275,6 +279,7 @@
 
         &.address {
           padding: size-m(10) 0;
+          border-bottom: none;
 
           &::before {
             width: 100%;

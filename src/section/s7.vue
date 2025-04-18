@@ -1,18 +1,37 @@
 <template>
-  <section class="s7 user-n w-full relative">
-    <div class="cir1 absolute"></div>
-    <div class="cir2 absolute"></div>
-    <div class="img1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="w-full block" src="@/section/s7/img1.jpg" />
-      <div class="txt absolute">校園情境圖</div>
+  <section class="s7 user-n w-full relative" @click="showModal">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="title w-full block" src="@/section/s7/title.svg" />
+      <div>開闊舒適的住家空間，滿足現代家庭的各種需求，讓家擁有更多延展性，擁抱生活的寬度與自在。</div>
     </div>
-    <div class="en absolute">BILINGUAL CAMPUS</div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙語校園第一排<br>輕鬆贏在起跑點</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">下樓就到校，上學免煩惱！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」正面樹人百年文風鬱鬱的「成州國小」，面對全球化趨勢積極推動雙語校園計畫，讓孩童在學習中自然而然與世界接軌，沐浴知識同時涵養世界，愛子心切家庭首選！</div>
-    <div class="img2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="w-full block" src="@/section/s7/img2.jpg" />
-      <div class="txt absolute">成州國小實景圖</div>
+    <div class="slider">
+      <swiper
+        :spaceBetween="10"
+        :loop="true"
+        :navigation="true"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :modules="modules"
+      >
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s7/1.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s7/1.jpg" />
+          </div>
+        </swiper-slide>
+        <swiper-slide>
+          <div class="relative">
+            <img src="@/section/s7/1.jpg" />
+          </div>
+        </swiper-slide>
+      </swiper>
+      <div class="info absolute">室內情境示意 | 裝潢風格參考情境示意圖，實際格局依合約書為準</div>
     </div>
   </section>
 </template>
@@ -21,165 +40,98 @@
 @import "@/assets/style/function.scss";
 
 .s7 {
-  height: size-m(723);
+  text-align: justify;
+  font-size: size-m(12);
+  font-weight: 500;
+  line-height: size-m(21);
   @media screen and (min-width:768px) {
-    height: size(822);
+    font-size: size(20);
+    line-height: size(34);
   }
 
-  .img1, .img2 {
-    .txt {
-      bottom: size-m(2);
-      left: size-m(10);
-      color: #FFF;
-      text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
-      font-family: "Noto Sans TC";
-      font-size: size-m(12);
-      line-height: 180%;
-      @media screen and (min-width:768px) {
-        bottom: 0;
-        left: size(10);
-        text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
-        font-size: size(15);
-        line-height: 180%;
-      }
-    }
-  }
-
-  .img1 {
-    top: size-m(-24);
-    left: size-m(32);
-    width: size-m(200);
+  .content {
+    padding: size-m(52) size-m(30);
     @media screen and (min-width:768px) {
-      top: size(-35);
-      left: size(193);
-      width: size(460);
-    }
-  }
-
-  .img2 {
-    top: size-m(515);
-    left: size-m(32);
-    width: size-m(310);
-    @media screen and (min-width:768px) {
-      top: size(307);
-      left: size(193);
-      width: size(767);
-    }
-  }
-
-  .en {
-    top: size-m(171);
-    left: size-m(38);
-    font-size: size-m(12);
-    font-weight: 300;
-    line-height: 180%;
-    letter-spacing: .19em;
-    @media screen and (min-width:768px) {
-      top: size(305);
-      left: size(1170);
-      font-size: size(25);
-
-      &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        right: calc(size(-8) + .19em);
-        transform: translate(100%, -50%);
-        width: size(110);
-        height: size(1);
-        background: #514E4E;
-      }
-    }
-  }
-
-  .t1 {
-    top: size-m(193);
-    left: size-m(32);
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 123%;
-    letter-spacing: .05em;
-    text-align: justify;
-    @media screen and (min-width:768px) {
-      top: size(345);
-      left: size(1164);
-      font-size: size(62);
-    }
-  }
-
-  .t2 {
-    width: size-m(310);
-    top: size-m(301);
-    left: size-m(32);
-    font-size: size-m(18);
-    color: #7E151A;
-    font-family: "Noto Sans TC";
-    font-weight: 700;
-    line-height: 160%;
-    @media screen and (min-width:768px) {
-      width: size(555);
-      top: size(571);
-      left: size(1164);
-      font-size: size(38);
-    }
-  }
-
-  .t3 {
-    width: size-m(310);
-    top: size-m(340);
-    left: size-m(32);
-    text-align: justify;
-    font-family: "Noto Sans TC";
-    font-size: size-m(14);
-    line-height: 180%;
-    letter-spacing: .05em;
-    @media screen and (min-width:768px) {
-      width: size(555);
-      top: size(660);
-      left: size(1164);
-      font-size: size(16);
-    }
-  }
-
-  .cir1 {
-    top: size-m(54);
-    right: size-m(-119);
-    width: size-m(200);
-    height: size-m(200);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    opacity: 0.4;
-    transform: translateY(-15vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(184);
-      right: size(820);
-      width: size(246);
-      height: size(246);
-      transform: translateY(5vw);
+      position: absolute;
+      top: size(95);
+      left: 0;
+      width: size(661);
+      padding: size(35) size(48) size(34) size(166);
+      background: #fff;
       z-index: 1;
     }
+
+    .title {
+      padding: 0 size-m(12);
+      margin-bottom: size-m(25);
+      @media screen and (min-width:768px) {
+        padding: 0;
+        margin-bottom: size(19);
+      }
+    }
   }
 
-  .cir2 {
-    top: size-m(696);
-    right: size-m(-42);
-    width: size-m(85);
-    height: size-m(85);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(707);
-      right: size(-193);
-      width: size(438);
-      height: size(438);
-      transform: translateY(5vw);
+  .slider {
+    .swiper, .swiper * {
+      z-index: initial;
+    }
+
+    .swiper-slide {
+      img {
+        width: 100%;
+        display: block;
+      }
+    }
+
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(40);
+      height: size-m(40);
+      background-size: size-m(13) auto;
+      background-position: center;
+      background-repeat: no-repeat;
+      @media screen and (min-width:768px) {
+        display: none;
+      }
+
+      &:after {
+        display: none;
+      }
+    }
+
+    .swiper-button-prev {
+      left: 0;
+      background-position: size-m(6) center;
+      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.4652 23.0664C12.0053 23.5071 12.8025 23.4761 13.306 22.9726C13.8095 22.4691 13.8405 21.6719 13.3998 21.1318L13.306 21.0273L4.27867 11.9999L13.306 2.9726C13.843 2.43563 13.843 1.56426 13.306 1.02729C12.769 0.490317 11.8977 0.490317 11.3607 1.02729L1.3607 11.0273C0.82373 11.5643 0.82373 12.4356 1.3607 12.9726L11.3607 22.9726L11.4652 23.0664Z" fill="white"/></svg>');
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-position: right size-m(6) center;
+      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53481 0.933647C1.99474 0.492892 1.1975 0.523888 0.693988 1.0274C0.19048 1.53091 0.159482 2.32815 0.600238 2.86822L0.693988 2.97271L9.72133 12.0001L0.693988 21.0274C0.157017 21.5644 0.157017 22.4357 0.693988 22.9727C1.23096 23.5097 2.10233 23.5097 2.6393 22.9727L12.6393 12.9727C12.9078 12.7042 13.042 12.3521 13.0418 12.0001C13.042 11.648 12.9078 11.2959 12.6393 11.0274L2.6393 1.0274L2.53481 0.933647Z" fill="white"/></svg>');
+    }
+
+    .info {
+      bottom: size-m(8);
+      right: size-m(9);
+      color: #FFF;
+      font-size: size-m(12);
+      font-weight: 500;
+      @media screen and (min-width:768px) {
+        bottom: size(25);
+        right: size(47);
+        font-size: size(15);
+      }
     }
   }
 }
 </style>
 
 <script setup>
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { Autoplay, Navigation, Pagination } from "swiper";
+const modules = ref([Autoplay, Navigation, Pagination]);
 </script>

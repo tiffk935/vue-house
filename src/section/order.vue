@@ -4,41 +4,39 @@
 
     <div class="order-section">
       <!-- Title -->
-      <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div>
+      <div class="order-title text-left" v-if="info.order.title" v-html="info.order.title"></div>
+      <!-- <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div> -->
 
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row"><span>姓名<span>(必填)</span></span>
+          <label class="row"><span>姓名*</span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
           </label>
-          <label class="row"><span>手機<span>(必填)</span></span>
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
+          <label class="row"><span>連絡電話*</span>
+            <input type="text" placeholder="連絡電話" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
-          <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
-            <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
-          </label>
-          <label class="row" v-if="info.room_type"><span>可聯絡的時段</span>
-            <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-              <option value="" selected disabled>請選擇時間</option>
-              <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
-            </select>
-          </label>
-          <label class="row"><span>居住縣市</span>
+          <label class="row"><span>選擇縣市*</span>
           <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
+            <option value="" selected disabled>請選擇縣市</option>
             <option v-for="city in cityList" :value="city.value" :key="city">
               {{ city.label }}
             </option>
           </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>選擇區域*</span>
           <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
+            <option value="" selected disabled>請選擇區域</option>
             <option v-for="area in areaList" :value="area.value" :key="area">
               {{ area.label }}
             </option>
           </select></label>
+          <label class="row"><span>選擇建案*</span>
+            <select class="select w-full rounded-none" v-model="formData.project">
+              <option value="" selected disabled>請選擇建案</option>
+              <option value="藏筑3">藏筑3</option>
+              <option value="藏筑2">藏筑2</option>
+            </select>
+            </label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -50,9 +48,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#000]">
+        <p class="text-[#000] font-medium">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#E50012] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#9F223D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -72,7 +70,7 @@
 
 
     <!-- Map -->
-    <Map v-if="info.address" />
+    <!-- <Map v-if="info.address" /> -->
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -83,25 +81,26 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  font-family: "Noto Sans TC";
-
   .order-section {
     position: relative;
-    padding-top: size-m(20);
+    padding-top: size-m(62);
     overflow: hidden;
     @media screen and (min-width:768px) {
-      padding-top: size(41);
+      padding-top: size(119);
     }
   }
 
   .order-title {
-    font-family: "Noto Serif TC";
-    font-size: size-m(28);
+    color: #9F223D;
+    width: size-m(310);
+    font-size: size-m(26);
     font-weight: 700;
-    margin-bottom: size-m(20);
+    margin: 0 auto size-m(20) auto;
     @media screen and (min-width:768px) {
-      font-size: size(62);
+      font-size: size(26);
       margin-bottom: 0;
+      width: size(1470);
+      letter-spacing: .05em;
     }
   }
 
@@ -126,7 +125,7 @@
     flex-direction: column;
     line-height: 1.7;
     @media screen and (min-width:768px) {
-      width: size(1000);
+      width: size(1470);
     //  min-width: 680px;
       gap: size(80);
       flex-direction: row;
@@ -159,7 +158,7 @@
     }
     .row{
       background: #FFF;
-      border: 1px solid #666;
+      border: 1px solid #9F223D;
       color: #000;
       display: flex;
       width: 100%;
@@ -167,7 +166,7 @@
       > span{
         width: 7em;
         text-align: left;padding-left:1em;
-        > span{color: #F00;}
+        > span{color: #000;}
       }
       .input,
       .select{height: 3em;min-height: 0;}
@@ -189,18 +188,17 @@
     letter-spacing: 0.9em;
     text-indent: 0.9em;
     color: #fff;
-    background-color: #666;
+    background-color: #9F223D;
     border:0;
-    border-radius: size-m(20);
     height:3.6em;
     line-height: 3.3;
     z-index: 10;
     font-weight: 400;
     position: relative;
     font-weight: 600;
+    border-radius: 0;
     @media screen and (min-width:768px) {
       font-size: size(25);
-      border-radius: size(20);
     }
   }
   .control {
@@ -210,57 +208,13 @@
       font-size: .75em;
     }
   }
-
-  .cir1 {
-    top: size-m(-39);
-    right: size-m(-70);
-    width: size-m(197);
-    height: size-m(197);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(7vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(-73);
-      right: auto;
-      left: size(-188 - 180);
-      width: size(192);
-      height: size(192);
-      transform: translateY(3vw);
-    }
-  }
-
-  .cir2 {
-    top: size(-97);
-    right: size(-97);
-    width: size(97);
-    height: size(97);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    opacity: 0.7;
-    transform: translateY(-3vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-  }
-
-  .cir3 {
-    top: size(139);
-    right: size(149);
-    width: size(149);
-    height: size(149);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    opacity: 0.4;
-    transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-  }
 }
-
 </style>
 
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
+// import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
@@ -294,18 +248,18 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["email","project", "msg", "room_type","budget", "city", "area"]
+const bypass = ["msg","budget","room_type","email"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
-  "手機", //phone
+  "連絡電話", //phone
   "預約時段", //room_type
   "預算", //budget
   "建案", //project
   "信箱", //email
   "居住縣市", //city
-  "居住地區", //area
+  "居住區域", //area
   "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify

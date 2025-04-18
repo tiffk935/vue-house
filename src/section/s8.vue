@@ -1,57 +1,37 @@
 <template>
-  <section class="s8 user-n w-full relative">
-    <div class="bg absolute"></div>
-    <div class="cir1 absolute"></div>
-    <div class="cir2 absolute"></div>
-    <div class="cir3 absolute"></div>
-    <div class="en absolute">CONVENIENT LIVING AMENITIES</div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需步遠求。</div>
-    <div class="slider absolute">
+  <section class="s8 user-n w-full relative" @click="showModal">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="title w-full block" src="@/section/s8/title.svg" />
+      <div>為每位家庭成員訂製個人獨立空間，舒適私密不受打擾，實現兼具和諧與隱私的理想住宅環境。</div>
+    </div>
+    <div class="slider">
       <swiper
-        :slidesPerView="'auto'"
-        :spaceBetween="0"
-        :centeredSlides="true"
+        :spaceBetween="10"
         :loop="true"
-        :navigation="false"
-        :pagination="{
-          clickable: true
-        }"
+        :navigation="true"
         :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
         }"
         :modules="modules"
-        @swiper="setSwiper"
       >
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s8/1.jpg" />
-            <div class="txt">凌雲路商圈</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s8/2.jpg" />
-            <div class="txt">商圈情境圖</div>
+            <img src="@/section/s8/1.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s8/3.jpg" />
-            <div class="txt">商圈情境圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s8/4.jpg" />
-            <div class="txt">成泰路商圈</div>
+            <img src="@/section/s8/1.jpg" />
           </div>
         </swiper-slide>
       </swiper>
-      <div class="btn-prev" @click="slidePrev"></div>
-      <div class="btn-next" @click="slideNext"></div>
+      <div class="info absolute">室內情境示意 | 裝潢風格參考情境示意圖，實際格局依合約書為準</div>
     </div>
   </section>
 </template>
@@ -60,273 +40,87 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  height: size-m(817);
+  text-align: justify;
+  font-size: size-m(12);
+  font-weight: 500;
+  line-height: size-m(21);
   @media screen and (min-width:768px) {
-    height: size(1198);
+    font-size: size(20);
+    line-height: size(34);
   }
 
-  .bg {
-    bottom: 0;
-    left: size-m(-334);
-    width: size-m(736.15);
-    height: size-m(210);
-    background-image: url(@/section/s8/bg.png);
-    background-position: left bottom;
-    background-size: 100% auto;
+  .content {
+    padding: size-m(52) size-m(30);
     @media screen and (min-width:768px) {
+      position: absolute;
+      top: size(95);
       left: 0;
-      width: size(1921);
-      height: size(548);
+      width: size(661);
+      padding: size(31) size(50) size(34) size(166);
+      background: #fff;
+      z-index: 1;
     }
-  }
 
-  .en {
-    top: size-m(76);
-    left: size-m(20);
-    font-size: size-m(13);
-    font-weight: 300;
-    line-height: 180%;
-    letter-spacing: .35em;
-    white-space: nowrap;
-    @media screen and (min-width:768px) {
-      top: size(153);
-      left: size(470);
-      font-size: size(33);
-      letter-spacing: .53em;
-
-      &:before, &:after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        width: size(127);
-        height: size(1);
-        background: #514E4E;
+    .title {
+      padding: 0 size-m(17);
+      margin-bottom: size-m(25);
+      @media screen and (min-width:768px) {
+        padding: 0;
+        margin-bottom: size(19);
       }
-
-      &:before {
-        left: size(-23);
-        transform: translate(-100%, -50%);
-      }
-
-      &:after {
-        right: calc(size(-23) + .53em);
-        transform: translate(100%, -50%);
-      }
-    }
-  }
-
-  .t1 {
-    top: size-m(163);
-    left: size-m(36);
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 123%;
-    letter-spacing: .05em;
-    text-align: justify;
-    @media screen and (min-width:768px) {
-      top: size(424);
-      left: size(200);
-      font-size: size(62);
-    }
-  }
-
-  .t2 {
-    width: size-m(310);
-    top: size-m(271);
-    left: size-m(36);
-    font-size: size-m(18);
-    color: #7E151A;
-    font-family: "Noto Sans TC";
-    font-weight: 700;
-    line-height: 160%;
-    @media screen and (min-width:768px) {
-      width: size(545);
-      top: size(650);
-      left: size(200);
-      font-size: size(38);
-    }
-  }
-
-  .t3 {
-    width: size-m(310);
-    top: size-m(310);
-    left: size-m(36);
-    text-align: justify;
-    font-family: "Noto Sans TC";
-    font-size: size-m(14);
-    line-height: 180%;
-    letter-spacing: .05em;
-    @media screen and (min-width:768px) {
-      width: size(545);
-      top: size(739);
-      left: size(200);
-      font-size: size(16);
     }
   }
 
   .slider {
-    width: size-m(310.5);
-    top: size-m(480);
-    left: size-m(36);
-    @media screen and (min-width:768px) {
-      width: size(900);
-      top: size(431 - 47);
-      left: size(831);
-      z-index: 1;
-      padding-top: size(47);
-      overflow: hidden;
-    }
-
-    .swiper {
+    .swiper, .swiper * {
       z-index: initial;
-      @media screen and (min-width:768px) {
-        overflow: visible;
-      }
-
-      * {
-        z-index: initial;
-      }
-    }
-
-    .swiper-pagination {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: flex;
-        margin: 0;
-        line-height: 1;
-        bottom: auto;
-        top: size(-47);
-        justify-content: flex-end;
-      }
-
-      .swiper-pagination-bullet {
-        width: size(70);
-        height: size(7);
-        background: #B3B3B3;
-        border-radius: size(10);
-        opacity: .5;
-
-        &.swiper-pagination-bullet-active {
-          opacity: 1;
-        }
-      }
     }
 
     .swiper-slide {
       img {
         width: 100%;
-        height: size-m(207);
         display: block;
-        object-fit: cover;
-        @media screen and (min-width:768px) {
-          height: size(600);
-        }
-      }
-
-      .txt {
-        position: absolute;
-        bottom: size-m(3);
-        left: size-m(10);
-        color: #FFF;
-        text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
-        font-family: "Noto Sans TC";
-        font-size: size-m(12);
-        line-height: 180%;
-        @media screen and (min-width:768px) {
-          bottom: size(3);
-          left: size(10);
-          text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
-          font-size: size(15);
-        }
       }
     }
 
-    .btn-prev, .btn-next {
-      width: size-m(29);
-      height: size-m(29);
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      background-repeat: no-repeat;
-      background-size: size-m(6.22) auto;
+    .swiper-button-prev, .swiper-button-next {
+      width: size-m(40);
+      height: size-m(40);
+      background-size: size-m(13) auto;
       background-position: center;
-      cursor: pointer;
+      background-repeat: no-repeat;
       @media screen and (min-width:768px) {
+        display: none;
+      }
+
+      &:after {
         display: none;
       }
     }
 
-    .btn-prev {
-      left: size-m(-29);
-      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21588 2.44922L2.43987 14.8508C1.85338 16.1126 1.85338 17.9574 2.43987 19.2192L8.21588 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    .swiper-button-prev {
+      left: 0;
+      background-position: size-m(6) center;
+      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.4652 23.0664C12.0053 23.5071 12.8025 23.4761 13.306 22.9726C13.8095 22.4691 13.8405 21.6719 13.3998 21.1318L13.306 21.0273L4.27867 11.9999L13.306 2.9726C13.843 2.43563 13.843 1.56426 13.306 1.02729C12.769 0.490317 11.8977 0.490317 11.3607 1.02729L1.3607 11.0273C0.82373 11.5643 0.82373 12.4356 1.3607 12.9726L11.3607 22.9726L11.4652 23.0664Z" fill="white"/></svg>');
+    }
+
+    .swiper-button-next {
+      right: 0;
+      background-position: right size-m(6) center;
+      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53481 0.933647C1.99474 0.492892 1.1975 0.523888 0.693988 1.0274C0.19048 1.53091 0.159482 2.32815 0.600238 2.86822L0.693988 2.97271L9.72133 12.0001L0.693988 21.0274C0.157017 21.5644 0.157017 22.4357 0.693988 22.9727C1.23096 23.5097 2.10233 23.5097 2.6393 22.9727L12.6393 12.9727C12.9078 12.7042 13.042 12.3521 13.0418 12.0001C13.042 11.648 12.9078 11.2959 12.6393 11.0274L2.6393 1.0274L2.53481 0.933647Z" fill="white"/></svg>');
+    }
+
+    .info {
+      bottom: size-m(8);
+      right: size-m(9);
+      color: #FFF;
+      font-size: size-m(12);
+      font-weight: 500;
       @media screen and (min-width:768px) {
-        left: size(-82);
-        background-image: url('data:image/svg+xml,<svg width="21" height="86" viewBox="0 0 21 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.4875 2L3.2375 36.89C1.5875 40.44 1.5875 45.63 3.2375 49.18L19.4875 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+        bottom: size(25);
+        right: size(47);
+        font-size: size(15);
       }
-    }
-
-    .btn-next {
-      right: size-m(-29);
-      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.78406 2.44922L7.56007 14.8508C8.14656 16.1126 8.14656 17.9574 7.56007 19.2192L1.78406 31.6208" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      @media screen and (min-width:768px) {
-        right: size(-82);
-        background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23514E4E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      }
-    }
-  }
-
-  .cir1 {
-    top: size-m(131);
-    left: size-m(-8.5);
-    width: size-m(39);
-    height: size-m(39);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    opacity: 0.7;
-    transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(152);
-      left: size(-67);
-      width: size(200);
-      height: size(200);
-    }
-  }
-
-  .cir2 {
-    top: size-m(430);
-    right: size-m(-38.5);
-    width: size-m(140);
-    height: size-m(140);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(1161);
-      right: size(-87);
-      width: size(124);
-      height: size(124);
-      background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-      z-index: 1;
-    }
-  }
-
-  .cir3 {
-    top: size-m(756);
-    left: size-m(-4);
-    width: size-m(90);
-    height: size-m(90);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    z-index: 1;
-    @media screen and (min-width:768px) {
-      top: size(1091);
-      left: size(219);
-      width: size(140);
-      height: size(140);
     }
   }
 }
@@ -340,17 +134,4 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { Autoplay, Navigation, Pagination } from "swiper";
 const modules = ref([Autoplay, Navigation, Pagination]);
-const swiperRef = ref();
-
-const setSwiper = swiper => {
-  swiperRef.value = swiper;
-}
-
-const slidePrev = () => {
-  swiperRef.value.slidePrev();
-}
-
-const slideNext = () => {
-  swiperRef.value.slideNext();
-}
 </script>

@@ -1,374 +1,98 @@
 <template>
-  <section class="s6 user-n w-full relative">
-    <img class="line absolute md:hidden" src="@/section/s6/line-m.svg" />
-    <div class="cir1 absolute"></div>
-    <div class="cir2 absolute"></div>
-    <div class="cir3 absolute"></div>
-    <div class="content">
-      <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙公園左擁右抱<br>水岸樂活新版圖</div>
-      <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">近享424公頃<br>大台北都會公園水岸風光</div>
-      <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">城市中綠地難得，「日進學」左擁右抱雙公園，散步距離約500公尺即抵洲子洋公園，園區內設有五股國民運動中心，游泳池、體適能、兒童遊戲區…健康樂活應有盡有。同樣車行約2分鐘可抵占地2.5公頃的體健公園，園區內豐富的互動遊具，融入在地意象成為大人小孩身心暢遊首選！</div>
+  <section class="s6 user-n w-full relative" @click="showModal">
+    <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="title w-full block" src="@/section/s6/title.svg" />
+      <div>奢擁4車位稀有配置，核心地段停車無憂、輕鬆出行，訪客隨時歡迎，迎接從容愜意的居住體驗。</div>
     </div>
-    <div class="slider">
-      <swiper
-        :slidesPerView="'auto'"
-        :spaceBetween="0"
-        :centeredSlides="true"
-        :loop="true"
-        :navigation="false"
-        :pagination="{
-          clickable: true
-        }"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :modules="modules"
-        @swiper="setSwiper"
-      >
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s6/1.jpg" />
-            <div class="txt">公園情境圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s6/2.jpg" />
-            <div class="txt">體健公園實景圖</div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s6/3.jpg" />
-            <div class="txt">國民運動中心實景圖</div>
-          </div>
-        </swiper-slide>
-      </swiper>
-      <div class="btn-prev" @click="slidePrev"></div>
-      <div class="btn-next" @click="slideNext"></div>
-    </div>
-    <div class="jp">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">健康で幸せな生活</div>
+    <div class="img relative">
+      <img class="w-full block" src="@/section/s6/bg.jpg" />
+      <div class="info absolute md:hidden">點擊瀏覽3d透視參考示意圖</div>
+      <div class="info absolute hidden md:block">室內情境示意 | 裝潢風格參考情境示意圖，實際格局依合約書為準</div>
     </div>
   </section>
+
+  <div class="s5s6-modal" v-if="isShow">
+    <div class="scrollable" ref="scrollable">
+      <img src="@/section/s6/bg.jpg" @load="onImgLoad($event)" />
+    </div>
+    <div class="close" @click="closeModal"></div>
+  </div>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
 .s6 {
-  background: #fff;
+  text-align: justify;
+  font-size: size-m(12);
+  font-weight: 500;
+  line-height: size-m(21);
   @media screen and (min-width:768px) {
-    height: size(1365);
-    background: none;
+    font-size: size(20);
+    line-height: size(34);
   }
 
   .content {
-    position: relative;
-    width: 100%;
-    height: size-m(504);
+    padding: size-m(52) size-m(30);
     @media screen and (min-width:768px) {
-      position: static;
-      height: auto;
-    }
-  }
-  
-  .line {
-    top: 0;
-    left: 0;
-    width: size-m(357);
-  }
-
-  .t1 {
-    top: size-m(60);
-    left: size-m(32);
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 123%;
-    letter-spacing: .05em;
-    text-align: justify;
-    @media screen and (min-width:768px) {
-      top: size(158);
-      left: size(1248);
-      font-size: size(62);
-    }
-  }
-
-  .t2 {
-    width: size-m(310);
-    top: size-m(188);
-    left: size-m(32);
-    font-size: size-m(18);
-    color: #7E151A;
-    font-family: "Noto Sans TC";
-    font-weight: 700;
-    line-height: 160%;
-    @media screen and (min-width:768px) {
-      width: size(555);
-      top: size(412);
-      left: size(1248);
-      font-size: size(38);
-    }
-  }
-
-  .t3 {
-    width: size-m(310);
-    top: size-m(256);
-    left: size-m(32);
-    text-align: justify;
-    font-family: "Noto Sans TC";
-    font-size: size-m(14);
-    line-height: 180%;
-    letter-spacing: .05em;
-    @media screen and (min-width:768px) {
-      width: size(555);
-      top: size(562);
-      left: size(1248);
-      font-size: size(16);
-    }
-  }
-
-  .slider {
-    position: relative;
-    @media screen and (min-width:768px) {
-      width: size(1136);
-      top: size(154);
-      left: 0;
-      z-index: 1;
-      padding-bottom: size(60);
-      overflow: hidden;
-    }
-
-    .swiper {
-      z-index: initial;
-      @media screen and (min-width:768px) {
-        overflow: visible;
-      }
-
-      * {
-        z-index: initial;
-      }
-    }
-
-    .swiper-pagination {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: flex;
-        margin: 0;
-        line-height: 1;
-        bottom: size(-60);
-        justify-content: flex-end;
-      }
-
-      .swiper-pagination-bullet {
-        width: size(90);
-        height: size(7);
-        background: #fff;
-        border-radius: size(10);
-        opacity: .5;
-
-        &.swiper-pagination-bullet-active {
-          opacity: 1;
-        }
-      }
-    }
-
-    .swiper-slide {
-      img {
-        width: 100%;
-        height: size-m(262);
-        display: block;
-        object-fit: cover;
-        @media screen and (min-width:768px) {
-          height: size(793);
-        }
-      }
-
-      .txt {
-        position: absolute;
-        bottom: size-m(3);
-        left: size-m(12);
-        color: #FFF;
-        text-shadow: 0px 0px size-m(3) rgba(0, 0, 0, 0.50);
-        font-family: "Noto Sans TC";
-        font-size: size-m(12);
-        line-height: 180%;
-        @media screen and (min-width:768px) {
-          bottom: size(27);
-          left: size(41);
-          text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
-          font-size: size(15);
-        }
-      }
-    }
-
-    .btn-prev, .btn-next {
-      width: size-m(29);
-      height: size-m(29);
       position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      background-repeat: no-repeat;
-      background-size: size-m(6.22) auto;
-      background-position: center;
-      cursor: pointer;
-      @media screen and (min-width:768px) {
-        display: none;
-      }
-    }
-
-    .btn-prev {
+      top: size(95);
       left: 0;
-      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.21588 2.44922L2.43987 14.8508C1.85338 16.1126 1.85338 17.9574 2.43987 19.2192L8.21588 31.6208" stroke="%23ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      @media screen and (min-width:768px) {
-        left: size(-82);
-        background-image: url('data:image/svg+xml,<svg width="21" height="86" viewBox="0 0 21 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.4875 2L3.2375 36.89C1.5875 40.44 1.5875 45.63 3.2375 49.18L19.4875 84.07" stroke="%23ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      }
-    }
-
-    .btn-next {
-      right: 0;
-      background-image: url('data:image/svg+xml,<svg width="10" height="34" viewBox="0 0 10 34" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.78406 2.44922L7.56007 14.8508C8.14656 16.1126 8.14656 17.9574 7.56007 19.2192L1.78406 31.6208" stroke="%23ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      @media screen and (min-width:768px) {
-        right: size(-82);
-        background-image: url('data:image/svg+xml,<svg width="22" height="86" viewBox="0 0 22 86" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2.30756 2L18.5576 36.89C20.2076 40.44 20.2076 45.63 18.5576 49.18L2.30756 84.07" stroke="%23ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
-      }
-    }
-  }
-
-  .jp {
-    position: relative;
-    height: size-m(214);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #FFF;
-    text-align: center;
-    font-size: size-m(28);
-    line-height: 160%;
-    letter-spacing: .08em;
-    background: #7E151A;
-    background: linear-gradient(90deg, #7E151A 2.45%, #E50012 55.6%, #FFF 97.36%);
-    @media screen and (min-width:768px) {
-      height: size(514);
-      font-size: size(100);
-    }
-
-    div {
-      @media screen and (min-width:768px) {
-        margin-top: size(90);
-      }
-    }
-
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      transform: translate(0, -50%);
-      width: size-m(40);
-      height: size-m(1);
+      width: size(661);
+      padding: size(33) size(47) size(37) size(166);
       background: #fff;
-      @media screen and (min-width:768px) {
-        top: calc(50% + size(55));
-        width: size(250);
-        height: size(4);
-      }
-    }
-
-    &:before {
-      left: size-m(17);
-      @media screen and (min-width:768px) {
-        left: size(250);
-      }
-    }
-
-    &:after {
-      right: size-m(17);
-      @media screen and (min-width:768px) {
-        right: size(250);
-      }
-    }
-  }
-
-  .cir1 {
-    top: size-m(-90);
-    right: size-m(-172);
-    width: size-m(232);
-    height: size-m(232);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(-15vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(-246);
-      right: size(-251);
-      width: size(450);
-      height: size(450);
-      transform: translateY(5vw);
-    }
-  }
-
-  .cir2 {
-    top: size-m(138);
-    left: size-m(-12.3);
-    width: size-m(46);
-    height: size-m(46);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    transform: translateY(-10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(250);
-      left: size(1002);
-      width: size(240);
-      height: size(240);
-      transform: translateY(-5vw);
-    }
-  }
-
-  .cir3 {
-    top: size-m(468);
-    right: size-m(24);
-    width: size-m(151);
-    height: size-m(151);
-    border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    opacity: 0.8;
-    transform: translateY(-10vw);
-    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
-    @media screen and (min-width:768px) {
-      top: size(858);
-      right: auto;
-      left: size(-190);
-      width: size(363);
-      height: size(363);
-      transform: translateY(-5vw);
       z-index: 1;
+    }
+
+    .title {
+      padding: 0 size-m(10);
+      margin-bottom: size-m(25);
+      @media screen and (min-width:768px) {
+        padding: 0;
+        margin-bottom: size(19);
+      }
+    }
+  }
+
+  .img {
+    .info {
+      bottom: size-m(8);
+      right: size-m(9);
+      color: #FFF;
+      font-size: size-m(12);
+      font-weight: 500;
+      @media screen and (min-width:768px) {
+        bottom: size(25);
+        right: size(47);
+        font-size: size(15);
+      }
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
-const swiperRef = ref();
+import { getCurrentInstance, ref } from 'vue';
 
-const setSwiper = swiper => {
-  swiperRef.value = swiper;
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const scrollable = ref();
+const isShow = ref(false);
+
+const showModal = () => {
+  if (!globals.$isMobile()) return;
+  isShow.value = true;
+  document.querySelector('body').classList.add('lock');
 }
 
-const slidePrev = () => {
-  swiperRef.value.slidePrev();
+const closeModal = () => {
+  isShow.value = false;
+  document.querySelector('body').classList.remove('lock');
 }
 
-const slideNext = () => {
-  swiperRef.value.slideNext();
+function onImgLoad(e) {
+  const img = e.target;
+  if (scrollable.value && img) {
+    scrollable.value.scrollLeft = img.clientWidth * 0.5 - window.innerWidth/2;
+  }
 }
 </script>

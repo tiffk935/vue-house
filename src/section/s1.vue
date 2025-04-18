@@ -1,11 +1,10 @@
 <template>
   <section class="s1 user-n w-full relative">
-    <div class="bg"></div>
-    <div class="relative">
-      <img class="logo block" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-      <div class="name" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">洲子洋全能住宅王</div>
-      <div class="sub-title">一站蘆洲，校園首排</div>
-    </div>
+    <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+    <img class="main absolute" src="@/section/s1/main.png" data-aos="fade" data-aos-duration="1000" data-aos-delay="100" />
+    <img class="t2 absolute" src="@/section/s1/t2.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" />
+    <img class="title absolute" src="@/section/s1/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" />
+    <img class="en absolute hidden md:block" src="@/section/s1/en.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300" />
   </section>
 </template>
 
@@ -13,67 +12,61 @@
 @import "@/assets/style/function.scss";
 
 .s1 {
-  height: size-m(640);
-  padding-top: size-m(67);
-  text-align: center;
+  background: #9F223D;
+  height: size-m(667);
   @media screen and (min-width:768px) {
-    height: size(1081);
-    padding-top: size(110);
-  }
-
-  .bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: size-m(181);
-    background-size: auto 100%;
-    background-position: size-m(-74.54) 0;
-    background-image: url(@/section/s1/bg.png);
-    @media screen and (min-width:768px) {
-      height: size(390);
-      background-position: 0 0;
-    }
+    height: size(1080);
   }
 
   .logo {
-    width: size-m(310);
-    margin: 0 auto size-m(17) auto;
+    top: size-m(59);
+    left: size-m(59);
+    width: size-m(257.45);
     @media screen and (min-width:768px) {
-      width: size(596.3);
-      margin: 0 auto size(17.7) auto;
+      top: size(438);
+      left: size(166);
+      width: size(454.17);
     }
   }
 
-  .name {
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 160%;
-    letter-spacing: .41em;
-    margin-bottom: size-m(2);
+  .main {
+    top: size-m(203);
+    left: size-m(121);
+    width: size-m(130);
     @media screen and (min-width:768px) {
-      font-size: size(78);
-      margin-bottom: size(1);
+      top: size(242);
+      left: size(791);
+      width: size(388);
     }
   }
 
-  .sub-title {
-    color: #FFF;
-    font-family: "Noto Sans TC";
-    font-size: size-m(12);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%;  
-    letter-spacing: 1.64em;
-    padding: size-m(5) 0;
-    width: size-m(317);
-    margin: 0 auto;
-    background: #E50012;
-    background: linear-gradient(90deg,rgba(229, 0, 18, 1) 0%, rgba(126, 21, 26, 1) 100%);
+  .t2 {
+    top: size-m(218);
+    left: size-m(73);
+    width: size-m(228.58);
     @media screen and (min-width:768px) {
-      font-size: size(28);
-      padding: size(5) 0;
-      width: size(849.35);
+      top: size(621);
+      left: size(759);
+      width: size(401.97);
+    }
+  }
+
+  .title {
+    top: size-m(471);
+    left: size-m(45);
+    width: size-m(287);
+    @media screen and (min-width:768px) {
+      top: size(435);
+      left: size(1253);
+      width: size(529.1);
+    }
+  }
+
+  .en {
+    @media screen and (min-width:768px) {
+      top: size(706);
+      left: size(1370);
+      width: size(283.88);
     }
   }
 }
