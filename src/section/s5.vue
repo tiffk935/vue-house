@@ -6,9 +6,9 @@
     <img class="line absolute hidden md:block" src="@/section/s5/line.svg" />
     <div class="cir1 absolute"></div>
     <div class="cir2 absolute"></div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">蘆洲捷運站5分鐘<br>輕軌F06站散步圈</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">擁3高4捷4特快交通路網</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」車行約5分鐘一橋就到蘆洲捷運站，散步3分鐘抵輕軌F06站，未來一站就到蘆洲。享強大交通動能鄰近中和新蘆線、環狀線、機場線、五泰輕軌4捷串聯大台北。出門轉彎直上台64，快接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，南來北往東西暢行通勤首選。</div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">蘆洲捷運站5分鐘<br>輕軌F06站散步圈</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">擁3高4捷4特快交通路網</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">「日進學」車行約5分鐘一橋就到蘆洲捷運站，散步3分鐘抵輕軌F06站，未來一站就到蘆洲。享強大交通動能鄰近中和新蘆線、環狀線、機場線、五泰輕軌4捷串聯大台北。出門轉彎直上台64，快接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，南來北往東西暢行通勤首選。</div>
     <div class="t4 absolute">交通が便利</div>
     <div class="t5 absolute">CONVNEIENT TRANSPORT</div>
     <div class="slider absolute">
@@ -55,10 +55,10 @@
 @import "@/assets/style/function.scss";
 
 @keyframes train {
-  55% {
+  30% {
     transform: translateX(calc(var(--trainX, 200%) * 0.2));
   }
-  65% {
+  35% {
     transform: translateX(calc(var(--trainX, 200%) * 0.2));
   }
   100% {
@@ -99,15 +99,15 @@
     background-size: auto 100%;
     background-position: center;
     background-image: url(@/section/s5/train.png);
-    animation: train 4s infinite;
-    --trainX: 160%;
+    animation: train 5s ease-in-out infinite;
+    --trainX: 150%;
     @media screen and (min-width:768px) {
       width: size(1297);
       height: size(128);
       top: size(867);
       // left: size(115);
       left: size(-515);
-      animation-duration: 5s;
+      animation-duration: 6s;
       --trainX: 200%;
     }
   }
@@ -175,7 +175,7 @@
   }
 
   .t4 {
-    top: size-m(525);
+    top: size-m(524);
     left: size-m(40);
     color: #999;
     font-size: size-m(28);
@@ -183,14 +183,14 @@
     line-height: 160%;
     letter-spacing: .12em;
     @media screen and (min-width:768px) {
-      top: size(130);
+      top: size(120);
       left: size(962);
       font-size: size(60);
     }
   }
 
   .t5 {
-    top: size-m(560);
+    top: size-m(559);
     left: size-m(40);
     color: #999;
     font-size: size-m(16);
@@ -198,7 +198,7 @@
     line-height: 160%;
     letter-spacing: .12em;
     @media screen and (min-width:768px) {
-      top: size(193);
+      top: size(186);
       left: size(962);
       font-size: size(50);
     }
@@ -217,7 +217,12 @@
     .swiper, .swiper * {
       z-index: initial;
     }
-
+    .swiper{
+      border-radius: size-m(20);overflow: hidden;
+      @media screen and (min-width:768px) {
+        border-radius: size(60);
+      }
+    }
     .swiper-slide {
       border-radius: size-m(20);
       overflow: hidden;
@@ -245,10 +250,10 @@
         font-size: size-m(12);
         line-height: 180%;
         @media screen and (min-width:768px) {
-          bottom: size(3);
-          left: size(12);
+          bottom:.5em;
+          left: 3em;
           text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
-          font-size: size(12);
+          font-size: size(15);
         }
       }
     }
@@ -290,14 +295,14 @@
   }
 
   .cir1 {
-    top: size-m(-81);
+    top: size-m(-110);
     right: size-m(-59);
     width: size-m(148);
     height: size-m(148);
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     transform: translateY(15vw);
-    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 5s ease-in-out -4s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(-148);
       right: size(225);

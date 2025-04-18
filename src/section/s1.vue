@@ -2,9 +2,9 @@
   <section class="s1 user-n w-full relative">
     <div class="bg"></div>
     <div class="relative">
-      <img class="logo block" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-      <div class="name" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">洲子洋全能住宅王</div>
-      <div class="sub-title">一站蘆洲，校園首排</div>
+      <img class="logo block" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-delay="0" />
+      <div class="name" data-aos="fade-up" data-aos-delay="200">洲子洋全能住宅王</div>
+      <div class="sub-title" data-aos="fade-up" data-aos-delay="400">一站蘆洲，校園首排</div>
     </div>
   </section>
 </template>
@@ -17,8 +17,13 @@
   padding-top: size-m(67);
   text-align: center;
   @media screen and (min-width:768px) {
-    height: size(1081);
-    padding-top: size(110);
+    height: 100vh;
+    max-height: size(1080);
+    min-height: size(1000);
+    padding-top:0;
+   display: flex;
+   align-items:center;justify-content:center;
+   // padding-top: size(110);
   }
 
   .bg {

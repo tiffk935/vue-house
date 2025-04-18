@@ -1,8 +1,8 @@
 <template>
   <section class="s2 user-n w-full relative">
     <div class="bg"></div>
-    <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">青年成家の晉級！</div>
-    <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">捷運╳水岸╳雙語校園宅！</div>
+    <div class="t1" data-aos="fade-up" data-aos-delay="0">青年成家の晉級！</div>
+    <div class="t2" data-aos="fade-up" data-aos-delay="0">捷運╳水岸╳雙語校園宅！</div>
   </section>
 </template>
 

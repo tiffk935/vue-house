@@ -5,9 +5,9 @@
     <div class="cir2 absolute"></div>
     <div class="cir3 absolute"></div>
     <div class="en absolute">CONVENIENT LIVING AMENITIES</div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需步遠求。</div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需步遠求。</div>
     <div class="slider absolute">
       <swiper
         :slidesPerView="'auto'"
@@ -233,8 +233,8 @@
         font-size: size-m(12);
         line-height: 180%;
         @media screen and (min-width:768px) {
-          bottom: size(3);
-          left: size(10);
+          bottom: .3em;
+          left: .7em;
           text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
           font-size: size(15);
         }
@@ -284,7 +284,7 @@
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     opacity: 0.7;
     transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -4s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(152);
       left: size(-67);
@@ -301,7 +301,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -2s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(1161);
       right: size(-87);
@@ -320,7 +320,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     z-index: 1;
     @media screen and (min-width:768px) {
       top: size(1091);

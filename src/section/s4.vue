@@ -12,7 +12,7 @@
     <div class="cir2 absolute"></div>
 
     <div class="content absolute">
-      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">新蘆特區正核心 <br class="md:hidden">洲子洋天選地標</div>
+      <div class="title" data-aos="fade-up" data-aos-delay="0">新蘆特區正核心 <br class="md:hidden">洲子洋天選地標</div>
     </div>
     <div class="info absolute">日進學外觀3D鳥瞰示意圖</div>
   </section>
@@ -134,20 +134,20 @@
   }
 
   .cir1 {
-    top: size-m(-117);
+    top: size-m(-80);
     right: size-m(9);
     width: size-m(149);
     height: size-m(149);
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
-    transform: translateY(30vw);
+    transform: translateY(-50%);
     animation: ball 10s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
-      top: size(-208);
+      top: size(-180);
       right: size(721);
       width: size(266);
       height: size(266);
-      transform: translateY(10vw);
+      transform: translateY(-50%);
     }
   }
 
@@ -159,7 +159,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(15vw);
-    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(196);
       left: size(151);

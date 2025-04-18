@@ -4,9 +4,9 @@
     <div class="cir2 absolute"></div>
     <div class="cir3 absolute"></div>
     <div class="cir4 absolute hidden md:block"></div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">近400坪全齡會所<br>渡假飯店生活享受</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">回家就像在度假！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">一樣公設比「日進學」就是要給你更棒更頂級的尊榮享受！洲子洋唯一，近400坪全齡會所，接待大廳、健身房、閱讀區、會議室、閱覽室、桌球室、KTV、瑜伽教室、廚藝教室、信箱區、宴會廳…日系美學質感生活，坐擁星級飯店規劃，體驗全家人幸福親子時光，一次擁有最完美的生活享受「日進學」！</div>
+    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">近400坪全齡會所<br>渡假飯店生活享受</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">回家就像在度假！</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">一樣公設比「日進學」就是要給你更棒更頂級的尊榮享受！洲子洋唯一，近400坪全齡會所，接待大廳、健身房、閱讀區、會議室、閱覽室、桌球室、KTV、瑜伽教室、廚藝教室、信箱區、宴會廳…日系美學質感生活，坐擁星級飯店規劃，體驗全家人幸福親子時光，一次擁有最完美的生活享受「日進學」！</div>
     <div class="t4 absolute">LIKE A VACATION</div>
     <div class="slider absolute">
       <swiper
@@ -143,7 +143,7 @@
     line-height: 180%;
     letter-spacing: .17em;
     @media screen and (min-width:768px) {
-      top: size(154);
+      top: size(141);
       left: size(243);
       font-size: size(84);
     }
@@ -277,7 +277,7 @@
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     opacity: 0.4;
     transform: translateY(-10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(187);
       right: size(-40);
@@ -295,7 +295,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -3s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(55);
       left: size(-48);
@@ -313,7 +313,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     transform: translateY(10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -6s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(1100);
       right: size(504);
@@ -332,7 +332,7 @@
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     opacity: 0.7;
     transform: translateY(3vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -2s infinite alternate-reverse;
   }
 }
 </style>

@@ -73,7 +73,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     transform: translateY(-5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(-14);
       right: size(573);
@@ -92,7 +92,7 @@
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     opacity: 0.5;
     transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -1s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(88);
       right: size(154);
@@ -110,7 +110,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(5vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -2s infinite alternate-reverse;
   }
 
   .cir4 {
@@ -121,7 +121,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(2vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -3s infinite alternate-reverse;
   }
 }
 </style>

@@ -5,9 +5,9 @@
     <div class="cir2 absolute"></div>
     <div class="cir3 absolute"></div>
     <div class="content">
-      <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙公園左擁右抱<br>水岸樂活新版圖</div>
-      <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">近享424公頃<br>大台北都會公園水岸風光</div>
-      <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">城市中綠地難得，「日進學」左擁右抱雙公園，散步距離約500公尺即抵洲子洋公園，園區內設有五股國民運動中心，游泳池、體適能、兒童遊戲區…健康樂活應有盡有。同樣車行約2分鐘可抵占地2.5公頃的體健公園，園區內豐富的互動遊具，融入在地意象成為大人小孩身心暢遊首選！</div>
+      <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">雙公園左擁右抱<br>水岸樂活新版圖</div>
+      <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">近享424公頃<br>大台北都會公園水岸風光</div>
+      <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">城市中綠地難得，「日進學」左擁右抱雙公園，散步距離約500公尺即抵洲子洋公園，園區內設有五股國民運動中心，游泳池、體適能、兒童遊戲區…健康樂活應有盡有。同樣車行約2分鐘可抵占地2.5公頃的體健公園，園區內豐富的互動遊具，融入在地意象成為大人小孩身心暢遊首選！</div>
     </div>
     <div class="slider">
       <swiper
@@ -49,7 +49,7 @@
       <div class="btn-next" @click="slideNext"></div>
     </div>
     <div class="jp">
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">健康で幸せな生活</div>
+      <div data-aos="fade-up" data-aos-delay="0">健康で幸せな生活</div>
     </div>
   </section>
 </template>
@@ -195,8 +195,8 @@
         font-size: size-m(12);
         line-height: 180%;
         @media screen and (min-width:768px) {
-          bottom: size(27);
-          left: size(41);
+          bottom: .5em;
+          left: 1em;
           text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
           font-size: size(15);
         }
@@ -299,7 +299,7 @@
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(-15vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(-246);
       right: size(-251);
@@ -310,14 +310,14 @@
   }
 
   .cir2 {
-    top: size-m(138);
+    top: size-m(158);
     left: size-m(-12.3);
     width: size-m(46);
     height: size-m(46);
     border-radius: 50%;
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
-    transform: translateY(-10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    transform: translateY(-8vw);
+    animation: ball 7s ease-in-out -4s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(250);
       left: size(1002);
@@ -336,7 +336,7 @@
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     opacity: 0.8;
     transform: translateY(-10vw);
-    animation: ball 5s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 5s ease-in-out -2s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(858);
       right: auto;

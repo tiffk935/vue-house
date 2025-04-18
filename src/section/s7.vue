@@ -2,15 +2,15 @@
   <section class="s7 user-n w-full relative">
     <div class="cir1 absolute"></div>
     <div class="cir2 absolute"></div>
-    <div class="img1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="img1 absolute" data-aos="fade-up" data-aos-delay="0">
       <img class="w-full block" src="@/section/s7/img1.jpg" />
       <div class="txt absolute">校園情境圖</div>
     </div>
     <div class="en absolute">BILINGUAL CAMPUS</div>
-    <div class="t1 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">雙語校園第一排<br>輕鬆贏在起跑點</div>
-    <div class="t2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">下樓就到校，上學免煩惱！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">「日進學」正面樹人百年文風鬱鬱的「成州國小」，面對全球化趨勢積極推動雙語校園計畫，讓孩童在學習中自然而然與世界接軌，沐浴知識同時涵養世界，愛子心切家庭首選！</div>
-    <div class="img2 absolute" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">雙語校園第一排<br>輕鬆贏在起跑點</div>
+    <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">下樓就到校，上學免煩惱！</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">「日進學」正面樹人百年文風鬱鬱的「成州國小」，面對全球化趨勢積極推動雙語校園計畫，讓孩童在學習中自然而然與世界接軌，沐浴知識同時涵養世界，愛子心切家庭首選！</div>
+    <div class="img2 absolute" data-aos="fade-up" data-aos-delay="0">
       <img class="w-full block" src="@/section/s7/img2.jpg" />
       <div class="txt absolute">成州國小實景圖</div>
     </div>
@@ -36,8 +36,8 @@
       font-size: size-m(12);
       line-height: 180%;
       @media screen and (min-width:768px) {
-        bottom: 0;
-        left: size(10);
+        bottom: .3em;
+        left: .7em;
         text-shadow: 0px 0px size(3) rgba(0, 0, 0, 0.50);
         font-size: size(15);
         line-height: 180%;
@@ -150,7 +150,7 @@
     background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
     opacity: 0.4;
     transform: translateY(-15vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out -3s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(184);
       right: size(820);
@@ -162,14 +162,14 @@
   }
 
   .cir2 {
-    top: size-m(696);
+    top: size-m(666);
     right: size-m(-42);
     width: size-m(85);
     height: size-m(85);
     border-radius: 50%;
     background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
     transform: translateY(10vw);
-    animation: ball 3s ease-in-out 0s infinite alternate-reverse;
+    animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
       top: size(707);
       right: size(-193);
