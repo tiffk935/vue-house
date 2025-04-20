@@ -1,91 +1,76 @@
 <template>
-  <div id="order" class="order relative">
-    <div class="container">
+  <div id="order" class="order relative text-center">
+    <div class="cir3 absolute hidden md:block"></div>
+
+    <div class="order-section">
       <!-- Title -->
-      <div class="order-title" v-if="info.order.title">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
+      <div class="order-title text-left" v-if="info.order.title" v-html="info.order.title"></div>
+      <!-- <div class="order-subTitle text-center" v-if="info.order.subTitle" v-html="$isMobile() && info.order.subTitle_mo?info.order.subTitle_mo:info.order.subTitle"></div> -->
 
       <!-- Form -->
-      <div class="form">
-        <div>
-          <label>
-            <span>姓名*</span>
-            <input type="text" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
+      <div class="form mx-auto relative flex justify-center">
+        <div class="left h-full flex flex-col justify-between items-center">
+          <label class="row"><span>姓名*</span>
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
           </label>
-          <label>
-            <span>連絡電話*</span>
-            <input type="text" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
+          <label class="row"><span>連絡電話*</span>
+            <input type="text" placeholder="連絡電話" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
-          <label>
-            <!-- <span>選擇縣市*</span> -->
-            <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>選擇縣市*</option>
-              <option v-for="city in cityList" :value="city.value" :key="city">
-                {{ city.label }}
-              </option>
-            </select>
-          </label>
-          <label>
-            <!-- <span>選擇區域*</span> -->
-            <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>選擇區域*</option>
-              <option v-for="area in areaList" :value="area.value" :key="area">
-                {{ area.label }}
-              </option>
-            </select>
-          </label>
-          <label>
-            <!-- <span>選擇建案*</span> -->
+          <label class="row"><span>選擇縣市*</span>
+          <select class="select w-full rounded-none" v-model="formData.city">
+            <option value="" selected disabled>請選擇縣市</option>
+            <option v-for="city in cityList" :value="city.value" :key="city">
+              {{ city.label }}
+            </option>
+          </select></label>
+          <label class="row"><span>選擇區域*</span>
+          <select class="select w-full rounded-none" v-model="formData.area">
+            <option value="" selected disabled>請選擇區域</option>
+            <option v-for="area in areaList" :value="area.value" :key="area">
+              {{ area.label }}
+            </option>
+          </select></label>
+          <label class="row"><span>選擇建案*</span>
             <select class="select w-full rounded-none" v-model="formData.project">
-              <option value="" selected disabled>選擇建案*</option>
+              <option value="" selected disabled>請選擇建案</option>
               <option value="藏筑3">藏筑3</option>
               <option value="藏筑2">藏筑2</option>
             </select>
-          </label>
+            </label>
         </div>
-        <div>
-          <textarea 
-            :value="formData.msg" 
-            @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" 
-            placeholder="請輸入您的留言"></textarea>
+        <div class="right">
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
-    </div>
 
-    <div class="container md:flex md:justify-between md:items-center md:flex-wrap md:gap-x-1">
       <!-- Policy -->
-      <div class="control flex gap-2 items-center justify-center">
-        <input 
-          type="checkbox" 
-          v-model="formData.policyChecked" 
-          :checked="formData.policyChecked"
+      <div class="flex gap-2 items-center justify-center control">
+        <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
         <p class="text-[#000] font-medium">
-          本人知悉並同意
-          <label for="policy-modal" class="modal-button text-[#9F223D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          本人知悉並同意<label for="policy-modal"
+            class="modal-button text-[#9F223D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
 
-      <div class="recaptcha flex justify-center">
-        <vue-recaptcha
-          ref="recaptcha"
-          :sitekey="info.recaptcha_site_key_v2"
-          @verify="onRecaptchaVerify"
-          @expired="onRecaptchaUnVerify" />
-      </div>
+      <!-- Recaptcha -->
+      <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="send btn text-white bg-[#9F223D] text-center hover:scale-90 cursor-pointer" @click="send()">
+      <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer" @click="send()">
         {{ sending? '發送中..': '送出表單' }}
       </div>
+
+      <!-- Contact Info -->
+      <ContactInfo />
     </div>
 
-    <!-- Contact Info -->
-    <ContactInfo />
 
     <!-- Map -->
+    <!-- <Map v-if="info.address" /> -->
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -96,29 +81,25 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  padding: size-m(62) 0 0 0;
-  @media screen and (min-width:768px) {
-    padding: size(119) 0 0 0;
-  }
-
-  .container {
-    width: 100%;
-    padding: 0 size-m(32);
+  .order-section {
+    position: relative;
+    padding-top: size-m(62);
+    overflow: hidden;
     @media screen and (min-width:768px) {
-      padding: 0;
-      max-width: size(1470);
-      margin: 0 auto;
+      padding-top: size(119);
     }
   }
 
   .order-title {
     color: #9F223D;
+    width: size-m(310);
     font-size: size-m(26);
     font-weight: 700;
     margin: 0 auto size-m(20) auto;
     @media screen and (min-width:768px) {
       font-size: size(26);
-      margin-bottom: size(34);
+      margin-bottom: 0;
+      width: size(1470);
       letter-spacing: .05em;
     }
   }
@@ -136,100 +117,95 @@
   }
 
   .form {
-    margin-bottom: size-m(20);
+    width: size-m(310);
+    gap: size-m(15);
+    margin: 1.43em auto;
+    z-index: 50;
+    align-items: stretch;
+    flex-direction: column;
+    line-height: 1.7;
     @media screen and (min-width:768px) {
-      margin-bottom: size(34);
-      display: flex;
-      justify-content: space-between;
-      align-items: stretch;
-
-      div:nth-child(1) {
-        width: size(725);
-        margin-right: size(20);
-      }
-
-      div:nth-child(2) {
-        flex: 1;
-      }
+      width: size(1470);
+    //  min-width: 680px;
+      gap: size(80);
+      flex-direction: row;
+      font-size: calc(12px + #{size(3)});
     }
-
-    input[type=text], select, textarea {
-      font-size: 16px;
-      font-weight: 400;
+    .left {
+      flex: 1;
+      gap: 1em;
     }
-
-    input[type=text] {
-      padding-left: 95px;
-    }
-
-    textarea {
-      border: size-m(1) solid #9F223D;
-      height: 5rem;
-      resize: none;
+    .right {
+      flex: 1;
+      height: size-m(100);
       @media screen and (min-width:768px) {
-        border: size(1) solid #9F223D;
-        height: 100%;
+        height: auto;
       }
-    }
-    
-    label {
-      position: relative;
-      display: block;
-      width: 100%;
-      margin-bottom: size-m(13);
-      border: size-m(1) solid #9F223D;
-      @media screen and (min-width:768px) {
-        margin-bottom: size(20);
-        border: size(1) solid #9F223D;
-      }
-
-      &:last-child {
-        @media screen and (min-width:768px) {
-          margin-bottom: 0;
+      @media screen and (max-width:768px) {
+        .row{
+          height: 7em;
         }
       }
-
-      span {
-        font-size: 16px;
+    }
+    @media screen and (min-width:768px) {
+      &::after {
+        content: "";
+        width: size(1);
+        height: 100%;
+        background-color: #fff;
         position: absolute;
-        top: 50%;
-        left: 1rem;
-        transform: translate(0, -50%);
       }
     }
-  }
-
-  .control {
-    margin: 0 size-m(-32) size-m(27) size-m(-32);
-    @media screen and (min-width:768px) {
-      margin: 0 0 size(20) 0;
+    .row{
+      background: #FFF;
+      border: 1px solid #9F223D;
+      color: #000;
+      display: flex;
+      width: 100%;
+      align-items:center;
+      > span{
+        width: 7em;
+        text-align: left;padding-left:1em;
+        > span{color: #000;}
+      }
+      .input,
+      .select{height: 3em;min-height: 0;}
+      option{color: #666;}
+      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+      background-size:auto 200%;
+      transition: background .3s;
+      &:focus{
+        background-position:calc(100% - .5em) 0%;
+      }
+      }
     }
-  }
-
-  .recaptcha {
-    margin-bottom: size-m(25);
-    @media screen and (min-width:768px) {
-      margin: 0 0 size(20) 0;
-    }
+      input,select,textarea{background: inherit;flex: 1;font-size:1em;}
   }
 
   .send {
-    width: 100%;
-    height: auto;
-    display: block;
     font-size: size-m(20);
-    font-weight: 500;
-    line-height: 1;
-    padding: size-m(25) 0;
-    border: none;
+    width:15.5em;
+    letter-spacing: 0.9em;
+    text-indent: 0.9em;
+    color: #fff;
+    background-color: #9F223D;
+    border:0;
+    height:3.6em;
+    line-height: 3.3;
+    z-index: 10;
+    font-weight: 400;
+    position: relative;
+    font-weight: 600;
     border-radius: 0;
     @media screen and (min-width:768px) {
-      width: size(493);
-      font-size: size(22);
-      letter-spacing: .05em;
-      padding: size(20) 0;
-      min-height: auto;
-      margin: 0 0 size(20) 0;
+      font-size: size(25);
+    }
+  }
+  .control {
+    color: #000;
+    position: relative;
+    @media screen and (min-width:768px) {
+      font-size: .75em;
     }
   }
 }
@@ -238,18 +214,25 @@
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
+// import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
+
 import info from "@/info"
+
 import { cityList, renderAreaList } from "@/info/address.js"
-import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+
+
 import { useToast } from "vue-toastification"
-
-// const globals = getCurrentInstance().appContext.config.globalProperties;
-// const isMobile = computed(() => globals.$isMobile());
-
 const toast = useToast()
+
 const sending = ref(false)
+
 const formData = reactive({
   name: "",
   phone: "",
@@ -384,6 +367,7 @@ const send = () => {
       }
       sending.value = false
     });
+
 
     // toast.success(`表單已送出，感謝您的填寫`)
   }

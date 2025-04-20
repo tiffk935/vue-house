@@ -6,7 +6,9 @@
       <img class="t1 absolute" src="@/section/s9/t1.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <img class="title absolute" src="@/section/s1/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     </div>
-    <Map v-if="info.address" />
+    <div class="gmap relative z-10">
+      <iframe :src="info.googleSrc" frameborder="0"></iframe>
+    </div>
   </section>
 </template>
 
@@ -67,10 +69,23 @@
       }
     }
   }
+
+  .gmap {
+  width: 100%;
+  height: size-m(288);
+  @media screen and (min-width:768px) {
+    width: calc(100% - size(960));
+    height: size(1080);
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
 }
 </style>
 
 <script setup>
 import info from '@/info';
-import Map from '@/section/form/map.vue';
 </script>

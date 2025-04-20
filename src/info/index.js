@@ -31,7 +31,7 @@ export default {
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
     order: {
         title: "預約賞屋 book now",
-        subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
+        subTitle: "",
     },
     // 底下2個 沒項目就會隱藏
     room_type: ["早上","下午","晚上"],
