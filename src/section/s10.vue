@@ -28,7 +28,7 @@
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s10/1.jpg" />
-            <div class="txt">公園情境圖</div>
+            <div class="txt">公設3D透視圖</div>
           </div>
         </swiper-slide>
         <swiper-slide>
