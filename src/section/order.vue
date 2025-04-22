@@ -16,15 +16,22 @@
           <label class="row"><span>手機<span>(必填)</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
-          <label class="row"><span>電子信箱<span><!--(必填)--></span></span>
-            <input type="text" placeholder="電子信箱" class="input w-full rounded-none" :value="formData.email" @input="(event) => (formData.email = event.target.value)" />
-          </label>
-          <label class="row" v-if="info.room_type"><span>可聯絡的時段</span>
+          <label class="row" v-if="info.room_type"><span>需求房型<span v-if="!bypass.includes('room_type')">(必填)</span></span>
             <select class="select w-full rounded-none bg-white" v-model="formData.room_type">
-              <option value="" selected disabled>請選擇時間</option>
-              <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
-            </select>
-          </label>
+            <option value="" selected disabled>請選擇房型</option>
+            <option v-for="room in info.room_type" :value="room" v-text="room" :key="room"></option>
+          </select></label>
+          <label class="row" v-if="info.ctime"><span>可聯絡的時段<span v-if="!bypass.includes('ctime')">(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.ctime">
+            <option value="" selected disabled>請選擇時段</option>
+            <option v-for="ctime in info.ctime" :value="ctime" v-text="ctime" :key="ctime"></option>
+          </select></label>
+          <label class="row" v-if="info.budget"><span>購屋預算<span v-if="!bypass.includes('budget')">(必填)</span></span>
+            <select class="select w-full rounded-none bg-white" v-model="formData.budget">
+            <option value="" selected disabled>請選擇預算</option>
+            <option v-for="budget in info.budget" :value="budget" v-text="budget" :key="budget"></option>
+          </select>
+        </label>
           <label class="row"><span>居住縣市</span>
           <select class="select w-full rounded-none" v-model="formData.city">
             <option value="" selected disabled>請選擇城市</option>
@@ -284,8 +291,11 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
+  ctime: "",
   project: "",
   email: "",
+  use_type: "",
+  ctime: "",
   city: "",
   area: "",
   msg: "",
@@ -294,16 +304,18 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["email","project", "msg", "room_type","budget", "city", "area"]
+const bypass = ["project", "msg", "email", "room_type","budget", "city", "area", "ctime", "use_type", "ctime"]
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "預約時段", //room_type
+  "房型", //room_type
   "預算", //budget
   "建案", //project
   "信箱", //email
+  "可聯絡的時段", //ctime
+  "用途", //use_type
   "居住縣市", //city
   "居住地區", //area
   "備註訊息", //msg
