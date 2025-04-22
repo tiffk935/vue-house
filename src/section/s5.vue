@@ -10,7 +10,7 @@
     <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">擁3高4捷4特快交通路網</div>
     <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">「日進學」車行約5分鐘一橋就到蘆洲捷運站，散步3分鐘抵輕軌F06站，未來一站就到蘆洲。享強大交通動能鄰近中和新蘆線、環狀線、機場線、五泰輕軌4捷串聯大台北。出門轉彎直上台64，快接國道1號、汐五高、五楊高，配合台65、新北環快，台1甲快速道路，南來北往東西暢行通勤首選。</div>
     <div class="t4 absolute">交通が便利</div>
-    <div class="t5 absolute">CONVNEIENT TRANSPORT</div>
+    <div class="t5 absolute">CONVENIENT TRANSPORT</div>
     <div class="slider absolute">
       <swiper
         :slidesPerView="'auto'"

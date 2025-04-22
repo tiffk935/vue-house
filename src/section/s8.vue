@@ -7,7 +7,7 @@
     <div class="en absolute">CONVENIENT LIVING AMENITIES</div>
     <div class="t1 absolute" data-aos="fade-up" data-aos-delay="0">凌雲、成泰雙商圈<br>生活機能全部到位</div>
     <div class="t2 absolute" data-aos="fade-up" data-aos-delay="0">洲子洋重劃區開發成熟！</div>
-    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需步遠求。</div>
+    <div class="t3 absolute" data-aos="fade-up" data-aos-delay="0">現有成熟雙商圈凌雲路、成泰路商圈在身邊，全聯、成州傳統市場美食採買無比便利，食衣住行育樂通通有；成蘆橋一橋之隔即為蘆洲總站商圈、長榮路商圈，生活所需不遠求。</div>
     <div class="slider absolute">
       <swiper
         :slidesPerView="'auto'"
