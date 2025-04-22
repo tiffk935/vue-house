@@ -404,7 +404,7 @@ const send = () => {
       &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
+      &msg=${formData.ctime};${formData.room_type};${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
