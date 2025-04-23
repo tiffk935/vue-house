@@ -97,7 +97,7 @@
     margin: 0 auto size-m(31) auto;
     @media screen and (min-width:768px) {
       width: size(480.95);
-      height: size(168);
+      //height: size(168);
       margin: 0;
     }
   }
