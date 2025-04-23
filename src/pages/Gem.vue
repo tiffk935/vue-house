@@ -5,7 +5,7 @@
     <img class="style" src="@/assets/home/banner/style.webp" />
     <div class="info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <img class="logoicon" src="@/assets/home/banner/logoicon.svg" />
-    <RouterLink class="onder-btn" to="/vision#order">立即預約</RouterLink>
+    <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
   </section>
 
   <section class="about">
