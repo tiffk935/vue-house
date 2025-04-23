@@ -2,7 +2,7 @@
   <section class="s3 user-n w-full relative">
     <div class="content">
       <div class="main-title hidden md:block text-[#9F223D]" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">靜藏北區富域，該有的，一樣不少。</div>
-      <div class="md:flex md:justify-between">
+      <div class="md:flex md:justify-between new">
         <img class="title block md:hidden" src="@/section/s3/title-m.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <img class="title hidden md:block" src="@/section/s3/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">長磯機構・長築興業深耕台南30載，自代銷起家，深諳地段價值與居者需求，以精湛工藝與國際視野，打造歷久彌新的經典建築。秉持「長住而安」的初心，始終專注於創造穩定、踏實的美好日常。如今，延續多年淬鍊的建築哲學，於北區城央精鑄傳世訂製宅—藏筑3，敬邀您共賞「家」的全新詮釋。</div>
@@ -85,11 +85,19 @@
     }
   }
 
+  .new{
+    @media screen and (min-width:768px) {
+      align-items: center;
+    }
+    
+  }
+
   .title {
     width: size-m(242.48);
     margin: 0 auto size-m(31) auto;
     @media screen and (min-width:768px) {
       width: size(480.95);
+      height: size(168);
       margin: 0;
     }
   }
