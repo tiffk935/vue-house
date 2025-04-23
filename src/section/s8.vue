@@ -22,12 +22,12 @@
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s8/1.jpg" />
+            <img src="@/section/s8/2.jpg" />
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s8/1.jpg" />
+            <img src="@/section/s8/3.jpg" />
           </div>
         </swiper-slide>
       </swiper>

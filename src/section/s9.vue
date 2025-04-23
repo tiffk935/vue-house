@@ -4,7 +4,7 @@
       <img class="logo absolute" src="@/section/s9/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <img class="main absolute" src="@/section/s9/main.png" data-aos="fade" data-aos-duration="1000" data-aos-delay="0" />
       <img class="t1 absolute" src="@/section/s9/t1.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-      <img class="title absolute" src="@/section/s1/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="title absolute" src="@/section/s9/title.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     </div>
     <div class="gmap relative z-10">
       <iframe :src="info.googleSrc" frameborder="0"></iframe>

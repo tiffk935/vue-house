@@ -12,8 +12,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5463530124985!2d120.19428769999999!3d23.0037035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e765d50a433c7%3A0xf9e8279c2e5bb60!2zNzA05Y-w5Y2X5biC5YyX5Y2A5paH6LOi6LevMjE45be3MTDlvIQ36Jmf!5e0!3m2!1szh-TW!2stw!4v1744969464766!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/My3UgHh3t7aQrA928",
     phone: "06-580-2368",
-    fbLink: "https://www.facebook.com/#/",
-    fbMessage: "https://m.me/#/",
+    fbLink: "https://www.facebook.com/61568627147826/",
+    fbMessage: "https://m.me/61568627147826/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "茂德建設股份有限公司"],
@@ -23,7 +23,7 @@ export default {
         ["企劃銷售", "得邦廣告股份有限公司"],
         ["結構安全", "永安結構顧問事務所"],
     ],
-    gtmCode: ["GTM-W2Z2B6ND","GTM-KXCTSBDN"], // 可放置多個
+    gtmCode: ["GTM-N44KHZHT"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

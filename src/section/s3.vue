@@ -81,6 +81,7 @@
       padding-bottom: size(27);
       border-bottom: size(2) solid #9F223D;
       margin-bottom: size(96);
+      text-align: center;
     }
   }
 
