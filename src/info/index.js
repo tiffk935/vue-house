@@ -13,7 +13,7 @@ export default {
   fbLink: "http://facebook.com/61573695851738/",
   fbMessage: "https://m.me/61573695851738/",
   igLink: "#",
-  lineLink: "https://lin.ee/qhddC6H",
+  lineLink: "https://maac.io/3vJTt",
   caseName: caseName,
   gtmCode: ["GTM-NZC37ZGB"], // 可放置多個
   recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3

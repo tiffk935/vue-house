@@ -7,12 +7,12 @@
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
     </div>
     <div class="tabs">
-      <div class="tab" :class="{active: tab === '巨擎團隊'}" @click="tab = '巨擎團隊'">巨擎團隊</div>
+      <div class="tab" :class="{active: tab === '巨擘團隊'}" @click="tab = '巨擘團隊'">巨擘團隊</div>
       <div class="tab" :class="{active: tab === '米其林團隊'}" @click="tab = '米其林團隊'">米其林團隊</div>
     </div>
 
     <Transition>
-      <div class="items" v-if="tab === '巨擎團隊'">
+      <div class="items" v-if="tab === '巨擘團隊'">
         <div class="item" v-for="(item, idx) in list1" data-aos="fade-up" data-aos-duration="1000" :data-aos-delay="idx * 200">
           <div class="photo">
             <img :src="getImg(`../assets/team/1/${idx + 1}.webp`)" />
@@ -273,7 +273,7 @@
 <script setup>
 import { ref } from "vue";
 import Marquee from "@/components/Marquee.vue";
-const tab = ref('巨擎團隊'); // 米其林團隊
+const tab = ref('巨擘團隊'); // 米其林團隊
 const images = import.meta.glob('../assets/team/**/*.*', { eager: true });
 const getImg = path => images[path]?.default || '';
 const list1 = [

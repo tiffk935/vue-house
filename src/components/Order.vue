@@ -479,7 +479,7 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ['type', 'msg']
+const bypass = ['type', 'msg', 'email', 'people']
 
 //中文對照
 const formDataRef = ref([
