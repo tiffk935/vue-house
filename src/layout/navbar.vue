@@ -405,12 +405,15 @@ const scrollTo = (el) => {
 }
 
 const go = () => {
-  if (modalType.value == 'phone') {
-    window.location.href = "phoneThanks";
-  } else if (modalType.value == 'fb') {
-    window.open(info.fbMessage);
-  } else if (modalType.value == 'gmap') {
-    window.open(info.googleLink);
+  if (modalType.value == "phone") {
+    window.location.href = `tel:${info.phone.replace("-", "")}`
+     setTimeout(() => {
+       window.location.href = "phoneThanks";
+     }, 1000);
+  } else if (modalType.value == "fb") {
+    window.open(info.fbMessage)
+  } else if (modalType.value == "gmap") {
+    window.open(info.googleLink)
   }
 }
 
