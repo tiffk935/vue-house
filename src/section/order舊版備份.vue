@@ -29,13 +29,13 @@
             </select> -->
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value" :key="city">
+              <option v-for="city in cityList" :value="city.value">
                 {{ city.label }}
               </option>
             </select>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value" :key="area">
+              <option v-for="area in areaList" :value="area.value">
                 {{ area.label }}
               </option>
             </select>
@@ -262,7 +262,6 @@
 }
 </style>
 
-
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
@@ -272,44 +271,39 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import {computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
-const sending = ref(false)
-
-// 後端那 name phone email msg 為必要欄位 請勿刪除
 const formData = reactive({
   name: "",
   phone: "",
-  email: "",
-  msg: "",
-
+  room_type: "",
+  // email: "",
   city: "",
   area: "",
+  msg: "",
   policyChecked: false,
   r_verify: false,
 })
 
+const sending = ref(false)
+
 //非必填
-const bypass = ["email" , "msg","project","city","area","budget","room_type","use_type"]
+// const bypass = ["msg", "room_type", "email"]
+const bypass = ["msg", "room_type"];
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
   "手機", //phone
-  "信箱", //email
-  "備註訊息", //msg
-
+  "房型", //room_type
+  // "信箱", //email
   "居住縣市", //city
   "居住地區", //area
+  "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
 ])
@@ -323,9 +317,9 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
-// 新系統這裡需調整
-const onRecaptchaVerify = (token) => {
-  formData.r_verify = token;
+
+const onRecaptchaVerify = () => {
+  formData.r_verify = true
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
@@ -333,10 +327,10 @@ const onRecaptchaUnVerify = () => {
 
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
+  const utmSource = urlParams.get("utm_source");
+  const utmMedium = urlParams.get("utm_medium");
+  const utmContent = urlParams.get("utm_content");
+  const utmCampaign = urlParams.get("utm_campaign");
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -347,49 +341,51 @@ const send = () => {
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 
   const presend = new FormData();
-  let pass = true;
-  let unfill = [];
-  let idx = 0;
+  let pass = true
+  let unfill = []
+  let idx = 0
 
-  // 验证必填字段
+  //驗證
   for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key) && (value === "" || value === false)) {
-      unfill.push(formDataRef.value[idx]);
-      pass = false;
+    if (!bypass.includes(key)) {
+      if (value == "" || value == false) {
+        unfill.push(formDataRef.value[idx])
+      }
     }
+    idx++
     presend.append(key, value);
-    idx++;
   }
-  
+
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
 
-  // 如果有必填字段为空，返回
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
+  //有未填寫
+  if (unfill.length > 0) {
+    pass = false
+    toast.error(`「${unfill.join(", ")}」為必填或必選`)
+    return
   }
 
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
+  //手機驗證
+  const MobileReg = /^(09)[0-9]{8}$/
   if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
+    pass = false
+    toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
+    return
   }
 
-  // 如果通过验证
   if (pass && !sending.value) {
-    sending.value = true;
-    
-    /*
+    sending.value = true
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
+      &room_type=${formData.room_type}
+      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
@@ -401,29 +397,18 @@ const send = () => {
       }
     );
 
-    */
-    fetch("https://service-sys.lixin.com.tw/reserve/7da64c2d-7ef8-4e0a-8cf4-dad33eb40a52", {
+    fetch("contact-form.php", {
       method: "POST",
       body: presend,
-    })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
-      });
-  }
-};
+    }).then((response) => {
+      if (response.status === 200) {
+        window.location.href = "formThanks";
+      }
+      sending.value = false
+    });
 
+
+    // toast.success(`表單已送出，感謝您的填寫`)
+  }
+}
 </script>
