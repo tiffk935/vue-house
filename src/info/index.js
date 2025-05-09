@@ -27,15 +27,15 @@ export default {
         title: "預約賞屋",
         subTitle: "",
     },
-    
+      /*
     selectFields: {
-      /*  room_type: {
+      room_type: {
           title: "需求房型",
           hold: "請選擇房型",
           option: ["兩房", "三房"],
           bypass:false,
-        },*/
-    },
+        },
+    },*/
     navList: [
         {
             name: "十 樂",

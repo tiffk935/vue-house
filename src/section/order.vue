@@ -22,26 +22,7 @@
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
 
-<!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-<template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
-    <label class="row">
-      <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-      <select
-        class="select w-full rounded-none bg-white"
-        v-model="formData[fieldKey]"
-      >
-        <option value="" disabled>{{ fieldData.hold }}</option>
-        <option
-          v-for="option in fieldData.option"
-          :value="option"
-          :key="option"
-        >
-          {{ option }}
-        </option>
-      </select>
-    </label>
-  </template>
-<!-- 動態 select end-->
+
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>居住縣市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
@@ -313,7 +294,7 @@ const requiredFields = {
 }
 
 // selectFields
-const selectFields = info.selectFields
+const selectFields = info.selectFields || {}
 
 // 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
