@@ -1,7 +1,7 @@
 const caseName = "小城故事8"
 
 export default {
-    caseid: "7da64c2d-7ef8-4e0a-8cf4-dad33eb40a52",
+    caseid: "134fd51c-4505-47b9-879b-c992eafff560",
     case_code: "shih-jhu",
     address: "宜蘭縣五結鄉中正路一段24號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3625.125732592828!2d121.7706559!3d24.6882042!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e5d17d55e0ad%3A0x49cef879e19274d0!2zMjY45a6c6Jit57ij5LqU57WQ6YSJ5Lit5q2j6Lev5LiA5q61MjTomZ8!5e0!3m2!1szh-TW!2stw!4v1684908974869!5m2!1szh-TW!2stw",
