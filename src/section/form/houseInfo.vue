@@ -6,6 +6,7 @@
           class="h-full info-box mx-auto flex flex-col items-center justify-center"
         >
           <div class="title">建案資訊</div>
+          <img class="logo-ct" src="@/section/form/logo-cm.png" alt="創意家行銷">
           <div class="info-items mt-12 w-full grid grid-cols-1 md:grid-cols-2">
             <div
               class="item font-bold flex items-center w-full whitespace-nowrap"
@@ -60,9 +61,11 @@
 //     background-position: center;
 //     background-repeat: no-repeat;
 // }
+
 .house {
   // height: auto;
   font-size: size(22);
+  position: relative;
   // padding: 50px 0;
   // background: url('@/section/house_bg.jpg');
   // height:4em;
@@ -70,6 +73,16 @@
     height: 1.3em;
     vertical-align: middle;
   }
+
+
+  .logo-ct{
+  position: absolute;
+  width: size(260);
+  height: auto !important;
+  right: size(590);
+  //margin-bottom: size(50);
+  top:size(40);
+}
 }
 .info-box {
   width: size(900);
@@ -104,7 +117,16 @@
     //  height: sizem(400);
    // background: url("@/section/house_bgm.jpg");
     font-size: sizem(14);
+    margin-top:sizem(70);
     @apply bg-cover;
+
+
+    
+    .logo-ct{
+      width: sizem(200);
+      right: sizem(100);
+      top:sizem(-30);
+    }
   }
   .footer {
     margin-bottom: sizem(0);
