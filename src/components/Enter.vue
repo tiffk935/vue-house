@@ -26,7 +26,7 @@
       <swiper-slide>
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision/banner/img-m.webp" />
+            <img class="mob" src="@/assets/vision_bak/banner/img-m.webp" />
             <img class="pc" src="@/assets/enter/img1.webp" />
           </div>
           <div class="info">
@@ -58,7 +58,7 @@
       <div class="item-wrapper">
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision/banner/img-m.webp" />
+            <img class="mob" src="@/assets/vision_bak/banner/img-m.webp" />
             <img class="pc" src="@/assets/enter/img2.webp" />
           </div>
           <div class="info">

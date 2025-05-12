@@ -1,543 +1,758 @@
 <template>
-  <section class="banner">
-    <img class="img mob" src="@/assets/vision/banner/img-m.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <img class="img pc" src="@/assets/vision/banner/img.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <img class="txt mob" src="@/assets/vision/banner/txt-m.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <div class="onder-btn" @click="scrollToEl('#order')">立即預約</div>
-  </section>
+  <div id="vision-page-inner">
+    <section class="banner">
+      <img class="img mob" src="@/assets/vision/banner/img-m.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="img pc" src="@/assets/vision/banner/img.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <div class="onder-btn" @click="scrollToEl('#order')">立即預約</div>
+    </section>
 
-  <section id="about">
-    <h2>關於策展</h2>
-    <div class="slider" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <swiper
-        :spaceBetween="10"
-        :modules="modules"
-        loop
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        @swiper="onSwiper"
-      >
-        <swiper-slide>
-          <img src="@/assets/vision/about/1.webp" />
-          <div>
-            <div class="t1">
-              <span>脈絡</span><br>
-              平實重劃區 —— 留存與延續
+    <section id="about">
+      <h2>關於策展</h2>
+      
+      <div class="sec info">
+        <div class="flex">
+          <img src="@/assets/vision/about/img.jpg" />
+          <div class="content">
+            <div class="name">
+              <div class="jp">芦沢啓治</div>
+              <div class="line"></div>
+              <div class="en">KEIJI ASHIZAWA</div>
             </div>
-            <div class="t2">代謝  Metabolism</div>
-            <div class="t3">讓舊有的美好，轉化成當代，<br>傳承到未來。</div>
+            <div class="t1">日本近現代建築設計美學的關鍵人物。</div>
+            <div class="t2">
+              「所謂的設計，並不是單純從形體上來發想設計這樣單純的事情而已； 『製造/創造出什麼』這個行為，其實是將設計與社會緊緊聯繫在一起的。」
+            </div>
+            <div class="t2 by">芦沢啓治</div>
             <div class="line"></div>
-            <div class="t4">代謝｜保存與延續  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5 pc">
-              ● 營區內原生老樹保留移植
-              ● 工兵群營舍建築轉身文化資產 <br>
-              ● 從軍事防衛到氣候防衛
-              ● 日治競馬場與南紡後甲舊廠 
-            </div>
-            <div class="t5 mob">
-              ●　營區內原生老樹保留移植 <br>
-              ●　工兵群營舍建築轉身文化資產 <br>
-              ●　從軍事防衛到氣候防衛 <br>
-              ●　日治競馬場與南紡後甲舊廠 
-            </div>
           </div>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="@/assets/vision/about/2.webp" />
-          <div>
-            <div class="t1">
-              <span>新生</span><br>
-              平實重劃區 —— 共創社會公共價值
-            </div>
-            <div class="t2">新生  Regeneration</div>
-            <div class="t3">多樣性是偉大城市的基本價值。</div>
-            <div class="line"></div>
-            <div class="t4">架構｜共創社會公共價值  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5 pc">
-              ● 什麼是「公辦」都市更新
-              ● 城市設計創造生活願景 <br>
-              ● TOD導向城市更新
-              ● 府城的遠景
-              ● 東區綠核心 <br>
-              ● 點線面三維整合
-              ● 成大文教生活圈 
-            </div>
-            <div class="t5 mob">
-              ●　什麼是「公辦」都市更新 <br>
-              ●　城市設計創造生活願景 <br>
-              ●　TOD導向城市更新 <br>
-              ●　府城的遠景 <br>
-              ●　東區綠核心 <br>
-              ●　點線面三維整合 <br>
-              ●　成大文教生活圈 
-            </div>
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <img src="@/assets/vision/about/3.webp" />
-          <div>
-            <div class="t1">
-              <span>集成</span><br>
-              平實重劃區 —— 東台南新富聚落
-            </div>
-            <div class="t2">集成  Integration</div>
-            <div class="t3">唯有城市由眾人創造，<br>城市才能滋養眾人。</div>
-            <div class="line"></div>
-            <div class="t4">願景｜東台南新富聚落  <span style="color: #269161;">展區主題</span></div>
-            <div class="t5 pc">
-              ● 從人居視角看都市複合機能
-              ● 平實重劃區，堪稱集大成 <br>
-              ● 平實森林轉運站與藍綠雙捷運預定
-              ● 商業特區串連南紡未來開發 <br>
-              ● 退縮開放謙讓，讓生活走進來
-            </div>
-            <div class="t5 mob">
-              ●　從人居視角看都市複合機能 <br>
-              ●　平實重劃區，堪稱集大成 <br>
-              ●　平實森林轉運站與藍綠雙捷運預定 <br>
-              ●　商業特區串連南紡未來開發 <br>
-              ●　退縮開放謙讓，讓生活走進來
-            </div>
-          </div>
-        </swiper-slide>
-      </swiper>
-    </div>
-    <div class="slider-btn-prev" @click="swiperRef.slidePrev()">瀏<br>覽<br>上<br>個<br>展<br>區</div>
-    <div class="slider-btn-next" @click="swiperRef.slideNext()">瀏<br>覽<br>下<br>個<br>展<br>區</div>
-  </section>
-
-  <section id="preview">
-    <h2>展覽預告</h2>
-    <div class="pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="mob" src="@/assets/vision/preview/pic-m.webp" />
-      <img class="pc" src="@/assets/vision/preview/pic.webp" />
-    </div>
-  </section>
-
-  <section id="info">
-    <h2>展覽資訊</h2>
-    <div class="pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="mob" src="@/assets/vision/info/pic-m.webp" />
-      <img class="pc" src="@/assets/vision/info/pic.webp" />
-    </div>
-    <div class="container">
-      <div class="line"></div>
-      <div class="info-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <div>
-          <div class="t1">平實城市願景館</div>
-          <div class="t2">
-            <span style="color: #269D45;">展館地址｜</span>台南市東區後甲二路／平實二街口<br>
-            <span style="color: #269D45;">參觀時間｜</span>週一至週日 10:00 - 18:00（免費參觀）<br>
-            <span style="color: #269D45;">聯絡電話｜</span>06-273-8888
-          </div>
-        </div>
-        <div class="info-btns">
-          <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
-          <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" /></a>
-          <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
-          <!--a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
-          <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
         </div>
       </div>
-    </div>
-  </section>
 
-  <div id="order">
-    <h2>預約表單</h2>
-    <Order />
+      <div class="sec idea">
+        <div class="sec-title mob">設計理念</div>
+        <div class="flex">
+          <div class="slider">
+            <swiper
+              :spaceBetween="10"
+              :modules="modules"
+              :pagination="{
+                clickable: true
+              }"
+              loop
+              :autoplay="{
+                delay: 3000,
+                disableOnInteraction: false,
+              }"
+            >
+              <swiper-slide>
+                <img src="@/assets/vision/about/idea1.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/idea2.jpg" />
+              </swiper-slide>
+            </swiper>
+          </div>
+          <div class="content">
+            <div class="sec-title pc">設計理念</div>
+            <div class="t1">
+              「 誠實設計 」的概念，<br>
+              一種誠摯面對設計本質的態度。
+            </div>
+            <div class="t2">
+              芦沢啓治認為，設計不應該只是為了促使人們購買商品，或者僅僅是為了反映某個時代的潮流，而是應該朝著更有助於構建美好未來的方向發展，故提出了「誠實設計」的概念，指的是忠於本質的設計，強調回歸事物本質，尊重材料的特性、回應人的真實需求，讓設計成為我們實現理想生活的工具，為未來創造真正的價值。
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec design">
+        <div class="sec-title mob">建築設計／室內設計／傢俱設計</div>
+        <div class="flex">
+          <div class="slider">
+            <swiper
+              :spaceBetween="10"
+              :modules="modules"
+              :pagination="{
+                clickable: true
+              }"
+              loop
+              :autoplay="{
+                delay: 3000,
+                disableOnInteraction: false,
+              }"
+            >
+              <swiper-slide>
+                <img src="@/assets/vision/about/design1.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/design2.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/design3.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/design4.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/design5.jpg" />
+              </swiper-slide>
+            </swiper>
+            <div class="txt">Ishinomaki Home Base</div>
+          </div>
+          <div class="content">
+            <div class="sec-title pc">建築設計／室內設計／傢俱設計</div>
+            <div class="t1">
+              空間內所需要的各種元素，<br>
+              都可以進行設計。
+            </div>
+            <div class="t2">
+              簡潔中追求精緻，實用中追求周到與體貼；整個空間都充滿了舒適，連角落裡的材質都在釋放著魅力。芦沢啓治的建築設計注重與自然環境的和諧共生，他的作品通過巧妙的空間佈局和自然光的運用，創造出開放、舒適的生活環境。每座建築與空間都融入周圍的自然景觀，呈現簡潔而優雅的形態，強調建築與環境的緊密聯繫，使生活空間成為心靈的棲息地。在芦沢啓治的設計中，您可以感受到自然的脈動和空間的靈動，享受身心靈的和諧與舒適。
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sec work">
+        <div class="sec-title mob">知名業績</div>
+        <div class="flex">
+          <div class="slider">
+            <swiper
+              :spaceBetween="10"
+              :modules="modules"
+              :pagination="{
+                clickable: true
+              }"
+              loop
+              :autoplay="{
+                delay: 3000,
+                disableOnInteraction: false,
+              }"
+            >
+              <swiper-slide>
+                <img src="@/assets/vision/about/work1.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/work2.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/work3.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/work4.jpg" />
+              </swiper-slide>
+              <swiper-slide>
+                <img src="@/assets/vision/about/work5.jpg" />
+              </swiper-slide>
+            </swiper>
+            <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
+          </div>
+          <div class="content">
+            <div class="sec-title pc">知名業績</div>
+            <div class="t1">
+              藍瓶咖啡空間靈魂人物<br class="mob">
+              ＿＿芦沢啓治
+            </div>
+            <div class="t2">
+              藍瓶咖啡東京澀谷店、名古屋榮店、神戶阪急店，都出自芦沢啓治事務所的手筆，秉持著以使用者為核心的設計理念，「石卷工房」在日本311大地震的背景下誕生了，「製作在地物品」為初衷的傢俱品牌，透過設計傳遞DIY的無限可能，2019年與日本傢俱大廠 KARIMOKU 合作推出全新品牌 Karimoku Case，堅持寧靜美、多樣材料表現的美學，更曾擔任日本 GOOD DESIGN 設計獎評審委員以及德國 iF 2020 設計獎評審。
+            </div>
+            <div class="line"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prev">
+      <h2>上期展覽</h2>
+      <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="mob" src="@/assets/vision/prev/img-m.jpg" />
+        <img class="pc" src="@/assets/vision/prev/img.png" />
+      </div>
+    </section>
+
+    <section id="info">
+      <h2>展覽資訊</h2>
+      <div class="pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="mob" src="@/assets/vision/info/pic-m.webp" />
+        <img class="pc" src="@/assets/vision/info/pic.webp" />
+      </div>
+      <div class="container">
+        <div class="line"></div>
+        <div class="info-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <div>
+            <div class="t1">平實城市願景館</div>
+            <div class="t2">
+              <span style="color: #269D45;">展館地址｜</span>台南市東區後甲二路／平實二街口<br>
+              <span style="color: #269D45;">參觀時間｜</span>週一至週日 10:00 - 18:00（免費參觀）<br>
+              <span style="color: #269D45;">聯絡電話｜</span>06-273-8888
+            </div>
+          </div>
+          <div class="info-btns">
+            <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
+            <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" /></a>
+            <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
+            <!--a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
+            <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="order">
+      <h2>預約表單</h2>
+      <Order />
+    </div>
   </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @use "@/assets/style/function.scss" as func;
 
-.mob {
-  display: block;
-  @media screen and (min-width:768px) {
-    display: none;
-  }
-}
-
-.pc {
-  display: none;
-  @media screen and (min-width:768px) {
+#vision-page-inner {
+  .mob {
     display: block;
-  }
-}
-
-.container {
-  padding: 0 func.size-m(49);
-  @media screen and (min-width:768px) {
-    padding: 0 func.size(299);
-  }
-}
-
-h2 {
-  font-size: func.size-m(16);
-  font-weight: 500;
-  padding: 0 func.size-m(49);
-  margin-bottom: func.size-m(20);
-  @media screen and (min-width:768px) {
-    font-size: func.size(37);
-    padding: 0 func.size(174);
-    margin-bottom: func.size(53);
-  }
-}
-
-.banner {
-  position: relative;
-  width: 100%;
-  height: func.size-m(667 - 74);
-  @media screen and (min-width:768px) {
-    height: func.size(1080 - 165);
-  }
-
-  .img {
-    position: absolute;
-    top: func.size-m(61);
-    left: func.size-m(92);
-    width: func.size-m(189);
-    @media screen and (min-width:768px) {
-      top: func.size(192);
-      left: func.size(177);
-      width: func.size(1566);
-    }
-  }
-
-  .txt {
-    position: absolute;
-    top: func.size-m(406);
-    left: func.size-m(57);
-    width: func.size-m(262);
-  }
-
-  .onder-btn {
-    display: none;
-    @media screen and (min-width:768px) {
-      display: block;
-      position: absolute;
-      top: func.size(574);
-      left: func.size(1490);
-      border: func.size(5) solid #219664;
-      background: #fff;
-      text-decoration: none;
-      color: #000;
-      font-size: func.size(23);
-      letter-spacing: .18em;
-      width: func.size(253);
-      height: func.size(50);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
-
-    &:hover{
-     background: #219664;
-    color: #fff;
-    transition:.3s;
-    }
-  }
-}
-
-#about {
-  position: relative;
-  padding: func.size-m(30) 0;
-  @media screen and (min-width:768px) {
-    padding: func.size(65) 0 func.size(153) 0;
-  }
-
-  .slider {
-    width: func.size-m(276);
-    margin: 0 auto;
-    @media screen and (min-width:768px) {
-      width: 100%;
-    }
-
-    .swiper-slide {
-      @media screen and (min-width:768px) {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-      }
-
-      & > div {
-        @media screen and (min-width:768px) {
-          padding-left: func.size(174);
-        }
-      }
-
-      img {
-        display: block;
-        width: 100%;
-        height: func.size-m(284);
-        margin-bottom: func.size-m(15);
-        object-fit: cover;
-        @media screen and (min-width:768px) {
-          width: func.size(924);
-          height: func.size(750);
-          margin-bottom: 0;
-        }
-      }
-
-      .t1 {
-        color: #269161;
-        font-size: func.size-m(14);
-        font-weight: 500;
-        line-height: 129.2%;
-        margin-bottom: func.size-m(22);
-        @media screen and (min-width:768px) {
-          font-size: func.size(39);
-          line-height: 133.2%;
-          margin-bottom: func.size(96);
-        }
-
-        span {
-          font-size: func.size-m(12);
-          @media screen and (min-width:768px) {
-            font-size: func.size(30);
-          }
-        }
-      }
-
-      .t2 {
-        color: #269161;
-        font-size: func.size-m(14);
-        font-weight: 500;
-        line-height: 129.2%;
-        margin-bottom: func.size-m(3);
-        @media screen and (min-width:768px) {
-          font-size: func.size(39);
-          line-height: 133.2%;
-        }
-      }
-
-      .t3 {
-        font-size: func.size-m(16);
-        font-weight: 500;
-        line-height: 129.2%;
-        margin-bottom: func.size-m(17);
-        @media screen and (min-width:768px) {
-          font-size: func.size(48);
-          line-height: 133.2%;
-          margin-bottom: func.size(45);
-        }
-      }
-
-      .line {
-        width: 100%;
-        height: func.size-m(3);
-        background: #269161;
-        margin-bottom: func.size-m(39);
-        @media screen and (min-width:768px) {
-          width: func.size(597);
-          height: func.size(3);
-          margin-bottom: func.size(206);
-        }
-      }
-
-      .t4 {
-        font-size: func.size-m(12);
-        font-weight: 500;
-        line-height: 129.2%;
-        margin-bottom: func.size-m(7);
-        @media screen and (min-width:768px) {
-          font-size: func.size(24);
-          line-height: 133.2%;
-          margin-bottom: func.size(17);
-        }
-      }
-
-      .t5 {
-        font-size: func.size-m(12);
-        font-weight: 500;
-        line-height: 149.2%;
-        @media screen and (min-width:768px) {
-          font-size: func.size(20);
-          line-height: func.size(34);
-          letter-spacing: .05em;
-        }
-      }
-    }
-  }
-
-  .slider-btn-prev, .slider-btn-next {
-    color: #269161;
-    font-size: func.size-m(14);
-    font-weight: 500;
-    line-height: 111.2%;
-    position: absolute;
-    top: func.size-m(139);
-    background-size: func.size-m(13) auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-    padding-top: func.size-m(50);
-    cursor: pointer;
-    z-index: 1;
-    @media screen and (min-width:768px) {
-      font-size: func.size(25);
-      line-height: func.size(44);
-      top: auto;
-      bottom: func.size(139);
-      background-size: func.size(24) auto;
-      padding-top: 0;
-    }
-  }
-
-  .slider-btn-prev {
-    background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.28408 12.9454L12.9463 1.2832L11.6632 9.37871e-05L0.000975074 11.6623L1.28408 12.9454Z" fill="%23269161"/><path d="M-9.70249e-05 11.6706L11.6621 23.3328L12.9452 22.0497L1.28301 10.3875L-9.70249e-05 11.6706Z" fill="%23269161"/></svg>');
-    left: func.size-m(24);
     @media screen and (min-width:768px) {
       display: none;
     }
   }
 
-  .slider-btn-next {
-    background-image: url('data:image/svg+xml,<svg width="13" height="24" viewBox="0 0 13 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.6622 10.3874L0 22.0496L1.28311 23.3327L12.9453 11.6705L11.6622 10.3874Z" fill="%23269161"/><path d="M12.9464 11.6622L1.28418 0L0.00107036 1.28311L11.6633 12.9453L12.9464 11.6622Z" fill="%23269161"/></svg>');
-    right: func.size-m(24);
+  .pc {
+    display: none;
     @media screen and (min-width:768px) {
-      padding-right: func.size(45);
-      background-position: top right;
-
-      br {
-        display: none;
-      }
+      display: block;
     }
   }
-}
 
-#preview {
-  padding: func.size-m(30) 0;
-  @media screen and (min-width:768px) {
-    padding: func.size(65) 0 func.size(163) 0;
-  }
-
-  .pic {
+  .container {
     padding: 0 func.size-m(49);
-    @media screen and (min-width:768px) {
-      padding: 0 func.size(175);
-    }
-
-    img {
-      width: 100%;
-    }
-  }
-}
-
-#info {
-  padding: func.size-m(30) 0 func.size-m(0) 0;
-  @media screen and (min-width:768px) {
-    padding: func.size(65) 0 func.size(0) 0;
-  }
-
-  .pic {
-    padding: 0 func.size-m(83);
-    margin-bottom: func.size-m(43);
     @media screen and (min-width:768px) {
       padding: 0 func.size(299);
     }
-
-    img {
-      width: 100%;
-    }
   }
 
-  .line {
-    width: 100%;
-    height: func.size-m(1);
-    background: #000;
-    margin-bottom: func.size-m(21);
-    @media screen and (min-width:768px) {
-      height: func.size(1);
-      margin-bottom: func.size(96);
-    }
-  }
-
-  .info-wrapper {
-    @media screen and (min-width:768px) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-  }
-
-  .t1 {
-    font-size: func.size-m(14);
-    font-weight: 700;
-    line-height: 129.2%;
-    margin-bottom: func.size-m(12);
-    @media screen and (min-width:768px) {
-      font-size: func.size(29);
-      line-height: 203.2%;
-      margin-bottom: 0;
-    }
-  }
-
-  .t2 {
-    font-size: func.size-m(12);
+  h2 {
+    font-size: func.size-m(16);
     font-weight: 500;
-    line-height: 187.2%;
-    margin-bottom: func.size-m(26);
+    padding: 0 func.size-m(49);
+    margin-bottom: func.size-m(29);
     @media screen and (min-width:768px) {
-      font-size: func.size(29);
-      line-height: 203.2%;
-      margin-bottom: 0;
+      font-size: func.size(37);
+      padding: 0 func.size(174);
+      margin-bottom: func.size(53);
     }
   }
 
-  .info-btns {
+  .banner {
+    position: relative;
     width: 100%;
-    display: flex;
-    justify-content: space-between;
+    height: func.size-m(667 - 74);
     @media screen and (min-width:768px) {
-      //width: func.size(570);
-      width: func.size(470);
+      height: func.size(1080 - 165);
     }
 
-    a {
-      width: func.size-m(39);
-      height: func.size-m(39);
-      background: #E8E8E8;
-      border: 1px solid #21966300;
-      border-radius: 50%;
+    .img {
+      position: absolute;
+      top: func.size-m(49);
+      left: func.size-m(49);
+      width: func.size-m(277);
+      @media screen and (min-width:768px) {
+        top: func.size(131);
+        left: func.size(85);
+        width: func.size(1671);
+      }
+    }
+
+    .onder-btn {
+      position: absolute;
+      top: func.size-m(495);
+      left: func.size-m(273);
+      width: func.size-m(53);
+      height: func.size-m(20);
+      border: func.size-m(1) solid #000;
+      text-decoration: none;
+      color: #000;
+      font-size: func.size-m(9);
+      line-height: 1;
+      letter-spacing: .23em;
+      text-indent: .23em;
       display: flex;
       justify-content: center;
       align-items: center;
+      cursor: pointer;
       @media screen and (min-width:768px) {
-        width: func.size(80);
-        height: func.size(80);
+        top: func.size(756);
+        left: func.size(1587);
+        width: func.size(169);
+        height: func.size(56);
+        border: func.size(3) solid #000;
+        font-size: func.size(27);
       }
 
       &:hover{
-        border: 1px solid #219664;
+        background: #219664;
+        color: #fff;
         transition:.3s;
       }
+    }
+  }
 
+  #about {
+    position: relative;
+    padding: func.size-m(19) 0 func.size-m(36) 0;
+    @media screen and (min-width:768px) {
+      padding: func.size(167) 0 func.size(160) 0;
     }
 
-    img {
-      width: auto;
-      height: func.size-m(20);
-      display: block;
-      filter: invert(41%) sepia(89%) saturate(388%) hue-rotate(83deg) brightness(100%) contrast(93%);
+    .sec {
+      .sec-title {
+        color: #269161;
+        font-size: func.size-m(14);
+        font-weight: 500;
+        padding: 0 func.size-m(49);
+        margin-bottom: func.size-m(20);
+        @media screen and (min-width:768px) {
+          font-size: func.size(26);
+          margin-bottom: func.size(28);
+          padding: 0;
+        }
+      }
+
+      .flex {
+        @media screen and (min-width:768px) {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-end;
+        }
+      }
+
+      .content {
+        padding: 0 func.size-m(48);
+        @media screen and (min-width:768px) {
+          padding: 0;
+        }
+
+        .t1 {
+          font-size: func.size-m(15);
+          font-weight: 500;
+          line-height: 133.2%; /* 19.98px */
+          @media screen and (min-width:768px) {
+            font-size: func.size(38);
+          }
+        }
+
+        .t2 {
+          font-size: func.size-m(12);
+          font-weight: 500;
+          line-height: 171%;
+          @media screen and (min-width:768px) {
+            font-size: func.size(20);
+          }
+        }
+      }
+    }
+
+    .info {
       @media screen and (min-width:768px) {
-        height: func.size(42);
+        padding-bottom: func.size(161);
+      }
+      img {
+        display: block;
+        width: 100%;
+        margin-bottom: func.size-m(41);
+        @media screen and (min-width:768px) {
+          width: func.size(926);
+          margin-bottom: 0;
+        }
+      }
+      
+      .content {
+        @media screen and (min-width:768px) {
+          width: func.size(668);
+          margin-left: func.size(160);
+        }
+
+        .name {
+          display: flex;
+          align-items: center;
+          margin-bottom: func.size-m(13);
+          font-weight: 500;
+          @media screen and (min-width:768px) {
+            margin-bottom: func.size(28);
+          }
+
+          .jp {
+            font-size: func.size-m(16);
+            line-height: 133.2%;
+            @media screen and (min-width:768px) {
+              font-size: func.size(38);
+            }
+          }
+
+          .line {
+            flex: 1;
+            margin: 0 func.size-m(8) 0 func.size-m(4);
+            height: func.size-m(1);
+            background: #000;
+            @media screen and (min-width:768px) {
+              margin: 0 func.size(8) 0 func.size(14);
+              height: func.size(1);
+            }
+          }
+
+          .en {
+            color: #269161;
+            font-size: func.size-m(20);
+            line-height: 133.2%;
+            @media screen and (min-width:768px) {
+              font-size: func.size(47);
+            }
+          }
+        }
+
+        .t1 {
+          margin-bottom: func.size-m(24);
+          @media screen and (min-width:768px) {
+            margin-bottom: func.size(163);
+          }
+        }
+
+        .t2 {
+          color: #269161;
+          margin-bottom: func.size-m(16);
+          text-align: justify;
+          @media screen and (min-width:768px) {
+            margin-bottom: func.size(27);
+          }
+
+          &.by {
+            text-align: right;
+            position: relative;
+            margin-bottom: func.size-m(60);
+            @media screen and (min-width:768px) {
+              margin-bottom: func.size(121);
+            }
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              right: func.size-m(57);
+              width: func.size-m(41);
+              height: func.size-m(1);
+              background: #269161;
+              @media screen and (min-width:768px) {
+                right: func.size(94);
+                width: func.size(128);
+                height: func.size(1);
+              }
+            }
+          }
+        }
+
+        .line {
+          width: 100%;
+          height: func.size-m(3);
+          background: #269161;
+          @media screen and (min-width:768px) {
+            height: func.size(3);
+          }
+        }
+      }
+    }
+
+    .idea, .design, .work {
+      padding: func.size-m(24) 0 func.size-m(41) 0;
+      @media screen and (min-width:768px) {
+        padding: func.size(105) 0 func.size(28) 0;
+      }
+
+      .flex {
+        @media screen and (min-width:768px) {
+          align-items: flex-end;
+        }
+      }
+
+      .slider {
+        overflow: hidden;
+        margin-bottom: func.size-m(41);
+        @media screen and (min-width:768px) {
+          width: func.size(926);
+          margin-bottom: 0;
+          padding-bottom: func.size(128 + 10);
+        }
+
+        .swiper {
+          overflow: visible;
+
+          .swiper-pagination {
+            bottom: -7vw;
+            justify-content: flex-end;
+
+            .swiper-pagination-bullet {
+              width: func.size(119.89);
+              height: func.size(10);
+              background: #CCCCCC;
+              opacity: 1;
+              border-radius: 0;
+              margin: 0 func.size(5) 0 0;
+
+              &.swiper-pagination-bullet-active {
+                background: #269161;
+              }
+            }
+          }
+        }
+
+        img {
+          display: block;
+          width: 100%;
+          height: func.size-m(261);
+          object-fit: cover;
+          @media screen and (min-width:768px) {
+            height: func.size(752);
+          }
+        }
+
+        .swiper-pagination {
+          display: none;
+          @media screen and (min-width:768px) {
+            display: flex;
+          }
+        }
+      }
+
+      .content {
+        @media screen and (min-width:768px) {
+          width: func.size(651);
+          margin-right: func.size(160);
+          padding-bottom: func.size(128 + 10);
+        }
+
+        .t1 {
+          line-height: 232.2%;
+          margin-bottom: func.size-m(26);
+          @media screen and (min-width:768px) {
+            line-height: 133.2%;
+            margin-bottom: func.size(136);
+          }
+        }
+
+        .t2 {
+          margin-bottom: func.size-m(19);
+          text-align: justify;
+          @media screen and (min-width:768px) {
+            margin-bottom: func.size(88);
+          }
+        }
+
+        .line {
+          width: 100%;
+          height: func.size-m(3);
+          background: #269161;
+          @media screen and (min-width:768px) {
+            height: func.size(3);
+          }
+        }
+      }
+    }
+
+    .info, .idea {
+      .flex {
+        @media screen and (min-width:768px) {
+          flex-direction: row-reverse;
+        }
+      }
+
+      .content {
+        @media screen and (min-width:768px) {
+          margin-left: func.size(160);
+        }
+      }
+
+      .slider .swiper .swiper-pagination {
+        justify-content: flex-start;
+      }
+    }
+
+    .design, .work {
+      .slider {
+        padding-bottom: func.size-m(23);
+        position: relative;
+        margin-bottom: func.size-m(12);
+        @media screen and (min-width:768px) {
+          padding-bottom: func.size(128 + 10);
+          margin-bottom: 0;
+        }
+
+        .txt {
+          position: absolute;
+          bottom: 0;
+          right: func.size-m(48);
+          font-size: func.size-m(12);
+          font-weight: 500;
+          line-height: 171%;
+          @media screen and (min-width:768px) {
+            bottom: func.size(78);
+            right: 0;
+            font-size: func.size(25);
+          }
+        }
       }
     }
   }
-}
 
-#order {
-  padding: func.size-m(30 + 30) 0 func.size-m(60) 0;
-  @media screen and (min-width:768px) {
-    padding: func.size(65 + 74) 0 func.size(197) 0;
-  }
-  
-  h2 {
+  #preview {
+    padding: func.size-m(30) 0;
     @media screen and (min-width:768px) {
-      margin-bottom: func.size(118);
+      padding: func.size(65) 0 func.size(163) 0;
+    }
+
+    .pic {
+      padding: 0 func.size-m(49);
+      @media screen and (min-width:768px) {
+        padding: 0 func.size(175);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #prev {
+    padding: func.size-m(19) 0 func.size-m(50) 0;
+    @media screen and (min-width:768px) {
+      padding: func.size(127) 0 func.size(295) 0;
+    }
+
+    .img {
+      width: func.size-m(277.77);
+      margin: 0 auto;
+      @media screen and (min-width:768px) {
+        width: func.size(1437);
+        margin-top: func.size(275);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  #info {
+    padding: func.size-m(30) 0 func.size-m(0) 0;
+    @media screen and (min-width:768px) {
+      padding: func.size(65) 0 func.size(0) 0;
+    }
+
+    .pic {
+      padding: 0 func.size-m(83);
+      margin-bottom: func.size-m(43);
+      @media screen and (min-width:768px) {
+        padding: 0 func.size(299);
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .line {
+      width: 100%;
+      height: func.size-m(1);
+      background: #000;
+      margin-bottom: func.size-m(21);
+      @media screen and (min-width:768px) {
+        height: func.size(1);
+        margin-bottom: func.size(96);
+      }
+    }
+
+    .info-wrapper {
+      @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .t1 {
+      font-size: func.size-m(14);
+      font-weight: 700;
+      line-height: 129.2%;
+      margin-bottom: func.size-m(12);
+      @media screen and (min-width:768px) {
+        font-size: func.size(29);
+        line-height: 203.2%;
+        margin-bottom: 0;
+      }
+    }
+
+    .t2 {
+      font-size: func.size-m(12);
+      font-weight: 500;
+      line-height: 187.2%;
+      margin-bottom: func.size-m(26);
+      @media screen and (min-width:768px) {
+        font-size: func.size(29);
+        line-height: 203.2%;
+        margin-bottom: 0;
+      }
+    }
+
+    .info-btns {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      @media screen and (min-width:768px) {
+        //width: func.size(570);
+        width: func.size(470);
+      }
+
+      a {
+        width: func.size-m(39);
+        height: func.size-m(39);
+        background: #E8E8E8;
+        border: 1px solid #21966300;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media screen and (min-width:768px) {
+          width: func.size(80);
+          height: func.size(80);
+        }
+
+        &:hover{
+          border: 1px solid #219664;
+          transition:.3s;
+        }
+
+      }
+
+      img {
+        width: auto;
+        height: func.size-m(20);
+        display: block;
+        filter: invert(41%) sepia(89%) saturate(388%) hue-rotate(83deg) brightness(100%) contrast(93%);
+        @media screen and (min-width:768px) {
+          height: func.size(42);
+        }
+      }
+    }
+  }
+
+  #order {
+    padding: func.size-m(30 + 30) 0 func.size-m(60) 0;
+    @media screen and (min-width:768px) {
+      padding: func.size(65 + 74) 0 func.size(197) 0;
+    }
+    
+    h2 {
+      @media screen and (min-width:768px) {
+        margin-bottom: func.size(118);
+      }
     }
   }
 }
@@ -547,14 +762,16 @@ h2 {
 import info from '@/info';
 import { ref } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
+import { Autoplay, Pagination } from 'swiper/modules';
 import 'swiper/css';
+import 'swiper/css/pagination';
 import { gsap } from "gsap";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import Order from '@/components/Order.vue';
 
 gsap.registerPlugin(ScrollToPlugin);
 
-const modules = ref([]);
+const modules = ref([Autoplay, Pagination]);
 const swiperRef = ref();
 
 function scrollToEl(el) {

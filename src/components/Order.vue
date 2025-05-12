@@ -385,10 +385,9 @@
 }
 
 .location {
-
   .container {
     @media screen and (min-width:768px) {
-      padding: 0;
+      padding: 0 !important;
       display: flex;
       width: func.size(1311);
       margin: 0 auto;
