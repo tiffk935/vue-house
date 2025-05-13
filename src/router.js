@@ -35,4 +35,62 @@ const router = createRouter({
   },
 });
 
+let metaData = [];
+let firstVisit = true;
+
+fetch('/meta.json')
+  .then((res) => {
+    return res.json();
+  })
+  .then((json) => {
+    metaData = json;
+  })
+  .catch((error) => {
+    console.log(`Error: ${error}`);
+  });
+
+router.beforeEach((to) => {
+  let path = to.path;
+  if (firstVisit) {
+    firstVisit = false;
+  } else {
+    if (path !== '/' && path[path.length-1] !== '/') {
+      path = path + '/';
+    }
+
+    if (path.indexOf('/news/') >= 0 || path.indexOf('/projects/') >= 0) {
+      path = '/news/';
+    }
+
+    const filter = metaData.filter(item => item.path === path);
+    const defaultMeta = metaData.filter(item => item.path === '*');
+    let meta = defaultMeta[0];
+    
+    if (filter.length > 0) {
+      meta = filter[0];
+    }
+
+    document.title = meta.title;
+
+    const els = [
+      {key: 'head meta[name="description"]', value: meta.descriptionn},
+      {key: 'head meta[name="keywords"]', value: meta.keywords},
+      {key: 'head meta[property="og:title"]', value: meta.title},
+      {key: 'head meta[property="og:description"]', value: meta.description},
+      {key: 'head meta[property="og:site_name"]', value: meta.title},
+      {key: 'head meta[name="twitter:description"]', value: meta.description},
+      {key: 'head meta[name="twitter:title"]', value: meta.title},
+      {key: 'head meta[itemprop="name"]', value: meta.title},
+      {key: 'head meta[itemprop="description"]', value: meta.description},
+    ];
+
+    els.forEach(item => {
+      const el = document.querySelector(item.key);
+      if (el) {
+        el.setAttribute('content', item.value);
+      }
+    });
+  }
+})
+
 export default router;
