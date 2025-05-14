@@ -1,8 +1,8 @@
 <template>
   <div id="vision-page-inner">
     <section class="banner">
-      <img class="img mob" src="@/assets/vision/banner/img-m.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-      <img class="img pc" src="@/assets/vision/banner/img.png" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="img mob" src="@/assets/vision/banner/img-m.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <img class="img pc" src="@/assets/vision/banner/img.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <div class="onder-btn" @click="scrollToEl('#order')">立即預約</div>
     </section>
 
@@ -11,7 +11,7 @@
       
       <div class="sec info">
         <div class="flex">
-          <img src="@/assets/vision/about/img.jpg" />
+          <img src="@/assets/vision/about/img.webp" />
           <div class="content">
             <div class="name">
               <div class="jp">芦沢啓治</div>
@@ -45,10 +45,10 @@
               }"
             >
               <swiper-slide>
-                <img src="@/assets/vision/about/idea1.jpg" />
+                <img src="@/assets/vision/about/idea1.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/idea2.jpg" />
+                <img src="@/assets/vision/about/idea2.webp" />
               </swiper-slide>
             </swiper>
           </div>
@@ -83,19 +83,19 @@
               }"
             >
               <swiper-slide>
-                <img src="@/assets/vision/about/design1.jpg" />
+                <img src="@/assets/vision/about/design1.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/design2.jpg" />
+                <img src="@/assets/vision/about/design2.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/design3.jpg" />
+                <img src="@/assets/vision/about/design3.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/design4.jpg" />
+                <img src="@/assets/vision/about/design4.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/design5.jpg" />
+                <img src="@/assets/vision/about/design5.webp" />
               </swiper-slide>
             </swiper>
             <div class="txt">Ishinomaki Home Base</div>
@@ -131,19 +131,19 @@
               }"
             >
               <swiper-slide>
-                <img src="@/assets/vision/about/work1.jpg" />
+                <img src="@/assets/vision/about/work1.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/work2.jpg" />
+                <img src="@/assets/vision/about/work2.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/work3.jpg" />
+                <img src="@/assets/vision/about/work3.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/work4.jpg" />
+                <img src="@/assets/vision/about/work4.webp" />
               </swiper-slide>
               <swiper-slide>
-                <img src="@/assets/vision/about/work5.jpg" />
+                <img src="@/assets/vision/about/work5.webp" />
               </swiper-slide>
             </swiper>
             <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
@@ -166,8 +166,8 @@
     <section id="prev">
       <h2>上期展覽</h2>
       <div class="img" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img class="mob" src="@/assets/vision/prev/img-m.jpg" />
-        <img class="pc" src="@/assets/vision/prev/img.png" />
+        <img class="mob" src="@/assets/vision/prev/img-m.webp" />
+        <img class="pc" src="@/assets/vision/prev/img.webp" />
       </div>
     </section>
 
@@ -253,7 +253,7 @@
 
     .img {
       position: absolute;
-      top: func.size-m(49);
+      top: func.size-m(45);
       left: func.size-m(49);
       width: func.size-m(277);
       @media screen and (min-width:768px) {
@@ -265,7 +265,7 @@
 
     .onder-btn {
       position: absolute;
-      top: func.size-m(495);
+      top: func.size-m(492);
       left: func.size-m(273);
       width: func.size-m(53);
       height: func.size-m(20);
@@ -651,6 +651,7 @@
       margin-bottom: func.size-m(43);
       @media screen and (min-width:768px) {
         padding: 0 func.size(299);
+        margin-bottom: func.size(120);
       }
 
       img {

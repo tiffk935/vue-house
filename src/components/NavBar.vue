@@ -22,9 +22,9 @@
         <li class="has-children">
           <RouterLink to="/vision">平實城市願景館</RouterLink>
           <ul class="sub-menu">
-            <li><RouterLink to="/vision#info">展覽資訊</RouterLink></li>
-            <li><RouterLink to="/vision#preview">展覽預告</RouterLink></li>
             <li><RouterLink to="/vision#about">關於策展</RouterLink></li>
+            <li><RouterLink to="/vision#prev">上期展覽</RouterLink></li>
+            <li><RouterLink to="/vision#info">展覽資訊</RouterLink></li>
             <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
           </ul>
         </li>

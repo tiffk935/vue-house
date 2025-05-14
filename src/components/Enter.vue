@@ -26,7 +26,7 @@
       <swiper-slide>
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision_bak/banner/img-m.webp" />
+            <img class="mob" src="@/assets/enter/img2m.webp" />
             <img class="pc" src="@/assets/enter/img1.webp" />
           </div>
           <div class="info">
@@ -58,7 +58,7 @@
       <div class="item-wrapper">
         <div class="item">
           <div class="pic">
-            <img class="mob" src="@/assets/vision_bak/banner/img-m.webp" />
+            <img class="mob" src="@/assets/enter/img2m.webp" />
             <img class="pc" src="@/assets/enter/img2.webp" />
           </div>
           <div class="info">
@@ -181,10 +181,11 @@
 
       img {
         display: block;
-        width: auto;
-        height: func.size-m(86);
+        width: func.size-m(280);
+        height: auto;
         margin-bottom: func.size-m(15);
         @media screen and (min-width:768px) {
+          width: auto;
           height: func.size(117.98);
           margin-right: func.size(46);
           margin-bottom: 0;
