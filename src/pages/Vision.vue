@@ -88,19 +88,19 @@
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design2.webp" />
-                <div class="txt">Ishinomaki Home Base</div>
+                <div class="txt">TRUNK(HOTEL) YOYOGI PARK</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design3.webp" />
-                <div class="txt">Ishinomaki Home Base</div>
+                <div class="txt">dotcom coffee</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design4.webp" />
-                <div class="txt">Ishinomaki Home Base</div>
+                <div class="txt">BELLUSTAR Penthouse</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design5.webp" />
-                <div class="txt">Ishinomaki Home Base</div>
+                <div class="txt">BELLUSTAR Penthouse</div>
               </swiper-slide>
             </swiper>
           </div>
@@ -140,19 +140,19 @@
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work2.webp" />
-                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
+                <div class="txt">Blue Bottle Coffee Shibuya Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work3.webp" />
-                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
+                <div class="txt">Blue Bottle Coffee Kobe Hankyu Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work4.webp" />
-                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
+                <div class="txt">Blue Bottle Coffee Qiantan Café</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work5.webp" />
-                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
+                <div class="txt">Blue Bottle Coffee Jakc Cafe</div>
               </swiper-slide>
             </swiper>
           </div>

@@ -144,7 +144,7 @@ footer {
     align-items: center;
     position: fixed;
     bottom: func.size-m(20);
-    left: func.size-m(38);
+    left: func.size-m(10);
     //left: func.size-m(55);            
     //width: 100%;
     //margin-bottom: func.size-m(23);
@@ -171,11 +171,11 @@ footer {
 
     .onder-btn {
       position: relative;
-      font-size: func.size-m(12);
+      font-size: func.size-m(15);
       line-height: func.size-m(14);
       color: #fff;
       font-weight: 700;
-      padding: func.size-m(8) func.size-m(14);
+      padding: func.size-m(10) func.size-m(12);
       background: #269D45;
       text-decoration: none;
       border-radius: func.size-m(100);
@@ -216,8 +216,8 @@ footer {
     }
 
     .circle {
-      width: func.size-m(23);
-      height: func.size-m(23);
+      width: func.size-m(35);
+      height: func.size-m(35);
       background: #D3D3D3;
       border: 1px solid #269d4600;
       border-radius: 50%;
@@ -231,7 +231,7 @@ footer {
 
       img {
         width: auto;
-        height: func.size-m(12);
+        height: func.size-m(18);
         @media screen and (min-width:768px) {
           height: func.size(25);
         }
