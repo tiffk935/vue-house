@@ -187,6 +187,7 @@ footer {
         font-weight: 400;
         padding: func.size(14) func.size(17);
         border-radius: func.size(100);
+        margin: 0;
       }
 
       &:before {
