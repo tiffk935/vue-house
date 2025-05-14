@@ -84,21 +84,25 @@
             >
               <swiper-slide>
                 <img src="@/assets/vision/about/design1.webp" />
+                <div class="txt">Ishinomaki Home Base</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design2.webp" />
+                <div class="txt">Ishinomaki Home Base</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design3.webp" />
+                <div class="txt">Ishinomaki Home Base</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design4.webp" />
+                <div class="txt">Ishinomaki Home Base</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/design5.webp" />
+                <div class="txt">Ishinomaki Home Base</div>
               </swiper-slide>
             </swiper>
-            <div class="txt">Ishinomaki Home Base</div>
           </div>
           <div class="content">
             <div class="sec-title pc">建築設計／室內設計／傢俱設計</div>
@@ -132,21 +136,25 @@
             >
               <swiper-slide>
                 <img src="@/assets/vision/about/work1.webp" />
+                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work2.webp" />
+                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work3.webp" />
+                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work4.webp" />
+                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
               </swiper-slide>
               <swiper-slide>
                 <img src="@/assets/vision/about/work5.webp" />
+                <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
               </swiper-slide>
             </swiper>
-            <div class="txt">Blue Bottle Coffee Nagoya Sakae Cafe</div>
           </div>
           <div class="content">
             <div class="sec-title pc">知名業績</div>
@@ -486,7 +494,7 @@
           overflow: visible;
 
           .swiper-pagination {
-            bottom: -7vw;
+            bottom: -4vw;
             justify-content: flex-end;
 
             .swiper-pagination-bullet {
@@ -577,25 +585,24 @@
 
     .design, .work {
       .slider {
-        padding-bottom: func.size-m(23);
         position: relative;
         margin-bottom: func.size-m(12);
         @media screen and (min-width:768px) {
-          padding-bottom: func.size(128 + 10);
+          padding-bottom: func.size(68 + 10);
           margin-bottom: 0;
         }
 
         .txt {
-          position: absolute;
-          bottom: 0;
-          right: func.size-m(48);
+          padding-right: func.size-m(48);
           font-size: func.size-m(12);
-          font-weight: 500;
           line-height: 171%;
+          font-weight: 500;
+          margin-top: func.size-m(2);
+          text-align: right;
           @media screen and (min-width:768px) {
-            bottom: func.size(78);
-            right: 0;
+            padding-right: 0;
             font-size: func.size(25);
+            margin-top: func.size(17);
           }
         }
       }
