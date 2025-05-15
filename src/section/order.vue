@@ -105,7 +105,7 @@
 
 .order-section {
   position: relative;
-    padding-top: 4em;
+    //padding-top: 4em;
     overflow: hidden;
     background-image: url(@/section/form/bg.jpg);
     background-size: cover;
@@ -126,7 +126,7 @@
 
 .order {
   width: 100%;
-  padding-top: size(40);
+  //padding-top: size(40);
   /*
   background:url("@/section/form/bg.jpg");
   background-size: auto;
@@ -139,25 +139,26 @@
   
 
 
-  .order-title {
-    font-size: size(40);
+   .order-title {
+    font-size: size-m(25);
+    line-height: 1.44;
     font-weight: 700;
     color: #fff;
-    padding-top:1.5em;
-    //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
-    .line{width: size(439);}
+      margin-bottom: .5em;
+    @media screen and (min-width:768px) {
+      font-size: size(50);
+    }
   }
 
-  .order-title-img {
-    width: size(1008);
-    margin-bottom: size(155);
-  }
-  .order-subTitle{
-    font-size: size(17);
+  .order-subTitle {
+    font-size: size-m(14);
     color: #fff;
-    padding-top:.8em;
-    letter-spacing: .1em;
-    //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
+    margin: 0 auto 2em auto;
+    width: size-m(310);
+    @media screen and (min-width:768px) {
+      font-size: size(20);
+      width: auto;
+    }
   }
   .cus-divider {
     margin: 0 auto;
@@ -203,7 +204,12 @@
       > span{
         width: 6em;
         text-align: left;padding-left:1em ;
-        font-size: size(16);
+        font-size: size-m(14);
+
+      @media screen and (min-width:768px) {
+      font-size: size(16);
+    }
+
         > span{color: #F00;//font-size: 12px;
           }
       }
@@ -251,60 +257,60 @@
 
 @media screen and (max-width:768px) {
   .order-section {
-    min-height: sizem(800);
+    min-height: size-m(800);
     position: relative;
     // overflow: hidden;
-   // padding-top: sizem(200);
+   // padding-top: size-m(200);
 
     .bg-image {
       position: absolute;
       width: 100%;
-      left: -#{sizem(30)};
-      bottom: sizem(590);
+      left: -#{size-m(30)};
+      bottom: size-m(590);
     }
 
   }
 
   .order {
     width: 100%;
-    padding-bottom: sizem(63);
+    //padding-bottom: size-m(63);
 
     .cus-divider {
       margin: 0 auto;
-      width: sizem(117);
-      height: sizem(2);
-      margin-bottom: sizem(25);
+      width: size-m(117);
+      height: size-m(2);
+      margin-bottom: size-m(25);
       background-color: #055F76;
     }
 
     .order-title {
-      font-size: sizem(27);
+      font-size: size-m(27);
       padding-top:2em;
-      .line{width: sizem(258);}
+      .line{width: size-m(258);}
     }
     .order-subTitle{
-      font-size: sizem(13);
+      font-size: size-m(13);
       padding-top:0;
     }
 
 
     .form {
-      width: sizem(310);
+      width: size-m(310);
       min-width: 0;
       height: auto;
-      gap: sizem(15);
-      margin-bottom: sizem(20);
+      gap: size-m(15);
+      margin-bottom: size-m(20);
       flex-direction: column;
-      margin-top: sizem(20);
+      margin-top: size-m(20);
 
       .left {
         width: 100%;
-        gap: sizem(15);
+        gap: size-m(15);
       }
 
       .right {
         width: 100%;
-        height: sizem(100);
+        height: size-m(100);
         .row{
           height: 7em;
         }
@@ -316,13 +322,13 @@
     }
 
     .send {
-      font-size: sizem(21);
-      width: sizem(310);
-      height: sizem(72);
+      font-size: size-m(21);
+      width: size-m(310);
+      height: size-m(72);
     }
 
     .control {
-      font-size: sizem(14.6);
+      font-size: size-m(14.6);
     }
   }
 }
