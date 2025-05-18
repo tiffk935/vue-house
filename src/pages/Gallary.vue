@@ -187,32 +187,36 @@
   <section class="s8">
     <div class="title">定潮 聚集了一群一心向善，胸懷寬廣之人</div>
     <div class="items">
-      <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img src="@/assets/gallary/s8/1.jpg" />
-        <div class="c2">
-          JID團隊Thierry往返台灣超過5次，只為反覆演算、<br>
-          調整水波揚聲器的角度與光影折射。
+      <div class="item-group">
+        <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img src="@/assets/gallary/s8/1.jpg" />
+          <div class="c2">
+            JID團隊Thierry往返台灣超過5次，只為反覆演算、<br>
+            調整水波揚聲器的角度與光影折射。
+          </div>
+        </div>
+        <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img src="@/assets/gallary/s8/2.jpg" />
+          <div class="c2">
+            TFB-Andrew利用消隱手法，<br>
+            讓定潮的明亮與幽微恰如其分，形成一種空間魅力。
+          </div>
         </div>
       </div>
-      <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img src="@/assets/gallary/s8/2.jpg" />
-        <div class="c2">
-          枡野俊明以德潤身，專注造景，造庭即是修行，<br>
-          庭園景觀獲得另一種深刻價值。
+      <div class="item-group">
+        <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img src="@/assets/gallary/s8/3.jpg" />
+          <div class="c2">
+            枡野俊明以德潤身，專注造景，造庭即是修行，<br>
+            庭園景觀獲得另一種深刻價值。
+          </div>
         </div>
-      </div>
-      <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img src="@/assets/gallary/s8/3.jpg" />
-        <div class="c2">
-          TFB-Andrew利用消隱手法，<br>
-          讓定潮的明亮與幽微恰如其分，形成一種空間魅力。
-        </div>
-      </div>
-      <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-        <img src="@/assets/gallary/s8/4.jpg" />
-        <div class="c2">
-          南韓傳奇廚僧-正寬法師於定潮舉辦客座餐宴，<br>
-          為高雄美食文化與國際交流寫下新篇章。  
+        <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <img src="@/assets/gallary/s8/4.jpg" />
+          <div class="c2">
+            南韓傳奇廚僧-正寬法師於定潮舉辦客座餐宴，<br>
+            為高雄美食文化與國際交流寫下新篇章。  
+          </div>
         </div>
       </div>
     </div>
@@ -586,7 +590,16 @@
     @media screen and (min-width:768px) {
       display: flex;
       justify-content: center;
-      flex-wrap: wrap;
+    }
+
+    .item-group {
+      &:last-child {
+        .item {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
     }
 
     .item {
@@ -594,16 +607,6 @@
       @media screen and (min-width:768px) {
         width: func.size(537);
         margin: 0 func.size(133.5) func.size(133) func.size(133.5);
-      }
-
-      &:last-child {
-        margin-bottom: 0;
-      }
-
-      &:nth-last-child(1), &:nth-last-child(2) {
-        @media screen and (min-width:768px) {
-          margin-bottom: 0;
-        }
       }
 
       img {
