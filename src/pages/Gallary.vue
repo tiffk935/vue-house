@@ -14,7 +14,7 @@
     <img class="t1" src="@/assets/gallary/s2/t1.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">13年推敲琢磨，看見高雄現代建築美學的各種可能</div>
     <div class="img1">
-      <img src="@/assets/gallary/s2/img1.jpg" />
+      <img src="@/assets/gallary/s2/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <div class="img-txt">2F | 空中花園</div>
     </div>
     <div class="content">
@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="img2">
-        <img src="@/assets/gallary/s2/img2.jpg" />
+        <img src="@/assets/gallary/s2/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="img-txt">2F | 空中花園</div>
       </div>
     </div>
@@ -41,7 +41,7 @@
 
   <section class="s3">
     <div class="img1">
-      <img src="@/assets/gallary/s3/img1.jpg" />
+      <img src="@/assets/gallary/s3/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <div class="img-txt">枡野俊明 | 迎賓入口</div>
     </div>
     <div class="content">
@@ -59,7 +59,7 @@
         </div>
       </div>
       <div class="img2">
-        <img src="@/assets/gallary/s3/img2.jpg" />
+        <img src="@/assets/gallary/s3/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="img-txt">枡野俊明 | 入口景觀</div>
       </div>
     </div>
@@ -67,7 +67,7 @@
 
   <section class="s4">
     <div class="img1">
-      <img src="@/assets/gallary/s4/img1.jpg" />
+      <img src="@/assets/gallary/s4/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <div class="img-txt">1F | 禪廳</div>
     </div>
     <div class="content">
@@ -86,7 +86,7 @@
         </div>
       </div>
       <div class="img2">
-        <img src="@/assets/gallary/s4/img2.jpg" />
+        <img src="@/assets/gallary/s4/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="img-txt">1F | 大廳</div>
       </div>
     </div>
@@ -96,7 +96,7 @@
     <div class="items">
       <div class="item">
         <div class="img">
-          <img src="@/assets/gallary/s5/img1.jpg" />
+          <img src="@/assets/gallary/s5/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
           <div class="img-txt">1F | 大廳</div>
         </div>
         <div class="content">
@@ -113,7 +113,7 @@
       </div>
       <div class="item">
         <div class="img">
-          <img src="@/assets/gallary/s5/img2.jpg" />
+          <img src="@/assets/gallary/s5/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
           <div class="img-txt">1F | 書房．靜園</div>
         </div>
         <div class="content">
@@ -135,12 +135,12 @@
 
   <section class="s6">
     <div class="img1">
-      <img src="@/assets/gallary/s6/img1.jpg" />
+      <img src="@/assets/gallary/s6/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
       <div class="img-txt">2F | 全日餐廳</div>
     </div>
     <div class="content">
       <div class="img2">
-        <img src="@/assets/gallary/s6/img2.jpg" />
+        <img src="@/assets/gallary/s6/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="img-txt">2F | 全日餐廳</div>
       </div>
       <div>
@@ -160,12 +160,12 @@
 
   <section class="s7">
     <div class="img1">
-      <img src="@/assets/gallary/s7/img1.jpg" />
-      <div class="img-txt">2F | 全日餐廳</div>
+      <img src="@/assets/gallary/s7/img1.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+      <div class="img-txt">40F | SKY LOUNGE</div>
     </div>
     <div class="content">
       <div class="img2">
-        <img src="@/assets/gallary/s7/img2.jpg" />
+        <img src="@/assets/gallary/s7/img2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
         <div class="img-txt">40F | SKY LOUNGE</div>
       </div>
       <div>
@@ -189,14 +189,14 @@
     <div class="items">
       <div class="item-group">
         <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img src="@/assets/gallary/s8/1.jpg" />
+          <img src="@/assets/gallary/s8/1.webp" />
           <div class="c2">
             JID團隊Thierry往返台灣超過5次，只為反覆演算、<br>
             調整水波揚聲器的角度與光影折射。
           </div>
         </div>
         <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img src="@/assets/gallary/s8/2.jpg" />
+          <img src="@/assets/gallary/s8/2.webp" />
           <div class="c2">
             TFB-Andrew利用消隱手法，<br>
             讓定潮的明亮與幽微恰如其分，形成一種空間魅力。
@@ -205,14 +205,14 @@
       </div>
       <div class="item-group">
         <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img src="@/assets/gallary/s8/3.jpg" />
+          <img src="@/assets/gallary/s8/3.webp" />
           <div class="c2">
             枡野俊明以德潤身，專注造景，造庭即是修行，<br>
             庭園景觀獲得另一種深刻價值。
           </div>
         </div>
         <div class="item" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-          <img src="@/assets/gallary/s8/4.jpg" />
+          <img src="@/assets/gallary/s8/4.webp" />
           <div class="c2">
             南韓傳奇廚僧-正寬法師於定潮舉辦客座餐宴，<br>
             為高雄美食文化與國際交流寫下新篇章。  
@@ -225,7 +225,7 @@
   <section class="s9">
     <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">種種不同，皆觸身心。<br>日夜有別，皆是歸心。</div>
     <div class="img">
-      <img src="@/assets/gallary/s9/img.jpg" />
+      <img src="@/assets/gallary/s9/img.webp" />
       <div class="img-txt">1F | 街廓一景</div>
     </div>
     <img class="logo" src="@/assets/gallary/s9/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
@@ -587,6 +587,7 @@
   }
 
   .items {
+    //font-family: "Noto Sans JP";
     @media screen and (min-width:768px) {
       display: flex;
       justify-content: center;
@@ -604,9 +605,13 @@
 
     .item {
       margin-bottom: func.size-m(21);
+      background: #fff;
+      padding-bottom: func.size-m(1);
       @media screen and (min-width:768px) {
         width: func.size(537);
         margin: 0 func.size(133.5) func.size(133) func.size(133.5);
+        background: #ffffff00;
+        padding-bottom: func.size(0);
       }
 
       img {
