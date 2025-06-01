@@ -67,8 +67,8 @@
       <h2>平實建築</h2>
     </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/home/archi/pic.webp" />
-      <img class="mob" src="@/assets/home/archi/pic-m.webp" />
+      <!-- <img class="pc" src="@/assets/home/archi/pic.webp" />
+      <img class="mob" src="@/assets/home/archi/pic-m.webp" /> -->
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t3">｜<RouterLink to="/pinshi-architecture">閱讀更多</RouterLink></div>
