@@ -6,7 +6,7 @@
     </div>
   </section>
 
-  <section class="items">
+  <section id="architecture" class="items">
     <div class="item-title">建築規劃｜天造地設，為人而生。</div>
     <div class="item">
       <img src="@/assets/pinshi-architecture/1-1.jpg" />
@@ -32,7 +32,7 @@
     </div>
   </section>
 
-  <section class="items">
+  <section id="view" class="items">
     <div class="item-title">景觀設計｜自然而然，理所當然。</div>
     <div class="item">
       <img src="@/assets/pinshi-architecture/2-1.jpg" />
@@ -58,7 +58,7 @@
     </div>
   </section>
 
-  <section class="items">
+  <section id="public" class="items">
     <div class="item-title">公設美學｜生得漂亮，也要活得漂亮。</div>
     <div class="item">
       <img src="@/assets/pinshi-architecture/3-1.jpg" />
@@ -127,7 +127,7 @@
   .content {
     padding: func.size-m(31) func.size-m(30) func.size-m(21) func.size-m(30);
     @media screen and (min-width:768px) {
-      padding: 0 func.size(435) func.size(148) func.size(435);
+      padding: 0 func.size(435);
     }
   }
 
@@ -139,6 +139,10 @@
 }
 
 .items {
+  @media screen and (min-width:768px) {
+    padding-top: func.size(148);
+  }
+
   .item-title {
     font-size: func.size-m(14);
     line-height: func.size-m(34);

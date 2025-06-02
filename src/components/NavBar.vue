@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bg" v-if="mobOpen" @click="mobOpen = false"></div>
   <header>
-    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/logo.webp" /></RouterLink>
+    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/logo.svg" /></RouterLink>
     <div class="mob-toogle" @click="mobOpen = true">
       <span></span><span></span><span></span>
     </div>
@@ -20,6 +20,33 @@
     <nav class="pc-nav">
       <ul>
         <li class="has-children">
+          <RouterLink to="/team">關於國城</RouterLink>
+          <ul class="sub-menu">
+            <li><RouterLink to="/team#巨擘團隊">巨擘團隊</RouterLink></li>
+            <li><RouterLink to="/team#米其林團隊">米其林團隊</RouterLink></li>
+          </ul>
+        </li>
+        <li><RouterLink to="/work">國城作品</RouterLink></li>
+        <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
+        <li class="has-children">
+          <RouterLink to="/pinshi-team">平實團隊</RouterLink>
+          <ul class="sub-menu">
+            <li><RouterLink to="/pinshi-team#architecture">建築規劃</RouterLink></li>
+            <li><RouterLink to="/pinshi-team#public">公設美學</RouterLink></li>
+            <li><RouterLink to="/pinshi-team#view">景觀設計</RouterLink></li>
+            <li><RouterLink to="/pinshi-team#light">燈光設計</RouterLink></li>
+          </ul>
+        </li>
+        <li class="has-children">
+          <RouterLink to="/pinshi-architecture">平實建築</RouterLink>
+          <ul class="sub-menu">
+            <li><RouterLink to="/pinshi-architecture#architecture">建築規劃</RouterLink></li>
+            <li><RouterLink to="/pinshi-architecture#view">景觀設計</RouterLink></li>
+            <li><RouterLink to="/pinshi-architecture#public">公設美學</RouterLink></li>
+          </ul>
+        </li>
+        <li><RouterLink to="/news">最新消息</RouterLink></li>
+        <li class="has-children">
           <RouterLink to="/vision">平實城市願景館</RouterLink>
           <ul class="sub-menu">
             <li><RouterLink to="/vision#about">關於策展</RouterLink></li>
@@ -28,12 +55,6 @@
             <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
           </ul>
         </li>
-        <li><RouterLink to="/team">關於國城</RouterLink></li>
-        <li><RouterLink to="/work">國城作品</RouterLink></li>
-        <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
-        <li><RouterLink to="/pinshi-team">平實團隊</RouterLink></li>
-        <li><RouterLink to="/pinshi-architecture">平實建築</RouterLink></li>
-        <li><RouterLink to="/news">最新消息</RouterLink></li>
         <li><RouterLink class="order-btn" to="/order">預約表單</RouterLink></li>
       </ul>
     </nav>
@@ -58,15 +79,15 @@ header {
   z-index: 999;
   @media screen and (min-width:768px) {
     height: func.size(165);
-    padding: 0 func.size(58);
+    padding: 0 func.size(64) 0 func.size(96);
     box-shadow: 0px func.size(4) func.size(27) 0px rgba(0, 0, 0, 0.55);
   }
 
   .logo {
     display: block;
-    width: func.size-m(125.5);
+    width: func.size-m(58);
     @media screen and (min-width:768px) {
-      width: func.size(225);
+      width: func.size(147.6);
     }
 
     img {
@@ -214,6 +235,7 @@ header {
         width: 100%;
         position: absolute;
         top: calc(100% - func.size(9));
+        right: 0;
         text-align: right;
         padding: func.size(20) func.size(24) func.size(30) func.size(24);
         box-sizing: content-box;
@@ -234,6 +256,7 @@ header {
         a {
           box-sizing: border-box;
           padding: func.size(21) 0;
+          white-space: nowrap;
         }
       }
     }

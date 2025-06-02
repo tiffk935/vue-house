@@ -25,9 +25,10 @@ const router = createRouter({
   history: createWebHistory(),
   routes,
   scrollBehavior(to, from, savedPosition) {
-    if ( to.hash ) {
+    if ( to.hash && document.querySelector(to.hash) ) {
       return {
         el: to.hash,
+        top: document.querySelector('header').clientHeight
       }
     }
     

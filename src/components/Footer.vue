@@ -1,22 +1,22 @@
 <template>
   <footer>
     <div class="container">
-      <div>
+      <div class="logo-links">
         <div class="logo">
-          <img src="@/assets/logo2.svg" />
+          <img src="@/assets/logo.png" />
         </div>
         <div class="links">
-          <RouterLink to="/vision">平實城市願景館</RouterLink>
           <RouterLink to="/team">關於國城</RouterLink>
           <RouterLink to="/work">國城作品</RouterLink>
-          <RouterLink to="/pinshi">平實特區</RouterLink>
-          <RouterLink to="/pinshi-team">平實團隊</RouterLink>
+          <RouterLink to="/pinshi">平實特區</RouterLink><br class="mob">
+          <RouterLink to="/pinshi-team">平實團隊</RouterLink><br class="pc">
           <RouterLink to="/pinshi-architecture">平實建築</RouterLink>
           <RouterLink to="/news">最新消息</RouterLink>
+          <RouterLink to="/vision">平實城市願景館</RouterLink>
         </div>
       </div>
-      <div>
-        <div class="info"><b>平實城市願景館</b>｜<br>台南市 東區後甲二路／平實二街口</div>
+      <div class="info-btns">
+        <div class="info"><b>寳實</b>｜{{ info.address }}</div>
         <div class="btns">
           <RouterLink class="onder-btn" to="/order"><span>預約表單</span></RouterLink>
           <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
@@ -34,6 +34,20 @@
 
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
+
+.mob {
+  display: block;
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+
+.pc {
+  display: none;
+  @media screen and (min-width:768px) {
+    display: block;
+  }
+}
 
 footer {
   position: relative;
@@ -69,48 +83,83 @@ footer {
     }
   }
 
-  .logo {
-    margin-bottom: func.size-m(25);
+  .logo-links {
     @media screen and (min-width:768px) {
-      margin-bottom: func.size(47);
+      display: flex;
+      align-items: center;
+      width: func.size(1199);
+      position: relative;
+
+      &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: func.size(1);
+        height: func.size(130);
+        background: #269D45;
+      }
+
+      &:before {
+        left: func.size(328 + 65);
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .logo {
+    margin-bottom: func.size-m(19);
+    @media screen and (min-width:768px) {
+      margin-bottom: 0;
+      margin-right: func.size(157);
     }
 
     img {
       display: block;
-      width: func.size-m(155);
+      width: func.size-m(167);
+      margin: 0 auto;
       @media screen and (min-width:768px) {
-        width: func.size(455);
+        width: func.size(328);
+        margin: 0
       }
     }
   }
 
   .links {
     margin-bottom: func.size-m(26);
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-    gap: func.size-m(10) func.size-m(24);
+    // display: flex;
+    // flex-wrap: wrap;
+    // justify-content: center;
+    // gap: func.size-m(10) func.size-m(24);
+    text-align: center;
     @media screen and (min-width:768px) {
+      flex: 1;
       margin-bottom: 0;
-      justify-content: flex-start;
-      gap: func.size(10) func.size(48);
+      text-align: left;
     }
 
     a {
+      display: inline-block;
       color: #000;
       font-size: func.size-m(12);
       font-weight: 700;
       letter-spacing: .04em;
       text-decoration: none;
+      margin: func.size-m(5) func.size-m(8);
       @media screen and (min-width:768px) {
         font-size: func.size(20);
         font-weight: 500;
         letter-spacing: .02em;
+        margin: func.size(30) func.size(44);
       }
     }
   }
 
   .info {
+    text-align: center;
     font-size: func.size-m(12);
     line-height: func.size-m(14);
     letter-spacing: .04em;
@@ -119,22 +168,11 @@ footer {
     padding: func.size-m(12) 0;
     margin-bottom: func.size-m(55);
     @media screen and (min-width:768px) {
-      font-size: func.size(19);
+      font-size: func.size(24);
       line-height: func.size(32);
       border: none;
       padding: 0;
-      margin-bottom: func.size(18);
-
-      b {
-        font-weight: 400;
-      }
-    }
-
-    br {
-      display: none;
-      @media screen and (min-width:768px) {
-        display: block;
-      }
+      margin-bottom: func.size(40);
     }
   }
 

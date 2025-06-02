@@ -28,7 +28,7 @@
             <input type="text" :value="formData.people"
               @input="(event) => (formData.people = event.target.value)" />
           </div>
-          <div class="input-group">
+          <!-- <div class="input-group">
             <span>登錄方案</span>
             <div class="radios">
               <div class="pretty p-default p-round">
@@ -54,7 +54,7 @@
                 </div>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
       </div>
       
@@ -94,14 +94,37 @@
     </div>
   </div>
 
-  <div class="map">
+  <!-- <div class="map">
     <iframe :src="info.googleSrc" frameborder="0"></iframe>
+  </div> -->
+
+  <div class="btns">
+    <div class="col">
+      <a class="green-bg" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" />{{ info.phone }}</a>
+    </div>
+    <div class="col">
+      <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" />FB諮詢</a>
+    </div>
+    <div class="col">
+      <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" />前往 粉絲專頁</a>
+    </div>
+    <div class="col">
+      <a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" />Instagram</a>
+    </div>
+    <div class="col">
+      <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" />LINE @</a>
+    </div>
+    <div class="col">
+      <a class="green-text" target="_blank" :href="info.googleLink">立即導航</a>
+    </div>
   </div>
+
+  <div class="address"><b>國城寳實 接待中心 地址</b>｜{{ info.address }}</div>
 
   <div class="location">
     <div class="container">
       <div class="addr">
-        平實願景館 地址｜<br>
+        國城寳實 接待中心 地址｜<br>
         {{ info.address }}
       </div>
       <a class="navigation" target="_blank" :href="info.googleLink">立即導航</a>
@@ -384,7 +407,96 @@
   }
 }
 
+.btns {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 func.size-m(30);
+  margin-bottom: func.size-m(5);
+  @media screen and (min-width:768px) {
+    width: func.size(1311 + 12 + 12);
+    padding: 0;
+    margin: 0 auto func.size(26) auto;
+  }
+
+  .col {
+    width: 33.33333%;
+    padding: 0 func.size-m(4);
+    margin-bottom: func.size-m(11);
+    @media screen and (min-width:768px) {
+      width: 20%;
+      padding: 0 func.size(12);
+      margin-bottom: 0;
+
+      &:last-child {
+        display: none;
+      }
+    }
+  }
+
+  a {
+    display: block;
+    height: func.size-m(32);
+    background: #CCCCCC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+    font-size: func.size-m(10);
+    font-weight: 500;
+    letter-spacing: .05em;
+    @media screen and (min-width:768px) {
+      height: func.size(78);
+      font-size: func.size(25);
+    }
+
+    img {
+      display: block;
+      width: auto;
+      height: func.size-m(15);
+      margin-right: func.size-m(6);
+      @media screen and (min-width:768px) {
+        height: func.size(41);
+        margin-right: func.size(14);
+      }
+    }
+
+    &.green-bg {
+      background: #00933F;
+      color: #fff;
+
+      img {
+        filter: brightness(0) invert(1);
+      }
+    }
+
+    &.green-text {
+      color: #00933F;
+    }
+  }
+}
+
+.address {
+  text-align: center;
+  font-size: func.size-m(11);
+  font-weight: 500;
+  line-height: func.size-m(21);
+  letter-spacing: .1em;
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+
+  b {
+    font-weight: 500;
+  }
+}
+
 .location {
+  display: none;
+  @media screen and (min-width:768px) {
+    display: block;
+  }
+
   .container {
     @media screen and (min-width:768px) {
       padding: 0 !important;
@@ -471,7 +583,7 @@ const formData = reactive({
   phone: "",
   email: "",
   people: "",
-  type: "展覽參觀",
+  // type: "展覽參觀",
   msg: "",
   policyChecked: false,
   r_verify: false,
@@ -486,7 +598,7 @@ const formDataRef = ref([
   "手機", //phone
   "信箱", //email
   "參觀人數", //people
-  "登錄方案", //type
+  // "登錄方案", //type
   "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify
@@ -560,7 +672,6 @@ const send = () => {
       &phone=${formData.phone}
       &email=${formData.email}
       &people=${formData.people}
-      &type=${formData.type}
       &msg=${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}

@@ -8,7 +8,7 @@
   </section>
 
   <div>
-    <section class="team">
+    <section id="architecture" class="team">
       <div class="slider">
         <swiper
           :modules="modules"
@@ -161,7 +161,7 @@
       </div>
     </section>
 
-    <section class="team">
+    <section id="public" class="team">
       <div class="slider">
         <swiper
           :modules="modules"
@@ -233,7 +233,7 @@
       </div>
     </section>
 
-    <section class="team">
+    <section id="view" class="team">
       <div class="slider">
         <swiper
           :modules="modules"
@@ -276,7 +276,7 @@
       </div>
     </section>
 
-    <section class="team">
+    <section id="light" class="team">
       <div class="slider">
         <swiper
           :modules="modules"

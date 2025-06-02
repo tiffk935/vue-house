@@ -271,9 +271,12 @@
 </style>
 
 <script setup>
-import { ref } from "vue";
+import { ref, watch } from "vue";
+import { useRoute } from 'vue-router';
 import Marquee from "@/components/Marquee.vue";
-const tab = ref('巨擘團隊'); // 米其林團隊
+const route = useRoute();
+const hash = route.hash ? route.hash.substring(1) : '巨擘團隊';
+const tab = ref(hash); // 米其林團隊
 const images = import.meta.glob('../assets/team/**/*.*', { eager: true });
 const getImg = path => images[path]?.default || '';
 const list1 = [
@@ -348,4 +351,10 @@ const list2 = [
     icon: true
   },
 ];
+
+watch(() => route.hash, (newHash, oldHash) => {
+  const hash = newHash ? newHash.substring(1) : '巨擘團隊';
+  tab.value = hash;
+  window.scrollTo(0, 0);
+})
 </script>

@@ -1,10 +1,7 @@
 <template>
   <section class="banner">
-    <div class="title-m" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <img class="style" src="@/assets/home/banner/style.webp" />
-    <div class="info" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <img class="logoicon" src="@/assets/home/banner/logoicon.svg" />
+    <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
+    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
   </section>
 
@@ -21,12 +18,10 @@
   </section>
 
   <section class="work">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <h2>國城作品</h2>
-    </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/home/work/pic.webp" />
-      <img class="mob" src="@/assets/home/work/pic-m.webp" />
+      <img class="mob" src="@/assets/home/work/pic-m.jpg" />
+      <h2>國城作品</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">港都豪宅建築的定潮者</div>
@@ -54,24 +49,93 @@
       <h2>平實團隊</h2>
     </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/home/team/pic.webp" />
-      <img class="mob" src="@/assets/home/team/pic-m.webp" />
+      <img class="pc" src="@/assets/pinshi-team/main.jpg" />
+      <img class="mob" src="@/assets/pinshi-team/main-m.jpg" />
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t3">｜<RouterLink to="/pinshi-team">閱讀更多</RouterLink></div>
+      <div class="t1">國際級大師 世界級美感</div>
+      <div class="t2">跨域整合  與世界對話的美學實踐</div>
+      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
     </div>
   </section>
 
   <section class="archi">
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img src="@/assets/pinshi-architecture/main.jpg" />
       <h2>平實建築</h2>
     </div>
-    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <!-- <img class="pc" src="@/assets/home/archi/pic.webp" />
-      <img class="mob" src="@/assets/home/archi/pic-m.webp" /> -->
+    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <div class="t1">國際建築語彙 <br class="mob">演繹優雅生活尺度</div>
+      <div class="t2">讓空間為人而生  生活，共好即是更好</div>
+      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
+    </div>
+  </section>
+
+  <section class="news">
+    <div class="container">
+      <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</h2>
+      <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</div>
+      <div class="list">
+
+        <article v-for="item in list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <RouterLink :to="item.link">
+            <div class="photo">
+              <img :src="getImg(item.thumbnail)" />
+            </div>
+            <div class="post-title">{{ item.title }}</div>
+            <div class="meta">
+              <div class="date">{{ item.date }}</div>
+              <div class="line"></div>
+              <div class="more">READ MORE+</div>
+            </div>
+          </RouterLink>
+        </article>
+
+      </div>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t3">｜<RouterLink to="/pinshi-architecture">閱讀更多</RouterLink></div>
+      <div class="t3">｜<RouterLink to="/news">閱讀更多</RouterLink></div>
+    </div>
+  </section>
+
+  <section class="ad">
+    <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
+    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
+  </section>
+
+  <section class="order">
+    <div class="sec-title">預約表單</div>
+    <Order />
+  </section>
+
+  <section class="information">
+    <div class="container">
+      <img class="logo mob" src="@/assets/logo.png" />
+      <img class="logo pc" src="@/assets/logo2.png" />
+      <div class="sec-title mob">建案資訊</div>
+      <div>
+        <div class="sec-title pc">建案資訊</div>
+        <div class="flex">
+          <div class="list">
+            <div class="item">投資興建 ｜ 國城建設股份有限公司</div>
+            <div class="item">建築統籌 ｜ 張瑪龍陳玉霖聯合建築師事務所</div>
+            <div class="item">營造工程 ｜ 補</div>
+            <div class="item">建築代銷 ｜ 聯碩地產行銷團隊</div>
+            <div class="item">公設設計 ｜ 芦沢啓治 建築師事務所</div>
+            <div class="item">景觀設計 ｜ 橋内庭園設計 橋内智也</div>
+            <div class="item">燈光設計 ｜ AURORA Inc 市川善幾</div>
+          </div>
+          <div class="list">
+            <div class="item">結構工程 ｜ 大彥工程顧問股份有限公司</div>
+            <div class="item">物業管理 ｜ 補</div>
+            <div class="item">建照號碼 ｜ 補</div>
+            <div class="item">經 紀 人 ｜ 補</div>
+            <div class="item">建案位置 ｜ 補</div>
+            <div class="item">接待中心 ｜ 台南市東區平實路／後甲一路口</div>
+            <div class="item">貴賓專線 ｜ 06 273-8888</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </template>
@@ -176,110 +240,74 @@ h2 {
     height: func.size(1080 - 165);
   }
   
-  .title-m {
+  .logo {
     position: absolute;
-    top: func.size-m(94);
-    left: func.size-m(53);
-    width: func.size-m(267.52);
-    height: func.size-m(135);
-    background-image: url(@/assets/home/banner/img-m.webp);
+    top: func.size-m(60);
+    left: func.size-m(65);
+    width: func.size-m(264);
+    height: func.size-m(228);
+    background-image: url(@/assets/logo-m.png);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      display: none;
+      top: func.size(228);
+      left: func.size(157);
+      width: func.size(840);
+      height: func.size(467);
+      background-image: url(@/assets/logo.png);
     }
   }
 
-  .title {
-    display: none;
-    @media screen and (min-width:768px) {
-      display: block;
-      position: absolute;
-      top: func.size(182);
-      left: func.size(475);
-      width: func.size(1014.69);
-      height: func.size(192.55);
-      background-image: url(@/assets/home/banner/title.svg);
-      @include bg-contain;
-    }
-  }
-
-  .style {
-    display: none;
-    @media screen and (min-width:768px) {
-      display: block;
-      position: absolute;
-      top: func.size(449);
-      left: func.size(475);
-      width: func.size(1014);
-    }
-  }
-  
-  .info {
+  .txt {
     position: absolute;
-    top: func.size-m(317);
-    left: func.size-m(54);
-    width: func.size-m(266.9);
-    height: func.size-m(86.91);
+    top: func.size-m(349);
+    left: func.size-m(64);
+    width: func.size-m(247);
+    height: func.size-m(119);
     background-image: url(@/assets/home/banner/txt-m.svg);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(666);
-      left: func.size(223);
-      width: func.size(1067.44);
-      height: func.size(133.23);
+      top: func.size(329);
+      left: func.size(1113);
+      width: func.size(595.29);
+      height: func.size(289.28);
       background-image: url(@/assets/home/banner/txt.svg);
-    }
-  }
-  
-  .logoicon {
-    position: absolute;
-    top: func.size-m(478);
-    left: func.size-m(131);
-    width: func.size-m(113);
-    @media screen and (min-width:768px) {
-      top: func.size(774.98);
-      left: func.size(1436);
-      width: func.size(293.82);
     }
   }
 
   .onder-btn {
-    display: none;
+    position: absolute;
+    top: func.size-m(444.77);
+    left: func.size-m(239.37);
+    border: func.size-m(1) solid #219664;
+    background: #219664;
+    text-decoration: none;
+    color: #fff;
+    font-size: func.size-m(12);
+    font-weight: 500;
+    letter-spacing: .1em;
+    text-indent: .1em;
+    width: func.size-m(72.63);
+    height: func.size-m(23.23);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all .3s;
     @media screen and (min-width:768px) {
-      display: block;
-      position: absolute;
-      top: func.size(670);
-      left: func.size(1438);
-      border: func.size(5) solid #219664;
-      background: #fff;
-      text-decoration: none;
-      color: #000;
-      font-size: func.size(31);
-      letter-spacing: .18em;
-      width: func.size(293);
-      height: func.size(70);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
+      top: func.size(560);
+      left: func.size(1532);
+      border: func.size(1) solid #219664;
+      font-size: func.size(24);
+      width: func.size(175.05);
+      height: func.size(55.31);
+    }
 
-      &:hover{
-        background: #219664;
-        color: #fff;
-        transition:.3s;
-      }
+    &:hover{
+      background: none;
+      color: #219664;
     }
   }
 }
-
-/* @keyframes marquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-} */
 
 .about {
   padding: func.size-m(25) 0;
@@ -296,21 +324,36 @@ h2 {
 }
 
 .work {
-  padding: func.size-m(25) 0;
+  padding: 0 0 func.size-m(25) 0;
   @media screen and (min-width:768px) {
-    padding: func.size(76) 0 func.size(98) 0;
+    padding: 0 0 func.size(98) 0;
   }
 
   .pic {
-    margin: func.size-m(38) 0 func.size-m(29) 0;
+    position: relative;
+    margin: 0 0 func.size-m(29) 0;
     padding: 0;
     @media screen and (min-width:768px) {
-      margin: func.size(67) 0 func.size(80) 0;
-      padding: 0 func.size(160);
+      margin: 0 0 func.size(80) 0;
     }
 
     img {
       width: 100%;
+    }
+
+    h2 {
+      position: absolute;
+      top: 0;
+      left: func.size-m(30);
+      color: #fff;
+      width: calc(100% - func.size-m(60));
+      border-color: #fff;
+      margin: func.size-m(25) 0 0 0;
+      @media screen and (min-width:768px) {
+        left: func.size(160);
+        width: calc(100% - func.size(320));
+        margin: func.size(76) 0 0 0;
+      }
     }
   }
 }
@@ -369,48 +412,306 @@ h2 {
     margin: func.size-m(36) 0 func.size-m(40) 0;
     padding: 0;
     @media screen and (min-width:768px) {
-      margin: func.size(161) 0 func.size(171) 0;
-      padding: 0 0 0 func.size(160);
-    }
-
-    img {
-      width: func.size-m(260);
-      margin: func.size-m(36) auto;
-      @media screen and (min-width:768px) {
-        width: 100%;
-      }
-    }
-  }
-
-  .t3 {
-    @media screen and (min-width:768px) {
-      margin-top: 0;
-    }
-  }
-}
-
-.archi {
-  padding: func.size-m(25) 0 func.size-m(25 + 50) 0;
-  @media screen and (min-width:768px) {
-    padding: func.size(76) 0 func.size(69) 0;
-  }
-
-  .pic {
-    margin: func.size-m(51) 0 func.size-m(40) 0;
-    padding: 0 0 0 func.size-m(53);
-    @media screen and (min-width:768px) {
-      margin: func.size(268) 0 func.size(298) 0;
+      margin: func.size(60) 0 func.size(33) 0;
       padding: 0 func.size(160);
     }
 
     img {
       width: 100%;
+      height: func.size-m(262);
+      object-fit: cover;
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
+    }
+  }
+}
+
+.archi {
+  padding: 0 0 func.size-m(47) 0;
+  @media screen and (min-width:768px) {
+    padding: 0 0 func.size(98) 0;
+  }
+
+  .pic {
+    margin: 0 0 func.size-m(27) 0;
+    padding: 0;
+    @media screen and (min-width:768px) {
+      margin: 0 0 func.size(34) 0;
+    }
+
+    img {
+      width: 100%;
+      height: func.size-m(373);
+      object-fit: cover;
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
+    }
+
+    h2 {
+      position: absolute;
+      top: 0;
+      left: func.size-m(30);
+      color: #fff;
+      width: calc(100% - func.size-m(60));
+      border-color: #fff;
+      margin: func.size-m(25) 0 0 0;
+      @media screen and (min-width:768px) {
+        left: func.size(160);
+        width: calc(100% - func.size(320));
+        margin: func.size(76) 0 0 0;
+      }
+    }
+  }
+}
+
+.news {
+  padding: func.size-m(25) 0;
+  @media screen and (min-width:768px) {
+    padding: func.size(73) 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .type {
+    text-align: center;
+    font-size: func.size-m(16);
+    font-weight: 700;
+    margin: func.size-m(23) 0 func.size-m(27) 0;
+    @media screen and (min-width:768px) {
+      text-align: right;
+      font-size: func.size(27);
+      margin: func.size(102) 0 func.size(95) 0;
+    }
+  }
+
+  .list {
+    @media screen and (min-width:768px) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 func.size(-52.5);
+    }
+
+    article {
+      margin-bottom: func.size-m(34);
+      @media screen and (min-width:768px) {
+        width: 33.3333%;
+        padding: 0 func.size(52.5);
+        margin-bottom: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .photo {
+        width: 100%;
+        height: 0;
+        padding-top: 68.615%;
+        position: relative;
+        margin-bottom: func.size-m(7);
+        @media screen and (min-width:768px) {
+          margin-bottom: func.size(23);
+        }
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      .post-title {
+        font-size: func.size-m(18);
+        font-weight: 500;
+        line-height: func.size-m(26);
+        letter-spacing: .01em;
+        margin-bottom: func.size-m(5);
+        @media screen and (min-width:768px) {
+          font-size: func.size(27);
+          line-height: func.size(45);
+          margin-bottom: func.size(10);
+        }
+      }
+
+      .meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #000;
+
+        .date {
+          font-size: func.size-m(12);
+          font-weight: 100;
+          letter-spacing: .06em;
+          @media screen and (min-width:768px) {
+            font-size: func.size(14);
+          }
+        }
+
+        .line {
+          flex: 1;
+          height: func.size-m(1);
+          background: #000;
+          margin: 0 func.size-m(10);
+          @media screen and (min-width:768px) {
+            height: func.size(1);
+            margin: 0 func.size(20);
+          }
+        }
+
+        .more {
+          color: #898989;
+          font-size: func.size-m(12);
+          font-weight: 300;
+          letter-spacing: .03em;
+          @media screen and (min-width:768px) {
+            font-size: func.size(12);
+          }
+        }
+      }
     }
   }
 
   .t3 {
+    margin-top: func.size-m(34);
     @media screen and (min-width:768px) {
-      margin-top: 0;
+      margin-top: func.size(95);
+    }
+  }
+}
+
+.ad {
+  position: relative;
+  width: 100%;
+  height: func.size-m(667);
+  background-image: url(@/assets/home/ad/bg-m.jpg);
+  @include bg-contain;
+  background-size: cover;
+  @media screen and (min-width:768px) {
+    height: func.size(1080);
+    background-image: url(@/assets/home/ad/bg.jpg);
+  }
+  
+  .logo {
+    position: absolute;
+    top: func.size-m(134);
+    left: func.size-m(65);
+    width: func.size-m(264);
+    height: func.size-m(228);
+    background-image: url(@/assets/logo-m.png);
+    @include bg-contain;
+    @media screen and (min-width:768px) {
+      top: func.size(163);
+      left: func.size(503);
+      width: func.size(843);
+      height: func.size(472);
+      background-image: url(@/assets/logo.png);
+    }
+  }
+
+  .txt {
+    position: absolute;
+    top: func.size-m(417);
+    left: func.size-m(62);
+    width: func.size-m(250);
+    height: func.size-m(136);
+    background-image: url(@/assets/home/ad/txt-m.svg);
+    @include bg-contain;
+    @media screen and (min-width:768px) {
+      top: func.size(747);
+      left: func.size(359);
+      width: func.size(1201.56);
+      height: func.size(183.42);
+      background-image: url(@/assets/home/ad/txt.svg);
+    }
+  }
+}
+
+.order {
+  padding: func.size-m(28) 0 func.size-m(57) 0;
+  @media screen and (min-width:768px) {
+    padding: func.size(127) 0 func.size(203) 0;
+  }
+
+  .sec-title {
+    font-size: func.size-m(16);
+    font-weight: 500;
+    padding: 0 func.size-m(49);
+    margin-bottom: func.size-m(43);
+    @media screen and (min-width:768px) {
+      font-size: func.size(35);
+      padding: 0 func.size(304);
+      margin-bottom: func.size(100);
+    }
+  }
+}
+
+.information {
+  padding: func.size-m(31) 0 func.size-m(46) 0;
+  @media screen and (min-width:768px) {
+    padding: func.size(168) 0;
+  }
+
+  .container {
+    @media screen and (min-width:768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      padding: 0 func.size(193) 0 func.size(242);
+    }
+  }
+
+  .sec-title {
+    font-size: func.size-m(20);
+    font-weight: 700;
+    margin-bottom: func.size-m(32 - 13);
+    @media screen and (min-width:768px) {
+      font-size: func.size(48);
+      margin-bottom: func.size(77 - 20);
+    }
+  }
+
+  .logo {
+    width: func.size-m(290);
+    margin-bottom: func.size-m(23);
+    @media screen and (min-width:768px) {
+      width: func.size(326);
+      margin-bottom: 0;
+    }
+  }
+
+  .flex {
+    @media screen and (min-width:768px) {
+      display: flex;
+      justify-content: space-between;
+      width: func.size(953);
+    }
+  }
+
+  .list {
+    @media screen and (min-width:768px) {
+      width: func.size(425);
+    }
+
+    .item {
+      font-size: func.size-m(12);
+      font-weight: 500;
+      letter-spacing: .05em;
+      padding: func.size-m(13) 0;
+      border-bottom: func.size-m(1) solid #000;
+      @media screen and (min-width:768px) {
+        font-size: func.size(19);
+        padding: func.size(20) 0;
+        border-bottom: func.size(1) solid #000;
+      }
     }
   }
 }
@@ -421,6 +722,13 @@ import { onMounted } from "vue";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Marquee from "@/components/Marquee.vue";
+import Order from '@/components/Order.vue'
+import news from '@/info/news';
+
+const typeList = news.filter(item => item.type === '消息新聞').reverse();
+const list = typeList.filter((item, idx) => idx < 3);
+const images = import.meta.glob('../assets/news/**/*.*', { eager: true });
+const getImg = path => images[path]?.default || '';
 
 gsap.registerPlugin(ScrollTrigger);
 

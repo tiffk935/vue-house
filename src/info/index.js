@@ -6,7 +6,7 @@ export default {
     description: caseName,
     keywords: caseName,
   },
-  address: "台南市東區後甲二路／平實二街口",
+  address: "台南市 東區 平實路／後甲一路口",
   googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3672.729505777192!2d120.23719439999999!3d22.9969722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDU5JzQ5LjEiTiAxMjDCsDE0JzEzLjkiRQ!5e0!3m2!1szh-TW!2stw!4v1741772734208!5m2!1szh-TW!2stw",
   googleLink: "https://maps.app.goo.gl/6J1ZYtgJpWStioxH6",
   phone: "06-273-8888",
