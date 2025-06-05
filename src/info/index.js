@@ -1,14 +1,12 @@
-const caseName = "紅布朗花園"
+//const caseName = "紅布朗花園"
+const caseName = "000"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
-    address: "接待中心:新北市土城區明德路一段&清水路",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7233.216230269213!2d121.4495587!3d24.9794444!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xebe5d55c176b7a21!2zMjTCsDU4JzQ2LjAiTiAxMjHCsDI3JzEyLjIiRQ!5e0!3m2!1szh-TW!2stw!4v1669740813533!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/ye1NNzecgUdehGJy6",
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    case_code: "test",
+    address: "接待中心:新北市土城區明德路一段343號旁",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7233.139757395482!2d121.45165569561678!3d24.98074463657931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3468033c05ba0839%3A0xa3ff3cfafc480798!2z57SF5biD5pyX6Iqx5ZyS!5e0!3m2!1szh-TW!2stw!4v1749104158140!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/4cS1pFZMfQjiNq849",
     phone: "02-2264-6789",
     fbLink: "https://www.facebook.com/hbl.haiwo",
     fbMessage: "https://m.me/hbl.haiwo/",
@@ -29,6 +27,14 @@ export default {
         title: "立即預約",
         subTitle: "",
     },
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房", "三房"],
+          bypass:false,
+        },
+  },
     navList: [
         //{
         //    name: "慢活哲學",
