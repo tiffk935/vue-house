@@ -1,11 +1,8 @@
 const caseName = "佳鋐大境"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "f4febb5a-b711-4b3f-a71b-8673bee58dd1",
+    case_code: "dajing",
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區中華路二段",
@@ -23,8 +20,8 @@ export default {
         ["建築外觀", "曾聰憲建築師事務所"],
     ],
     gtmCode: ["GTM-KTP354Z8"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -32,9 +29,22 @@ export default {
         title: "我想了解",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    // 底下2個 沒項目就會隱藏
-    room_type: ["兩房","三房"],
-    budget: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
+    // 底下2個 沒項目就會隱藏(必填)
+    
+    selectFields: {
+        room_type: {
+          title: "需求房型",
+          hold: "請選擇房型",
+          option: ["兩房","三房"],
+          bypass:false,
+        },
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["601-800萬","801-1,000萬","1,001-1,200萬","1,201-1,400萬","1,400萬以上"],
+          bypass:false, //必填開啟使用
+        },
+  },
     navList: [
         {
             name: "大城之境",
