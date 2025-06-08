@@ -9,23 +9,28 @@
 
   <div>
     <section id="architecture" class="team">
-      <div class="slider">
-        <swiper
-          :modules="modules"
-          loop
-          :pagination="{
-            clickable: true
-          }"
-          :autoplay="false"
-          @slideChange="(swiper) => slideChange(swiper, 1)"
-          @swiper="(swiper) => onSwiper(swiper, 1)"
-        >
-          <swiper-slide>
+      <div class="people">
+        <Transition>
+          <div class="person" v-if="team1Active === 1">
             <div class="flex">
               <div>
                 <div class="team-title">建築規劃</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/1/1.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">張瑪龍 建築師</div>
                 </div>
                 <div class="content">
@@ -41,18 +46,48 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/1/1.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">張瑪龍 建築師</div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </Transition>
 
-          <swiper-slide>
+        <Transition>
+          <div class="person" v-if="team1Active === 2">
             <div class="flex">
               <div>
                 <div class="team-title">建築規劃</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/1/2.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">林澤森 建築師</div>
                 </div>
                 <div class="content">
@@ -67,18 +102,48 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/1/2.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">林澤森 建築師</div>
               </div>
             </div>
-          </swiper-slide>
-
-          <swiper-slide>
+          </div>
+        </Transition>
+        
+        <Transition>
+          <div class="person" v-if="team1Active === 3">
             <div class="flex">
               <div>
                 <div class="team-title">建築規劃</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/1/3.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">賈書恆 建築師</div>
                 </div>
                 <div class="content">
@@ -93,18 +158,48 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/1/3.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">賈書恆 建築師</div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </Transition>
 
-          <swiper-slide>
+        <Transition>
+          <div class="person" v-if="team1Active === 4">
             <div class="flex">
               <div>
                 <div class="team-title">建築規劃</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/1/4.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">陳俊廷 建築師</div>
                 </div>
                 <div class="content">
@@ -119,19 +214,49 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/1/4.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">陳俊廷 建築師</div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </Transition>
 
-          <swiper-slide>
+        <Transition>
+          <div class="person" v-if="team1Active === 5">
             <div class="flex">
               <div>
                 <div class="team-title">建築規劃</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/1/5.jpg" />
-                  <div class="photo-desc">劉紹魁 總經理</div>
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                  </swiper>
+                  <div class="photo-desc">劉紹魁 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">科建聯合工程顧問</div>
@@ -145,40 +270,60 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/1/5.jpg" />
-                <div class="photo-desc">劉紹魁 <span>總經理</span></div>
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                </swiper>
+                <div class="photo-desc">劉紹魁 建築師</div>
               </div>
             </div>
-          </swiper-slide>
-        </swiper>
+          </div>
+        </Transition>
       </div>
+
       <div class="control">
-        <div class="item" :class="{active: slider1CurrIdx === 0}" @click="slider1Ref.slideTo(0)">張瑪龍陳玉霖聯合建築師事務所</div>
-        <div class="item" :class="{active: slider1CurrIdx === 1}" @click="slider1Ref.slideTo(1)">CD HOUSE 林澤森 建築師事務所</div>
-        <div class="item" :class="{active: slider1CurrIdx === 2}" @click="slider1Ref.slideTo(2)">賈書恆 建築師事務所</div>
-        <div class="item" :class="{active: slider1CurrIdx === 3}" @click="slider1Ref.slideTo(3)">陳俊廷 建築師事務所</div>
-        <div class="item" :class="{active: slider1CurrIdx === 4}" @click="slider1Ref.slideTo(4)">科建聯合工程顧問</div>
+        <div class="item" :class="{active: team1Active === 1}" @click="team1Active = 1">張瑪龍陳玉霖聯合建築師事務所</div>
+        <div class="item" :class="{active: team1Active === 2}" @click="team1Active = 2">CD HOUSE 林澤森 建築師事務所</div>
+        <div class="item" :class="{active: team1Active === 3}" @click="team1Active = 3">賈書恆 建築師事務所</div>
+        <div class="item" :class="{active: team1Active === 4}" @click="team1Active = 4">陳俊廷 建築師事務所</div>
+        <div class="item" :class="{active: team1Active === 5}" @click="team1Active = 5">科建聯合工程顧問</div>
       </div>
     </section>
 
     <section id="public" class="team">
-      <div class="slider">
-        <swiper
-          :modules="modules"
-          loop
-          :pagination="{
-            clickable: true
-          }"
-          :autoplay="false"
-          @slideChange="(swiper) => slideChange(swiper, 2)"
-          @swiper="(swiper) => onSwiper(swiper, 2)"
-        >
-          <swiper-slide>
+      <div class="people">
+        <Transition>
+          <div class="person" v-if="team2Active === 1">
             <div class="flex">
               <div>
                 <div class="team-title">公設美學</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/2/1.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">芦沢啓治 建築師</div>
                 </div>
                 <div class="content">
@@ -194,18 +339,48 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/2/1.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">芦沢啓治 建築師</div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </Transition>
 
-          <swiper-slide>
+        <Transition>
+          <div class="person" v-if="team2Active === 2">
             <div class="flex">
               <div>
                 <div class="team-title">公設美學</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/2/2.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">林新峰 總監</div>
                 </div>
                 <div class="content">
@@ -220,36 +395,57 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/2/2.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">林新峰 總監</div>
               </div>
             </div>
-          </swiper-slide>
-        </swiper>
+          </div>
+        </Transition>
       </div>
+
       <div class="control">
-        <div class="item" :class="{active: slider2CurrIdx === 0}" @click="slider2Ref.slideTo(0)">Keiji Ashizawa Design芦沢啓治建築設計事務所</div>
-        <div class="item" :class="{active: slider2CurrIdx === 1}" @click="slider2Ref.slideTo(1)">擊壤設計</div>
+        <div class="item" :class="{active: team2Active === 1}" @click="team2Active = 1">Keiji Ashizawa Design芦沢啓治建築設計事務所</div>
+        <div class="item" :class="{active: team2Active === 2}" @click="team2Active = 2">擊壤設計</div>
       </div>
     </section>
 
     <section id="view" class="team">
-      <div class="slider">
-        <swiper
-          :modules="modules"
-          :pagination="{
-            clickable: true
-          }"
-          :autoplay="false"
-          @slideChange="(swiper) => slideChange(swiper, 3)"
-          @swiper="(swiper) => onSwiper(swiper, 3)"
-        >
-          <swiper-slide>
+      <div class="people">
+        <Transition>
+          <div class="person" v-if="team3Active === 1">
             <div class="flex">
               <div>
                 <div class="team-title">景觀設計</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/3/1.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">橋內智也 景觀設計師</div>
                 </div>
                 <div class="content">
@@ -264,36 +460,56 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/3/1.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">橋內智也 景觀設計師</div>
               </div>
             </div>
-          </swiper-slide>
-        </swiper>
+          </div>
+        </Transition>
       </div>
+
       <div class="control">
-        <div class="item" :class="{active: slider3CurrIdx === 0}" @click="slider3Ref.slideTo(0)">HLD 橋內庭園設計</div>
+        <div class="item" :class="{active: team3Active === 1}" @click="team3Active = 1">HLD 橋內庭園設計</div>
       </div>
     </section>
 
     <section id="light" class="team">
-      <div class="slider">
-        <swiper
-          :modules="modules"
-          loop
-          :pagination="{
-            clickable: true
-          }"
-          :autoplay="false"
-          @slideChange="(swiper) => slideChange(swiper, 4)"
-          @swiper="(swiper) => onSwiper(swiper, 4)"
-        >
-          <swiper-slide>
+      <div class="people">
+        <Transition>
+          <div class="person" v-if="team4Active === 1">
             <div class="flex">
               <div>
                 <div class="team-title">燈光設計</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/4/1.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">市川 善幾 燈光設計師</div>
                 </div>
                 <div class="content">
@@ -308,18 +524,48 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/4/1.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">市川 善幾 燈光設計師</div>
               </div>
             </div>
-          </swiper-slide>
+          </div>
+        </Transition>
 
-          <swiper-slide>
+        <Transition>
+          <div class="person" v-if="team4Active === 2">
             <div class="flex">
               <div>
                 <div class="team-title">燈光設計</div>
                 <div class="photo mob">
-                  <img src="@/assets/pinshi-team/4/2.jpg" />
+                  <swiper
+                    :modules="modules"
+                    loop
+                    :pagination="{
+                      clickable: true
+                    }"
+                    :autoplay="{
+                      delay: 3000,
+                      disableOnInteraction: false,
+                    }"
+                  >
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                  </swiper>
                   <div class="photo-desc">陳怡彰燈光設計師</div>
                 </div>
                 <div class="content">
@@ -334,16 +580,31 @@
                 </div>
               </div>
               <div class="photo pc">
-                <img src="@/assets/pinshi-team/4/2.jpg" />
+                <swiper
+                  :modules="modules"
+                  loop
+                  :pagination="{
+                    clickable: true
+                  }"
+                  :autoplay="{
+                    delay: 3000,
+                    disableOnInteraction: false,
+                  }"
+                >
+                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                </swiper>
                 <div class="photo-desc">陳怡彰燈光設計師</div>
               </div>
             </div>
-          </swiper-slide>
-        </swiper>
+          </div>
+        </Transition>
       </div>
+      
       <div class="control">
-        <div class="item" :class="{active: slider4CurrIdx === 0}" @click="slider4Ref.slideTo(0)">空間景觀燈光／AURORA 照明設計</div>
-        <div class="item" :class="{active: slider4CurrIdx === 1}" @click="slider4Ref.slideTo(1)">建築燈光／偶得設計</div>
+        <div class="item" :class="{active: team4Active === 1}" @click="team4Active = 1">空間景觀燈光／AURORA 照明設計</div>
+        <div class="item" :class="{active: team4Active === 2}" @click="team4Active = 2">建築燈光／偶得設計</div>
       </div>
     </section>
   </div>
@@ -353,16 +614,15 @@
 @use "@/assets/style/function.scss" as func;
 
 #page-pinshiTeam .swiper-pagination {
-  bottom: auto;
-  top: func.size-m(278 + 23);
+  bottom: func.size-m(11);
   line-height: 1;
   margin: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   @media screen and (min-width:768px) {
-    top: func.size(689 + 10);
-    left: func.size(940);
+    bottom: func.size(60);
+    left: func.size(68);
     width: auto;
   }
 
@@ -397,6 +657,21 @@
 
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
+
+.v-enter-active,
+.v-leave-active {
+  transition: opacity .5s;
+}
+
+.v-enter-from,
+.v-leave-to {
+  opacity: 0;
+}
+
+.v-enter-to,
+.v-leave-from {
+  opacity: 1;
+}
 
 .mob {
   display: block;
@@ -437,8 +712,8 @@
     @media screen and (min-width:768px) {
       position: absolute;
       bottom: func.size(74);
-      left: func.size(163);
-      width: calc(100% - func.size(163 * 2));
+      left: func.size(140);
+      width: calc(100% - func.size(140 * 2));
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
@@ -481,6 +756,21 @@
     border-width: func.size(1);
   }
 
+  .people {
+    position: relative;
+    height: 159vw;
+    @media screen and (min-width:768px) {
+      height: 41.4vw;
+    }
+
+    .person {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
+  }
+
   .flex {
     @media screen and (min-width:768px) {
       display: flex;
@@ -495,7 +785,7 @@
     font-weight: 700;
     margin-bottom: func.size-m(17);
     @media screen and (min-width:768px) {
-      padding: 0 func.size(100) 0 func.size(163);
+      padding: 0 func.size(100) 0 func.size(140);
       font-size: func.size(23);
       margin-bottom: func.size(120);
       letter-spacing: .02em;
@@ -531,6 +821,7 @@
       font-size: func.size-m(12);
       font-weight: 700;
       letter-spacing: .05em;
+      z-index: 1;
       @media screen and (min-width:768px) {
         top: auto;
         left: auto;
@@ -547,7 +838,7 @@
   .content {
     padding: 0 func.size-m(30);
     @media screen and (min-width:768px) {
-      padding: 0 func.size(100) 0 func.size(163);
+      padding: 0 func.size(100) 0 func.size(140);
     }
   }
 
@@ -599,7 +890,7 @@
     margin: func.size-m(38) auto 0 auto;
     padding: func.size-m(17) 0;
     @media screen and (min-width:768px) {
-      width: calc(100% - func.size(164 * 2));
+      width: calc(100% - func.size(140 * 2));
       border-width: func.size(1);
       margin: func.size(60) auto 0 auto;
       padding: func.size(47) 0;
@@ -656,15 +947,22 @@
     }
 
     .team-title, .content {
-      padding: 0 func.size(163) 0 func.size(100);
+      padding: 0 func.size(140) 0 func.size(100);
     }
   }
 }
 
-.team:nth-child(2) {
+#public {
   .team-title {
     @media screen and (min-width:768px) {
       margin-bottom: func.size(83);
+    }
+  }
+
+  .people {
+    height: 169vw;
+    @media screen and (min-width:768px) {
+      height: 41.4vw;
     }
   }
 }
@@ -677,36 +975,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
 import 'swiper/css/pagination';
 const modules = ref([Autoplay, Pagination]);
-const slider1CurrIdx = ref(0);
-const slider1Ref = ref();
-const slider2CurrIdx = ref(0);
-const slider2Ref = ref();
-const slider3CurrIdx = ref(0);
-const slider3Ref = ref();
-const slider4CurrIdx = ref(0);
-const slider4Ref = ref();
-
-const slideChange = (swiper, num) => {
-  if (num === 1) {
-    slider1CurrIdx.value = swiper.realIndex;
-  } else if (num === 2) {
-    slider2CurrIdx.value = swiper.realIndex;
-  } else if (num === 3) {
-    slider3CurrIdx.value = swiper.realIndex;
-  } else if (num === 4) {
-    slider4CurrIdx.value = swiper.realIndex;
-  }
-}
-
-const onSwiper = (swiper, num) => {
-  if (num === 1) {
-    slider1Ref.value = swiper;
-  } else if (num === 2) {
-    slider2Ref.value = swiper;
-  } else if (num === 3) {
-    slider3Ref.value = swiper;
-  } else if (num === 4) {
-    slider4Ref.value = swiper;
-  }
-};
+const team1Active = ref(1);
+const team2Active = ref(1);
+const team3Active = ref(1);
+const team4Active = ref(1);
 </script>
