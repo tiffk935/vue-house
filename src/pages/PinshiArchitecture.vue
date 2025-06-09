@@ -9,7 +9,23 @@
   <section id="architecture" class="items">
     <div class="item-title">建築規劃｜天造地設，為人而生。</div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/1-1.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實整體開發 <br class="pc">透視圖</div>
@@ -20,7 +36,23 @@
       </div>
     </div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/1-2.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實外觀立面 <br class="pc">透視圖</div>
@@ -35,7 +67,23 @@
   <section id="view" class="items">
     <div class="item-title">景觀設計｜自然而然，理所當然。</div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/2-1.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實廊道景觀與空間 <br class="pc">透視圖</div>
@@ -46,7 +94,23 @@
       </div>
     </div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/2-2.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實戶外庭院 <br class="pc">透視圖</div>
@@ -61,7 +125,23 @@
   <section id="public" class="items">
     <div class="item-title">公設美學｜生得漂亮，也要活得漂亮。</div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/3-1.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實全日餐廳 <br class="pc">透視圖</div>
@@ -72,7 +152,23 @@
       </div>
     </div>
     <div class="item">
-      <img src="@/assets/pinshi-architecture/3-2.jpg" />
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
+        </swiper>
+      </div>
       <div class="content">
         <div>
           <div class="t1">國城寳實 大廳空間 <br class="pc">透視圖</div>
@@ -84,6 +180,41 @@
     </div>
   </section>
 </template>
+
+<style lang="scss">
+@use "@/assets/style/function.scss" as func;
+
+#page-pinshiArchitecture .swiper-pagination {
+  bottom: func.size-m(15);
+  line-height: 1;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  @media screen and (min-width:768px) {
+    bottom: func.size(22);
+  }
+
+  .swiper-pagination-bullet {
+    width: func.size-m(52);
+    height: func.size-m(8);
+    opacity: .67;
+    background: #000;
+    border: none;
+    margin: 0 func.size-m(2);
+    border-radius: 0;
+    @media screen and (min-width:768px) {
+      width: func.size(149);
+      height: func.size(22);
+      margin: 0 func.size(5.5);
+    }
+
+    &.swiper-pagination-bullet-active {
+      background: #fff;
+    }
+  }
+}
+</style>
 
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
@@ -271,3 +402,12 @@
   }
 }
 </style>
+
+<script setup>
+import { ref } from 'vue';
+import { Autoplay, Pagination } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/pagination';
+const modules = ref([Autoplay, Pagination]);
+</script>
