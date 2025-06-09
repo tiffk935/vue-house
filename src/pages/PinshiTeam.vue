@@ -27,11 +27,13 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc">張瑪龍 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">陳玉霖 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">2025大阪世博台灣館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">張瑪龍 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">MAYU architects+</div>
@@ -57,11 +59,13 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc">張瑪龍 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">陳玉霖 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">2025大阪世博台灣館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">張瑪龍 建築師</div>
               </div>
             </div>
           </div>
@@ -84,11 +88,12 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/1.webp" /> <div class="photo-desc">林澤森 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/2.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/3.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">林澤森 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">CD HOUSE</div>
@@ -113,11 +118,12 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/2/1.webp" /> <div class="photo-desc">林澤森 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/2.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/3.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">林澤森 建築師</div>
               </div>
             </div>
           </div>
@@ -140,11 +146,10 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/1.webp" /> <div class="photo-desc">賈書恆 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">賈書恆 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">賈書恆建築師事務所</div>
@@ -169,11 +174,10 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/3.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/3/1.webp" /> <div class="photo-desc">賈書恆 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">賈書恆 建築師</div>
               </div>
             </div>
           </div>
@@ -196,11 +200,10 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/1.webp" /> <div class="photo-desc">陳俊廷 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">成大瑞豪</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">陳俊廷 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">陳俊廷建築師事務所</div>
@@ -225,11 +228,10 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/4.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/4/1.webp" /> <div class="photo-desc">陳俊廷 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">成大瑞豪</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">陳俊廷 建築師</div>
               </div>
             </div>
           </div>
@@ -252,9 +254,9 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5/1.webp" /> <div class="photo-desc">劉紹魁 總經理</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5/2.webp" /> <div class="photo-desc">高雄海洋及流行音樂中心</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5/3.webp" /> <div class="photo-desc">鳳山都更好</div></swiper-slide>
                   </swiper>
                   <div class="photo-desc">劉紹魁 建築師</div>
                 </div>
@@ -281,11 +283,10 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/1/5.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/5/1.webp" /> <div class="photo-desc">劉紹魁 總經理</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5/2.webp" /> <div class="photo-desc">高雄海洋及流行音樂中心</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/5/3.webp" /> <div class="photo-desc">鳳山都更好</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">劉紹魁 建築師</div>
               </div>
             </div>
           </div>
@@ -320,11 +321,15 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/1.webp" /> <div class="photo-desc">芦沢啓治 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/2.webp" /> <div class="photo-desc">2023 BELLUSTAR Penthouse</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/4.webp" /> <div class="photo-desc">2023 House in Aoyama</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/5.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/6.webp" /> <div class="photo-desc">2024 Blue Bottle Coffee Nagoya Sakae Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/7.webp" /> <div class="photo-desc">2022 Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/8.webp" /> <div class="photo-desc">2025 Logy Taipei</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">芦沢啓治 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">Keiji Ashizawa Design</div>
@@ -350,11 +355,15 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/2/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/1/1.webp" /> <div class="photo-desc">芦沢啓治 建築師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/2.webp" /> <div class="photo-desc">2023 BELLUSTAR Penthouse</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/4.webp" /> <div class="photo-desc">2023 House in Aoyama</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/5.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/6.webp" /> <div class="photo-desc">2024 Blue Bottle Coffee Nagoya Sakae Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/7.webp" /> <div class="photo-desc">2022 Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/8.webp" /> <div class="photo-desc">2025 Logy Taipei</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">芦沢啓治 建築師</div>
               </div>
             </div>
           </div>
@@ -377,11 +386,12 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/1.webp" /> <div class="photo-desc">林新峰 總監</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/2.webp" /> <div class="photo-desc">嘉義市立美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/3.webp" /> <div class="photo-desc">GEN 雋 頂級粵菜餐廳</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/4.webp" /> <div class="photo-desc">SHO 承 日本料理餐廳</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/5.webp" /> <div class="photo-desc">Liberte 頂級法餐餐廳</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">林新峰 總監</div>
                 </div>
                 <div class="content">
                   <div class="company">擊壤設計</div>
@@ -406,11 +416,12 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/2/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/2/2/1.webp" /> <div class="photo-desc">林新峰 總監</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/2.webp" /> <div class="photo-desc">嘉義市立美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/3.webp" /> <div class="photo-desc">GEN 雋 頂級粵菜餐廳</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/4.webp" /> <div class="photo-desc">SHO 承 日本料理餐廳</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/2/5.webp" /> <div class="photo-desc">Liberte 頂級法餐餐廳</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">林新峰 總監</div>
               </div>
             </div>
           </div>
@@ -442,11 +453,11 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/1.webp" /> <div class="photo-desc">橋內智也 景觀設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023_Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">橋內智也 景觀設計師</div>
                 </div>
                 <div class="content">
                   <div class="company">HLD 橋內庭園設計</div>
@@ -471,11 +482,11 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/3/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/3/1/1.webp" /> <div class="photo-desc">橋內智也 景觀設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023_Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">橋內智也 景觀設計師</div>
               </div>
             </div>
           </div>
@@ -506,11 +517,12 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/1.webp" /> <div class="photo-desc">市川 善幾 燈光設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/2.webp" /> <div class="photo-desc">AZABU HILLS RESIDENCE</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle Coffee KOBE HANKYU CAFE</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">市川 善幾 燈光設計師</div>
                 </div>
                 <div class="content">
                   <div class="company">AURORA 照明設計</div>
@@ -535,11 +547,12 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/4/1.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/1/1.webp" /> <div class="photo-desc">市川 善幾 燈光設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/2.webp" /> <div class="photo-desc">AZABU HILLS RESIDENCE</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle Coffee KOBE HANKYU CAFE</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">市川 善幾 燈光設計師</div>
               </div>
             </div>
           </div>
@@ -562,11 +575,13 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/1.webp" /> <div class="photo-desc">陳怡彰 燈光設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">太子建設 太子城</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">太子建設 太子峰雲</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">長榮大學 長榮堂</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">惠宇建設 上和</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">精銳建設 闊</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">陳怡彰燈光設計師</div>
                 </div>
                 <div class="content">
                   <div class="company">偶得設計</div>
@@ -591,11 +606,13 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
-                  <swiper-slide><img src="@/assets/pinshi-team/4/2.jpg" /></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/4/2/1.webp" /> <div class="photo-desc">陳怡彰 燈光設計師</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">太子建設 太子城</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">太子建設 太子峰雲</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">長榮大學 長榮堂</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">惠宇建設 上和</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">精銳建設 闊</div></swiper-slide>
                 </swiper>
-                <div class="photo-desc">陳怡彰燈光設計師</div>
               </div>
             </div>
           </div>
