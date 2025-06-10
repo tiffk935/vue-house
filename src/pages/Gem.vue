@@ -39,7 +39,7 @@
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1"><span>平實公園特區，<br>台南最好的都在這裡。</span></div>
-      <div class="t2">要說府城最好的人文居住環境在哪？非東區莫屬。<br class="mob">而台南東區裡最美好的未來，在平實公園特區！</div>
+      <div class="t2">府城最好的人文居住環境在哪？非東區莫屬。<br class="mob">而台南東區裡最美好的未來，在平實。</div>
       <div class="t3">｜<RouterLink to="/pinshi">閱讀更多</RouterLink></div>
     </div>
   </section>
@@ -49,8 +49,8 @@
       <h2>平實團隊</h2>
     </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/pinshi-team/main.jpg" />
-      <img class="mob" src="@/assets/pinshi-team/main-m.jpg" />
+      <img class="pc" src="@/assets/pinshi-team/home.webp" />
+      <img class="mob" src="@/assets/pinshi-team/main-m.webp" />
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際級大師 世界級美感</div>
@@ -118,19 +118,19 @@
         <div class="flex">
           <div class="list">
             <div class="item">投資興建 ｜ 國城建設股份有限公司</div>
-            <div class="item">建築統籌 ｜ 張瑪龍陳玉霖聯合建築師事務所</div>
-            <div class="item">營造工程 ｜ 補</div>
+            <div class="item">營造工程 ｜ 盈舜營造股份有限公司</div>
             <div class="item">建築代銷 ｜ 聯碩地產行銷團隊</div>
+            <div class="item">平面設計 ｜ 陳俊廷建築師事務所、林澤森建築師事務所、賈書恆建築師事務所</div>
+            <div class="item">立面設計 ｜ 張瑪龍陳玉霖聯合建築師事務所</div>
             <div class="item">公設設計 ｜ 芦沢啓治 建築師事務所</div>
-            <div class="item">景觀設計 ｜ 橋内庭園設計 橋内智也</div>
-            <div class="item">燈光設計 ｜ AURORA Inc 市川善幾</div>
+            <div class="item">景觀設計 ｜ 橋內庭園設計 橋内智也</div>
           </div>
           <div class="list">
-            <div class="item">結構工程 ｜ 大彥工程顧問股份有限公司</div>
+            <div class="item">燈光設計 ｜ 科建聯合工程顧問有限公司</div>
             <div class="item">物業管理 ｜ 補</div>
             <div class="item">建照號碼 ｜ 補</div>
-            <div class="item">經 紀 人 ｜ 補</div>
-            <div class="item">建案位置 ｜ 補</div>
+            <div class="item">經 紀 人 ｜ 李聆榕 (107)南市字第00668號</div>
+            <div class="item">建案位置 ｜ 台南市東區平實段2、3、3-1等三筆地號</div>
             <div class="item">接待中心 ｜ 台南市東區平實路／後甲一路口</div>
             <div class="item">貴賓專線 ｜ 06 273-8888</div>
           </div>
@@ -638,7 +638,7 @@ h2 {
 .order {
   padding: func.size-m(28) 0 func.size-m(57) 0;
   @media screen and (min-width:768px) {
-    padding: func.size(127) 0 func.size(203) 0;
+    padding: func.size(100) 0 func.size(100) 0;
   }
 
   .sec-title {
@@ -657,7 +657,7 @@ h2 {
 .information {
   padding: func.size-m(31) 0 func.size-m(46) 0;
   @media screen and (min-width:768px) {
-    padding: func.size(168) 0;
+    padding: func.size(120) 0;
   }
 
   .container {

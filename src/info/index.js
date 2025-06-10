@@ -12,7 +12,7 @@ export default {
   phone: "06-273-8888",
   fbLink: "http://facebook.com/61573695851738/",
   fbMessage: "https://m.me/61573695851738/",
-  igLink: "#",
+  igLink: "https://www.instagram.com/gemofpinshi?igsh=M2F4NmY5bnRvaTli",
   lineLink: "https://maac.io/3vJTt",
   caseName: caseName,
   gtmCode: ["GTM-NZC37ZGB"], // 可放置多個

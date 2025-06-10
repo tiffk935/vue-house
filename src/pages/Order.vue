@@ -2,7 +2,7 @@
   <section id="contact">
     <div class="title"><span>CONTACT US</span>聯絡我們</div>
     <div class="flex">
-      <img class="pic" src="@/assets/pic.webp" />
+      <img class="pic" src="@/assets/logo.png" />
       <div class="info">
         <div class="flex2">
           <div class="left">
@@ -66,6 +66,7 @@
     display: block;
     width: 100%;
     margin-bottom: func.size-m(34);
+    margin-left: func.size-m(-15);
     @media screen and (min-width:768px) {
       width: func.size(835);
       padding-right: func.size(208);

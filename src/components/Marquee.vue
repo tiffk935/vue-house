@@ -19,7 +19,7 @@
     display: flex;
     overflow: hidden;
     @media screen and (min-width:768px) {
-      height: func.size(229.5);
+      height: func.size(229);
     }
 
     img {
@@ -27,6 +27,7 @@
       height: 100%;
       /* animation: marquee 30s linear infinite; */
     }
+
 
     /* &.marquee2 {
       img {

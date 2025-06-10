@@ -21,7 +21,7 @@
           <RouterLink class="onder-btn" to="/order"><span>預約表單</span></RouterLink>
           <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
           <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
-          <!--a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a-->
+          <a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a>
           <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
           <a class="circle" target="_blank" :href="info.googleLink"><img src="@/assets/icon-map.svg" /></a>
           <div class="line"></div>
@@ -170,8 +170,10 @@ footer {
     @media screen and (min-width:768px) {
       font-size: func.size(24);
       line-height: func.size(32);
+      letter-spacing: .05em;
       border: none;
       padding: 0;
+      margin-left: func.size(-10);
       margin-bottom: func.size(40);
     }
   }
@@ -181,8 +183,8 @@ footer {
     justify-content: center;
     align-items: center;
     position: fixed;
-    bottom: func.size-m(20);
-    left: func.size-m(10);
+    bottom: func.size-m(10);
+    left: func.size-m(7);
     //left: func.size-m(55);            
     //width: 100%;
     //margin-bottom: func.size-m(23);
@@ -209,11 +211,11 @@ footer {
 
     .onder-btn {
       position: relative;
-      font-size: func.size-m(15);
+      font-size: func.size-m(13);
       line-height: func.size-m(14);
       color: #fff;
       font-weight: 700;
-      padding: func.size-m(10) func.size-m(12);
+      padding: func.size-m(10) func.size-m(8);
       background: #269D45;
       text-decoration: none;
       border-radius: func.size-m(100);
@@ -255,8 +257,8 @@ footer {
     }
 
     .circle {
-      width: func.size-m(35);
-      height: func.size-m(35);
+      width: func.size-m(30);
+      height: func.size-m(30);
       background: #D3D3D3;
       border: 1px solid #269d4600;
       border-radius: 50%;
@@ -264,15 +266,15 @@ footer {
       justify-content: center;
       align-items: center;
       @media screen and (min-width:768px) {
-        width: func.size(48);
-        height: func.size(48);
+        width: func.size(35);
+        height: func.size(35);
       }
 
       img {
         width: auto;
         height: func.size-m(18);
         @media screen and (min-width:768px) {
-          height: func.size(25);
+          height: func.size(20);
         }
       }
 
@@ -304,8 +306,8 @@ footer {
       margin: 0 func.size-m(6);
       cursor: pointer;
       @media screen and (min-width:768px) {
-        width: func.size(48);
-        height: func.size(48);
+        width: func.size(35);
+        height: func.size(35);
         margin: 0 func.size(10);
       }
 
@@ -342,7 +344,7 @@ footer {
         background-position: center center;
         background-repeat: no-repeat;
         @media screen and (min-width:768px) {
-          width: func.size(29);
+          width: func.size(20);
           height: func.size(19);
         }
 

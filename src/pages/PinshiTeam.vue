@@ -208,11 +208,11 @@
                 <div class="content">
                   <div class="company">陳俊廷建築師事務所</div>
                   <div class="name">陳俊廷</div>
-                  <div class="desc">賈書恆建築師事務所於台北、高雄、中壢均設有辦公室，為具備綜合性專長之建築事務所，曾榮獲 2009年、2011年金獅首獎及第三屆景觀設計評選大獎等殊榮；20 年來秉持高度創意、優良造型、完善機能等全方位理念，作品橫跨軍事營區、超高層建築、集合式住宅、都市更新等多樣面向。</div>
+                  <div class="desc">致力於發現土地與環境獨具的紋理，融入生活與想像的場景，如同矩陣間組織運用，讓人遊走於其中；交織人文與空間對白的詩情，填充建築介質，形成對話與形象、故事與畫面。建築作品多次囊括國內獎項，包含台灣建築獎、高雄園治獎、高雄綠建築大獎與國家建築金獅獎設計首獎。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 國城賦格 ■ 國城UFO<br>
-                    ■ 高雄科技園區 ■ 義大天悅飯店
+                    ■ 春福煙波四季 ■ 宗大青田<br>
+                    ■ 台南愛爾麗總部 ■ 天步私人住宅
                   </div>
                 </div>
               </div>
@@ -644,16 +644,16 @@
   }
 
   .swiper-pagination-bullet {
-    width: func.size-m(43);
-    height: func.size-m(7);
+    width: func.size-m(30);
+    height: func.size-m(5);
     opacity: 1;
     background: none;
     border: func.size-m(1) solid #fff;
     margin: 0 func.size-m(11) 0 0;
     border-radius: func.size-m(50);
     @media screen and (min-width:768px) {
-      width: func.size(43);
-      height: func.size(7);
+      width: func.size(30);
+      height: func.size(5);
       border-width: func.size(1);
       margin: 0 func.size(11) 0 0;
       border-radius: func.size(50);

@@ -100,7 +100,7 @@
 
   <div class="btns">
     <div class="col">
-      <a class="green-bg" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" />{{ info.phone }}</a>
+      <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" />{{ info.phone }}</a>
     </div>
     <div class="col">
       <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" />FB諮詢</a>
@@ -431,6 +431,7 @@
         display: none;
       }
     }
+    
   }
 
   a {
@@ -445,6 +446,7 @@
     font-size: func.size-m(10);
     font-weight: 500;
     letter-spacing: .05em;
+    transition:.3s;
     @media screen and (min-width:768px) {
       height: func.size(78);
       font-size: func.size(25);
@@ -464,6 +466,7 @@
     &.green-bg {
       background: #00933F;
       color: #fff;
+      
 
       img {
         filter: brightness(0) invert(1);
@@ -472,6 +475,16 @@
 
     &.green-text {
       color: #00933F;
+    }
+
+    &:hover{
+      background: #00933f;
+      color: #fff;
+
+    
+    img {
+        filter: invert(99%) sepia(0%) saturate(494%) hue-rotate(171deg) brightness(119%) contrast(100%);
+      }
     }
   }
 }

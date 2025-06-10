@@ -21,9 +21,8 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/1.webp" /> <div class="photo-desc">建築量體透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/2.webp" /> <div class="photo-desc">建築量體透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -48,9 +47,8 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/3.webp" /> <div class="photo-desc">建築立面透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/4.webp" /> <div class="photo-desc">建築立面透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -79,9 +77,8 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/1.webp" /> <div class="photo-desc">建築廊道空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/2.webp" /> <div class="photo-desc">建築廊道空間透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -106,9 +103,8 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/2-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/3.webp" /> <div class="photo-desc">戶外景觀廊道透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/4.webp" /> <div class="photo-desc">戶外景觀廊道透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -137,9 +133,10 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-1.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/1.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/2.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/3.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/4.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -164,9 +161,10 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/3-2.jpg" /></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/5.webp" /> <div class="photo-desc">度假泳池 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/6.webp" /> <div class="photo-desc">健身房 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/7.webp" /> <div class="photo-desc">公設大廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/8.webp" /> <div class="photo-desc">公設大廳 空間透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -196,8 +194,8 @@
   }
 
   .swiper-pagination-bullet {
-    width: func.size-m(52);
-    height: func.size-m(8);
+    width: func.size-m(40);
+    height: func.size-m(5);
     opacity: .67;
     background: #000;
     border: none;
@@ -248,7 +246,7 @@
     width: 100%;
     height: func.size-m(392);
     object-fit: cover;
-    margin-bottom: func.size-m(31);
+    margin-bottom: func.size-m(0);
     @media screen and (min-width:768px) {
       height: auto;
       margin-bottom: func.size(135);
@@ -290,6 +288,48 @@
       margin: 0 func.size(160);
       margin-bottom: func.size(106);
       border-width: func.size(1);
+    }
+  }
+
+  .photo {
+    position: relative;
+    margin-bottom: func.size-m(22);
+    @media screen and (min-width:768px) {
+      margin-bottom: 0;
+      width: func.size(1920);
+    }
+
+    img {
+      display: block;
+      width: 100%;
+      height: func.size-m(280);
+      object-fit: cover;
+      @media screen and (min-width:768px) {
+        height: auto;
+      }
+    }
+
+    .photo-desc {
+      position: absolute;
+      top: func.size-m(14);
+      left: func.size-m(30);
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(58);
+        right: func.size(151);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(22);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
     }
   }
 
@@ -355,7 +395,7 @@
   }
 
   .t1 {
-    font-size: func.size-m(10);
+    font-size: func.size-m(12);
     font-weight: 700;
     margin-bottom: func.size-m(39);
     @media screen and (min-width:768px) {
