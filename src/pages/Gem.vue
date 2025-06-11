@@ -185,7 +185,7 @@ h2 {
 .t2 {
   font-size: func.size-m(12);
   line-height: func.size-m(14);
-  margin-bottom: func.size-m(22);
+  margin-bottom: func.size-m(2);
   @media screen and (min-width:768px) {
     font-size: func.size(34);
     line-height: func.size(41);
