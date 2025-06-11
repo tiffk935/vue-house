@@ -24,8 +24,8 @@
       <h2>國城作品</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">港都豪宅建築的定潮者</div>
-      <div class="t2">想把最好的都帶進台灣來，這條路我們走了13年</div>
+      <div class="t1">走在前，讓後面跟上來</div>
+      <div class="t2">把最好的留在台灣</div>
       <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
     </div>
   </section>
@@ -117,22 +117,21 @@
         <div class="sec-title pc">建案資訊</div>
         <div class="flex">
           <div class="list">
-            <div class="item">投資興建 ｜ 國城建設股份有限公司</div>
-            <div class="item">營造工程 ｜ 盈舜營造股份有限公司</div>
-            <div class="item">建築代銷 ｜ 聯碩地產行銷團隊</div>
-            <div class="item">平面設計 ｜ 陳俊廷建築師事務所、林澤森建築師事務所、賈書恆建築師事務所</div>
-            <div class="item">立面設計 ｜ 張瑪龍陳玉霖聯合建築師事務所</div>
-            <div class="item">公設設計 ｜ 芦沢啓治 建築師事務所</div>
-            <div class="item">景觀設計 ｜ 橋內庭園設計 橋内智也</div>
+            <div class="item"><span>投資興建</span> ｜ <span>國城建設股份有限公司</span></div>
+            <div class="item"><span>營造工程</span> ｜ <span>盈舜營造股份有限公司</span></div>
+            <div class="item"><span>建築代銷</span> ｜ <span>聯碩地產行銷團隊</span></div>
+            <div class="item"><span>平面設計</span> ｜ <span>陳俊廷建築師事務所、林澤森建築師事務所<br>賈書恆建築師事務所</span></div>
+            <div class="item"><span>立面設計</span> ｜ <span>張瑪龍陳玉霖聯合建築師事務所</span></div>
+            <div class="item"><span>公設設計</span> ｜ <span>芦沢啓治 建築師事務所</span></div>
+            <div class="item"><span>景觀設計</span> ｜ <span>橋內庭園設計 橋内智也</span></div>
           </div>
           <div class="list">
-            <div class="item">燈光設計 ｜ 科建聯合工程顧問有限公司</div>
-            <div class="item">物業管理 ｜ 補</div>
-            <div class="item">建照號碼 ｜ 補</div>
-            <div class="item">經 紀 人 ｜ 李聆榕 (107)南市字第00668號</div>
-            <div class="item">建案位置 ｜ 台南市東區平實段2、3、3-1等三筆地號</div>
-            <div class="item">接待中心 ｜ 台南市東區平實路／後甲一路口</div>
-            <div class="item">貴賓專線 ｜ 06 273-8888</div>
+            <div class="item"><span>燈光設計</span> ｜ <span>科建聯合工程顧問有限公司</span></div>
+            <div class="item"><span>建照號碼</span> ｜ <span>補</span></div>
+            <div class="item"><span>經 紀 人</span> ｜ <span>李聆榕 (107)南市字第00668號</span></div>
+            <div class="item"><span>建案位置</span> ｜ <span>台南市東區平實段2、3、3-1等三筆地號</span></div>
+            <div class="item"><span>接待中心</span> ｜ <span>台南市東區平實路／後甲一路口</span></div>
+            <div class="item"><span>貴賓專線</span> ｜ <span>06 273-8888</span></div>
           </div>
         </div>
       </div>
@@ -702,15 +701,21 @@ h2 {
     }
 
     .item {
+      display: flex;
       font-size: func.size-m(12);
       font-weight: 500;
       letter-spacing: .05em;
       padding: func.size-m(13) 0;
       border-bottom: func.size-m(1) solid #000;
       @media screen and (min-width:768px) {
-        font-size: func.size(19);
+        font-size: func.size(16);
         padding: func.size(20) 0;
         border-bottom: func.size(1) solid #000;
+
+
+        span{
+          display: inline;
+        }
       }
     }
   }

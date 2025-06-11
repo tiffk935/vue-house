@@ -5,8 +5,8 @@
   </section>
   <section class="content">
     <div class="title">
-      <div class="t1">港都豪宅建築的定潮者</div>
-      <div class="t2">想把最好的都帶進台灣來，這條路我們走了13年</div>
+      <div class="t1">走在前，讓後面跟上來</div>
+      <div class="t2">把最好的留在台灣</div>
     </div>
     <div class="work-list-title">【 作品列表 】</div>
     <RouterLink to="/gallary">

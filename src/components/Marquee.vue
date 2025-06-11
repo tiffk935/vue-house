@@ -47,7 +47,7 @@ onMounted(() => {
   marquee1TL.to('.marquee1 img', { xPercent: -100, duration: 30, ease: 'none' });
   const marquee2TL = gsap.timeline({ repeat: -1, paused: true });
   marquee2TL.to('.marquee2 img', { xPercent: -100, duration: 30, ease: 'none' });
-  marquee2TL.seek(2);
+  marquee2TL.seek(1.2);
   marquee1TL.play();
   marquee2TL.play();
 });
