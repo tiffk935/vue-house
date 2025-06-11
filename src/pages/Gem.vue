@@ -725,7 +725,7 @@ import Marquee from "@/components/Marquee.vue";
 import Order from '@/components/Order.vue'
 import news from '@/info/news';
 
-const typeList = news.filter(item => item.type === '消息新聞').reverse();
+const typeList = news.filter(item => item.type === '消息新聞');
 const list = typeList.filter((item, idx) => idx < 3);
 const images = import.meta.glob('../assets/news/**/*.*', { eager: true });
 const getImg = path => images[path]?.default || '';
