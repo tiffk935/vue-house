@@ -21,9 +21,9 @@
         }"
         @slideChange="s1OnSlideChange"
       >
-        <swiper-slide v-for="num in Object.keys(s1Images).length">
-          <img :src="getImg('s1', `../assets/pinshi/s1/${num}.webp`)" />
-        </swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/1.webp" /> <div class="photo-desc">台南科學園區</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/2.webp" /> <div class="photo-desc">平實公園實景攝影</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/3.webp" /> <div class="photo-desc">平實公園實景攝影</div></swiper-slide>
       </swiper>
       <div class="pagi">
         <div class="dot" :class="{active: num === s1SliderActiveIdx + 1}" v-for="num in Object.keys(s1Images).length"></div>
@@ -50,9 +50,9 @@
         }"
         @slideChange="s2OnSlideChange"
       >
-        <swiper-slide v-for="num in Object.keys(s2Images).length">
-          <img :src="getImg('s2', `../assets/pinshi/s2/${num}.webp`)" />
-        </swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s2/1.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s2/2.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s2/3.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
       </swiper>
       <div class="pagi">
         <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
@@ -79,7 +79,11 @@
   </section>
 
   <section class="s4 tem-2">
-    <img class="style" src="@/assets/pinshi/s4.webp" />
+    <div class="img-group">
+      <img class="style" src="@/assets/pinshi/s4.webp" />
+    <div class="photo-desc1">座落於東區內的平實重劃區</div>
+    </div>
+    
     <div class="tem-txt">
       <div class="t1">
         <div>公園綠地</div>
@@ -90,7 +94,11 @@
   </section>
 
   <section class="s5 tem-1">
-    <img class="style" src="@/assets/pinshi/s5.webp" />
+    <div class="img-group">
+      <img class="style" src="@/assets/pinshi/s5.webp" />
+    <div class="photo-desc1">交通情境示意圖</div>
+    </div>
+    
     <div class="tem-txt">
       <div class="t1">
         <div>十字軸線</div>
@@ -101,7 +109,11 @@
   </section>
 
   <section class="s6 tem-2">
-    <img class="style" src="@/assets/pinshi/s6.webp" />
+    <div class="img-group">
+      <img class="style" src="@/assets/pinshi/s6.webp" />
+    <div class="photo-desc1">平實捷運轉運站 透視示意圖</div>
+    </div>
+    
     <div class="tem-txt">
       <div class="t1">
         <div>捷運轉運</div>
@@ -111,30 +123,89 @@
     </div>
   </section>
 
-  <section class="s7 tem-2">
-    <img class="style" src="@/assets/pinshi/s7.webp" />
+
+    <section class="s7 tem-slider">
+    <div class="slider">
+      <swiper
+        :modules="modules"
+        :slidesPerView="'auto'"
+        loop
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        @slideChange="s2OnSlideChange"
+      >
+        <swiper-slide><img src="@/assets/pinshi/s7/1.webp" /> <div class="photo-desc">南紡購物中心</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s7/2.webp" /> <div class="photo-desc">南紡購物中心</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s7/3.webp" /> <div class="photo-desc">南紡購物中心</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s7/4.webp" /> <div class="photo-desc">南紡購物中心</div></swiper-slide>
+      </swiper>
+      <div class="pagi">
+        <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
+      </div>
+    </div>
     <div class="tem-txt">
       <div class="t1">
         <div>時尚購物</div>
-        南紡時尚進行式，<br>國賓影城娛樂
+        南紡時尚進行式，<br class="pc">國賓影城娛樂
       </div>
       <div class="t2">南紡購物中心一、二期商場面積達7.5萬坪，誠品生活、老爺行旅、保時捷概念店…演繹台南時尚最前沿，國際脈動零時差，與國賓影城、平實重劃商業區緊密相連。</div>
     </div>
   </section>
 
-  <section class="s8 tem-1">
-    <img class="style" src="@/assets/pinshi/s8.webp" />
+
+      <section class="s8 tem-slider">
+    <div class="slider">
+      <swiper
+        :modules="modules"
+        :slidesPerView="'auto'"
+        loop
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        @slideChange="s2OnSlideChange"
+      >
+        <swiper-slide><img src="@/assets/pinshi/s8/1.webp" /> <div class="photo-desc">成功大學</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s8/2.webp" /> <div class="photo-desc">東光國小</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s8/3.webp" /> <div class="photo-desc">復興國中小</div></swiper-slide>
+      </swiper>
+      <div class="pagi">
+        <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
+      </div>
+    </div>
     <div class="tem-txt">
       <div class="t1">
         <div>優質學區</div>
-        成大校區、東光國小、<br>復興國中小
+        成大校區、東光國小、<br class="pc">復興國中小
       </div>
       <div class="t2">車程5分鐘抵達東光國小、8分鐘復興中小學，擁有台南最優質少年養成環境；鄰近台南文教核心成大、一中校區車程約10分鐘，鋪排孩子最好的教育環境，就在此地。</div>
     </div>
   </section>
 
-  <section class="s9 tem-2">
-    <img class="style" src="@/assets/pinshi/s9.webp" />
+
+
+  <section class="s9 tem-slider">
+    <div class="slider">
+      <swiper
+        :modules="modules"
+        :slidesPerView="'auto'"
+        loop
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        @slideChange="s2OnSlideChange"
+      >
+        <swiper-slide><img src="@/assets/pinshi/s9/1.webp" /> <div class="photo-desc">成大醫院</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s9/2.webp" /> <div class="photo-desc">榮總台南分院</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s9/3.webp" /> <div class="photo-desc">成大醫院</div></swiper-slide>
+      </swiper>
+      <div class="pagi">
+        <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
+      </div>
+    </div>
     <div class="tem-txt">
       <div class="t1">
         <div>醫療資源</div>
@@ -143,6 +214,8 @@
       <div class="t2">榮總台南分院就在身旁近近照護；台南唯二「醫學中心」等級，奇美醫院亦近在咫尺，國立成大醫院就在不遠處。台南密度最高的高端醫療院所，為您與家人的健康提供全面支援。</div>
     </div>
   </section>
+
+
 </template>
 
 <style lang="scss" scoped>
@@ -163,6 +236,13 @@
 
 img {
   max-width: 100%;
+}
+
+.pc {
+  display: none;
+  @media screen and (min-width:768px) {
+    display: block;
+  }
 }
 
 .t1 {
@@ -207,6 +287,7 @@ img {
     padding: func.size(97) func.size(170);
     display: flex;
     flex-direction: row-reverse;
+    
   }
 
   .slider {
@@ -229,7 +310,31 @@ img {
           margin-right: func.size(25);
         }
       }
+
+      .photo-desc{
+      position: absolute;
+      top: func.size-m(14);
+      left: func.size-m(20);
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(10);
+        right: func.size(10);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(15);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+      }
     }
+    
 
     img  {
       display: block;
@@ -267,9 +372,12 @@ img {
     padding: func.size-m(23) func.size-m(22) func.size-m(26) func.size-m(48);
     background: #fff;
     @media screen and (min-width:768px) {
+      display: flex;
       width: calc(100% - func.size(903));
       margin: 0;
-      padding: func.size(79) func.size(37) 0 func.size(37);
+      padding: func.size-m(10) func.size-m(10);
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -294,6 +402,33 @@ img {
   @media screen and (min-width:768px) {
     padding: func.size(96) func.size(170) func.size(96) 0;
     display: flex;
+  }
+
+    .img-group{
+    position: relative;
+
+      .photo-desc1{
+      position: absolute;
+      top: func.size-m(14);
+      left: func.size-m(20);
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(10);
+        right: func.size(10);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(15);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+      }
   }
 
   img  {
@@ -345,10 +480,38 @@ img {
     flex-direction: row-reverse;
   }
 
+  .img-group{
+    position: relative;
+
+      .photo-desc1{
+      position: absolute;
+      top: func.size-m(14);
+      left: func.size-m(20);
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(10);
+        right: func.size(10);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(15);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+      }
+  }
+
+
   img  {
     display: block;
     width: calc(100% - func.size-m(30));
-    margin: 0 0 0 auto;
+    margin: 0 auto 0 0;
     @media screen and (min-width:768px) {
       width: func.size(898);
       margin: 0;
@@ -363,6 +526,8 @@ img {
       width: calc(100% - func.size(898));
       padding: func.size(137) func.size(37) 0 func.size(37);
     }
+
+    
   }
 
   .t1 {
@@ -387,8 +552,33 @@ img {
   }
 
   &.s6, &.s7 {
+
+    .photo-desc1{
+      position: absolute;
+      top: func.size-m(14);
+      right: func.size-m(20);
+      left: auto;
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(12);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(10);
+        right: func.size(10);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(15);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+      }
+
     img {
-      margin: 0 auto 0 0;
+      margin: 0 0 0 auto;
       @media screen and (min-width:768px) {
         margin: 0;
       }
