@@ -12,27 +12,29 @@
         <!-- Form -->
         <div class="form mx-auto relative flex items-start justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名<span>*</span></span>
-          <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-            @input="(event) => (formData.name = event.target.value)" /></label>
-          <label class="row"><span>手機<span>*</span></span>
-              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-            @input="(event) => (formData.phone = event.target.value)" /></label>
-          <label class="row"><span>居住縣市</span>
-          <select class="select w-full rounded-none" v-model="formData.city">
-            <option value="" selected disabled>請選擇城市</option>
-            <option v-for="city in cityList" :value="city.value" :key="city">
-              {{ city.label }}
-            </option>
-          </select></label>
-          <label class="row"><span>居住地區</span>
-          <select class="select w-full rounded-none" v-model="formData.area">
-            <option value="" selected disabled>請選擇地區</option>
-            <option v-for="area in areaList" :value="area.value" :key="area">
-              {{ area.label }}
-            </option>
-          </select></label>
-        </div>
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" />
+            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)" />
+            <!-- <select class="select w-full rounded-none" v-model="formData.room_type">
+              <option value="" selected disabled>需求房型</option>
+              <option value="兩房">兩房</option>
+              <option value="三房">三房</option>
+              <option value="透天">透天</option>
+            </select> -->
+            <select class="select w-full rounded-none" v-model="formData.city">
+              <option value="" selected disabled>居住縣市</option>
+              <option v-for="city in cityList" :value="city.value">
+                {{ city.label }}
+              </option>
+            </select>
+            <select class="select w-full rounded-none" v-model="formData.area">
+              <option value="" selected disabled>居住地區</option>
+              <option v-for="area in areaList" :value="area.value">
+                {{ area.label }}
+              </option>
+            </select>
+          </div>
           <div class="right h-full">
             <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
               class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
@@ -55,38 +57,10 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;line-height: 3.3;height:3.3em">
-          <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-            送出表單
-          </button>
-          <div v-else class="send-load text-[#fff]" style="letter-spacing: 0.7em;text-indent: 0.9em;height:100%;">
-            <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" style=" display: inline-block;margin:0 .8em"  >
-              <circle
-                class="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                stroke-width="4"
-              ></circle>
-              <path
-                class="opacity-75"
-                fill="currentColor"
-                d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
-              >
-              <animateTransform
-                attributeName="transform"
-                attributeType="XML"
-                type="rotate"
-                from="0 12 12"
-                to="360 12 12"
-                dur="1s"
-                repeatCount="indefinite" /></path>
-            </svg>
-          <span>發送中...</span>
+        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#e6c57c] text-[#004239] hover:text-white hover:bg-[#be8416] rounded-none" @click="send()">
+          {{ sending ? '發送中..' : '送出表單' }}
         </div>
       </div>
-    </div>
 
       <!-- Contact Info -->
       <ContactInfo />
@@ -157,30 +131,6 @@
       background-color: #fff;
       position: absolute;
     }
-    .row{background: #fff;border: 1px solid #999;color: #000;
-      display: flex;width: 100%;
-    align-items:center;
-      > span{
-        width: 5.5em;
-        text-align: left;padding-left:1em ;
-        > span{color: #F00;//font-size: 12px;
-          }
-      }
-      input,select{background: inherit;flex: 1;}
-      option{color: #666;}
-      select{background:url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
-      background-size:auto 200%;
-      transition: background .3s;
-      &:focus{
-        background-position:calc(100% - .5em) 0%;
-      }
-      }
-      // &.name{width: calc(100% - 3.8em);}//沒有性別的話這條槓掉
-    }
-    .gender{display: flex;position: absolute;right: 0; flex-direction:column;
-      label:first-child{margin-bottom: .3em;}
-      input{margin-right: .3em;}
-    }
   }
 
   .send {
@@ -193,12 +143,6 @@
     border: 0;
     z-index: 10;
     position: relative;
-    background: #e6c57c;
-    color:#004239 ;
-    &:hover{
-    background: #be8416;
-    color:#fff ;}
-
   }
 
   .control {

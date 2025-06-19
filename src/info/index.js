@@ -1,11 +1,9 @@
-const caseName = "美地莊園"
+//const caseName = "美地莊園"
+const caseName = "000"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "1d2db7f2-157b-4a33-acbc-f4abfde91846",
+    case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台南安南區環館路358巷2號",
