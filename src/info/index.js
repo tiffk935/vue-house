@@ -2,7 +2,6 @@ const caseName = "研森"
 
 export default {
     caseid: "c6fca186-f67f-4ed8-8697-32026bdc3510",
-    case_code: "mori-architecture",
     address: "台南市崇賢一路22號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.7070353762533!2d120.21873859999998!3d22.9610141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e759101794e39%3A0xaeff4fd1e7f2927d!2z5riF5pmv6bqf56CU5qOuLeW7uuevieW3peWcsA!5e0!3m2!1szh-TW!2stw!4v1743472817360!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/TEV4NY3hfKJSu4FPA",
