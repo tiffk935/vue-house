@@ -2,14 +2,14 @@
   <div class="order relative bg-[#9E8077] text-center">
     <div class="toplogo">
       <img class="toplogo-logo" src="@/section/s1/toplogo.svg" data-aos="zoom-in" data-aos-delay="0" />
-     <!-- <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2602-777</div> --> 
+      <!-- <div class="toplogo-text">隈の日本絕美藝術 22-41 坪｜06-2602-777</div> -->
     </div>
     <div class="order1 relative">
       <div class="order2 relative">
-      <img class="style3 absolute" src="@/section/s1/style1.png" />
-      <img class="style2 absolute" src="@/section/s1/style1.png" />
-      <img class="style1 absolute" src="@/section/s1/style1.png" />
-      <img class="en absolute" src="@/section/s1/en.png" />
+        <img class="style3 absolute" src="@/section/s1/style1.png" />
+        <img class="style2 absolute" src="@/section/s1/style1.png" />
+        <img class="style1 absolute" src="@/section/s1/style1.png" />
+        <img class="en absolute" src="@/section/s1/en.png" />
         <!-- <img class="style2 absolute md:hidden" src="@/section/s1/style2.png" />
         <img class="style1 absolute md:hidden" src="@/section/s1/style1.png" />
         <img class="en absolute md:hidden" src="@/section/s1/en.png" />
@@ -21,33 +21,47 @@
         <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="研森" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
         <!-- Form -->
-        <div class="form mx-auto relative flex items-start justify-center">
+        <div class="form mx-auto relative flex justify-center">
           <div class="left h-full flex flex-col justify-between items-center">
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" />
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)" />
-            <select class="select w-full rounded-none" v-model="formData.room_type">
-              <option value="" selected disabled>需求房型</option>
-              <option value="兩房">兩房</option>
-              <option value="三房">三房</option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value">
-                {{ city.label }}
-              </option>
-            </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value">
-                {{ area.label }}
-              </option>
-            </select>
+            <label class="row name w-full">
+              <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+                @input="(event) => (formData.name = event.target.value)" /></label>
+            <label class="row w-full">
+              <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+                @input="(event) => (formData.phone = event.target.value)" /></label>
+
+            <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
+            <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
+              <label class="row w-full">
+                <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
+                <select class="select w-full rounded-none bg-white" v-model="formData[fieldKey]">
+                  <option value="" disabled>{{ fieldData.hold }}</option>
+                  <option v-for="option in fieldData.option" :value="option" :key="option">
+                    {{ option }}
+                  </option>
+                </select>
+              </label>
+            </template>
+            <!-- 動態 select end-->
+            <!--  -->
+            <label class="row w-full">
+              <select class="select w-full rounded-none" v-model="formData.city">
+                <option value="" selected disabled>居住縣市</option>
+                <option v-for="city in cityList" :value="city.value" :key="city">
+                  {{ city.label }}
+                </option>
+              </select></label>
+            <label class="row w-full">
+              <select class="select w-full rounded-none" v-model="formData.area">
+                <option value="" selected disabled>居住地區</option>
+                <option v-for="area in areaList" :value="area.value" :key="area">
+                  {{ area.label }}
+                </option>
+              </select></label>
           </div>
-          <div class="right h-full">
+          <div class="right">
             <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
+              class="row textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
           </div>
         </div>
 
@@ -55,7 +69,7 @@
         <div class="flex gap-2 items-center justify-center control">
           <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
             class="checkbox bg-white rounded-md" />
-          <p class="text-white font-bold">
+          <p class="text-[#FFF]">
             本人知悉並同意<label for="policy-modal"
               class="modal-button text-[#FFF100] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
           </p>
@@ -67,8 +81,26 @@
           @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
         <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#CBC8C1] text-[#333333] hover:text-white rounded-none" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <div class="sendall mt-8 mx-auto" style="font-size:20px;font-weight: 400;
+    line-height: 3.3;height:3.3em">
+          <button
+            class="send hover:scale-90 btn cursor-pointer  btregistration bg-[#CBC8C1] text-[#333333] hover:text-white rounded-none"
+            v-if="!submitted" @click="send" :disabled="sending">
+            送出表單
+          </button>
+          <div v-else class="send-load text-[#333333]" style="letter-spacing: 0.7em;
+  text-indent: 0.9em;
+  height:100%;">
+            <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              style=" display: inline-block;margin:0 .8em">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12"
+                  to="360 12 12" dur="1s" repeatCount="indefinite" />
+              </path>
+            </svg>
+            <span>發送中...</span>
+          </div>
         </div>
       </div>
 
@@ -82,6 +114,7 @@
     <!-- HouseInfo -->
     <HouseInfo />
   </div>
+
 </template>
 
 <style lang="scss">
@@ -114,10 +147,11 @@
     bottom: -10vw;
     width: 115vw;
     transform-origin: bottom left;
+
     @media screen and (min-width:768px) {
-    left: -30vw;
-    bottom:size(-270);
-    width: 58vw;
+      left: -30vw;
+      bottom: size(-270);
+      width: 58vw;
     }
   }
 
@@ -128,12 +162,14 @@
     transform-origin: bottom left;
     mix-blend-mode: soft-light;
     opacity: .5;
+
     @media screen and (min-width:768px) {
-    left: -21vw;
-    bottom:size(-490);
-    width: 47vw;
+      left: -21vw;
+      bottom: size(-490);
+      width: 47vw;
     }
   }
+
   .style3 {
     max-width: 200%;
     right: -124vw;
@@ -142,10 +178,11 @@
     transform-origin: bottom left;
     mix-blend-mode: soft-light;
     opacity: .5;
+
     @media screen and (min-width:768px) {
-    right: -30vw;
-    bottom:size(-270);
-    width: 58vw;
+      right: -30vw;
+      bottom: size(-270);
+      width: 58vw;
     }
   }
 
@@ -153,6 +190,7 @@
     width: size-m(144);
     left: size-m(60);
     bottom: size-m(33.33);
+
     @media screen and (min-width:768px) {
       width: size(294);
       left: size(346.53);
@@ -160,7 +198,9 @@
     }
   }
 
-  input, select, textarea {
+  input,
+  select,
+  textarea {
     opacity: 0.8;
   }
 
@@ -257,7 +297,7 @@
         color: #fff;
       }
     }
-    
+
     .order1 {
       background: none;
       padding-bottom: 0;
@@ -323,42 +363,65 @@ import HouseInfo from "@/section/form/houseInfo.vue"
 import info from "@/info"
 
 import { cityList, renderAreaList } from "@/info/address.js"
-import { ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+// const selectFields = info.selectFields
 
 import { useToast } from "vue-toastification"
 const toast = useToast()
 
+const sending = ref(false)
+const submitted = ref(false)
+
+// 後端那 name phone email msg 為必要欄位 請勿刪除
+const requiredFields = {
+  // 固定必要欄位 (請勿刪)
+  name: "姓名",
+  phone: "手機",
+  email: "信箱",
+  msg: "備註訊息",
+  city: "居住縣市",
+  area: "居住地區",
+  policyChecked: "個資告知事項聲明",
+  r_verify: "機器人驗證"
+}
+
+// selectFields
+const selectFields = info.selectFields || {}
+
+// 初始 formData（包含 selectFields 欄位）
 const formData = reactive({
-  name: "",
-  phone: "",
-  room_type: "",
-  // email: "",
-  city: "",
-  area: "",
-  msg: "",
-  policyChecked: false,
-  r_verify: false,
+  ...Object.keys(requiredFields).reduce((acc, key) => {
+    acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
+    return acc
+  }, {}),
+  ...Object.keys(selectFields).reduce((acc, key) => {
+    acc[key] = ""
+    return acc
+  }, {})
 })
 
-const sending = ref(false)
+// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
+const staticBypass = ["email", "msg", "city", "area"]
+const bypass = [
+  ...staticBypass,
+  ...Object.entries(selectFields)
+    .filter(([_, field]) => field.bypass !== true)
+    .map(([key]) => key)
+]
 
-//非必填
-// const bypass = ["msg", "room_type", "email"]
-const bypass = ["msg","room_type"];
-
-//中文對照
-const formDataRef = ref([
-  "姓名", //name
-  "手機", //phone
-  "房型", //room_type
-  // "信箱", //email
-  "居住縣市", //city
-  "居住地區", //area
-  "備註訊息", //msg
-  "個資告知事項聲明", //policyChecked
-  "機器人驗證", //r_verify
-])
+// 中文對照（formDataRef）
+const formDataRef = {
+  ...requiredFields,
+  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
+    acc[key] = val.title || key
+    return acc
+  }, {})
+}
 
 const areaList = ref([])
 
@@ -369,9 +432,9 @@ watch(
     formData.area = areaList.value[0].value
   }
 )
-
-const onRecaptchaVerify = () => {
-  formData.r_verify = true
+// 新系統這裡需調整
+const onRecaptchaVerify = (token) => {
+  formData.r_verify = token;
 }
 const onRecaptchaUnVerify = () => {
   formData.r_verify = false
@@ -379,10 +442,11 @@ const onRecaptchaUnVerify = () => {
 
 const send = () => {
   const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source");
-  const utmMedium = urlParams.get("utm_medium");
-  const utmContent = urlParams.get("utm_content");
-  const utmCampaign = urlParams.get("utm_campaign");
+  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
+  const utmMedium = urlParams.get("utm_medium") || "null";
+  const utmContent = urlParams.get("utm_content") || "null";
+  const utmCampaign = urlParams.get("utm_campaign") || "null";
+  const pad = (n) => String(n).padStart(2, '0');
   const time = new Date();
   const year = time.getFullYear();
   const month = time.getMonth() + 1;
@@ -392,52 +456,61 @@ const send = () => {
   const sec = time.getSeconds();
   const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
 
-  const presend = new FormData();
-  let pass = true
-  let unfill = []
-  let idx = 0
 
-  //驗證
+  const presend = new FormData();
+  let pass = true;
+  let unfill = [];
+  let idx = 0;
+
+  //有性別的話 性別顯示
+  if (formData.gender) {
+    formData.name = `${formData.name}(${formData.gender})`;
+  }
+
+
+  // 验证必填字段
   for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key)) {
-      if (value == "" || value == false) {
-        unfill.push(formDataRef.value[idx])
-      }
+    if (!bypass.includes(key) && (value === "" || value === false)) {
+      unfill.push(formDataRef[key] || key)
+      pass = false
     }
-    idx++
-    presend.append(key, value);
+    if (key !== "r_verify" && key !== "policyChecked") {
+      presend.append(key, value)
+    }
   }
 
   presend.append("utm_source", utmSource);
   presend.append("utm_medium", utmMedium);
   presend.append("utm_content", utmContent);
   presend.append("utm_campaign", utmCampaign);
+  presend.append("message", formData.msg)
+  presend.append("case_code", info.case_code ? info.case_code : info.caseid);
 
-  //有未填寫
-  if (unfill.length > 0) {
-    pass = false
-    toast.error(`「${unfill.join(", ")}」為必填或必選`)
-    return
+  // 如果有必填字段为空，返回
+  if (!pass) {
+    toast.error(`「${unfill.join(", ")}」為必填或必選`);
+    return;
   }
 
-  //手機驗證
-  const MobileReg = /^(09)[0-9]{8}$/
+  // 手机格式验证
+  const MobileReg = /^(09)[0-9]{8}$/;
   if (!formData.phone.match(MobileReg)) {
-    pass = false
-    toast.error(`手機格式錯誤 ( 09開頭10位數字 )`)
-    return
+    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
+    return;
   }
 
+  // 如果通过验证
   if (pass && !sending.value) {
-    sending.value = true
+    sending.value = true;
+    submitted.value = true;
+    /*
+    */
     fetch(
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
-      &room_type=${formData.room_type}
-      &project=${formData.project}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.msg}
+      &msg=${formData.room_type}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
@@ -448,19 +521,28 @@ const send = () => {
         method: "GET"
       }
     );
-
-    fetch("contact-form.php", {
+    //caseid 在index.js裡設定
+    fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
       method: "POST",
       body: presend,
-    }).then((response) => {
-      if (response.status === 200) {
-        window.location.href = "formThanks";
-      }
-      sending.value = false
-    });
-
-
-    // toast.success(`表單已送出，感謝您的填寫`)
+    })
+      .then((response) => {
+        if (response.status === 200) {
+          window.location.href = "formThanks";
+        } else {
+          return response.json().then(err => {
+            console.error("後端錯誤訊息：", err);
+            toast.error(err.message || "提交失敗");
+          });
+        }
+      })
+      .catch((error) => {
+        console.error("傳送失敗：", error);
+        toast.error("無法連線或伺服器錯誤");
+      })
+      .finally(() => {
+        sending.value = false;
+      });
   }
-}
+};
 </script>
