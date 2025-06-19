@@ -1,11 +1,9 @@
-const caseName = "豐邑匯禮"
+// const caseName = "豐邑匯禮"
+const caseName = "000"
 
 export default {
-  meta: {
-    title: caseName,
-    description: caseName,
-    keywords: caseName,
-  },
+  caseid: "655075fa-e77e-48b0-9720-01dce2672bd9",
+  case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市西屯區市政路10號",
@@ -24,8 +22,8 @@ export default {
     ["結構技師", "立信工程顧問有限公司"],
   ],
   gtmCode: ["GTM-PRNDKDGX","GTM-5F7H79C4","GTM-N9XP8LTX"], // 可放置多個
-  recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
+  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
   //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -34,8 +32,28 @@ export default {
     subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
   },
   //底下2個 沒項目就會隱藏
-    room_type: ["3房","4房"],
-    budget: ["3000-3500萬","3501-4000萬","4001-4500萬","4501萬以上"],
+  
+    selectFields: {
+      room_type: {
+        title: "需求房型",
+        hold: "請選擇房型",
+        option:  ["3房","4房"],
+        bypass:true,
+      },
+      budget: {
+        title: "購屋預算",
+        hold: "請選擇區間",
+        option:["3000-3500萬","3501-4000萬","4001-4500萬","4501萬以上"],
+        bypass:true, //必填開啟使用
+      },
+      /*
+      use_type: {
+        title: "使用用途",
+        hold: "請選擇用途",
+        option: ["自住", "投資", "租賃"]
+    },
+      */
+},
   navList: [
     {
       name: "金質品牌",
