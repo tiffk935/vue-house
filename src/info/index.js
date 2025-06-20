@@ -2,7 +2,7 @@ const caseName = "雍雋品"
 
 export default {
     caseid: "b29e5275-4afd-44a0-b105-b9c688934453",
-    case_code: "yjp",
+    //case_code: "yjp",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台北市中正區和平西路二段48號",
