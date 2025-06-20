@@ -2,7 +2,7 @@ const caseName = "佳鋐首耀"
 
 export default {
     caseid: "20b3aa3a-e122-4db4-b253-dcf60fe08372",
-    case_code: "shouyao",
+    //case_code: "shouyao",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區中華路二段207號",
