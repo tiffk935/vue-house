@@ -2,7 +2,7 @@ const caseName = "佳鋐大境"
 
 export default {
     caseid: "f4febb5a-b711-4b3f-a71b-8673bee58dd1",
-    case_code: "dajing",
+    //case_code: "dajing",
     address1: "基地位置",//按鈕區的--- 如空白會只呈現地址
     address2: "基地位置",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區中華路二段",
