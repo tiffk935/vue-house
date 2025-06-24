@@ -478,6 +478,7 @@
 
     .form {
       width: size-m(310);
+      min-width: 0;
       height: auto;
       gap: size-m(15);
       margin-bottom: size-m(20);
