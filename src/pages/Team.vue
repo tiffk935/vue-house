@@ -3,7 +3,7 @@
 
   <section class="team-list">
     <div class="t1t2">
-      <div class="t1">走在前，讓後面跟上來</div>
+      <div class="t1">不只是住得好，更要活得講究</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
     </div>
     <div class="tabs">
@@ -94,7 +94,7 @@
       font-weight: 700;
       margin-bottom: func.size-m(9);
       @media screen and (min-width:768px) {
-        font-size: func.size(78);
+        font-size: func.size(70);
         line-height: 1;
         font-weight: 700;
         margin-bottom: func.size(0);
@@ -105,7 +105,7 @@
       font-size: func.size-m(12);
       margin-bottom: func.size-m(23);
       @media screen and (min-width:768px) {
-        font-size: func.size(32);
+        font-size: func.size(30);
         line-height: 1;
         margin-bottom: 0;
         letter-spacing: .05em;

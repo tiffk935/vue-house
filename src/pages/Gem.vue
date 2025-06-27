@@ -11,7 +11,7 @@
     </div>
     <Marquee />
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">走在前，讓後面跟上來</div>
+      <div class="t1">不只是住得好，更要活得講究</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
       <div class="t3">｜<RouterLink to="/team">閱讀更多</RouterLink></div>
     </div>
@@ -55,7 +55,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際級大師 世界級美感</div>
       <div class="t2">跨域整合  與世界對話的美學實踐</div>
-      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
+      <div class="t3">｜<RouterLink to="/pinshi-team">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -67,7 +67,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際建築語彙 <br class="mob">演繹優雅生活尺度</div>
       <div class="t2">讓空間為人而生  生活，共好即是更好</div>
-      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
+      <div class="t3">｜<RouterLink to="/pinshi-architecture">閱讀更多</RouterLink></div>
     </div>
   </section>
 
