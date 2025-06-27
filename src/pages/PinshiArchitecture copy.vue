@@ -1,10 +1,6 @@
 <template>
   <section id="main">
-    <div class="img-group">
     <img src="@/assets/pinshi-architecture/main.webp" />
-    <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
-    <div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
-    </div>
     <div class="content">
       <div class="txt">在府城土地上，國城寳實以平實特區的規劃本意為起點，貫徹「共創社會公共價值」的初心，展開一場從地貌紋理到人文尺度的深度對話。不論是以開放、自然、與社區為概念的建築，還是以國際視野提煉的台南在地文化而構築的室內空間，抑或是深思台南氣候與生活節奏的景觀設計，讓建築、景觀與人產生真實而自在的連結，也是我們獻給台南的一份誠意之作。</div>
     </div>
@@ -25,8 +21,8 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/1.webp" /> <div class="photo-desc">國城寳實 北向建築立面透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/2.webp" /> <div class="photo-desc">東北向建築立面透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/1.webp" /> <div class="photo-desc">國城寳實 北向建築立面透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/2.webp" /> <div class="photo-desc">東北向建築立面透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -51,7 +47,7 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/3.webp" /> <div class="photo-desc">全區仰角建築透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/3.webp" /> <div class="photo-desc">全區仰角建築透視圖</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -59,6 +55,125 @@
           <!--div class="t1">國城寳實外觀立面 <br class="pc">透視圖</div-->
           <div class="t2">現代簡約的建築語彙 打造渡假村氛圍</div>
           <div class="txt">建築群以低調質樸的現代簡約風為主軸，運用水平陽台、花台與金屬裝飾，展現一致卻富層次的立面語彙，量體高度利用樓層數變化創造律動感；大廳與公設區引入大片綠意與落地窗設計，串聯室內外景觀，彷若度假村般的開放氛圍，打造高綠覆、低建蔽的生活場域，不只是居所，更是現代美學與生活態度的體現。</div>
+          <div class="bg-text">GEM<br class="pc"> OF PINSHI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="public" class="items">
+    <div class="item-title">公設美學｜生得漂亮，也要活得漂亮。</div>
+    <div class="item">
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/1.webp" /> <div class="photo-desc">廊道動線景觀透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/2.webp" /> <div class="photo-desc">廊道動線景觀透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/3.webp" /> <div class="photo-desc">建築廊道空間透視圖</div></swiper-slide>
+        </swiper>
+      </div>
+      <div class="content">
+        <div>
+          <!--div class="t1">國城寳實全日餐廳 <br class="pc">透視圖</div-->
+          <div class="t2">當代手法詮釋在地空間美學</div>
+          <div class="txt">芦沢啓治走訪台南街巷與基地周邊，將漫步於古都台南與平實公園的觀察與體驗，轉化爲本案設計靈感。在整體布局上遵循建築結構規線，發展出清晰的動線，運用景觀植栽與蜿蜒的廊道，營造出類似於台南巷弄間漫步的氛圍，使空間在有序之中仍保有靈動與趣味。</div>
+          <div class="bg-text">GEM<br class="pc"> OF PINSHI</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/4.webp" /> <div class="photo-desc">公設大廳</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/5.webp" /> <div class="photo-desc">公設大廳</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/6.webp" /> <div class="photo-desc">公設沙龍</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/7.webp" /> <div class="photo-desc">圖書館公設空間</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/8.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/9.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/3/10.webp" /> <div class="photo-desc">全日餐廳 空間透視圖</div></swiper-slide>
+        </swiper>
+      </div>
+      <div class="content">
+        <div>
+          <!--div class="t1">國城寳實 大廳空間 <br class="pc">透視圖</div-->
+          <div class="t2">規律、陣列、延續，創造美感平衡</div>
+          <div class="txt">芦沢啓治以整體視角統籌建築、景觀與公設設計，運用迴廊列柱作為有序設計語彙，貫穿室內外空間，並延伸至傢俱細節，展現材料與比例的連續性。他善用挑高與天花開口創造柔和光感，透過材質與光線搭配，在大廳、餐廳、閱覽室等空間中，形塑靜謐、低奢與溫暖的多重氛圍。</div>
+          <div class="bg-text">GEM<br class="pc"> OF PINSHI</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="view" class="items">
+    <div class="item-title">景觀設計｜自然而然，理所當然。</div>
+    <div class="item">
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/1.webp" /> <div class="photo-desc">廊道空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/2.webp" /> <div class="photo-desc">迴車道景觀空間透視圖</div></swiper-slide>
+        </swiper>
+      </div>
+      <div class="content">
+        <div>
+          <!--div class="t1">國城寳實廊道景觀與空間 <br class="pc">透視圖</div-->
+          <div class="t2">模糊室內外空間 創造友善開放的場域</div>
+          <div class="txt">整體景觀設計以城市氛圍為出發點，透過建築退縮與雙排植栽，舒緩現代都市緊湊感；內部採圍合式社區設計，打開空間界線，營造開放友善的交流場域。景觀串聯各棟與公設，弱化建築量體、模糊室內外界線，讓人在空間中感受流動與曖昧的自然生活感，每一處綠意都是空間過渡的語言，也是日常生活的延伸。</div>
+          <div class="bg-text">GEM<br class="pc"> OF PINSHI</div>
+        </div>
+      </div>
+    </div>
+    <div class="item">
+      <div class="photo">
+        <swiper
+          :modules="modules"
+          loop
+          :pagination="{
+            clickable: true
+          }"
+          :autoplay="{
+            delay: 3000,
+            disableOnInteraction: false,
+          }"
+        >
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/3.webp" /> <div class="photo-desc">全日餐廳與廊道建築立面關係</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/4.webp" /> <div class="photo-desc">游泳池公設空間透視圖</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/2/5.webp" /> <div class="photo-desc">游泳池公設空間透視圖</div></swiper-slide>
+        </swiper>
+      </div>
+      <div class="content">
+        <div>
+          <!--div class="t1">國城寳實戶外庭院 <br class="pc">透視圖</div-->
+          <div class="t2">用風與綠創造物理降溫 實現舒適戶外空間</div>
+          <div class="txt">應對台南炎熱與高溫環境，景觀設計著眼打造自在停留的涼爽戶外空間。綜合運用多種降溫手法，除了創造陰影樹蔭、配置水景之外，讓風透過高低差屏障自由流通，選擇隨風搖曳的植栽樹種，讓通風更加自然，並考量較為冰涼的鋪面與戶外座椅的材質，提供整體宜人體感。</div>
           <div class="bg-text">GEM<br class="pc"> OF PINSHI</div>
         </div>
       </div>
@@ -87,7 +202,6 @@
   }
 
   .swiper-pagination-bullet {
-    display: none;
     width: func.size-m(40);
     height: func.size-m(5);
     opacity: .67;
@@ -125,7 +239,6 @@
   }
 }
 
-
 .txt {
   font-size: func.size-m(12);
   line-height: func.size-m(20);
@@ -160,55 +273,6 @@
       line-height: func.size(67);
     }
   }
-}
-
-.img-group{
-  position: relative;
-
-  .photo-desc {
-      position: absolute;
-      top: func.size-m(14);
-      left: func.size-m(30);
-      color: #FFF;
-      //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
-      font-family: "Noto Sans TC";
-      font-size: func.size-m(11);
-      font-weight: 700;
-      letter-spacing: .05em;
-      z-index: 1;
-      @media screen and (min-width:768px) {
-        top: auto;
-        left: auto;
-        bottom: func.size(58);
-        right: func.size(151);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
-        font-size: func.size(22);
-        font-weight: 400;
-        letter-spacing: .05em;
-      }
-    }
-    .photo-desc1 {
-      position: absolute;
-      bottom: func.size-m(14);
-      left: func.size-m(30);
-      color: #FFF;
-      //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
-      font-family: "Noto Sans TC";
-      font-size: func.size-m(9);
-      font-weight: 500;
-      letter-spacing: .05em;
-      z-index: 1;
-      @media screen and (min-width:768px) {
-        top: auto;
-        right: auto;
-        bottom: func.size(58);
-        left: func.size(151);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
-        font-size: func.size(22);
-        font-weight: 400;
-        letter-spacing: .05em;
-      }
-    }
 }
 
 .items {
@@ -253,8 +317,6 @@
       }
     }
 
-
-
     .photo-desc {
       position: absolute;
       top: func.size-m(14);
@@ -271,28 +333,6 @@
         left: auto;
         bottom: func.size(58);
         right: func.size(151);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
-        font-size: func.size(22);
-        font-weight: 400;
-        letter-spacing: .05em;
-      }
-    }
-    .photo-desc1 {
-      position: absolute;
-      bottom: func.size-m(14);
-      left: func.size-m(30);
-      color: #FFF;
-      //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
-      font-family: "Noto Sans TC";
-      font-size: func.size-m(9);
-      font-weight: 500;
-      letter-spacing: .05em;
-      z-index: 1;
-      @media screen and (min-width:768px) {
-        top: auto;
-        right: auto;
-        bottom: func.size(58);
-        left: func.size(151);
         text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
         font-size: func.size(22);
         font-weight: 400;

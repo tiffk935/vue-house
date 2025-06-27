@@ -142,9 +142,9 @@
         }"
         @slideChange="s2OnSlideChange"
       >
-        <swiper-slide><img src="@/assets/pinshi/s6/1.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s6/2.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s6/3.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s6/1.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div><div class="photo-desc2">此為3D透視示意圖，周遭環境係電腦合成，建設公司保有外觀修正之權利</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s6/2.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div><div class="photo-desc2">此為3D透視示意圖，周遭環境係電腦合成，建設公司保有外觀修正之權利</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s6/3.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div><div class="photo-desc2">此為3D透視示意圖，周遭環境係電腦合成，建設公司保有外觀修正之權利</div></swiper-slide>
       </swiper>
       <div class="pagi">
         <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
@@ -371,6 +371,28 @@ img {
         letter-spacing: .05em;
       }
       }
+      .photo-desc2 {
+      position: absolute;
+      bottom: func.size-m(10);
+      left: func.size-m(10);
+      color: #FFF;
+      text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(9);
+      font-weight: 500;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        bottom: auto;
+        right: auto;
+        top: func.size(10);
+        left: func.size(10);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(12);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+    }
     }
     
 

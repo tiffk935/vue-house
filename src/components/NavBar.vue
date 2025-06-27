@@ -41,8 +41,6 @@
           <RouterLink to="/pinshi-architecture">寳實建築</RouterLink>
           <ul class="sub-menu">
             <li><RouterLink to="/pinshi-architecture#architecture">建築規劃</RouterLink></li>
-            <li><RouterLink to="/pinshi-architecture#view">景觀設計</RouterLink></li>
-            <li><RouterLink to="/pinshi-architecture#public">公設美學</RouterLink></li>
           </ul>
         </li>
         <li><RouterLink to="/news">最新消息</RouterLink></li>

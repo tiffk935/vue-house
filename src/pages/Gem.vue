@@ -62,6 +62,8 @@
   <section class="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img src="@/assets/pinshi-architecture/main.webp" />
+      <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
+      <div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
       <h2>寳實建築</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -428,6 +430,7 @@ h2 {
 }
 
 .archi {
+  position: relative;
   padding: 0 0 func.size-m(47) 0;
   @media screen and (min-width:768px) {
     padding: 0 0 func.size(98) 0;
@@ -438,6 +441,51 @@ h2 {
     padding: 0;
     @media screen and (min-width:768px) {
       margin: 0 0 func.size(34) 0;
+    }
+
+    .photo-desc {
+      position: absolute;
+      top: func.size-m(70);
+      left: func.size-m(30);
+      color: #FFF;
+      //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(11);
+      font-weight: 700;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        left: auto;
+        bottom: func.size(58);
+        right: func.size(151);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(22);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
+    }
+    .photo-desc1 {
+      position: absolute;
+      bottom: func.size-m(14);
+      left: func.size-m(30);
+      color: #FFF;
+      //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
+      font-family: "Noto Sans TC";
+      font-size: func.size-m(9);
+      font-weight: 500;
+      letter-spacing: .05em;
+      z-index: 1;
+      @media screen and (min-width:768px) {
+        top: auto;
+        right: auto;
+        bottom: func.size(58);
+        left: func.size(151);
+        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        font-size: func.size(22);
+        font-weight: 400;
+        letter-spacing: .05em;
+      }
     }
 
     img {
