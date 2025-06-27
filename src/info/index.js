@@ -2,7 +2,7 @@ const caseName = "夢公園"
 
 export default {
     caseid: "1d02eb74-ef57-4613-a461-951c876f8674",
-    case_code: "dreampark",
+    //case_code: "dreampark",
     address: "台南市東區小東路196號旁<br class='md:hidden'>(與光明街交叉口)",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3672.6477431866674!2d120.225761!3d22.9999774!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e77db3ca021f3%3A0xcfa5beddea6441d4!2z5riF5pmv6bqf5aSi5YWs5ZyS!5e0!3m2!1szh-TW!2stw!4v1706173268088!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/w7thtZwbL8crRv2e8",
