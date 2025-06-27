@@ -42,9 +42,8 @@
                   <div class="desc">重視建築實踐中的團隊合作能量與個別建築作品的獨特與藝術性，在建築實踐中揉和跨領域專業合作與實驗性創作啟發，同時關注都市規劃設計領域，張瑪龍建築師曾實際參與或主持高雄與台南多項都市景觀規劃，包括愛河綜合發展計畫、台南孔廟周邊都市更新等。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■2025大阪世界博覽會玉山館 ■高雄衛武營都會公園<br>
-                    ■高雄海洋及流行音樂中心 ■台南市立圖書館總館<br>
-                    ■嘉義故宮博物院南院新館 ■台南火車站新建工程
+                    ■ 2025大阪世界博覽會玉山館　 ■ 台南市立圖書館總館<br>
+                    ■ 嘉義故宮博物院南院新館　■ 台南火車站新建工程
                   </div>
                 </div>
               </div>
@@ -101,8 +100,7 @@
                   <div class="desc">林澤森建築師畢業於成功大學建築系碩士，以 CD HOUSE 揪團起厝為名，認為 Construction（營造）與 Design（設計）應完美融合，建築設計必須考慮施工性，而營造也必須有設計美感，兩相輝映才能充分體現建築的真實價值。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 高雄小城 ■ 台南煙波飯店 <br>
-                    ■ 台南煙波PARK ■ 台南漾煙波
+                    ■ 高雄小城　■ 台南煙波飯店
                   </div>
                 </div>
               </div>
@@ -156,8 +154,8 @@
                   <div class="desc">賈書恆建築師事務所於台北、高雄、中壢均設有辦公室，為具備綜合性專長之建築事務所，曾榮獲 2009年、2011年金獅首獎及第三屆景觀設計評選大獎等殊榮；20 年來秉持高度創意、優良造型、完善機能等全方位理念，作品橫跨軍事營區、超高層建築、集合式住宅、都市更新等多樣面向。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 國城賦格 ■ 國城UFO<br>
-                    ■ 高雄科技園區 ■ 義大天悅飯店
+                    ■ 國城賦格　■ 國城UFO<br>
+                    ■ 高雄軟體園區　■ 義大天悅飯店
                   </div>
                 </div>
               </div>
@@ -210,8 +208,8 @@
                   <div class="desc">致力於發現土地與環境獨具的紋理，融入生活與想像的場景，如同矩陣間組織運用，讓人遊走於其中；交織人文與空間對白的詩情，填充建築介質，形成對話與形象、故事與畫面。建築作品多次囊括國內獎項，包含台灣建築獎、高雄園治獎、高雄綠建築大獎與國家建築金獅獎設計首獎。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 春福煙波四季 ■ 宗大青田<br>
-                    ■ 台南愛爾麗總部 ■ 天步私人住宅
+                    ■ 春福煙波四季　■ 宗大青田<br>
+                    ■ 台南煙波PARK　■ 天步私人住宅
                   </div>
                 </div>
               </div>
@@ -262,8 +260,8 @@
                   <div class="desc">科建聯合工程顧問成立於 1989 年，承攬國內多家知名建設公司業務，並與李祖源、李天鐸、郭旭原等建築師事務所有著深厚的合作關係；提供最新工法及價值工程等設計服務，並擁有如複合式二元建築結構等多項台灣結構設計專利。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 高雄海洋及流行音樂中心 ■ 台中NTC國家商貿中心<br>
-                    ■ 台北藍海 ■ 台北豐盈海
+                    ■ 高雄海洋及流行音樂中心　■ 台中NTC國家商貿中心<br>
+                    ■ 台北藍海　■ 台北豐盈海
                   </div>
                 </div>
               </div>
@@ -321,12 +319,11 @@
                 <div class="content">
                   <div class="company">Keiji Ashizawa Design</div>
                   <div class="name">芦沢啓治 建築設計事務所</div>
-                  <div class="desc">芦沢啓治建跨足建築、室內、傢俱、產品四大領域，主張忠於本質的「誠實設計」，讓設計發揮其本質的價值，成為人們實現更理想生活的工具，先後成立 KEIJ IASHIZAWA DESIGN、石卷工房、與日本傢俱大廠KARIMOKU 推出全新品牌 Karimoku Case，從建築到產品，實踐他對使用者的細膩思考。</div>
+                  <div class="desc">芦沢啓治建跨足建築、室內、傢俱、產品四大領域，主張忠於本質的「誠實設計」，讓設計發揮其本質的價值，成為人們實現更理想生活的工具，先後成立 KEIJI ASHIZAWA、石卷工房、與日本傢俱大廠KARIMOKU 推出全新品牌 Karimoku Case，從建築到產品，實踐他對使用者的細膩思考。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■東京Trunk Hotel yoyogi park ■上海Blue Bottle<br>
-                    ■東京Bellustar Hotel Penthouse ■東京澀谷Blue Bottle<br>
-                    ■名古屋Blue Bottle ■東京Azabu Hills Residence
+                    ■ 東京Trunk Hotel yoyogi park　■ 上海Blue Bottle<br>
+                    ■ 東京Bellustar Hotel Penthouse　■ 東京澀谷Blue Bottle<br>
                   </div>
                 </div>
               </div>
@@ -383,8 +380,9 @@
                   <div class="desc">好的建築必須在精神向度上觸動人心，建構出具有場所精神的空間經驗，是實現建築精神最有力量的途徑。其建築與室內作品，源自對台灣城市空間的觀察，以「連續性」與「場所感」與都市空間積極對話，其作品涵蓋公共建築、商業餐飲空間、集合住宅與藝術地景等多個面向。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 嘉義市立美術館 ■ 國家圖書館南部分館暨聯合典藏中心<br>
-                    ■ 台豐玉嘉會館高球俱樂部 ■ 高雄雋Gen
+                    ■ 嘉義市立美術館　■ 國家圖書館南部分館暨聯合典藏中心<br>
+                    ■ SHO承 日本料理餐廳部　■ 高雄雋GEN<br>
+                    ■ Liberté 法式餐廳
                   </div>
                 </div>
               </div>
@@ -443,8 +441,8 @@
                   <div class="desc">擁有號稱歐洲麻省理工的荷蘭 Delft University of Technology 取得城市設計系碩士學位，以及荷蘭公共工程制定總體景觀規劃之國際經驗，作品以特定場域、地形為導向、增強人類活動的設計手法為特色，跨越自然與城市環境，設計領域包括商業設施、度假設施、公共設施及私人住宅等景觀設計工作。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■上海Blue Bottle ■ 千葉縣立山花園<br>
-                    ■輕井澤千瀧花園 ■ 群馬縣桐生市新川公園
+                    ■ 上海Blue Bottle　■ 千葉縣立山花園<br>
+                    ■ 輕井澤千瀧花園　■ 群馬縣桐生市新川公園
                   </div>
                 </div>
               </div>
@@ -504,8 +502,8 @@
                   <div class="desc">市川善幾畢業於日本最早也最先進的設計學校-桑澤設計學院，深受包浩斯風格影響的他，重視的是渴望更接近有序的大自然所創造的美麗景色和現象，極簡的照明專注真正需要的光，而不是盲目照亮空間，目標是更邏輯與有機的照明設計，而非只依賴主觀意識。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■上海Blue Bottle ■日本兵庫縣Blue Bottle<br>
-                    ■東京新宿9h Nine Hours ■東京Better Bodies Hi
+                    ■ 名古屋Blue Bottle　■ 東京TRUNK(HOTEL) YOYOGI PARK<br>
+                    ■ 上海 Blue Bottle　■ AZABU HILLS RESIDENCE
                   </div>
                 </div>
               </div>
@@ -562,8 +560,8 @@
                   <div class="desc">偶得設計陳怡彰主持設計畢業於紐約Parsons設計學院碩士，作品囊括美國、英國、義大利、台灣等各大獎項，陳怡彰認為，照明設計是利用光線的鋪排重新詮釋空間層次、材料紋理與設計細節，將美好帶入使用者的心之中，而住宅照明設計的核心在與周邊環境、住民的溫柔相處，同時表現出建築本身的自明性。</div>
                   <div class="work">
                     建築作品｜<br>
-                    ■ 泰安產險大樓 ■ 新竹市美術館<br>
-                    ■ 台南歷史文化園區 孔廟周邊 ■ 台中花博竹跡
+                    ■ 泰安產險大樓　■ 新竹市美術館<br> 
+                    ■ 台南歷史文化園區 孔廟周邊　■ 台中花博竹跡
                   </div>
                 </div>
               </div>
@@ -782,7 +780,7 @@
     @media screen and (min-width:768px) {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: flex-end;
     }
   }
 
@@ -817,18 +815,18 @@
       top: func.size-m(14);
       left: func.size-m(30);
       color: #FFF;
-      text-shadow: 0px func.size-m(4) func.size-m(4) rgba(0, 0, 0, 0.55);
+      //text-shadow: 0px func.size-m(4) func.size-m(4) rgba(0, 0, 0, 0.55);
       font-family: "Noto Sans TC";
       font-size: func.size-m(12);
-      font-weight: 700;
+      font-weight: 500;
       letter-spacing: .05em;
       z-index: 1;
       @media screen and (min-width:768px) {
         top: auto;
         left: auto;
-        bottom: func.size(58);
+        bottom: func.size(40);
         right: func.size(151);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+        //text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
         font-size: func.size(22);
         font-weight: 400;
         letter-spacing: .05em;
@@ -883,6 +881,10 @@
     @media screen and (min-width:768px) {
       max-width: func.size(574);
     }
+  }
+
+  .work{
+    white-space:nowrap;
   }
 
   .control {

@@ -9,8 +9,8 @@
           <RouterLink to="/team">關於國城</RouterLink>
           <RouterLink to="/work">國城作品</RouterLink>
           <RouterLink to="/pinshi">平實特區</RouterLink><br class="mob">
-          <RouterLink to="/pinshi-team">寶實團隊</RouterLink><br class="pc">
-          <RouterLink to="/pinshi-architecture">寶實建築</RouterLink>
+          <RouterLink to="/pinshi-team">寳實團隊</RouterLink><br class="pc">
+          <RouterLink to="/pinshi-architecture">寳實建築</RouterLink>
           <RouterLink to="/news">最新消息</RouterLink>
           <RouterLink to="/vision">平實城市願景館</RouterLink>
         </div>

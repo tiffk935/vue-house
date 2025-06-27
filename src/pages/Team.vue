@@ -328,11 +328,6 @@ const list1 = [
 ];
 const list2 = [
   {
-    title: 'Li.nu',
-    desc: '日本料理',
-    name: '來栖 けい'
-  },
-  {
     title: '雋GEN',
     desc: '頂級粵菜',
     name: '<span>行政主廚</span> 胡鑑波',
@@ -349,6 +344,11 @@ const list2 = [
     desc: '日本料理',
     name: '藤本 詳一',
     icon: true
+  },
+    {
+    title: 'Li.nu',
+    desc: '日本料理',
+    name: '來栖 けい'
   },
 ];
 

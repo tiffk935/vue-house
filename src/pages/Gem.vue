@@ -46,7 +46,7 @@
 
   <section class="team">
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <h2>寶實團隊</h2>
+      <h2>寳實團隊</h2>
     </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/pinshi-team/home.webp" />
@@ -62,7 +62,7 @@
   <section class="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img src="@/assets/pinshi-architecture/main.webp" />
-      <h2>寶實建築</h2>
+      <h2>寳實建築</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際建築語彙 <br class="mob">演繹優雅生活尺度</div>

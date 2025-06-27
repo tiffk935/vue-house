@@ -792,7 +792,8 @@
     @media screen and (min-width:768px) {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: flex-end;
+
     }
   }
 
@@ -899,6 +900,10 @@
     @media screen and (min-width:768px) {
       max-width: func.size(574);
     }
+  }
+
+  .work{
+    white-space:nowrap !important;
   }
 
   .control {
