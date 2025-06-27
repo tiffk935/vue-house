@@ -46,7 +46,7 @@
 
   <section class="team">
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <h2>平實團隊</h2>
+      <h2>寶實團隊</h2>
     </div>
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/pinshi-team/home.webp" />
@@ -61,8 +61,8 @@
 
   <section class="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img src="@/assets/pinshi-architecture/main.jpg" />
-      <h2>平實建築</h2>
+      <img src="@/assets/pinshi-architecture/main.webp" />
+      <h2>寶實建築</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際建築語彙 <br class="mob">演繹優雅生活尺度</div>
@@ -120,14 +120,15 @@
             <div class="item"><span>投資興建</span> ｜ <span>國城建設股份有限公司</span></div>
             <div class="item"><span>營造工程</span> ｜ <span>盈舜營造股份有限公司</span></div>
             <div class="item"><span>建築代銷</span> ｜ <span>聯碩地產行銷團隊</span></div>
-            <div class="item"><span>平面設計</span> ｜ <span>陳俊廷建築師事務所、林澤森建築師事務所<br>賈書恆建築師事務所</span></div>
+            <div class="item"><span>平面設計</span> ｜ <span>陳俊廷建築師事務所<br>林澤森建築師事務所<br>賈書恆建築師事務所</span> <span class="mark">＊按姓氏筆畫排列</span></div>
             <div class="item"><span>立面設計</span> ｜ <span>張瑪龍陳玉霖聯合建築師事務所</span></div>
             <div class="item"><span>公設設計</span> ｜ <span>芦沢啓治 建築師事務所</span></div>
             <div class="item"><span>景觀設計</span> ｜ <span>橋內庭園設計 橋内智也</span></div>
           </div>
           <div class="list">
-            <div class="item"><span>燈光設計</span> ｜ <span>科建聯合工程顧問有限公司</span></div>
-            <div class="item"><span>建照號碼</span> ｜ <span>補</span></div>
+            <div class="item"><span>燈光設計</span> ｜ <span>AURORA Inc 市川善幾<br>偶得設計 陳怡彰</span></div>
+            <div class="item"><span>結構工程</span> ｜ <span>科建聯合工程顧問有限公司</span></div>
+            <div class="item"><span>建照號碼</span> ｜ <span>（114）南工造字第00976號</span></div>
             <div class="item"><span>經 紀 人</span> ｜ <span>李聆榕 (107)南市字第00668號</span></div>
             <div class="item"><span>建案位置</span> ｜ <span>台南市東區平實段2、3、3-1等三筆地號</span></div>
             <div class="item"><span>接待中心</span> ｜ <span>台南市東區平實路／後甲一路口</span></div>
@@ -293,8 +294,8 @@ h2 {
     cursor: pointer;
     transition: all .3s;
     @media screen and (min-width:768px) {
-      top: func.size(560);
-      left: func.size(1532);
+      top: func.size(575);
+      left: func.size(1513);
       border: func.size(1) solid #219664;
       font-size: func.size(24);
       width: func.size(175.05);
@@ -701,6 +702,7 @@ h2 {
     }
 
     .item {
+      position: relative;
       display: flex;
       font-size: func.size-m(12);
       font-weight: 500;
@@ -717,6 +719,20 @@ h2 {
           display: inline;
         }
       }
+
+      .mark{
+          position: absolute;
+          color: #999999 !important;
+          font-size: func.size-m(10);
+          bottom: func.size-m(15);
+          right: func.size-m(0);
+
+          @media screen and (min-width:768px) {
+           font-size: func.size(12);
+           bottom: func.size(25);
+           right: func.size(10);
+          }
+        }
     }
   }
 }

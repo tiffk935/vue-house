@@ -1,4 +1,4 @@
-<template>
+.team<template>
   <section id="main">
     <div class="bg"></div>
     <div class="content">
@@ -9,12 +9,11 @@
 
   <div>
     <section id="architecture" class="team">
-      <div class="people">
-        <Transition>
-          <div class="person" v-if="team1Active === 1">
+        <div class="team-title">建築規劃</div>
+
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">建築規劃</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -27,12 +26,14 @@
                       disableOnInteraction: false,
                     }"
                   >
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc">張瑪龍 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">陳玉霖 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">2025大阪世博台灣館</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc"></div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">2025 大阪世博 Tech World 館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">國立故宮博物院南部院區二館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">工研院光復院區研發大樓</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/7.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/8.webp" /> <div class="photo-desc">北港文化中心</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -59,23 +60,22 @@
                     disableOnInteraction: false,
                   }"
                 >
-                  <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc">張瑪龍 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">陳玉霖 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">2025大阪世博台灣館</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
+                  <swiper-slide><img src="@/assets/pinshi-team/1/1/1.webp" /> <div class="photo-desc"></div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/2.webp" /> <div class="photo-desc">2025 大阪世博 Tech World 館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/3.webp" /> <div class="photo-desc">台南市立圖書館 總館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/4.webp" /> <div class="photo-desc">國立故宮博物院南部院區二館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/5.webp" /> <div class="photo-desc">工研院光復院區研發大樓</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/6.webp" /> <div class="photo-desc">台南火車站新建工程</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/7.webp" /> <div class="photo-desc">台南市東區 裕文圖書館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/1/8.webp" /> <div class="photo-desc">北港文化中心</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
 
-        <Transition>
-          <div class="person" v-if="team1Active === 2">
-            <div class="flex">
+        <div class="person">
+            <div class="flex left">
               <div>
-                <div class="team-title">建築規劃</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -91,8 +91,8 @@
                     <swiper-slide><img src="@/assets/pinshi-team/1/2/1.webp" /> <div class="photo-desc">林澤森 建築師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/1/2/2.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/1/2/3.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城全區規劃</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -121,19 +121,16 @@
                   <swiper-slide><img src="@/assets/pinshi-team/1/2/1.webp" /> <div class="photo-desc">林澤森 建築師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/1/2/2.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/1/2/3.webp" /> <div class="photo-desc">台南煙波大飯店</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/4.webp" /> <div class="photo-desc">高雄小城全區規劃</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/2/5.webp" /> <div class="photo-desc">高雄小城</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
-        
-        <Transition>
-          <div class="person" v-if="team1Active === 3">
+
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">建築規劃</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -147,8 +144,10 @@
                     }"
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/1/3/1.webp" /> <div class="photo-desc">賈書恆 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/4.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/5.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -175,19 +174,18 @@
                   }"
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/1/3/1.webp" /> <div class="photo-desc">賈書恆 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/2.webp" /> <div class="photo-desc">國城UFO</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/3.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/4.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/3/5.webp" /> <div class="photo-desc">國城賦格</div></swiper-slide>
                 </swiper>
               </div>
             </div>
-          </div>
-        </Transition>
+          </div>  
 
-        <Transition>
-          <div class="person" v-if="team1Active === 4">
-            <div class="flex">
+        <div class="person">
+            <div class="flex left">
               <div>
-                <div class="team-title">建築規劃</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -201,8 +199,9 @@
                     }"
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/1/4/1.webp" /> <div class="photo-desc">陳俊廷 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">成大瑞豪</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">台南煙波四季</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/4.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -229,19 +228,17 @@
                   }"
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/1/4/1.webp" /> <div class="photo-desc">陳俊廷 建築師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">成大瑞豪</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/2.webp" /> <div class="photo-desc">台南煙波PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/3.webp" /> <div class="photo-desc">台南煙波四季</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/1/4/4.webp" /> <div class="photo-desc">宗大青田</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
 
-        <Transition>
-          <div class="person" v-if="team1Active === 5">
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">建築規劃</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -258,7 +255,6 @@
                     <swiper-slide><img src="@/assets/pinshi-team/1/5/2.webp" /> <div class="photo-desc">高雄海洋及流行音樂中心</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/1/5/3.webp" /> <div class="photo-desc">鳳山都更好</div></swiper-slide>
                   </swiper>
-                  <div class="photo-desc">劉紹魁 建築師</div>
                 </div>
                 <div class="content">
                   <div class="company">科建聯合工程顧問</div>
@@ -290,25 +286,16 @@
               </div>
             </div>
           </div>
-        </Transition>
-      </div>
 
-      <div class="control">
-        <div class="item" :class="{active: team1Active === 1}" @click="team1Active = 1">張瑪龍陳玉霖聯合建築師事務所</div>
-        <div class="item" :class="{active: team1Active === 2}" @click="team1Active = 2">CD HOUSE 林澤森 建築師事務所</div>
-        <div class="item" :class="{active: team1Active === 3}" @click="team1Active = 3">賈書恆 建築師事務所</div>
-        <div class="item" :class="{active: team1Active === 4}" @click="team1Active = 4">陳俊廷 建築師事務所</div>
-        <div class="item" :class="{active: team1Active === 5}" @click="team1Active = 5">科建聯合工程顧問</div>
-      </div>
     </section>
 
+
     <section id="public" class="team">
-      <div class="people">
-        <Transition>
-          <div class="person" v-if="team2Active === 1">
+        <div class="team-title">公設美學</div>
+
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">公設美學</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -323,7 +310,7 @@
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/1.webp" /> <div class="photo-desc">芦沢啓治 建築師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/2.webp" /> <div class="photo-desc">2023 BELLUSTAR Penthouse</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PAR</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/4.webp" /> <div class="photo-desc">2023 House in Aoyama</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/5.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/6.webp" /> <div class="photo-desc">2024 Blue Bottle Coffee Nagoya Sakae Cafe</div></swiper-slide>
@@ -357,7 +344,7 @@
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/2/1/1.webp" /> <div class="photo-desc">芦沢啓治 建築師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/2.webp" /> <div class="photo-desc">2023 BELLUSTAR Penthouse</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/2/1/3.webp" /> <div class="photo-desc">2023 TRUNK(HOTEL) YOYOGI PAR</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/4.webp" /> <div class="photo-desc">2023 House in Aoyama</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/5.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/2/1/6.webp" /> <div class="photo-desc">2024 Blue Bottle Coffee Nagoya Sakae Cafe</div></swiper-slide>
@@ -367,13 +354,10 @@
               </div>
             </div>
           </div>
-        </Transition>
 
-        <Transition>
-          <div class="person" v-if="team2Active === 2">
-            <div class="flex">
+        <div class="person">
+            <div class="flex left">
               <div>
-                <div class="team-title">公設美學</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -425,22 +409,15 @@
               </div>
             </div>
           </div>
-        </Transition>
-      </div>
-
-      <div class="control">
-        <div class="item" :class="{active: team2Active === 1}" @click="team2Active = 1">Keiji Ashizawa Design芦沢啓治建築設計事務所</div>
-        <div class="item" :class="{active: team2Active === 2}" @click="team2Active = 2">擊壤設計</div>
-      </div>
     </section>
 
+
     <section id="view" class="team">
-      <div class="people">
-        <Transition>
-          <div class="person" v-if="team3Active === 1">
+        <div class="team-title">景觀設計</div>
+
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">景觀設計</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -454,9 +431,10 @@
                     }"
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/3/1/1.webp" /> <div class="photo-desc">橋內智也 景觀設計師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023_Blue Bottle Coffee Qiantan Café</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/5.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -483,28 +461,23 @@
                   }"
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/3/1/1.webp" /> <div class="photo-desc">橋內智也 景觀設計師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023_Blue Bottle Coffee Qiantan Café</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/2.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/3.webp" /> <div class="photo-desc">2023 Blue Bottle Coffee Qiantan Café</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/4.webp" /> <div class="photo-desc">群馬縣桐生市新川公園</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/3/1/5.webp" /> <div class="photo-desc">鎌倉山の庭</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
-      </div>
-
-      <div class="control">
-        <div class="item" :class="{active: team3Active === 1}" @click="team3Active = 1">HLD 橋內庭園設計</div>
-      </div>
     </section>
 
+
     <section id="light" class="team">
-      <div class="people">
-        <Transition>
-          <div class="person" v-if="team4Active === 1">
+        <div class="team-title">燈光設計</div>
+
+        <div class="person">
             <div class="flex">
               <div>
-                <div class="team-title">燈光設計</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -519,9 +492,10 @@
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/4/1/1.webp" /> <div class="photo-desc">市川 善幾 燈光設計師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/4/1/2.webp" /> <div class="photo-desc">AZABU HILLS RESIDENCE</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle Coffee KOBE HANKYU CAFE</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle 上海店 第二分店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle 阪急神戶店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">Blue Bottle 上海 第五分店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/6.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -549,20 +523,18 @@
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/4/1/1.webp" /> <div class="photo-desc">市川 善幾 燈光設計師</div></swiper-slide>
                     <swiper-slide><img src="@/assets/pinshi-team/4/1/2.webp" /> <div class="photo-desc">AZABU HILLS RESIDENCE</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle Coffee Jakc Cafe</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle Coffee KOBE HANKYU CAFE</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/3.webp" /> <div class="photo-desc">Blue Bottle 上海店 第二分店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/4.webp" /> <div class="photo-desc">Blue Bottle 阪急神戶店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/5.webp" /> <div class="photo-desc">Blue Bottle 上海 第五分店</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/1/6.webp" /> <div class="photo-desc">TRUNK(HOTEL) YOYOGI PARK</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
 
-        <Transition>
-          <div class="person" v-if="team4Active === 2">
-            <div class="flex">
+        <div class="person">
+            <div class="flex left">
               <div>
-                <div class="team-title">燈光設計</div>
                 <div class="photo mob">
                   <swiper
                     :modules="modules"
@@ -576,11 +548,12 @@
                     }"
                   >
                     <swiper-slide><img src="@/assets/pinshi-team/4/2/1.webp" /> <div class="photo-desc">陳怡彰 燈光設計師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">太子建設 太子城</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">太子建設 太子峰雲</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">長榮大學 長榮堂</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">惠宇建設 上和</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">精銳建設 闊</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">竹跡館｜2018台中花博</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">竹跡館｜2018台中花博</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">新竹美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">新竹美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">台南歷史文化園區-台南孔廟周邊</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/7.webp" /> <div class="photo-desc">台南歷史文化園區-台南孔廟周邊</div></swiper-slide>
                   </swiper>
                 </div>
                 <div class="content">
@@ -607,23 +580,20 @@
                   }"
                 >
                   <swiper-slide><img src="@/assets/pinshi-team/4/2/1.webp" /> <div class="photo-desc">陳怡彰 燈光設計師</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">太子建設 太子城</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">太子建設 太子峰雲</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">長榮大學 長榮堂</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">惠宇建設 上和</div></swiper-slide>
-                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">精銳建設 闊</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/2.webp" /> <div class="photo-desc">竹跡館｜2018台中花博</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/3.webp" /> <div class="photo-desc">竹跡館｜2018台中花博</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/4.webp" /> <div class="photo-desc">新竹美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/5.webp" /> <div class="photo-desc">新竹美術館</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/6.webp" /> <div class="photo-desc">台南歷史文化園區-台南孔廟周邊</div></swiper-slide>
+                    <swiper-slide><img src="@/assets/pinshi-team/4/2/7.webp" /> <div class="photo-desc">台南歷史文化園區-台南孔廟周邊</div></swiper-slide>
                 </swiper>
               </div>
             </div>
           </div>
-        </Transition>
-      </div>
-      
-      <div class="control">
-        <div class="item" :class="{active: team4Active === 1}" @click="team4Active = 1">空間景觀燈光／AURORA 照明設計</div>
-        <div class="item" :class="{active: team4Active === 2}" @click="team4Active = 2">建築燈光／偶得設計</div>
-      </div>
+
     </section>
+
+
   </div>
 </template>
 
@@ -761,32 +731,52 @@
   }
 }
 
+
 .team {
-  padding: func.size-m(40) 0 0 0;
+  padding: func.size-m(40) 0 func.size-m(0) 0;
   font-size: func.size-m(12);
   line-height: func.size-m(20);
-  border-bottom: func.size-m(1) solid #000;
+  //border-bottom: func.size-m(1) solid #000;
   @media screen and (min-width:768px) {
-    padding: func.size(97) 0 0 0;
+    padding: func.size(100) 0 func.size(0) 0;
     font-size: func.size(22);
     line-height: func.size(45);
-    border-width: func.size(1);
+    //border-width: func.size(1);
+
+    
   }
 
-  .people {
-    position: relative;
-    height: 159vw;
-    @media screen and (min-width:768px) {
-      height: 41.4vw;
-    }
+      .team-title{
+        padding: func.size-m(10) 0 func.size-m(10) 0;
+        margin: func.size-m(0) func.size-m(30) func.size-m(30);
+        border-top:#000 1px solid;
+        border-bottom:#000 1px solid;
+        text-align: center;
+        font-size: func.size-m(20);
+        font-weight: 700;
 
-    .person {
-      position: absolute;
+        @media screen and (min-width:768px) {
+          font-size: func.size(40);
+          padding: func.size(30) 0 func.size(30) 0;
+          margin: func.size(0) func.size(145) func.size(100) ;
+          font-size: func.size(50);
+          font-weight: 300;
+
+        }
+
+      }
+
+      .person {
+      position: relative;
       top: 0;
       left: 0;
       width: 100%;
+      padding: func.size-m(0) 0 func.size-m(60) 0;
+
+      @media screen and (min-width:768px) {
+      padding: func.size(0) 0 func.size(150) 0;  
+      }
     }
-  }
 
   .flex {
     @media screen and (min-width:768px) {
@@ -796,19 +786,13 @@
     }
   }
 
-  .team-title {
-    text-align: center;
-    font-size: func.size-m(19);
-    font-weight: 700;
-    margin-bottom: func.size-m(17);
+  .left{
     @media screen and (min-width:768px) {
-      padding: 0 func.size(100) 0 func.size(140);
-      font-size: func.size(23);
-      margin-bottom: func.size(120);
-      letter-spacing: .02em;
-      text-align: left;
+    flex-direction: row-reverse;
     }
   }
+
+
 
   .photo {
     position: relative;
@@ -953,36 +937,9 @@
   }
 }
 
-.team:nth-child(even) {
-  @media screen and (min-width:768px) {
-    .flex {
-      flex-direction: row-reverse;
-    }
 
-    .team-title {
-      text-align: right;
-    }
 
-    .team-title, .content {
-      padding: 0 func.size(140) 0 func.size(100);
-    }
-  }
-}
 
-#public {
-  .team-title {
-    @media screen and (min-width:768px) {
-      margin-bottom: func.size(83);
-    }
-  }
-
-  .people {
-    height: 169vw;
-    @media screen and (min-width:768px) {
-      height: 41.4vw;
-    }
-  }
-}
 </style>
 
 <script setup>

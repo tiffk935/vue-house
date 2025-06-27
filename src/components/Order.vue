@@ -15,11 +15,7 @@
             <input type="text" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
           </div>
-          <div class="input-group">
-            <span>電子信箱</span>
-            <input type="text" :value="formData.email"
-              @input="(event) => (formData.email = event.target.value)" />
-          </div>
+          
         </div>
 
         <div>
@@ -27,6 +23,11 @@
             <span>參觀人數</span>
             <input type="text" :value="formData.people"
               @input="(event) => (formData.people = event.target.value)" />
+          </div>
+          <div class="input-group">
+            <span>電子信箱</span>
+            <input type="text" :value="formData.email"
+              @input="(event) => (formData.email = event.target.value)" />
           </div>
           <!-- <div class="input-group">
             <span>登錄方案</span>

@@ -11,8 +11,8 @@
         <RouterLink to="/team" @click="mobOpen = false">關於國城</RouterLink>
         <RouterLink to="/work" @click="mobOpen = false">國城作品</RouterLink>
         <RouterLink to="/pinshi" @click="mobOpen = false">平實特區</RouterLink>
-        <RouterLink to="/pinshi-team" @click="mobOpen = false">平實團隊</RouterLink>
-        <RouterLink to="/pinshi-architecture" @click="mobOpen = false">平實建築</RouterLink>
+        <RouterLink to="/pinshi-team" @click="mobOpen = false">寶實團隊</RouterLink>
+        <RouterLink to="/pinshi-architecture" @click="mobOpen = false">寶實建築</RouterLink>
         <RouterLink to="/news" @click="mobOpen = false">最新消息</RouterLink>
         <RouterLink to="/order" @click="mobOpen = false">預約表單</RouterLink>
       </div>
@@ -29,7 +29,7 @@
         <li><RouterLink to="/work">國城作品</RouterLink></li>
         <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
         <li class="has-children">
-          <RouterLink to="/pinshi-team">平實團隊</RouterLink>
+          <RouterLink to="/pinshi-team">寶實團隊</RouterLink>
           <ul class="sub-menu">
             <li><RouterLink to="/pinshi-team#architecture">建築規劃</RouterLink></li>
             <li><RouterLink to="/pinshi-team#public">公設美學</RouterLink></li>
@@ -38,7 +38,7 @@
           </ul>
         </li>
         <li class="has-children">
-          <RouterLink to="/pinshi-architecture">平實建築</RouterLink>
+          <RouterLink to="/pinshi-architecture">寶實建築</RouterLink>
           <ul class="sub-menu">
             <li><RouterLink to="/pinshi-architecture#architecture">建築規劃</RouterLink></li>
             <li><RouterLink to="/pinshi-architecture#view">景觀設計</RouterLink></li>

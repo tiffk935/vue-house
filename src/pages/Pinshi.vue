@@ -22,8 +22,11 @@
         @slideChange="s1OnSlideChange"
       >
         <swiper-slide><img src="@/assets/pinshi/s1/1.webp" /> <div class="photo-desc">台南科學園區</div></swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s1/2.webp" /> <div class="photo-desc">平實公園實景攝影</div></swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s1/3.webp" /> <div class="photo-desc">平實公園實景攝影</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/2.webp" /> <div class="photo-desc">台南科學園區</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/3.webp" /> <div class="photo-desc">台南科學園區</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/4.webp" /> <div class="photo-desc">沙崙智慧綠能園區</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/5.webp" /> <div class="photo-desc">沙崙智慧綠能園區</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s1/6.webp" /> <div class="photo-desc">沙崙智慧綠能園區</div></swiper-slide>
       </swiper>
       <div class="pagi">
         <div class="dot" :class="{active: num === s1SliderActiveIdx + 1}" v-for="num in Object.keys(s1Images).length"></div>
@@ -78,25 +81,42 @@
     </div>
   </section>
 
-  <section class="s4 tem-2">
-    <div class="img-group">
-      <img class="style" src="@/assets/pinshi/s4.webp" />
-    <div class="photo-desc1">座落於東區內的平實重劃區</div>
+
+
+  <section class="s2 tem-slider">
+    <div class="slider">
+      <swiper
+        :modules="modules"
+        :slidesPerView="'auto'"
+        loop
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        @slideChange="s2OnSlideChange"
+      >
+        <swiper-slide><img src="@/assets/pinshi/s4/1.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s4/2.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s4/3.webp" /> <div class="photo-desc">平實公園</div></swiper-slide>
+      </swiper>
+      <div class="pagi">
+        <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
+      </div>
     </div>
-    
     <div class="tem-txt">
       <div class="t1">
         <div>公園綠地</div>
-        高綠覆七公頃平實森林公園
+        高綠覆七公頃<br>平實森林公園
       </div>
       <div class="t2">平實公園南北延伸近百米，分流商業與住宅區動線；園內保留平實營區原生樹種，都會廣場、綠色森林、鄰里綠廊、環境藝術、陽光草坪等五大主題，打造台南東區都市之肺。</div>
     </div>
   </section>
 
+
   <section class="s5 tem-1">
     <div class="img-group">
       <img class="style" src="@/assets/pinshi/s5.webp" />
-    <div class="photo-desc1">交通情境示意圖</div>
+    <div class="photo-desc1">十字軸線</div>
     </div>
     
     <div class="tem-txt">
@@ -108,20 +128,38 @@
     </div>
   </section>
 
-  <section class="s6 tem-2">
-    <div class="img-group">
-      <img class="style" src="@/assets/pinshi/s6.webp" />
-    <div class="photo-desc1">平實捷運轉運站 透視示意圖</div>
+
+
+  <section class="s2 tem-slider">
+    <div class="slider">
+      <swiper
+        :modules="modules"
+        :slidesPerView="'auto'"
+        loop
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        @slideChange="s2OnSlideChange"
+      >
+        <swiper-slide><img src="@/assets/pinshi/s6/1.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s6/2.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s6/3.webp" /> <div class="photo-desc">平實捷運轉運站 透視示意圖</div></swiper-slide>
+      </swiper>
+      <div class="pagi">
+        <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length"></div>
+      </div>
     </div>
-    
     <div class="tem-txt">
       <div class="t1">
         <div>捷運轉運</div>
-        平實轉運站，藍綠雙線預定
+        平實轉運站<br>藍綠雙線預定
       </div>
       <div class="t2">約1.4公頃BOT平實森林轉運站於2023年動工，未來將集結市區客運、捷運、商場等功能；台南捷運藍線預計2026年動工，與綠線捷運交會平實轉運站，台南捷運未來即將成形。</div>
     </div>
   </section>
+
+
 
 
     <section class="s7 tem-slider">
