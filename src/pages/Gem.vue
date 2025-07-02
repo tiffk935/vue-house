@@ -61,9 +61,10 @@
 
   <section class="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img src="@/assets/pinshi-architecture/main.webp" />
+      <img class="pc" src="@/assets/pinshi-architecture/1/1.webp" />
+      <img class="mob" src="@/assets/pinshi-architecture/1/1m.webp" />
       <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
-      <div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
+      <div class="photo-desc1">此為建物外觀3D效果參考示意圖，<br class="mob">周遭環境係電腦合成示意表現。</div>
       <h2>寳實建築</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -445,8 +446,8 @@ h2 {
 
     .photo-desc {
       position: absolute;
-      top: func.size-m(70);
-      left: func.size-m(30);
+      bottom: func.size-m(13);
+      right: func.size-m(10);
       color: #FFF;
       //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
       font-family: "Noto Sans TC";
@@ -504,7 +505,7 @@ h2 {
       color: #fff;
       width: calc(100% - func.size-m(60));
       border-color: #fff;
-      margin: func.size-m(25) 0 0 0;
+      margin: func.size-m(15) 0 0 0;
       @media screen and (min-width:768px) {
         left: func.size(160);
         width: calc(100% - func.size(320));

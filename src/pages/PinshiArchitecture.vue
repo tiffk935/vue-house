@@ -1,7 +1,8 @@
 <template>
   <section id="main">
     <div class="img-group">
-    <img src="@/assets/pinshi-architecture/main.webp" />
+    <img class="pc" src="@/assets/pinshi-architecture/1/1.webp" />
+    <img class="mob" src="@/assets/pinshi-architecture/1/1m.webp" />
     <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
     <div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
     </div>
@@ -25,8 +26,7 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/1.webp" /> <div class="photo-desc">國城寳實 北向建築立面透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/2.webp" /> <div class="photo-desc">東北向建築立面透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/3.webp" /> <div class="photo-desc">全區仰角建築透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -51,7 +51,7 @@
             disableOnInteraction: false,
           }"
         >
-          <swiper-slide><img src="@/assets/pinshi-architecture/1/3.webp" /> <div class="photo-desc">全區仰角建築透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
+          <swiper-slide><img src="@/assets/pinshi-architecture/1/1.webp" /> <div class="photo-desc">國城寳實 北向建築立面透視圖</div><div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div></swiper-slide>
         </swiper>
       </div>
       <div class="content">
@@ -86,6 +86,8 @@
     padding-left: func.size(250);
   }
 
+
+
   .swiper-pagination-bullet {
     display: none;
     width: func.size-m(40);
@@ -112,14 +114,14 @@
 @use "@/assets/style/function.scss" as func;
 
 .mob {
-  display: block;
+  display: block !important;
   @media screen and (min-width:768px) {
-    display: none;
+    display: none !important;
   }
 }
 
 .pc {
-  display: none;
+  display: none !important;
   @media screen and (min-width:768px) {
     display: block;
   }
