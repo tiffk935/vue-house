@@ -123,7 +123,7 @@
 .pc {
   display: none !important;
   @media screen and (min-width:768px) {
-    display: block;
+    display: block !important;
   }
 }
 
