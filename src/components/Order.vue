@@ -120,7 +120,7 @@
     </div>
   </div>
 
-  <div class="address"><b>國城寳實 接待中心 地址</b>｜{{ info.address }}</div>
+  <div class="address"><b>國城寳實 接待中心 地址</b>｜<br>{{ info.address }}</div>
 
   <div class="location">
     <div class="container">
@@ -141,6 +141,12 @@
   @media screen and (min-width:768px) {
     padding: 0 func.size(304);
   }
+}
+.mo{
+  display: block;
+   @media screen and (min-width:768px) {
+    display: noned;
+   }
 }
 
 .form {
@@ -492,7 +498,7 @@
 
 .address {
   text-align: center;
-  font-size: func.size-m(11);
+  font-size: func.size-m(15);
   font-weight: 500;
   line-height: func.size-m(21);
   letter-spacing: .1em;
@@ -522,7 +528,7 @@
 
   .addr {
     width: 100%;
-    font-size: func.size-m(14);
+    font-size: func.size-m(12);
     font-weight: 500;
     line-height: func.size-m(21);
     letter-spacing: .05em;
@@ -530,7 +536,7 @@
     border: func.size-m(1) solid #299644;
     @media screen and (min-width:768px) {
       flex: 1;
-      font-size: func.size(29);
+      font-size: func.size(25);
       line-height: func.size(42);
       padding: func.size(27) func.size(56);
       border: func.size(1) solid #299644;

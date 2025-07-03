@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="info-btns">
-        <div class="info"><b>寳實</b>｜{{ info.address }}</div>
+        <div class="info"><b>接待中心</b>｜{{ info.address }}</div>
         <div class="btns">
           <RouterLink class="onder-btn" to="/order"><span>預約表單</span></RouterLink>
           <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
@@ -168,7 +168,7 @@ footer {
     padding: func.size-m(12) 0;
     margin-bottom: func.size-m(55);
     @media screen and (min-width:768px) {
-      font-size: func.size(24);
+      font-size: func.size(18.5);
       line-height: func.size(32);
       letter-spacing: .05em;
       border: none;
