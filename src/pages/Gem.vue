@@ -61,7 +61,7 @@
 
   <section class="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/pinshi-architecture/1/1.webp" />
+      <img class="pc" src="@/assets/pinshi-architecture/main.webp" />
       <img class="mob" src="@/assets/pinshi-architecture/1/1m.webp" />
       <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
       <div class="photo-desc1">此為建物外觀3D效果參考示意圖，<br class="mob">周遭環境係電腦合成示意表現。</div>
