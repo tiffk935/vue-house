@@ -1,6 +1,22 @@
 <template>
   <section id="contact">
     <div class="title"><span>CONTACT US</span>聯絡我們</div>
+    <div class="flex">
+      <img class="pic" src="@/assets/logo.png" />
+      <div class="info">
+        <div class="flex2">
+          <div class="left">
+            <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" />{{ info.phone }}</a>
+            <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" />Facebook 諮詢</a>
+          </div>
+          <div class="right">
+            <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
+            <a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a>
+            <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
   <section id="order">
@@ -13,19 +29,19 @@
 @use "@/assets/style/function.scss" as func;
 
 #contact {
-  padding: func.size-m(30) func.size-m(30) func.size-m(0) func.size-m(30);
+  padding: func.size-m(30) func.size-m(30) func.size-m(45) func.size-m(30);
   @media screen and (min-width:768px) {
-    padding: func.size(110) 0 func.size(0) 0;
+    padding: func.size(110) 0 func.size(161) 0;
   }
 
   .title {
     font-size: func.size-m(18);
     font-weight: 700;
     letter-spacing: .04em;
-    margin-bottom: func.size-m(0);
+    margin-bottom: func.size-m(36);
     @media screen and (min-width:768px) {
       font-size: func.size(33);
-      margin-bottom: func.size(50);
+      margin-bottom: func.size(168);
       padding: 0 func.size(85);
     }
 
@@ -154,7 +170,7 @@
 #order {
   padding: func.size-m(30) 0 func.size-m(60) 0;
   @media screen and (min-width:768px) {
-    padding: func.size(0) 0 func.size(216) 0;
+    padding: func.size(98) 0 func.size(216) 0;
   }
   
   h2 {
