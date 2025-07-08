@@ -2,7 +2,7 @@ const caseName = "華友聯next21"
 
 export default {
     caseid: "a22d99da-95b0-4141-8338-c57c3e34b13d",
-    case_code: "hylnext21",
+    //case_code: "hylnext21",
     address: "高雄市左營區啟文路7號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3681.4888439927086!2d120.28087068819879!3d22.672839134813874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e05d2b0254fcd%3A0x29644036bc418322!2z6I-v5Y-L6IGvTmVYVDIx6Yq35ZSu5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1718778305359!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/hTCRH6YKWE6o698PA",
