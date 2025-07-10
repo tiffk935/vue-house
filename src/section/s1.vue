@@ -22,8 +22,7 @@
    <div class="con flex">
   <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
   <div class="flex">
-<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="200" v-if="!$isMobile()">
-<img src="./s1/t1m.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="400" v-else>
+<img src="./s1/t1.svg" alt="title" class="t1" data-aos="zoom-in" data-aos-delay="200">
 <img src="./s1/t2.svg" alt="coming" class="t2" data-aos="zoom-in"  data-aos-delay="600">
 </div>
 </div>
@@ -55,7 +54,7 @@
   .t0{position: absolute;width: 100%;top:0vw;left: 0; pointer-events: none;z-index: 10;opacity: .3;}
 
 .con{gap: size(60);margin: 0 0 size(70) 0;
-  div{flex-direction:column;margin: 0;}}
+  div{flex-direction:column;margin: 0;justify-content: center;}}
   .logo{position: relative;
     width: size(670);}
   .t1{
