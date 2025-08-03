@@ -7,9 +7,6 @@ import info from "@/info"
 
 import VueMobileDetection from "vue-mobile-detection"
 
-import VueSplide from "@splidejs/vue-splide"
-import "@splidejs/vue-splide/css/core"
-
 import Toast from "vue-toastification"
 import "vue-toastification/dist/index.css"
 
@@ -35,7 +32,6 @@ createApp(App)
     .use(Toast, toastOptions)
     .use(VueMobileDetection)
     .use(VueSmoothScroll)
-    .use(VueSplide)
     .use(router)
     .use(Vue3TouchEvents)
     .use(VueLazyload, {

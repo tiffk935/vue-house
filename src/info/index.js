@@ -1,4 +1,4 @@
-const caseName = "藏築3"
+const caseName = "國王大道"
 
 export default {
     meta: {
