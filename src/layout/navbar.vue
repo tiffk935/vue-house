@@ -24,9 +24,26 @@
                 </div>
             </div>
         </div>
-        <div class="menu-btn cursor-pointer flex items-center gap-3" @click="menuOpen = !menuOpen"
+        <div class="menu-btn cursor-pointer flex items-center gap-3 md:hidden" @click="menuOpen = !menuOpen"
             v-bind:class="{ 'open': menuOpen }">
             <div class="bar z-10"></div>
+        </div>
+    </div>
+
+    <div class="top-nav hidden md:block">
+        <div class="top-nav-inner">
+            <img class="logo" src="@/section/logo.svg" alt="國王大道" @click="scrollTo('.s1')" />
+            <div class="links">
+                <div 
+                    class="link-item"
+                    v-for="item, in info.navList"
+                    :data-sec="item.target"
+                    @click="scrollTo(item.target)"
+                    :key="item"
+                >
+                    <span>{{ item.name }}</span>
+                </div>
+            </div>
         </div>
     </div>
 
@@ -83,7 +100,7 @@
         .bar {
             width: size(38);
             height: 2px;
-            background-color: #666;
+            background-color: #fff;
             // position: relative;
             transform: all .5s;
             position: absolute;
@@ -97,7 +114,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #666;
+                background-color: #fff;
                 transition: all .5s;
             }
 
@@ -107,7 +124,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #666;
+                background-color: #fff;
                 transition: all .5s;
             }
         }
@@ -163,10 +180,6 @@
         position: fixed;
         top: size(0);
         right: size(0);
-        /* background-color: rgba(139, 199, 130, 0.8); */
-        background: #E50012;
-        background: linear-gradient(90deg, #E50012 0%, #7E151A 100%);
-        backdrop-filter: blur(2px);
         width: size(375);
         height: 100%;
         z-index: 99;
@@ -174,18 +187,8 @@
         transition: all .5s;
         padding: size(100) 0;
         gap: size(20);
-
-        &:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url(@/section/form/bg.svg);
-            background-size: cover;
-            z-index: -1;
-        }
+        background-image: url(@/section/navbg.jpg);
+        background-size: cover;
 
         .menu-item {
             text-align: center;
@@ -205,10 +208,10 @@
         }
 
         .menu-item-full {
-            background: #fff;
-            color: #7E151A;
+            background: #E4007F;
             width: size(232);
-            padding: 0;
+            border-radius: size(100);
+            padding: size(10);
         }
 
         &.open {
@@ -355,6 +358,8 @@
                 width: size-m(232);
                 padding: 0;
                 margin-top: size-m(20);
+                border-radius: size-m(100);
+                padding: size-m(2);
                 
                 span {
                     line-height: size-m(40);
@@ -363,6 +368,44 @@
 
             &.open {
                 transform: translateX(0);
+            }
+        }
+    }
+}
+
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(15, 67, 109, .7);
+    z-index: 99;
+
+    .top-nav-inner {
+        padding: size(17) size(48);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: size(110);
+        cursor: pointer;
+    }
+
+    .links {
+        display: flex;
+
+        .link-item {
+            color: #FFF;
+            font-size: size(18);
+            line-height: size(24);
+            letter-spacing: 0.9px;
+            margin-left: size(40);
+            cursor: pointer;
+
+            &.active {
+                border-bottom: 1px solid #fff;
             }
         }
     }

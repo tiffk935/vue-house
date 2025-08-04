@@ -76,17 +76,52 @@ import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
+import { gsap } from "gsap";    
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: false
+  showNav: true
 })
+
+const setTrigger = (sec) => {
+  ScrollTrigger.create({
+    trigger: sec,
+    start: 'top bottom',
+    end: 'bottom bottom',
+    onLeave: () => {
+      if (document.querySelector('.top-nav .links .link-item.active')) {
+        document.querySelector('.top-nav .links .link-item.active').classList.remove('active');
+      }
+      if (document.querySelector(`.top-nav .links .link-item[data-sec="${sec}"]`)) {
+        document.querySelector(`.top-nav .links .link-item[data-sec="${sec}"]`).classList.add('active');
+      }
+    }, 
+    onEnterBack: () => {
+      if (document.querySelector('.top-nav .links .link-item.active')) {
+        document.querySelector('.top-nav .links .link-item.active').classList.remove('active');
+      }
+      if (document.querySelector(`.top-nav .links .link-item[data-sec="${sec}"]`)) {
+        document.querySelector(`.top-nav .links .link-item[data-sec="${sec}"]`).classList.add('active');
+      }
+    }, 
+  })
+}
 
 onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
+
+    setTimeout(() => {
+      const sections = gsap.utils.toArray(".home section");
+      sections.forEach((section, idx) => {
+        setTrigger(`.s${idx+1}`);
+      });
+    }, 500);
   };
 })
 </script>

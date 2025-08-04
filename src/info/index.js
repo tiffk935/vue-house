@@ -39,43 +39,38 @@ export default {
     budget: ["1600-2000萬","2000-2400萬","2500萬以上"],
     navList: [
         {
-            name: "首購天堂",
+            name: "增值盛世",
             target: ".s3",
             offset: "",
         },
         {
-            name: "天選地標",
+            name: "(影片預留)",
             target: ".s4",
             offset: "",
         },
         {
-            name: "通勤首選",
+            name: "重劃之王",
             target: ".s5",
             offset: "",
         },
         {
-            name: "難得綠地",
+            name: "馳騁未來",
             target: ".s6",
             offset: "",
         },
         {
-            name: "雙語校園",
+            name: "完整教育",
             target: ".s7",
             offset: "",
         },
         {
-            name: "成熟商圈",
+            name: "國王高度",
             target: ".s8",
             offset: "",
         },
         {
-            name: "日系精工",
+            name: "宮殿盛典",
             target: ".s9",
-            offset: "",
-        },
-        {
-            name: "全齢格局",
-            target: ".s10",
             offset: "",
         },
     ],
