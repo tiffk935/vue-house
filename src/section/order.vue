@@ -9,37 +9,38 @@
       <div class="form">
         <div>
           <label>
-            <span>姓名*</span>
+            <span>姓名</span>
             <input type="text" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
           </label>
           <label>
-            <span>連絡電話*</span>
+            <span>手機</span>
             <input type="text" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
           </label>
           <label>
-            <!-- <span>選擇縣市*</span> -->
+            <span>需求房型</span>
+            <select class="select w-full rounded-none" v-model="formData.room_type">
+              <option value="" selected disabled>請選擇房型</option>
+              <option v-for="type in info.room_type" :value="type" :key="type">
+                {{ type }}
+              </option>
+            </select>
+          </label>
+          <label>
+            <span>居住城市</span>
             <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>選擇縣市*</option>
+              <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select>
           </label>
           <label>
-            <!-- <span>選擇區域*</span> -->
+            <span>居住地區</span>
             <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>選擇區域*</option>
+              <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
-            </select>
-          </label>
-          <label>
-            <!-- <span>選擇建案*</span> -->
-            <select class="select w-full rounded-none" v-model="formData.project">
-              <option value="" selected disabled>選擇建案*</option>
-              <option value="藏筑3">藏筑3</option>
-              <option value="藏筑2">藏筑2</option>
             </select>
           </label>
         </div>
@@ -53,31 +54,31 @@
       </div>
     </div>
 
-    <div class="container md:flex md:justify-between md:items-center md:flex-wrap md:gap-x-1">
-      <!-- Policy -->
-      <div class="control flex gap-2 items-center justify-center">
-        <input 
-          type="checkbox" 
-          v-model="formData.policyChecked" 
-          :checked="formData.policyChecked"
-          class="checkbox bg-white rounded-md" />
-        <p class="text-[#000] font-medium">
-          本人知悉並同意
-          <label for="policy-modal" class="modal-button text-[#9F223D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-        </p>
-      </div>
-      <Policy />
+    <!-- Policy -->
+    <div class="control flex gap-2 items-center justify-center">
+      <input 
+        type="checkbox" 
+        v-model="formData.policyChecked" 
+        :checked="formData.policyChecked"
+        class="checkbox bg-white rounded-md" />
+      <p class="text-white font-bold">
+        本人知悉並同意
+        <label for="policy-modal" class="modal-button text-[#FFFA6B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+      </p>
+    </div>
+    <Policy />
 
-      <div class="recaptcha flex justify-center">
-        <vue-recaptcha
-          ref="recaptcha"
-          :sitekey="info.recaptcha_site_key_v2"
-          @verify="onRecaptchaVerify"
-          @expired="onRecaptchaUnVerify" />
-      </div>
+    <div class="recaptcha flex justify-center">
+      <vue-recaptcha
+        ref="recaptcha"
+        :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify"
+        @expired="onRecaptchaUnVerify" />
+    </div>
 
-      <!-- Send -->
-      <div class="send btn text-white bg-[#9F223D] text-center hover:scale-90 cursor-pointer" @click="send()">
+    <!-- Send -->
+    <div class="container">
+      <div class="send btn text-white bg-[#560048] text-center hover:scale-90 cursor-pointer" @click="send()">
         {{ sending? '發送中..': '送出表單' }}
       </div>
     </div>
@@ -86,6 +87,9 @@
     <ContactInfo />
 
     <!-- Map -->
+    <div class="gmap relative z-10">
+      <iframe :src="info.googleSrc" frameborder="0"></iframe>
+    </div>
 
     <!-- HouseInfo -->
     <HouseInfo />
@@ -96,60 +100,76 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  padding: size-m(62) 0 0 0;
+  color: #000;
+  padding: size-m(60) 0 0 0;
   @media screen and (min-width:768px) {
-    padding: size(119) 0 0 0;
+    padding: size(100) 0 0 0;
   }
 
   .container {
     width: 100%;
-    padding: 0 size-m(32);
+    padding: 0 size-m(26);
     @media screen and (min-width:768px) {
       padding: 0;
-      max-width: size(1470);
+      max-width: size(1200);
       margin: 0 auto;
     }
   }
 
   .order-title {
-    color: #9F223D;
-    font-size: size-m(26);
+    color: #fff;
+    text-align: center;
+    font-size: size-m(28);
+    line-height: size-m(34);
     font-weight: 700;
     margin: 0 auto size-m(20) auto;
     @media screen and (min-width:768px) {
-      font-size: size(26);
-      margin-bottom: size(34);
-      letter-spacing: .05em;
+      font-size: size(40);
+      line-height: size(48);
+      font-weight: 400;
+      margin-bottom: size(11);
     }
   }
 
   .order-subTitle {
-    color: #666;
-    font-size: size-m(13);
-    line-height: size-m(24);
+    color: #fff;
+    text-align: center;
+    font-size: size-m(14);
+    line-height: size-m(36);
     margin-bottom: size-m(20);
     @media screen and (min-width:768px) {
-      font-size: size(18);
+      font-size: size(15);
       line-height: size(36);
       margin-bottom: size(31);
     }
   }
 
   .form {
+    position: relative;
     margin-bottom: size-m(20);
     @media screen and (min-width:768px) {
-      margin-bottom: size(34);
+      margin-bottom: size(49);
       display: flex;
       justify-content: space-between;
       align-items: stretch;
 
       div:nth-child(1) {
-        width: size(725);
-        margin-right: size(20);
+        width: size(559);
+        margin-right: size(82);
       }
 
       div:nth-child(2) {
         flex: 1;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: size(1);
+        height: 100%;
+        background: rgba(255, 255, 255, .5);
       }
     }
 
@@ -158,29 +178,32 @@
       font-weight: 400;
     }
 
-    input[type=text] {
-      padding-left: 95px;
-    }
-
     textarea {
-      border: size-m(1) solid #9F223D;
+      border: size-m(1) solid #fff;
       height: 5rem;
       resize: none;
       @media screen and (min-width:768px) {
-        border: size(1) solid #9F223D;
+        border: size(1) solid #fff;
         height: 100%;
       }
     }
     
     label {
       position: relative;
-      display: block;
+      display: flex;
+      align-items: center;
       width: 100%;
       margin-bottom: size-m(13);
-      border: size-m(1) solid #9F223D;
+      border: size-m(1) solid #fff;
+      background: #fff;
       @media screen and (min-width:768px) {
         margin-bottom: size(20);
-        border: size(1) solid #9F223D;
+        border: size(1) solid #fff;
+      }
+
+      &:has(:focus) {
+        outline: 2px solid hsla(var(--bc) / 0.2);
+        outline-offset: 2px;
       }
 
       &:last-child {
@@ -191,10 +214,19 @@
 
       span {
         font-size: 16px;
-        position: absolute;
-        top: 50%;
-        left: 1rem;
-        transform: translate(0, -50%);
+        width: 95px;
+        display: block;
+        padding-left: 1rem;
+      }
+
+      input[type=text], .select {
+        width: calc(100% - 95px);
+      }
+
+      input[type=text], select {
+        &:focus {
+          outline: none;
+        }
       }
     }
   }
@@ -202,14 +234,14 @@
   .control {
     margin: 0 size-m(-32) size-m(27) size-m(-32);
     @media screen and (min-width:768px) {
-      margin: 0 0 size(20) 0;
+      margin: 0 0 size(49) 0;
     }
   }
 
   .recaptcha {
     margin-bottom: size-m(25);
     @media screen and (min-width:768px) {
-      margin: 0 0 size(20) 0;
+      margin: 0 0 size(49) 0;
     }
   }
 
@@ -222,14 +254,32 @@
     line-height: 1;
     padding: size-m(25) 0;
     border: none;
-    border-radius: 0;
+    border-radius: size-m(10);
     @media screen and (min-width:768px) {
-      width: size(493);
-      font-size: size(22);
-      letter-spacing: .05em;
-      padding: size(20) 0;
+      display: block;
+      width: size(480);
+      font-size: size(24);
+      font-weight: 400;
+      letter-spacing: 1em;
+      text-indent: 1em;
+      padding: size(30) 0;
       min-height: auto;
-      margin: 0 0 size(20) 0;
+      margin: 0 auto size(20) auto;
+      border-radius: size(10);
+      background: rgba(182, 0, 100, .6);
+    }
+  }
+
+  .gmap {
+    width: 100%;
+    height: size-m(354);
+    @media screen and (min-width:768px) {
+      height: size(500);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
     }
   }
 }
@@ -265,18 +315,18 @@ const formData = reactive({
 })
 
 //非必填
-const bypass = ["msg","budget","room_type","email"]
+const bypass = ['room_type', 'budget', 'project', 'email', 'msg']
 
 //中文對照
 const formDataRef = ref([
   "姓名", //name
-  "連絡電話", //phone
+  "手機", //phone
   "預約時段", //room_type
   "預算", //budget
   "建案", //project
   "信箱", //email
-  "居住縣市", //city
-  "居住區域", //area
+  "居住城市", //city
+  "居住地區", //area
   "備註訊息", //msg
   "個資告知事項聲明", //policyChecked
   "機器人驗證", //r_verify

@@ -2,15 +2,15 @@
   <div class="contact-info">
     <div class="container">
       <div class="contact-item-box">
-        <div class="contact-item btn text-[#000] bg-white flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
+        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
           <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
-        <div class="contact-item btn text-[#000] bg-white flex justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
           <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
           <div>FB 諮詢</div>
         </div>
-        <div class="contact-item btn text-[#000] bg-white flex justify-center items-center btfanpage" @click="open()">
+        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center btfanpage" @click="open()">
           <img src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
           <div>前往粉絲專頁</div>
         </div>
@@ -19,7 +19,7 @@
         <div class="address contact-item flex justify-center items-center">
           <div><span>接待中心：</span><span v-html="info.address"></span></div>
         </div>
-        <div class="contact-item btn text-white bg-[#800F27] flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
+        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
           <div>導航 GoogleMap</div>
         </div>
@@ -87,7 +87,7 @@
 @import "@/assets/style/function.scss";
 
 .contact-info {
-  padding: size-m(101) 0 size-m(87) 0;
+  padding: size-m(101) 0 size-m(40) 0;
   @media screen and (min-width:768px) {
     padding: size(143) 0 size(117) 0;
   }
@@ -103,35 +103,33 @@
     .contact-item {
       width: 100%;
       height: size-m(60);
-      border: size-m(1) solid #800F27;
+      border: size-m(1) solid #560048;
       margin-bottom: size-m(25);
       font-size: size-m(16);
       line-height: 1;
       letter-spacing: .1em;
       border-radius: 0;
+      min-height: auto;
       @media screen and (min-width:768px) {
-        width: size(470);
-        height: size(77);
-        border: size(1) solid #800F27;
+        width: calc(33.333% - size(6.666666));
+        height: size(72);
+        border: none;
+        background: rgba(182, 0, 100, .6);
         margin-bottom: 0;
         font-size: size(22);
       }
 
+      &:hover {
+        background: rgba(214, 0, 168, .7137254902);
+      }
+
       img {
-        filter: invert(20%) sepia(22%) saturate(7402%) hue-rotate(327deg) brightness(88%) contrast(93%);
+        filter: brightness(0) invert(1);
         margin-right: .8em;
         width: auto;
         height: size-m(22);
         @media screen and (min-width:768px) {
           height: size(25);
-        }
-      }
-
-      &:not(.address):hover {
-        color: #fff;
-        
-        img {
-          filter: invert(100%) sepia(13%) saturate(7447%) hue-rotate(200deg) brightness(114%) contrast(114%);
         }
       }
 
@@ -149,19 +147,30 @@
       }
 
       .address {
+        background: #fff;
+        color: #000;
         margin-bottom: 0;
-        border-bottom: none;
+        border: none;
         font-size: size-m(15);
         letter-spacing: 0;
         @media screen and (min-width:768px) {
           font-size: size(22);
-          border-bottom: size(1) solid #800F27;
           border-right: none;
           flex: 1;
         }
       }
 
       .contact-item:nth-child(2) {
+        background: #E4007F;
+        border: none;
+        @media screen and (min-width:768px) {
+          background: rgba(182, 0, 100, .6);
+        }
+
+        &:hover {
+          background: rgba(214, 0, 168, .7137254902);
+        }
+
         img {
           filter: invert(100%) sepia(13%) saturate(7447%) hue-rotate(200deg) brightness(114%) contrast(114%);
         }
@@ -188,7 +197,7 @@
 
   .contact-item {
     height: 100%;
-    background-color: #800F27;
+    background-color: #560048;
     font-size: size-m(16);
     font-weight: 400;
     color: #fff;

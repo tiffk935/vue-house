@@ -1,6 +1,6 @@
 <template>
-  <!-- <div class="container">
-    <div class="flex flex-col md:flex-row items-center justify-between">
+  <div class="container">
+    <div class="text-white flex flex-col md:flex-row items-center justify-between">
       <div class="w-full flex-1 items-center justify-center">
         <div class="info-box mx-auto flex flex-col items-center justify-center">
           <div class="title">建案資訊</div>
@@ -9,14 +9,14 @@
               class="item flex items-center w-full whitespace-nowrap"
               v-for="item in info.houseInfos"
             >
-              <p class="mr-5 font-bold border-l-2 border-[#514E4E] pl-2 ">{{ item[0] }}</p>
+              <p class="mr-5 font-bold border-l-2 border-[#fff] pl-2 ">{{ item[0] }}</p>
               <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
     <a href="https://www.lixin.com.tw/" target="_blank">
@@ -32,15 +32,17 @@
 @import "@/assets/style/function.scss";
 
 .info-box {
+  padding: size-m(36) 0 size-m(28) 0;
   @media screen and (min-width:768px) {
+    padding: size(60) 0 size(80) 0;
     width: size(900);
     margin: 0 auto;
   }
 
   .title {
-    font-size: size-m(29);
+    font-size: size-m(20);
+    margin-bottom: size-m(27);
     font-weight: 700;
-    font-family: "Noto Serif TC";
     @media screen and (min-width:768px) {
       font-size: size(48);
       margin-bottom: size(23);
@@ -56,7 +58,6 @@
 
     .item {
       font-size: size-m(14);
-      align-items: flex-start;
       line-height: 1.5;
       @media screen and (min-width:768px) {
         line-height: size(17);

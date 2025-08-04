@@ -3,14 +3,14 @@
     <div class="map user-n relative">
       <div class="scrollable" ref="scrollable">
         <img class="map1" src="@/section/s3/map.jpg" @load="onImgLoad($event)" />
-        <!-- <img class="map2 absolute top-0 left-0 w-full pointer-events-none" src="@/section/s3/map2.svg" /> -->
-        <div class="lights-wrapper">
+        <img class="map2 absolute top-0 left-0 w-full pointer-events-none" src="@/section/s3/map2.svg" />
+        <!-- <div class="lights-wrapper">
           <div class="lights">
             <div></div>
             <div></div>
             <div></div>
           </div>
-        </div>
+        </div> -->
       </div>
       <div class="mask md:hidden">
         <img class="hand-label absolute" src="@/section/s3/hand-label.svg" />
