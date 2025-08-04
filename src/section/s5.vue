@@ -4,8 +4,8 @@
     <div class="line2 md:hidden"></div>
     <div class="line3 hidden md:block"></div>
     <div class="text text1">
-      <div class="title">國家級重劃之王<br>三大科技園區眾星拱月</div>
-      <div>副都心從中央行政院合署辦公室到七大部會進駐，完美再現信義計畫區的成功方程式，再以800公頃溪北計畫三大科技新創園區，從通訊、製造到創新技術串接，預估創造逾20萬就業機會，讓人流與金流同步到位，偕同新北CBD副都心面向全球經濟市場，20家金融總部雲集，資本能量全面發動，這場經濟奇蹟，早已從建設期跨入收成期，KING PARK國王大道穩坐國家級佈局的產業核心，讓城市的成長到榮景，主角始終是你。</div>
+      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國家級重劃之王<br>三大科技園區眾星拱月</div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">副都心從中央行政院合署辦公室到七大部會進駐，完美再現信義計畫區的成功方程式，再以800公頃溪北計畫三大科技新創園區，從通訊、製造到創新技術串接，預估創造逾20萬就業機會，讓人流與金流同步到位，偕同新北CBD副都心面向全球經濟市場，20家金融總部雲集，資本能量全面發動，這場經濟奇蹟，早已從建設期跨入收成期，KING PARK國王大道穩坐國家級佈局的產業核心，讓城市的成長到榮景，主角始終是你。</div>
     </div>
     <div class="tk-tabs">
       <div class="tk-tab" :class="{ active: activeSlideIdx === 0 }" @click="slideTo(0)">中央合署辦公大樓</div>
@@ -61,8 +61,8 @@
       </swiper>
     </div>
     <div class="text text2">
-      <div class="title">影城、百貨全到位<br>舉步間盡是繁華</div>
-      <div>在副都心最核心的位置，日常生活輕鬆接軌國際繁華，漫步宏匯百貨廣場，相伴國賓、美麗新雙影城，休閒娛樂隨時上映，凱悅嘉軒飯店進駐，日常即是尊榮場域，同享昌平、福壽、中原生活商圈，日常採買應有盡有，舉步間，城市最豐富的能量一次全到位。</div>
+      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">影城、百貨全到位<br>舉步間盡是繁華</div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">在副都心最核心的位置，日常生活輕鬆接軌國際繁華，漫步宏匯百貨廣場，相伴國賓、美麗新雙影城，休閒娛樂隨時上映，凱悅嘉軒飯店進駐，日常即是尊榮場域，同享昌平、福壽、中原生活商圈，日常採買應有盡有，舉步間，城市最豐富的能量一次全到位。</div>
     </div>
   </section>
 </template>

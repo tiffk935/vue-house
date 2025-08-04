@@ -1,38 +1,21 @@
 <template>
-  <section class="s8 user-n w-full relative" @click="showModal">
-    <div class="content" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="title w-full block" src="@/section/s8/title.svg" />
-      <div>為每位家庭成員訂製個人獨立空間，舒適私密不受打擾，實現兼具和諧與隱私的理想住宅環境。</div>
+  <section class="s8 user-n w-full relative bg-white">
+    <img class="bg w-full block md:hidden" src="@/section/s8/bg-m.jpg" />
+    <img class="bg w-full hidden md:block" src="@/section/s8/bg.jpg" />
+    <div class="content">
+      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">國家級規模 站上雙北C位</div>
+      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        「KING PARK國王大道」定錨副都心核心樞紐，<br class="md:hidden">
+        以千坪規模純住宅稀有大基地、大開發、大建商，鼎足中原路、昌德街與昌平街三面臨路地王，<br>
+        以國王高度，重新定義副都心尺度，已再無可複製的第二個基地，掌握成名先機，恭迎入主為王。
+      </div>
+      <div class="t3" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        信義的風光，<br class="md:hidden">
+        由你在KING PARK國王大道<br class="md:hidden">
+        接棒稱王。
+      </div>
     </div>
-    <div class="slider">
-      <swiper
-        :spaceBetween="10"
-        :loop="true"
-        :navigation="true"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :modules="modules"
-      >
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s8/1.jpg" />
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s8/2.jpg" />
-          </div>
-        </swiper-slide>
-        <swiper-slide>
-          <div class="relative">
-            <img src="@/section/s8/3.jpg" />
-          </div>
-        </swiper-slide>
-      </swiper>
-      <div class="info absolute">室內情境示意 | 裝潢風格參考情境示意圖，實際格局依合約書為準</div>
-    </div>
+    <div class="info">建築3D透視</div>
   </section>
 </template>
 
@@ -40,98 +23,69 @@
 @import "@/assets/style/function.scss";
 
 .s8 {
-  text-align: justify;
-  font-size: size-m(12);
-  font-weight: 500;
-  line-height: size-m(21);
-  @media screen and (min-width:768px) {
-    font-size: size(20);
-    line-height: size(34);
-  }
+  letter-spacing: .08em;
 
   .content {
-    padding: size-m(52) size-m(30);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: size-m(82) size-m(18) 0 size-m(18);
+    text-align: center;
     @media screen and (min-width:768px) {
-      position: absolute;
-      top: size(95);
-      left: 0;
-      width: size(661);
-      padding: size(31) size(50) size(34) size(166);
-      background: #fff;
-      z-index: 1;
+      padding: size(248) size(18) 0 size(18);
     }
 
-    .title {
-      padding: 0 size-m(17);
-      margin-bottom: size-m(25);
+    .t1 {
+      font-size: size-m(28);
+      font-weight: 500;
+      line-height: size-m(40);
+      margin-bottom: size-m(40);
       @media screen and (min-width:768px) {
-        padding: 0;
-        margin-bottom: size(19);
+        font-size: size(48);
+        line-height: size(58);
+        margin-bottom: size(24);
+      }
+    }
+
+    .t2 {
+      font-size: size-m(14);
+      line-height: 160%;
+      margin-bottom: size-m(40);
+      @media screen and (min-width:768px) {
+        font-size: size(16);
+        margin-bottom: size(32);
+      }
+    }
+
+    .t3 {
+      font-size: size-m(18);
+      font-weight: 500;
+      line-height: 160%;
+      letter-spacing: .12em;
+      @media screen and (min-width:768px) {
+        font-size: size(20);
+        font-weight: 700;
       }
     }
   }
 
-  .slider {
-    .swiper, .swiper * {
-      z-index: initial;
-    }
-
-    .swiper-slide {
-      img {
-        width: 100%;
-        display: block;
-      }
-    }
-
-    .swiper-button-prev, .swiper-button-next {
-      width: size-m(40);
-      height: size-m(40);
-      background-size: size-m(13) auto;
-      background-position: center;
-      background-repeat: no-repeat;
-      @media screen and (min-width:768px) {
-        display: none;
-      }
-
-      &:after {
-        display: none;
-      }
-    }
-
-    .swiper-button-prev {
-      left: 0;
-      background-position: size-m(6) center;
-      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.4652 23.0664C12.0053 23.5071 12.8025 23.4761 13.306 22.9726C13.8095 22.4691 13.8405 21.6719 13.3998 21.1318L13.306 21.0273L4.27867 11.9999L13.306 2.9726C13.843 2.43563 13.843 1.56426 13.306 1.02729C12.769 0.490317 11.8977 0.490317 11.3607 1.02729L1.3607 11.0273C0.82373 11.5643 0.82373 12.4356 1.3607 12.9726L11.3607 22.9726L11.4652 23.0664Z" fill="white"/></svg>');
-    }
-
-    .swiper-button-next {
-      right: 0;
-      background-position: right size-m(6) center;
-      background-image: url('data:image/svg+xml,<svg width="14" height="24" viewBox="0 0 14 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.53481 0.933647C1.99474 0.492892 1.1975 0.523888 0.693988 1.0274C0.19048 1.53091 0.159482 2.32815 0.600238 2.86822L0.693988 2.97271L9.72133 12.0001L0.693988 21.0274C0.157017 21.5644 0.157017 22.4357 0.693988 22.9727C1.23096 23.5097 2.10233 23.5097 2.6393 22.9727L12.6393 12.9727C12.9078 12.7042 13.042 12.3521 13.0418 12.0001C13.042 11.648 12.9078 11.2959 12.6393 11.0274L2.6393 1.0274L2.53481 0.933647Z" fill="white"/></svg>');
-    }
-
-    .info {
-      bottom: size-m(8);
-      right: size-m(9);
-      color: #FFF;
-      font-size: size-m(12);
-      font-weight: 500;
-      @media screen and (min-width:768px) {
-        bottom: size(25);
-        right: size(47);
-        font-size: size(15);
-      }
+  .info {
+    position: absolute;
+    bottom: size-m(5);
+    right: size-m(5);
+    font-size: size-m(10);
+    line-height: size-m(12);
+    @media screen and (min-width:768px) {
+      bottom: size(22);
+      right: auto;
+      left: size(26);
+      font-size: size(13);
+      line-height: size(16);
     }
   }
 }
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-import { Autoplay, Navigation, Pagination } from "swiper";
-const modules = ref([Autoplay, Navigation, Pagination]);
 </script>

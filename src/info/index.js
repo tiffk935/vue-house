@@ -23,7 +23,7 @@ export default {
         ["企劃銷售", "得邦廣告股份有限公司"],
         ["結構安全", "永安結構顧問事務所"],
     ],
-    gtmCode: ["GTM-N44KHZHT"], // 可放置多個
+    gtmCode: ["GTM-NVGGJ9T5"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2

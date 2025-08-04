@@ -1,8 +1,8 @@
 <template>
   <section class="s9 user-n w-full relative">
     <div class="text">
-      <div class="title">下樓即盛典 公設即宮殿</div>
-      <div>挑高門廳迎光而立，水景映著綠意搖曳，在家的每一步，都是有風景相伴的奢華開場，從日常到待客、從親子到自我，25項禮遇空間，鋪展生活的所有可能，國王大道的每一天都值得款待。</div>
+      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">下樓即盛典 公設即宮殿</div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">挑高門廳迎光而立，水景映著綠意搖曳，在家的每一步，都是有風景相伴的奢華開場，從日常到待客、從親子到自我，25項禮遇空間，鋪展生活的所有可能，國王大道的每一天都值得款待。</div>
     </div>
     <div class="slider">
       <swiper

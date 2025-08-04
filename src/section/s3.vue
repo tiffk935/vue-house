@@ -225,16 +225,18 @@ const scrollable = ref();
 function onImgLoad(e) {
   const img = e.target;
   if (scrollable.value && img) {
-    let status = 0;
-    let hideHand = false;
-    scrollable.value.scrollLeft = img.clientWidth * 0.48 - window.innerWidth/2;
-    scrollable.value.addEventListener("scroll", () => {
-      status++;
-      if(status > 1 && !hideHand){
-        scrollable.value.parentNode.querySelector('.mask').style.opacity = 0;
-        hideHand = true;
-      }
-    });
+    setTimeout(() => {
+      let status = 0;
+      let hideHand = false;
+      scrollable.value.scrollLeft = img.clientWidth * 0.48 - window.innerWidth/2;
+      scrollable.value.addEventListener("scroll", () => {
+        status++;
+        if(status > 1 && !hideHand){
+          scrollable.value.parentNode.querySelector('.mask').style.opacity = 0;
+          hideHand = true;
+        }
+      });
+    }, 10);
   }
 }
 </script>

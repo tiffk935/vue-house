@@ -3,7 +3,7 @@
     <div class="slider">
       <div class="slides">
         <div class="slide">
-          <img src="@/section/s2/img.jpg" />
+          <img src="@/section/s2/img.jpg" @load="onImgLoad()" />
         </div>
         <div class="slide">
           <img src="@/section/s2/img.jpg" />
@@ -30,6 +30,7 @@
     display: inline-flex;
     position: relative;
     height: 100%;
+    background: #ddd;
   }
 
   img {
@@ -41,7 +42,6 @@
 </style>
 
 <script setup>
-import { onMounted } from "vue";
 import { gsap } from "gsap";    
 import { Draggable } from "gsap/Draggable";
 
@@ -50,8 +50,12 @@ gsap.registerPlugin(Draggable);
 let startX = 0;
 const v = 40; // 速率
 let tl;
+let imgLoaded = false;
+let slideWidth = 0;
 
 function createAnimation() {
+  if (!imgLoaded) return;
+
   if (tl) {
     tl.kill();
     tl = null;
@@ -60,7 +64,7 @@ function createAnimation() {
   startX = 0;
 
   tl = gsap.timeline({
-    paused: true,
+    // paused: true,
     onComplete: () => {
       tl.restart();
     },
@@ -73,29 +77,38 @@ function createAnimation() {
     const duration = document.querySelector('.s2 .slides img').clientWidth / v;
 
     tl
-      .set('.s2 .slides', { left: 0 })
+      .set('.s2 .slides', { xPercent: 0 })
       .to('.s2 .slides', {
-        left: () => {
-          const w = document.querySelector('.s2 .slides img').clientWidth;
-          return -w + 'px';
-        },
+        xPercent: -50,
         duration: duration,
         ease: 'none'
       });
 
-    window.tl = tl;
+      // .set('.s2 .slides', { left: 0 })
+      // .to('.s2 .slides', {
+      //   left: () => {
+      //     const w = document.querySelector('.s2 .slides img').clientWidth;
+      //     return -w + 'px';
+      //   },
+      //   duration: duration,
+      //   ease: 'none'
+      // });
   }, 0);
 }
 
-onMounted(() => {
-  createAnimation();
-  window.addEventListener('resize', () => {
-    console.log('resize');
-    
-    createAnimation();
-  });
-
+window.addEventListener('resize', () => {
+  if (!imgLoaded) return;
+  if ( parseInt(document.querySelector('.s2 .slides img').clientWidth) === parseInt(slideWidth) ) return;
   
+  createAnimation();
+});
+
+function onImgLoad() {
+  imgLoaded = true;
+  slideWidth = document.querySelector('.s2 .slides img').clientWidth;
+  
+  createAnimation();
+
   Draggable.create(".s2 .slider", {
     type: "x",
     liveSnap: { x: () => 0 }, // 鎖住位置
@@ -115,17 +128,15 @@ onMounted(() => {
 
       if (Math.abs(deltaX) > 1) {
         if (deltaX > 0) { // right
-          console.log('right');
+          // console.log('right');
           
           tl.reverse();
-          // isReverse = true;
         } else { // left
-          console.log('left');
+          // console.log('left');
           tl.play();
-          // isReverse = false;
         }
       }
     }
   });
-});
+}
 </script>

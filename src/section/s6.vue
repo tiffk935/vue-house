@@ -3,8 +3,8 @@
     <!-- <img class="bg" src="@/section/s6/speed-m.png" alt=""> -->
     <div class="bg"></div>
     <div class="text text1">
-      <div class="title">掌握雙北動脈<br>國王大道馳騁未來</div>
-      <div>站在新北市的交通戰略樞紐，掌握三捷運、三國道、四特快優勢，左右連結雙北台一線忠孝國王大道，直通國門與信義核心，地段決定時間價值，交通定義未來身價，每一次出發，都是時間與財富的領先。</div>
+      <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">掌握雙北動脈<br>國王大道馳騁未來</div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">站在新北市的交通戰略樞紐，掌握三捷運、三國道、四特快優勢，左右連結雙北台一線忠孝國王大道，直通國門與信義核心，地段決定時間價值，交通定義未來身價，每一次出發，都是時間與財富的領先。</div>
     </div>
     <div class="slider md:hidden">
       <swiper
@@ -48,16 +48,32 @@
       </swiper>
     </div>
     <div class="imgs hidden md:flex f-full">
-      <div class="img hidden md:block" v-for="item in slides">
+      <div 
+        class="img hidden md:block" 
+        v-for="(item, idx) in slides"
+        data-aos="zoom-out-up"
+        data-aos-duration="1000"
+        :data-aos-delay="idx * 200"
+      >
         <img class="block" :src="getImg(`./s6/${item.img}`)" />
         <div class="info">{{ item.label }}</div>
       </div>
     </div>
     <div class="content">
-      <div class="item" v-for="item in slides">
+      <div
+        class="item"
+        v-for="(item, idx) in slides"
+      >
         <div class="item-info">
-          <div class="item-title">{{ item.title }}</div>
-          <div class="item-desc">{{ item.desc }}</div>
+          <div
+            data-aos="zoom-out-up"
+            data-aos-duration="1000"
+            :data-aos-delay="idx * 200"
+          >
+            <div class="item-title">{{ item.title }}</div>
+            <div class="item-desc">{{ item.desc }}</div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -95,10 +111,7 @@
     z-index: -1;
     @media screen and (min-width:768px) {
       top: 0;
-      left: auto;
-      right: 0;
-      width: size(2875);
-      max-width: none;
+      background-image: url(@/section/s6/speed.png);
     }
   }
 
@@ -146,7 +159,7 @@
     margin: 0 size-m(14);
     margin-bottom: size-m(26);
     overflow: hidden;
-    background: green;
+    // background: green;
     @media screen and (min-width:768px) {
       display: none;
     }
