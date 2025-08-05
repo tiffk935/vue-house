@@ -1,6 +1,5 @@
 <template>
   <section class="s6 user-n w-full relative z-[1]">
-    <!-- <img class="bg" src="@/section/s6/speed-m.png" alt=""> -->
     <div class="bg"></div>
     <div class="text text1">
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">掌握雙北動脈<br>國王大道馳騁未來</div>
@@ -102,16 +101,14 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-image: url(@/section/s6/speed-m.png);
-    background-size: 100% auto;
+    background-image: url(@/section/s6/speed.png);
+    background-position: 100% 0;
+    background-size: auto 100%;
     background-repeat: no-repeat;
-    background-blend-mode: screen;
-    /* mix-blend-mode: screen; */
     pointer-events: none;
     z-index: -1;
     @media screen and (min-width:768px) {
       top: 0;
-      background-image: url(@/section/s6/speed.png);
     }
   }
 
