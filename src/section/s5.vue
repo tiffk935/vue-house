@@ -1,5 +1,8 @@
 <template>
   <section class="s5 user-n w-full relative">
+    <div class="ball ball1 absolute"></div>
+    <div class="ball ball2 absolute"></div>
+    <div class="ball ball3 absolute"></div>
     <div class="line1 md:hidden"></div>
     <div class="line2 md:hidden"></div>
     <div class="line3 hidden md:block"></div>
@@ -76,11 +79,67 @@
   font-size: size-m(14);
   line-height: 160%;
   letter-spacing: .08em;
-  z-index: 1;
+  z-index: 2;
   @media screen and (min-width:768px) {
     padding: 0;
     font-size: size(16);
     height: size(1558);
+  }
+
+  .ball1 {
+    width: size-m(86);
+    height: size-m(86);
+    top: size-m(-10);
+    right: size-m(18);
+    transform: translateY(20%);
+    background-image: url(@/section/ball1.png);
+    animation: ball 5s ease 0s infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(194);
+      height: size(194);
+      top: size(60);
+      right: size(560);
+    }
+
+    &:after {
+      content: '';
+      background: rgba(255, 255, 255, .2);
+    }
+  }
+
+  .ball2 {
+    width: size-m(37);
+    height: size-m(37);
+    top: size-m(757);
+    left: size-m(26);
+    transform: translateY(40%);
+    background-image: url(@/section/ball1.png);
+    animation: ball 4s linear 0s infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(428);
+      height: size(428);
+      top: size(1210);
+      left: size(-32);
+      transform: translateY(20%);
+      animation: ball 6s linear 0s infinite alternate;
+    }
+  }
+
+  .ball3 {
+    width: size-m(153);
+    height: size-m(153);
+    top: size-m(1110);
+    right: size-m(-60);
+    transform: translateY(-30%);
+    background-image: url(@/section/ball1.png);
+    animation: ball 5s linear 0s infinite alternate;
+    opacity: .7;
+    @media screen and (min-width:768px) {
+      width: size(206);
+      height: size(206);
+      top: size(1110);
+      right: size(108);
+    }
   }
 
   .line1 {
@@ -109,8 +168,8 @@
     position: absolute;
     top: size(314);
     left: 0;
-    width: 100%;
-    height: calc(1048 / 1558 * 100%);
+    width: 100vw;
+    height: size(1048);
     background-image: url('data:image/svg+xml,<svg width="1919" height="1050" viewBox="0 0 1919 1050" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1 1H887C909.091 1 927 18.9086 927 41V1009C927 1031.09 944.909 1049 967 1049H1919" stroke="url(%23paint0_linear_114_244)" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_114_244" x1="-37" y1="-37" x2="1951" y2="1077" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="0.485577" stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white"/></linearGradient></defs></svg>');
     background-size: 100% 100%;
     z-index: -1;

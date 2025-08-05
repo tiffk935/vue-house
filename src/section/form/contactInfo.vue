@@ -1,5 +1,7 @@
 <template>
   <div class="contact-info">
+    <div class="ball ball3 absolute md:hidden"></div>
+
     <div class="container">
       <div class="contact-item-box">
         <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
@@ -68,7 +70,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#9F223D] border-0 text-white mt-12" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#560048] border-0 text-white mt-12" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -87,9 +89,27 @@
 @import "@/assets/style/function.scss";
 
 .contact-info {
+  position: relative;
   padding: size-m(101) 0 size-m(40) 0;
   @media screen and (min-width:768px) {
     padding: size(143) 0 size(117) 0;
+  }
+
+  .ball3 {
+    width: size-m(108);
+    height: size-m(108);
+    bottom: size-m(178);
+    right: size-m(16);
+    transform: translateY(-30%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 6s ease 0s infinite alternate;
+    opacity: .9;
+
+    &:after {
+      content: '';
+      background-color: #FF90FF;
+      mix-blend-mode: soft-light;
+    }
   }
 
   .contact-item-box {
@@ -103,17 +123,16 @@
     .contact-item {
       width: 100%;
       height: size-m(60);
-      border: size-m(1) solid #560048;
       margin-bottom: size-m(25);
       font-size: size-m(16);
       line-height: 1;
       letter-spacing: .1em;
       border-radius: 0;
       min-height: auto;
+      border: none;
       @media screen and (min-width:768px) {
         width: calc(33.333% - size(6.666666));
         height: size(72);
-        border: none;
         background: rgba(182, 0, 100, .6);
         margin-bottom: 0;
         font-size: size(22);
@@ -150,19 +169,16 @@
         background: #fff;
         color: #000;
         margin-bottom: 0;
-        border: none;
         font-size: size-m(15);
         letter-spacing: 0;
         @media screen and (min-width:768px) {
           font-size: size(22);
-          border-right: none;
           flex: 1;
         }
       }
 
       .contact-item:nth-child(2) {
         background: #E4007F;
-        border: none;
         @media screen and (min-width:768px) {
           background: rgba(182, 0, 100, .6);
         }
@@ -181,7 +197,7 @@
 
 .modal-box{
   img {
-    filter: invert(20%) sepia(22%) saturate(7402%) hue-rotate(327deg) brightness(88%) contrast(93%);
+    filter: invert(3%) sepia(87%) saturate(6041%) hue-rotate(315deg) brightness(103%) contrast(99%);
     //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }

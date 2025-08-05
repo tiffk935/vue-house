@@ -4,7 +4,7 @@
       <div class="w-full flex-1 items-center justify-center">
         <div class="info-box mx-auto flex flex-col items-center justify-center">
           <div class="title">建案資訊</div>
-          <div class="info-items mt-4 w-full grid grid-cols-1 md:grid-cols-2">
+          <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2">
             <div 
               class="item flex items-center w-full whitespace-nowrap"
               v-for="item in info.houseInfos"
@@ -53,7 +53,7 @@
     row-gap: size-m(20);
     @media screen and (min-width:768px) {
       row-gap: size(20);
-      column-gap: size(20);
+      column-gap: size(60);
     }
 
     .item {

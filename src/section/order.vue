@@ -1,12 +1,15 @@
 <template>
   <div id="order" class="order relative">
-    <div class="container">
-      <!-- Title -->
-      <div class="order-title" v-if="info.order.title">{{ info.order.title }}</div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
+    <div class="ball ball1 absolute"></div>
+    <div class="ball ball2 absolute"></div>
 
+    <!-- Title -->
+    <div class="order-title" v-if="info.order.title">{{ info.order.title }}</div>
+    <div class="order-subTitle text-center" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
+
+    <div class="container">
       <!-- Form -->
-      <div class="form">
+      <div class="form relative">
         <div>
           <label>
             <span>姓名</span>
@@ -102,8 +105,59 @@
 .order {
   color: #000;
   padding: size-m(60) 0 0 0;
+  z-index: 2;
   @media screen and (min-width:768px) {
     padding: size(100) 0 0 0;
+  }
+
+  .ball1 {
+    width: size-m(263);
+    height: size-m(263);
+    top: calc(16vw + 500px);
+    left: size-m(-120);
+    transform: translateY(-20%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 8s ease 0s infinite alternate;
+    opacity: .9;
+    @media screen and (min-width:768px) {
+      width: size(352);
+      height: size(352);
+      top: size(-123);
+      left: size(-143);
+    }
+
+    &:after {
+      content: '';
+      background-color: #00DBFF;
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  .ball2 {
+    width: size-m(108);
+    height: size-m(108);
+    top: calc(size-m(170) - 50px);
+    right: size-m(-60);
+    transform: translateY(30%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 6s ease 0s infinite alternate;
+    opacity: .9;
+    z-index: 1;
+    @media screen and (min-width:768px) {
+      width: size(158);
+      height: size(158);
+      top: calc(size(210) + 250px);
+      right: size(125);
+    }
+
+    &:after {
+      content: '';
+      background-color: #00DBFF;
+      mix-blend-mode: soft-light;
+      @media screen and (min-width:768px) {
+        background-color: #FF90FF;
+      }
+    }
   }
 
   .container {

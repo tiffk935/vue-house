@@ -1,5 +1,5 @@
 <template>
-  <section class="s6 user-n w-full relative">
+  <section class="s6 user-n w-full relative z-[1]">
     <!-- <img class="bg" src="@/section/s6/speed-m.png" alt=""> -->
     <div class="bg"></div>
     <div class="text text1">

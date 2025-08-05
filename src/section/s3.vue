@@ -1,5 +1,6 @@
 <template>
   <section class="s3 user-n w-full relative">
+    <div class="ball absolute"></div>
     <div class="map user-n relative">
       <div class="scrollable" ref="scrollable">
         <img class="map1" src="@/section/s3/map.jpg" @load="onImgLoad($event)" />
@@ -40,6 +41,23 @@
   height: size-m(800);
   @media screen and (min-width:768px) {
     height: auto;
+  }
+
+  .ball {
+    width: size-m(53);
+    height: size-m(53);
+    top: size-m(-14);
+    left: size-m(44);
+    transform: translateY(30%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 5s linear 0s infinite alternate;
+    z-index: 1;
+    @media screen and (min-width:768px) {
+      width: size(105.69);
+      height: size(105.69);
+      top: size(67);
+      left: size(317);
+    }
   }
 
   .map {

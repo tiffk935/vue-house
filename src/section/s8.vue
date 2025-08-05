@@ -1,5 +1,7 @@
 <template>
-  <section class="s8 user-n w-full relative bg-white">
+  <section class="s8 user-n w-full relative bg-white z-[1]">
+    <div class="ball ball1 absolute"></div>
+    <div class="ball ball2 absolute hidden md:block"></div>
     <img class="bg w-full block md:hidden" src="@/section/s8/bg-m.jpg" />
     <img class="bg w-full hidden md:block" src="@/section/s8/bg.jpg" />
     <div class="content">
@@ -24,6 +26,36 @@
 
 .s8 {
   letter-spacing: .08em;
+
+  .ball1 {
+    width: size-m(87);
+    height: size-m(87);
+    top: size-m(-20);
+    right: size-m(30);
+    transform: translateY(-20%);
+    background-image: url(@/section/ball1.png);
+    animation: ball 5s ease 0s infinite alternate;
+    z-index: 1;
+    @media screen and (min-width:768px) {
+      width: size(295);
+      height: size(295);
+      top: size(-125);
+      right: size(128);
+    }
+  }
+
+  .ball2 {
+    transform: translateY(20%);
+    background-image: url(@/section/ball1.png);
+    animation: ball 8s ease 0s infinite alternate;
+    z-index: 1;
+    @media screen and (min-width:768px) {
+      width: size(535);
+      height: size(535);
+      top: size(200);
+      left: size(-226);
+    }
+  }
 
   .content {
     position: absolute;

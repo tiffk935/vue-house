@@ -1,5 +1,7 @@
 <template>
-  <section class="s7 user-n w-full relative">
+  <section class="s7 user-n w-full relative z-[1]">
+    <div class="ball ball1 absolute hidden md:block"></div>
+    <div class="ball ball2 absolute hidden md:block"></div>
     <div class="arrow arrow1"></div>
     <div class="arrow arrow2 hidden md:block"></div>
     <div class="arrow arrow3 hidden md:block"></div>
@@ -121,6 +123,43 @@
       top: size(356);
       padding-top: calc(502 / 1920 * 100%);
       background-image: url('data:image/svg+xml,<svg width="1920" height="504" viewBox="0 0 1920 504" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M-1 1H618.748C640.839 1 658.747 18.9086 658.747 41V463C658.747 485.091 676.656 503 698.747 503H1252.89C1274.98 503 1292.89 485.091 1292.89 463V391C1292.89 368.909 1310.8 351 1332.89 351H1920" stroke="url(%23paint0_linear_114_175)" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_114_175" x1="1959.16" y1="516.412" x2="856.99" y2="-778.346" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="0.4" stop-color="white" stop-opacity="0.1"/><stop offset="1" stop-color="white"/></linearGradient></defs></svg>');
+    }
+  }
+
+  .ball1 {
+    transform: translateY(30%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 5s linear 0s infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(124);
+      height: size(124);
+      top: size(-63);
+      left: size(75);
+    }
+
+    &:after {
+      content: '';
+      background-color: #CE94C0;
+      opacity: .86;
+      mix-blend-mode: soft-light;
+    }
+  }
+
+  .ball2 {
+    transform: translateY(-20%);
+    background-image: url(@/section/ball2.png);
+    animation: ball 8s linear -3s infinite alternate;
+    @media screen and (min-width:768px) {
+      width: size(352);
+      height: size(352);
+      top: size(-37);
+      right: size(-126);
+    }
+
+    &:after {
+      content: '';
+      background-color: #00DBFF;
+      mix-blend-mode: soft-light;
     }
   }
 
