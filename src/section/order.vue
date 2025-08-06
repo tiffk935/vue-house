@@ -13,16 +13,19 @@
         <div>
           <label>
             <span>姓名</span>
-            <input type="text" class="input w-full rounded-none" :value="formData.name" @input="(event) => (formData.name = event.target.value)" />
+            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
+              @input="(event) => (formData.name = event.target.value)" />
           </label>
           <label>
             <span>手機</span>
-            <input type="text" class="input w-full rounded-none" :value="formData.phone" @input="(event) => (formData.phone = event.target.value)" />
+            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
+              @input="(event) => (formData.phone = event.target.value)" />
           </label>
           <label>
             <span>需求房型</span>
-            <select class="select w-full rounded-none" v-model="formData.room_type">
-              <option value="" selected disabled>請選擇房型</option>
+            <select class="select w-full rounded-none" v-model="formData.room_type"
+              :class="{ 'text-gray': !formData.room_type }">
+              <option value="" selected disabled class="placeholder-option">請選擇房型</option>
               <option v-for="type in info.room_type" :value="type" :key="type">
                 {{ type }}
               </option>
@@ -30,7 +33,7 @@
           </label>
           <label>
             <span>居住城市</span>
-            <select class="select w-full rounded-none" v-model="formData.city">
+            <select class="select w-full rounded-none" v-model="formData.city" :class="{ 'text-gray': !formData.city }">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
@@ -39,7 +42,7 @@
           </label>
           <label>
             <span>居住地區</span>
-            <select class="select w-full rounded-none" v-model="formData.area">
+            <select class="select w-full rounded-none" v-model="formData.area" :class="{ 'text-gray': !formData.area }">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
@@ -48,41 +51,33 @@
           </label>
         </div>
         <div>
-          <textarea 
-            :value="formData.msg" 
-            @input="(event) => (formData.msg = event.target.value)"
-            class="row textarea w-full h-full rounded-none" 
-            placeholder="請輸入您的留言"></textarea>
+          <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
+            class="row textarea w-full h-full rounded-none" placeholder="請輸入您的留言"></textarea>
         </div>
       </div>
     </div>
 
     <!-- Policy -->
     <div class="control flex gap-2 items-center justify-center">
-      <input 
-        type="checkbox" 
-        v-model="formData.policyChecked" 
-        :checked="formData.policyChecked"
+      <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
         class="checkbox bg-white rounded-md" />
       <p class="text-white font-bold">
         本人知悉並同意
-        <label for="policy-modal" class="modal-button text-[#FFFA6B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+        <label for="policy-modal"
+          class="modal-button text-[#FFFA6B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
       </p>
     </div>
     <Policy />
 
     <div class="recaptcha flex justify-center">
-      <vue-recaptcha
-        ref="recaptcha"
-        :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify"
+      <vue-recaptcha ref="recaptcha" :sitekey="info.recaptcha_site_key_v2" @verify="onRecaptchaVerify"
         @expired="onRecaptchaUnVerify" />
     </div>
 
     <!-- Send -->
     <div class="container">
       <div class="send btn text-white bg-[#560048] text-center hover:scale-90 cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '立即預約' }}
+        {{ sending ? '發送中..' : '立即預約' }}
       </div>
     </div>
 
@@ -106,6 +101,7 @@
   color: #000;
   padding: size-m(60) 0 0 0;
   z-index: 2;
+
   @media screen and (min-width:768px) {
     padding: size(100) 0 0 0;
   }
@@ -123,6 +119,7 @@
     background-image: url(@/section/ball2.png);
     animation: ball 8s ease 0s infinite alternate;
     opacity: .9;
+
     @media screen and (min-width:768px) {
       width: size(352);
       height: size(352);
@@ -147,6 +144,7 @@
     animation: ball 6s ease 0s infinite alternate;
     opacity: .9;
     z-index: 1;
+
     @media screen and (min-width:768px) {
       width: size(158);
       height: size(158);
@@ -158,6 +156,7 @@
       content: '';
       background-color: #00DBFF;
       mix-blend-mode: soft-light;
+
       @media screen and (min-width:768px) {
         background-color: #FF90FF;
       }
@@ -167,6 +166,7 @@
   .container {
     width: 100%;
     padding: 0 size-m(26);
+
     @media screen and (min-width:768px) {
       padding: 0;
       max-width: size(1200);
@@ -181,6 +181,7 @@
     line-height: size-m(34);
     font-weight: 700;
     margin: 0 auto size-m(20) auto;
+
     @media screen and (min-width:768px) {
       font-size: size(40);
       line-height: size(48);
@@ -195,6 +196,7 @@
     font-size: size-m(14);
     line-height: size-m(36);
     margin-bottom: size-m(20);
+
     @media screen and (min-width:768px) {
       font-size: size(15);
       line-height: size(36);
@@ -205,6 +207,7 @@
   .form {
     position: relative;
     margin-bottom: size-m(20);
+
     @media screen and (min-width:768px) {
       margin-bottom: size(49);
       display: flex;
@@ -231,7 +234,9 @@
       }
     }
 
-    input[type=text], select, textarea {
+    input[type=text],
+    select,
+    textarea {
       font-size: 16px;
       font-weight: 400;
     }
@@ -240,12 +245,13 @@
       border: size-m(1) solid #fff;
       height: 5rem;
       resize: none;
+
       @media screen and (min-width:768px) {
         border: size(1) solid #fff;
         height: 100%;
       }
     }
-    
+
     label {
       position: relative;
       display: flex;
@@ -254,6 +260,7 @@
       margin-bottom: size-m(13);
       border: size-m(1) solid #fff;
       background: #fff;
+
       @media screen and (min-width:768px) {
         margin-bottom: size(20);
         border: size(1) solid #fff;
@@ -277,20 +284,33 @@
         padding-left: 1rem;
       }
 
-      input[type=text], .select {
+      input[type=text],
+      .select {
         width: calc(100% - 95px);
       }
 
-      input[type=text], select {
+      input[type=text],
+      select {
         &:focus {
           outline: none;
+        }
+
+        //姓名、手機註解文字
+        &::placeholder {
+          color: #666666;
         }
       }
     }
   }
 
+  .text-gray,
+  textarea::placeholder {
+    color: #666666;
+  }
+
   .control {
     margin: 0 size-m(-32) size-m(27) size-m(-32);
+
     @media screen and (min-width:768px) {
       margin: 0 0 size(49) 0;
     }
@@ -298,6 +318,7 @@
 
   .recaptcha {
     margin-bottom: size-m(25);
+
     @media screen and (min-width:768px) {
       margin: 0 0 size(49) 0;
     }
@@ -313,6 +334,7 @@
     padding: size-m(25) 0;
     border: none;
     border-radius: size-m(10);
+
     @media screen and (min-width:768px) {
       display: block;
       width: size(480);
@@ -331,6 +353,7 @@
   .gmap {
     width: 100%;
     height: size-m(354);
+
     @media screen and (min-width:768px) {
       height: size(500);
     }

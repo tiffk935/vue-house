@@ -6,17 +6,10 @@
     <div class="arrow arrow2 hidden md:block"></div>
     <div class="arrow arrow3 hidden md:block"></div>
     <div class="slider slider1 md:hidden">
-      <swiper
-        :space-between="10"
-        :pagination="false"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :loop="true"
-        :navigation="false"
-        :modules="modules"
-      >
+      <swiper :space-between="10" :pagination="false" :autoplay="{
+        delay: 3000,
+        disableOnInteraction: false,
+      }" :loop="true" :navigation="false" :modules="modules">
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s7/1.jpg" />
@@ -32,17 +25,10 @@
       </swiper>
     </div>
     <div class="slider slider2 md:hidden">
-      <swiper
-        :space-between="10"
-        :pagination="false"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :loop="true"
-        :navigation="false"
-        :modules="modules"
-      >
+      <swiper :space-between="10" :pagination="false" :autoplay="{
+        delay: 3000,
+        disableOnInteraction: false,
+      }" :loop="true" :navigation="false" :modules="modules">
         <swiper-slide>
           <div class="relative">
             <img src="@/section/s7/3.jpg" />
@@ -60,7 +46,8 @@
     <div class="text">
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">16年完整教育資源<br>給孩子最輕鬆的起跑線</div>
       <div class="desc" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-        <div class="mb-[0.7em] md:[0.5em]">2分鐘步行昌平國小、吉的堡雙語幼兒園，優質雙語環境從小扎根，銜接頭前國中、新莊高中，學習資源一脈相承，更連動丹鳳高中及輔仁大學，16年完整教育資源一應俱全。</div>
+        <div class="mb-[0.7em] md:[0.5em]">
+          2分鐘步行昌平國小、吉的堡雙語幼兒園，優質雙語環境從小扎根，銜接頭前國中、新莊高中，學習資源一脈相承，更連動丹鳳高中及輔仁大學，16年完整教育資源一應俱全。</div>
         <div>住在 KING PARK 國王大道，用省下的通勤時間，換更多的專注與精神，給孩子最輕鬆的起跑線，未來每一步都是領先。</div>
       </div>
     </div>
@@ -103,6 +90,7 @@
   line-height: 160%;
   letter-spacing: .08em;
   z-index: 1;
+
   @media screen and (min-width:768px) {
     padding: size(222) 0 size(314) 0;
     font-size: size(16);
@@ -119,6 +107,7 @@
     background-image: url('data:image/svg+xml,<svg width="374" height="571" viewBox="0 0 374 571" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 1H42.1247C64.2161 1 82.1247 18.9086 82.1247 41V530C82.1247 552.091 100.033 570 122.125 570H374" stroke="url(%23paint0_linear_117_1397)" stroke-linejoin="round"/><defs><linearGradient id="paint0_linear_117_1397" x1="-7.38329" y1="-19.6318" x2="505.392" y2="88.9093" gradientUnits="userSpaceOnUse"><stop stop-color="white"/><stop offset="0.485577" stop-color="white" stop-opacity="0"/><stop offset="1" stop-color="white"/></linearGradient></defs></svg>');
     background-size: 100% 100%;
     z-index: -1;
+
     @media screen and (min-width:768px) {
       top: size(356);
       padding-top: calc(502 / 1920 * 100%);
@@ -130,6 +119,7 @@
     transform: translateY(30%);
     background-image: url(@/section/ball2.png);
     animation: ball 5s linear 0s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(124);
       height: size(124);
@@ -149,6 +139,7 @@
     transform: translateY(-20%);
     background-image: url(@/section/ball2.png);
     animation: ball 8s linear -3s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(352);
       height: size(352);
@@ -172,6 +163,7 @@
     background-image: url('data:image/svg+xml,<svg width="103" height="38" viewBox="0 0 103 38" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M2 2L17 18.1639L2 36M30 2L45 18.1639L30 36M58 2L73 18.1639L58 36M86 2L101 18.1639L86 36" stroke="white" stroke-opacity="0.2" stroke-width="3" stroke-linecap="round"/></svg>');
     background-size: contain;
     background-repeat: no-repeat;
+
     @media screen and (min-width:768px) {
       top: calc(285 / 1080 * 100%);
       left: calc(674 / 1920 * 100%);
@@ -196,6 +188,7 @@
 
   .text {
     padding: 0 size-m(32);
+
     @media screen and (min-width:768px) {
       padding: 0 size(208) 0 size(196);
       display: flex;
@@ -210,6 +203,7 @@
     margin-bottom: size-m(40);
     padding: 0 0 0 size-m(5 + 18);
     position: relative;
+
     @media screen and (min-width:768px) {
       font-size: size(40);
       line-height: size(53);
@@ -226,6 +220,7 @@
       width: size-m(5);
       height: size-m(57);
       background: #fff;
+
       @media screen and (min-width:768px) {
         width: size(7);
         height: size(88);
@@ -261,20 +256,21 @@
         overflow: hidden;
       }
     }
+  }
 
-    .info {
-      position: absolute;
-      bottom: size-m(8);
-      right: size-m(13);
-      font-size: size-m(10);
-      line-height: size-m(12);
-      font-weight: 500;
-      @media screen and (min-width:768px) {
-        bottom: size(12);
-        right: size(11);
-        font-size: size(13);
-        line-height: size(16);
-      }
+  .info {
+    position: absolute;
+    bottom: size-m(8);
+    right: size-m(13);
+    font-size: size-m(10);
+    line-height: size-m(12);
+    font-weight: 500;
+
+    @media screen and (min-width:768px) {
+      bottom: size(10);
+      right: size(11);
+      font-size: size(13);
+      line-height: size(16);
     }
   }
 
@@ -289,7 +285,6 @@
         width: 100%;
         height: 0;
         padding-top: calc(376.7 / 564.52 * 100%);
-        background: #fff;
         border-radius: size(16);
         overflow: hidden;
 
@@ -298,9 +293,11 @@
           top: 0;
           left: 0;
           width: 100%;
-          height: 100%;
+          height: 101%;
           object-fit: cover;
         }
+
+
       }
 
       &:nth-child(even) {

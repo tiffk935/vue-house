@@ -3,89 +3,65 @@
     <div class="bg"></div>
     <div class="text text1">
       <div class="title" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">掌握雙北動脈<br>國王大道馳騁未來</div>
-      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">站在新北市的交通戰略樞紐，掌握三捷運、三國道、四特快優勢，左右連結雙北台一線忠孝國王大道，直通國門與信義核心，地段決定時間價值，交通定義未來身價，每一次出發，都是時間與財富的領先。</div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        站在新北市的交通戰略樞紐，掌握三捷運、三國道、四特快優勢，左右連結雙北台一線忠孝國王大道，直通國門與信義核心，地段決定時間價值，交通定義未來身價，每一次出發，都是時間與財富的領先。</div>
     </div>
     <div class="slider md:hidden">
-      <swiper
-        :pagination="false"
-        :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }"
-        :centeredSlides="true"
-        :slidesPerView="'auto'"
-        :effect="'coverflow'"
-        :coverflowEffect="{
-          rotate: 0,
-          stretch: '82.7%',
-          depth: 200,
-          modifier: 1,
-          slideShadows: true,
-        }"
-        :loop="true"
-        :lazyPreloadPrevNext="1"
-        :navigation="true"
-        :breakpoints="{
+      <swiper :pagination="false" :autoplay="{
+        delay: 3000,
+        disableOnInteraction: false,
+      }" :centeredSlides="true" :slidesPerView="'auto'" :effect="'coverflow'" :coverflowEffect="{
+        rotate: 0,
+        stretch: '82.7%',
+        depth: 200,
+        modifier: 1,
+        slideShadows: true,
+      }" :loop="true" :lazyPreloadPrevNext="1" :navigation="true" :breakpoints="{
           '768': {
             coverflowEffect: {
               rotate: 0,
-              stretch: '47.4%',
-              depth: 250,
+              stretch: '82.7%',
+              depth: 200,
               modifier: 1,
               slideShadows: true,
             }
           },
-        }"
-        :modules="modules"
-        @swiper="init"
-      >
+        }" :modules="modules" @swiper="init">
         <swiper-slide v-for="slide in slides">
           <div class="relative">
             <img :src="getImg(`./s6/${slide.img}`)" loading="lazy" />
             <div class="swiper-lazy-preloader"></div>
-            <div class="info">{{slide.label}}</div>
+            <div class="info">{{ slide.label }}</div>
           </div>
         </swiper-slide>
         <swiper-slide v-for="slide in slides">
           <div class="relative">
             <img :src="getImg(`./s6/${slide.img}`)" loading="lazy" />
             <div class="swiper-lazy-preloader"></div>
-            <div class="info">{{slide.label}}</div>
+            <div class="info">{{ slide.label }}</div>
           </div>
         </swiper-slide>
       </swiper>
     </div>
     <div class="imgs hidden md:flex f-full">
-      <div 
-        class="img hidden md:block" 
-        v-for="(item, idx) in slides"
-        data-aos="zoom-out-up"
-        data-aos-duration="1000"
-        :data-aos-delay="idx * 200"
-      >
+      <div class="img hidden md:block" v-for="(item, idx) in slides" data-aos="zoom-out-up" data-aos-duration="1000"
+        :data-aos-delay="idx * 200">
         <img class="block" :src="getImg(`./s6/${item.img}`)" />
         <div class="info">{{ item.label }}</div>
       </div>
     </div>
     <div class="content">
-      <div
-        class="item"
-        v-for="(item, idx) in slides"
-      >
+      <div class="item" v-for="(item, idx) in slides">
         <div class="item-info">
-          <div
-            data-aos="zoom-out-up"
-            data-aos-duration="1000"
-            :data-aos-delay="idx * 200"
-          >
+          <div data-aos="zoom-out-up" data-aos-duration="1000" :data-aos-delay="idx * 200">
             <div class="item-title">{{ item.title }}</div>
             <div class="item-desc">{{ item.desc }}</div>
           </div>
-          
+
         </div>
       </div>
     </div>
-    <img class="mrt" src="@/section/s6/mrt.png" alt=""> 
+    <img class="mrt" src="@/section/s6/mrt.png" alt="">
   </section>
 </template>
 
@@ -99,6 +75,7 @@
   line-height: 160%;
   letter-spacing: .08em;
   z-index: 1;
+
   @media screen and (min-width:768px) {
     padding: size(187) size(196) size(185) size(196);
     font-size: size(16);
@@ -116,6 +93,7 @@
     background-repeat: no-repeat;
     pointer-events: none;
     z-index: -1;
+
     @media screen and (min-width:768px) {
       top: 0;
     }
@@ -124,6 +102,7 @@
   .text {
     padding: 0 size-m(37);
     margin-bottom: size-m(35);
+
     @media screen and (min-width:768px) {
       padding: 0;
       width: size(714);
@@ -137,6 +116,7 @@
     margin-bottom: size-m(40);
     padding: 0 0 0 size-m(5 + 18);
     position: relative;
+
     @media screen and (min-width:768px) {
       font-size: size(40);
       line-height: size(48);
@@ -153,6 +133,7 @@
       width: size-m(5);
       height: size-m(57);
       background: #fff;
+
       @media screen and (min-width:768px) {
         width: size(7);
         height: size(88);
@@ -165,6 +146,7 @@
     margin: 0 size-m(14);
     margin-bottom: size-m(26);
     overflow: hidden;
+
     // background: green;
     @media screen and (min-width:768px) {
       display: none;
@@ -186,6 +168,7 @@
           opacity: 1;
           background: none;
           margin: 0 size-m(4);
+
           @media screen and (min-width:768px) {
             display: none;
           }
@@ -196,7 +179,8 @@
         }
       }
 
-      .swiper-button-prev, .swiper-button-next {
+      .swiper-button-prev,
+      .swiper-button-next {
         width: size-m(45);
         height: size-m(45);
         background: rgba(255, 255, 255, 0.90);
@@ -208,6 +192,7 @@
         background-repeat: no-repeat;
         background-size: size-m(15.75) auto;
         box-shadow: 0 0 size-m(8) 0 rgba(0, 0, 0, 0.25);
+
         @media screen and (min-width:768px) {
           width: size(78);
           height: size(78);
@@ -223,6 +208,7 @@
         &.swiper-button-prev {
           left: 0;
           background-image: url('data:image/svg+xml,<svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.375 5.5L1.625 5.5M1.625 5.5L5 2.125M1.625 5.5L5 8.875" stroke="%23252432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
           @media screen and (min-width:768px) {
             left: size(190);
           }
@@ -232,24 +218,26 @@
           left: auto;
           right: 0;
           background-image: url('data:image/svg+xml,<svg width="19" height="11" viewBox="0 0 19 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.625 5.5L17.375 5.5M17.375 5.5L14 2.125M17.375 5.5L14 8.875" stroke="%23252432" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+
           @media screen and (min-width:768px) {
             right: size(190);
           }
         }
       }
-      
+
       .swiper-slide {
         width: calc(300 / 346 * 100%);
         border-radius: size-m(8);
         overflow: hidden;
         box-shadow: 0 0 size-m(16) 0 rgba(0, 0, 0, 0.4);
+
         @media screen and (min-width:768px) {
           width: calc(899 / 1528.2 * 100%);
           border-radius: size(8);
           box-shadow: 0 0 size(16) 0 rgba(0, 0, 0, 0.4);
         }
 
-        & > div:after {
+        &>div:after {
           content: '';
           position: absolute;
           top: 0;
@@ -259,7 +247,7 @@
           background: rgba(255, 255, 255, .6);
         }
 
-        &.swiper-slide-active > div:after {
+        &.swiper-slide-active>div:after {
           opacity: 0;
         }
       }
@@ -271,6 +259,7 @@
       right: size-m(5);
       font-size: size-m(10);
       line-height: size-m(12);
+
       @media screen and (min-width:768px) {
         bottom: size(12);
         right: size(11);
@@ -314,6 +303,7 @@
     background: rgba(255, 255, 255, .85);
     padding: size-m(38) size-m(32) size-m(38) size-m(18);
     margin: 0 size-m(13);
+
     @media screen and (min-width:768px) {
       background: none;
       padding: 0;
@@ -327,6 +317,7 @@
       font-size: size-m(13);
       line-height: 140%;
       letter-spacing: .08em;
+
       @media screen and (min-width:768px) {
         width: 33.333%;
         margin-bottom: 0;
@@ -373,6 +364,7 @@
         background-size: size-m(7) auto;
         background-position: 0 50%;
         background-repeat: no-repeat;
+
         @media screen and (min-width:768px) {
           font-size: size(15);
           font-weight: 500;
@@ -389,6 +381,7 @@
     position: absolute;
     bottom: 0;
     right: size-m(-54);
+
     @media screen and (min-width:768px) {
       width: size(640);
       bottom: auto;

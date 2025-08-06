@@ -24,8 +24,8 @@ export default {
         ["結構安全", "圓方結構工程顧問有限公司"],
     ],
     gtmCode: ["GTM-NVGGJ9T5"], // 可放置多個
-    recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
-    //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+    //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
     recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -34,20 +34,20 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
-    ctime: ["上午","下午","晚上","皆可"],
-    room_type: ["2房","3房","店面"],
-    budget: ["1600-2000萬","2000-2400萬","2500萬以上"],
+    ctime: ["上午", "下午", "晚上", "皆可"],
+    room_type: ["2房", "3房", "店面"],
+    budget: ["1600-2000萬", "2000-2400萬", "2500萬以上"],
     navList: [
         {
             name: "增值盛世",
             target: ".s3",
             offset: "",
         },
-        {
-            name: "(影片預留)",
-            target: ".s4",
-            offset: "",
-        },
+        //{
+        //name: "(影片預留)",
+        // target: ".s4",
+        // offset: "",
+        //},
         {
             name: "重劃之王",
             target: ".s5",
