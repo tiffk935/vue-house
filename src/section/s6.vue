@@ -22,7 +22,8 @@
           modifier: 1,
           slideShadows: true,
         }"
-        :loop="false"
+        :loop="true"
+        :lazyPreloadPrevNext="1"
         :navigation="true"
         :breakpoints="{
           '768': {
@@ -40,7 +41,15 @@
       >
         <swiper-slide v-for="slide in slides">
           <div class="relative">
-            <img :src="getImg(`./s6/${slide.img}`)" />
+            <img :src="getImg(`./s6/${slide.img}`)" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
+            <div class="info">{{slide.label}}</div>
+          </div>
+        </swiper-slide>
+        <swiper-slide v-for="slide in slides">
+          <div class="relative">
+            <img :src="getImg(`./s6/${slide.img}`)" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
             <div class="info">{{slide.label}}</div>
           </div>
         </swiper-slide>

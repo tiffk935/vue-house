@@ -23,7 +23,7 @@
         </div>
         <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
-          <div>導航 GoogleMap</div>
+          <div>導航 Google 地圖</div>
         </div>
       </div>
     </div>

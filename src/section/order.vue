@@ -82,7 +82,7 @@
     <!-- Send -->
     <div class="container">
       <div class="send btn text-white bg-[#560048] text-center hover:scale-90 cursor-pointer" @click="send()">
-        {{ sending? '發送中..': '送出表單' }}
+        {{ sending? '發送中..': '立即預約' }}
       </div>
     </div>
 
@@ -108,6 +108,10 @@
   z-index: 2;
   @media screen and (min-width:768px) {
     padding: size(100) 0 0 0;
+  }
+
+  .btn {
+    text-transform: none;
   }
 
   .ball1 {

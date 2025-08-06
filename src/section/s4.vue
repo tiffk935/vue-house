@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 user-n w-full relative z-[1]">
+  <section class="s4 user-n w-full relative bg-white z-[1]">
     <div class="video">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/K4TOrB7at0Y?autoplay=1&mute=1&loop=1&playlist=K4TOrB7at0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
@@ -10,6 +10,11 @@
 @import "@/assets/style/function.scss";
 
 .s4 {
+  padding: size-m(15) size-m(12);
+  @media screen and (min-width:768px) {
+    padding: size(40);
+  }
+
   .video {
     width: 100%;
     height: 0;

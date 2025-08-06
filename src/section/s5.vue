@@ -38,7 +38,8 @@
           modifier: 1,
           slideShadows: true,
         }"
-        :loop="false"
+        :loop="true"
+        :lazyPreloadPrevNext="1"
         :navigation="true"
         :breakpoints="{
           '768': {
@@ -57,7 +58,8 @@
       >
         <swiper-slide v-for="slide in slides">
           <div class="relative">
-            <img :src="getImg(`./s5/${slide.img}`)" />
+            <img :src="getImg(`./s5/${slide.img}`)" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
             <div class="info">{{slide.label}}</div>
           </div>
         </swiper-slide>
@@ -303,7 +305,7 @@
     @media screen and (min-width:768px) {
       padding-top: size(16);
       margin: 0;
-      padding-bottom: 0;
+      padding-bottom: size(45);
       position: absolute;
       top: size(524);
       left: size(196);
@@ -317,6 +319,9 @@
         bottom: -23%;
         line-height: 1;
         margin: 0;
+        @media screen and (min-width:768px) {
+          bottom: -7%;
+        }
 
         .swiper-pagination-bullet {
           width: size-m(10);
@@ -327,7 +332,10 @@
           background: none;
           margin: 0 size-m(4);
           @media screen and (min-width:768px) {
-            display: none;
+            width: size(12);
+            height: size(12);
+            border: size(1) solid #fff;
+            margin: 0 size(5);
           }
 
           &.swiper-pagination-bullet-active {
@@ -470,11 +478,13 @@ const init = (swiper) => {
   sliderRef.value = swiper;
 }
 
-const slideChange = (swiper) => {
-  activeSlideIdx.value = swiper.realIndex;
+const slideChange = () => {
+  if (sliderRef.value) {
+    activeSlideIdx.value = sliderRef.value.realIndex;
+  }
 }
 
 const slideTo = (idx) => {
-  sliderRef.value.slideTo(idx);
+  sliderRef.value.slideToLoop(idx);
 }
 </script>

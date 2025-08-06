@@ -22,10 +22,12 @@
           modifier: 1,
           slideShadows: false,
         }"
-        :loop="false"
+        :loop="true"
+        :lazyPreloadPrevNext="1"
         :navigation="false"
         :breakpoints="{
           '768': {
+            slidesPerView: 1,
             coverflowEffect: {
               rotate: 0,
               stretch: 0,
@@ -41,13 +43,14 @@
       >
         <swiper-slide v-for="slide in slides">
           <div class="relative">
-            <img :src="getImg(`./s9/${slide.img}`)" />
+            <img :src="getImg(`./s9/${slide.img}`)" loading="lazy" />
+            <div class="swiper-lazy-preloader"></div>
             <div class="info">{{slide.label}}</div>
           </div>
         </swiper-slide>
       </swiper>
-      <div class="slide-prev" :class="{ disabled: activeSlideIdx === 0 }" @click="slideToPrev"></div>
-      <div class="slide-next" :class="{ disabled: activeSlideIdx === slides.length - 1 }" @click="slideToNext"></div>
+      <div class="slide-prev" @click="slideToPrev"></div>
+      <div class="slide-next" @click="slideToNext"></div>
     </div>
     <div class="tk-tabs">
       <div 
@@ -302,12 +305,14 @@ const init = (swiper) => {
   sliderRef.value = swiper;
 }
 
-const slideChange = (swiper) => {
-  activeSlideIdx.value = swiper.realIndex;
+const slideChange = () => {
+  if (sliderRef.value) {
+    activeSlideIdx.value = sliderRef.value.realIndex;
+  }
 }
 
 const slideTo = (idx) => {
-  sliderRef.value.slideTo(idx);
+  sliderRef.value.slideToLoop(idx);
 }
 
 const slideToPrev = () => {
