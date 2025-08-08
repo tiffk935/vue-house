@@ -4,15 +4,18 @@
     <div class="ball ball2 absolute"></div>
     <div class="ball ball3 absolute"></div>
     <div class="ball ball4 absolute hidden md:block"></div>
-    <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
-    <img class="text absolute" src="@/section/s1/text.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" />
+    <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000"
+      data-aos-delay="0" />
+    <img class="text absolute" src="@/section/s1/text.png" data-aos="fade-up" data-aos-duration="1000"
+      data-aos-delay="200" />
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.ball, .ball:after {
+.ball,
+.ball:after {
   background-size: 100% 100%;
   background-repeat: no-repeat;
   border-radius: 50%;
@@ -35,6 +38,7 @@
 
 .s1 {
   height: size-m(800);
+
   @media screen and (min-width:768px) {
     height: size(1200);
   }
@@ -43,6 +47,7 @@
     top: size-m(228);
     left: size-m(31);
     width: size-m(312);
+
     @media screen and (min-width:768px) {
       top: size(300);
       left: size(688);
@@ -54,6 +59,7 @@
     top: size-m(513);
     left: size-m(38);
     width: size-m(299);
+
     @media screen and (min-width:768px) {
       top: size(844);
       left: size(774);
@@ -69,6 +75,7 @@
     transform: translateY(20%);
     background-image: url(@/section/ball1.png);
     animation: ball 10s ease 0s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(440);
       height: size(440);
@@ -78,6 +85,7 @@
   }
 
   .ball2 {
+    opacity: 0.5;
     width: size-m(69);
     height: size-m(69);
     top: size-m(136);
@@ -85,6 +93,7 @@
     transform: translateY(-30%);
     background-image: url(@/section/ball2.png);
     animation: ball 7s linear -5s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(169.5);
       height: size(169.5);
@@ -101,6 +110,7 @@
     transform: translateY(-20%);
     background-image: url(@/section/ball1.png);
     animation: ball 6s linear -2s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(545);
       height: size(545);
@@ -113,6 +123,7 @@
     transform: translateY(40%);
     background-image: url(@/section/ball1.png);
     animation: ball 8s linear -4s infinite alternate;
+
     @media screen and (min-width:768px) {
       width: size(355);
       height: size(355);
