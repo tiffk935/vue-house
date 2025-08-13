@@ -2,7 +2,7 @@
 const caseName = "000"
 
 export default {
-  caseid: "655075fa-e77e-48b0-9720-01dce2672bd9",
+  caseid: "dae3c353-2d38-43c9-9c69-10effc3da2a9",
   case_code: "test",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
