@@ -96,15 +96,6 @@
   <span>發送中...</span>
 </div>
 </div>
-
-    <!-- Contact Info -->
-    <ContactInfo />
-
-    <!-- Map -->
-    <Map />
-
-    <!-- HouseInfo -->
-    <HouseInfo />
   </div>
 </template>
 
@@ -113,11 +104,12 @@
 
 .order {
   width: 100%;
-  padding-top: size(115);
+  padding: size(80) 0;
   background: #E3E3E3;
   background-image: url(@/section/form/bg.jpg);
   background-size: 100% auto;
   font-family:"Noto Sans TC";
+  overflow: hidden;
 
   .order-title {
     font-size: size(43);
@@ -220,8 +212,8 @@
   .order {
     width: 100%;
     // border-radius: size-m(68) size-m(68) 0 0;
-    padding-top: size-m(40);
-    margin-top: size-m(0);
+    padding: size-m(40) 0 size-m(60) 0;
+ //   margin-top: size-m(0);
 
     .order-title {
       font-size: size-m(29);
@@ -271,9 +263,6 @@
 
 <script setup>
 import Policy from "@/section/form/policy.vue"
-import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
-import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
 

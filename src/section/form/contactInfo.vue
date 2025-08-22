@@ -99,7 +99,7 @@
   padding: size(68) size(160) size(56) size(160);
   margin-top: size(73);
   position: relative;
-  background: rgba(255, 255, 255, 0.5);
+  //background: rgba(255, 255, 255, 0.5);
 
   .logo {
     width: size(400.5);

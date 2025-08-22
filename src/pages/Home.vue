@@ -13,6 +13,17 @@
     <h1 style="display:none;">華友聯next21</h1>
     <S1 />
     <Order />
+    <S2 />
+<div class="orbg">
+    <!-- Contact Info -->
+    <ContactInfo />
+
+    <!-- Map -->
+    <Map />
+
+    <!-- HouseInfo -->
+    <HouseInfo />
+  </div>
   </div>
 </template>
 
@@ -20,13 +31,21 @@
 /* .loading-view {
   transition: none;
 } */
+ .orbg{
+  background: #E3E3E3;
+  background-image: url(@/section/form/bg.jpg);
+  background-size: 100% auto;}
 </style>
 
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
+import ContactInfo from "@/section/form/contactInfo.vue"
+import Map from "@/section/form/map.vue"
+import HouseInfo from "@/section/form/houseInfo.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
