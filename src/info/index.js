@@ -1,11 +1,8 @@
 const caseName = "國王大道"
 
 export default {
-    meta: {
-        title: caseName,
-        description: caseName,
-        keywords: caseName,
-    },
+    caseid: "69cf9884-c68a-4e5b-92e1-ec665d2423ab",
+    case_code: "king",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "新北市新莊區富貴路．中華路三段",
@@ -34,9 +31,14 @@ export default {
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
     // 底下2個 沒項目就會隱藏
-    ctime: ["上午", "下午", "晚上", "皆可"],
-    room_type: ["2房", "3房", "店面"],
-    budget: ["1600-2000萬", "2000-2400萬", "2500萬以上"],
+    selectFields: {
+        room_type: {
+            title: "需求房型",
+            hold: "請選擇房型",
+            option: ["2房", "3房", "店面"],
+            bypass: false,
+        },
+    },
     navList: [
         {
             name: "增值盛世",
