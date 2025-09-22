@@ -550,7 +550,7 @@ const send = () => {
       }
     );
     //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
+    fetch("contact-form.php", {
       method: "POST",
       body: presend,
     })
