@@ -14,7 +14,7 @@
         <RouterLink to="/pinshi-architecture" @click="mobOpen = false">寳實建築</RouterLink>
         <RouterLink to="/news" @click="mobOpen = false">最新消息</RouterLink>
         <RouterLink to="/order" @click="mobOpen = false">預約表單</RouterLink>
-        <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink>
+       <!-- <RouterLink to="/vision" @click="mobOpen = false">平實城市願景館</RouterLink> -->
       </div>
     </nav>
     <nav class="pc-nav">
@@ -44,15 +44,15 @@
           </ul>
         </li>
         <li><RouterLink to="/news">最新消息</RouterLink></li>
-        <li class="has-children">
-          <RouterLink to="/vision">平實城市願景館</RouterLink>
+        <!-- <li class="has-children">
+         <RouterLink to="/vision">平實城市願景館</RouterLink>
           <ul class="sub-menu">
             <li><RouterLink to="/vision#about">關於策展</RouterLink></li>
             <li><RouterLink to="/vision#prev">上期展覽</RouterLink></li>
             <li><RouterLink to="/vision#info">展覽資訊</RouterLink></li>
             <li><RouterLink to="/vision#order">預約表單</RouterLink></li>
-          </ul>
-        </li>
+          </ul> 
+        </li> -->
         <li><RouterLink class="order-btn" to="/order">預約表單</RouterLink></li>
       </ul>
     </nav>

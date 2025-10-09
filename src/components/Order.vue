@@ -73,7 +73,8 @@
           <div class="pretty p-default p-round">
             <input id="privacy-checkbox" type="checkbox" v-model="formData.policyChecked" />
             <div class="state">
-              <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱<span @click="open">隱私權聲明</span>。</label>
+              <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱隱私權聲明。</label>
+             <!-- <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱<span @click="open">隱私權聲明</span>。</label>  -->
             </div>
           </div>
           <ModalsContainer />

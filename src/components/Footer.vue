@@ -12,7 +12,7 @@
           <RouterLink to="/pinshi-team">寳實團隊</RouterLink><br class="pc">
           <RouterLink to="/pinshi-architecture">寳實建築</RouterLink>
           <RouterLink to="/news">最新消息</RouterLink>
-          <RouterLink to="/vision">平實城市願景館</RouterLink>
+         <!-- <RouterLink to="/vision">平實城市願景館</RouterLink>  -->
         </div>
       </div>
       <div class="info-btns">
