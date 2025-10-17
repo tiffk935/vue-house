@@ -1,22 +1,25 @@
 <template>
   <div id="order" class="order relative">
-    <div class="ball ball1 absolute"></div>
-    <div class="ball ball2 absolute"></div>
+    <img class="order-title-img" src="@/section/form/order-title-img.png" />
 
     <!-- Title -->
-    <div class="order-title" v-if="info.order.title">{{ info.order.title }}</div>
-    <div class="order-subTitle text-center" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
+    <div class="order-title text-[#423E3D]" v-if="info.order.title">{{ info.order.title }}</div>
+    <div class="order-subTitle text-center text-[#423E3D]" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
 
     <div class="container">
       <!-- Form -->
-      <div class="form mx-auto relative flex justify-center">
+      <div class="form mx-auto relative md:flex md:justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名</span>
+          <label class="row name">
+            <span>姓名<span class="required">(必填)</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" /></label>
-          <label class="row"><span>手機</span>
+              @input="(event) => (formData.name = event.target.value)" />
+          </label>
+          <label class="row">
+            <span>手機<span class="required">(必填)</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)" /></label>
+              @input="(event) => (formData.phone = event.target.value)" />
+          </label>
 
           <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
           <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
@@ -58,9 +61,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-white font-bold">
+        <p class="text-[#423E3D] font-bold">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFFA6B] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#52777D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -72,8 +75,8 @@
       <!-- Send -->
       <div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 400;
     line-height: 3.3;height:3.3em">
-        <button class="send hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
-          立即預約
+        <button class="send bg-[#6D4D30] hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
+          即刻預約
         </button>
         <div v-else class="send-load text-[#FFF]" style="letter-spacing: 0.7em;
   text-indent: 0.9em;
@@ -108,9 +111,10 @@
 
 .order {
   color: #000;
-  padding: size-m(60) 0 0 0;
+  padding: size-m(100) 0 0 0;
   z-index: 2;
-
+  background-image: url(@/section/form/bg.jpg);
+  background-size: 100% auto;
   @media screen and (min-width:768px) {
     padding: size(100) 0 0 0;
   }
@@ -119,62 +123,9 @@
     text-transform: none;
   }
 
-  .ball1 {
-    width: size-m(263);
-    height: size-m(263);
-    top: calc(16vw + 500px);
-    left: size-m(-120);
-    transform: translateY(-20%);
-    background-image: url(@/section/ball2.png);
-    animation: ball 8s ease 0s infinite alternate;
-    opacity: .9;
-
-    @media screen and (min-width:768px) {
-      width: size(352);
-      height: size(352);
-      top: size(-123);
-      left: size(-143);
-    }
-
-    &:after {
-      content: '';
-      background-color: #00DBFF;
-      mix-blend-mode: soft-light;
-    }
-  }
-
-  .ball2 {
-    width: size-m(108);
-    height: size-m(108);
-    top: calc(size-m(170) - 50px);
-    right: size-m(-60);
-    transform: translateY(30%);
-    background-image: url(@/section/ball2.png);
-    animation: ball 6s ease 0s infinite alternate;
-    opacity: .9;
-    z-index: 1;
-
-    @media screen and (min-width:768px) {
-      width: size(158);
-      height: size(158);
-      top: calc(size(210) + 250px);
-      right: size(125);
-    }
-
-    &:after {
-      content: '';
-      background-color: #00DBFF;
-      mix-blend-mode: soft-light;
-
-      @media screen and (min-width:768px) {
-        background-color: #FF90FF;
-      }
-    }
-  }
-
   .container {
     width: 100%;
-    padding: 0 size-m(26);
+    padding: 0 size-m(22);
 
     @media screen and (min-width:768px) {
       padding: 0;
@@ -183,13 +134,22 @@
     }
   }
 
+  .order-title-img {
+    width: calc(100% - size-m(45));
+    display: block;
+    margin: 0 auto size-m(40) auto;
+    @media screen and (min-width:768px) {
+      width: size(524);
+      margin: 0 auto size(100) auto;
+    }
+  }
+
   .order-title {
-    color: #fff;
     text-align: center;
     font-size: size-m(28);
     line-height: size-m(34);
     font-weight: 700;
-    margin: 0 auto size-m(20) auto;
+    margin: 0 auto size-m(7) auto;
 
     @media screen and (min-width:768px) {
       font-size: size(40);
@@ -200,11 +160,10 @@
   }
 
   .order-subTitle {
-    color: #fff;
     text-align: center;
     font-size: size-m(14);
-    line-height: size-m(36);
-    margin-bottom: size-m(20);
+    line-height: size-m(19);
+    margin-bottom: size-m(27);
 
     @media screen and (min-width:768px) {
       font-size: size(15);
@@ -292,6 +251,15 @@
         width: 95px;
         display: block;
         padding-left: 1rem;
+
+        .required {
+          display: inline-block;
+          font-size: .6em;
+          width: auto;
+          padding: 0;
+          color: #52777D;
+          font-weight: 700;
+        }
       }
 
       input[type=text],
@@ -343,7 +311,9 @@
     line-height: 1;
     padding: size-m(25) 0;
     border: none;
-    border-radius: size-m(10);
+    border-radius: size-m(0);
+    letter-spacing: 1em;
+    text-indent: 1em;
 
     @media screen and (min-width:768px) {
       display: block;
@@ -355,8 +325,6 @@
       padding: size(30) 0;
       min-height: auto;
       margin: 0 auto size(20) auto;
-      border-radius: size(10);
-      background: rgba(182, 0, 100, .6);
     }
   }
 
@@ -403,7 +371,8 @@ const requiredFields = {
   // 固定必要欄位 (請勿刪)
   name: "姓名",
   phone: "手機",
-  email: "信箱",
+  // email: "信箱",
+  budget: "購屋預算",
   msg: "備註訊息",
   city: "居住縣市",
   area: "居住地區",
@@ -427,11 +396,11 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["email", "msg", "city", "area"]
+const staticBypass = ["msg"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)
-    .filter(([_, field]) => field.bypass !== true)
+    .filter(([_, field]) => field.bypass === true)
     .map(([key]) => key)
 ]
 

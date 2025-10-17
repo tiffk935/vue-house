@@ -32,7 +32,7 @@
 
     <div class="top-nav hidden md:block">
         <div class="top-nav-inner">
-            <img class="logo" src="@/section/logo.svg" alt="國王大道" @click="scrollTo('.s1')" />
+            <!-- <img class="logo" src="@/section/logo.svg" alt="" @click="scrollTo('.s1')" /> -->
             <div class="links">
                 <div 
                     class="link-item"
@@ -189,7 +189,7 @@
         transition: all .5s;
         padding: size(100) 0;
         gap: size(20);
-        background-image: url(@/section/navbg.jpg);
+        // background-image: url(@/section/navbg.jpg);
         background-size: cover;
 
         .menu-item {

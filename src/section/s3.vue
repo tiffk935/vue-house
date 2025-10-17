@@ -1,233 +1,137 @@
 <template>
   <section class="s3 user-n w-full relative">
-    <div class="ball absolute"></div>
-    <div class="map user-n relative">
-      <div class="scrollable" ref="scrollable">
-        <img class="map1" src="@/section/s3/map.jpg" @load="onImgLoad($event)" />
-        <img class="map2 absolute top-0 left-0 w-full pointer-events-none" src="@/section/s3/map2.svg" />
-        <!-- <div class="lights-wrapper">
-          <div class="lights">
-            <div></div>
-            <div></div>
-            <div></div>
+    <img class="title block" src="@/section/s3/title.png" data-aos="zoom-in" data-aos-duration="0" data-aos-delay="0" />
+
+    <div class="slider">
+      <swiper
+        :spaceBetween="30"
+        :pagination="{
+          clickable: true
+        }"
+        :autoplay="{
+          delay: 3000,
+          disableOnInteraction: false,
+        }"
+        :loop="true"
+        :modules="modules"
+      >
+        <swiper-slide v-for="(slide, idx) in slides">
+          <div class="img relative">
+            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx+1)}-m.jpg`)" />
+            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx+1)}.jpg`)" />
+            <div class="info">{{slide.label}}</div>
           </div>
-        </div> -->
-      </div>
-      <div class="mask md:hidden">
-        <img class="hand-label absolute" src="@/section/s3/hand-label.svg" />
-      </div>
+
+          <div class="content">
+            <img class="slide-title md:hidden" :src="getImg(`./s3/title${(idx+1)}-m.png`)" />
+            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx+1)}.png`)" />
+          
+            <div class="desc" v-html="slide.desc"></div>
+          </div>
+        </swiper-slide>
+      </swiper>
     </div>
-    <div class="content">
-      <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">眾勢成一王 <br class="md:hidden">贏接國政副都心增值盛世</div>
-      <div class="t2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">副都心強勢接棒信義，北台灣資源、人口與商業，紛紛向副都心靠攏，國家級溪北計畫，三大科園資源傾注於此，產官學界齊力造就產業、<br class="hidden md:block">交通與生活核心，當城市中心西移，形塑大台北生活樣貌，「國王大道」站在千億投資的中心點上，勢必迎來資產增值的黃金時代。</div>
-    </div>
+    
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-@keyframes light {
-  90% {
-    background-position: 0% 100%;
-  }
-  to {
-    background-position: 0% 100%;
-  }
-}
-
 .s3 {
-  background: #016AAE;
-  height: size-m(800);
+  padding: size-m(60) size-m(22) size-m(56) size-m(22);
   @media screen and (min-width:768px) {
-    height: auto;
+    padding: size(140) size(185) size(129) size(185);
   }
 
-  .ball {
-    width: size-m(53);
-    height: size-m(53);
-    top: size-m(-14);
-    left: size-m(44);
-    transform: translateY(30%);
-    background-image: url(@/section/ball2.png);
-    animation: ball 5s linear 0s infinite alternate;
-    z-index: 1;
+  .title {
+    width: size-m(225);
+    margin: 0 auto size-m(32) auto;
     @media screen and (min-width:768px) {
-      width: size(105.69);
-      height: size(105.69);
-      top: size(67);
-      left: size(317);
+      width: size(399);
+      margin: 0 auto size(99) auto;
     }
   }
 
-  .map {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    padding-top: size-m(800 - 654);
-    @media screen and (min-width:768px) {
-      position: static;
-      height: auto;
-      padding: 0;
-    }
-
-    .scrollable {
-      position: relative;
-      overflow-x: scroll;
-      overflow-y: hidden;
-      width: 100%;
-      height: 100%;
+  .slider {
+    .img {
+      margin-bottom: size-m(50);
       @media screen and (min-width:768px) {
-        height: auto;
-        overflow: hidden;
+        margin-bottom: size(137);
       }
 
-      img {
+      .info {
+        position: absolute;
+        bottom: size-m(5);
+        right: size-m(5);
+        color: #fff;
+        font-size: size-m(6);
+        @media screen and (min-width:768px) {
+          bottom: size(12);
+          right: size(19);
+          font-size: size(10);
+        }
+      }
+    }
+
+    .content {
+      font-weight: 300;
+      font-size: size-m(14);
+      line-height: size-m(24);
+      @media screen and (min-width:768px) {
+        font-size: size(24);
+        line-height: size(40);
+        display: flex;
+        align-items: center;
+      }
+
+      .slide-title {
         width: auto;
-        height: 100%;
-        max-width: none;
-        display: block;
+        height: size-m(79);
+        margin: 0 auto size-m(30) auto;
         @media screen and (min-width:768px) {
-          width: 100%;
-          height: auto;
+          height: size(93);
+          margin: 0 size(40) 0 0;
         }
       }
 
-      .lights-wrapper {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: calc(1308 / 375) * 100%;
-        height: 100%;
-        pointer-events: none;
+      .desc {
+        padding: 0 size-m(3);
         @media screen and (min-width:768px) {
-          width: 100%;
+          padding: 0;
+          max-width: size(900);
+        }
+      }
+    }
+
+    .swiper {
+      .swiper-pagination {
+        bottom: auto;
+        top: size-m(227 + 20);
+        transform: none;
+        line-height: 0;
+        font-size: 0;
+        margin: 0;
+        @media screen and (min-width:768px) {
+          top: size(429 + 35);
         }
 
-        .lights {
-          position: absolute;
-          width: calc(72 / 1308) * 100%;
-          height: calc(208 / 654) * 100%;
-          left: calc(587 / 1308) * 100%;
-          bottom: calc(94 / 654) * 100%;
-          // background: rgba(255,0,0,.3);
+        .swiper-pagination-bullet {
+          width: size-m(116);
+          height: size-m(3);
+          border: none;
+          border-radius: 0;
+          opacity: 1;
+          background: #C7C8C8;
+          margin: 0;
           @media screen and (min-width:768px) {
-            width: calc(104.15 / 1920) * 100%;
-            height: calc(240.5 / 960) * 100%;
-            left: calc(863 / 1920) * 100%;
-            bottom: calc(144.39 / 960) * 100%;
+            width: size(365);
+            height: size(3);
           }
 
-          div {
-            position: absolute;
-            bottom: 0;
-            width: calc(10 / 72) * 100%;
-            background: linear-gradient(1deg,rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 25%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0.8) 75%, rgba(255, 255, 255, 0) 100%);
-            background-size: 100% 200%;
-            animation: light 8s ease infinite;
-            @media screen and (min-width:768px) {
-              width: calc(9.39 / 104.15) * 100%;
-            }
-
-            &:nth-child(1) {
-              left: 0;
-              height: calc(175 / 208) * 100%;
-              @media screen and (min-width:768px) {
-                height: calc(205.86 / 240.5) * 100%;
-              }
-            }
-
-            &:nth-child(2) {
-              left: calc(32 / 72) * 100%;
-              bottom: calc(4 / 208) * 100%;
-              height: calc(208 / 208) * 100%;
-              @media screen and (min-width:768px) {
-                left: calc(46.71 / 104.15) * 100%;
-                bottom: 0;
-                width: calc(13.08 / 104.15) * 100%;
-                height: calc(205.86 / 240.5) * 100%;
-              }
-            }
-
-            &:nth-child(3) {
-              left: calc(62 / 72) * 100%;
-              height: calc(175 / 208) * 100%;
-              @media screen and (min-width:768px) {
-                left: calc(94.76 / 104.15) * 100%;
-                height: calc(205.86 / 240.5) * 100%;
-              }
-            }
+          &.swiper-pagination-bullet-active {
+            background: #6D4D30;
           }
-        }
-      }
-    }
-
-    .mask {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(180deg, rgba(39, 64, 112, 0.60) 8.21%, rgba(75, 122, 214, 0.60) 99.98%);
-      transition: opacity .5s;
-      pointer-events: none;
-
-      .hand-label {
-        width: size-m(290);
-        top: size-m(678);
-        left: size-m(44);
-      }
-    }
-  }
-
-  .content {
-    position: absolute;
-    top: size-m(86);
-    width: 100%;
-    padding: 0 size-m(22);
-    text-align: justify;
-    font-size: size-m(14);
-    line-height: 160%;
-    letter-spacing: .08em;
-    @media screen and (min-width:768px) {
-      top: size(174);
-      padding: 0;
-      text-align: center;
-      font-size: size(16);
-    }
-
-    .t1 {
-      text-align: center;
-      font-size: size-m(28);
-      line-height: size-m(40);
-      font-weight: 500;
-      margin-bottom: size-m(75);
-      position: relative;
-      @media screen and (min-width:768px) {
-        font-size: size(40);
-        line-height: size(48);
-        font-weight: 400;
-        margin-bottom: size(32);
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -17vw;
-        left: 50%;
-        transform: translate(-50%, 0);
-        width: size-m(340);
-        height: size-m(57);
-        background-image: url(@/section/s3/line.png);
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
-        @media screen and (min-width:768px) {
-          bottom: -2vw;
-          width: size(698);
-          height: size(57);
         }
       }
     }
@@ -236,25 +140,23 @@
 </style>
 
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue"
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import 'swiper/css/pagination';
+import { Autoplay, Pagination } from "swiper/modules";
+const modules = ref([Autoplay, Pagination]);
+const images = import.meta.globEager('./s3/*.*');
 
-const scrollable = ref();
-
-function onImgLoad(e) {
-  const img = e.target;
-  if (scrollable.value && img) {
-    setTimeout(() => {
-      let status = 0;
-      let hideHand = false;
-      scrollable.value.scrollLeft = img.clientWidth * 0.48 - window.innerWidth/2;
-      scrollable.value.addEventListener("scroll", () => {
-        status++;
-        if(status > 1 && !hideHand){
-          scrollable.value.parentNode.querySelector('.mask').style.opacity = 0;
-          hideHand = true;
-        }
-      });
-    }, 10);
+const getImg = path => images[path]?.default || '';
+const slides = ref([
+  {
+    label: '實景拍攝',
+    desc: '從碼頭興建與營運、船艇銷售，到台灣唯一結合遊艇俱樂部與濱海社區的綜合體驗，<br>亞果遊艇會構築出一座完整而極致的濱海生活場域。<br>亞果遊艇會，不僅是選擇，更是層峰身份的象徵。<br>在這裡，日常即度假，量身訂製的款待，成就不凡生活。'
+  },
+  {
+    label: '實景拍攝',
+    desc: '集團以海洋休閒為事業根基，延伸發展多元觸角，涵蓋會所經營、星級餐飲、旅宿度假與精緻活動，以台南為起點，串聯台中、高雄與澎湖黃金據點，建構完整居遊生態圈，開創台灣層峰與國際接軌的新格局。'
   }
-}
+]);
 </script>

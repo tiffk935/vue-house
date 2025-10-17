@@ -1,21 +1,27 @@
 <template>
-  <div class="container">
-    <div class="text-white flex flex-col md:flex-row items-center justify-between">
-      <div class="w-full flex-1 items-center justify-center">
-        <div class="info-box mx-auto flex flex-col items-center justify-center">
-          <div class="title">建案資訊</div>
-          <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2">
-            <div 
-              class="item flex items-center w-full whitespace-nowrap"
-              v-for="item in info.houseInfos"
-            >
-              <p class="mr-5 font-bold border-l-2 border-[#fff] pl-2 ">{{ item[0] }}</p>
-              <p class="whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+  <div class="bg-[#CFCFCF]">
+    <div class="container">
+      <div class="text-white flex flex-col md:flex-row items-center justify-between">
+        <div class="w-full flex-1 items-center justify-center">
+          <div class="info-box mx-auto flex flex-col items-center justify-center">
+            <div class="title text-[#423E3D]">建案資訊</div>
+            <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2">
+              <div 
+                class="item flex items-center w-full whitespace-nowrap"
+                v-for="item in info.houseInfos"
+              >
+                <p class="mr-5 text-[#423E3D] font-bold border-l-2 border-[#423E3D] pl-2 ">{{ item[0] }}</p>
+                <p class="text-[#423E3D] whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <div class="argo">
+    <img src="@/section/form/argo.svg" />
   </div>
 
   <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
@@ -32,7 +38,7 @@
 @import "@/assets/style/function.scss";
 
 .info-box {
-  padding: size-m(36) 0 size-m(28) 0;
+  padding: size-m(50) 0;
   @media screen and (min-width:768px) {
     padding: size(60) 0 size(80) 0;
     width: size(900);
@@ -40,8 +46,8 @@
   }
 
   .title {
-    font-size: size-m(20);
-    margin-bottom: size-m(27);
+    font-size: size-m(29);
+    margin-bottom: size-m(13);
     font-weight: 700;
     @media screen and (min-width:768px) {
       font-size: size(48);
@@ -67,6 +73,25 @@
           width: 4.5em;
         }
       }
+    }
+  }
+}
+
+.argo {
+  padding: size-m(21) 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #002856;
+  @media screen and (min-width:768px) {
+    padding: size(26) 0;
+  }
+
+  img {
+    display: block;
+    width: size-m(80);
+    @media screen and (min-width:768px) {
+      width: size(111);
     }
   }
 }
