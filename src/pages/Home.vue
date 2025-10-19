@@ -59,6 +59,11 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
+    const tl = gsap.timeline({ repeat: -1 });
+    tl.to('.s1 .logo1 img', { opacity: 0, duration: 0.6 }, 3);
+    tl.to('.s1 .logo2 img', { opacity: 1, duration: 0.6 }, 3);
+    tl.to('.s1 .logo1 img', { opacity: 1, duration: 0.6 }, 6);
+    tl.to('.s1 .logo2 img', { opacity: 0, duration: 0.6 }, 6);
   };
 })
 </script>

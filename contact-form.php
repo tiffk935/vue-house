@@ -271,7 +271,7 @@ if ($name == '') {
             $url .= "&city=".$city;
             $url .= "&area=".$area;
             $url .= "&room_type=" . $room_type;
-            //$url .= "&budget=" . $budget;
+            $url .= "&budget=" . $budget;
             $url .= "&message=".$msg.$budget;
             $url .= "&utm_source=".$utm_source;
             $url .= "&utm_medium=".$utm_medium;
