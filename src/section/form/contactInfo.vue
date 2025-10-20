@@ -1,18 +1,20 @@
 <template>
   <div class="contact-info">
-    <div class="ball ball3 absolute md:hidden"></div>
 
     <div class="container">
       <div class="contact-item-box">
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
+        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+          @click="modalOpen = true; modalType = 'phone'">
           <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center btfanpage" @click="open()">
+        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center btfanpage"
+          @click="open()">
           <img src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
           <div>前往粉絲專頁</div>
         </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+          @click="modalOpen = true; modalType = 'fb'">
           <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
           <div>FB 諮詢</div>
         </div>
@@ -21,7 +23,8 @@
         <div class="address contact-item flex justify-center items-center">
           <div><span>{{ info.address1 }}</span><span v-html="info.address"></span></div>
         </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
+        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+          @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
           <div>導航 Google 地圖</div>
         </div>
@@ -59,15 +62,16 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img//form/messenger.svg" alt="messenger"
+        srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
       <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-          '接待會館'
+        '接待會館'
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+        `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
       <div class="btn btn-lg bg-[#6D4D30] border-0 text-white mt-12" @click="go()" v-bind:class="{
@@ -77,7 +81,7 @@
         'btcontac': modalType == 'phone'
       }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-            '開啟導航'
+          '開啟導航'
         }}</div>
     </div>
   </div>
@@ -91,26 +95,11 @@
 .contact-info {
   position: relative;
   padding: size-m(101) 0 size-m(40) 0;
+
   @media screen and (min-width:768px) {
     padding: size(143) 0 size(117) 0;
   }
 
-  .ball3 {
-    width: size-m(108);
-    height: size-m(108);
-    bottom: size-m(178);
-    right: size-m(16);
-    transform: translateY(-30%);
-    background-image: url(@/section/ball2.png);
-    animation: ball 6s ease 0s infinite alternate;
-    opacity: .9;
-
-    &:after {
-      content: '';
-      background-color: #FF90FF;
-      mix-blend-mode: soft-light;
-    }
-  }
 
   .contact-item-box {
     &:nth-child(1) {
@@ -119,7 +108,7 @@
         justify-content: space-between;
       }
     }
-    
+
     .contact-item {
       width: 100%;
       height: size-m(60);
@@ -130,6 +119,7 @@
       border-radius: 0;
       min-height: auto;
       border: none;
+
       @media screen and (min-width:768px) {
         width: calc(33.333% - size(6.666666));
         height: size(72);
@@ -142,6 +132,7 @@
         margin-right: .8em;
         width: auto;
         height: size-m(22);
+
         @media screen and (min-width:768px) {
           height: size(25);
         }
@@ -154,6 +145,7 @@
 
     &.address-wrap {
       margin-top: size-m(30);
+
       @media screen and (min-width:768px) {
         width: 100%;
         display: flex;
@@ -166,6 +158,7 @@
         margin-bottom: 0;
         font-size: size-m(15);
         letter-spacing: 0;
+
         @media screen and (min-width:768px) {
           font-size: size(22);
           flex: 1;
@@ -190,7 +183,7 @@
   }
 }
 
-.modal-box{
+.modal-box {
   img {
     filter: invert(31%) sepia(49%) saturate(409%) hue-rotate(347deg) brightness(92%) contrast(96%);
     //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 

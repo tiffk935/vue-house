@@ -329,9 +329,6 @@
             padding: 0;
             gap: size-m(45);
 
-            &:before {
-                background-image: url(@/section/form/bg-m.svg);
-            }
 
             .menu-item {
                 margin-bottom: size-m(10);
