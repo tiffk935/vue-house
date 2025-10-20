@@ -8,9 +8,9 @@ export default {
     },
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南市北區文賢路218巷10弄7號",
+    address: "台南市新化區中山路480號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.5463530124985!2d120.19428769999999!3d23.0037035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e765d50a433c7%3A0xf9e8279c2e5bb60!2zNzA05Y-w5Y2X5biC5YyX5Y2A5paH6LOi6LevMjE45be3MTDlvIQ36Jmf!5e0!3m2!1szh-TW!2stw!4v1744969464766!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/My3UgHh3t7aQrA928",
+    googleLink: "https://maps.app.goo.gl/5XivyETC4KDqMhsq7",
     phone: "06-580-2368",
     fbLink: "https://www.facebook.com/61568627147826/",
     fbMessage: "https://m.me/61568627147826/",
@@ -34,7 +34,7 @@ export default {
         subTitle: "",
     },
     // 底下2個 沒項目就會隱藏
-    room_type: ["早上","下午","晚上"],
+    room_type: ["早上", "下午", "晚上"],
     budget: [],
     navList: [
         {
