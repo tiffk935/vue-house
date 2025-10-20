@@ -1,37 +1,32 @@
 <template>
   <section class="s3 user-n w-full relative">
-    <img class="title block" src="@/section/s3/title.png" data-aos="zoom-in" data-aos-duration="0" data-aos-delay="0" />
+    <img class="title block" src="@/section/s3/title.png" data-aos="zoom-in" data-aos-duration="1000"
+      data-aos-delay="0" />
 
     <div class="slider">
-      <swiper
-        :spaceBetween="30"
-        :pagination="{
-          clickable: true
-        }"
-        :autoplay="{
+      <swiper :spaceBetween="30" :pagination="{
+        clickable: true
+      }" :autoplay="{
           delay: 3000,
           disableOnInteraction: false,
-        }"
-        :loop="true"
-        :modules="modules"
-      >
+        }" :loop="true" :modules="modules">
         <swiper-slide v-for="(slide, idx) in slides">
           <div class="img relative">
-            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx+1)}-m.jpg`)" />
-            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx+1)}.jpg`)" />
-            <div class="info">{{slide.label}}</div>
+            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx + 1)}-m.jpg`)" />
+            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.jpg`)" />
+            <div class="info">{{ slide.label }}</div>
           </div>
 
           <div class="content">
-            <img class="slide-title md:hidden" :src="getImg(`./s3/title${(idx+1)}-m.png`)" />
-            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx+1)}.png`)" />
-          
+            <img class="slide-title md:hidden" :src="getImg(`./s3/title${(idx + 1)}-m.png`)" />
+            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx + 1)}.png`)" />
+
             <div class="desc" v-html="slide.desc"></div>
           </div>
         </swiper-slide>
       </swiper>
     </div>
-    
+
   </section>
 </template>
 
@@ -40,6 +35,7 @@
 
 .s3 {
   padding: size-m(60) size-m(22) size-m(56) size-m(22);
+
   @media screen and (min-width:768px) {
     padding: size(140) size(185) size(129) size(185);
   }
@@ -47,6 +43,7 @@
   .title {
     width: size-m(225);
     margin: 0 auto size-m(32) auto;
+
     @media screen and (min-width:768px) {
       width: size(399);
       margin: 0 auto size(99) auto;
@@ -56,6 +53,7 @@
   .slider {
     .img {
       margin-bottom: size-m(50);
+
       @media screen and (min-width:768px) {
         margin-bottom: size(137);
       }
@@ -66,6 +64,7 @@
         right: size-m(5);
         color: #fff;
         font-size: size-m(6);
+
         @media screen and (min-width:768px) {
           bottom: size(12);
           right: size(19);
@@ -78,6 +77,7 @@
       font-weight: 300;
       font-size: size-m(14);
       line-height: size-m(24);
+
       @media screen and (min-width:768px) {
         font-size: size(24);
         line-height: size(40);
@@ -89,6 +89,7 @@
         width: auto;
         height: size-m(79);
         margin: 0 auto size-m(30) auto;
+
         @media screen and (min-width:768px) {
           height: size(93);
           margin: 0 size(40) 0 0;
@@ -97,6 +98,7 @@
 
       .desc {
         padding: 0 size-m(3);
+
         @media screen and (min-width:768px) {
           padding: 0;
           max-width: size(900);
@@ -112,6 +114,7 @@
         line-height: 0;
         font-size: 0;
         margin: 0;
+
         @media screen and (min-width:768px) {
           top: size(429 + 35);
         }
@@ -124,6 +127,7 @@
           opacity: 1;
           background: #C7C8C8;
           margin: 0;
+
           @media screen and (min-width:768px) {
             width: size(365);
             height: size(3);

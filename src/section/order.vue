@@ -154,7 +154,7 @@
     @media screen and (min-width:768px) {
       font-size: size(40);
       line-height: size(48);
-      font-weight: 400;
+      font-weight: 800;
       margin-bottom: size(11);
     }
   }
@@ -251,6 +251,7 @@
         width: 95px;
         display: block;
         padding-left: 1rem;
+        font-weight: 600;
 
         .required {
           display: inline-block;

@@ -2,12 +2,16 @@
   <section class="s2 user-n w-full relative bg-[#CDA176]">
     <div class="video-wrapper">
       <div class="video">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/QLZnOQUY1MM?si=YpF-00bOlTzrW7S9&autoplay=1&mute=1&loop=1&playlist=QLZnOQUY1MM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="560" height="314"
+          src="https://www.youtube.com/embed/QLZnOQUY1MM?si=YpF-00bOlTzrW7S9&autoplay=1&mute=1&loop=1&playlist=QLZnOQUY1MM"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
       </div>
     </div>
     <div>
-      <img class="title" src="@/section/s2/title.png" data-aos="zoom-in" data-aos-duration="0" data-aos-delay="0" />
-      <div class="txt" data-aos="fade-up" data-aos-duration="0" data-aos-delay="0">
+      <img class="title" src="@/section/s2/title.png" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="0" />
+      <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
         當視野已盡天下，言語亦難盡成就。<br>
         唯一值得追尋的，是一處與身份相襯的場域。<br>
         建築不止是居所，更是臥於港灣的私人行館—<br>
@@ -28,6 +32,7 @@
   font-weight: 300;
   font-size: size-m(14);
   line-height: size-m(24);
+
   @media screen and (min-width:768px) {
     padding: size(175) size(30) size(116) 0;
     font-size: size(24);
@@ -38,13 +43,14 @@
   .video-wrapper {
     width: 100%;
     margin: 0 0 size-m(30) 0;
+
     @media screen and (min-width:768px) {
       width: size(900);
       margin: 0 size(60) 0 0;
     }
 
     .video {
-      width: 100%;
+      width: 99.8%;
       height: 0;
       padding-top: 56.25%;
       position: relative;
@@ -64,6 +70,7 @@
     display: block;
     width: size-m(231);
     margin: 0 0 size-m(30) 0;
+
     @media screen and (min-width:768px) {
       width: size(407);
       margin: 0 0 size(65) 0;

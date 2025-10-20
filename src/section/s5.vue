@@ -1,6 +1,7 @@
 <template>
   <section class="s5 user-n w-full relative bg-[#F3DCC5]">
-    <img class="title block" src="@/section/s5/title.png" data-aos="zoom-in" data-aos-duration="0" data-aos-delay="0" />
+    <img class="title block" src="@/section/s5/title.png" data-aos="zoom-in" data-aos-duration="1000"
+      data-aos-delay="0" />
 
     <div class="slider relative">
       <div class="slides">
@@ -13,7 +14,8 @@
       </div>
     </div>
 
-    <img class="title2 block" src="@/section/s5/title2.png" data-aos="zoom-in" data-aos-duration="0" data-aos-delay="0" />
+    <img class="title2 block" src="@/section/s5/title2.png" data-aos="zoom-in" data-aos-duration="1000"
+      data-aos-delay="0" />
 
     <div class="txt">
       從亞果遊艇會，15分鐘到北外環快速道路，<br class="md:hidden">
@@ -34,6 +36,7 @@
   font-weight: 300;
   font-size: size-m(14);
   line-height: size-m(24);
+
   @media screen and (min-width:768px) {
     padding: size(146) 0 size(126) 0;
     font-size: size(24);
@@ -43,6 +46,7 @@
   .title {
     width: size-m(311);
     margin: 0 auto size-m(50) auto;
+
     @media screen and (min-width:768px) {
       width: size(495);
       margin: 0 auto size(115) auto;
@@ -52,6 +56,7 @@
   .slider {
     height: size-m(200);
     margin: 0 0 size-m(60) 0;
+
     @media screen and (min-width:768px) {
       height: size(528);
       margin: 0 0 size(174) 0;
@@ -73,6 +78,7 @@
   .title2 {
     width: size-m(311);
     margin: 0 auto size-m(20) auto;
+
     @media screen and (min-width:768px) {
       width: size(390);
       margin: 0 auto size(30) auto;
@@ -82,6 +88,7 @@
   .txt {
     text-align: center;
     margin: 0 auto size-m(30) auto;
+
     @media screen and (min-width:768px) {
       margin: 0 auto size(30) auto;
     }
@@ -90,6 +97,7 @@
   .map {
     width: calc(100% - size-m(22));
     margin: 0 auto size-m(30) auto;
+
     @media screen and (min-width:768px) {
       width: calc(100% - size(39));
       margin: 0 auto size(67) auto;
@@ -99,15 +107,16 @@
   .info {
     width: calc(100% - size-m(10));
     margin: 0 auto;
+
     @media screen and (min-width:768px) {
-      width: calc(100% - size(227));
+      width: calc(100% - size(500));
     }
   }
 }
 </style>
 
 <script setup>
-import { gsap } from "gsap";    
+import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
@@ -149,29 +158,29 @@ function createAnimation() {
         ease: 'none'
       });
 
-      // .set('.s5 .slides', { left: 0 })
-      // .to('.s5 .slides', {
-      //   left: () => {
-      //     const w = document.querySelector('.s5 .slides img').clientWidth;
-      //     return -w + 'px';
-      //   },
-      //   duration: duration,
-      //   ease: 'none'
-      // });
+    // .set('.s5 .slides', { left: 0 })
+    // .to('.s5 .slides', {
+    //   left: () => {
+    //     const w = document.querySelector('.s5 .slides img').clientWidth;
+    //     return -w + 'px';
+    //   },
+    //   duration: duration,
+    //   ease: 'none'
+    // });
   }, 0);
 }
 
 window.addEventListener('resize', () => {
   if (!imgLoaded) return;
-  if ( parseInt(document.querySelector('.s5 .slides img').clientWidth) === parseInt(slideWidth) ) return;
-  
+  if (parseInt(document.querySelector('.s5 .slides img').clientWidth) === parseInt(slideWidth)) return;
+
   createAnimation();
 });
 
 function onImgLoad() {
   imgLoaded = true;
   slideWidth = document.querySelector('.s5 .slides img').clientWidth;
-  
+
   createAnimation();
 
   Draggable.create(".s5 .slider", {
@@ -181,7 +190,7 @@ function onImgLoad() {
       tl.pause();
       startX = this.pointerX;
     },
-    onRelease: function() {
+    onRelease: function () {
       if (tl.reversed()) {
         tl.reverse();
       } else {
@@ -194,7 +203,7 @@ function onImgLoad() {
       if (Math.abs(deltaX) > 1) {
         if (deltaX > 0) { // right
           // console.log('right');
-          
+
           tl.reverse();
         } else { // left
           // console.log('left');
