@@ -7,13 +7,13 @@
       <swiper :spaceBetween="30" :pagination="{
         clickable: true
       }" :autoplay="{
-          delay: 3000,
-          disableOnInteraction: false,
-        }" :loop="true" :modules="modules">
+        delay: 8000,
+        disableOnInteraction: false,
+      }" :loop="true" :modules="modules">
         <swiper-slide v-for="(slide, idx) in slides">
           <div class="img relative">
-            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx + 1)}-m.jpg`)" />
-            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.jpg`)" />
+            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx + 1)}-m.png`)" />
+            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.png`)" />
             <div class="info">{{ slide.label }}</div>
           </div>
 

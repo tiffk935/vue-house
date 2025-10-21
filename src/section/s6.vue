@@ -35,11 +35,11 @@
         disableOnInteraction: false,
       }" :modules="modules">
         <swiper-slide>
-          <img class="block w-full" src="@/section/s6/1-m.jpg" />
+          <img class="block w-full" src="@/section/s6/1-m.png" />
           <div class="info">實景拍攝</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="block w-full" src="@/section/s6/2-m.jpg" />
+          <img class="block w-full" src="@/section/s6/2-m.png" />
           <div class="info">實景拍攝</div>
         </swiper-slide>
       </swiper>

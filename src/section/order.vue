@@ -75,7 +75,8 @@
       <!-- Send -->
       <div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 400;
     line-height: 3.3;height:3.3em">
-        <button class="send bg-[#6D4D30] hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send" :disabled="sending">
+        <button class="send bg-[#6D4D30] hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send"
+          :disabled="sending">
           即刻預約
         </button>
         <div v-else class="send-load text-[#FFF]" style="letter-spacing: 0.7em;
@@ -115,6 +116,7 @@
   z-index: 2;
   background-image: url(@/section/form/bg.jpg);
   background-size: 100% auto;
+
   @media screen and (min-width:768px) {
     padding: size(100) 0 0 0;
   }
@@ -138,6 +140,7 @@
     width: calc(100% - size-m(45));
     display: block;
     margin: 0 auto size-m(40) auto;
+
     @media screen and (min-width:768px) {
       width: size(524);
       margin: 0 auto size(100) auto;
@@ -504,11 +507,11 @@ const send = () => {
     /*
     */
     fetch(
-      `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.msg}
+      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
       &utm_source=${utmSource}
       &utm_medium=${utmMedium}
       &utm_content=${utmContent}
@@ -520,7 +523,7 @@ const send = () => {
       }
     );
     //caseid 在index.js裡設定
-    fetch("contact-form.php", {
+    fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
       method: "POST",
       body: presend,
     })

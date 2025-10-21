@@ -2,15 +2,15 @@ const caseName = "亞果濱海寓所"
 
 export default {
     caseid: "ad8edddb-1f50-47c7-bec3-f9c5d571aa18",
-    case_code: "king",
+    //case_code: "king",
     address1: "",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台南市安平區新港路二段585號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.096232942265!2d120.1635414!3d22.9834885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75feb74702ed%3A0x296f70dc2ee14d30!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5paw5riv6Lev5LqM5q61NTg16Jmf!5e0!3m2!1szh-TW!2stw!4v1760695073759!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/PQjBAt9e9ZQuBLtq9",
-    phone: "08-8352-888",
+    phone: "0938-517-132",
     fbLink: "https://www.facebook.com/61581195067952/",
-    fbMessage: "https://www.facebook.com/messages/t/61581195067952/",
+    fbMessage: "https://m.me/61581195067952/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "亞果遊艇集團"],
