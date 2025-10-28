@@ -50,7 +50,7 @@ main {
   flex: 1;
   padding: func.size-m(74) 0 0 0;
   @media screen and (min-width:768px) {
-    padding: func.size(165) 0 0 0;
+    padding: func.size(0) 0 0 0;
   }
 }
 </style>

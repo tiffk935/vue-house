@@ -1,7 +1,7 @@
 <template>
   <div class="nav-bg" v-if="mobOpen" @click="mobOpen = false"></div>
   <header>
-    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/logo.svg" /></RouterLink>
+    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/mologo.png" /><img src="@/assets/pclogo.png" /></RouterLink>
     <div class="mob-toogle" @click="mobOpen = true">
       <span></span><span></span><span></span>
     </div>
@@ -68,7 +68,7 @@ header {
   left: 0;
   width: 100%;
   height: func.size-m(74);
-  padding: 0 func.size-m(30);
+  padding: 0 0 0 func.size-m(11);
   background: #fff;
   box-shadow: 0px func.size-m(4) func.size-m(27) 0px rgba(0, 0, 0, 0.55);
   display: flex;
@@ -76,39 +76,65 @@ header {
   align-items: center;
   z-index: 999;
   @media screen and (min-width:768px) {
-    height: func.size(165);
-    padding: 0 func.size(64) 0 func.size(96);
+    height: func.size(115);
+    padding: 0;
     box-shadow: 0px func.size(4) func.size(27) 0px rgba(0, 0, 0, 0.55);
   }
 
   .logo {
     display: block;
-    width: func.size-m(58);
+    width: func.size-m(110);
+    position: relative;
     @media screen and (min-width:768px) {
-      width: func.size(147.6);
+      width:func.size(407);
+      height:func.size(115);
+      display: flex; 
+      justify-content: center;
+       align-items: center;
+       &::after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0; 
+        right: func.size(-20);
+        width: func.size(20); 
+        height: 100%;
+        pointer-events: none; 
+
+        background:linear-gradient(to right, #0003,#0001 40%, transparent);
+       }
     }
 
     img {
-      display: block;
       width: 100%;
+      &:first-child{display: block;}
+      &:last-child{display: none;}
+    @media screen and (min-width:768px) {
+      width: func.size(270);
+      height: auto;
+        &:first-child{display: none;}
+        &:last-child{display: block;}
+
+    }
     }
   }
 
   .mob-toogle {
-    width: func.size-m(33);
-    height: func.size-m(29);
+    width: func.size-m(85);
+    height: func.size-m(74);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     @media screen and (min-width:768px) {
       display: none;
     }
 
     span {
-      width: 100%;
-      height: func.size-m(3.87);
-      background: #0C0C0C;
+      width: func.size-m(33);
+      height: func.size-m(4);
+      background: #0C0C0C;margin: func.size-m(4) 0;
     }
   }
 
@@ -122,6 +148,7 @@ header {
     overflow-y: auto;
     max-height: calc(100vh - func.size-m(74));
     max-height: calc(100svh - func.size-m(74));
+    width: func.size-m(200);
 
     &.open {
       display: block;
@@ -139,7 +166,7 @@ header {
         position: absolute;
         left: func.size-m(26);
         bottom: func.size-m(14);
-        width: func.size-m(188);
+        width: func.size-m(148);
         height: func.size-m(4);
         background: #000;
       }
@@ -174,7 +201,7 @@ header {
       display: block;
       text-decoration: none;
       color: #000;
-      font-size: func.size(23);
+      font-size: func.size(26);
       font-weight: 500;
       line-height: 1;
       letter-spacing: .02em;
@@ -185,6 +212,11 @@ header {
         background: #269D45;
         padding: func.size(11);
         border: 1px solid #269D45;
+        height: func.size(115);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: func.size(198);font-size: func.size(23);
 
 
         &:hover{
@@ -222,7 +254,7 @@ header {
       
       & > li {
         position: relative;
-        margin-right: func.size(60);
+        margin-right: func.size(80);
 
         &:last-child {
           margin-right: 0;
@@ -278,4 +310,5 @@ header {
 import { ref } from 'vue';
 
 const mobOpen = ref(false);
+
 </script>

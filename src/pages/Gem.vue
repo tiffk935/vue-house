@@ -1,7 +1,8 @@
 <template>
+    <img src="@/assets/pc.jpg" class="t0" />
   <section class="banner">
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
+    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
   </section>
 
@@ -9,7 +10,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <h2>關於國城</h2>
     </div>
-    <Marquee />
+    <!-- Marquee /  -->
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">不只是住得好，更要活得講究</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
@@ -80,7 +81,7 @@
       <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</div>
       <div class="list">
 
-        <article v-for="item in list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <article v-for="item in list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" :key="item">
           <RouterLink :to="item.link">
             <div class="photo">
               <img :src="getImg(item.thumbnail)" />
@@ -146,6 +147,7 @@
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
 
+.t0{position: absolute;top: 0;left: 0;width: 100%;pointer-events: none;z-index: 9;opacity: .0;}
 @mixin bg-contain {
   background-size: contain;
   background-position: center;
@@ -239,48 +241,53 @@ h2 {
   position: relative;
   width: 100%;
   height: func.size-m(667 - 74);
+  background-image:url(@/assets/home/banner/bgm.jpg);
+  background-size: cover;
   @media screen and (min-width:768px) {
-    height: func.size(1080 - 165);
+    height: func.size(1080);
+    background-image:url(@/assets/home/banner/bg.jpg);
   }
   
   .logo {
     position: absolute;
-    top: func.size-m(60);
-    left: func.size-m(65);
-    width: func.size-m(264);
-    height: func.size-m(228);
-    background-image: url(@/assets/logo-m.png);
+    top: func.size-m(37);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: func.size-m(200);
+    height: func.size-m(293);
+    background-image: url(@/assets/s1logo-m.png);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(228);
-      left: func.size(157);
-      width: func.size(840);
-      height: func.size(467);
-      background-image: url(@/assets/logo.png);
+      top: func.size(255);
+      width: func.size(500);
+      height: func.size(335);
+      background-image: url(@/assets/logo.svg);
     }
   }
 
   .txt {
     position: absolute;
-    top: func.size-m(349);
-    left: func.size-m(64);
-    width: func.size-m(247);
+    top: func.size-m(364);
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: func.size-m(217);
     height: func.size-m(119);
     background-image: url(@/assets/home/banner/txt-m.svg);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(329);
-      left: func.size(1113);
-      width: func.size(595.29);
-      height: func.size(289.28);
+      top: func.size(750);
+      width: func.size(1090);
+      height: func.size(200);
       background-image: url(@/assets/home/banner/txt.svg);
     }
   }
 
   .onder-btn {
     position: absolute;
-    top: func.size-m(444.77);
-    left: func.size-m(239.37);
+    top: func.size-m(455);
+    left: func.size-m(230);
     border: func.size-m(1) solid #219664;
     background: #219664;
     text-decoration: none;
@@ -289,14 +296,15 @@ h2 {
     font-weight: 500;
     letter-spacing: .1em;
     text-indent: .1em;
-    width: func.size-m(72.63);
-    height: func.size-m(23.23);
+    width: func.size-m(65);
+    height: func.size-m(22);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     transition: all .3s;
     @media screen and (min-width:768px) {
+      display: none;
       top: func.size(575);
       left: func.size(1513);
       border: func.size(1) solid #219664;
