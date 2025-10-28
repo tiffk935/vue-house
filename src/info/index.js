@@ -25,7 +25,7 @@ export default {
         ["基地位置", "台北市北投區福善路與承美路口"],
         ["不動產經紀人", "周宗盟 （108）南市字第00692號"],
     ],
-    gtmCode: ["GTM-MTMKGDBP"], // 可放置多個
+    gtmCode: ["GTM-PBR8PLZJ"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz",
     // recaptcha_site_key_v2: "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI", //testkey
     recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
