@@ -8,7 +8,9 @@
 
   <section class="about">
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img src="@/assets/home/about/bg.jpg" class="img" />
       <h2>關於國城</h2>
+
     </div>
     <!-- Marquee /  -->
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -147,7 +149,7 @@
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
 
-.t0{position: absolute;top: 0;left: 0;width: 100%;pointer-events: none;z-index: 9;opacity: .0;}
+.t0{position: absolute;top: 7px;left: 0;width: 100%;pointer-events: none;z-index: 9;opacity: .5;}
 @mixin bg-contain {
   background-size: contain;
   background-position: center;
@@ -162,16 +164,16 @@
 }
 
 h2 {
+  display: inline-block;
   font-size: func.size-m(17);
   line-height: func.size-m(19);
-  border-top: func.size-m(1) solid #000;
-  border-bottom: func.size-m(1) solid #000;
+  border: func.size-m(1) solid currentColor;
+  border-width: func.size-m(1) 0 func.size-m(1) 0;
   padding: func.size-m(9) 0;
   @media screen and (min-width:768px) {
     font-size: func.size(40);
     line-height: func.size(48);
-    border-top: func.size(1) solid #000;
-    border-bottom: func.size(1) solid #000;
+    border-width: 0 0 func.size(1) 0;
     padding: func.size(22) 0;
   }
 }
@@ -244,7 +246,9 @@ h2 {
   background-image:url(@/assets/home/banner/bgm.jpg);
   background-size: cover;
   @media screen and (min-width:768px) {
-    height: func.size(1080);
+    height: 100vh;
+    max-height: func.size(1080);
+    min-height: func.size(1080);
     background-image:url(@/assets/home/banner/bg.jpg);
   }
   
@@ -259,7 +263,8 @@ h2 {
     background-image: url(@/assets/s1logo-m.png);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(255);
+      //top: func.size(255);
+      top:calc(40% + func.size(255 - 1080 * .4));
       width: func.size(500);
       height: func.size(335);
       background-image: url(@/assets/logo.svg);
@@ -277,7 +282,8 @@ h2 {
     background-image: url(@/assets/home/banner/txt-m.svg);
     @include bg-contain;
     @media screen and (min-width:768px) {
-      top: func.size(750);
+      //top: func.size(750);
+      top:calc(70% + func.size(750 - 1080 * .7));
       width: func.size(1090);
       height: func.size(200);
       background-image: url(@/assets/home/banner/txt.svg);
@@ -322,14 +328,35 @@ h2 {
 
 .about {
   padding: func.size-m(25) 0;
+  position: relative;
+ /* background-image:url(@/assets/home/about/bgm.jpg);
+  background-size: cover;*/
   @media screen and (min-width:768px) {
-    padding: func.size(76) 0 func.size(98) 0;
+   /* padding: func.size(17) 0 func.size(98) 0;
+    background-image:url(@/assets/home/about/bg.jpg);*/
   }
 
   .marquee-wrapper {
     margin: func.size-m(48) 0;
     @media screen and (min-width:768px) {
       margin: func.size(80) 0 func.size(59) 0;
+    }
+  }
+  .img {
+    position: absolute;
+    top: 0;left: 0;
+    display: none;
+    @media screen and (min-width:768px) {
+      display: block;
+    top: 0;left: 0;
+      width: 100%;
+    }
+  }
+  h2{
+    color: #fff;
+    @media screen and (min-width:768px) {
+    border-width: 0 0 func.size(3) 0;
+      
     }
   }
 }
