@@ -1,5 +1,5 @@
 <template>
-    <img src="@/assets/pc.jpg" class="t0" />
+    <!-- <img src="@/assets/mo.jpg" class="t0" />  -->
   <section class="banner">
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
@@ -7,15 +7,16 @@
   </section>
 
   <section class="about">
+      <img src="@/assets/home/about/bg.jpg" class="img pc" />
+      <img src="@/assets/home/about/bgm.jpg" class="img mob" />
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img src="@/assets/home/about/bg.jpg" class="img" />
       <h2>關於國城</h2>
 
     </div>
     <!-- Marquee /  -->
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="t1">不只是住得好，更要活得講究</div>
-      <div class="t2">做建築，要做到國際級；做美食，要拿到米其林</div>
+      <div class="t1">不只是住得好，更要活得講究。</div>
+      <div class="t2">做建築，要做到國際級；做美食，要拿到米其林。</div>
       <div class="t3">｜<RouterLink to="/team">閱讀更多</RouterLink></div>
     </div>
   </section>
@@ -180,13 +181,15 @@ h2 {
 
 .t1 {
   font-size: func.size-m(24);
-  font-weight: 700;
+  font-weight: 600;
   line-height: func.size-m(29);
   margin-bottom: func.size-m(19);
   @media screen and (min-width:768px) {
-    font-size: func.size(78);
-    line-height: func.size(113);
-    margin-bottom: func.size(38);
+    font-size: func.size(55);
+    line-height: 1.4;
+    margin-bottom: .2em;
+    transform: scaleX(.98);
+    transform-origin: 0;
   }
 }
 
@@ -195,10 +198,10 @@ h2 {
   line-height: func.size-m(14);
   margin-bottom: func.size-m(2);
   @media screen and (min-width:768px) {
-    font-size: func.size(34);
-    line-height: func.size(41);
+    font-size: func.size(26);
+    line-height: 1.6;
     margin-bottom: 0;
-    letter-spacing: .05em;
+    letter-spacing: .0em;
   }
 }
 
@@ -210,12 +213,12 @@ h2 {
   border-bottom: func.size-m(1) solid #000;
   letter-spacing: .04em;
   @media screen and (min-width:768px) {
-    font-size: func.size(37);
+    font-size: func.size(25);
     line-height: func.size(44);
     text-align: right;
-    padding-bottom: func.size(19);
-    border-bottom: func.size(1) solid #000;
-    letter-spacing: .12em;
+    padding-bottom: func.size(25);
+    border-bottom: func.size(2) solid #000;
+    letter-spacing: 0em;
     margin-top: -2.2vw;
   }
   
@@ -332,8 +335,10 @@ h2 {
  /* background-image:url(@/assets/home/about/bgm.jpg);
   background-size: cover;*/
   @media screen and (min-width:768px) {
-   /* padding: func.size(17) 0 func.size(98) 0;
-    background-image:url(@/assets/home/about/bg.jpg);*/
+    padding: func.size(17) 0 func.size(55) 0;
+    // height: func.size(1070);
+
+    /*background-image:url(@/assets/home/about/bg.jpg);*/
   }
 
   .marquee-wrapper {
@@ -344,18 +349,17 @@ h2 {
   }
   .img {
     position: absolute;
+   // display: block;
     top: 0;left: 0;
-    display: none;
+    width: 100%;
     @media screen and (min-width:768px) {
-      display: block;
-    top: 0;left: 0;
-      width: 100%;
     }
   }
   h2{
     color: #fff;
     @media screen and (min-width:768px) {
     border-width: 0 0 func.size(3) 0;
+    margin-bottom: func.size(710);
       
     }
   }
