@@ -212,6 +212,7 @@ h2 {
   padding-bottom: func.size-m(9);
   border-bottom: func.size-m(1) solid #000;
   letter-spacing: .04em;
+  
   @media screen and (min-width:768px) {
     font-size: func.size(25);
     line-height: func.size(44);
