@@ -8,8 +8,8 @@
         <div class="links">
           <RouterLink to="/team">關於國城</RouterLink>
           <RouterLink to="/work">國城作品</RouterLink>
-          <RouterLink to="/pinshi">平實特區</RouterLink><br class="mob">
-          <RouterLink to="/pinshi-team">寳實團隊</RouterLink><br class="pc">
+          <RouterLink to="/pinshi">平實特區</RouterLink><br class="mob"><br class="pc">
+          <RouterLink to="/pinshi-team">寳實團隊</RouterLink>
           <RouterLink to="/pinshi-architecture">寳實建築</RouterLink>
           <RouterLink to="/news">最新消息</RouterLink>
          <!-- <RouterLink to="/vision">平實城市願景館</RouterLink>  -->
@@ -55,7 +55,7 @@ footer {
   padding: func.size-m(29) 0 func.size-m(22) 0;
   @media screen and (min-width:768px) {
     border-top: func.size(5) solid #299644;
-    padding: func.size(84) 0 func.size(112) 0;
+    padding: func.size(70) 0 func.size(70) 0;
   }
   
   &:after {
@@ -138,7 +138,6 @@ footer {
     @media screen and (min-width:768px) {
       flex: 1;
       margin-bottom: 0;
-      text-align: left;
     }
 
     a {
@@ -150,10 +149,11 @@ footer {
       text-decoration: none;
       margin: func.size-m(5) func.size-m(8);
       @media screen and (min-width:768px) {
-        font-size: func.size(20);
+        font-size: func.size(22);
         font-weight: 500;
         letter-spacing: .02em;
-        margin: func.size(30) func.size(44);
+        padding: func.size(20) func.size(20);
+        margin: func.size(10) func.size(20);
       }
     }
   }

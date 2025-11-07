@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@better-scroll/core": "^2.5.1",
     "@gtm-support/vue-gtm": "^1.6.0",
     "aos": "^2.3.4",
     "gsap": "^3.12.7",

@@ -11,7 +11,7 @@
             @input="(event) => (formData.name = event.target.value)" />
           </div>
           <div class="input-group">
-            <span>連絡電話</span>
+            <span>聯絡電話</span>
             <input type="text" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
           </div>
@@ -138,7 +138,7 @@
 @use "@/assets/style/function.scss" as func;
 
 .container {
-  padding: 0 func.size-m(49);
+  padding: 0 func.size-m(39);
   @media screen and (min-width:768px) {
     padding: 0 func.size(304);
   }
@@ -166,35 +166,43 @@
   .input-group {
     display: block;
     width: 100%;
-    margin-bottom: func.size-m(20);
     display: flex;
     align-items: center;
     border-bottom: func.size-m(1) solid #000;
+      font-size: func.size-m(13);
+      line-height: 1.6;
+        margin-bottom:1.3em;
     @media screen and (min-width:768px) {
-      margin-bottom: func.size(49);
       border-bottom: func.size(1) solid #000;
+        font-size: func.size(25);
     }
     
     span {
       display: block;
       width: func.size-m(62);
       padding-right: func.size-m(13);
-      margin-bottom: func.size-m(4);
       margin-right: func.size-m(13);
-      border-right: func.size-m(1) solid #000;
-      font-size: func.size-m(12);
-      line-height: func.size-m(14);
       font-weight: 500;
       letter-spacing: .07em;
       white-space: nowrap;
       @media screen and (min-width:768px) {
         width: func.size(125);
         padding-right: func.size(22);
-        margin-bottom: func.size(22);
         margin-right: func.size(22);
-        border-right: func.size(1) solid #000;
-        font-size: func.size(25);
-        line-height: func.size(25);
+      }
+      &::after {
+        content: "";
+        display: inline-block;
+        vertical-align: -.1em;
+        width: func.size-m(1);
+        height: 1em;
+        background: #000;
+        // border-radius: 50%;
+        margin-left: func.size-m(6);
+        @media screen and (min-width:768px) {
+          width: func.size(1);
+          margin-left: func.size(12);
+        }
       }
     }
 
@@ -205,11 +213,12 @@
       font-size: 16px;
       border: none;
       background: none;
-      padding: func.size-m(4) 0;
+      padding: 1em 0 .94em 0;
       margin-bottom: func.size-m(4);
+      font-size: 1em;
       @media screen and (min-width:768px) {
-        padding: 0;
-        margin-bottom: func.size(22);
+        margin-bottom: 0;
+        
       }
 
       &:focus {
@@ -287,14 +296,15 @@
 
 .others {
   @media screen and (min-width:768px) {
+    margin-top: func.size(70);
     margin-bottom: func.size(260);
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
-
+    align-items: flex-start;
     .policy-recaptcha {
       display: flex;
       flex-direction: column-reverse;
+      
     }
   }
 }
@@ -364,10 +374,10 @@
 .recaptcha {
   display: flex;
   justify-content: center;
-  margin: 0 func.size-m(-49) func.size-m(20) func.size-m(-49);
+  margin: 0 func.size-m(-35) func.size-m(20) func.size-m(-35);
   @media screen and (min-width:768px) {
     justify-content: flex-start;
-    margin: 0 0 func.size(44) 0;
+    margin: 0 0 func.size(60) 0;
   }
 }
 
@@ -383,12 +393,14 @@
   cursor: pointer;
   transition: all .2s;
   margin-bottom: func.size-m(65);
+  
   @media screen and (min-width:768px) {
     width: func.size(328);
     border: func.size(3) solid #299644;
     padding: func.size(20) 0;
     font-size: func.size(35);
     margin: 0;
+    border-radius: 3em;
   }
 
   &:hover {
@@ -540,7 +552,7 @@
       font-size: func.size(25);
       line-height: func.size(42);
       padding: func.size(27) func.size(56);
-      border: func.size(1) solid #299644;
+      border: func.size(3) solid #299644;
 
       br {
         display: none;
