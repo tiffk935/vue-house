@@ -1,7 +1,10 @@
 <template>
   <section class="banner">
-    <img class="mob" src="@/assets/work/banner-m.webp" />
-    <img class="pc" src="@/assets/work/banner.webp" />
+    <!-- <img class="mob" src="@/assets/work/banner-m.webp" />
+    <img class="pc" src="@/assets/work/banner.webp" />  -->
+    <img class="pc" src="@/assets/home/work/pic.jpg" />
+    <img class="mob" src="@/assets/home/work/pic-m.jpg" />
+      <h2>國城作品</h2>
     <div class="title">
       <div>
         <div class="t1">走在前，讓後面跟上來</div>
@@ -250,10 +253,41 @@
 }
 
 .banner {
+  position: relative;
+  margin:0;
+  @media screen and (min-width:768px) {
+  margin: func.size(115) 0 0 0;
+}
   img {
     width: 100%;
   }
 
+h2 {
+  display: inline-block;
+  font-size: func.size-m(17);
+  line-height: func.size-m(19);
+  border: func.size-m(1) solid currentColor;
+  border-width: 0 0 func.size-m(1) 0;
+  padding: func.size-m(9) 0;
+  @media screen and (min-width:768px) {
+    font-size: func.size(40);
+    line-height: func.size(48);
+    border-width: 0 0 func.size(1) 0;
+    padding: func.size(22) 0;
+  }
+}
+    h2{
+      position: absolute;
+      top:func.size-m(3);
+      left: func.size-m(30);
+      color: #fff;
+      @media screen and (min-width:768px) {
+      border-width: 0 0 func.size(3) 0;
+      top: func.size(20);
+        left: func.size(160);
+        
+      }
+    }
   .title {
     text-align: center;
     padding: 0 func.size-m(30);

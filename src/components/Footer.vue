@@ -7,7 +7,7 @@
         </div>
         <div class="links">
           <RouterLink to="/team">關於國城</RouterLink>
-          <RouterLink to="/work">國城作品</RouterLink>
+          <RouterLink to="/gallary">國城作品</RouterLink>
           <RouterLink to="/pinshi">平實特區</RouterLink><br class="mob"><br class="pc">
           <RouterLink to="/pinshi-team">寳實團隊</RouterLink>
           <RouterLink to="/pinshi-architecture">寳實建築</RouterLink>

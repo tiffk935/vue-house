@@ -8,7 +8,7 @@
     <nav class="mob-nav" :class="{open: mobOpen}">
       <div>
         <RouterLink to="/team" @click="mobOpen = false">關於國城</RouterLink>
-        <RouterLink to="/work" @click="mobOpen = false">國城作品</RouterLink>
+        <RouterLink to="/gallary" @click="mobOpen = false">國城作品</RouterLink>
         <RouterLink to="/pinshi" @click="mobOpen = false">平實特區</RouterLink>
         <RouterLink to="/pinshi-team" @click="mobOpen = false">寳實團隊</RouterLink>
         <RouterLink to="/pinshi-architecture" @click="mobOpen = false">寳實建築</RouterLink>
@@ -26,7 +26,7 @@
             <li><RouterLink to="/team#米其林團隊">米其林團隊</RouterLink></li>
           </ul>
         </li>
-        <li><RouterLink to="/work">國城作品</RouterLink></li>
+        <li><RouterLink to="/gallary">國城作品</RouterLink></li>
         <li><RouterLink to="/pinshi">平實特區</RouterLink></li>
         <li class="has-children">
           <RouterLink to="/pinshi-team">寳實團隊</RouterLink>

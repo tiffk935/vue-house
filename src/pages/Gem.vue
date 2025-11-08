@@ -1,6 +1,4 @@
 <template>
-    <!-- 
-     <img src="@/assets/pc.jpg" class="t0" />  --><img src="@/assets/pc.jpg" class="t0" />
   <section class="banner">
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
@@ -31,7 +29,7 @@
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">走在前，讓後面跟上來。</div>
       <div class="t2">把最好的留在台灣。</div>
-      <div class="t3">｜<RouterLink to="/work">閱讀更多</RouterLink></div>
+      <div class="t3">｜<RouterLink to="/gallary">閱讀更多</RouterLink></div>
     </div>
   </section>
 
@@ -148,7 +146,6 @@
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
 
-.t0{position: absolute;top: 0;left: 0;width: 100%;pointer-events: none;z-index: 9;opacity: .0;}
 @mixin bg-contain {
   background-size: contain;
   background-position: center;
@@ -416,19 +413,6 @@ h2 {
     .fullview{height: func.size-m(350);}
     }
   }
-/*
-  .t1 {
-    @media screen and (min-width:768px) {
-      margin-top: -7vw;
-    }
-  }
-
-  .t2 {
-    @media screen and (min-width:768px) {
-      font-size: func.size(30);
-      letter-spacing: 0;
-    }
-  }*/
     
     h2{
       position: absolute;
