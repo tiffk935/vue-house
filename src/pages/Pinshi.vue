@@ -83,7 +83,7 @@
   <section class="s3 tem-1">
     <Fullview class="fullview mob" />
     <img class="main-img" :class="{ zoomed: isZoomed }" :src="bigImage" @click="toggleZoom" />
-    <div v-if="isZoomed" class="overlay" @click="toggleZoom"></div>
+    <div v-if="isZoomed" data-aos="fade" class="overlay" @click="toggleZoom"></div>
     <button v-if="isZoomed" class="close-btn" @click="toggleZoom">關閉
     </button>
     <div class="tem-txt">
@@ -523,15 +523,15 @@ img {
   position: relative;
 
   .fullview {
-    height: func.size-m(340);
+    height: func.size-m(400);
   }
 
   .main-img {
     display: none;
-    transition: all 0.4s ease;
+    transition: z-index 0s,width 0.4s ease,margin 0.4s ease;
     z-index: 1;
     position: relative;
-    width: func.size(1053);
+    width: func.size(1063);
     height: func.size(807);
     margin-right: 0;
     object-fit: cover;
@@ -546,7 +546,8 @@ img {
 
   .main-img.zoomed {
     width: func.size(1890);
-    margin-right: func.size(1053-1890);
+    margin-right: func.size(1063-1890);
+    margin-left: func.size(7);
     z-index: 1001;
     cursor: zoom-out;
     border-radius: 10px;

@@ -15,7 +15,7 @@
 #contact {
   padding: func.size-m(30) func.size-m(30) func.size-m(0) func.size-m(30);
   @media screen and (min-width:768px) {
-    padding: func.size(110) 0 func.size(0) 0;
+    padding: func.size(225) 0 func.size(0) 0;
   }
 
   .title {

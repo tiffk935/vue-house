@@ -13,7 +13,7 @@
               disableOnInteraction: false,
             }"
           >
-            <swiper-slide v-for="slide in data.slider">
+            <swiper-slide v-for="slide in data.slider" :key="slide">
               <img :src="getImg(slide)" />
             </swiper-slide>
           </swiper>
@@ -94,7 +94,7 @@
 section {
   padding: func.size-m(60) func.size-m(30) func.size-m(79) func.size-m(30);
   @media screen and (min-width:768px) {
-    padding: func.size(108) func.size(160) func.size(136) func.size(160);
+    padding-top: func.size(115) ;
   }
 
   a {

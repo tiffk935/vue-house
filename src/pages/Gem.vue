@@ -203,7 +203,6 @@ h2 {
   font-size: func.size-m(14);
   line-height: 1.5;
   text-align: right;
-  padding-bottom: .5em;
   border-bottom: func.size-m(1) solid #000;
   letter-spacing: .04em;
     margin: 0.3em 0 3em 0;
@@ -212,15 +211,21 @@ h2 {
     font-size: func.size(25);
     //line-height: func.size(44);
     text-align: right;
-    padding-bottom:1.1em;
     border-bottom: func.size(2) solid #000;
     letter-spacing: 0em;
     margin: -1.5em 0 0.1em 0;
   }
   
   a {
+    display: inline-block;
     color: inherit;
     text-decoration: none;
+  padding-bottom: .5em;
+  @media screen and (min-width:768px) {
+    padding :1.1em 0;
+}
+    &:hover{color: #269D45;
+    }
   }
 }
 
@@ -410,7 +415,7 @@ h2 {
       padding: 0 0;
     }
     @media screen and (max-width:767px) {
-    .fullview{height: func.size-m(350);}
+    .fullview{height: func.size-m(400);}
     }
   }
     
@@ -548,14 +553,11 @@ h2 {
 .news {
   padding: func.size-m(25) 0;
   position: relative;
+  background: #00000006;
   @media screen and (min-width:768px) {
     padding: 0 0 func.size(50) 0;
   }
 
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
 
   .type {
     text-align: right;
@@ -576,6 +578,25 @@ h2 {
       justify-content: space-between;
       margin: 0 func.size(-52.5);
     }
+  a {
+    text-decoration: none;
+    color: inherit;
+    display:block;
+    position: relative;
+
+  @media screen and (min-width:768px) {
+    &::before{
+      content: "";
+      position: absolute;
+      top:func.size(-10);left: func.size(-10);width: calc(100% + func.size(20) - 2px);height: calc(100% + func.size(20));z-index:3;
+      border: 1px solid #0003;transform: scale(.7);opacity: 0;
+      transition: all .3s;
+    }
+    &:hover:before{
+      transform: scale(1);opacity: 1;
+    }
+  }
+  }
 
     article {
       margin-bottom: func.size-m(40);
@@ -606,7 +627,7 @@ h2 {
           left: 0;
           width: 100%;
           height: 100%;
-          object-fit: cover;opacity: .5;
+          object-fit: cover;//opacity: .5;
         }
       }
 
@@ -686,12 +707,14 @@ h2 {
   position: relative;
   width: 100%;
   height: func.size-m(667);
-  background-image: url(@/assets/home/ad/bg-m.jpg);
+  // background-image: url(@/assets/home/ad/bg-m.jpg);
+  background-image:url(@/assets/home/banner/bgm.jpg);
   @include bg-contain;
   background-size: cover;
   @media screen and (min-width:768px) {
     height: func.size(1080);
-    background-image: url(@/assets/home/ad/bg.jpg);
+    // background-image: url(@/assets/home/ad/bg.jpg);
+    background-image:url(@/assets/home/banner/bg.jpg);
   }
   
   .logo {

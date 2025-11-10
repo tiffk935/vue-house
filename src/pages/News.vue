@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="list">
-      <article v-for="item in list">
+      <article v-for="item in list" :key="item">
         <RouterLink :to="item.link">
           <div class="photo">
             <img :src="getImg(item.thumbnail)" />
@@ -56,11 +56,25 @@ section {
   padding: func.size-m(60) func.size-m(30) func.size-m(34) func.size-m(30);
   @media screen and (min-width:768px) {
     padding: func.size(108) func.size(160) func.size(250) func.size(160);
+    margin: func.size(115)  auto 0;
   }
 
   a {
     text-decoration: none;
     color: inherit;
+    position: relative;
+  @media screen and (min-width:768px) {
+    &::before{
+      content: "";
+      position: absolute;
+      top:func.size(-10);left: func.size(-10);width: calc(100% + func.size(20) - 2px);height: calc(100% + func.size(20));z-index:3;
+      border: 1px solid #0003;transform: scale(.7);opacity: 0;
+      transition: all .3s;
+    }
+    &:hover:before{
+      transform: scale(1);opacity: 1;
+    }
+  }
   }
 
   .top {

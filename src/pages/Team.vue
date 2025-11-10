@@ -295,7 +295,8 @@
 
         @media screen and (min-width:768px) {
           width: func.size(500);
-          display: block;
+         // display: block;
+         flex-direction: column;
           padding: 0 func.size(27);
           margin-bottom: func.size(132);
           background: none;
@@ -314,6 +315,7 @@
           img {
             width: auto;
             height: 100%;
+            vertical-align: middle;
           @media screen and (min-width:768px) {
             
             width: 100%;
@@ -343,6 +345,7 @@
           align-items:flex-start;
           flex-direction: column;
           justify-content: flex-end;
+          flex: 1;
 
 
           // border-bottom: func.size-m(2) solid #000;
@@ -357,9 +360,10 @@
         }
 
         &:nth-child(even) {
-          flex-direction: row;
+          flex-direction: column;
 
           @media screen and (max-width:767px) {
+          flex-direction: row;
             .info {
               align-items:flex-end;
               text-align: right;
@@ -370,15 +374,13 @@
         .title {
           font-size: func.size-m(15);
           font-weight: 500;
-          margin-bottom: func.size-m(-2);
-          // text-transform:none;
-          line-height: 1.5;
+          margin-bottom: func.size-m(3);
+          line-height: 1.2;
 
           @media screen and (min-width:768px) {
             font-size: func.size(42);
             margin-bottom: func.size(-6);
             letter-spacing: 0;
-        //  text-transform: uppercase;
           }
         }
 
@@ -445,7 +447,7 @@ const list1 = [
   {
     title: 'Ando Tadao',
     desc: '普利茲克獎 建築師',
-    name: '安藤 忠雄'
+    name: '安藤 忠雄'
   },
   {
     title: 'SCDA',
@@ -455,12 +457,12 @@ const list1 = [
   {
     title: 'SHUNMYO MASUNO',
     desc: '日本現代景觀大師',
-    name: '枡野俊明'
+    name: '枡野 俊明'
   },
   {
     title: 'OBAYASHI',
     desc: '台灣大林組',
-    name: '今井 昌彥'
+    name: '今井 昌彥'
   },
   {
     title: 'The Flaming Beacon',
@@ -470,17 +472,17 @@ const list1 = [
   {
     title: 'KEIJI ASHIZAWA',
     desc: 'Blue Bottle 風格美學',
-    name: '芦沢 啓治'
+    name: '芦沢 啓治'
   },
   {
     title: 'Tomoya Hashiuchi',
     desc: '橋內庭園設計',
-    name: '橋內 智也'
+    name: '橋內 智也'
   },
   {
     title: 'AURORA Inc.',
     desc: '日籍 燈光設計師',
-    name: '市川善幾'
+    name: '市川 善幾'
   },
 ];
 const list2 = [
@@ -500,16 +502,16 @@ const list2 = [
     name: isMobile?'陳泰榮':'<span>餐飲總監</span> 陳泰榮',
   },
   {
-    name: '承Sho',
+    name: '承SHO',
     srcm: new URL('../assets/team/2/4m.webp', import.meta.url).href
   },
   {
-    name: '承Sho',
+    name: '承SHO',
   },
   {
-    title: '承Sho',
+    title: '承SHO',
     desc: isMobile?'日本料理 / 料理長':'日本料理',
-    name: isMobile?'藤本 詳一':'<span>料理長</span> 藤本詳一',
+    name: isMobile?'藤本 詳一':'<span>料理長</span> 藤本 詳一',
   },
   {
     name: 'Li.nu',
@@ -518,7 +520,7 @@ const list2 = [
   {
     title: 'Li.nu',
     desc: '日本料理',
-    name: '<span>bon.nu 創辦人</span> 來栖けい'
+    name: '<span>bon.nu 創辦人</span> 來栖 けい'
   },
   {
     title: 'Li.nu',
@@ -535,7 +537,7 @@ const list2 = [
   {
     title: 'Liberte',
     desc: isMobile?'法式料理 / 星級主廚':'法式料理',
-    name: isMobile?'武田 健志':'<span>星級主廚</span> 武田健志',
+    name: isMobile?'武田 健志':'<span>星級主廚</span> 武田 健志',
   },
 ];
 

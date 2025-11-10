@@ -14,7 +14,7 @@ import { onMounted, ref, getCurrentInstance } from 'vue'
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
-const offsetRatio = 2.57
+const offsetRatio = 1.9
 
 // ✅ 取得全域方法（若有在 main.js 設定）
 const { appContext } = getCurrentInstance()
@@ -55,13 +55,12 @@ onMounted(() => {
     position: relative;
     width: 100%;
     height: 100%;
-    background: #eee;
+    background: #00B1FF;
 
     > img {
-        height: 100%;
-        max-width: unset;
-    //    background:url("@/section/s3/view.jpg") 50%;
-    //    background-size: 100% auto;
+        height:auto;
+        width: 100%;
+        max-width: 100%;vertical-align: middle;
     }
 
 }
@@ -70,10 +69,17 @@ onMounted(() => {
     .viewbox {
         height: 100%;
         overflow: hidden;
-
+        padding-top: 1em;
         img {
             height: 100%;
+            vertical-align: middle;
         }
+    > img {
+        height: 100%;
+        width: auto;
+        max-width: unset;
+    }
+
 
         .mask {
             position: absolute;
