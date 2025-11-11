@@ -155,6 +155,10 @@ footer {
         padding: func.size(20) func.size(20);
         margin: func.size(10) func.size(20);
       }
+      &:hover{
+        color: #269D45;
+        transition: 0.3s;
+      }
     }
   }
 

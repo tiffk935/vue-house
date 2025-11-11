@@ -242,7 +242,10 @@ header {
 
       &:hover {
         .sub-menu {
-          display: block;
+      max-height: 500px; // 依需要調整預估高度
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
         }
       }
     }
@@ -262,15 +265,27 @@ header {
       }
 
       .sub-menu {
-        width: 100%;
-        position: absolute;
-        top: calc(100% - func.size(9));
-        right: 0;
-        text-align: right;
-        padding: func.size(20) func.size(24) func.size(30) func.size(24);
-        box-sizing: content-box;
-        background: #fff;
-        display: none;
+        
+  width: 100%;
+  position: absolute;
+  top: calc(100% - func.size(9));
+  right: 0;
+  text-align: right;
+  padding: func.size(20) func.size(24) func.size(30) func.size(24);
+  box-sizing: content-box;
+  background: #fff;
+
+  // 動畫效果的基礎
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-10px);
+  pointer-events: none;
+
+  transition: 
+    max-height 0.35s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
 
         &:after {
           content: '';

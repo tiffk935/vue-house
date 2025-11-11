@@ -101,13 +101,16 @@
         delay: 3000,
         disableOnInteraction: false,
       }" @slideChange="s2OnSlideChange">
-        <swiper-slide><img src="@/assets/pinshi/s4/1.webp" />
+        <swiper-slide><img src="@/assets/pinshi/s4/1.jpg" />
           <div class="photo-desc">平實公園</div>
         </swiper-slide>
         <swiper-slide><img src="@/assets/pinshi/s4/2.webp" />
           <div class="photo-desc">平實公園</div>
         </swiper-slide>
         <swiper-slide><img src="@/assets/pinshi/s4/3.webp" />
+          <div class="photo-desc">平實公園</div>
+        </swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s4/4.jpg" />
           <div class="photo-desc">平實公園</div>
         </swiper-slide>
       </swiper>
@@ -128,7 +131,7 @@
 
   <section class="s5 tem-1">
     <div class="img-group">
-      <img class="style" src="@/assets/pinshi/s5.webp" />
+      <img class="style" src="@/assets/pinshi/5.jpg" />
       <div class="photo-desc1">十字軸線</div>
     </div>
 

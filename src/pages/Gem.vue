@@ -225,6 +225,7 @@ h2 {
     padding :1.1em 0;
 }
     &:hover{color: #269D45;
+        transition: 0.3s;
     }
   }
 }
