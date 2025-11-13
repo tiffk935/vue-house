@@ -73,8 +73,9 @@
           <div class="pretty p-default p-round">
             <input id="privacy-checkbox" type="checkbox" v-model="formData.policyChecked" />
             <div class="state">
-              <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱隱私權聲明。</label>
-             <!-- <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱<span @click="open">隱私權聲明</span>。</label>  -->
+              <!--  <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱隱私權聲明。</label>
+            <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱<span @click="open">隱私權聲明</span>。</label>  -->
+            <label for="privacy-checkbox">我同意使用上方提供的資訊與我聯繫，詳情請參閱<button @click="openPrivacy">隱私權聲明</button>。</label> 
             </div>
           </div>
           <ModalsContainer />
@@ -369,6 +370,18 @@
       color: #6b6b6b;
     }
   }
+  label button {
+    cursor: pointer;
+    font-size: 1em;
+    border: 0;
+    padding: 0;
+    font-weight: 500;
+      color: #269D45;
+
+    &:hover {
+      color: #6b6b6b;
+    }
+  }
 }
 
 .recaptcha {
@@ -596,18 +609,10 @@ import info from '@/info';
 import { ref, reactive } from 'vue';
 import { VueRecaptcha } from 'vue-recaptcha';
 import { useToast } from 'vue-toastification';
-import { ModalsContainer, useModal } from 'vue-final-modal';
 import 'vue-final-modal/style.css';
-import Privacy from '@/components/Privacy.vue';
-
-const { open, close } = useModal({
-  component: Privacy,
-  attrs: {
-    onConfirm() {
-      close();
-    },
-  }
-});
+function openPrivacy() {
+  window.open('/privacy', '_blank', 'noopener,noreferrer')
+}
 
 const toast = useToast()
 const sending = ref(false)

@@ -1,4 +1,8 @@
 <template>
+    <!-- 
+    <img src="@/assets/pc.jpg" class="t0 pc" />
+    <img src="@/assets/mo.jpg" class="t0 mob" /> -->
+
   <section class="banner">
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
@@ -68,7 +72,7 @@
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <div class="t1">國際建築語彙 <br class="mob">演繹優雅生活尺度</div>
-      <div class="t2">讓空間為人而生  生活，共好即是更好</div>
+      <div class="t2">讓空間為人而生&ensp;生活，共好即是更好</div>
       <div class="t3">｜<RouterLink to="/pinshi-architecture">閱讀更多</RouterLink></div>
     </div>
   </section>
@@ -76,7 +80,8 @@
   <section class="news">
     <div class="container">
       <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</h2>
-      <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞｜<span>專題研究</span></div>
+   <!--    <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞</div>
+     <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞｜<span>專題研究</span></div>-->
       <div class="list">
 
         <article v-for="item in list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" :key="item">
@@ -122,7 +127,7 @@
             <div class="item"><span>投資興建</span> ｜ <span>國城建設股份有限公司</span></div>
             <div class="item"><span>營造工程</span> ｜ <span>盈舜營造股份有限公司</span></div>
             <div class="item"><span>建築代銷</span> ｜ <span>聯碩地產行銷團隊</span></div>
-            <div class="item"><span>平面設計</span> ｜ <span>陳俊廷建築師事務所<br>林澤森建築師事務所<br>賈書恆建築師事務所</span> <span class="mark">＊按姓氏筆畫排列</span></div>
+            <div class="item"><span>平面設計</span> ｜ <span>林澤森建築師事務所<br>賈書恆建築師事務所<br>陳俊廷建築師事務所</span><span class="mark">＊按姓氏筆畫排列</span></div>
             <div class="item"><span>立面設計</span> ｜ <span>張瑪龍陳玉霖聯合建築師事務所</span></div>
             <div class="item"><span>公設設計</span> ｜ <span>芦沢啓治&ensp;建築師事務所</span></div>
             <div class="item"><span>室內設計</span> ｜ <span>擊壤設計&ensp;林新峰總監</span></div>
@@ -146,6 +151,15 @@
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
 
+.t0 {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  pointer-events: none;
+  z-index: 9;
+  opacity: .2;
+}
 @mixin bg-contain {
   background-size: contain;
   background-position: center;
@@ -213,7 +227,7 @@ h2 {
     text-align: right;
     border-bottom: func.size(2) solid #000;
     letter-spacing: 0em;
-    margin: -1.5em 0 0.1em 0;
+    margin: -2.7em 0 0.1em 0
   }
   
   a {
@@ -496,7 +510,7 @@ h2 {
         left: auto;
         bottom: func.size(20);
         right: func.size(160);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+       // text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
         font-size: func.size(16);
         font-weight: 400;
         letter-spacing: .05em;
@@ -521,7 +535,7 @@ h2 {
         right: func.size(160);
       //  bottom: func.size(58);
         //left: func.size(151);
-        text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
+      //  text-shadow: 0px func.size(4) func.size(4) rgba(0, 0, 0, 0.55);
         font-size: func.size(16);
         font-weight: 400;
         letter-spacing: .05em;
@@ -556,7 +570,7 @@ h2 {
   position: relative;
   background: #00000006;
   @media screen and (min-width:768px) {
-    padding: 0 0 func.size(50) 0;
+    padding: func.size(340) 0 func.size(50) 0;
   }
 
 
@@ -762,7 +776,7 @@ h2 {
   .sec-title {
     font-size: func.size-m(16);
     font-weight: 500;
-    padding: 0 func.size-m(49);
+    padding: 0 func.size-m(38);
     margin-bottom: func.size-m(43);
     @media screen and (min-width:768px) {
       font-size: func.size(35);
@@ -844,12 +858,12 @@ h2 {
           position: absolute;
           color: #999999 !important;
           font-size: func.size-m(10);
-          bottom: func.size-m(15);
+          bottom: func.size-m(14);
           right: func.size-m(0);
 
           @media screen and (min-width:768px) {
            font-size: func.size(12);
-           bottom: func.size(25);
+           bottom: func.size(16);
            right: func.size(10);
           }
         }

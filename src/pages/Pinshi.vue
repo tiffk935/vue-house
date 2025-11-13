@@ -339,7 +339,7 @@ img {
 }
 
 .tem-txt {
-  width: calc(100% - func.size-m(60));
+  width: calc(100% - func.size-m(45));
   margin: 0 auto;
   padding: func.size-m(30) func.size-m(32) func.size-m(30);
   background: #fff;
@@ -396,7 +396,7 @@ img {
       height: 100%;
 
       .swiper-slide {
-        width: calc(100% - func.size-m(30));
+        width: calc(100% - func.size-m(23));
         margin-right: func.size-m(2);
 
         @media screen and (min-width:768px) {

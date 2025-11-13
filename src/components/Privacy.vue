@@ -1,16 +1,5 @@
 <template>
-  <VueFinalModal
-    class="privacy-modal"
-    name="privacyModal"
-    :scrollable="true"
-    content-class="privacy-modal-content"
-    overlay-transition="vfm-fade"
-    content-transition="vfm-fade"
-    :click-to-close="false"
-  >
-    <div>
-      <div class="privacy-title">個資告知事項聲明</div>
-
+    <div class="privacy-modal">
       <div class="py-4">
         <h3 class="font-bold">一、隱私權保護政策的適用範圍</h3>
         <p> 隱私權保護政策內容，包括本網站如何處理在您使用網站服務時收集到的個人識別資料。隱私權保護政策不適用於本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。 </p>
@@ -45,50 +34,20 @@
         <h3 class="mt-4 font-bold">七、隱私權保護政策之修正</h3>
         <p> 本網站隱私權保護政策將因應需求隨時進行修正，修正後的條款將刊登於網站上。 </p>
       </div>
-      
-      <button @click="emit('confirm')">關閉</button>
+      <button class="back-btn" @click="closeWindow">回預約表單</button>
     </div>
-  </VueFinalModal>
 </template>
 
 <style lang="scss">
 .privacy-modal {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+font-size: 1em;
+text-align: justify;
+line-height: 1.6;
 
-  .privacy-modal-content {
-    display: flex;
-    flex-direction: column;
-    // padding: 1.5rem;
-    background: #fff;
-    border-radius: 0.5rem;
-    height: calc(100vh - 5em);
-    max-width: 900px;
-    width: calc(100% - 40px);
-    overflow: hidden;
-
-    & > div {
-      height: 100%;
-      overflow-y: auto;
-      padding: 1.5rem;
-    }
-  }
-
-  .privacy-title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-  }
-
-  .text-lg {
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
 
   .py-4 {
-    padding-top: 1rem;
-    padding-bottom: 1rem;
+    padding-top: 1em;
+    padding-bottom: 1em;
   }
 
   .font-bold {
@@ -96,36 +55,42 @@
   }
 
   .mt-4 {
-    margin-top: 1rem;
+    margin-top: 1em;
   }
 
   .pl-8 {
-    padding-left: 2rem;
+    padding-left: 2em;
   }
-
-  button {
+  .back-btn{
     appearance: none;
     border: none;
     outline: none;
     color: #fff;
-    background: #3d4451;
-    height: 3rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    font-size: .875rem;
-    line-height: 1.25rem;
-    line-height: 1em;
-    min-height: 3rem;
+    background: #269D45;
+    height: 3em;
+    padding:0 1em;
+    font-size: 1.3em;
+    line-height: 1.6;
+    min-height: 3em;
     font-weight: 600;
-    border-radius: 8px;
+    border-radius: .4em;
     cursor: pointer;
     display: block;
-    margin: 0 0 0 auto;
+    margin: 0 auto 5em auto;
+      border: 1px solid #269D45;
+      transition: all .3s;
+    &:hover{
+      background: #269D4500;
+    color: #269D45;
+    }
+
   }
 }
 </style>
 
 <script setup>
-import { VueFinalModal } from 'vue-final-modal';
-const emit = defineEmits(['confirm']);
+
+function closeWindow() {
+  window.close()
+}
 </script>

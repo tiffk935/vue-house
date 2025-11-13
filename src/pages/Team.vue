@@ -255,7 +255,7 @@
 
       @media screen and (min-width:768px) {
         font-size: func.size(25);
-        line-height: 2.5;
+        line-height: 2.1;
         margin-bottom: func.size(150);
         width: 100%;
       }
@@ -346,6 +346,7 @@
           flex-direction: column;
           justify-content: flex-end;
           flex: 1;
+          position: relative;z-index: 5;
 
 
           // border-bottom: func.size-m(2) solid #000;
@@ -378,9 +379,10 @@
           line-height: 1.2;
 
           @media screen and (min-width:768px) {
-            font-size: func.size(42);
+            font-size: func.size(41);
             margin-bottom: func.size(-6);
             letter-spacing: 0;
+            font-weight: 500;
           }
         }
 
@@ -397,17 +399,19 @@
         }
 
         .name {
-          font-size: func.size-m(19);
-            font-weight: 600;
+          font-size: func.size-m(18);
+            font-weight: 500;
             margin-top: .9em;
+            white-space:nowrap;
 
           @media screen and (min-width:768px) {
           position: absolute;
             bottom: func.size(16);
             left: auto;
             right: func.size(27);
-            font-size: func.size(39);
+            font-size: func.size(38);
             letter-spacing: 0;
+            font-weight: 500;
           }
 
           span {
@@ -520,7 +524,7 @@ const list2 = [
   {
     title: 'Li.nu',
     desc: '日本料理',
-    name: '<span>bon.nu 創辦人</span> 來栖 けい'
+    name: '<span>bon.nu 創辦人 </span>來栖 けい'
   },
   {
     title: 'Li.nu',

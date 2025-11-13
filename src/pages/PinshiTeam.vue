@@ -835,7 +835,7 @@
   }
 
   .content {
-    padding: 0 func.size-m(30);
+    padding: 0 func.size-m(28);
     @media screen and (min-width:768px) {
       padding: 0 func.size(100) 0 func.size(140);
     }
@@ -871,6 +871,7 @@
   }
 
   .desc {
+    text-align: justify;
     margin-bottom: func.size-m(12);
     @media screen and (min-width:768px) {
       margin-bottom: func.size(17);
@@ -879,7 +880,7 @@
 
   .desc, .work {
     @media screen and (min-width:768px) {
-      max-width: func.size(574);
+      max-width: func.size(584);
     }
   }
 

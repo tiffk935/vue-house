@@ -131,6 +131,7 @@
 .txt {
   font-size: func.size-m(12);
   line-height: func.size-m(20);
+  text-align: justify;
   @media screen and (min-width:768px) {
     font-size: func.size(25);
     line-height: func.size(45);

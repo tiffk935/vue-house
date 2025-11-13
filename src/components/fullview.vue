@@ -1,8 +1,8 @@
 <template>
   <div class="viewbox" ref="viewbox">
-    <img ref="viewImg" src="@/assets/home/area/map.jpg" alt="">
+    <img ref="viewImg" src="@/assets/home/area/map.svg" alt="">
     <div class="mask" v-bind:class="{ hide: swiped }" v-if="isMobile">
-      <img src="@/components/fullview/finger.png" alt="">
+      <img src="@/components/fullview/finger.svg" alt="">
     </div>
   </div>
 </template>
@@ -61,6 +61,8 @@ onMounted(() => {
         height:auto;
         width: 100%;
         max-width: 100%;vertical-align: middle;
+        background: url("@/assets/home/area/map.jpg");
+        background-size: cover;
     }
 
 }

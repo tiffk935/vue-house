@@ -4,7 +4,6 @@
   </section>
 
   <section id="order">
-    <h2>預約表單</h2>
     <Order />
   </section>
 </template>

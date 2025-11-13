@@ -132,7 +132,7 @@
             <div class="item"><span>投資興建</span> ｜ <span>國城建設股份有限公司</span></div>
             <div class="item"><span>營造工程</span> ｜ <span>盈舜營造股份有限公司</span></div>
             <div class="item"><span>建築代銷</span> ｜ <span>聯碩地產行銷團隊</span></div>
-            <div class="item"><span>平面設計</span> ｜ <span>陳俊廷建築師事務所<br>林澤森建築師事務所<br>賈書恆建築師事務所</span> <span class="mark">＊按姓氏筆畫排列</span></div>
+            <div class="item"><span>平面設計</span> ｜ <span>林澤森建築師事務所<br>賈書恆建築師事務所<br>陳俊廷建築師事務所</span> <span class="mark">＊按姓氏筆畫排列</span></div>
             <div class="item"><span>立面設計</span> ｜ <span>張瑪龍陳玉霖聯合建築師事務所</span></div>
             <div class="item"><span>公設設計</span> ｜ <span>芦沢啓治 建築師事務所</span></div>
             <div class="item"><span>景觀設計</span> ｜ <span>橋內庭園設計 橋内智也</span></div>

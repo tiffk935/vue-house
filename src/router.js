@@ -17,6 +17,7 @@ const routes = [
   { path: '/projects/page/:page(\\d+)', component: () => import ("./pages/News.vue") },
   { path: '/news/:link', name: 'single', component: () => import ("./pages/Single.vue") },
   { path: '/order', name: 'order', component: () => import ("./pages/Order.vue") },
+  { path: '/privacy', name: 'privacy', component: () => import ("./pages/Privacy.vue") },
   { path: '/formThanks', name: 'formThanks', component: () => import ("./pages/FormThanks.vue") },
   { path: '/:pathMatch(.*)*', name: '404', component: () => import ("./pages/NotFound.vue") },
 ]
