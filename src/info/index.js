@@ -9,8 +9,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d909.4529250184531!2d120.5537068!3d24.2483638!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469150074e85dbd%3A0x6f17869792fa044b!2z5L2z6YuQ6aaW6ICA!5e0!3m2!1szh-TW!2stw!4v1734513385534!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/B77KXuZRspTpswKQA",
     phone: "04-2663-0999",
-    fbLink: "https://www.facebook.com/61554748627993/",
-    fbMessage: "https://m.me/61554748627993/",
+    fbLink: "https://www.facebook.com/61563772475620/",
+    fbMessage: "https://m.me/61563772475620/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "佳鋐建設股份有限公司"],
@@ -19,7 +19,7 @@ export default {
         ["建築設計", "蔡智勸建築師事務所"],
         ["企劃銷售", "昕華廣告有限公司"]
     ],
-    gtmCode: ["GTM-KLHKDVV6"], // 可放置多個
+    gtmCode: ["GTM-KLHKDVV6","GTM-P22JMBFR"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
