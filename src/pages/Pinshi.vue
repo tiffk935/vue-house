@@ -541,6 +541,9 @@ img {
     max-width: 200%;
     cursor: zoom-in;
     z-index: 99;
+    background:url("@/assets/home/area/map.jpg") center;
+    background-size: cover;
+
 
     @media screen and (min-width:768px) {
       display: block;
@@ -918,7 +921,7 @@ gsap.registerPlugin(ScrollTrigger);
 const isZoomed = ref(false)
 
 // 你的圖片（原本用的那個）
-const bigImage = new URL('@/assets/home/area/map.jpg', import.meta.url).href
+const bigImage = new URL('@/assets/home/area/map.svg', import.meta.url).href
 
 const toggleZoom = () => {
   if (window.innerWidth <= 768) return;
