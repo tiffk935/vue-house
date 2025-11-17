@@ -173,9 +173,9 @@
     <div class="tem-txt">
       <div class="t1">
         <div>捷運轉運</div>
-        平實轉運站，藍綠雙線預定
+        平實轉運站，捷運藍線預定
       </div>
-      <div class="t2">約1.4公頃BOT平實森林轉運站於2023年動工，未來將集結市區客運、捷運、商場等功能；台南捷運藍線預計2026年動工，與綠線捷運交會平實轉運站，台南捷運未來即將成形。</div>
+      <div class="t2">約1.4公頃BOT平實森林轉運站於2023年動工，未來將集結市區客運、捷運、商場等功能；台南捷運藍線預計2026年動工，交會平實轉運站，台南捷運未來即將成形。</div>
     </div>
   </section>
 
@@ -226,11 +226,11 @@
         <swiper-slide><img src="@/assets/pinshi/s8/1.webp" />
           <div class="photo-desc">成功大學</div>
         </swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s8/3.webp" />
+          <div class="photo-desc">復興國中</div>
+        </swiper-slide>
         <swiper-slide><img src="@/assets/pinshi/s8/2.webp" />
           <div class="photo-desc">東光國小</div>
-        </swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s8/3.webp" />
-          <div class="photo-desc">復興國中小</div>
         </swiper-slide>
       </swiper>
       <div class="pagi">
@@ -241,7 +241,7 @@
     <div class="tem-txt">
       <div class="t1">
         <div>優質學區</div>
-        成大校區、東光國小、<br>復興國中小
+        成大校區、復興國中、<br>東光國小
       </div>
       <div class="t2">車程5分鐘抵達東光國小、8分鐘復興中小學，擁有台南最優質少年養成環境；鄰近台南文教核心成大、一中校區車程約10分鐘，鋪排孩子最好的教育環境，就在此地。</div>
     </div>
