@@ -221,7 +221,7 @@
       >
         <swiper-slide><img src="@/assets/pinshi/s8/1.webp" /> <div class="photo-desc">成功大學</div></swiper-slide>
         <swiper-slide><img src="@/assets/pinshi/s8/2.webp" /> <div class="photo-desc">東光國小</div></swiper-slide>
-        <swiper-slide><img src="@/assets/pinshi/s8/3.webp" /> <div class="photo-desc">復興國中小</div></swiper-slide>
+        <swiper-slide><img src="@/assets/pinshi/s8/3.webp" /> <div class="photo-desc">復興國中</div></swiper-slide>
       </swiper>
       <div class="pagi">
         <div class="dot" :class="{active: num === s2SliderActiveIdx + 1}" v-for="num in Object.keys(s2Images).length" :key="num"></div>
@@ -230,9 +230,9 @@
     <div class="tem-txt">
       <div class="t1">
         <div>優質學區</div>
-        成大校區、東光國小、<br class="pc">復興國中小
+        成大校區、東光國小、<br class="pc">復興國中
       </div>
-      <div class="t2">車程5分鐘抵達東光國小、8分鐘復興中小學，擁有台南最優質少年養成環境；鄰近台南文教核心成大、一中校區車程約10分鐘，鋪排孩子最好的教育環境，就在此地。</div>
+      <div class="t2">車程5分鐘抵達東光國小、8分鐘復興國中，擁有台南最優質少年養成環境；鄰近台南文教核心成大、一中校區車程約10分鐘，鋪排孩子最好的教育環境，就在此地。</div>
     </div>
   </section>
 

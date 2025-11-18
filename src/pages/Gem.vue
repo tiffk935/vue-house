@@ -66,7 +66,8 @@
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/home/archi/pic.jpg" />
       <img class="mob" src="@/assets/home/archi/pic-m.jpg" />
-      <div class="photo-desc">國城寳實 北向建築立面透視圖</div>
+      <div class="photo-desc pc">國城寳實 北向建築立面透視圖</div>
+      <div class="photo-desc mob">國城寳實 西向建築立面透視圖</div>
       <div class="photo-desc1">此為建物外觀3D效果參考示意圖，<br>周遭環境係電腦合成示意表現。</div>
       <h2>寳實建築</h2>
     </div>
