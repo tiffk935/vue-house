@@ -1,29 +1,25 @@
 <template>
-  <div class="bg-[#CFCFCF]">
+  <!-- <div class="bg-white">
     <div class="container">
       <div class="text-white flex flex-col md:flex-row items-center justify-between">
         <div class="w-full flex-1 items-center justify-center">
           <div class="info-box mx-auto flex flex-col items-center justify-center">
-            <div class="title text-[#423E3D]">建案資訊</div>
+            <div class="title text-[#006F6F]">建案資訊</div>
             <div class="info-items mt-4 grid grid-cols-1 md:grid-cols-2">
               <div 
                 class="item flex items-center w-full whitespace-nowrap"
                 v-for="item in info.houseInfos"
               >
-                <p class="mr-5 text-[#423E3D] font-bold border-l-2 border-[#423E3D] pl-2 ">{{ item[0] }}</p>
-                <p class="text-[#423E3D] whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
+                <p class="mr-5 text-[#006F6F] font-bold border-l-2 border-[#006F6F] pl-2 ">{{ item[0] }}</p>
+                <p class="text-[#333333] whitespace-pre-line leading-normal text-left">{{ item[1] }}</p>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-
-  <div class="argo">
-    <img src="@/section/form/argo.svg" />
-  </div>
-
+  </div> -->
+  
   <div class="footer flex items-center justify-center w-full h-[40px] bg-[#302626]">
     <a href="https://www.lixin.com.tw/" target="_blank">
       <img class="hover:opacity-50" src="@/section/form/footerlogo.gif" alt="Lixin" srcset="">

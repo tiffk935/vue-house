@@ -6,19 +6,17 @@
     'pointer-events-none': !isLoading
   }"
     class="transition-all duration-500	flex-col flex items-center justify-center fixed w-screen h-screen top-0 left-0 bg-white z-[100]">
-    <img class="w-32" src="@/assets/loading_w.gif" alt="亞果濱海寓所" srcset="">
+    <img class="w-32" src="@/assets/loading_w.gif" alt="富旺W行館" srcset="">
   </div>
   <!--loading end-->
   <Nav v-if="config.showNav" />
-  <div class="home bg-[#F5EBE2] overflow-hidden font-['Noto_Sans_TC']">
-    <h1 style="display:none;">亞果濱海寓所</h1>
+  <div class="home bg-[#123C33] text-[#C59B6D] overflow-hidden font-['Noto_Sans_TC']">
+    <h1 style="display:none;">富旺W行館</h1>
     <S1 />
     <S2 />
     <S3 />
     <S4 />
     <S5 />
-    <S6 />
-    <S7 />
     <Order />
   </div>
 </template>
@@ -37,17 +35,11 @@ import S2 from "@/section/s2.vue"
 import S3 from "@/section/s3.vue"
 import S4 from "@/section/s4.vue"
 import S5 from "@/section/s5.vue"
-import S6 from "@/section/s6.vue"
-import S7 from "@/section/s7.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from 'aos';
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const isLoading = ref(true)
 const gtmNoScript = ref('')
@@ -59,11 +51,6 @@ onMounted(() => {
   window.onload = function () {
     isLoading.value = false
     AOS.init();
-    const tl = gsap.timeline({ repeat: -1 });
-    tl.to('.s1 .logo1 img', { opacity: 0, duration: 0.6 }, 3);
-    tl.to('.s1 .logo2 img', { opacity: 1, duration: 0.6 }, 3);
-    tl.to('.s1 .logo1 img', { opacity: 1, duration: 0.6 }, 6);
-    tl.to('.s1 .logo2 img', { opacity: 0, duration: 0.6 }, 6);
   };
 })
 </script>

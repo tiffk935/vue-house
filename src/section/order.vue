@@ -1,22 +1,41 @@
 <template>
-  <div id="order" class="order relative">
-    <img class="order-title-img" src="@/section/form/order-title-img.png" />
+  <div id="order" class="order relative text-[#000000]">
+    <div class="order-info">
+      <div class="info1">
+        <img class="logo block md:hidden" src="@/section/form/logo-m.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+        <img class="logo hidden md:block" src="@/section/form/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+        <div class="t1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+          <span style="letter-spacing: 0;">2-4房 24.27.35.48坪</span><br>
+          千坪泳池渡假俱樂部
+        </div>
+      </div>
+      <div class="info2">
+        <img class="fullwang block" src="@/section/form/fullwang.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
+        <div>
+          <div class="info2-1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+            <div class="t2">樹立經典 綠動未來</div>
+            <div class="stock">股票代號<span> 6219</span></div>
+          </div>
+          <div class="t3 md:hidden" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">人與環境共好的<br>理想建築品牌</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Title -->
-    <div class="order-title text-[#423E3D]" v-if="info.order.title">{{ info.order.title }}</div>
-    <div class="order-subTitle text-center text-[#423E3D]" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
+    <div class="order-title text-[#C59B6D]" v-if="info.order.title">{{ info.order.title }}</div>
+    <div class="order-subTitle text-center" v-if="info.order.subTitle">{{ info.order.subTitle }}</div>
 
     <div class="container">
       <!-- Form -->
-      <div class="form mx-auto relative md:flex md:justify-center">
+      <div class="form mx-auto relative md:flex md:justify-center text-[#000000]">
         <div class="left h-full flex flex-col justify-between items-center">
           <label class="row name">
-            <span>姓名<span class="required">(必填)</span></span>
+            <span>姓名<span class="required">*</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" />
           </label>
           <label class="row">
-            <span>手機<span class="required">(必填)</span></span>
+            <span>手機<span class="required">*</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" />
           </label>
@@ -61,9 +80,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#423E3D] font-bold">
+        <p class="font-bold text-white">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#52777D] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#FFFF00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -73,24 +92,23 @@
         @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
 
       <!-- Send -->
-      <div class="sendall mt-8 mb-12 mx-auto" style="font-size:20px;font-weight: 400;
-    line-height: 3.3;height:3.3em">
-        <button class="send bg-[#6D4D30] hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send"
+      <div class="sendall mt-8 mx-auto">
+        <button class="send bg-[#C59B6D] hover:scale-90 btn cursor-pointer" v-if="!submitted" @click="send"
           :disabled="sending">
-          即刻預約
+          確認送出
         </button>
-        <div v-else class="send-load text-[#FFF]" style="letter-spacing: 0.7em;
-  text-indent: 0.9em;
-  height:100%;text-align: center;">
-          <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
-            style=" display: inline-block;margin:0 .8em">
-            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
-              <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12"
-                to="360 12 12" dur="1s" repeatCount="indefinite" />
-            </path>
-          </svg>
-          <span>發送中...</span>
+        <div v-else class="send-load text-[#FFF]">
+          <div>
+            <svg class="h-5 w-5 mr-2" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              style=" display: inline-block;margin:0 .8em">
+              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z">
+                <animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 12 12"
+                  to="360 12 12" dur="1s" repeatCount="indefinite" />
+              </path>
+            </svg>
+            <span>發送中...</span>
+          </div>
         </div>
       </div>
     </div>
@@ -111,14 +129,120 @@
 @import "@/assets/style/function.scss";
 
 .order {
-  color: #000;
-  padding: size-m(100) 0 0 0;
-  z-index: 2;
-  background-image: url(@/section/form/bg.jpg);
-  background-size: 100% auto;
+  .order-info {
+    text-align: center;
+    color: #fff;
+    padding: size-m(68) 0 size-m(86) 0;
+    @media screen and (min-width:768px) {
+      padding: size(99) 0 size(45) 0;
+    }
 
-  @media screen and (min-width:768px) {
-    padding: size(100) 0 0 0;
+    .info1 {
+      @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+        margin-bottom: size(28);
+      }
+    }
+
+    .logo {
+      width: size-m(219);
+      margin: 0 auto size-m(37) auto;
+      @media screen and (min-width:768px) {
+        width: size(310);
+        margin: 0 size(23) 0 0;
+      }
+    }
+
+    .t1 {
+      width: calc(100% - size-m(64));
+      padding: size-m(10) 0;
+      font-size: size-m(26);
+      line-height: size-m(32);
+      font-weight: 700;
+      letter-spacing: .06em;
+      border-top: size-m(1) solid #fff;
+      border-bottom: size-m(1) solid #fff;
+      margin: 0 auto size-m(34) auto;
+      @media screen and (min-width:768px) {
+        width: auto;
+        padding: 0 0 0 size(23);
+        font-size: size(24.35);
+        line-height: 130%;
+        border: none;
+        border-left: size(0.64) solid #fff;
+        margin: 0;
+      }
+    }
+
+    .info2 {
+      @media screen and (min-width:768px) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .fullwang {
+      width: size-m(92);
+      margin: 0 auto size-m(23) auto;
+      @media screen and (min-width:768px) {
+        width: size(119);
+        margin: 0 size(13) 0 0;
+      }
+    }
+
+    .info2-1 {
+      @media screen and (min-width:768px) {
+        display: flex;
+        border: size(1) solid #fff;
+      }
+    }
+
+    .t2 {
+      font-size: size-m(22);
+      line-height: size-m(29);
+      font-weight: 700;
+      letter-spacing: .1em;
+      margin: 0 0 size-m(13) 0;
+      @media screen and (min-width:768px) {
+        font-size: size(14);
+        line-height: size(25);
+        font-weight: 500;
+        margin: 0;
+        padding: 0 size(20);
+      }
+    }
+
+    .stock {
+      width: size-m(120);
+      border: size-m(1) solid #fff;
+      font-size: size-m(12.6);
+      line-height: size-m(28);
+      margin: 0 auto size-m(11) auto;
+      @media screen and (min-width:768px) {
+        width: size(75);
+        border: none;
+        font-size: size(9.44);
+        line-height: size(25);
+        margin: 0;
+        background: #fff;
+        color: #011D19;
+      }
+
+      span {
+        letter-spacing: .15em;
+        @media screen and (min-width:768px) {
+          letter-spacing: 0;
+        }
+      }
+    }
+
+    .t3 {
+      font-size: size-m(23);
+      line-height: 170%;
+      font-weight: 700;
+      letter-spacing: .04em;
+    }
   }
 
   .btn {
@@ -131,47 +255,21 @@
 
     @media screen and (min-width:768px) {
       padding: 0;
-      max-width: size(1200);
+      max-width: size(800);
       margin: 0 auto;
-    }
-  }
-
-  .order-title-img {
-    width: calc(100% - size-m(45));
-    display: block;
-    margin: 0 auto size-m(40) auto;
-
-    @media screen and (min-width:768px) {
-      width: size(524);
-      margin: 0 auto size(100) auto;
     }
   }
 
   .order-title {
     text-align: center;
-    font-size: size-m(28);
-    line-height: size-m(34);
-    font-weight: 700;
-    margin: 0 auto size-m(7) auto;
+    font-size: size-m(34);
+    line-height: size-m(41);
+    margin: 0 auto size-m(30) auto;
 
     @media screen and (min-width:768px) {
-      font-size: size(40);
-      line-height: size(48);
-      font-weight: 800;
-      margin-bottom: size(11);
-    }
-  }
-
-  .order-subTitle {
-    text-align: center;
-    font-size: size-m(14);
-    line-height: size-m(19);
-    margin-bottom: size-m(27);
-
-    @media screen and (min-width:768px) {
-      font-size: size(15);
-      line-height: size(36);
-      margin-bottom: size(31);
+      font-size: size(34);
+      line-height: size(41);
+      margin-bottom: size(20);
     }
   }
 
@@ -180,14 +278,14 @@
     margin-bottom: size-m(20);
 
     @media screen and (min-width:768px) {
-      margin-bottom: size(49);
+      margin-bottom: size(30);
       display: flex;
       justify-content: space-between;
       align-items: stretch;
 
       div:nth-child(1) {
-        width: size(559);
-        margin-right: size(82);
+        width: size(375);
+        margin-right: size(50);
       }
 
       div:nth-child(2) {
@@ -222,6 +320,11 @@
         border: size(1) solid #fff;
         height: 100%;
       }
+
+      &:focus {
+        outline: 2px solid rgba(255, 255, 255, 0.44);
+        outline-offset: 2px;
+      }
     }
 
     label {
@@ -239,7 +342,7 @@
       }
 
       &:has(:focus) {
-        outline: 2px solid hsla(var(--bc) / 0.2);
+        outline: 2px solid rgba(255, 255, 255, .44);
         outline-offset: 2px;
       }
 
@@ -258,10 +361,11 @@
 
         .required {
           display: inline-block;
-          font-size: .6em;
+          font-size: 14px;
+          margin-left: 3px;
           width: auto;
           padding: 0;
-          color: #52777D;
+          color: #CC0000;
           font-weight: 700;
         }
       }
@@ -308,27 +412,40 @@
 
   .send {
     width: 100%;
-    height: auto;
-    display: block;
+    height: size-m(72);
     font-size: size-m(20);
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1;
-    padding: size-m(25) 0;
+    padding: 0;
     border: none;
-    border-radius: size-m(0);
-    letter-spacing: 1em;
-    text-indent: 1em;
+    letter-spacing: .3em;
+    text-indent: .3em;
+    display: flex;
+    justify-content: center;
+    align-content: center;
 
     @media screen and (min-width:768px) {
-      display: block;
-      width: size(480);
-      font-size: size(24);
-      font-weight: 400;
+      width: size(260);
+      height: size(60);
+      font-size: size(20);
       letter-spacing: 1em;
       text-indent: 1em;
-      padding: size(30) 0;
       min-height: auto;
-      margin: 0 auto size(20) auto;
+      margin: 0 auto;
+      
+    }
+  }
+
+  .send-load {
+    width: 100%;
+    height: size-m(72);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 0.7em;
+    text-indent: 0.9em;
+    @media screen and (min-width:768px) {
+      height: size(60);
     }
   }
 
@@ -337,7 +454,7 @@
     height: size-m(354);
 
     @media screen and (min-width:768px) {
-      height: size(500);
+      height: size(320);
     }
 
     iframe {
@@ -400,7 +517,7 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["msg"]
+const staticBypass = ["budget", "city", "area", "msg"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)

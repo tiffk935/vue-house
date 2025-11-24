@@ -1,5 +1,5 @@
 @function size($size) {
-    $c-size: calc(100vw * $size / 1920);
+    $c-size: calc(100vw * $size / 1229.36);
     @return #{$c-size};
 }
 @function size-m($size) {

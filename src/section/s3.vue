@@ -1,32 +1,20 @@
 <template>
-  <section class="s3 user-n w-full relative">
-    <img class="title block" src="@/section/s3/title.png" data-aos="zoom-in" data-aos-duration="1000"
-      data-aos-delay="0" />
-
-    <div class="slider">
-      <swiper :spaceBetween="30" :pagination="{
-        clickable: true
-      }" :autoplay="{
-        delay: 8000,
-        disableOnInteraction: false,
-      }" :loop="true" :modules="modules">
-        <swiper-slide v-for="(slide, idx) in slides">
-          <div class="img relative">
-            <img class="w-full md:hidden" :src="getImg(`./s3/${(idx + 1)}-m.png`)" />
-            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.png`)" />
-            <div class="info">{{ slide.label }}</div>
-          </div>
-
-          <div class="content">
-            <img class="slide-title md:hidden" :src="getImg(`./s3/title${(idx + 1)}-m.png`)" />
-            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx + 1)}.png`)" />
-
-            <div class="desc" v-html="slide.desc"></div>
-          </div>
-        </swiper-slide>
-      </swiper>
+  <section class="s3 user-n w-full relative bg-[#E3750F] text-[#123C33]">
+    <div class="content">
+      <div class="en relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="w-full block" src="@/section/s3/en.svg" />
+        <img class="star block absolute" src="@/section/s3/star.svg" />
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="title font-bold">
+          <div>維繫三代人的共同喜好</div>
+        </div>
+        <div class="desc">美好時光，就此展開</div>
+      </div>
     </div>
-
+    <div class="img relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+      <img class="img-en block absolute" src="@/section/s3/img-en.svg" />
+    </div>
   </section>
 </template>
 
@@ -34,109 +22,104 @@
 @import "@/assets/style/function.scss";
 
 .s3 {
-  padding: size-m(60) size-m(22) size-m(56) size-m(22);
-
+  padding: 0 0 size-m(14) 0;
   @media screen and (min-width:768px) {
-    padding: size(140) size(185) size(129) size(185);
+    display: flex;
+    justify-content: space-between;
+    padding: size(90) size(60) size(51) 0;
+  }
+
+  .content {
+    padding: size-m(39) 0 0 0;
+    @media screen and (min-width:768px) {
+      padding: 0;
+    }
+  }
+
+  .en {
+    width: size-m(295);
+    margin: 0 0 size-m(25) size-m(10);
+    @media screen and (min-width:768px) {
+      width: size(513);
+      margin: 0 0 size(31) size(57);
+    }
+
+    .star {
+      width: size-m(28);
+      bottom: 0;
+      left: size-m(216);
+      @media screen and (min-width:768px) {
+        width: size(55);
+        left: size(351);
+      }
+    }
   }
 
   .title {
-    width: size-m(225);
-    margin: 0 auto size-m(32) auto;
-
+    width: size-m(320);
+    font-size: size-m(23.28);
+    line-height: size-m(28);
+    margin-bottom: size-m(9);
     @media screen and (min-width:768px) {
-      width: size(399);
-      margin: 0 auto size(99) auto;
+      width: size(628);
+      font-size: size(27);
+      line-height: size(32);
+      margin-bottom: size(10);
+    }
+
+    div {
+      padding-left: size-m(14);
+      padding-bottom: size-m(12);
+      margin-bottom: size-m(12);
+      border-bottom: size-m(1.11) solid #123C33;
+      @media screen and (min-width:768px) {
+        padding-left: size(58.27);
+        padding-bottom: size(10);
+        margin-bottom: size(10);
+        border-bottom: size(1.28) solid #123C33;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
 
-  .slider {
-    .img {
-      margin-bottom: size-m(50);
+  .desc {
+    font-size: size-m(21);
+    line-height: 150%;
+    padding-left: size-m(14);
+    margin-bottom: size-m(60);
+    @media screen and (min-width:768px) {
+      font-size: size(26.89);
+      line-height: 170%;
+      padding-left: size(58.27);
+      margin-bottom: 0;
+    }
+  }
 
-      @media screen and (min-width:768px) {
-        margin-bottom: size(137);
-      }
-
-      .info {
-        position: absolute;
-        bottom: size-m(5);
-        right: size-m(5);
-        color: #fff;
-        font-size: size-m(6);
-
-        @media screen and (min-width:768px) {
-          bottom: size(12);
-          right: size(19);
-          font-size: size(10);
-        }
-      }
+  .img {
+    width: 100%;
+    height: size-m(435);
+    background-image: url(@/section/s3/img.jpg);
+    background-size: size-m(1079) auto;
+    background-position: size-m(-40) size-m(-238);
+    background-repeat: no-repeat;
+    @media screen and (min-width:768px) {
+      width: size(470.9);
+      height: size(521.58);
+      background-size: size(1392) auto;
+      background-position: size(-54.99) size(-341.88);
     }
 
-    .content {
-      font-weight: 300;
-      font-size: size-m(14);
-      line-height: size-m(24);
-
+    .img-en {
+      width: size-m(249);
+      bottom: size-m(17);
+      left: 50%;
+      transform: translate(-50%, 0);
       @media screen and (min-width:768px) {
-        font-size: size(24);
-        line-height: size(40);
-        display: flex;
-        align-items: center;
-      }
-
-      .slide-title {
-        width: auto;
-        height: size-m(79);
-        margin: 0 auto size-m(30) auto;
-
-        @media screen and (min-width:768px) {
-          height: size(93);
-          margin: 0 size(40) 0 0;
-        }
-      }
-
-      .desc {
-        padding: 0 size-m(3);
-
-        @media screen and (min-width:768px) {
-          padding: 0;
-          max-width: size(900);
-        }
-      }
-    }
-
-    .swiper {
-      .swiper-pagination {
-        bottom: auto;
-        top: size-m(227 + 20);
-        transform: none;
-        line-height: 0;
-        font-size: 0;
-        margin: 0;
-
-        @media screen and (min-width:768px) {
-          top: size(429 + 35);
-        }
-
-        .swiper-pagination-bullet {
-          width: size-m(116);
-          height: size-m(3);
-          border: none;
-          border-radius: 0;
-          opacity: 1;
-          background: #C7C8C8;
-          margin: 0;
-
-          @media screen and (min-width:768px) {
-            width: size(365);
-            height: size(3);
-          }
-
-          &.swiper-pagination-bullet-active {
-            background: #6D4D30;
-          }
-        }
+        width: size(311);
+        bottom: size(30);
       }
     }
   }
@@ -144,23 +127,4 @@
 </style>
 
 <script setup>
-import { ref } from "vue"
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import 'swiper/css/pagination';
-import { Autoplay, Pagination } from "swiper/modules";
-const modules = ref([Autoplay, Pagination]);
-const images = import.meta.globEager('./s3/*.*');
-
-const getImg = path => images[path]?.default || '';
-const slides = ref([
-  {
-    label: '實景拍攝',
-    desc: '從碼頭興建與營運、船艇銷售，到台灣唯一結合遊艇俱樂部與濱海社區的綜合體驗，<br>亞果遊艇會構築出一座完整而極致的濱海生活場域。<br>亞果遊艇會，不僅是選擇，更是層峰身份的象徵。<br>在這裡，日常即度假，量身訂製的款待，成就不凡生活。'
-  },
-  {
-    label: '實景拍攝',
-    desc: '集團以海洋休閒為事業根基，延伸發展多元觸角，涵蓋會所經營、星級餐飲、旅宿度假與精緻活動，以台南為起點，串聯台中、高雄與澎湖黃金據點，建構完整居遊生態圈，開創台灣層峰與國際接軌的新格局。'
-  }
-]);
 </script>

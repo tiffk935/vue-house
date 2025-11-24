@@ -14,11 +14,6 @@ import VueLazyload from "vue-lazyload"
 
 import "aos/dist/aos.css"
 
-import VueSmoothScroll from "vue3-smooth-scroll"
-
-import Vue3TouchEvents from "vue3-touch-events";
-
-
 const toastOptions = {
     transition: "Vue-Toastification__fade",
     maxToasts: 5,
@@ -31,9 +26,7 @@ import { createGtm } from '@gtm-support/vue-gtm';
 createApp(App)
     .use(Toast, toastOptions)
     .use(VueMobileDetection)
-    .use(VueSmoothScroll)
     .use(router)
-    .use(Vue3TouchEvents)
     .use(VueLazyload, {
         preLoad: 2,
         lazyComponent: true,

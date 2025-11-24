@@ -3,27 +3,27 @@
 
     <div class="container">
       <div class="contact-item-box">
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+        <div class="contact-item btn text-white bg-[#C59B6D] flex justify-center items-center"
           @click="modalOpen = true; modalType = 'phone'">
           <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center btfanpage"
-          @click="open()">
-          <img src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
-          <div>前往粉絲專頁</div>
-        </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+        <div class="contact-item btn text-white bg-[#C59B6D] flex justify-center items-center"
           @click="modalOpen = true; modalType = 'fb'">
           <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
           <div>FB 諮詢</div>
+        </div>
+        <div class="contact-item btn text-white bg-[#C59B6D] flex justify-center items-center btfanpage"
+          @click="open()">
+          <img src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
+          <div>前往粉絲專頁</div>
         </div>
       </div>
       <div class="address-wrap contact-item-box">
         <div class="address contact-item flex justify-center items-center">
           <div><span>{{ info.address1 }}</span><span v-html="info.address"></span></div>
         </div>
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+        <div class="contact-item btn text-white bg-[#C59B6D] flex justify-center items-center"
           @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
           <div>導航 Google 地圖</div>
@@ -74,7 +74,7 @@
         `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#6D4D30] border-0 text-white mt-12" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-[#C59B6D] border-0 text-white mt-12" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -94,10 +94,10 @@
 
 .contact-info {
   position: relative;
-  padding: size-m(101) 0 size-m(40) 0;
+  padding: size-m(90) 0 size-m(40) 0;
 
   @media screen and (min-width:768px) {
-    padding: size(143) 0 size(117) 0;
+    padding: size(108) 0 size(51) 0;
   }
 
 
@@ -122,9 +122,9 @@
 
       @media screen and (min-width:768px) {
         width: calc(33.333% - size(6.666666));
-        height: size(72);
+        height: size(38);
         margin-bottom: 0;
-        font-size: size(22);
+        font-size: size(11);
       }
 
       img {
@@ -134,7 +134,7 @@
         height: size-m(22);
 
         @media screen and (min-width:768px) {
-          height: size(25);
+          height: size(18);
         }
       }
 
@@ -149,32 +149,21 @@
       @media screen and (min-width:768px) {
         width: 100%;
         display: flex;
-        margin-top: size(34);
+        margin-top: size(12);
       }
 
       .address {
         background: #fff;
-        color: #6D4D30;
+        color: #000000;
         margin-bottom: 0;
-        font-size: size-m(15);
         letter-spacing: 0;
 
         @media screen and (min-width:768px) {
-          font-size: size(22);
           flex: 1;
         }
       }
 
       .contact-item:nth-child(2) {
-        background: #6D4D30;
-        // @media screen and (min-width:768px) {
-        //   background: rgba(182, 0, 100, .6);
-        // }
-
-        // &:hover {
-        //   background: rgba(214, 0, 168, .7137254902);
-        // }
-
         img {
           filter: invert(100%) sepia(13%) saturate(7447%) hue-rotate(200deg) brightness(114%) contrast(114%);
         }
@@ -185,7 +174,7 @@
 
 .modal-box {
   img {
-    filter: invert(31%) sepia(49%) saturate(409%) hue-rotate(347deg) brightness(92%) contrast(96%);
+    filter: invert(95%) sepia(5%) saturate(5644%) hue-rotate(311deg) brightness(82%) contrast(85%);
     //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
@@ -201,7 +190,7 @@
 
   .contact-item {
     height: 100%;
-    background-color: #6D4D30;
+    background-color: #C59B6D;
     font-size: size-m(16);
     font-weight: 400;
     color: #fff;

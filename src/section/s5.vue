@@ -1,30 +1,67 @@
 <template>
-  <section class="s5 user-n w-full relative bg-[#F3DCC5]">
-    <img class="title block" src="@/section/s5/title.png" data-aos="zoom-in" data-aos-duration="1000"
-      data-aos-delay="0" />
-
-    <div class="slider relative">
-      <div class="slides">
-        <div class="slide">
-          <img src="@/section/s5/img.png" @load="onImgLoad()" />
+  <section class="s5 user-n w-full relative">
+    <div class="content">
+      <div class="en relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <img class="w-full block" src="@/section/s5/en.svg" />
+        <img class="star block md:hidden absolute" src="@/section/s2/star.svg" />
+      </div>
+      <div data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="title font-bold">
+          <div>早鳥預約 即刻擁有</div>
         </div>
-        <div class="slide">
-          <img src="@/section/s5/img.png" />
+        <div class="desc">
+          六星級全齡雅緻御所<br>
+          實現人生最夢幻的奢想
         </div>
       </div>
     </div>
-
-    <img class="title2 block" src="@/section/s5/title2.png" data-aos="zoom-in" data-aos-duration="1000"
-      data-aos-delay="0" />
-
-    <div class="txt">
-      從亞果遊艇會，15分鐘到北外環快速道路，<br class="md:hidden">
-      連結安平區與國道一號，交通新動脈。
+    
+    <div class="items">
+      <div class="item relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="img">
+          <img class="w-full block" src="@/section/s5/img1.jpg" />
+        </div>
+        <div class="text absolute md:relative">
+          <img class="block" src="@/section/s5/text1.svg" />
+        </div>
+        <div class="line-block bg-[#E3750F] md:hidden">
+          <div class="line-block-inner bg-[#796A56] h-full"></div>
+        </div>
+      </div>
+      <div class="item relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="img">
+          <img class="w-full block" src="@/section/s5/img2.jpg" />
+        </div>
+        <div class="text absolute md:relative">
+          <img class="block" src="@/section/s5/text2.svg" />
+        </div>
+        <div class="line-block bg-[#E3750F] md:hidden">
+          <div class="line-block-inner bg-[#796A56] h-full"></div>
+        </div>
+      </div>
+      <div class="item relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="img">
+          <img class="w-full block" src="@/section/s5/img3.jpg" />
+        </div>
+        <div class="text absolute md:relative">
+          <img class="block" src="@/section/s5/text3.svg" />
+        </div>
+        <div class="line-block bg-[#E3750F] md:hidden">
+          <div class="line-block-inner bg-[#796A56] h-full"></div>
+        </div>
+      </div>
+      <div class="item relative" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+        <div class="img">
+          <img class="w-full block" src="@/section/s5/img4.jpg" />
+        </div>
+        <div class="text absolute md:relative">
+          <img class="block" src="@/section/s5/text4.svg" />
+        </div>
+        <div class="line-block bg-[#E3750F] md:hidden">
+          <div class="line-block-inner bg-[#796A56] h-full"></div>
+        </div>
+      </div>
     </div>
-
-    <img class="map block" src="@/section/s5/map.png" />
-    <img class="info block md:hidden" src="@/section/s5/info-m.png" />
-    <img class="info hidden md:block" src="@/section/s5/info.png" />
   </section>
 </template>
 
@@ -32,185 +69,143 @@
 @import "@/assets/style/function.scss";
 
 .s5 {
-  padding: size-m(60) 0;
-  font-weight: 300;
-  font-size: size-m(14);
-  line-height: size-m(24);
-
   @media screen and (min-width:768px) {
-    padding: size(146) 0 size(126) 0;
-    font-size: size(24);
-    line-height: size(40);
+    display: flex;
+    justify-content: space-between;
+    padding: size(34) 0 0 0;
+  }
+
+  .content {
+    padding: size-m(35) 0 0 0;
+    @media screen and (min-width:768px) {
+      padding: size-m(5) 0 0 0;
+    }
+  }
+
+  .en {
+    width: size-m(343);
+    margin: 0 0 size-m(28) size-m(9);
+    @media screen and (min-width:768px) {
+      width: size(535);
+      margin: 0 0 size(49) size(59);
+    }
+
+    .star {
+      width: size-m(28);
+      bottom: 0;
+      left: size-m(315);
+    }
   }
 
   .title {
-    width: size-m(311);
-    margin: 0 auto size-m(50) auto;
-
+    width: size-m(352);
+    font-size: size-m(23.28);
+    line-height: size-m(28);
+    margin-bottom: size-m(9);
     @media screen and (min-width:768px) {
-      width: size(495);
-      margin: 0 auto size(115) auto;
-    }
-  }
-
-  .slider {
-    height: size-m(200);
-    margin: 0 0 size-m(60) 0;
-
-    @media screen and (min-width:768px) {
-      height: size(528);
-      margin: 0 0 size(174) 0;
+      width: size(628);
+      font-size: size(27);
+      line-height: size(32);
+      margin-bottom: size(5);
     }
 
-    .slides {
-      display: inline-flex;
-      position: relative;
-      height: 100%;
+    div {
+      padding-left: size-m(14);
+      padding-bottom: size-m(12);
+      margin-bottom: size-m(12);
+      border-bottom: size-m(1.11) solid #C59B6D;
+      @media screen and (min-width:768px) {
+        padding-left: size(58.27);
+        padding-bottom: size(10);
+        margin-bottom: size(10);
+        border-bottom: size(1.28) solid #C59B6D;
+      }
 
-      img {
-        display: block;
-        height: 100%;
-        max-width: none;
+      &:last-child {
+        margin-bottom: 0;
       }
     }
   }
 
-  .title2 {
-    width: size-m(311);
-    margin: 0 auto size-m(20) auto;
-
+  .desc {
+    font-size: size-m(21);
+    line-height: 150%;
+    padding-left: size-m(14);
+    margin-bottom: size-m(22);
     @media screen and (min-width:768px) {
-      width: size(390);
-      margin: 0 auto size(30) auto;
+      font-size: size(26.89);
+      line-height: 170%;
+      padding-left: size(58.27);
+      margin-bottom: 0;
     }
   }
 
-  .txt {
-    text-align: center;
-    margin: 0 auto size-m(30) auto;
-
+  .items {
     @media screen and (min-width:768px) {
-      margin: 0 auto size(30) auto;
+      width: size(530);
     }
-  }
 
-  .map {
-    width: calc(100% - size-m(22));
-    margin: 0 auto size-m(30) auto;
+    .item {
+      @media screen and (min-width:768px) {
+        display: flex;
+        background: #796A56;
 
-    @media screen and (min-width:768px) {
-      width: calc(100% - size(39));
-      margin: 0 auto size(67) auto;
-    }
-  }
+        &:nth-child(even) {
+          flex-direction: row-reverse;
+        }
+      }
 
-  .info {
-    width: calc(100% - size-m(10));
-    margin: 0 auto;
+      .img {
+        @media screen and (min-width:768px) {
+          width: size(325);
+        }
+      }
 
-    @media screen and (min-width:768px) {
-      width: calc(100% - size(500));
+      .text {
+        bottom: size-m(18);
+        left: 50%;
+        transform: translate(-50%, 0);
+        @media screen and (min-width:768px) {
+          bottom: auto;
+          left: auto;
+          transform: none;
+          flex: 1;
+          background: #E3750F;
+          margin-left: size(14);
+        }
+
+        img {
+          width: auto;
+          height: size-m(43);
+          @media screen and (min-width:768px) {
+            height: size(35);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      
+      .line-block {
+        width: 100%;
+        height: size-m(12);
+        @media screen and (min-width:768px) {
+          height: size(28);
+        }
+
+        .line-block-inner {
+          width: size-m(56);
+          @media screen and (min-width:768px) {
+            width: size(254.55);
+          }
+        }
+      }
+
     }
   }
 }
 </style>
 
 <script setup>
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
-
-gsap.registerPlugin(Draggable);
-
-let startX = 0;
-const v = 40; // 速率
-let tl;
-let imgLoaded = false;
-let slideWidth = 0;
-
-function createAnimation() {
-  if (!imgLoaded) return;
-
-  if (tl) {
-    tl.kill();
-    tl = null;
-  }
-
-  startX = 0;
-
-  tl = gsap.timeline({
-    // paused: true,
-    onComplete: () => {
-      tl.restart();
-    },
-    onReverseComplete: () => {
-      tl.seek(tl.duration());
-    }
-  });
-
-  setTimeout(() => {
-    const duration = document.querySelector('.s5 .slides img').clientWidth / v;
-
-    tl
-      .set('.s5 .slides', { xPercent: 0 })
-      .to('.s5 .slides', {
-        xPercent: -50,
-        duration: duration,
-        ease: 'none'
-      });
-
-    // .set('.s5 .slides', { left: 0 })
-    // .to('.s5 .slides', {
-    //   left: () => {
-    //     const w = document.querySelector('.s5 .slides img').clientWidth;
-    //     return -w + 'px';
-    //   },
-    //   duration: duration,
-    //   ease: 'none'
-    // });
-  }, 0);
-}
-
-window.addEventListener('resize', () => {
-  if (!imgLoaded) return;
-  if (parseInt(document.querySelector('.s5 .slides img').clientWidth) === parseInt(slideWidth)) return;
-
-  createAnimation();
-});
-
-function onImgLoad() {
-  imgLoaded = true;
-  slideWidth = document.querySelector('.s5 .slides img').clientWidth;
-
-  createAnimation();
-
-  Draggable.create(".s5 .slider", {
-    type: "x",
-    liveSnap: { x: () => 0 }, // 鎖住位置
-    onPress: function () {
-      tl.pause();
-      startX = this.pointerX;
-    },
-    onRelease: function () {
-      if (tl.reversed()) {
-        tl.reverse();
-      } else {
-        tl.play();
-      }
-    },
-    onDrag: function () {
-      const deltaX = this.pointerX - startX;
-
-      if (Math.abs(deltaX) > 1) {
-        if (deltaX > 0) { // right
-          // console.log('right');
-
-          tl.reverse();
-        } else { // left
-          // console.log('left');
-          tl.play();
-        }
-      }
-    }
-  });
-}
 </script>
