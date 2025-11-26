@@ -102,14 +102,10 @@
     width: 100%;
     height: size-m(436);
     background-image: url(@/section/s4/img.jpg);
-    background-size: size-m(612.17) auto;
-    background-position: size-m(-122.49) size-m(-26.04);
-    background-repeat: no-repeat;
+    background-size: cover;
     @media screen and (min-width:768px) {
       width: size(470.62);
       height: size(546.81);
-      background-size: size(768.26) auto;
-      background-position: size(-153.72) size(-32.65);
     }
 
     .img-en {
