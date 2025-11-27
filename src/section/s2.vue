@@ -16,10 +16,8 @@
         </div>
       </div>
     </div>
-    <div class="video-wrapper" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <div class="video">
-        <video src="@/section/s2/video.mp4" muted loop autoplay playsinline></video>
-      </div>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/FHSz9MDNSZ0?autoplay=1&mute=1&loop=1&playlist=FHSz9MDNSZ0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
   </section>
 </template>
@@ -126,6 +124,24 @@
       }
     }
   }
+  .video-container {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 5 / 8.9;
+    @media screen and (min-width:768px) {
+      width: size(372.65);
+    }
+
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;pointer-events: none;
+    }
+  }
+  
 }
 </style>
 

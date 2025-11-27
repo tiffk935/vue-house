@@ -55,20 +55,25 @@
           <!-- 動態 select end-->
 
           <!--  -->
-          <label class="row"><span>居住城市</span>
+          <label class="row"><span>居住城市<span class="required">*</span></span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label>
-          <label class="row"><span>居住地區</span>
+          <label class="row"><span>居住地區<span class="required">*</span></span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select></label>
+          <label class="row">
+            <span>LINE ID</span>
+            <input type="text" placeholder="LINE" class="input w-full rounded-none" :value="formData.room_type"
+              @input="(event) => (formData.room_type = event.target.value)" />
+          </label>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -517,7 +522,7 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["budget", "city", "area", "msg"]
+const staticBypass = ["budget", "msg"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)

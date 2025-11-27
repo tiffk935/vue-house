@@ -1,7 +1,7 @@
-const caseName = "亞果濱海寓所"
+const caseName = "富旺W行館"
 
 export default {
-    caseid: "ad8edddb-1f50-47c7-bec3-f9c5d571aa18",
+    caseid: "b156bd0e-b96c-4add-9cfe-aa3eb09d8a89",
     //case_code: "king",
     address1: "接待中心：",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
@@ -31,9 +31,9 @@ export default {
     // 底下2個 沒項目就會隱藏
     selectFields: {
         budget: {
-            title: "購屋預算",
-            hold: "請選擇預算",
-            option: ["8千萬 ~ 1.1億", "1.2億 ~ 1.4億", "1.4億 ~ 1.6億"],
+            title: "聯繫時段",
+            hold: "請選擇時段",
+            option: ["上午", "下午", "晚上", "皆可"],
             bypass: false,
         },
     },
