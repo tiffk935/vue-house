@@ -1,9 +1,9 @@
 <template>
   <section id="main">
     <div class="img-group">
-    <img class="pc" src="@/assets/pinshi-architecture/main.webp" />
+    <img class="pc" src="@/assets/pinshi-architecture/main.jpg" />
     <img class="mob" src="@/assets/pinshi-architecture/1/1m.webp" />
-    <div class="photo-desc pc">國城寳實 北向建築立面透視圖</div>
+    <div class="photo-desc pc">國城寳實 西向建築立面透視圖</div>
     <div class="photo-desc mob">國城寳實 西向建築立面透視圖</div>
     <div class="photo-desc1">此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
     </div>
