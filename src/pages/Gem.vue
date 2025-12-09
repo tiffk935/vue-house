@@ -9,7 +9,7 @@
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
   </section>
 
-  <section class="about">
+  <section class="about" id="about">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img src="@/assets/home/about/bg.jpg" class="pc" />
       <img src="@/assets/home/about/bgm.jpg" class="mob" />
@@ -25,7 +25,7 @@
     </div>
   </section>
 
-  <section class="work">
+  <section class="work" id="work">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/home/work/pic.jpg" />
       <img class="mob" src="@/assets/home/work/pic-m.jpg" />
@@ -39,7 +39,7 @@
     </div>
   </section>
 
-  <section class="area">
+  <section class="area" id="area">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <Fullview class="fullview" />
       <h2>平實特區</h2>
@@ -52,7 +52,7 @@
     </div>
   </section>
 
-  <section class="team">
+  <section class="team" id="team">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/home/team/pic.jpg" />
       <img class="mob" src="@/assets/home/team/pic-m.jpg" />
@@ -66,7 +66,7 @@
     </div>
   </section>
 
-  <section class="archi">
+  <section class="archi" id="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
       <img class="pc" src="@/assets/home/archi/pic.jpg" />
       <img class="mob" src="@/assets/home/archi/pic-m.jpg" />
@@ -83,7 +83,7 @@
     </div>
   </section>
 
-  <section class="news">
+  <section class="news" id="news">
     <div class="container">
       <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</h2>
       <!--    <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞</div>
@@ -112,7 +112,7 @@
     </div>
   </section>
 
-  <section class="ad">
+  <section class="ad" id="ad">
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
   </section>
