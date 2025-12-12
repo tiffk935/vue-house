@@ -9,8 +9,8 @@ export default {
     googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7228.619649444191!2d121.45249!3d25.057486!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a965069393e1%3A0x3f4f54588cc81ac7!2z5ZyL546L5aSn6YGTS0lORyBQQVJL5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1754290760670!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/rUAkADhbs3bwRzWd9",
     phone: "02-8522-7337",
-    fbLink: "https://www.facebook.com/gtcip.debang/",
-    fbMessage: "https://m.me/gtcip.debang/",
+    fbLink: "https://www.facebook.com/61582772002255/",
+    fbMessage: "https://m.me/61582772002255/",
     caseName: caseName,
     houseInfos: [
         ["投資興建", "漢翔開發股份有限公司"],
