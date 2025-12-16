@@ -3,9 +3,9 @@ const caseName = "小城故事8"
 export default {
     caseid: "134fd51c-4505-47b9-879b-c992eafff560",
     case_code: "shih-jhu",
-    address: "宜蘭縣五結鄉中正路一段24號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3625.125732592828!2d121.7706559!3d24.6882042!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3467e5d17d55e0ad%3A0x49cef879e19274d0!2zMjY45a6c6Jit57ij5LqU57WQ6YSJ5Lit5q2j6Lev5LiA5q61MjTomZ8!5e0!3m2!1szh-TW!2stw!4v1684908974869!5m2!1szh-TW!2stw",
-    googleLink: "https://goo.gl/maps/iwAzQXzbwKZbpxcz7",
+    address: "宜蘭縣冬山鄉梅花路802號對面",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d906.4951309138495!2d121.73381147711355!3d24.658798718507633!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDM5JzMxLjMiTiAxMjHCsDQ0JzAyLjMiRQ!5e0!3m2!1szh-TW!2stw!4v1765869786304!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/zQ3WKHCULvmhmi8Q9",
     phone: "(03)9563-888",
     fbLink: "https://www.facebook.com/IlanCSdeveloper/",
     fbMessage: "https://m.me/IlanCSdeveloper/",
