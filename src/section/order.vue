@@ -223,6 +223,7 @@
       display: flex;
       justify-content: space-between;
       align-items: stretch;
+      flex-direction:row;
 
       div:nth-child(1) {
         width: size(559);
