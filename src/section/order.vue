@@ -215,7 +215,8 @@
 
   .form {
     position: relative;
-    margin-bottom: size-m(20);
+    margin-bottom: size-m(20); 
+    flex-direction:column;
 
     @media screen and (min-width:768px) {
       margin-bottom: size(49);
