@@ -6,8 +6,8 @@
     <div class="ball ball4 absolute hidden md:block"></div>
     <img class="logo absolute" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-duration="1000"
       data-aos-delay="0" />
-    <img class="text absolute" src="@/section/s1/text.png" data-aos="fade-up" data-aos-duration="1000"
-      data-aos-delay="200" />
+    <img class="text absolute" src="@/section/s1/text.svg" data-aos="fade-up" data-aos-duration="1000"
+      data-aos-delay="200" data-aos-offset="-600" />
   </section>
 </template>
 
