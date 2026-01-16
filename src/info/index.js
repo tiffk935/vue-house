@@ -1,21 +1,21 @@
-const caseName = "亞果濱海寓所"
+const caseName = "雲禾月"
 
 export default {
-    caseid: "ad8edddb-1f50-47c7-bec3-f9c5d571aa18",
-    //case_code: "king",
-    address1: "",//按鈕區的--- 如空白會只呈現地址
-    address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台南市安平區新港路二段585號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.096232942265!2d120.1635414!3d22.9834885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75feb74702ed%3A0x296f70dc2ee14d30!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5paw5riv6Lev5LqM5q61NTg16Jmf!5e0!3m2!1szh-TW!2stw!4v1760695073759!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/PQjBAt9e9ZQuBLtq9",
-    phone: "0938-517-132",
-    fbLink: "https://www.facebook.com/61581195067952/",
-    fbMessage: "https://m.me/61581195067952/",
+    caseid: "76ba5df2-d3a5-4d7d-8e41-ee1d8128a3e4",
+   //case_code: "csl",
+    address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
+    address2: "",//map點下確認的--- 如空白會顯示"導航地址"
+    address: "新北市汐止區樟樹二路422號1樓",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3613.83527141937!2d121.6428191!3d25.0735718!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x345d5338f990cd0f%3A0x5b8bfb03db2385c3!2zMjIx5paw5YyX5biC5rGQ5q2i5Y2A5qif5qi55LqM6LevNDIy6Jmf!5e0!3m2!1szh-TW!2stw!4v1753844618616!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/SZmpZ2UPaugZFzHk7",
+    phone: "02-2690-3888",
+    fbLink: "https://www.facebook.com/61578333132817/",
+    fbMessage: "https://m.me/61578333132817/",
     caseName: caseName,
     houseInfos: [
-        ["投資興建", "亞果遊艇集團"],
-        ["營造公司", "銓興營造有限公司"],
-        ["產品規劃", "許清俊建築師事務所"],
+        ["投資建設", "合展建設股份有限公司"],
+        ["企劃銷售", "睿頤廣告有限公司"],
+        ["建照執照", "110汐建字第00415-02號"],
     ],
     gtmCode: ["GTM-TN23QFFJ"], // 可放置多個
     recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
@@ -38,38 +38,38 @@ export default {
     },
     navList: [
         {
-            name: "增值盛世",
+            name: "奔赴幸福",
             target: ".s3",
             offset: "",
         },
-        //{
-        //name: "(影片預留)",
-        // target: ".s4",
-        // offset: "",
-        //},
         {
-            name: "重劃之王",
+            name: "休閒天地",
             target: ".s5",
             offset: "",
         },
         {
-            name: "馳騁未來",
+            name: "生活領地",
             target: ".s6",
             offset: "",
         },
         {
-            name: "完整教育",
+            name: "文教美地",
             target: ".s7",
             offset: "",
         },
         {
-            name: "國王高度",
+            name: "合展建設",
             target: ".s8",
             offset: "",
         },
         {
-            name: "宮殿盛典",
+            name: "建材質地",
             target: ".s9",
+            offset: "",
+        },
+        {
+            name: "世代之築",
+            target: ".s10",
             offset: "",
         },
     ],
