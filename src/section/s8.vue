@@ -6,11 +6,11 @@
       <div class="t3 text-center">The happiness of building</div>
       <div class="t4 text-center">合展建設  共築幸福</div>
       <div class="t5">
-        永恆建築之本，始於友善環境，重視細節，<br>
+        永恆建築之本，始於友善環境，重視細節，<br class="md:hidden">
         合展視建築為一個生命有機體，全心全意創造有品質的生活，<br class="hidden md:block">
-        施工上以結構安全為第一優先考量；<br class="hidden md:block">
+        施工上以結構安全為第一優先考量；
         室內格局機能站在使用者的立場滿足人性化的需求：<br class="hidden md:block">
-        嚴選建材以國際品牌塑造出整體建築的優異質感，<br>
+        嚴選建材以國際品牌塑造出整體建築的優異質感，<br class="md:hidden">
         同時創造讓客戶無後顧之憂的售後服務，<br>
         這是合展建築對消費者始終信守的承諾。
       </div>
@@ -226,7 +226,7 @@
   @media screen and (min-width:768px) {
     padding: 0;
     width: 100%;
-    height: size(1325);
+    height: size(1070);
   }
 
   .content {
@@ -249,8 +249,8 @@
       line-height: size(26);
       margin-bottom: 0;
       position: absolute;
-      top: size(80);
-      right: size(37);
+      top: size(103);
+      right: size(47);
     }
   }
 
@@ -263,8 +263,8 @@
       line-height: size(23);
       margin-bottom: 0;
       position: absolute;
-      top: size(116);
-      right: size(37);
+      top: size(139);
+      right: size(47);
     }
   }
 
@@ -277,8 +277,8 @@
       line-height: size(28);
       margin-bottom: 0;
       position: absolute;
-      top: size(306);
-      left: size(877);
+      top: size(154);
+      left: size(698);
     }
   }
 
@@ -294,8 +294,8 @@
       letter-spacing: .25em;
       margin-bottom: 0;
       position: absolute;
-      top: size(344);
-      left: size(877);
+      top: size(192);
+      left: size(698);
     }
   }
 
@@ -308,8 +308,8 @@
       line-height: size(35);
       margin-bottom: 0;
       position: absolute;
-      top: size(424);
-      left: size(877);
+      top: size(272);
+      left: size(698);
     }
   }
 
@@ -321,9 +321,9 @@
     @media screen and (min-width:768px) {
       margin: 0;
       box-shadow: size(9) size(19) size(10.7) rgba(0,0,0,.25);
-      width: size(683);
+      width: size(511);
       position: absolute;
-      top: size(80);
+      top: size(103);
       left: size(96);
     }
 
@@ -429,7 +429,7 @@
 
   .marquee {
     position: absolute;
-    top: size(756);
+    top: size(486);
     left: 0;
     width: 100%;
     
@@ -485,8 +485,8 @@
       font-size: size(16);
       line-height: size(22);
       position: absolute;
-      top: size(1187);
-      left: size(757);
+      top: size(917);
+      left: size(600);
     }
 
     span {

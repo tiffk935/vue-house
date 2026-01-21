@@ -2,118 +2,160 @@
   <section class="s10 user-n w-full relative">
     <Transition>
       <div v-if="roomType === 'room2'" class="room room2 bg-[#E7E7E7] text-[#393939]">
-        <div class="t1 text-[#5ACBBD]">雅緻精品 幸福核心</div>
-        <div class="t2 text-[#000]">倆房齊美 <br class="md:hidden">好室成雙</div>
-        <div class="slider relative">
-          <Transition>
-            <img v-if="roomType2 === 'A1'" class="block w-full" src="@/section/s10/a1.png" alt="">
-          </Transition>
-          <Transition>
-            <img v-if="roomType2 === 'A2'" class="block w-full" src="@/section/s10/a2.png" alt="">
-          </Transition>
-          <Transition>
-            <img v-if="roomType2 === 'A5'" class="block w-full" src="@/section/s10/a5.png" alt="">
-          </Transition>
+        <div class="md:hidden">
+          <div class="t1 text-[#5ACBBD]">雅緻精品 幸福核心</div>
+          <div class="t2 text-[#000]">倆房齊美 <br class="md:hidden">好室成雙</div>
         </div>
-        <div class="controller">
-          <div class="prev-btn" @click="clickPrev"></div>
-          <div class="types text-[#5ACBBD]">
-            <div class="t3">2房格局 傢俱配置參考圖</div>
-            <div class="type-tabs">
-              <div class="type-tab" :class="{active: roomType2 === 'A1'}" @click="roomType2 = 'A1'">A1</div>
-              <div class="type-tab" :class="{active: roomType2 === 'A2'}" @click="roomType2 = 'A2'">A2</div>
-              <div class="type-tab" :class="{active: roomType2 === 'A5'}" @click="roomType2 = 'A5'">A5</div>
+
+        <div class="md:flex md:items-center md:justify-end">
+          <div class="slider relative">
+            <Transition>
+              <img v-if="roomType2 === 'A1'" class="block w-full" src="@/section/s10/a1.png" alt="">
+            </Transition>
+            <Transition>
+              <img v-if="roomType2 === 'A2'" class="block w-full" src="@/section/s10/a2.png" alt="">
+            </Transition>
+            <Transition>
+              <img v-if="roomType2 === 'A5'" class="block w-full" src="@/section/s10/a5.png" alt="">
+            </Transition>
+          </div>
+
+          <div>
+            <div class="hidden md:block">
+              <div class="t1 text-[#5ACBBD]">雅緻精品 幸福核心</div>
+              <div class="t2 text-[#000]">倆房齊美 <br class="md:hidden">好室成雙</div>
+              <div class="info">
+                <span class="text-[#5ACBBD]">・</span>兩房擁雙衛 如廁不緊張<br>
+                <span class="text-[#5ACBBD]">・</span>廣角大客廳 奢華串影音<br>
+                <span class="text-[#5ACBBD]">・</span>開放式廚房 共賞品味藏<br>
+                <span class="text-[#5ACBBD]">・</span>大工作陽台 生活豐厚滿<br>
+                <span class="text-[#5ACBBD]">・</span>王者大主臥 完美私領域
+              </div>
+            </div>
+            
+            <div class="controller">
+              <div class="prev-btn" @click="clickPrev"></div>
+              <div class="types text-[#5ACBBD]">
+                <div class="t3">2房格局 傢俱配置參考圖</div>
+                <div class="type-tabs">
+                  <div class="type-tab" :class="{active: roomType2 === 'A1'}" @click="roomType2 = 'A1'">A1</div>
+                  <div class="type-tab" :class="{active: roomType2 === 'A2'}" @click="roomType2 = 'A2'">A2</div>
+                  <div class="type-tab" :class="{active: roomType2 === 'A5'}" @click="roomType2 = 'A5'">A5</div>
+                </div>
+              </div>
+              <div class="next-btn" @click="clickNext"></div>
+            </div>
+
+            <div class="room-type-tabs flex md:hidden">
+              <div class="room-type-tab active" @click="roomType = 'room2'">2房格局</div>
+              <div class="room-type-tab" @click="roomType = 'room3'">3房格局</div>
+            </div>
+
+            <div class="info md:hidden">
+              <span class="text-[#5ACBBD]">・</span>兩房擁雙衛 如廁不緊張<br>
+              <span class="text-[#5ACBBD]">・</span>廣角大客廳 奢華串影音<br>
+              <span class="text-[#5ACBBD]">・</span>開放式廚房 共賞品味藏<br>
+              <span class="text-[#5ACBBD]">・</span>大工作陽台 生活豐厚滿<br>
+              <span class="text-[#5ACBBD]">・</span>王者大主臥 完美私領域
+            </div>
+
+            <div class="room-type-tabs hidden md:flex">
+              <div class="room-type-tab active" @click="roomType = 'room2'">2房格局</div>
+              <div class="room-type-tab" @click="roomType = 'room3'">3房格局</div>
+            </div>
+
+            <div class="bottom-pic">
+              <img class="en w-full block md:hidden" src="@/section/s10/en2-m.svg" alt="">
+              <img class="en w-full hidden md:block" src="@/section/s10/en2.svg" alt="">
+              <img class="img w-full block md:hidden" src="@/section/s10/img2-m.jpg" alt="">
+              <img class="img w-full hidden md:block" src="@/section/s10/img2.jpg" alt="">
             </div>
           </div>
-          <div class="next-btn" @click="clickNext"></div>
         </div>
-        <div class="room-type-tabs flex md:hidden">
-          <div class="room-type-tab active" @click="roomType = 'room2'">2房格局</div>
-          <div class="room-type-tab" @click="roomType = 'room3'">3房格局</div>
-        </div>
-        <div class="info">
-          <div>
-            <span class="text-[#5ACBBD]">・</span>兩房擁雙衛 如廁不緊張<br>
-            <span class="text-[#5ACBBD]">・</span>廣角大客廳 奢華串影音<br>
-            <span class="text-[#5ACBBD]">・</span>開放式廚房 共賞品味藏<br>
-          </div>
-          <div>
-            <span class="text-[#5ACBBD]">・</span>大工作陽台 生活豐厚滿<br>
-            <span class="text-[#5ACBBD]">・</span>王者大主臥 完美私領域
-          </div>
-        </div>
+
         <div class="note text-[#393939]">
           傢俱配置園及裝飾建材設計規畫僅供參考，<br class="md:hidden">
           實際以使用執照圖為準，房地面積以地政機關登記之面積為準。
-        </div>
-        <div class="room-type-tabs hidden md:flex">
-          <div class="room-type-tab active" @click="roomType = 'room2'">2房格局</div>
-          <div class="room-type-tab" @click="roomType = 'room3'">3房格局</div>
-        </div>
-        <div class="bottom-pic">
-          <img class="en w-full block md:hidden" src="@/section/s10/en2-m.svg" alt="">
-          <img class="en w-full hidden md:block" src="@/section/s10/en2.svg" alt="">
-          <img class="img w-full block md:hidden" src="@/section/s10/img2-m.jpg" alt="">
-          <img class="img w-full hidden md:block" src="@/section/s10/img2.jpg" alt="">
         </div>
       </div>
     </Transition>
 
     <Transition>
       <div v-if="roomType === 'room3'" class="room room3 bg-[#5ACBBD] text-white">
-        <div class="t1 text-white">經典格局 雋永舒適</div>
-        <div class="t2 text-[#000]">三房馥域<br class="md:hidden">富裕成家</div>
-        <div class="slider relative">
-          <Transition>
-            <img v-if="roomType3 === 'A3'" class="block w-full" src="@/section/s10/a3.png" alt="">
-          </Transition>
-          <Transition>
-            <img v-if="roomType3 === 'A6'" class="block w-full" src="@/section/s10/a6.png" alt="">
-          </Transition>
-          <Transition>
-            <img v-if="roomType3 === 'A7'" class="block w-full" src="@/section/s10/a5.png" alt="">
-          </Transition>
+        <div class="md:hidden">
+          <div class="t1 text-white">經典格局 雋永舒適</div>
+          <div class="t2 text-[#000]">三房馥域<br class="md:hidden">富裕成家</div>
         </div>
-        <div class="controller">
-          <div class="prev-btn" @click="clickPrev"></div>
-          <div class="types text-white">
-            <div class="t3">3房格局 傢俱配置參考圖</div>
-            <div class="type-tabs">
-              <div class="type-tab" :class="{active: roomType3 === 'A3'}" @click="roomType3 = 'A3'">A3</div>
-              <div class="type-tab" :class="{active: roomType3 === 'A6'}" @click="roomType3 = 'A6'">A6</div>
-              <div class="type-tab" :class="{active: roomType3 === 'A7'}" @click="roomType3 = 'A7'">A7</div>
+
+        <div class="md:flex md:items-center md:justify-end">
+          <div class="slider relative">
+            <Transition>
+              <img v-if="roomType3 === 'A3'" class="block w-full" src="@/section/s10/a3.png" alt="">
+            </Transition>
+            <Transition>
+              <img v-if="roomType3 === 'A6'" class="block w-full" src="@/section/s10/a6.png" alt="">
+            </Transition>
+            <Transition>
+              <img v-if="roomType3 === 'A7'" class="block w-full" src="@/section/s10/a5.png" alt="">
+            </Transition>
+          </div>
+
+          <div>
+            <div class="hidden md:block">
+              <div class="t1 text-white">經典格局 雋永舒適</div>
+              <div class="t2 text-[#000]">三房馥域 <br class="md:hidden">富裕成家</div>
+              <div class="info">
+                <span class="text-[#393939]">・</span>面寬大客廳 奢華串影音<br>
+                <span class="text-[#393939]">・</span>獨立式廚房 分享式用餐<br>
+                <span class="text-[#393939]">・</span>陽台大尺度 家事好幫手<br>
+                <span class="text-[#393939]">・</span>臥室皆開窗 風光入室來<br>
+                <span class="text-[#393939]">・</span>飯店級衛浴 乾溼極分明
+              </div>
+            </div>
+
+            <div class="controller">
+              <div class="prev-btn" @click="clickPrev"></div>
+              <div class="types text-white">
+                <div class="t3">3房格局 傢俱配置參考圖</div>
+                <div class="type-tabs">
+                  <div class="type-tab" :class="{active: roomType3 === 'A3'}" @click="roomType3 = 'A3'">A3</div>
+                  <div class="type-tab" :class="{active: roomType3 === 'A6'}" @click="roomType3 = 'A6'">A6</div>
+                  <div class="type-tab" :class="{active: roomType3 === 'A7'}" @click="roomType3 = 'A7'">A7</div>
+                </div>
+              </div>
+              <div class="next-btn" @click="clickNext"></div>
+            </div>
+
+            <div class="room-type-tabs flex md:hidden">
+              <div class="room-type-tab" @click="roomType = 'room2'">2房格局</div>
+              <div class="room-type-tab active" @click="roomType = 'room3'">3房格局</div>
+            </div>
+
+            <div class="info md:hidden">
+              <span class="text-[#393939]">・</span>面寬大客廳 奢華串影音<br>
+              <span class="text-[#393939]">・</span>獨立式廚房 分享式用餐<br>
+              <span class="text-[#393939]">・</span>陽台大尺度 家事好幫手<br>
+              <span class="text-[#393939]">・</span>臥室皆開窗 風光入室來<br>
+              <span class="text-[#393939]">・</span>飯店級衛浴 乾溼極分明
+            </div>
+
+            <div class="room-type-tabs hidden md:flex">
+              <div class="room-type-tab" @click="roomType = 'room2'">2房格局</div>
+              <div class="room-type-tab active" @click="roomType = 'room3'">3房格局</div>
+            </div>
+
+            <div class="bottom-pic">
+              <img class="en w-full block md:hidden" src="@/section/s10/en3-m.svg" alt="">
+              <img class="en w-full hidden md:block" src="@/section/s10/en3.svg" alt="">
+              <img class="img w-full block md:hidden" src="@/section/s10/img3-m.jpg" alt="">
+              <img class="img w-full hidden md:block" src="@/section/s10/img3.jpg" alt="">
             </div>
           </div>
-          <div class="next-btn" @click="clickNext"></div>
         </div>
-        <div class="room-type-tabs flex md:hidden">
-          <div class="room-type-tab" @click="roomType = 'room2'">2房格局</div>
-          <div class="room-type-tab active" @click="roomType = 'room3'">3房格局</div>
-        </div>
-        <div class="info">
-          <div>
-            <span class="text-[#393939]">・</span>面寬大客廳 奢華串影音<br>
-            <span class="text-[#393939]">・</span>獨立式廚房 分享式用餐<br>
-            <span class="text-[#393939]">・</span>陽台大尺度 家事好幫手<br>
-          </div>
-          <div>
-            <span class="text-[#393939]">・</span>臥室皆開窗 風光入室來<br>
-            <span class="text-[#393939]">・</span>飯店級衛浴 乾溼極分明
-          </div>
-        </div>
+
         <div class="note text-[#393939]">
           傢俱配置園及裝飾建材設計規畫僅供參考，<br class="md:hidden">
           實際以使用執照圖為準，房地面積以地政機關登記之面積為準。
-        </div>
-        <div class="room-type-tabs hidden md:flex">
-          <div class="room-type-tab" @click="roomType = 'room2'">2房格局</div>
-          <div class="room-type-tab active" @click="roomType = 'room3'">3房格局</div>
-        </div>
-        <div class="bottom-pic">
-          <img class="en w-full block md:hidden" src="@/section/s10/en3-m.svg" alt="">
-          <img class="en w-full hidden md:block" src="@/section/s10/en3.svg" alt="">
-          <img class="img w-full block md:hidden" src="@/section/s10/img3-m.jpg" alt="">
-          <img class="img w-full hidden md:block" src="@/section/s10/img3.jpg" alt="">
         </div>
       </div>
     </Transition>
@@ -136,7 +178,7 @@
 .s10 {
   height: size-m(1115);
   @media screen and (min-width:768px) {
-    height: size(1797);
+    height: size(1000);
   }
 
   .room {
@@ -147,7 +189,8 @@
     height: 100%;
     padding-top: size-m(30);
     @media screen and (min-width:768px) {
-      padding-top: size(133);
+      padding-top: size(136);
+      padding-right: size(90);
     }
   }
 
@@ -159,9 +202,10 @@
     letter-spacing: .1em;
     margin-bottom: size-m(18);
     @media screen and (min-width:768px) {
+      text-align: left;
       font-size: size(28);
-      line-height: size(34);
-      margin-bottom: size(16);
+      line-height: size(40);
+      margin-bottom: size(20);
     }
   }
 
@@ -173,9 +217,10 @@
     letter-spacing: .1em;
     margin-bottom: size-m(53);
     @media screen and (min-width:768px) {
+      text-align: left;
       font-size: size(42);
-      line-height: size(60);
-      margin-bottom: size(90);
+      line-height: size(50);
+      margin-bottom: size(20);
     }
   }
 
@@ -184,10 +229,9 @@
     height: size-m(277);
     margin: 0 auto size-m(22) auto;
     @media screen and (min-width:768px) {
-      width: size(987);
-      height: size(772);
-      margin: 0 auto size(37) auto;
-      transform: translateX(12vw);
+      width: size(987 * 0.82984);
+      height: size(772 * 0.82984);
+      margin: 0 size(90) 0 0;
     }
 
     img {
@@ -207,8 +251,7 @@
     @media screen and (min-width:768px) {
       width: size(270);
       height: auto;
-      margin: 0 auto size(72) auto;
-      transform: translateX(12vw);
+      margin: 0 0 size(20) 0;
     }
 
     .prev-btn, .next-btn {
@@ -249,7 +292,8 @@
       width: size-m(134);
       margin: 0 auto;
       @media screen and (min-width:768px) {
-        width: size(258);
+        width: size(263);
+        margin: 0;
       }
 
       .type-tab {
@@ -278,7 +322,7 @@
     @media screen and (min-width:768px) {
       width: size(428);
       height: size(45);
-      margin: 0 auto;
+      margin: 0;
     }
 
     .room-type-tab {
@@ -322,14 +366,12 @@
     font-weight: 700;
     letter-spacing: .1em;
     @media screen and (min-width:768px) {
-      width: size(1027);
-      padding: size(38) size(47);
+      width: size(370);
+      padding: size(20) size(18);
       border: size(1) solid #5ACBBD;
-      margin: 0 auto size(10) auto;
-      font-size: size(34);
-      line-height: size(60);
-      display: flex;
-      justify-content: space-between;
+      margin: 0 0 size(157) 0;
+      font-size: size(26);
+      line-height: size(50);
     }
   }
 
@@ -341,7 +383,7 @@
     @media screen and (min-width:768px) {
       font-size: size(14);
       line-height: size(35);
-      margin-bottom: size(60);
+      margin-top: size(56);
     }
   }
 
@@ -351,7 +393,7 @@
     left: 0;
     width: 100%;
     @media screen and (min-width:768px) {
-      bottom: size(654);
+      bottom: size(140);
       width: auto;
     }
 
@@ -397,12 +439,6 @@
       }
     }
 
-    .slider, .controller {
-      @media screen and (min-width:768px) {
-        transform: translateX(-12vw);
-      }
-    }
-
     .room-type-tabs .room-type-tab {
       background: #fff;
       color: #000;
@@ -419,17 +455,6 @@
 
     .info {
       border-color: #fff;
-    }
-
-    .bottom-pic {
-      left: auto;
-      right: 0;
-
-      .en {
-        right: auto;
-        left: 0;
-        transform: translateX(-98%);
-      }
     }
   }
 }
