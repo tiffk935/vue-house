@@ -32,15 +32,15 @@
                 <span class="text-[#5ACBBD]">・</span>王者大主臥 完美私領域
               </div>
             </div>
-            
+
             <div class="controller">
               <div class="prev-btn" @click="clickPrev"></div>
               <div class="types text-[#5ACBBD]">
                 <div class="t3">2房格局 傢俱配置參考圖</div>
                 <div class="type-tabs">
-                  <div class="type-tab" :class="{active: roomType2 === 'A1'}" @click="roomType2 = 'A1'">A1</div>
-                  <div class="type-tab" :class="{active: roomType2 === 'A2'}" @click="roomType2 = 'A2'">A2</div>
-                  <div class="type-tab" :class="{active: roomType2 === 'A5'}" @click="roomType2 = 'A5'">A5</div>
+                  <div class="type-tab" :class="{ active: roomType2 === 'A1' }" @click="roomType2 = 'A1'">A1</div>
+                  <div class="type-tab" :class="{ active: roomType2 === 'A2' }" @click="roomType2 = 'A2'">A2</div>
+                  <div class="type-tab" :class="{ active: roomType2 === 'A5' }" @click="roomType2 = 'A5'">A5</div>
                 </div>
               </div>
               <div class="next-btn" @click="clickNext"></div>
@@ -96,7 +96,7 @@
               <img v-if="roomType3 === 'A6'" class="block w-full" src="@/section/s10/a6.png" alt="">
             </Transition>
             <Transition>
-              <img v-if="roomType3 === 'A7'" class="block w-full" src="@/section/s10/a5.png" alt="">
+              <img v-if="roomType3 === 'A7'" class="block w-full" src="@/section/s10/a7.png" alt="">
             </Transition>
           </div>
 
@@ -118,9 +118,9 @@
               <div class="types text-white">
                 <div class="t3">3房格局 傢俱配置參考圖</div>
                 <div class="type-tabs">
-                  <div class="type-tab" :class="{active: roomType3 === 'A3'}" @click="roomType3 = 'A3'">A3</div>
-                  <div class="type-tab" :class="{active: roomType3 === 'A6'}" @click="roomType3 = 'A6'">A6</div>
-                  <div class="type-tab" :class="{active: roomType3 === 'A7'}" @click="roomType3 = 'A7'">A7</div>
+                  <div class="type-tab" :class="{ active: roomType3 === 'A3' }" @click="roomType3 = 'A3'">A3</div>
+                  <div class="type-tab" :class="{ active: roomType3 === 'A6' }" @click="roomType3 = 'A6'">A6</div>
+                  <div class="type-tab" :class="{ active: roomType3 === 'A7' }" @click="roomType3 = 'A7'">A7</div>
                 </div>
               </div>
               <div class="next-btn" @click="clickNext"></div>
@@ -177,6 +177,7 @@
 
 .s10 {
   height: size-m(1115);
+
   @media screen and (min-width:768px) {
     height: size(1000);
   }
@@ -188,6 +189,7 @@
     width: 100%;
     height: 100%;
     padding-top: size-m(30);
+
     @media screen and (min-width:768px) {
       padding-top: size(136);
       padding-right: size(90);
@@ -201,6 +203,7 @@
     font-weight: 700;
     letter-spacing: .1em;
     margin-bottom: size-m(18);
+
     @media screen and (min-width:768px) {
       text-align: left;
       font-size: size(28);
@@ -216,6 +219,7 @@
     font-weight: 700;
     letter-spacing: .1em;
     margin-bottom: size-m(53);
+
     @media screen and (min-width:768px) {
       text-align: left;
       font-size: size(42);
@@ -228,6 +232,7 @@
     width: calc(100% - size-m(22));
     height: size-m(277);
     margin: 0 auto size-m(22) auto;
+
     @media screen and (min-width:768px) {
       width: size(987 * 0.82984);
       height: size(772 * 0.82984);
@@ -248,13 +253,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     @media screen and (min-width:768px) {
       width: size(270);
       height: auto;
       margin: 0 0 size(20) 0;
     }
 
-    .prev-btn, .next-btn {
+    .prev-btn,
+    .next-btn {
       width: size-m(50);
       height: size-m(50);
       background-image: url('data:image/svg+xml,<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M32.6094 10.8696L10.8702 24.9992L32.6094 39.1304" stroke="white" stroke-width="2.17391"/><circle cx="25" cy="25" r="23.913" transform="matrix(-1 0 0 1 50 0)" stroke="white" stroke-width="2.17391"/></svg>');
@@ -263,6 +270,7 @@
       background-repeat: no-repeat;
       border-radius: 50%;
       cursor: pointer;
+
       @media screen and (min-width:768px) {
         display: none;
       }
@@ -279,6 +287,7 @@
       font-weight: 700;
       letter-spacing: .1em;
       margin-bottom: size-m(6.9);
+
       @media screen and (min-width:768px) {
         font-size: size(22);
         line-height: size(32);
@@ -291,6 +300,7 @@
       justify-content: space-between;
       width: size-m(134);
       margin: 0 auto;
+
       @media screen and (min-width:768px) {
         width: size(263);
         margin: 0;
@@ -303,6 +313,7 @@
         font-weight: 700;
         letter-spacing: .1em;
         cursor: pointer;
+
         @media screen and (min-width:768px) {
           font-size: size(32);
           line-height: size(46);
@@ -319,6 +330,7 @@
     width: size-m(262);
     height: size-m(28);
     margin: 0 auto size-m(35) auto;
+
     @media screen and (min-width:768px) {
       width: size(428);
       height: size(45);
@@ -339,6 +351,7 @@
       align-items: center;
       border-radius: size-m(30);
       cursor: pointer;
+
       @media screen and (min-width:768px) {
         font-size: size(22);
         border-radius: size(50);
@@ -365,6 +378,7 @@
     line-height: size-m(35);
     font-weight: 700;
     letter-spacing: .1em;
+
     @media screen and (min-width:768px) {
       width: size(370);
       padding: size(20) size(18);
@@ -380,6 +394,7 @@
     font-size: size-m(8);
     line-height: size-m(12);
     font-weight: 700;
+
     @media screen and (min-width:768px) {
       font-size: size(14);
       line-height: size(35);
@@ -392,6 +407,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
+
     @media screen and (min-width:768px) {
       bottom: size(140);
       width: auto;
@@ -407,6 +423,7 @@
 
     .en {
       margin-bottom: size-m(0.25);
+
       @media screen and (min-width:768px) {
         margin-bottom: 0;
         position: absolute;
@@ -424,6 +441,7 @@
       background: #eee;
       color: #000;
       box-shadow: inset 0 size-m(2.44) size-m(2.44) rgba(0, 0, 0, 0.25);
+
       @media screen and (min-width:768px) {
         box-shadow: inset 0 size(2.5) size(2.5) rgba(0, 0, 0, 0.25);
       }
@@ -447,6 +465,7 @@
         background: #008D87;
         color: #fff;
         box-shadow: inset 0 size-m(2.44) size-m(2.44) rgba(0, 0, 0, 0.25);
+
         @media screen and (min-width:768px) {
           box-shadow: inset 0 size(2.5) size(2.5) rgba(0, 0, 0, 0.25);
         }
