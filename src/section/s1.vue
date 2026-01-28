@@ -14,7 +14,7 @@
 @import "@/assets/style/function.scss";
 .ball,
 .ball:after {
-  background-size: 100% 100%;
+  background-size: 100% 100%; 
   background-repeat: no-repeat;
   border-radius: 50%;
   z-index: -1;
