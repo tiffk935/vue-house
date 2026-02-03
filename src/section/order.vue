@@ -1,5 +1,5 @@
 <template>
-  <div id="order" class="order bg-[#E5005C] relative text-center">
+  <div id="order" class="order relative text-center">
     <div class="order-section">
       <!-- Title -->
       <div class="order-title text-center" v-if="info.order.title" v-html="info.order.title"></div>
@@ -70,9 +70,9 @@
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
           class="checkbox bg-white rounded-md" />
-        <p class="text-[#fff]">
+        <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#FFF000] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -169,7 +169,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #fff;
+    color: #462E86;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -180,7 +180,7 @@
   }
   .order-subTitle{
     font-size: size(17);
-    color: #fff;
+    color: #000;
     padding-top:.8em;
     letter-spacing: .1em;
     //font-weight: 500;filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
@@ -251,7 +251,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #E5005C;
+    color: #462E86;
     background-color:#fff;;
     //border: 1px solid #FFF9;
     border:0;

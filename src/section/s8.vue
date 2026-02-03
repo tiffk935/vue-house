@@ -66,10 +66,10 @@
               </swiper-slide>
             </swiper>
             <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#e5005c" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
             </div>
             <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#e5005c" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
             </div>
           </div>
           <div v-else>
@@ -130,10 +130,10 @@
               </swiper-slide>
             </swiper>
             <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#e5005c" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
             </div>
             <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#e5005c" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
             </div>
           </div>
         </Transition>
@@ -217,7 +217,7 @@
   .t1 {
     font-size: size-m(25);
     line-height: size-m(34);
-    color: #e5005c;
+    color: #462E86;
     font-weight: 700;
     padding: 0 size-m(30);
     margin-bottom: size-m(20);
@@ -325,7 +325,7 @@
 
         @media (min-width: 768px) {
           circle {
-            fill: #e5005c;
+            fill: #462E86;
           }
 
           path {
@@ -357,7 +357,7 @@
         width: size(8);
         height: size(8);
         margin: 0 size(5) !important;
-        background: #e5005c;
+        background: #462E86;
       }
     }
   }
@@ -379,8 +379,8 @@
 
     .room-btn {
       width: size-m(124);
-      border: size-m(1) solid #e5005c;
-      color: #e5005c;
+      border: size-m(1) solid #462E86;
+      color: #462E86;
       font-size: size-m(16);
       line-height: size-m(38);
       text-align: center;
@@ -388,13 +388,13 @@
       transition: all .2s;
       @media (min-width: 768px) {
         width: size(170);
-        border: size(1) solid #e5005c;
+        border: size(1) solid #462E86;
         font-size: size(28);
         line-height: size(50);
       }
 
       &:hover, &.active {
-        background: #e5005c;
+        background: #462E86;
         color: #fff;
       }
 
