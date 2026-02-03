@@ -8,7 +8,7 @@ export default {
     address: "台南市安平區新港路二段585號",
     googleSrc: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3673.096232942265!2d120.1635414!3d22.9834885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e75feb74702ed%3A0x296f70dc2ee14d30!2zNzA45Y-w5Y2X5biC5a6J5bmz5Y2A5paw5riv6Lev5LqM5q61NTg16Jmf!5e0!3m2!1szh-TW!2stw!4v1760695073759!5m2!1szh-TW!2stw",
     googleLink: "https://maps.app.goo.gl/PQjBAt9e9ZQuBLtq9",
-    phone: "0938-517-132",
+    phone: "06-2980277",
     fbLink: "https://www.facebook.com/61581195067952/",
     fbMessage: "https://m.me/61581195067952/",
     caseName: caseName,

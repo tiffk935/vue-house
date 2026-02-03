@@ -3,10 +3,11 @@
 
     <div class="container">
       <div class="contact-item-box">
-        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center"
+        <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center phone"
           @click="modalOpen = true; modalType = 'phone'">
-          <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
-          <div>{{ info.phone }}</div>
+        <!-- <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" /> -->
+          <div>貴賓專線：{{ info.phone }}<br>營業時間：9:30-18:30&ensp;</div>
+
         </div>
         <div class="contact-item btn text-white bg-[#6D4D30] flex justify-center items-center btfanpage"
           @click="open()">
@@ -66,11 +67,12 @@
         srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '貴賓專線' : modalType == 'fb' ? 'Facebook Messenger' :
         '接待會館'
       }}</div>
       <!-- content -->
-      <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
+      <div class="text-md mt-2 text-md-phone" v-if="modalType == 'phone'" v-html="info.phone"></div>
+      <div class="text-md mt-4">{{ modalType == 'phone' ? "營業時間:9:30-18:30" : modalType == 'fb' ? '線上諮詢' :
         `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
@@ -125,6 +127,15 @@
         height: size(72);
         margin-bottom: 0;
         font-size: size(22);
+      }
+      &.phone {
+        font-size: size-m(15);
+        line-height: 1.6;
+        letter-spacing: 0.03em;
+      @media screen and (min-width:768px) {
+
+        font-size: size(20);
+      }
       }
 
       img {
@@ -189,7 +200,10 @@
     //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
   }
 }
-
+.text-md-phone{font-size: size-m(27);
+      @media screen and (min-width:768px) {
+        font-size: size(29);
+      }}
 .mo-contact-info {
   z-index: 89;
   position: fixed;
