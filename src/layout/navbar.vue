@@ -38,7 +38,7 @@
         .bar {
             width: size(38);
             height: 2px;
-            background-color: #fff;
+            background-color: #462E86;
             // position: relative;
             transform: all .5s;
             position: absolute;
@@ -52,7 +52,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #462E86;
                 transition: all .5s;
             }
 
@@ -62,7 +62,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #fff;
+                background-color: #462E86;
                 transition: all .5s;
             }
         }

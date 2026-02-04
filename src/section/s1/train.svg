@@ -1,5 +1,12 @@
-<svg viewBox="0 0 1617 129" fill="none" xmlns="http://www.w3.org/2000/svg">
-<linearGradient id="p0" gradientUnits="userSpaceOnUse" x1="1629" y1="196" x2="143" y2="-76"><stop offset="0" stop-color="#E6307A"/><stop offset="1" stop-color="#F4E629"/></linearGradient>
-<path fill="url(#p0)" d="M615.4,0.2C512,0.2,499.2,20.2,134.5,130h332.6c95.5-54.7,115.3-66.9,269.7-66.9h880.7v-63H615.4V0.2z"/>
-<path fill="#E9AC2C" d="M775.3,108.8h-619v8.1h619V108.8z"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_圖層_1" data-name="圖層_1" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1617 129">
+  <!-- Generator: Adobe Illustrator 30.0.0, SVG Export Plug-In . SVG Version: 2.1.1 Build 123)  -->
+  <defs>
+    <linearGradient id="_未命名漸層" data-name="未命名漸層" x1="1762.3" y1="-72.7" x2="276.3" y2="199.3" gradientTransform="translate(1752 130) rotate(-180)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#e6307a"/>
+      <stop offset="1" stop-color="#f4e629"/>
+    </linearGradient>
+  </defs>
+  <path d="M1002.1,0H0s0,63,0,63h880.7c154.4,0,174.2,12.2,269.7,66.9h332.6C1118.3,20.2,1105.5.2,1002.1.2h0Z" fill="url(#_未命名漸層)"/>
+  <path d="M842.2,116.9h619s0-8.1,0-8.1h-619s0,8.1,0,8.1Z" fill="#e9ac2c"/>
 </svg>

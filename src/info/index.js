@@ -47,7 +47,7 @@ export default {
     navList: [
         {
             name: "佳鋐首耀",
-            target: ".s3",
+            target: ".s1",
             offset: "",
         },
         {
