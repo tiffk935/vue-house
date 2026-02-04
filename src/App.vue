@@ -18,10 +18,20 @@
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: "NotoSansTC-Fallback";
+  src: local("Arial");
+  size-adjust: 105%;
+  ascent-override: 90%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+}
 
 body {
   margin: 0;
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Noto Sans TC",
+    "NotoSansTC-Fallback",
+    sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
@@ -49,6 +59,7 @@ main {
   position: relative;
   flex: 1;
   padding: func.size-m(74) 0 0 0;
+  min-height: 110vh;
   @media screen and (min-width:768px) {
     padding: func.size(0) 0 0 0;
   }

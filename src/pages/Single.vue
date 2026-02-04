@@ -120,7 +120,8 @@ section {
     }
 
     span {
-      font-weight: 100;
+      color: #0008;
+      font-weight: 400;
       margin-right: func.size-m(6);
 
       @media screen and (min-width:768px) {
@@ -275,7 +276,6 @@ section {
       span {
         font-size: func.size-m(18);
         line-height: 1;
-        font-weight: 100;
         letter-spacing: .06em;
         margin-right: func.size-m(9);
 

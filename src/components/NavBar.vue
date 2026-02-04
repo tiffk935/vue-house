@@ -196,16 +196,17 @@ header {
       padding: 0;
       list-style: none;
     }
-
     a {
       display: block;
       text-decoration: none;
       color: #000;
       font-size: func.size(26);
       font-weight: 500;
-      line-height: 1;
+     // line-height: 1;
       letter-spacing: .02em;
       padding: func.size(11) 0;
+      height: 100%;
+      width: 100%;
 
       &.order-btn {
         color: #fff;
@@ -216,7 +217,9 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: func.size(198);font-size: func.size(23);
+        width: func.size(198);
+        font-size: func.size(23);
+        margin: func.size(-25) auto;
 
 
         &:hover{
@@ -257,7 +260,8 @@ header {
       
       & > li {
         position: relative;
-        margin-right: func.size(80);
+        margin-right: func.size(60);
+        height: func.size(65);
 
         &:last-child {
           margin-right: 0;

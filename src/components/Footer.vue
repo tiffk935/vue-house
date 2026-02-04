@@ -53,9 +53,12 @@ footer {
   position: relative;
   border-top: func.size-m(3) solid #299644;
   padding: func.size-m(29) 0 func.size-m(22) 0;
+  min-height: func.size-m(340);
+  width: 100%;
   @media screen and (min-width:768px) {
     border-top: func.size(5) solid #299644;
     padding: func.size(70) 0 func.size(70) 0;
+  min-height: func.size(329);
   }
   
   &:after {
@@ -141,19 +144,21 @@ footer {
     }
 
     a {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       color: #000;
       font-size: func.size-m(12);
-      font-weight: 700;
+      font-weight: 400;
       letter-spacing: .04em;
       text-decoration: none;
       margin: func.size-m(5) func.size-m(8);
       @media screen and (min-width:768px) {
         font-size: func.size(22);
-        font-weight: 500;
         letter-spacing: .02em;
-        padding: func.size(20) func.size(20);
+        padding: 0 func.size(20);
         margin: func.size(10) func.size(20);
+        height: func.size(72);
       }
       &:hover{
         color: #269D45;

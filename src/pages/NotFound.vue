@@ -15,7 +15,7 @@
     align-items: center;
     color: #bdbdbd;
     font-size: 100px;
-    font-weight: 900;
+    font-weight: 700;
     letter-spacing: .06em;
     mix-blend-mode: multiply;
   }

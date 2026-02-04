@@ -72,7 +72,7 @@ line-height: 1.6;
     font-size: 1.3em;
     line-height: 1.6;
     min-height: 3em;
-    font-weight: 600;
+    font-weight: 700;
     border-radius: .4em;
     cursor: pointer;
     display: block;

@@ -758,7 +758,6 @@
           padding: func.size(30) 0 func.size(30) 0;
           margin: func.size(0) func.size(145) func.size(100) ;
           font-size: func.size(50);
-          font-weight: 300;
 
         }
 

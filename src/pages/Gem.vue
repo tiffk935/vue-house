@@ -3,7 +3,7 @@
     <img src="@/assets/pc.jpg" class="t0 pc" />
     <img src="@/assets/mo.jpg" class="t0 mob" /> -->
 
-  <section class="banner">
+  <section class="banner" data-aos="fade-up" data-aos-duration="1000" >
     <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
     <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
@@ -201,7 +201,7 @@ h2 {
 
 .t1 {
   font-size: func.size-m(23);
-  font-weight: 600;
+  font-weight: 700;
   line-height: 1.4;
   margin: 0 -0.5em .8em 0;
 

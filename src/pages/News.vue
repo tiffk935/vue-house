@@ -84,7 +84,8 @@ section {
     }
 
     span {
-      font-weight: 100;
+      font-weight: 400;
+      color: #0008;
       margin-right: func.size-m(6);
       @media screen and (min-width:768px) {
         margin-right: func.size(21);
@@ -214,10 +215,10 @@ section {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: #0007;
 
         .date {
           font-size: func.size-m(12);
-          font-weight: 100;
           letter-spacing: .06em;
           @media screen and (min-width:768px) {
             font-size: func.size(14);
@@ -227,7 +228,7 @@ section {
         .line {
           flex: 1;
           height: func.size-m(1);
-          background: #000;
+          background:currentColor;
           margin: 0 func.size-m(10);
           @media screen and (min-width:768px) {
             height: func.size(1);
@@ -236,9 +237,7 @@ section {
         }
 
         .more {
-          color: #898989;
           font-size: func.size-m(12);
-          font-weight: 300;
           letter-spacing: .03em;
           @media screen and (min-width:768px) {
             font-size: func.size(12);

@@ -29,7 +29,8 @@
     }
 
     span {
-      font-weight: 100;
+      font-weight: 400;
+      color: #0008;
       margin-right: func.size-m(6);
       @media screen and (min-width:768px) {
         margin-right: func.size(21);
