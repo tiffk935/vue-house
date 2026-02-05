@@ -38,7 +38,7 @@
 
 .s1 {
   @apply relative w-full h-screen;
-  min-height: size(1070);
+  min-height: size(900);
   max-height: size(1070);
   display: flex;
   flex-direction: column;
@@ -163,6 +163,7 @@
 }
   .bubble {
     bottom: size-m(45);
+    bottom: calc(50% + #{size-m(45 - 604 * .5)});
     right: size-m(15);
     width: size-m(160);
     img {
