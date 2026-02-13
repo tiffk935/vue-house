@@ -5,9 +5,9 @@ export default {
     //case_code: "shouyao",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
-    address: "台中市梧棲區中華路二段207號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7275.620537302395!2d120.55011043655652!3d24.24841385181841!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34691507f52e7a93%3A0xf9b14376997a62a!2z5L2z6YuQ6aaW6ICA5o6l5b6F!5e0!3m2!1szh-TW!2stw!4v1767338174082!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/jpUUVDeaUZ3K1ehe9",
+    address: "台中市梧棲區中華路二段155號",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7275.674967350943!2d120.54793815857862!3d24.247462221438916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE0JzUwLjkiTiAxMjDCsDMzJzExLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1770953354204!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/dmQT3t7zk7u3N56r5",
     phone: "04-2663-0999",
     fbLink: "https://www.facebook.com/61563772475620/",
     fbMessage: "https://m.me/61563772475620/",
