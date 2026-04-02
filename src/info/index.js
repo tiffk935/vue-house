@@ -19,7 +19,7 @@ export default {
         ["建築設計", "蔡智勸建築師事務所"],
         ["企劃銷售", "昕華廣告有限公司"]
     ],
-    gtmCode: ["GTM-KLHKDVV6","GTM-P22JMBFR"], // 可放置多個
+    gtmCode: ["GTM-KLHKDVV6","GTM-P22JMBFR","GTM-WNLSVFCC"], // 可放置多個
     recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
     //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
     //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
