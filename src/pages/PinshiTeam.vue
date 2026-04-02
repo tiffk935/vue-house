@@ -690,7 +690,7 @@
 
   .content {
     padding: func.size-m(36) 0 func.size-m(29) 0;
-    margin: 0 func.size-m(48);
+    margin: 0 func.size-m(30);
     border-bottom: func.size-m(1) solid #000;
     text-align: center;
     font-weight: 700;
@@ -835,6 +835,7 @@
 
   .content {
     padding: 0 func.size-m(28);
+    width: 100%;
     @media screen and (min-width:768px) {
       padding: 0 func.size(100) 0 func.size(140);
     }

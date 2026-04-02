@@ -3,7 +3,35 @@
     <img src="@/assets/pc.jpg" class="t0 pc" />
     <img src="@/assets/mo.jpg" class="t0 mob" /> 
  
-   -->
+  <section class="banner" >
+    <picture>
+      <source srcset="@/assets/home/banner/bgm.jpg" media="(max-width: 768px)" />
+      <img
+        class="bg"
+        src="@/assets/home/banner/bg1.jpg"
+        alt="bg" fetchpriority="high"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/s1logo-m.webp" media="(max-width: 768px)" />
+      <img
+        class="logo"
+        src="@/assets/logo.svg"
+        alt="logo"
+        width="500"
+        height="335" fetchpriority="high"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/home/banner/txt-m.svg" media="(max-width: 768px)" />
+      <img
+        class="txt"
+        src="@/assets/home/banner/txt.svg"
+        alt="txt" fetchpriority="high"
+      />
+    </picture>
+    <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
+  </section> -->
   <section class="about" id="about">
     <div class="container pic" >
     <picture>

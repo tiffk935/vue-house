@@ -15,29 +15,11 @@
     <section v-if="$route.path === '/'" class="app-main-banner">
        
     <picture>
-      <source srcset="@/assets/home/banner/bgm.jpg" media="(max-width: 768px)" />
+      <source srcset="@/assets/home/banner/1m.webp" media="(max-width: 768px)" />
       <img
         class="bg"
-        src="@/assets/home/banner/bg1.jpg"
+        src="@/assets/home/banner/1.webp"
         alt="bg" fetchpriority="high"
-      />
-    </picture>
-    <picture>
-      <source srcset="@/assets/s1logo-m.webp" media="(max-width: 768px)" />
-      <img
-        class="logo"
-        src="@/assets/logo.svg"
-        alt="logo"
-        width="500"
-        height="335" fetchpriority="high"
-      />
-    </picture>
-    <picture>
-      <source srcset="@/assets/home/banner/txt-m.svg" media="(max-width: 768px)" />
-      <img
-        class="txt"
-        src="@/assets/home/banner/txt.svg"
-        alt="txt" fetchpriority="high"
       />
     </picture>
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
@@ -54,32 +36,6 @@
 * {
   box-sizing: border-box;
 }
-/*
-// noto-sans-tc-regular - chinese-traditional_latin 
-@font-face {
-  font-display: swap; 
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 400;
-  src: url('@/assets/fonts/noto-sans-tc-v39-chinese-traditional_latin-regular.woff2') format('woff2'); 
-}
-// noto-sans-tc-700 - chinese-traditional_latin 
-@font-face {
-  font-display: swap; 
-  font-family: 'Noto Sans TC';
-  font-style: normal;
-  font-weight: 700;
-  src: url('@/assets/fonts/noto-sans-tc-v39-chinese-traditional_latin-700.woff2') format('woff2'); 
-}
-// roboto-500 - latin 
-@font-face {
-  font-display: swap; 
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 500;
-  src: url('@/assets/fonts/roboto-v51-latin-500.woff2') format('woff2'); 
-}
-*/
 @font-face {
   font-family: "NotoSansTC-Fallback";
   src: local("Arial");
@@ -92,12 +48,11 @@
 
 body {
   margin: 0;
-  font-family: "Noto Sans TC",
-    "NotoSansTC-Fallback",
-    sans-serif;
-  font-optical-sizing: auto;
+  /* 優先順序：萍方(蘋果) -> 系統黑體 -> 預設無襯線 */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", 
+               "PingFang TC", "Microsoft JhengHei", "微軟正黑體", sans-serif;
   font-weight: 400;
-  font-style: normal;
+  line-height: 1.6; /* 稍微增加行高，增加系統字體的閱讀舒適度 */
 }
 .bg-container {
   position: fixed;
@@ -123,18 +78,27 @@ main {
   flex: 1;
   padding: func.size-m(74) 0 0 0;
   min-height: 110vh;
+  width: 100vw;overflow: hidden;
   @media screen and (min-width:768px) {
     padding: func.size(0) 0 0 0;
+  width: 100%;
   }
 }
 .app-main-banner {
   position: relative;
   width: 100%;
-  height: func.size-m(667 - 74);
+  min-height:func.size-m(667 - 74);
+  height: calc(100dvh - func.size-m(74));
+  max-height:func.size-m(877-74);
+  // max-height:func.size-m(900);
+  // height: func.size-m(667 - 74);
   padding: 0;
+  // overflow: hidden;
 
   @media screen and (min-width:768px) {
-    height: func.size(1080);
+    height:100dvh ;
+  min-height:func.size(960);
+  max-height:func.size(1290);
   padding: 0;
   }
   .bg{
@@ -143,41 +107,11 @@ main {
     object-fit: cover;
   }
 
-  .logo {
-    position: absolute;
-    top: func.size-m(37);
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: func.size-m(170);
-    height: auto;
-
-    @media screen and (min-width:768px) {
-      top: calc(40% + func.size(255 - 1080 * .4));
-      width: func.size(500);
-    }
-  }
-
-  .txt {
-    position: absolute;
-    top: func.size-m(364);
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: func.size-m(217);
-    height: func.size-m(119);
-
-    @media screen and (min-width:768px) {
-      //top: func.size(750);
-      top: calc(70% + func.size(750 - 1080 * .7));
-      width: func.size(1090);
-      height: func.size(200);
-    }
-  }
 
   .onder-btn {
     position: absolute;
     top: func.size-m(455);
+    top: calc(50% + func.size-m(455 - (593 * 0.5)));
     left: func.size-m(230);
     border: func.size-m(1) solid #219664;
     background: #219664;
@@ -213,10 +147,9 @@ main {
 }
 </style>
 
-<script setup>
-import { onMounted, defineAsyncComponent } from "vue"
-const NavBar = defineAsyncComponent(() => import('@/components/NavBar.vue'))
-const Footer = defineAsyncComponent(() => import('@/components/Footer.vue'))
+<script setup>import { onMounted } from "vue"
+import NavBar from '@/components/NavBar.vue' // 改為同步匯入
+import Footer from '@/components/Footer.vue' // 改為同步匯入
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';

@@ -1,5 +1,5 @@
 <template>
-  <section>
+  <section class="sing">
     <div class="title"><RouterLink to="/news"><span>NEWS</span>最新消息</RouterLink></div>
     <article v-if="data">
       <h1>{{ data.title }}</h1>
@@ -19,7 +19,7 @@
           </swiper>
         </div>
 
-        <div class="content">
+        <div class="yyyyyyy">
           <PerfectScrollbar ref="scrollbar">
             <div v-html="data.content"></div>
           </PerfectScrollbar>
@@ -94,8 +94,24 @@
 
 <style lang="scss">
 @use "@/assets/style/function.scss" as func;
-
 section {
+  .yyyyyyy {
+
+    font-size: func.size-m(12);
+    line-height: func.size-m(20);
+    letter-spacing: .06em;
+    margin-bottom: func.size-m(53);
+    text-align: justify;
+
+    @media screen and (min-width:768px) {
+      width: func.size(750);
+      font-size: func.size(25);
+      line-height: func.size(44);
+      margin-bottom: 0;
+    }
+  }}
+
+.sing {
   padding: func.size-m(60) func.size-m(30) func.size-m(79) func.size-m(30);
   @media screen and (min-width:768px) {
     padding: func.size(223) func.size(160) func.size(250) func.size(160);
@@ -147,6 +163,22 @@ section {
       margin-bottom: func.size(162);
     }
   }
+  .content {
+
+    font-size: func.size-m(12);
+    line-height: func.size-m(20);
+    letter-spacing: .06em;
+    margin-bottom: func.size-m(53);
+    text-align: justify;
+
+    @media screen and (min-width:768px) {
+      width: func.size(750);
+      font-size: func.size(25);
+      line-height: func.size(44);
+      margin-bottom: 0;
+    }
+  }
+
 
   .detail {
     @media screen and (min-width:768px) {
@@ -181,21 +213,6 @@ section {
       @media screen and (min-width:768px) {
         font-size: func.size(15);
       }
-    }
-  }
-
-  .content {
-    font-size: func.size-m(12);
-    line-height: func.size-m(20);
-    letter-spacing: .06em;
-    margin-bottom: func.size-m(53);
-    text-align: justify;
-
-    @media screen and (min-width:768px) {
-      width: func.size(750);
-      font-size: func.size(25);
-      line-height: func.size(44);
-      margin-bottom: 0;
     }
   }
 

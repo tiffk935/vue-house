@@ -348,7 +348,7 @@ h2 {
 }
 
 .c2 {
-  font-size: func.size-m(12);
+  font-size: func.size-m(11);
   line-height: func.size-m(20);
   margin-bottom: func.size-m(13);
   @media screen and (min-width:768px) {
