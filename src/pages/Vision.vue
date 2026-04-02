@@ -241,7 +241,7 @@
 
   h2 {
     font-size: func.size-m(16);
-    font-weight: 500;
+    font-weight: 400;
     padding: 0 func.size-m(49);
     margin-bottom: func.size-m(29);
     @media screen and (min-width:768px) {
@@ -316,7 +316,7 @@
       .sec-title {
         color: #269161;
         font-size: func.size-m(14);
-        font-weight: 500;
+        font-weight: 400;
         padding: 0 func.size-m(49);
         margin-bottom: func.size-m(20);
         @media screen and (min-width:768px) {
@@ -342,7 +342,7 @@
 
         .t1 {
           font-size: func.size-m(15);
-          font-weight: 500;
+          font-weight: 400;
           line-height: 133.2%; /* 19.98px */
           @media screen and (min-width:768px) {
             font-size: func.size(38);
@@ -351,7 +351,7 @@
 
         .t2 {
           font-size: func.size-m(12);
-          font-weight: 500;
+          font-weight: 400;
           line-height: 171%;
           @media screen and (min-width:768px) {
             font-size: func.size(20);
@@ -384,7 +384,7 @@
           display: flex;
           align-items: center;
           margin-bottom: func.size-m(13);
-          font-weight: 500;
+          font-weight: 400;
           @media screen and (min-width:768px) {
             margin-bottom: func.size(28);
           }
@@ -596,7 +596,7 @@
           padding-right: func.size-m(48);
           font-size: func.size-m(12);
           line-height: 171%;
-          font-weight: 500;
+          font-weight: 400;
           margin-top: func.size-m(2);
           text-align: right;
           @media screen and (min-width:768px) {
@@ -699,7 +699,7 @@
 
     .t2 {
       font-size: func.size-m(12);
-      font-weight: 500;
+      font-weight: 400;
       line-height: 187.2%;
       margin-bottom: func.size-m(26);
       @media screen and (min-width:768px) {

@@ -817,7 +817,7 @@
       //text-shadow: 0px func.size-m(4) func.size-m(4) rgba(0, 0, 0, 0.55);
       font-family: "Noto Sans TC";
       font-size: func.size-m(12);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05em;
       z-index: 1;
       @media screen and (min-width:768px) {

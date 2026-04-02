@@ -103,19 +103,19 @@
 
   <div class="btns">
     <div class="col">
-      <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" />{{ info.phone }}</a>
+      <a target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" alt="icon-phone" />{{ info.phone }}</a>
     </div>
     <div class="col">
-      <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" />FB諮詢</a>
+      <a target="_blank" :href="info.fbMessage"><img src="@/assets/icon-messenger.svg" alt="icon-messenger" />FB諮詢</a>
     </div>
     <div class="col">
-      <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" />前往 粉絲專頁</a>
+      <a target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" alt="icon-fb" />前往 粉絲專頁</a>
     </div>
     <div class="col">
-      <a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" />Instagram</a>
+      <a target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" alt="icon-ig" />Instagram</a>
     </div>
     <div class="col">
-      <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" />LINE @</a>
+      <a target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" alt="icon-line" />LINE @</a>
     </div>
     <div class="col">
       <a class="green-text" target="_blank" :href="info.googleLink">立即導航</a>
@@ -183,7 +183,7 @@
       width: func.size-m(62);
       padding-right: func.size-m(13);
       margin-right: func.size-m(13);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .07em;
       white-space: nowrap;
       @media screen and (min-width:768px) {
@@ -255,7 +255,7 @@
         font-size: func.size-m(12);
         line-height: func.size-m(12);
         display: block;
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: .07em;
         @media screen and (min-width:768px) {
           text-indent: func.size(49);
@@ -331,7 +331,7 @@
     text-indent: 0;
     font-size: func.size-m(12);
     line-height: func.size-m(14);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: .05em;
     @media screen and (min-width:768px) {
       padding-left: func.size(51);
@@ -375,7 +375,7 @@
     font-size: 1em;
     border: 0;
     padding: 0;
-    font-weight: 500;
+    font-weight: 400;
       color: #269D45;
 
     &:hover {
@@ -401,7 +401,7 @@
   padding: func.size-m(19) 0;
   color: #299644;
   font-size: func.size-m(18);
-  font-weight: 500;
+  font-weight: 400;
   letter-spacing: .23em;
   cursor: pointer;
   transition: all .2s;
@@ -477,7 +477,7 @@
     text-decoration: none;
     color: #000;
     font-size: func.size-m(10);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: .05em;
     transition:.3s;
     @media screen and (min-width:768px) {
@@ -525,7 +525,7 @@
 .address {
   text-align: center;
   font-size: func.size-m(15);
-  font-weight: 500;
+  font-weight: 400;
   line-height: func.size-m(21);
   letter-spacing: .1em;
   @media screen and (min-width:768px) {
@@ -533,7 +533,7 @@
   }
 
   b {
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -555,7 +555,7 @@
   .addr {
     width: 100%;
     font-size: func.size-m(12);
-    font-weight: 500;
+    font-weight: 400;
     line-height: func.size-m(21);
     letter-spacing: .05em;
     padding: func.size-m(10) func.size-m(20);
@@ -577,7 +577,7 @@
     display: block;
     width: 100%;
     font-size: func.size-m(15);
-    font-weight: 500;
+    font-weight: 400;
     line-height: func.size-m(21);
     letter-spacing: .23em;
     text-align: center;

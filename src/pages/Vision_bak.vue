@@ -176,7 +176,7 @@
 
 h2 {
   font-size: func.size-m(16);
-  font-weight: 500;
+  font-weight: 400;
   padding: 0 func.size-m(49);
   margin-bottom: func.size-m(20);
   @media screen and (min-width:768px) {
@@ -285,7 +285,7 @@ h2 {
       .t1 {
         color: #269161;
         font-size: func.size-m(14);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 129.2%;
         margin-bottom: func.size-m(22);
         @media screen and (min-width:768px) {
@@ -305,7 +305,7 @@ h2 {
       .t2 {
         color: #269161;
         font-size: func.size-m(14);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 129.2%;
         margin-bottom: func.size-m(3);
         @media screen and (min-width:768px) {
@@ -316,7 +316,7 @@ h2 {
 
       .t3 {
         font-size: func.size-m(16);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 129.2%;
         margin-bottom: func.size-m(17);
         @media screen and (min-width:768px) {
@@ -340,7 +340,7 @@ h2 {
 
       .t4 {
         font-size: func.size-m(12);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 129.2%;
         margin-bottom: func.size-m(7);
         @media screen and (min-width:768px) {
@@ -352,7 +352,7 @@ h2 {
 
       .t5 {
         font-size: func.size-m(12);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 149.2%;
         @media screen and (min-width:768px) {
           font-size: func.size(20);
@@ -366,7 +366,7 @@ h2 {
   .slider-btn-prev, .slider-btn-next {
     color: #269161;
     font-size: func.size-m(14);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 111.2%;
     position: absolute;
     top: func.size-m(139);
@@ -477,7 +477,7 @@ h2 {
 
   .t2 {
     font-size: func.size-m(12);
-    font-weight: 500;
+    font-weight: 400;
     line-height: 187.2%;
     margin-bottom: func.size-m(26);
     @media screen and (min-width:768px) {

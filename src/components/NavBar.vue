@@ -1,7 +1,14 @@
 <template>
   <div class="nav-bg" v-if="mobOpen" @click="mobOpen = false"></div>
   <header>
-    <RouterLink class="logo" to="/" @click="mobOpen = false"><img src="@/assets/mologo.png" /><img src="@/assets/pclogo.png" /></RouterLink>
+    <RouterLink class="logo" to="/" @click="mobOpen = false">
+    <picture>
+      <source srcset="@/assets/mologo.png" media="(max-width: 768px)" />
+      <img
+        src="@/assets/pclogo.png"
+        alt="logo"
+      />
+    </picture></RouterLink>
     <div class="mob-toogle" @click="mobOpen = true">
       <span></span><span></span><span></span>
     </div>
@@ -107,13 +114,9 @@ header {
 
     img {
       width: 100%;
-      &:first-child{display: block;}
-      &:last-child{display: none;}
     @media screen and (min-width:768px) {
       width: func.size(270);
       height: auto;
-        &:first-child{display: none;}
-        &:last-child{display: block;}
 
     }
     }
@@ -178,7 +181,7 @@ header {
       padding: func.size-m(20) func.size-m(26) func.size-m(20) func.size-m(50);
       text-align: right;
       font-size: func.size-m(23);
-      font-weight: 500;
+      font-weight: 400;
       line-height: func.size-m(28);
       letter-spacing: .02em;
       text-decoration: none;
@@ -201,7 +204,7 @@ header {
       text-decoration: none;
       color: #000;
       font-size: func.size(26);
-      font-weight: 500;
+      font-weight: 400;
      // line-height: 1;
       letter-spacing: .02em;
       padding: func.size(11) 0;

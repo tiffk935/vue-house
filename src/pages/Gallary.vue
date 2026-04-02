@@ -255,8 +255,10 @@
 .banner {
   position: relative;
   margin:0;
+  padding: 0;
   @media screen and (min-width:768px) {
   margin: func.size(115) 0 0 0;
+  padding: 0;
 }
   img {
     width: 100%;
@@ -402,6 +404,7 @@ h2 {
 
   .content {
     padding: 0 func.size-m(30);
+    width: 100%;
     @media screen and (min-width:768px) {
       padding: 0;
       display: flex;
@@ -449,6 +452,7 @@ h2 {
 
 .s3 {
   .content {
+    width: 100%;
     @media screen and (min-width:768px) {
       flex-direction: row-reverse;
     }
@@ -516,6 +520,8 @@ h2 {
 
   .content {
     padding: func.size-m(27) func.size-m(18);
+    
+    width: 100%;
     @media screen and (min-width:768px) {
       padding: func.size(29) func.size(67);
       width: calc(100% - func.size(814));
@@ -575,6 +581,8 @@ h2 {
 
   .content {
     padding: 0 func.size-m(30);
+    
+    width: 100%;
     @media screen and (min-width:768px) {
       padding: 0;
       display: flex;
@@ -596,6 +604,8 @@ h2 {
 }
 
 .s6 .content {
+  
+    width: 100%;
   @media screen and (min-width:768px) {
     flex-direction: row-reverse;
   }

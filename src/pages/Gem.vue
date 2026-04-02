@@ -1,23 +1,49 @@
 <template>
   <!-- 
     <img src="@/assets/pc.jpg" class="t0 pc" />
-    <img src="@/assets/mo.jpg" class="t0 mob" /> -->
-
-  <section class="banner" data-aos="fade-up" data-aos-duration="1000" >
-    <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"></div>
+    <img src="@/assets/mo.jpg" class="t0 mob" /> 
+ 
+  <section class="banner" >
+    <picture>
+      <source srcset="@/assets/home/banner/bgm.jpg" media="(max-width: 768px)" />
+      <img
+        class="bg"
+        src="@/assets/home/banner/bg1.jpg"
+        alt="bg" fetchpriority="high"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/s1logo-m.webp" media="(max-width: 768px)" />
+      <img
+        class="logo"
+        src="@/assets/logo.svg"
+        alt="logo"
+        width="500"
+        height="335" fetchpriority="high"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/home/banner/txt-m.svg" media="(max-width: 768px)" />
+      <img
+        class="txt"
+        src="@/assets/home/banner/txt.svg"
+        alt="txt" fetchpriority="high"
+      />
+    </picture>
     <RouterLink class="onder-btn" to="/order">立即預約</RouterLink>
-  </section>
-
+  </section> -->
   <section class="about" id="about">
-    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img src="@/assets/home/about/bg.jpg" class="pc" />
-      <img src="@/assets/home/about/bgm.jpg" class="mob" />
+    <div class="container pic" >
+    <picture>
+      <source srcset="@/assets/home/about/bgm.webp" media="(max-width: 768px)" />
+      <img
+        src="@/assets/home/about/bg.webp" alt="bg" loading="lazy"
+      />
+    </picture>
       <h2>關於國城</h2>
 
     </div>
-    <!-- Marquee /  -->
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="container">
       <div class="t1">不只是住得好，更要活得講究。</div>
       <div class="t2">做建築，要做到國際級；做美食，要拿到米其林。</div>
       <div class="t3">｜<RouterLink to="/team">閱讀更多</RouterLink>
@@ -25,13 +51,19 @@
     </div>
   </section>
 
+
+ <!--  --><template v-if="showRest">
   <section class="work" id="work">
-    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/home/work/pic.jpg" />
-      <img class="mob" src="@/assets/home/work/pic-m.jpg" />
+    <div class="container pic">
+    <picture>
+      <source srcset="@/assets/home/work/pic-m.webp" media="(max-width: 768px)" />
+      <img
+        src="@/assets/home/work/pic.webp" alt="pic" loading="lazy"
+      />
+    </picture>
       <h2>國城作品</h2>
     </div>
-    <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="container" >
       <div class="t1">走在前，讓後面跟上來。</div>
       <div class="t2">把最好的留在台灣。</div>
       <div class="t3">｜<RouterLink to="/gallary">閱讀更多</RouterLink>
@@ -40,7 +72,7 @@
   </section>
 
   <section class="area" id="area">
-    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
+    <div class="container pic">
       <Fullview class="fullview" />
       <h2>平實特區</h2>
     </div>
@@ -53,9 +85,15 @@
   </section>
 
   <section class="team" id="team">
-    <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/home/team/pic.jpg" />
-      <img class="mob" src="@/assets/home/team/pic-m.jpg" />
+    <div class="container pic">
+      
+    <picture>
+      <source srcset="@/assets/home/team/pic-m.webp" media="(max-width: 768px)" />
+      <img
+        src="@/assets/home/team/pic.webp"
+        alt="pic" loading="lazy"
+      />
+    </picture>
       <h2>寳實團隊</h2>
     </div>
     <div class="container" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
@@ -68,8 +106,13 @@
 
   <section class="archi" id="archi">
     <div class="container pic" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
-      <img class="pc" src="@/assets/home/archi/pic.jpg" />
-      <img class="mob" src="@/assets/home/archi/pic-m.jpg" />
+    <picture>
+      <source srcset="@/assets/home/archi/pic-m.webp" media="(max-width: 768px)" />
+      <img
+        src="@/assets/home/archi/pic.jpg"
+        alt="pic" loading="lazy"
+      />
+    </picture>
       <div class="photo-desc pc">國城寳實 西向建築立面透視圖</div>
       <div class="photo-desc mob">國城寳實 西向建築立面透視圖</div>
       <div class="photo-desc1">此為建物外觀3D效果參考示意圖，<br>周遭環境係電腦合成示意表現。</div>
@@ -86,14 +129,12 @@
   <section class="news" id="news">
     <div class="container">
       <h2 data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">最新消息</h2>
-      <!--    <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞</div>
-     <div class="type" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">消息新聞｜<span>專題研究</span></div>-->
       <div class="list">
 
         <article v-for="item in list" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" :key="item">
           <RouterLink :to="item.link">
             <div class="photo">
-              <img :src="getImg(item.thumbnail)" />
+              <img :src="getImg(item.thumbnail)" :alt="item.title" loading="lazy" />
             </div>
             <div class="post-title">{{ item.title }}</div>
             <div class="meta">
@@ -113,8 +154,32 @@
   </section>
 
   <section class="ad" id="ad">
-    <div class="logo" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
-    <div class="txt" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0"></div>
+    <picture>
+      <source srcset="@/assets/home/banner/bgm.jpg" media="(max-width: 768px)" />
+      <img
+        class="bg"
+        src="@/assets/home/banner/bg1.jpg"
+        alt="bg" loading="lazy"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/s1logo-m.webp" media="(max-width: 768px)" />
+      <img
+        class="logo"
+        src="@/assets/logo.webp"
+        alt="logo"
+        width="500"
+        height="335" loading="lazy"
+      />
+    </picture>
+    <picture>
+      <source srcset="@/assets/home/ad/txt-m.svg" media="(max-width: 768px)" />
+      <img
+        class="txt"
+        src="@/assets/home/ad/txt.svg"
+        alt="txt" loading="lazy"
+      />
+    </picture>
   </section>
 
   <section class="order">
@@ -124,8 +189,14 @@
 
   <section class="information">
     <div class="container">
-      <img class="logo mob" src="@/assets/logo.png" />
-      <img class="logo pc" src="@/assets/logo2.png" />
+    <picture>
+      <source srcset="@/assets/logo.webp" media="(max-width: 768px)" />
+      <img
+        class="logo"
+        src="@/assets/logo2.png"
+        alt="logo" loading="lazy"
+      />
+    </picture>
       <div class="sec-title mob">建案資訊</div>
       <div>
         <div class="sec-title pc">建案資訊</div>
@@ -155,6 +226,9 @@
     </div>
   </section>
 </template>
+<!--
+-->
+</template>
 
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
@@ -176,6 +250,7 @@
 }
 
 .container {
+  position: relative;
   padding: 0 func.size-m(30);
 
   @media screen and (min-width:768px) {
@@ -275,19 +350,21 @@ h2 {
     display: none;
   }
 }
-
+/*
 .banner {
   position: relative;
   width: 100%;
   height: func.size-m(667 - 74);
-  background-image: url(@/assets/home/banner/bgm.jpg);
-  background-size: cover;
+  padding: 0;
 
   @media screen and (min-width:768px) {
-    height: 100vh;
-    max-height: func.size(1080);
-    min-height: func.size(1080);
-    background-image: url(@/assets/home/banner/bg.jpg);
+    height: func.size(1080);
+  padding: 0;
+  }
+  .bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .logo {
@@ -296,17 +373,12 @@ h2 {
     left: 0;
     right: 0;
     margin: auto;
-    width: func.size-m(200);
-    height: func.size-m(293);
-    background-image: url(@/assets/s1logo-m.png);
-    @include bg-contain;
+    width: func.size-m(170);
+    height: auto;
 
     @media screen and (min-width:768px) {
-      //top: func.size(255);
       top: calc(40% + func.size(255 - 1080 * .4));
       width: func.size(500);
-      height: func.size(335);
-      background-image: url(@/assets/logo.svg);
     }
   }
 
@@ -318,15 +390,12 @@ h2 {
     margin: auto;
     width: func.size-m(217);
     height: func.size-m(119);
-    background-image: url(@/assets/home/banner/txt-m.svg);
-    @include bg-contain;
 
     @media screen and (min-width:768px) {
       //top: func.size(750);
       top: calc(70% + func.size(750 - 1080 * .7));
       width: func.size(1090);
       height: func.size(200);
-      background-image: url(@/assets/home/banner/txt.svg);
     }
   }
 
@@ -339,7 +408,7 @@ h2 {
     text-decoration: none;
     color: #fff;
     font-size: func.size-m(12);
-    font-weight: 500;
+    font-weight: 400;
     letter-spacing: .1em;
     text-indent: .1em;
     width: func.size-m(65);
@@ -365,7 +434,7 @@ h2 {
       color: #219664;
     }
   }
-}
+}*/
 
 .about {
   padding: 0 0;
@@ -544,7 +613,7 @@ h2 {
       right: func.size-m(20);
       color: #FFF;
       //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
-      font-family: "Noto Sans TC";
+
       font-size: func.size-m(11);
       font-weight: 400;
       letter-spacing: .05em;
@@ -569,9 +638,8 @@ h2 {
       // left: func.size-m(30);
       color: #FFF;
       //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
-      font-family: "Noto Sans TC";
       font-size: func.size-m(9);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05em;
       z-index: 1;
       line-height: 1.6;
@@ -715,7 +783,7 @@ h2 {
 
       .post-title {
         font-size: func.size-m(18);
-        font-weight: 500;
+        font-weight: 400;
         line-height: 1.6;
         letter-spacing: .01em;
         margin-bottom: func.size-m(5);
@@ -778,14 +846,14 @@ h2 {
   }
 
   h2 {
-    position: absolute;
-    top: func.size-m(3);
-    left: func.size-m(30);
+   /* top: func.size-m(3);
+    left: func.size-m(30);*/
     color: #000;
 
     @media screen and (min-width:768px) {
+    position: absolute;
       border-width: 0 0 func.size(3) 0;
-      top: func.size(20);
+      top: func.size(-320);
       left: func.size(160);
 
     }
@@ -796,32 +864,28 @@ h2 {
   position: relative;
   width: 100%;
   height: func.size-m(667);
-  // background-image: url(@/assets/home/ad/bg-m.jpg);
-  background-image: url(@/assets/home/banner/bgm.jpg);
-  @include bg-contain;
-  background-size: cover;
+  padding: 0;
 
   @media screen and (min-width:768px) {
     height: func.size(1080);
-    // background-image: url(@/assets/home/ad/bg.jpg);
-    background-image: url(@/assets/home/banner/bg.jpg);
+  padding: 0;
+  }
+  .bg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .logo {
     position: absolute;
     top: func.size-m(97);
-    left: func.size-m(65);
-    width: func.size-m(264);
+    left: 0;right: 0;margin: auto;
+    width:auto;
     height: func.size-m(293);
-    background-image: url(@/assets/s1logo-m.png);
-    @include bg-contain;
 
     @media screen and (min-width:768px) {
       top: func.size(163);
-      left: func.size(503);
-      width: func.size(843);
-      height: func.size(472);
-      background-image: url(@/assets/logo.png);
+      height: func.size(450);
     }
   }
 
@@ -830,16 +894,11 @@ h2 {
     top: func.size-m(450);
     left: func.size-m(62);
     width: func.size-m(230);
-    height: func.size-m(136);
-    background-image: url(@/assets/home/ad/txt-m.svg);
-    @include bg-contain;
 
     @media screen and (min-width:768px) {
       top: func.size(747);
       left: func.size(359);
       width: func.size(1201.56);
-      height: func.size(183.42);
-      background-image: url(@/assets/home/ad/txt.svg);
     }
   }
 }
@@ -853,7 +912,7 @@ h2 {
 
   .sec-title {
     font-size: func.size-m(16);
-    font-weight: 500;
+    font-weight: 400;
     padding: 0 func.size-m(38);
     margin-bottom: func.size-m(43);
 
@@ -920,7 +979,7 @@ h2 {
       position: relative;
       display: flex;
       font-size: func.size-m(12);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05em;
       padding: func.size-m(13) 0;
       border-bottom: func.size-m(1) solid #000;
@@ -956,20 +1015,30 @@ h2 {
 </style>
 
 <script setup>
-import { onMounted } from "vue";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Marquee from "@/components/Marquee.vue";
+import { ref, onMounted } from 'vue'
+//import { gsap } from "gsap";
+//import { ScrollTrigger } from "gsap/ScrollTrigger";
+//import Marquee from "@/components/Marquee.vue";
 import Fullview from "@/components/fullview.vue";
 import Order from '@/components/Order.vue'
 import news from '@/info/news';
+
+
+const showRest = ref(false)
+/*
+*/
+onMounted(() => {
+  requestIdleCallback(() => {
+    showRest.value = true
+  })
+})
 
 const typeList = news.filter(item => item.type === '消息新聞');
 const list = typeList.filter((item, idx) => idx < 3);
 const images = import.meta.glob('../assets/news/**/*.*', { eager: true });
 const getImg = path => images[path]?.default || '';
 
-gsap.registerPlugin(ScrollTrigger);
+/*gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
   setTimeout(() => {
@@ -983,5 +1052,5 @@ onMounted(() => {
       }
     });
   }, 50);
-});
+});*/
 </script>

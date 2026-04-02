@@ -87,7 +87,7 @@
           display: flex;
           color: #000;
           font-size: func.size-m(14);
-          font-weight: 500;
+          font-weight: 400;
           text-decoration: none;
           margin-bottom: func.size-m(15);
           @media screen and (min-width:768px) {

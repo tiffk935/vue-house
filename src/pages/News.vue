@@ -11,7 +11,7 @@
       <article v-for="item in list" :key="item">
         <RouterLink :to="item.link">
           <div class="photo">
-            <img :src="getImg(item.thumbnail)" />
+            <img :src="getImg(item.thumbnail)" :alt="item.title" />
           </div>
           <h3>{{ item.title }}</h3>
           <div class="meta">
@@ -52,7 +52,7 @@
 <style lang="scss" scoped>
 @use "@/assets/style/function.scss" as func;
 
-section {
+#page-undefined section {
   padding: func.size-m(60) func.size-m(30) func.size-m(34) func.size-m(30);
   @media screen and (min-width:768px) {
     padding: func.size(108) func.size(160) func.size(250) func.size(160);
@@ -200,7 +200,7 @@ section {
 
       h3 {
         font-size: func.size-m(18);
-        font-weight: 500;
+        font-weight: 400;
         line-height: func.size-m(26);
         letter-spacing: .01em;
         margin-bottom: func.size-m(5);

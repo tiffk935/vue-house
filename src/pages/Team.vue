@@ -132,6 +132,7 @@
   .team {
     position: relative;
     margin: 0;
+    padding: 0;
 
     @media screen and (min-width:768px) {
       margin: func.size(115) 0 0 0;
@@ -179,7 +180,7 @@
       .t1 {
         font-size: func.size-m(23);
         line-height: 1.6;
-        font-weight: 500;
+        font-weight: 400;
         margin-bottom: func.size-m(15);
         text-align: justify;
 
@@ -374,7 +375,7 @@
 
         .title {
           font-size: func.size-m(15);
-          font-weight: 500;
+          font-weight: 400;
           margin-bottom: func.size-m(3);
           line-height: 1.2;
 
@@ -382,13 +383,13 @@
             font-size: func.size(41);
             margin-bottom: func.size(-6);
             letter-spacing: 0;
-            font-weight: 500;
+            font-weight: 400;
           }
         }
 
         .desc {
           font-size: func.size-m(12);
-          font-weight: 500;
+          font-weight: 400;
           letter-spacing: .02em;
 
           @media screen and (min-width:768px) {
@@ -400,7 +401,7 @@
 
         .name {
           font-size: func.size-m(18);
-            font-weight: 500;
+            font-weight: 400;
             margin-top: .9em;
             white-space:nowrap;
 
@@ -411,7 +412,7 @@
             right: func.size(27);
             font-size: func.size(38);
             letter-spacing: 0;
-            font-weight: 500;
+            font-weight: 400;
           }
 
           span {

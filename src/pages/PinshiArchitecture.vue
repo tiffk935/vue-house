@@ -140,6 +140,7 @@
 }
 
 #main {
+  padding: 0;
   img {
     display: block;
     width: 100%;
@@ -154,6 +155,7 @@
 
   .content {
     padding: func.size-m(31) func.size-m(30) func.size-m(21) func.size-m(30);
+    width: 100%;
     @media screen and (min-width:768px) {
       padding: 0 func.size(435);
     }
@@ -199,7 +201,7 @@
       //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
       font-family: "Noto Sans TC";
       font-size: func.size-m(9);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05em;
       z-index: 1;
       @media screen and (min-width:768px) {
@@ -289,7 +291,7 @@
       //text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
       font-family: "Noto Sans TC";
       font-size: func.size-m(9);
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: .05em;
       z-index: 1;
       @media screen and (min-width:768px) {
@@ -320,6 +322,7 @@
     background: #fff;
     padding: func.size-m(26);
     position: relative;
+    width: 100%;
     @media screen and (min-width:768px) {
       margin: func.size(105) func.size(258);
       padding: func.size(50) func.size(59) func.size(56) func.size(59);

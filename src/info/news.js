@@ -3,11 +3,11 @@ export default [
     link: '/news/6',                                            // 網址，唯一值，不可重複
     title: '台南捷運「藍線」明年動工！串連小巨蛋、南紡購物中心，10個上車地點',     // 標題
     type: '消息新聞',                                            // 消息新聞 / 專題研究，擇一
-    thumbnail: '../assets/news/6/1.jpg',                // 列表頁封面圖
+    thumbnail: '../assets/news/6/1.webp',                // 列表頁封面圖
     date: '2025.10.25',                                         // 日期，與順序無關
     slider: [                                                   // 輪播圖  有圖說時用這個
       {
-        img: '../assets/news/6/1.jpg',
+        img: '../assets/news/6/1.webp',
         caption: 'Source: 台南市政府交通局'
       },
       {

@@ -3,7 +3,7 @@
     <div class="container">
       <div class="logo-links">
         <div class="logo">
-          <img src="@/assets/logo.png" />
+          <img src="@/assets/logo.webp" alt="logo" />
         </div>
         <div class="links">
           <RouterLink to="/team">關於國城</RouterLink>
@@ -19,11 +19,11 @@
         <div class="info"><b>接待中心</b>｜{{ info.address }}</div>
         <div class="btns">
           <RouterLink class="onder-btn" to="/order"><span>預約表單</span></RouterLink>
-          <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" /></a>
-          <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" /></a>
-          <a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" /></a>
-          <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" /></a>
-          <a class="circle" target="_blank" :href="info.googleLink"><img src="@/assets/icon-map.svg" /></a>
+          <a class="circle" target="_blank" :href="'tel:' + info.phone"><img src="@/assets/icon-phone.svg" alt="icon-phone" /></a>
+          <a class="circle" target="_blank" :href="info.fbLink"><img src="@/assets/icon-fb.svg" alt="icon-fb" /></a>
+          <a class="circle" target="_blank" :href="info.igLink"><img src="@/assets/icon-ig.svg" alt="icon-ig" /></a>
+          <a class="circle" target="_blank" :href="info.lineLink"><img src="@/assets/icon-line.svg" alt="icon-line" /></a>
+          <a class="circle" target="_blank" :href="info.googleLink"><img src="@/assets/icon-map.svg" alt="icon-map" /></a>
           <div class="line"></div>
           <div class="scrolltop" @click="scrollToTop"></div>
         </div>

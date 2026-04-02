@@ -437,7 +437,7 @@ img {
         text-shadow: 0px func.size-m(2) func.size-m(4) rgba(0, 0, 0, 0.55);
         font-family: "Noto Sans TC";
         font-size: func.size-m(9);
-        font-weight: 500;
+        font-weight: 400;
         letter-spacing: .05em;
         z-index: 1;
 
@@ -541,7 +541,7 @@ img {
     max-width: 200%;
     cursor: zoom-in;
     z-index: 99;
-    background:url("@/assets/home/area/map.jpg") center;
+    background:url("@/assets/home/area/map.webp") center;
     background-size: cover;
 
 
@@ -853,7 +853,7 @@ img {
       font-size: func.size(55);
       //line-height: func.size(94);
       margin-bottom: 0;
-      font-weight: 500;
+      font-weight: 400;
       margin-top: 0;
       line-height: 1.5;
       color: #fff;

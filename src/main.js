@@ -8,25 +8,39 @@ import { createVfm } from 'vue-final-modal'
 import VueAwesomePaginate from "vue-awesome-paginate"
 import info from './info'
 
-createApp(App)
-  .use(Toast, {
-    transition: "Vue-Toastification__fade",
-    maxToasts: 5,
-    newestOnTop: true,
-  })
-  .use(router)
-  .use(
-    createGtm({
-      id: info.gtmCode, 
-      defer: false, // Script can be set to `defer` to speed up page load at the cost of less accurate results (in case visitor leaves before script is loaded, which is unlikely but possible). Defaults to false, so the script is loaded `async` by default
-      compatibility: false, // Will add `async` and `defer` to the script tag to not block requests for old browsers that do not support `async`
-      enabled: true, // defaults to true. Plugin can be disabled by setting this to false for Ex: enabled: !!GDPR_Cookie (optional)
-      debug: true, // Whether or not display console logs debugs (optional)
-      loadScript: true, // Whether or not to load the GTM Script (Helpful if you are including GTM manually, but need the dataLayer functionality in your components) (optional)
-      vueRouter: router, // Pass the router instance to automatically sync with router (optional)
-      trackOnNextTick: false, // Whether or not call trackView in Vue.nextTick
-    })
-  )
-  .use(createVfm())
-  .use(VueAwesomePaginate)
-  .mount('#app')
+// 1. 先建立 App 實例
+const app = createApp(App);
+
+// 2. 建立 GTM 配置物件 (存成變數)
+const gtmConfig = createGtm({
+  id: info.gtmCode,
+  defer: true, 
+  compatibility: false,
+  enabled: false, // 初始設為 false，避開首屏效能檢查
+  loadScript: true,
+  vueRouter: router,
+  debug: false,   // 正式環境建議設為 false
+});
+
+// 3. 註冊所有插件
+app.use(Toast, {
+  transition: "Vue-Toastification__fade",
+  maxToasts: 5,
+  newestOnTop: true,
+});
+app.use(router);
+app.use(gtmConfig); // 註冊 GTM 插件
+app.use(createVfm());
+app.use(VueAwesomePaginate);
+
+// 4. 掛載 App
+app.mount('#app');
+
+// 5. 延遲啟動 GTM (建議 3~5 秒)
+setTimeout(() => {
+  // 注意：這裡要呼叫的是 gtmConfig 物件本身的 debug 與 enable
+  if (gtmConfig) {
+    gtmConfig.enable(true);
+    console.log('GTM 腳本已在 3 秒後延遲載入');
+  }
+}, 3000);

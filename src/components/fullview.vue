@@ -61,7 +61,7 @@ onMounted(() => {
         height:auto;
         width: 100%;
         max-width: 100%;vertical-align: middle;
-        background: url("@/assets/home/area/map.jpg");
+        background: url("@/assets/home/area/map.webp");
         background-size: cover;
     }
 
