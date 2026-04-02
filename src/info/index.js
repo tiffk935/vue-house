@@ -29,12 +29,12 @@ export default {
     },
     // 底下2個 沒項目就會隱藏
     selectFields: {
-        budget: {
+       /* budget: {
             title: "購屋預算",
             hold: "請選擇預算",
             option: ["8千萬 ~ 1.1億", "1.2億 ~ 1.4億", "1.4億 ~ 1.6億"],
             bypass: false,
-        },
+        },*/
     },
     navList: [
         {
