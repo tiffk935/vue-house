@@ -24,8 +24,11 @@ export default defineConfig({
     },
     rollupOptions: {
     output: {
-      manualChunks: {
-        vendor: ['vue', 'vue-router', 'gsap', 'aos'], // 把大型 library 拆出來
+      manualChunks(id) {
+        // 將 node_modules 裡面的套件全部打包成一個 vendor.js，減少碎片化
+        if (id.includes('node_modules')) {
+          return 'vendor';
+        }
       }
     }
   }
