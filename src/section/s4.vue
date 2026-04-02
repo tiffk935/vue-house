@@ -3,7 +3,7 @@
     <div class="ball absolute"></div>
     <div class="map user-n relative">
       <div class="scrollable" ref="scrollable" v-if="isMobile">
-        <img class="map1" src="@/section/s4/map.jpg" @load="onImgLoad($event)" />
+        <img class="map1" src="@/section/s4/map.webp" @load="onImgLoad($event)" />
         <img class="marker marker1 absolute" src="@/section/s4/marker1.png" data-aos="fade-down" data-aos-duration="0"
           data-aos-delay="0" />
         <img class="marker marker2 absolute" src="@/section/s4/marker2.png" data-aos="fade-down" data-aos-duration="0"
@@ -28,7 +28,7 @@
           data-aos-delay="0" />
       </div>
       <div class="scrollable" ref="scrollable" v-else>
-        <img class="map1" src="@/section/s4/map.jpg" @load="onImgLoad($event)" />
+        <img class="map1" src="@/section/s4/map.webp" @load="onImgLoad($event)" />
         <img class="marker marker1 absolute" src="@/section/s4/marker1.png" data-aos="fade-down" data-aos-duration="0"
           data-aos-delay="800" />
         <img class="marker marker2 absolute" src="@/section/s4/marker2.png" data-aos="fade-down" data-aos-duration="0"

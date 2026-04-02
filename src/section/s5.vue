@@ -6,10 +6,10 @@
     <div class="slider relative">
       <div class="slides">
         <div class="slide">
-          <img src="@/section/s5/img.png" @load="onImgLoad()" />
+          <img src="@/section/s5/img.webp" @load="onImgLoad()" />
         </div>
         <div class="slide">
-          <img src="@/section/s5/img.png" />
+          <img src="@/section/s5/img.webp" />
         </div>
       </div>
     </div>
@@ -22,7 +22,7 @@
       連結安平區與國道一號，交通新動脈。
     </div>
 
-    <img class="map block" src="@/section/s5/map.png" />
+    <img class="map block" src="@/section/s5/map.webp" />
     <img class="info block md:hidden" src="@/section/s5/info-m.png" />
     <img class="info hidden md:block" src="@/section/s5/info.png" />
   </section>

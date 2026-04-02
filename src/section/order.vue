@@ -114,7 +114,7 @@
   color: #000;
   padding: size-m(100) 0 0 0;
   z-index: 2;
-  background-image: url(@/section/form/bg.jpg);
+  background-image: url(@/section/form/bg.webp);
   background-size: 100% auto;
 
   @media screen and (min-width:768px) {

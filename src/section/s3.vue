@@ -13,13 +13,13 @@
         <swiper-slide v-for="(slide, idx) in slides">
           <div class="img relative">
             <img class="w-full md:hidden" :src="getImg(`./s3/${(idx + 1)}-m.png`)" />
-            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.png`)" />
+            <img class="w-full hidden md:block" :src="getImg(`./s3/${(idx + 1)}.webp`)" />
             <div class="info">{{ slide.label }}</div>
           </div>
 
           <div class="content">
             <img class="slide-title md:hidden" :src="getImg(`./s3/title${(idx + 1)}-m.png`)" />
-            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx + 1)}.png`)" />
+            <img class="slide-title hidden md:block" :src="getImg(`./s3/title${(idx + 1)}.webp`)" />
 
             <div class="desc" v-html="slide.desc"></div>
           </div>

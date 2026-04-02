@@ -14,7 +14,7 @@
 
 .s1 {
   height: size-m(800);
-  background-image: url(@/section/s1/bg.png);
+  background-image: url(@/section/s1/bg.webp);
   background-size: auto 100%;
   background-position: 32.5% 0;
   background-repeat: no-repeat;

@@ -35,11 +35,11 @@
         disableOnInteraction: false,
       }" :modules="modules">
         <swiper-slide>
-          <img class="block w-full" src="@/section/s6/1-m.png" />
+          <img class="block w-full" src="@/section/s6/1-m.webp" />
           <div class="info">實景拍攝</div>
         </swiper-slide>
         <swiper-slide>
-          <img class="block w-full" src="@/section/s6/2-m.png" />
+          <img class="block w-full" src="@/section/s6/2-m.webp" />
           <div class="info">實景拍攝</div>
         </swiper-slide>
       </swiper>
@@ -49,11 +49,11 @@
       <div class="right">
         <img class="title2 block" src="@/section/s6/title2.png" data-aos="zoom-in" data-aos-duration="1000"
           data-aos-delay="0" />
-        <img class="img1 w-full hidden md:block" src="@/section/s6/1.jpg" data-aos="fade-left" data-aos-duration="0"
+        <img class="img1 w-full hidden md:block" src="@/section/s6/1.webp" data-aos="fade-left" data-aos-duration="0"
           data-aos-delay="0" />
       </div>
       <div class="left">
-        <img class="img2 w-full hidden md:block" src="@/section/s6/2.jpg" data-aos="fade-right" data-aos-duration="0"
+        <img class="img2 w-full hidden md:block" src="@/section/s6/2.webp" data-aos="fade-right" data-aos-duration="0"
           data-aos-delay="0" />
         <div class="txt2" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
           隱身港灣之畔的 1200 坪黃金會所，是層峰生活的專屬序曲。<br class="md:hidden">
@@ -67,11 +67,11 @@
     <div class="sec md:flex md:flex-row-reverse md:justify-between" v-else>
       <div class="right">
         <img class="title2 block" src="@/section/s6/title2.png" />
-        <img class="img1 w-full hidden md:block" src="@/section/s6/1.jpg" data-aos="fade-left" data-aos-duration="0"
+        <img class="img1 w-full hidden md:block" src="@/section/s6/1.webp" data-aos="fade-left" data-aos-duration="0"
           data-aos-delay="0" />
       </div>
       <div class="left">
-        <img class="img2 w-full hidden md:block" src="@/section/s6/2.jpg" data-aos="fade-right" data-aos-duration="0"
+        <img class="img2 w-full hidden md:block" src="@/section/s6/2.webp" data-aos="fade-right" data-aos-duration="0"
           data-aos-delay="0" />
         <div class="txt2">
           隱身港灣之畔的 1200 坪黃金會所，是層峰生活的專屬序曲。<br class="md:hidden">
