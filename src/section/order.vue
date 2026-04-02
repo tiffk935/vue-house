@@ -376,7 +376,7 @@ const requiredFields = {
   name: "姓名",
   phone: "手機",
   // email: "信箱",
-  budget: "購屋預算",
+  // budget: "購屋預算",
   msg: "備註訊息",
   city: "居住縣市",
   area: "居住地區",
@@ -400,7 +400,7 @@ const formData = reactive({
 })
 
 // bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["msg"]
+const staticBypass = ["email", "msg", "city", "area"]
 const bypass = [
   ...staticBypass,
   ...Object.entries(selectFields)
