@@ -18,7 +18,7 @@
     </template>
   </div>
 </transition>
-    <div class="txt md:hidden">
+    <div class="txt md:hidden" data-aos="fade-up">
       <div>
         <img class="txt1" src="@/section/s1/txtm.svg" />
       </div>
