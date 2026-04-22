@@ -1,36 +1,147 @@
 <template>
   <section class="s1 user-n w-full relative">
-    <!-- <img src="./s1/mo.jpg" class="t0">  -->
-    <div class="bg"></div>
+    <!-- 
+    <img src="./s1/mo.jpg" class="t0">
+     <img src="./s1/pc1.jpg" class="t0">  -->
+    <img src="./s1/fo.webp" class="fo"
+  :class="{ alt: current === 1 }">
+<transition name="fade" mode="out-in" class="txt hidden md:block">
+  <div :key="current" class="txt-item">
+    <template v-if="current === 0">
+      <img class="txt1" src="@/section/s1/txt1.svg" />
+      <img class="en" src="@/section/s1/en.svg" />
+    </template>
+
+    <template v-else>
+      <img class="txt2" src="@/section/s1/txt2.svg" />
+      <img class="en2" src="@/section/s1/en.svg" />
+    </template>
+  </div>
+</transition>
+    <div class="txt md:hidden">
+      <div>
+        <img class="txt1" src="@/section/s1/txtm.svg" />
+      </div>
+    </div>
+
+
+    
+    <!--  <div class="bg"></div>
       <img class="logo block" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-delay="0" alt="日進學 快樂王國3" />
       <img class="txt block" src="@/section/s1/txt.svg" data-aos="fade-up" data-aos-delay="200" alt="震撼讓利 全新完工 買3房 含裝潢+全室冷氣+車位" />
-    <div class="relative">
-      <!-- 
+    <div class="relative">  -->
+    <!-- 
       <div class="name" data-aos="fade-up" data-aos-delay="200">洲子洋全能住宅王</div>
       <div class="sub-title" data-aos="fade-up" data-aos-delay="400">一站蘆洲，校園首排</div>
-      -->
-    </div>
+     
+    </div> -->
   </section>
 </template>
 
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-  .t0{position: absolute;width: 100%;top:0px;left: 0; pointer-events: none;z-index: 9;opacity: .7;}
+.t0 {
+  position: absolute;
+  width: 100%;
+  top: 0px;
+  left: 0;
+  pointer-events: none;
+  z-index: 1;
+  opacity: .7;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
 .s1 {
-  height: size-m(640);
+  height: size-m(667);
   padding-top: size-m(67);
   text-align: center;
+  background: linear-gradient(0deg, #B90000 13.4%, #571A1E 92.56%);
+
   @media screen and (min-width:768px) {
     height: 100vh;
     max-height: size(1080);
-    min-height: size(1000);
-    padding-top:0;
-   display: flex;
-   align-items:center;justify-content:center;
-   // padding-top: size(110);
+    min-height: size(1080);
+    padding-top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // padding-top: size(110);
   }
 
+  .fo {
+    position: absolute;
+    height: auto;
+    width: size-m(495);
+    max-width: initial;
+    top: size-m(0);
+    left: size-m(-60);
+    right: 0;
+    margin: auto;
+    pointer-events: none;
+    z-index: 3;
+    // opacity: .6;
+    @media screen and (min-width:768px) {
+    width: size(1380);
+    top: size(-143);
+    transform: scale(1);
+    transition:transform 5s ease;
+    transform-origin: center top;
+    left: 0;
+    right: 0;
+    &.alt {
+    transform: scale(0.8333) translateY(size(13));
+  }
+    /* 
+    width: size(1380);
+    top: size(-143);
+    
+    */
+  }
+  }
+
+  .txt {
+    position: relative;
+    z-index: 4;
+    text-align: center;
+
+    .txt1 {
+      width: size-m(180);
+      margin: size-m(68) auto 0;
+    @media screen and (min-width:768px) {
+
+      width: size(964);
+      margin: size(80) auto size(43);
+
+    }
+    }
+
+    .en {
+      width: size(410);
+      margin: 0 auto;
+    }
+
+    .txt2 {
+      width: size(890);
+      margin: size(100) auto size(43);
+    }
+
+    .en2 {
+      width: size(366);
+      margin: 0 auto;
+    }
+
+  }
+
+
+  /*
   .bg {
     position: absolute;
     bottom: 0;
@@ -100,15 +211,23 @@
       width: size(849.35);
     }
   }
+    */
 }
 </style>
 
 <script setup>
-// import { inject } from 'vue';
-// const smoothScroll = inject('smoothScroll')
-// const scrollTo = (el) => {
-//   smoothScroll({
-//     scrollTo: document.querySelector(el)
-//   })
-// }
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+
+const current = ref(0)
+let timer = null
+
+onMounted(() => {
+  timer = setInterval(() => {
+    current.value = (current.value + 1) % 2
+  }, 6000) // 每3秒切換
+})
+
+onBeforeUnmount(() => {
+  clearInterval(timer)
+})
 </script>
