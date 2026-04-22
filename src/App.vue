@@ -147,25 +147,42 @@ main {
 }
 </style>
 
-<script setup>import { onMounted } from "vue"
-import NavBar from '@/components/NavBar.vue' // 改為同步匯入
-import Footer from '@/components/Footer.vue' // 改為同步匯入
+<script setup>
+import { onMounted } from "vue"
+import NavBar from '@/components/NavBar.vue' 
+import Footer from '@/components/Footer.vue' 
 
+// 建議：如果 aos.css 很大，可以考慮在 index.html 用 <link> 載入，或保持在這裡
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-// App.vue
+
 onMounted(() => {
-  setTimeout(() => {
+  // 使用 requestIdleCallback：在瀏覽器「空閒」時才初始化動畫
+  // 這能確保 LCP 渲染與 JS 解析優先完成，不被 AOS 的計算擋住
+  const initAOS = () => {
     AOS.init({
       duration: 600,
       once: true,
       offset: 0,
       easing: 'ease-out-quad',
-      // 如果手機端分數還是上不去，可以考慮在手機端停用
+      // 強烈建議：首屏已經 80 分了，手機端可以考慮停用動畫來換取極致流暢度
       // disable: window.innerWidth < 768 
+      
+      // 關鍵優化：不要讓 AOS 監聽 scroll 事件太頻繁
+      debounceDelay: 50, 
+      throttleDelay: 99,
     });
-    // 啟動後強制重新計算一次，防止圖片載入後的位移
-    AOS.refresh(); 
-  }, 1000);
+  };
+
+  // 優先權調整：
+  // 1. 先讓 LCP 內容跑完
+  // 2. 利用瀏覽器空閒時間啟動 AOS，避免造成 Performance 截圖中的 Long Task
+  if ('requestIdleCallback' in window) {
+    // 延遲時間可以縮短，因為 IdleCallback 會自動找空檔
+    requestIdleCallback(() => initAOS(), { timeout: 2000 });
+  } else {
+    // 舊版瀏覽器相容
+    setTimeout(initAOS, 1500);
+  }
 })
 </script>

@@ -9,23 +9,28 @@
 
 <script setup>
 import BScroll from '@better-scroll/core'
-import { onMounted, ref, getCurrentInstance } from 'vue'
+import { onMounted, ref, getCurrentInstance, onBeforeUnmount } from 'vue'
 
 const viewbox = ref()
 const viewImg = ref()
 const swiped = ref(false)
 const offsetRatio = 1.9
+let bs = null // 儲存實例以便銷毀
 
-// ✅ 取得全域方法（若有在 main.js 設定）
 const { appContext } = getCurrentInstance()
 const isMobile = appContext.config.globalProperties.$isMobile
   ? appContext.config.globalProperties.$isMobile()
-  : window.innerWidth <= 768 // 備用判斷，防止未定義
+  : window.innerWidth <= 768
 
 onMounted(() => {
-  viewImg.value.addEventListener('load', () => {
-    if (isMobile) {
-      const scroll = new BScroll(viewbox.value, {
+  if (!isMobile) return;
+
+  const initScroll = () => {
+    // ✅ 策略 1：使用 rAF 確保在 DOM 穩定後才計算，減少 Forced Reflow
+    requestAnimationFrame(() => {
+      if (!viewbox.value) return;
+      
+      bs = new BScroll(viewbox.value, {
         probeType: 2,
         scrollX: true,
         scrollY: true,
@@ -34,17 +39,39 @@ onMounted(() => {
         bindToWrapper: true,
         eventPassthrough: 'vertical',
         bounce: false,
-      })
+        // ✅ 增加效能優化參數
+        HWCompositing: true, 
+        useTransition: true 
+      });
 
-      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500)
+      // ✅ 策略 2：延遲滾動動作，不要在初始化後立刻強行重排
       setTimeout(() => {
-        scroll.on('scroll', () => {
-          swiped.value = true
-        })
-      }, 1000)
-    }
-  })
-})
+        if (bs) {
+          bs.scrollTo(bs.maxScrollX / offsetRatio, 500);
+          
+          // 滾動監聽
+          bs.on('scroll', () => {
+            if (!swiped.value) swiped.value = true;
+          });
+        }
+      }, 300);
+    });
+  };
+
+  // 判斷圖片是否已加載完成
+  if (viewImg.value.complete) {
+    initScroll();
+  } else {
+    viewImg.value.addEventListener('load', initScroll, { once: true });
+  }
+});
+
+// ✅ 策略 3：組件銷毀時回收記憶體，防止記憶體洩漏
+onBeforeUnmount(() => {
+  if (bs) {
+    bs.destroy();
+  }
+});
 </script>
 
 

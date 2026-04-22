@@ -46,6 +46,16 @@ $keyWords = $metaData['keywords'];
 <meta itemprop="name" content="<?php echo $docTitle; ?>">
 <meta itemprop="description" content="<?php echo $docDesc ?>">
 
+<link 
+  rel="preload" 
+  as="image" 
+  href="/assets/1m-Q0fdVBqo.webp" 
+  media="(max-width: 767px)" 
+  fetchpriority="high">
 
-      <link rel="preload" as="image" href="/assets/1m-Q0fdVBqo.webp" fetchpriority="high">
-      <link rel="preload" as="image" href="/assets/1-CeRhDxFc.webp" fetchpriority="high">
+<link 
+  rel="preload" 
+  as="image" 
+  href="/assets/1-CeRhDxFc.webp" 
+  media="(min-width: 768px)" 
+  fetchpriority="high">
