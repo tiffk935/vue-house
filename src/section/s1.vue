@@ -4,7 +4,8 @@
     <img src="./s1/mo.jpg" class="t0">
      <img src="./s1/pc1.jpg" class="t0">  -->
     <img src="./s1/fo.webp" class="fo"
-  :class="{ alt: current === 1 }">
+  :class="{ alt: currentFo === 1 }"
+  >
 <transition name="fade" mode="out-in" class="txt hidden md:block">
   <div :key="current" class="txt-item">
     <template v-if="current === 0">
@@ -12,7 +13,7 @@
       <img class="en" src="@/section/s1/en.svg" />
     </template>
 
-    <template v-else>
+    <template v-else >
       <img class="txt2" src="@/section/s1/txt2.svg" />
       <img class="en2" src="@/section/s1/en.svg" />
     </template>
@@ -50,25 +51,35 @@
   z-index: 1;
   opacity: .7;
 }
+/*
+  */
 .fade-enter-active,
 .fade-leave-active {
-  transition: opacity 0.6s ease;
+  transition: opacity 0.8s ease;
 }
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .s1 {
-  height: size-m(667);
-  padding-top: size-m(67);
+  height: calc(100vh - 63px);
+    min-height: size-m(604);
+    max-height: size-m(750);
+  //height: size-m(667);
+  padding: 0;    overflow: hidden;
+ // padding-top: size-m(67);
   text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   background: linear-gradient(0deg, #B90000 13.4%, #571A1E 92.56%);
 
   @media screen and (min-width:768px) {
     height: 100vh;
     max-height: size(1080);
-    min-height: size(1080);
+    min-height: size(900);
     padding-top: 0;
     display: flex;
     align-items: center;
@@ -82,6 +93,7 @@
     width: size-m(495);
     max-width: initial;
     top: size-m(0);
+    top: calc(32% + #{size-m(-28-667 * 0.32)});
     left: size-m(-60);
     right: 0;
     margin: auto;
@@ -90,15 +102,17 @@
     // opacity: .6;
     @media screen and (min-width:768px) {
     width: size(1380);
-    top: size(-143);
+    //top: size(-143);
+    top: calc(50% + #{size(-143-1080 * 0.5)});
+    //transform: scale(0.8333) translateY(size(13));
     transform: scale(1);
-    transition:transform 5s ease;
+    transition:transform 1.5s ease;
     transform-origin: center top;
     left: 0;
     right: 0;
     &.alt {
     transform: scale(0.8333) translateY(size(13));
-  }
+  }  /*  */
     /* 
     width: size(1380);
     top: size(-143);
@@ -111,10 +125,20 @@
     position: relative;
     z-index: 4;
     text-align: center;
+   /* */position: absolute;
+   // top: size-m(72);
+    top: calc(80% + #{size-m(110-667 * 0.80)});
+    left: 0;right: 0;
+      margin: 0 auto 0;
+    @media screen and (min-width:768px) {
 
+    position: relative;
+    top: 0;
+    left: 0;right: 0;
+    }
     .txt1 {
       width: size-m(180);
-      margin: size-m(68) auto 0;
+      margin: size-m(0) auto 0;
     @media screen and (min-width:768px) {
 
       width: size(964);
@@ -141,77 +165,6 @@
   }
 
 
-  /*
-  .bg {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: size-m(181);
-    background-size: auto 100%;
-    background-position: size-m(-74.54) 0;
-    background-image: url(@/section/s1/bg.png);
-    @media screen and (min-width:768px) {
-      height: size(390);
-      background-position: 0 0;
-    }
-  }
-
-  .logo {
-    position: absolute;
-      top: size-m(60);
-      left:0;right: 0;margin: auto;
-    width: size-m(310);
-    @media screen and (min-width:768px) {
-      top: size(62);
-      left: size(230);right: auto;
-      width: size(700);
-    }
-  }
-  .txt {
-    position: absolute;
-    width: size-m(205);
-      top: size-m(390);
-      left:0;right: 0;margin: auto;
-    @media screen and (min-width:768px) {
-      top: size(260);
-      left: size(985);right: auto;
-      width: size(600);
-    }
-  }
-
-  .name {
-    font-size: size-m(28);
-    font-weight: 700;
-    line-height: 160%;
-    letter-spacing: .41em;
-    margin-bottom: size-m(2);
-    @media screen and (min-width:768px) {
-      font-size: size(78);
-      margin-bottom: size(1);
-    }
-  }
-
-  .sub-title {
-    color: #FFF;
-    font-family: "Noto Sans TC";
-    font-size: size-m(12);
-    font-style: normal;
-    font-weight: 700;
-    line-height: 160%;  
-    letter-spacing: 1.64em;
-    padding: size-m(5) 0;
-    width: size-m(317);
-    margin: 0 auto;
-    background: #E50012;
-    background: linear-gradient(90deg,rgba(229, 0, 18, 1) 0%, rgba(126, 21, 26, 1) 100%);
-    @media screen and (min-width:768px) {
-      font-size: size(28);
-      padding: size(5) 0;
-      width: size(849.35);
-    }
-  }
-    */
 }
 </style>
 
@@ -219,15 +172,24 @@
 import { ref, onMounted, onBeforeUnmount } from 'vue'
 
 const current = ref(0)
+const currentFo = ref(0) // ✨給 fo 用
+
 let timer = null
 
 onMounted(() => {
-  timer = setInterval(() => {
-    current.value = (current.value + 1) % 2
-  }, 6000) // 每3秒切換
+  if (window.innerWidth >= 768) {
+    timer = setInterval(() => {
+      current.value = (current.value + 1) % 2
+
+      // 👉 延遲切換 fo（跟 fade 對齊）
+      setTimeout(() => {
+        currentFo.value = current.value
+      }, 100) // 這裡看你的 fade 時間（0.6s → 建議 300~400）
+    }, 4500)
+  }
 })
 
 onBeforeUnmount(() => {
-  clearInterval(timer)
+  if (timer) clearInterval(timer)
 })
 </script>
