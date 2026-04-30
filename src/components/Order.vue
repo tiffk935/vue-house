@@ -725,10 +725,14 @@ const send = () => {
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
-    }).then((response) => {
-      if (response.status === 200) {
+    }).then((res) => {
+      return res.json();
+    }).then((json) => {
+      if (json.success === true) {
         window.location.href = "/formThanks";
         // toast.success(`表單已送出，感謝您的填寫`)
+      } else {
+        toast.error('預約失敗，請稍後再試');
       }
       sending.value = false
     });
