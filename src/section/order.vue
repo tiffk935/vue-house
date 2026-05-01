@@ -371,19 +371,38 @@ const send = () => {
 
   if (pass && !sending.value) {
     sending.value = true
+    fetch(
+      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
+      &phone=${formData.phone}
+      &email=${formData.email}
+      &room_type=${formData.room_type}
+      &city=${formData.city}
+      &area=${formData.area}
+      &msg=${formData.msg}
+      &utm_source=${utmSource}
+      &utm_medium=${utmMedium}
+      &utm_content=${utmContent}
+      &utm_campaign=${utmCampaign}
+      &date=${date}
+      &campaign_name=${info.caseName}`,
+      {
+        method: "GET"
+      }
+    );
 
     fetch("contact-form.php", {
       method: "POST",
       body: presend,
-    }).then((response) => {
-      if (response.status === 200) {
+    }).then((res) => {
+      return res.json();
+    }).then((json) => {
+      if (json.success === true) {
         window.location.href = "formThanks";
+      } else {
+        toast.error('預約失敗，請稍後再試');
       }
       sending.value = false
     });
-
-
-    // toast.success(`表單已送出，感謝您的填寫`)
   }
 }
 </script>
