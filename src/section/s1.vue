@@ -1,41 +1,37 @@
 <template>
   <section class="s1 user-n w-full relative">
     <!-- 
-    <img src="./s1/mo.jpg" class="t0">
-     <img src="./s1/pc1.jpg" class="t0">  -->
-    <img src="./s1/fo.webp" class="fo"
-  :class="{ alt: currentFo === 1 }"
-  >
-<transition name="fade" mode="out-in" class="txt hidden md:block">
-  <div :key="current" class="txt-item">
-    <template v-if="current === 0">
-      <img class="txt1" src="@/section/s1/txt1.svg" />
-      <img class="en" src="@/section/s1/en.svg" />
-    </template>
+    <img src="./s1/pc.jpg" class="t0">  
+    <img src="./s1/mo1.jpg" class="t0">-->
+    <img src="./s1/tl.svg" class="tl">
+    <img src="./s1/logo.svg" class="logo">
+    <img src="./s1/t1.svg" class="t1">
+    <div class="img">
+      <img src="./s1/img1.svg" alt="1">
+      <img src="./s1/img2.svg" alt="2">
+      <img src="./s1/img3.svg" alt="3">
+      <img src="./s1/img4.svg" alt="4">
+      <!-- AppClock.vue -->
+  <svg viewBox="0 0 120 120" class="time" >
+    <!-- 時針 -->
+     
+  <polygon :transform="`rotate(${hourDeg}, 60, 60)`" points="60 26.9 54.4 40.4 58.5 38.2 58.5 60 61.7 60 61.7 38.2 65.6 40.4 60 26.9"/>
 
-    <template v-else >
-      <img class="txt2" src="@/section/s1/txt2.svg" />
-      <img class="en2" src="@/section/s1/en.svg" />
-    </template>
-  </div>
-</transition>
-    <div class="txt md:hidden" data-aos="fade-up">
-      <div>
-        <img class="txt1" src="@/section/s1/txtm.svg" />
-      </div>
+    <!-- 分針 -->
+  <polygon :transform="`rotate(${minuteDeg}, 60, 60)`" points="60 17.9 53.9 35 58.4 32.2 58.4 60 61.8 60 61.8 32.2 66.1 35.1 60 17.9"/>
+    <line x1="60" y1="60" x2="60" y2="22"
+      
+      class="hand minute" />
+    <!-- 秒針 -->
+    <line x1="60" y1="66" x2="60" y2="18"
+      :transform="`rotate(${secondDeg}, 60, 60)`"
+      class="hand second" stroke="#000" />
+    <circle cx="60" cy="60" r="7" fill="#ef8029"   />
+  </svg>
+
     </div>
 
 
-    
-    <!--  <div class="bg"></div>
-      <img class="logo block" src="@/section/s1/logo.svg" data-aos="fade-up" data-aos-delay="0" alt="日進學 快樂王國3" />
-      <img class="txt block" src="@/section/s1/txt.svg" data-aos="fade-up" data-aos-delay="200" alt="震撼讓利 全新完工 買3房 含裝潢+全室冷氣+車位" />
-    <div class="relative">  -->
-    <!-- 
-      <div class="name" data-aos="fade-up" data-aos-delay="200">洲子洋全能住宅王</div>
-      <div class="sub-title" data-aos="fade-up" data-aos-delay="400">一站蘆洲，校園首排</div>
-     
-    </div> -->
   </section>
 </template>
 
@@ -45,18 +41,25 @@
 .t0 {
   position: absolute;
   width: 100%;
-  top: 0px;
+  // top:50%;transform: translateY(-50%);
+  top: 0;
   left: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: .7;
+  opacity: .1;
 }
-/*
-  */
+
+@keyframes an {
+  to {
+    transform: translateX(0%);
+  }
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.8s ease;
 }
+
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
@@ -65,16 +68,15 @@
 
 .s1 {
   height: calc(100vh - 63px);
-    min-height: size-m(604);
-    max-height: size-m(750);
-  //height: size-m(667);
-  padding: 0;    overflow: hidden;
- // padding-top: size-m(67);
+  min-height: size-m(620);
+  max-height: size-m(750);
+  padding: 0;
+  overflow: hidden;
   text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  background: linear-gradient(0deg, #B90000 13.4%, #571A1E 92.56%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff000;
 
   @media screen and (min-width:768px) {
     height: 100vh;
@@ -87,109 +89,132 @@
     // padding-top: size(110);
   }
 
-  .fo {
+  .tl {
     position: absolute;
-    height: auto;
-    width: size-m(495);
-    max-width: initial;
-    top: size-m(0);
-    top: calc(32% + #{size-m(-28-667 * 0.32)});
-    left: size-m(-60);
-    right: 0;
-    margin: auto;
-    pointer-events: none;
-    z-index: 3;
-    // opacity: .6;
-    @media screen and (min-width:768px) {
-    width: size(1380);
-    //top: size(-143);
-    top: calc(50% + #{size(-143-1080 * 0.5)});
-    //transform: scale(0.8333) translateY(size(13));
-    transform: scale(1);
-    transition:transform 1.5s ease;
-    transform-origin: center top;
-    left: 0;
-    right: 0;
-    &.alt {
-    transform: scale(0.8333) translateY(size(13));
-  }  /*  */
-    /* 
-    width: size(1380);
-    top: size(-143);
-    
-    */
-  }
-  }
-
-  .txt {
-    position: relative;
-    z-index: 4;
-    text-align: center;
-   /* */position: absolute;
-   // top: size-m(72);
-    top: calc(80% + #{size-m(110-667 * 0.80)});
-    left: 0;right: 0;
-      margin: 0 auto 0;
-    @media screen and (min-width:768px) {
-
-    position: relative;
     top: 0;
-    left: 0;right: 0;
-    }
-    .txt1 {
-      width: size-m(180);
-      margin: size-m(0) auto 0;
+    left: 0;
+    width: size-m(110);
+
     @media screen and (min-width:768px) {
-
-      width: size(964);
-      margin: size(80) auto size(43);
-
+      width: size(260);
     }
-    }
-
-    .en {
-      width: size(410);
-      margin: 0 auto;
-    }
-
-    .txt2 {
-      width: size(890);
-      margin: size(100) auto size(43);
-    }
-
-    .en2 {
-      width: size(366);
-      margin: 0 auto;
-    }
-
   }
+
+  .logo {
+    position: absolute;
+    top: size-m(213);
+    left: 0;right: 0;margin: auto;
+    width: size-m(290);
+    top: calc(90% + #{size-m(213-750 * 0.9)});
+
+    @media screen and (min-width:768px) {
+      top: size(295);
+    top: calc(50% + #{size(295-1080 * 0.5)});
+      left: size(316);right: auto;
+      width: size(815);
+    }
+  }
+
+  .t1 {
+    position: absolute;
+    top:size-m(345);
+    left: 0;right: 0;margin: auto;
+    width: size-m(250);
+    top: calc(90% + #{size-m(345-750 * 0.9)});
+
+    @media screen and (min-width:768px) {
+    top: calc(50% + #{size(673-1080 * 0.5)});
+      left: size(435);right: auto;
+      width: size(580);
+    }
+  }
+
+  .img {
+    position: absolute;
+    bottom: 0;
+    right: size-m((515-375)*-.5);
+    width: size-m(515);
+
+    @media screen and (min-width:768px) {
+      width: size(1370);
+      right: size(-420);
+    }
+
+    img {
+      position: absolute;
+      width: 100%;
+
+      &:nth-child(1) {
+        top: 0;
+        left: 0;
+        transform: translateX(-3%);
+        animation: an 5s ease-in-out infinite alternate;
+      }
+
+      &:nth-child(2) {
+        position: relative;
+      }
+
+      &:nth-child(3) {
+        bottom: -1.6%;
+        right: 0;left: 0;margin: auto;
+        width: 88%;
+        transform: translateX(-200%);
+        animation: an2 7s linear infinite;
+        margin: 0;
+      }
+
+      &:nth-child(4) {
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    .time{position: absolute;
+    bottom: 34.7%;
+    left: 38.35%;
+    width: 6%;
+    aspect-ratio: 1/1; 
+    fill: #eb7ead;
+    }
+  }
+
+  @keyframes an2 {
+    to {
+        transform: translateX(200%);
+    }
+  }
+
 
 
 }
 </style>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { ref, computed, onMounted, onUnmounted } from 'vue'
 
-const current = ref(0)
-const currentFo = ref(0) // ✨給 fo 用
-
-let timer = null
+const now = ref(new Date())
+let timer
 
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    timer = setInterval(() => {
-      current.value = (current.value + 1) % 2
+  timer = setInterval(() => { now.value = new Date() }, 1000)
+})
+onUnmounted(() => clearInterval(timer))
 
-      // 👉 延遲切換 fo（跟 fade 對齊）
-      setTimeout(() => {
-        currentFo.value = current.value
-      }, 100) // 這裡看你的 fade 時間（0.6s → 建議 300~400）
-    }, 4500)
-  }
+const secondDeg = computed(() => {
+  const s = now.value.getSeconds()
+  return s * 6
+})
+const minuteDeg = computed(() => {
+  const m = now.value.getMinutes()
+  const s = now.value.getSeconds()
+  return m * 6 + s * 0.1   // 分針隨秒平滑移動
+})
+const hourDeg = computed(() => {
+  const h = now.value.getHours() % 12
+  const m = now.value.getMinutes()
+  return h * 30 + m * 0.5  // 時針隨分平滑移動
 })
 
-onBeforeUnmount(() => {
-  if (timer) clearInterval(timer)
-})
+
 </script>
