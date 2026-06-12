@@ -110,7 +110,7 @@
     top: size-m(157);
     left: size-m(30);
     font-size: size-m(18);
-    color: #7E151A;
+    color: #6a1684;
     font-family: "Noto Sans TC";
     font-weight: 700;
     line-height: 160%;
@@ -280,7 +280,7 @@
     width: size-m(99);
     height: size-m(99);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #450957 85.35%);
     opacity: 0.4;
     transform: translateY(-10vw);
     animation: ball 7s ease-in-out 0s infinite alternate-reverse;
@@ -299,7 +299,7 @@
     width: size-m(139);
     height: size-m(139);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(10vw);
     animation: ball 7s ease-in-out -3s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -317,7 +317,7 @@
     width: size-m(48);
     height: size-m(48);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #a43ac4 28.79%, #6a1684 85.35%);
     transform: translateY(10vw);
     animation: ball 7s ease-in-out -6s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -335,7 +335,7 @@
     width: size(245);
     height: size(245);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #450957 85.35%);
     opacity: 0.7;
     transform: translateY(3vw);
     animation: ball 7s ease-in-out -2s infinite alternate-reverse;

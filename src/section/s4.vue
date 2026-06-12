@@ -139,7 +139,7 @@
     width: size-m(149);
     height: size-m(149);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(-50%);
     animation: ball 10s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -157,7 +157,7 @@
     width: size-m(36);
     height: size-m(36);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(15vw);
     animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {

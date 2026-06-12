@@ -59,7 +59,7 @@
           class="checkbox bg-white rounded-md" />
         <p class="text-[#000]">
           本人知悉並同意<label for="policy-modal"
-            class="modal-button text-[#E50012] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+            class="modal-button text-[#c00] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
         </p>
       </div>
       <Policy />
@@ -224,7 +224,7 @@
     width: size-m(197);
     height: size-m(197);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684  14.65%, #450957 85.36%);
     transform: translateY(7vw);
     animation: ball 7s ease-in-out -5s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -243,7 +243,7 @@
     width: size(97);
     height: size(97);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #6a1684 85.35%);
     opacity: 0.7;
     transform: translateY(-3vw);
     animation: ball 7s ease-in-out 0s infinite alternate-reverse;
@@ -255,7 +255,7 @@
     width: size(149);
     height: size(149);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #6a1684 85.35%);
     opacity: 0.4;
     transform: translateY(-5vw);
     animation: ball 7s ease-in-out -3s infinite alternate-reverse;

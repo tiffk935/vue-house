@@ -71,7 +71,7 @@
     width: size-m(36);
     height: size-m(36);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #450957 85.35%);
     transform: translateY(-5vw);
     animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -89,7 +89,7 @@
     width: size-m(72);
     height: size-m(72);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #953bb1 28.79%, #450957 85.35%);
     opacity: 0.5;
     transform: translateY(5vw);
     animation: ball 7s ease-in-out -1s infinite alternate-reverse;
@@ -108,7 +108,7 @@
     width: size(87);
     height: size(87);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(5vw);
     animation: ball 7s ease-in-out -2s infinite alternate-reverse;
   }
@@ -119,7 +119,7 @@
     width: size(43);
     height: size(43);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(2vw);
     animation: ball 7s ease-in-out -3s infinite alternate-reverse;
   }

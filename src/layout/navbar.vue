@@ -164,8 +164,8 @@
         top: size(0);
         right: size(0);
         /* background-color: rgba(139, 199, 130, 0.8); */
-        background: #E50012;
-        background: linear-gradient(90deg, #E50012 0%, #7E151A 100%);
+        background: #6a1684 ;
+        background: linear-gradient(90deg, #6a1684  0%, #450957  100%);
         backdrop-filter: blur(2px);
         width: size(375);
         height: 100%;
@@ -206,7 +206,7 @@
 
         .menu-item-full {
             background: #fff;
-            color: #7E151A;
+            color: #6a1684;
             width: size(232);
             padding: 0;
         }

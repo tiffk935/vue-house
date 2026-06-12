@@ -205,8 +205,8 @@
 
     .contact-item {
       height: 100%;
-      background-color: #7E151A;
-      background: linear-gradient(180deg, #7E151A 0%, #E4262F 100%);
+      background-color: #6a1684;
+      background: linear-gradient(180deg, #450957 0%, #6a1684 100%);
       font-size: size-m(16);
       font-weight: 400;
       color: #fff;

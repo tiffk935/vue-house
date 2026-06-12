@@ -145,7 +145,7 @@
     top: size-m(168);
     left: size-m(82);
     font-size: size-m(18);
-    color: #7E151A;
+    color: #6a1684;
     font-family: "Noto Sans TC";
     font-weight: 700;
     line-height: 160%;
@@ -300,7 +300,7 @@
     width: size-m(148);
     height: size-m(148);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #6a1684 28.79%, #450957 85.35%);
     transform: translateY(15vw);
     animation: ball 5s ease-in-out -4s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -318,7 +318,7 @@
     width: size-m(268);
     height: size-m(268);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     transform: translateY(20vw);
     animation: ball 5s ease-in-out 0s infinite alternate-reverse;
     @media screen and (min-width:768px) {

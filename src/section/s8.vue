@@ -135,7 +135,7 @@
     top: size-m(271);
     left: size-m(36);
     font-size: size-m(18);
-    color: #7E151A;
+    color: #6a1684;
     font-family: "Noto Sans TC";
     font-weight: 700;
     line-height: 160%;
@@ -281,7 +281,7 @@
     width: size-m(39);
     height: size-m(39);
     border-radius: 50%;
-    background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+    background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
     opacity: 0.7;
     transform: translateY(-5vw);
     animation: ball 7s ease-in-out -4s infinite alternate-reverse;
@@ -299,7 +299,7 @@
     width: size-m(140);
     height: size-m(140);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #a33cc2 28.79%, #6a1684 85.35%);
     transform: translateY(-5vw);
     animation: ball 7s ease-in-out -2s infinite alternate-reverse;
     @media screen and (min-width:768px) {
@@ -307,7 +307,7 @@
       right: size(-87);
       width: size(124);
       height: size(124);
-      background: linear-gradient(135deg, #E50012 14.65%, #7E151A 85.36%);
+      background: linear-gradient(135deg, #6a1684 14.65%, #450957 85.36%);
       z-index: 1;
     }
   }
@@ -318,7 +318,7 @@
     width: size-m(90);
     height: size-m(90);
     border-radius: 50%;
-    background: linear-gradient(135deg, #F65337 28.79%, #D12353 85.35%);
+    background: linear-gradient(135deg, #a33cc2 28.79%, #6a1684 85.35%);
     transform: translateY(5vw);
     animation: ball 7s ease-in-out 0s infinite alternate-reverse;
     z-index: 1;
