@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <%- include('src/components/meta.ejs') %>
+  <link rel="preload" as="image" href="@/assets/home/kv-bg.webp" fetchpriority="high">
+  <link rel="stylesheet" href="./style.scss">
+</head>
+<body id="home">
+  <%- include('src/components/header.ejs') %>
+
+  <main>
+    <section id="kv">
+      <img fetchpriority="high" class="logo" src="@/assets/logo-with-text.webp" alt="">
+      <div class="title">平實第一 國際建築<span>｜</span></div>
+      <div class="title2">
+        <span class="num">8600</span><span class="pin">坪</span><span class="city">城市度假</span>
+      </div>
+      <div class="title3">25-75<b>坪</b></div>
+      <img class="slogo" src="@/assets/home/slogo.svg" alt="">
+      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+    </section>
+
+    <section id="area">
+      <div class="pic" style="--ratio: 55.91463%; --ratio-m: 134.4%;">
+        <figure>
+          <img
+            loading="lazy"
+            class="mob"
+            src="@/assets/home/area-m.webp"
+            srcset="
+              @/assets/home/area-m-800.webp  800w,
+            "
+            sizes="100vw"
+            alt=""
+          />
+          <img
+            loading="lazy"
+            class="pc"
+            src="@/assets/home/area.webp"
+            srcset="
+              @/assets/home/area-800.webp  800w,
+              @/assets/home/area-1200.webp 1200w,
+              @/assets/home/area-1600.webp 1600w
+            "
+            sizes="85.4167vw"
+            alt=""
+          />
+        </figure>
+        <div class="info">預留圖說欄位(無圖說隱藏)</div>
+      </div>
+      <div class="pic-content">
+        <div>
+          <div class="label">平實特區</div>
+          <h2>台南信義計劃 最好的都在這裡</h2>
+        </div>
+        <p class="desc">府城最好的人文居住環境在哪？非東區莫屬。而台南東區裡最美好的未來，在平實。</p>
+        <div class="link">
+          <a href="#">〈 閱讀更多 〉</a>
+        </div>
+      </div>
+      <div class="en">GEM OF PINSHI</div>
+    </section>
+
+    <section id="architecture">
+      <div class="pic" style="--ratio: 56.25%; --ratio-m: 177.6%;">
+        <figure>
+          <img
+            loading="lazy"
+            class="mob"
+            src="@/assets/home/architecture-m.webp"
+            srcset="
+              @/assets/home/architecture-m-800.webp  800w,
+            "
+            sizes="100vw"
+            alt=""
+          />
+          <img
+            loading="lazy"
+            class="pc"
+            src="@/assets/home/architecture.webp"
+            srcset="
+              @/assets/home/architecture-800.webp  800w,
+              @/assets/home/architecture-1200.webp 1200w,
+              @/assets/home/architecture-1600.webp 1600w
+            "
+            sizes="100vw"
+            alt=""
+          />
+        </figure>
+        <div class="info">預留圖說欄位(無圖說隱藏)</div>
+      </div>
+      <div class="pic-content">
+        <div>
+          <div class="label">寳實建築</div>
+          <h2>8600坪基地 演繹國際建築語彙</h2>
+        </div>
+        <div class="flex">
+          <p class="desc">讓空間為人而生 生活，共好即是更好。</p>
+          <div class="link">
+            <a href="/pinshi-architecture/">〈 閱讀更多 〉</a>
+          </div>
+        </div>
+      </div>
+      <div class="sub-content">
+        <div class="t1">國城寳實建案與七公頃平時公園示意透視圖</div>
+        <div class="t2">＊此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
+      </div>
+    </section>
+
+    <section id="team">
+      <div class="pic" style="--ratio: 55.91463%; --ratio-m: 164.85714%;">
+        <figure>
+          <img
+            loading="lazy"
+            class="mob"
+            src="@/assets/home/team-m.webp"
+            srcset="
+              @/assets/home/team-m-800.webp  800w,
+            "
+            sizes="93.3333vw"
+            alt=""
+          />
+          <img
+            loading="lazy"
+            class="pc"
+            src="@/assets/home/team.webp"
+            srcset="
+              @/assets/home/team-800.webp  800w,
+              @/assets/home/team-1200.webp 1200w,
+              @/assets/home/team-1600.webp 1600w
+            "
+            sizes="85.4167vw"
+            alt=""
+          />
+        </figure>
+        <div class="info">預留圖說欄位(無圖說隱藏)</div>
+      </div>
+      <div class="pic-content">
+        <div>
+          <div class="label">寳實團隊</div>
+          <h2>國際級大師 世界級美感</h2>
+        </div>
+        <div class="flex">
+          <p class="desc">跨域整合，與世界對話的美學實踐。</p>
+          <div class="link">
+            <a href="#">〈 閱讀更多 〉</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="construction">
+      <div class="pic" style="--ratio: 56.25%; --ratio-m: 158.13333%;">
+        <figure>
+          <img
+            loading="lazy"
+            class="mob"
+            src="@/assets/home/construction-m.webp"
+            srcset="
+              @/assets/home/construction-m-800.webp  800w,
+            "
+            sizes="100vw"
+            alt=""
+          />
+          <img
+            loading="lazy"
+            class="pc"
+            src="@/assets/home/construction.webp"
+            srcset="
+              @/assets/home/construction-800.webp  800w,
+              @/assets/home/construction-1200.webp 1200w,
+              @/assets/home/construction-1600.webp 1600w
+            "
+            sizes="100vw"
+            alt=""
+          />
+        </figure>
+        <div class="info">預留圖說欄位(無圖說隱藏)</div>
+      </div>
+      <div class="pic-content">
+        <div>
+          <div class="label">國城建設</div>
+          <h2>因為國際，所以第一</h2>
+        </div>
+        <div class="flex">
+          <p class="desc">做建築，要做到國際級；<br>做美食，要拿到米其林。</p>
+          <div class="link">
+            <a href="#">〈 閱讀更多 〉</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="work">
+      <div class="pic" style="--ratio: 48.54266%; --ratio-m: 245.14285%;">
+        <figure>
+          <img
+            loading="lazy"
+            class="mob"
+            src="@/assets/home/work-m.webp"
+            srcset="
+              @/assets/home/work-m-800.webp  800w,
+            "
+            sizes="93.3333vw"
+            alt=""
+          />
+          <img
+            loading="lazy"
+            class="pc"
+            src="@/assets/home/work.webp"
+            srcset="
+              @/assets/home/work-800.webp  800w,
+              @/assets/home/work-1200.webp 1200w,
+              @/assets/home/work-1600.webp 1600w
+            "
+            sizes="100vw"
+            alt=""
+          />
+        </figure>
+        <div class="info info1">預留圖說欄位(無圖說隱藏)</div>
+        <div class="info info2">預留圖說欄位(無圖說隱藏)</div>
+      </div>
+      <div class="pic-content">
+        <div>
+          <div class="label">國城作品</div>
+          <h2>走在前 ， 讓後面跟上來</h2>
+        </div>
+        <div class="flex">
+          <p class="desc">把最好的留在台灣。</p>
+          <div class="link">
+            <a href="/gallary/">〈 閱讀更多 〉</a>
+          </div>
+        </div>
+      </div>
+      <div class="logo">
+        <img loading="lazy" src="@/assets/home/work-logo.svg" alt="">
+      </div>
+    </section>
+
+    <section id="news-sec">
+      <div id="news"></div>
+
+      <div class="sec-title">
+        <h2>最新消息</h2>
+        <div class="en-title">NEWS</div>
+      </div>
+
+      <div class="news-inner">
+
+        <div class="main">
+          <div class="photo">
+            <img class="pc" src="<%= mainNews.thumbnail %>" alt="<%= mainNews.title %>" />
+            <img class="mob" src="<%= mainNews.thumbnail_mobile %>" alt="<%= mainNews.title %>">
+          </div>
+          <div class="post-content">
+            <time datetime=""><%= mainNews.date %></time>
+            <h3><%= mainNews.title %></h3>
+            <div class="read-more">READ MORE</div>
+          </div>
+        </div>
+
+        <div class="news-list">
+          <% if (newsList.filter(post => post.type === '平實特區').length > 0) { %>
+            <div class="news-sec">
+              <div class="new-category">平實特區</div>
+              <% newsList.filter(post => post.type === '平實特區').forEach(function(article) { %>
+                <div class="news-item" data-link="<%= article.link %>">
+                  <time class="news-date"><%= article.date %></time>
+                  <h3 class="news-title"><%= article.title %></h3>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+
+          <% if (newsList.filter(post => post.type === '國城時事').length > 0) { %>
+            <div class="news-sec">
+              <div class="new-category">國城時事</div>
+              <% newsList.filter(post => post.type === '國城時事').forEach(function(article) { %>
+                <div class="news-item" data-link="<%= article.link %>">
+                  <time class="news-date"><%= article.date %></time>
+                  <h3 class="news-title"><%= article.title %></h3>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+
+          <% if (newsList.filter(post => post.type === '共感設計').length > 0) { %>
+            <div class="news-sec">
+              <div class="new-category">共感設計</div>
+              <% newsList.filter(post => post.type === '共感設計').forEach(function(article) { %>
+                <div class="news-item" data-link="<%= article.link %>">
+                  <time class="news-date"><%= article.date %></time>
+                  <h3 class="news-title"><%= article.title %></h3>
+                </div>
+              <% }) %>
+            </div>
+          <% } %>
+        </div>
+
+      </div>
+    </section>
+
+    <section id="building">
+      <img loading="lazy" class="logo" src="@/assets/logo-with-text.webp" alt="">
+      <div class="title">平實第一 國際建築<span>｜</span></div>
+      <div class="title2">
+        <span class="num">8600</span><span class="pin">坪</span><span class="city">城市度假</span>
+      </div>
+      <div class="title3">25-75<b>坪</b></div>
+      <img loading="lazy" class="slogo" src="@/assets/home/slogo-red.svg" alt="">
+      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+    </section>
+
+    <section id="order-sec">
+      <div id="order"></div>
+      
+      <div class="container">
+        <div class="sec-title">
+          <h2>預約表單</h2>
+          <div class="en-title">RESERVE</div>
+        </div>
+
+        <form action="" method="post" @submit.prevent="handleSubmit">
+          <div class="input-groups">
+            <div class="input-group">
+              <label>姓　　名</label>
+              <input type="text" name="name" aria-label="name" v-model="formData.name">
+            </div>
+            <div class="input-group">
+              <label>參觀人數</label>
+              <input type="text" name="people" aria-label="amount" v-model="formData.people">
+            </div>
+            <div class="input-group">
+              <label>聯絡電話</label>
+              <input type="text" name="phone" aria-label="phone" v-model="formData.phone">
+            </div>
+            <div class="input-group">
+              <label>電子信箱</label>
+              <input type="text" name="email" aria-label="email" v-model="formData.email">
+            </div>
+            <div class="input-group">
+              <label>備　　註</label>
+              <input type="text" name="msg" aria-label="message" v-model="formData.msg">
+            </div>
+          </div>
+          
+          <div class="recaptcha-and-btn">
+            <div
+              class="g-recaptcha"
+              data-sitekey="6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN"
+              data-callback="recaptchaCallback"
+              data-expired-callback="recaptchaExpiredCallback"
+              data-error-callback="recaptchaErrorCallback"
+            ></div>
+            <button class="send-btn pc">立即預約</button>
+          </div>
+
+          <div class="pretty p-default p-round">
+            <input type="checkbox" aria-label="privacy" v-model="formData.policyChecked" />
+            <div class="state">
+              <label>我同意使用上方提供的資訊與我聯繫，詳情請參閱隱私權聲明。</label>
+            </div>
+          </div>
+          
+          <button class="send-btn mob">立即預約</button>
+        </form>
+
+        <hr>
+
+        <table class="contact-table pc">
+          <tr>
+            <td class="font-sans">
+              <a class="phone" href="tel:06-273-8888">
+                <img src="@/assets/icon-phone.svg" alt="" />
+                <div>立即預約</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://m.me/61573695851738/">
+                <img src="@/assets/icon-messenger.svg" alt="">
+                <div>臉書諮詢</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="http://facebook.com/61573695851738/">
+                <img src="@/assets/icon-fb.svg" alt="">
+                <div>前往 粉絲專頁</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://www.instagram.com/gemofpinshi?igsh=M2F4NmY5bnRvaTli">
+                <img src="@/assets/icon-ig.svg" alt="">
+                <div>Instagram</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://maac.io/3vJTt">
+                <img src="@/assets/icon-line.svg" alt="">
+                <div>LINE @</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="addr" colspan="4">
+              <div>
+                國城寳實 接待中心<div class="line"></div>地址｜台南市 東區 平實路／後甲一路口
+              </div>
+            </td>
+            <td>
+              <a class="gmap" href="<%= info.googleLink %>">立即導航</a>
+            </td>
+          </tr>
+        </table>
+
+        <table class="contact-table mob">
+          <tr>
+            <td class="font-sans" rowspan="2">
+              <a class="phone" href="tel:06-273-8888">
+                <img src="@/assets/icon-phone.svg" alt="" />
+                <div>立即預約</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://m.me/61573695851738/">
+                <img src="@/assets/icon-messenger.svg" alt="">
+                <div>臉書諮詢</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="http://facebook.com/61573695851738/">
+                <img src="@/assets/icon-fb.svg" alt="">
+                <div>前往 粉絲專頁</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="font-sans">
+              <a target="_blank" href="https://www.instagram.com/gemofpinshi?igsh=M2F4NmY5bnRvaTli">
+                <img src="@/assets/icon-ig.svg" alt="">
+                <div>Instagram</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://maac.io/3vJTt">
+                <img src="@/assets/icon-line.svg" alt="">
+                <div>LINE @</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="addr" colspan="3">
+              <div>
+                國城寳實 接待中心<div class="line"></div>地址｜台南市 東區 平實路／後甲一路口
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="3">
+              <a class="gmap" href="<%= info.googleLink %>">立即導航</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="information">
+      <div class="flex">
+        <img class="logo" src="@/assets/logo-with-text-black.png" alt="">
+        <h2>建案資訊</h2>
+        <div class="content font-sans">
+          <div class="list">
+            <div class="item">
+              <div class="t1">投資興建 ｜ </div>
+              <div class="t2">國城建設股份有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">營造工程 ｜ </div>
+              <div class="t2">盈舜營造股份有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">建築代銷 ｜ </div>
+              <div class="t2">聯碩地產行銷團隊</div>
+            </div>
+            <div class="item p">
+              <div class="t1">平面設計 ｜ </div>
+              <div class="t2">
+                林澤森建築師事務所<br>
+                陳俊廷建築師事務所<br>
+                賈書恆建築師事務所
+                <div class="note">＊按姓氏筆畫排列</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="t1">立面設計 ｜ </div>
+              <div class="t2">張瑪龍陳玉霖聯合建築師事務所</div>
+            </div>
+            <div class="item">
+              <div class="t1">公設設計 ｜ </div>
+              <div class="t2">芦沢啓治 建築師事務所</div>
+            </div>
+            <div class="item">
+              <div class="t1">室內設計 ｜ </div>
+              <div class="t2">擊壤設計 林新峰總監</div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="t1">景觀設計 ｜ </div>
+              <div class="t2">橋内庭園設計 橋内智也</div>
+            </div>
+            <div class="item">
+              <div class="t1">燈光設計 ｜ </div>
+              <div class="t2">
+                AURORA Inc 市川善幾<br>
+                偶得設計  陳怡彰
+              </div>
+            </div>
+            <div class="item">
+              <div class="t1">結構工程 ｜ </div>
+              <div class="t2">科建聯合工程顧問有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">建照號碼 ｜ </div>
+              <div class="t2">（114）南工造字第00976號</div>
+            </div>
+            <div class="item">
+              <div class="t1">經 紀 人 ｜ </div>
+              <div class="t2">李聆榕 (107)南市字第00668號</div>
+            </div>
+            <div class="item">
+              <div class="t1">建案位置 ｜ </div>
+              <div class="t2">台南市東區平實段2、3、3-1等三筆地號</div>
+            </div>
+            <div class="item">
+              <div class="t1">接待中心 ｜ </div>
+              <div class="t2">台南市東區平實路／後甲一路口</div>
+            </div>
+            <div class="item">
+              <div class="t1">貴賓專線 ｜ </div>
+              <div class="t2">06 273-8888</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <div id="new-modal">
+    <div class="new-modal-inner">
+      <div class="sec-title">
+        <h2>最新消息</h2>
+        <div class="en-title">NEWS</div>
+      </div>
+      <div class="flex">
+        <figure class="pc">
+          <img src="" alt="">
+          <figcaption>]</figcaption>
+        </figure>
+        <div>
+          <h3></h3>
+          <div class="metadata">
+            <time datetime=""></time>
+            <div class="author"></div>
+          </div>
+          <figure class="mob">
+            <img src="" alt="">
+            <figcaption>]</figcaption>
+          </figure>
+          <div class="content"></div>
+        </div>
+      </div>
+    </div>
+    <div class="close"></div>
+  </div>
+
+  <script type="module" src="./main.js"></script>
+  <script type="module" src="./home.js"></script>
+</body>
+</html>

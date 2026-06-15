@@ -1,0 +1,592 @@
+@use '@/styles/functions' as *;
+@use '@/styles/default';
+
+@function size-m2($size) {
+  $c-size: calc(100vw * $size / 375);
+  @return #{$c-size};
+}
+
+#kv {
+  width: 100%;
+  height: size-m(1333);
+  background-image: url(@/assets/gallary/kv-m.jpg);
+  background-size: cover;
+  position: relative;
+  color: #fff;
+  font-weight: 700;
+  @media (min-width: 768px) {
+    height: size(1080);
+    background-image: url(@/assets/gallary/kv.jpg);
+  }
+
+  .text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: size-m(124) size-m(46);
+    @media (min-width: 768px) {
+      padding: size(74) size(179);
+    }
+  }
+
+  h1 {
+    font-size: size-m(39);
+    line-height: size-m(57);
+    letter-spacing: .1em;
+    margin: 0 0 size-m(22);
+    @media (min-width: 768px) {
+      font-size: size(54);
+      line-height: size(78);
+      margin: 0 0 size(20);
+    }
+  }
+
+  h2 {
+    font-size: size-m(60);
+    line-height: size-m(75);
+    margin: 0 0 size-m(22);
+    @media (min-width: 768px) {
+      font-size: size(83);
+      line-height: size(119);
+      margin: 0 0 size(33);
+    }
+
+    span {
+      display: none;
+      @media (min-width: 768px) {
+        display: inline;
+      }
+    }
+
+    br {
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  h3 {
+    font-size: size-m(24);
+    line-height: size-m(34);
+    letter-spacing: .1em;
+    margin: 0;
+    @media (min-width: 768px) {
+      font-size: size(33);
+      line-height: size(47);
+    }
+  }
+
+  .info {
+    color: #fff;
+    position: absolute;
+    bottom: size-m(10);
+    right: size-m(20);
+    font-size: size-m(14);
+    line-height: 200%;
+    filter: drop-shadow(0 size-m(2) size-m(3) #000);
+    @media (min-width: 768px) {
+      bottom: size(10);
+      right: size(20);
+      font-size: size(14);
+      filter: drop-shadow(0 size(2) size(3) #000);
+    }
+  }
+}
+
+.mob {
+  display: block;
+  @media screen and (min-width:768px) {
+    display: none;
+  }
+}
+
+.pc {
+  display: none;
+  @media screen and (min-width:768px) {
+    display: block;
+  }
+}
+
+.banner {
+  position: relative;
+  margin:0;
+  padding: 0;
+  @media screen and (min-width:768px) {
+  margin: size(115) 0 0 0;
+  padding: 0;
+}
+  img {
+    width: 100%;
+  }
+
+h2 {
+  display: inline-block;
+  font-size: size-m2(17);
+  line-height: size-m2(19);
+  border: size-m2(1) solid currentColor;
+  border-width: 0 0 size-m2(1) 0;
+  padding: size-m2(9) 0;
+  @media screen and (min-width:768px) {
+    font-size: size(40);
+    line-height: size(48);
+    border-width: 0 0 size(1) 0;
+    padding: size(22) 0;
+  }
+}
+    h2{
+      position: absolute;
+      top:size-m2(3);
+      left: size-m2(30);
+      color: #fff;
+      @media screen and (min-width:768px) {
+      border-width: 0 0 size(3) 0;
+      top: size(20);
+        left: size(160);
+        
+      }
+    }
+  .title {
+    text-align: center;
+    padding: 0 size-m2(30);
+    @media screen and (min-width:768px) {
+      text-align: left;
+      padding: 0 size(160);
+    }
+
+    & > div {
+      padding: size-m2(26) 0 size-m2(23) 0;
+      border-bottom: size-m2(1) solid #000;
+      @media screen and (min-width:768px) {
+        padding: size(34) 0 size(44) 0;
+        border-bottom: size(1) solid #000;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    .t1 {
+      font-size: size-m2(20);
+      line-height: size-m2(24);
+      font-weight: 700;
+      margin-bottom: size-m2(9);
+      @media screen and (min-width:768px) {
+        font-size: size(78);
+        line-height: 1;
+        margin-bottom: 0;
+      }
+    }
+
+    .t2 {
+      font-size: size-m2(12);
+      line-height: size-m2(14);
+      @media screen and (min-width:768px) {
+        font-size: size(32);
+        line-height: 1;
+        letter-spacing: .05em;
+      }
+    }
+  }
+}
+
+.c1 {
+  font-family: "Noto Serif TC";
+  font-size: size-m2(15);
+  font-weight: 700;
+  line-height: 133.2%;
+  margin-bottom: size-m2(13);
+  @media screen and (min-width:768px) {
+    font-size: size(44);
+    line-height: 146.2%;
+    margin-bottom: size(93);
+  }
+}
+
+.c2 {
+  font-size: size-m2(11);
+  line-height: size-m2(20);
+  margin-bottom: size-m2(13);
+  @media screen and (min-width:768px) {
+    font-size: size(20);
+    line-height: size(36);
+    margin-bottom: 0;
+  }
+}
+
+.s2, .s3, .s4 {
+  padding: size-m2(43) 0 size-m2(21) 0;
+  @media screen and (min-width:768px) {
+    padding: size(102) size(169) size(133) size(169);
+  }
+
+  .img1, .img2 {
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .img-txt {
+      position: absolute;
+      bottom: size-m2(8);
+      right: size-m2(8);
+      color: #FFF;
+      font-family: "Noto Serif TC";
+      font-size: size-m2(10);
+      font-weight: 700;
+      line-height: 133.2%;
+      @media screen and (min-width:768px) {
+        bottom: size(11);
+        right: size(18);
+        font-size: size(15);
+      }
+    }
+  }
+
+  .img1 {
+    margin-bottom: size-m2(29);
+    @media screen and (min-width:768px) {
+      margin-bottom: size(233);
+    }
+  }
+
+  .img2 {
+    @media screen and (min-width:768px) {
+      width: size(777);
+    }
+  }
+
+  .content {
+    padding: 0 size-m2(30);
+    width: 100%;
+    @media screen and (min-width:768px) {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+  }
+
+  .name {
+    width: auto;
+    height: size-m2(36);
+    display: block;
+    margin-bottom: size-m2(19);
+    @media screen and (min-width:768px) {
+      height: size(115);
+      margin-bottom: size(45.5);
+    }
+  }
+}
+
+.s2 {
+  .t1 {
+    display: block;
+    width: size-m2(260);
+    margin: 0 auto size-m2(7) auto;
+    @media screen and (min-width:768px) {
+      width: size(794.17);
+      margin: 0 auto size(21) auto;
+    }
+  }
+
+  .t2 {
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: size-m2(14);
+    font-weight: 700;
+    line-height: 133.2%;
+    margin-bottom: size-m2(39);
+    @media screen and (min-width:768px) {
+      font-size: size(44);
+      margin-bottom: size(107);
+    }
+  }
+}
+
+.s3 {
+  .content {
+    width: 100%;
+    @media screen and (min-width:768px) {
+      flex-direction: row-reverse;
+    }
+  }
+
+  .name {
+    margin-right: 0;
+    margin-left: auto;
+  }
+
+  .c1, .c2 {
+    text-align: right;
+  }
+}
+
+.s5 {
+  padding: size-m2(48) size-m2(30) size-m2(76) size-m2(30);
+  @media screen and (min-width:768px) {
+    padding: size(60) size(169);
+  }
+
+  .img {
+    position: relative;
+    @media screen and (min-width:768px) {
+      width: size(814);
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .img-txt {
+      position: absolute;
+      bottom: size-m2(5);
+      right: size-m2(7);
+      color: #FFF;
+      font-family: "Noto Serif TC";
+      font-size: size-m2(10);
+      font-weight: 700;
+      line-height: 133.2%;
+      @media screen and (min-width:768px) {
+        bottom: size(10);
+        right: size(17);
+        font-size: size(15);
+      }
+    }
+  }
+
+  .items {
+    .item {
+      background: #fff;
+      margin-bottom: size-m2(22);
+      @media screen and (min-width:768px) {
+        display: flex;
+        align-items: stretch;
+        margin-bottom: size(164);
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .content {
+    padding: size-m2(27) size-m2(18);
+    
+    width: 100%;
+    @media screen and (min-width:768px) {
+      padding: size(29) size(67);
+      width: calc(100% - size(814));
+      display: flex;
+      align-items: flex-end;
+    }
+  }
+
+  .c2 {
+    margin: 0;
+  }
+}
+
+.s6, .s7 {
+  padding: size-m2(42) 0 size-m2(48) 0;
+  @media screen and (min-width:768px) {
+    padding: size(102) size(169);
+  }
+
+  .img1, .img2 {
+    position: relative;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .img-txt {
+      position: absolute;
+      bottom: size-m2(8);
+      right: size-m2(8);
+      color: #FFF;
+      font-family: "Noto Serif TC";
+      font-size: size-m2(10);
+      font-weight: 700;
+      line-height: 133.2%;
+      @media screen and (min-width:768px) {
+        bottom: size(11);
+        right: size(18);
+        font-size: size(15);
+      }
+    }
+  }
+
+  .img1 {
+    margin-bottom: size-m2(41);
+    @media screen and (min-width:768px) {
+      margin-bottom: size(24);
+    }
+  }
+
+  .img2 {
+    @media screen and (min-width:768px) {
+      width: size(884);
+    }
+  }
+
+  .content {
+    padding: 0 size-m2(30);
+    
+    width: 100%;
+    @media screen and (min-width:768px) {
+      padding: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+
+    & > div:nth-child(2) {
+      background: #fff;
+      padding: size-m2(25) size-m2(18);
+      @media screen and (min-width:768px) {
+        padding: size(26) size(38);
+        width: calc(100% - size(884 + 24));
+        display: flex;
+        align-items: flex-end;
+      }
+    }
+  }
+}
+
+.s6 .content {
+  
+    width: 100%;
+  @media screen and (min-width:768px) {
+    flex-direction: row-reverse;
+  }
+}
+
+.s8 {
+  padding: size-m2(40) size-m2(30);
+  @media screen and (min-width:768px) {
+    padding: size(120) 0;
+  }
+
+  .title {
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: size-m2(14);
+    font-weight: 700;
+    line-height: 133.2%;
+    margin-bottom: size-m2(36);
+    @media screen and (min-width:768px) {
+      font-size: size(44);
+      margin-bottom: size(183);
+    }
+  }
+
+  .items {
+    //font-family: "Noto Sans JP";
+    @media screen and (min-width:768px) {
+      display: flex;
+      justify-content: center;
+    }
+
+    .item-group {
+      &:last-child {
+        .item {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+
+    .item {
+      margin-bottom: size-m2(21);
+      background: #fff;
+      padding-bottom: size-m2(1);
+      @media screen and (min-width:768px) {
+        width: size(537);
+        margin: 0 size(133.5) size(133) size(133.5);
+        background: #ffffff00;
+        padding-bottom: size(0);
+      }
+
+      img {
+        width: 100%;
+        display: block;
+        margin-bottom: size-m2(10);
+        @media screen and (min-width:768px) {
+          margin-bottom: size(22);
+        }
+      }
+
+      .c2 {
+        padding: 0 size-m2(18);
+        @media screen and (min-width:768px) {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+
+.s9 {
+  padding: size-m2(12) 0 size-m2(95) 0;
+  @media screen and (min-width:768px) {
+    padding: size(17) 0 size(227) 0;
+  }
+
+  .title {
+    text-align: center;
+    font-family: "Noto Serif TC";
+    font-size: size-m2(14);
+    font-weight: 700;
+    line-height: 133.2%;
+    margin-bottom: size-m2(56);
+    @media screen and (min-width:768px) {
+      font-size: size(44);
+      margin-bottom: size(155);
+    }
+  }
+
+  .img {
+    position: relative;
+    margin-bottom: size-m2(82);
+    @media screen and (min-width:768px) {
+      width: size(1341);
+      margin: 0 auto size(213) auto;
+    }
+
+    img {
+      width: 100%;
+      display: block;
+    }
+
+    .img-txt {
+      position: absolute;
+      bottom: size-m2(8);
+      right: size-m2(8);
+      color: #FFF;
+      font-family: "Noto Serif TC";
+      font-size: size-m2(10);
+      font-weight: 700;
+      line-height: 133.2%;
+      @media screen and (min-width:768px) {
+        bottom: size(11);
+        right: size(18);
+        font-size: size(15);
+      }
+    }
+  }
+
+  .logo {
+    display: block;
+    width: size-m2(90);
+    margin: 0 auto;
+    @media screen and (min-width:768px) {
+      width: size(155);
+    }
+  }
+}

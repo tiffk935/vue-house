@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('src/components/meta.ejs') %>
+  <link rel="preload" as="image" href="@/assets/pinshi/kv.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="@/assets/pinshi/kv-m.webp" fetchpriority="high">
+  <link rel="stylesheet" href="./style.scss">
+</head>
+<body>
+  <%- include('src/components/header.ejs') %>
+
+  <main>
+    <section id="kv">
+      <div class="text">
+        <h1>平實特區</h1>
+        <h2>台南信義計劃 <br>最好的都在這裡</h2>
+        <h3>府城最好的人文居住環境在哪？非東區莫屬。而台南東區裡最美好的未來，在平實。</h3>
+      </div>
+      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+    </section>
+
+    <section id="profit">
+      <div class="flex">
+        <div class="slider">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <figure>
+                  <img loading="lazy" src="@/assets/pinshi/profit1.webp" alt="">
+                  <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                </figure>
+              </div>
+              <div class="swiper-slide">
+                <figure>
+                  <img loading="lazy" src="@/assets/pinshi/profit1.webp" alt="">
+                  <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                </figure>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="content">
+          <div class="subtitle">平實特區</div>
+          <h2>公辦都更的城市發展紅利</h2>
+          <p>「公辦都更」，是由政府主導、公單位發起的都市再造計畫。不同於一般民間合建案受限於零碎土地與容積利益，「公辦都更」站在宏觀的城市發展視角，透過大面積整合性的規劃，將活化土地、開闢公共設施、提升環境景觀與實踐公共利益視為核心目標。這不僅是老舊建築的翻新，更是整座城市機能的深度升級。</p>
+        </div>
+      </div>
+      <div class="table">
+        <img loading="lazy" src="@/assets/pinshi/table.svg" alt="">
+        <div class="btn">點擊放大</div>
+      </div>
+    </section>
+
+    <section id="map">
+      <div class="map-wrapper">
+        <img src="@/assets/pinshi/map.webp" alt="">
+      </div>
+      <div class="mask">
+        <div class="ani">
+          <img class="finger-area" loading="lazy" src="@/assets/pinshi/finger-area.svg" alt="">
+          <img class="finger" loading="lazy" src="@/assets/pinshi/finger.svg" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section id="feature">
+      <div class="item right">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/future/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/future/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">城市未來</div>
+              <h2>對標東京麻布台之丘<br>創造人、<br class="pc">自然與城市的交響曲</h2>
+            </div>
+            <p>借鏡麻布台之丘的成功案例，將住宅、商業與大量綠地整合，實現生活的全能性，更以 TOD 模式創造高效、減碳且人與自然共生的未來居住夢想。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item type2">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/mrt/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/mrt/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">捷運轉運</div>
+              <h2>轉運站 、 捷運藍線<br class="pc">預定約 250 米</h2>
+            </div>
+            <p>約1.4公頃BOT平實森林轉運站於2023年動工，未來將集結市區客運、捷運、商場等功能；台南捷運藍線預計2026年動工，與綠線捷運交會平實轉運站，台南捷運未來即將成形。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item right">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/axis/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/axis/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">十字軸線</div>
+              <h2>小東路首排<br class="pc">交匯中華東路</h2>
+            </div>
+            <p>小東路串連台南火車站、成大校區、對接大灣交流道直上國道；中華東路與中華西路、中華南北構成台南外環道，由此串連台南舊城區各大生活圈，往來皆便捷。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item type2">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/park/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/park/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">公園綠地</div>
+              <h2>平實公園首排&nbsp;<br class="pc">享受7公頃綠意</h2>
+            </div>
+            <p>平實公園南北延伸近百米，分流商業與住宅區動線；園內保留平實營區原生樹種，都會廣場、綠色森林、鄰里綠廊、環境藝術、陽光草坪等五大主題，打造台南東區都市之肺。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item right">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/mall/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/mall/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">時尚購物</div>
+              <h2>南紡時尚進行式&nbsp;<br class="pc">國際動脈零時差</h2>
+            </div>
+            <p>南紡購物中心一、二期商場面積達7.5萬坪，誠品生活、老爺行旅、保時捷概念店…演繹台南時尚最前沿，並與平實重劃商業區緊密相連，共築城市品味與商業繁華的生活樣態。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item type3">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/school/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/school/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">優質學區</div>
+              <h2>成大校區、東光國小、<br class="pc">復興國中小</h2>
+            </div>
+            <p>車程5分鐘抵達東光國小、8分鐘復興中小學，擁有台南最優質少年養成環境；鄰近台南文教核心成大、一中校區車程約10分鐘，鋪排孩子最好的教育環境，就在此地。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item type2">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/stsp/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/stsp/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">台南雙核</div>
+              <h2>工作在南科，生活在平實</h2>
+            </div>
+            <p>2023年，南科產值正式超越竹科，今日是台灣經濟發展引擎，明日未來也是；在南科展現前端科技工作，生活在東區最核心的平實公園特區，用台南最好的豐饒款待您與您的家人。</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="item right">
+        <div class="flex">
+          <div class="slider">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/hospital/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+                <div class="swiper-slide">
+                  <figure>
+                    <img loading="lazy" src="@/assets/pinshi/hospital/1.webp" alt="">
+                    <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content">
+            <div class="title">
+              <div class="subtitle">醫療資源</div>
+              <h2>榮總、奇美、成大醫院</h2>
+            </div>
+            <p>榮總台南分院就在身旁近近照護；台南唯二「醫學中心」等級，奇美醫院亦近在咫尺，國立成大醫院就在不遠處。台南密度最高的高端醫療院所，為您與家人的健康提供全面支援。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <div id="table-modal">
+    <div class="table-modal-inner">
+      <div class="sec-title">左右滑動觀看</div>
+      <div class="table">
+        <img loading="lazy" src="@/assets/pinshi/table.svg" alt="">
+      </div>
+    </div>
+    <div class="close"></div>
+  </div>
+
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="./pinshi.js"></script>
+</body>
+</html>

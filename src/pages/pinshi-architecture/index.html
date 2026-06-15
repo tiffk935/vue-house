@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%- include('src/components/meta.ejs') %>
+  <link rel="preload" as="image" href="@/assets/pinshi-architecture/kv.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="@/assets/pinshi-architecture/kv-m.webp" fetchpriority="high">
+  <link rel="stylesheet" href="./style.scss">
+</head>
+<body>
+  <%- include('src/components/header.ejs') %>
+
+  <main>
+    <section id="kv">
+      <div class="text">
+        <h1>寳實建築</h1>
+        <h2>平實第一 國際建築<br><span>｜</span>8600坪城市渡假</h2>
+        <h3>讓空間為人而生 生活，共好即是更好。</h3>
+      </div>
+      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+    </section>
+
+    <section id="info">
+      <p>在府城土地上，國城寳實以平實特區的規劃本意為起點，貫徹「共創社會公共價值」的初心，展開一場從地貌紋理到人文尺度的深度對話。不論是以開放、自然、與社區為概念的建築，還是以國際視野提煉的台南在地文化而構築的室內空間，抑或是深思台南氣候與生活節奏的景觀設計，讓建築、景觀與人產生真實而自在的連結，也是我們獻給台南的一份誠意之作。</p>
+    </section>
+
+    <section id="architecture">
+      <div class="container">
+        <h2>建築規劃<br>天造地設，為人而生。</h2>
+        <div class="list">
+          <div class="item">
+            <figure>
+              <img loading="lazy" src="@/assets/pinshi-architecture/architecture1.webp" alt="">
+              <div class="info">預留圖說欄位(無圖說隱藏)</div>
+            </figure>
+            <div class="text">
+              <h3>有序律動量體<br>型塑多元生活型態</h3>
+              <p>12棟建築量體依沿路側、公園側及社區內側三種條件各異的環境進行設計思考。沿小東路側 FGHI 棟呼應城市門面意象，利用細部材質差異提升建築自明性與韻律感；公園側 ABE 棟，水平深遮陽台開展朗闊視野，通透屋頂框架創造優雅天際線；CDJK 棟則設定深色系外觀營造沈穩安靜的內斂氛圍。</p>
+            </div>
+          </div>
+          <div class="item">
+            <figure>
+              <img loading="lazy" src="@/assets/pinshi-architecture/architecture2.webp" alt="">
+              <div class="info">預留圖說欄位(無圖說隱藏)</div>
+            </figure>
+            <div class="text">
+              <h3>117%綠覆率<br>如同住進公園裡的家</h3>
+              <p>建築群以低調質樸的現代簡約風為主軸，運用水平陽台、花台與金屬裝飾，展現一致卻富層次的立面語彙，量體高度利用樓層數變化創造律動感；大廳與公設區引入大片綠意與落地窗設計，串聯室內外景觀，彷若度假村般的開放氛圍，打造高綠覆、低建蔽的生活場域，不只是居所，更是現代美學與生活態度的體現。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="public">
+      <div class="container">
+        <h2>公設規劃<br>是家，也是現代簡約渡假酒店。</h2>
+        <div class="list">
+          <div class="item">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <% for(let i=0; i<3; i++) { %>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="@/assets/pinshi-architecture/public1.webp" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="https://placehold.co/1225x780?text=Public%202" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <div class="text">
+              <h3>32%公設比<br>16 項公設的頂奢享受</h3>
+              <p>不必遠行，家就是最迷人的渡假村。國城寶實攜手日本大師芦沢啟治，將「現代簡約酒店」氛圍移植平實特區，從綠意環繞的晨泳，到全日餐廳的品味時光，每一處感官體驗皆來自對細節的極致追求，您擁有的不只是住宅，而是一場永不結束的五感盛宴。</p>
+              <hr>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="swiper" dir="rtl">
+              <div class="swiper-wrapper">
+                <% for(let i=0; i<3; i++) { %>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="@/assets/pinshi-architecture/public3.webp" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="https://placehold.co/1225x780?text=Public%204" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <div class="text">
+              <h3>台南首創<br>All Day Dining<br>全日餐廳</h3>
+              <p>在這裡，精緻料理不再需要遠行。在與綠串連的餐廳，您能在晨光微曦中享用職人早餐，或在午後與友鄰共品午茶。從建築到料理，從品位到品味，我們將「食」的美學融入日常，讓家成為一座永不打烊的五星級度假酒店，為您敬獻全天候的感官饗宴。</p>
+              <hr>
+            </div>
+          </div>
+
+          <div class="item">
+            <div class="swiper">
+              <div class="swiper-wrapper">
+                <% for(let i=0; i<3; i++) { %>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="@/assets/pinshi-architecture/public5.webp" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                  <div class="swiper-slide">
+                    <figure>
+                      <img loading="lazy" src="https://placehold.co/1225x780?text=Public%206" alt="">
+                      <div class="info">預留圖說欄位(無圖說隱藏)</div>
+                    </figure>
+                  </div>
+                <% } %>
+              </div>
+            </div>
+            <div class="text">
+              <h3>廊道串聯公設<br>構築不出國的渡假體驗</h3>
+              <p>廊道不僅是建築間的聯繫，更是串聯所有公設與生活場景的靈魂載體——將全日餐廳的尊榮款待、景觀庭園的四季綠意與歸家的儀式感完美編織，透過光影與微風的引導，讓住戶在移動間優雅過渡心境，使每一處公共空間不再是孤立的方盒，而是在這座「流動藝廊」的串聯下，交織成一場連續且完整的頂級渡假盛宴。</p>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="./pinshi-architecture.js"></script>
+</body>
+</html>
