@@ -13,6 +13,27 @@
     height: size(1080);
     background-image: url(@/assets/pinshi-team/kv.webp);
   }
+  .kv-video-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%; // 依你原本 kv 高度設定
+  }
+
+  .kv-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  // 手機／電腦版切換
+  .mob-video { display: none; }
+  .pc-video  { display: block; }
+
+  @media (max-width: 768px) {
+    .pc-video  { display: none; }
+    .mob-video { display: block; }
+  }
 
   .text {
     position: absolute;
