@@ -2,6 +2,7 @@
 @use '@/styles/default';
 @use 'perfect-scrollbar/css/perfect-scrollbar.css' as perfectScrollbar;
 
+.t0{width: 100%;}
 #kv {
   width: 100%;
   height: size-m(1234);
@@ -47,36 +48,40 @@
 
   .logo {
     position: absolute;
-    top: size-m(21);
-    left: size-m(221);
-    width: size-m(410);
+    top: size-m(136);
+    left: size-m(252);
+    width: size-m(248);
     @media (min-width: 768px) {
-      top: size(-50);
-      left: size(774);
-      width: size(498);
+      top: size(207);
+      left: size(638);
+      width: size(718);
     }
   }
+  // 手機／電腦版切換
+  .mob-logo { display: none; }
+  .pc-logo  { display: block; }
+
+  @media (max-width: 768px) {
+    .pc-logo  { display: none; }
+    .mob-logo { display: block; }
+  }
+
 
   .title {
     position: absolute;
-    top: size-m(760);
+    top: size-m(945);
+    font-size: size-m(52);
     left: 0;
     width: 100%;
     text-align: center;
     @media (min-width: 768px) {
-      top: size(785);
-      left: size(526.73);
-      width: auto;
+      top: size(740);
+    font-size: size(73);
+    text-align: center;
     }
 
-    span {
-      display: none;
-      @media (min-width: 768px) {
-        display: inline;
-      }
-    }
   }
-
+/*
   .title2 {
     position: absolute;
     top: size-m(845);
@@ -115,29 +120,30 @@
       }
     }
   }
+    */
 
   .title3 {
     position: absolute;
-    top: size-m(991);
-    left: size-m(91);
-    width: size-m(569);
+    top: size-m(1035);
+    left: 0;
+    width: 100%;
     text-align: center;
-    font-size: size-m(54);
-    font-weight: 400;
+    font-size: size-m(50);
+    font-weight: 700;
     letter-spacing: .05em;
     text-indent: .05em;
-    position: relative;
+    //position: relative;
     @media (min-width: 768px) {
-      top: size(867);
-      left: size(592);
-      width: size(733);
-      font-size: size(64);
+    font-size: size(73);
+      top: size(844);
+    //  width: size(733);
+      font-size: size(50);
 
       b {
         font-size: size(50);
       }
     }
-
+/*
     &:before, &:after {
       content: '';
       position: absolute;
@@ -157,6 +163,8 @@
     &:after {
       right: 0;
     }
+
+    */
   }
 
   .slogo {
@@ -245,7 +253,7 @@
 
 .pic-content {
   width: size-m(652);
-  padding: size-m(42.37) size-m(35) size-m(20) size-m(50);
+  padding: size-m(42) size-m(35) size-m(25) size-m(50);
   background: #fff;
   position: relative;
   position: absolute;
@@ -266,13 +274,12 @@
     font-weight: 700;
     letter-spacing: .11em;
     padding: 0 size-m(10) size-m(3) size-m(10);
-    border: size-m(1) solid #4D4D4D;
+    border: 1px solid #0007;
     display: inline;
     margin-bottom: size-m(18);
     @media (min-width: 768px) {
       font-size: size(28);
       padding: 0 size(10) size(2) size(10);
-      border: size(1) solid #4D4D4D;
     }
   }
 
@@ -329,6 +336,9 @@
     @media (min-width: 768px) {
       width: size(1640);
       margin: 0 0 0 auto;
+    }
+    @media (max-width: 768px) {
+    .info{bottom:auto;top: 0.5em;}
     }
   }
 
@@ -450,6 +460,7 @@
         display: block;
       }
     }
+    .flex{align-items: flex-end;}
   }
 }
 
@@ -540,7 +551,7 @@
     @media (min-width: 768px) {
       text-align: left;
       font-size: size(23);
-      margin-bottom: size(83);
+      margin-bottom: 0;
     }
   }
 
@@ -550,6 +561,13 @@
       justify-content: space-between;
       align-items: flex-start;
       flex-direction: row-reverse;
+      &::after{content: "";
+      display: block;
+      order:2;
+      width: 1px;
+      align-self:stretch;
+      background: #0006;
+      }
     }
   }
 
@@ -560,6 +578,7 @@
     @media (min-width: 768px) {
       width: size(742);
       margin: 0;
+      order:1;
     }
 
     .photo {
@@ -627,6 +646,7 @@
     @media (min-width: 768px) {
       margin-top: size(87);
       width: size(800);
+      order:3;
     }
 
     .news-sec {
@@ -640,13 +660,12 @@
       font-size: size-m(22);
       font-weight: 700;
       padding-bottom: size-m(15);
-      margin-bottom: size-m(15);
-      border-bottom: size-m(1) solid #000;
+      margin-bottom: size-m(18);
+      border-bottom: 1px solid #0007;
       @media (min-width: 768px) {
         font-size: size(25);
         padding-bottom: size(18);
         margin-bottom: size(28);
-        border-bottom: size(1) solid #000;
       }
     }
 
@@ -860,6 +879,7 @@
   @media (min-width: 768px) {
     background-image: url(@/assets/sec-bg.webp);
     background-size: cover;
+  padding: size(46) size(117) size(0) size(117);
   }
 
   h2 {
@@ -887,8 +907,8 @@
       text-align: left;
       font-size: size(23);
       width: size(1686);
-      margin: 0 auto;
-      margin-bottom: size(110);
+      margin: 0 auto .5em;
+     margin-bottom: size(90);
     }
   }
 
@@ -921,7 +941,7 @@
     align-items: flex-end;
     margin-bottom: size-m(37);
     @media (min-width: 768px) {
-      margin-bottom: size(64);
+      margin-bottom: size(30);
     }
 
     time {
@@ -981,7 +1001,8 @@
   .content {
     @media (min-width: 768px) {
       position: relative;
-      max-height: size(779);
+      height:calc(100vh - size(430));
+     // max-height: size(779);
       // overflow-y: auto;
       overflow: hidden;
       padding-right: size(40);

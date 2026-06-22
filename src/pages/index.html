@@ -12,6 +12,7 @@
 
     <main>
       <section id="kv">
+        <!--  <img src="@/assets/home/mo.png" class="t0"> -->
         <div class="kv-video-wrapper">
           <!-- 電腦版 -->
           <video class="kv-video pc-video" autoplay muted loop playsinline preload="auto">
@@ -23,12 +24,10 @@
           </video>
         </div>
 
-        <img fetchpriority="high" class="logo" src="@/assets/logo-with-text.webp" alt="">
-        <div class="title">平實第一 國際建築<span>｜</span></div>
-        <div class="title2">
-          <span class="num">8600</span><span class="pin">坪</span><span class="city">城市度假</span>
-        </div>
-        <div class="title3">25-75<b>坪</b></div>
+        <img fetchpriority="high" class="logo pc-logo" src="@/assets/logo_l.svg" alt="">
+        <img fetchpriority="high" class="logo mob-logo" src="@/assets/logo_l_m.svg" alt="">
+        <div class="title">二代寶實力<span>｜</span>守富平實力</div>
+        <div class="title3">平實公園首排｜25-75<b>坪</b></div>
         <img class="slogo" src="@/assets/home/slogo.svg" alt="">
         <!-- <div class="info">預留圖說欄位(無圖說隱藏)</div>  -->
       </section>
@@ -37,7 +36,7 @@
         <div class="pic" style="--ratio: 55.91463%; --ratio-m: 134.4%;">
           <figure>
             <img loading="lazy" class="mob" src="@/assets/home/area-m.webp" srcset="
-              @/assets/home/area-m-800.webp  800w,
+              @/assets/home/area-m-560.webp  560w,
             " sizes="100vw" alt="" />
             <img loading="lazy" class="pc" src="@/assets/home/area.webp" srcset="
               @/assets/home/area-800.webp  800w,
@@ -54,7 +53,7 @@
           </div>
           <p class="desc">府城最好的人文居住環境在哪？非東區莫屬。而台南東區裡最美好的未來，在平實。</p>
           <div class="link">
-            <a href="#">〈 閱讀更多 〉</a>
+            <a href="/pinshi/">〈 閱讀更多 〉</a>
           </div>
         </div>
         <div class="en">GEM OF PINSHI</div>
@@ -114,7 +113,7 @@
           <div class="flex">
             <p class="desc">跨域整合，與世界對話的美學實踐。</p>
             <div class="link">
-              <a href="#">〈 閱讀更多 〉</a>
+              <a href="/pinshi-team/">〈 閱讀更多 〉</a>
             </div>
           </div>
         </div>
@@ -142,7 +141,7 @@
           <div class="flex">
             <p class="desc">做建築，要做到國際級；<br>做美食，要拿到米其林。</p>
             <div class="link">
-              <a href="#">〈 閱讀更多 〉</a>
+              <a href="/team/">〈 閱讀更多 〉</a>
             </div>
           </div>
         </div>
@@ -192,15 +191,15 @@
 
           <div class="main">
             <div class="photo">
-              <img class="pc" src="<%= mainNews.thumbnail %>" alt="<%= mainNews.title %>" />
-              <img class="mob" src="<%= mainNews.thumbnail_mobile %>" alt="<%= mainNews.title %>">
+              <img class="pc" src="<%= mainNews.thumbnail %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>" />
+              <img class="mob" src="<%= mainNews.thumbnail_mobile %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>">
             </div>
             <div class="post-content">
               <time datetime="">
                 <%= mainNews.date %>
               </time>
               <h3>
-                <%= mainNews.title %>
+                <%- mainNews.title %>
               </h3>
               <div class="read-more">READ MORE</div>
             </div>

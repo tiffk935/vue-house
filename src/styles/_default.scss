@@ -15,20 +15,19 @@ body {
   font-size: size-m(20);
   line-height: 180%;
   margin: 0;
-  background-image: url(@/assets/sec-bg-m.webp);
+  background: url(@/assets/sec-bg-m.jpg) fixed;
   background-size: 100% auto;
+
   @media (min-width: 768px) {
     font-size: size(17);
     line-height: 200%;
-    background-image: url(@/assets/sec-bg2.webp);
-    background-size: size(750) auto;
+    background-image: url(@/assets/sec-bg.jpg);
+      background-size: cover;
   }
 
-  &#home {
-    @media (min-width: 768px) {
-      background-image: url(@/assets/sec-bg.webp);
-      background-size: cover;
-    }
+
+  &.modal-open {
+    overflow: hidden;
   }
 }
 
@@ -45,6 +44,7 @@ figure {
     font-size: size-m(14);
     line-height: 200%;
     filter: drop-shadow(0 size-m(2) size-m(3) #000);
+
     @media (min-width: 768px) {
       bottom: size(10);
       right: size(20);
@@ -62,6 +62,7 @@ p {
   font-size: size-m(20);
   line-height: 180%;
   margin: 0;
+
   @media (min-width: 768px) {
     font-size: size(17);
     line-height: 200%;
@@ -83,6 +84,7 @@ p {
   align-items: center;
   padding: 0;
   z-index: 999;
+
   @media (min-width: 768px) {
     height: size(96);
     padding: 0 size(30);
@@ -111,6 +113,7 @@ p {
     height: size-m(128);
     position: relative;
     cursor: pointer;
+
     @media (min-width: 768px) {
       display: none;
     }
@@ -153,6 +156,7 @@ p {
 
   #main-header-links {
     display: none;
+
     @media (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -160,12 +164,14 @@ p {
 
     .logo {
       display: none;
+
       @media (min-width: 768px) {
         display: block;
         margin-right: size(29);
-        
+
         img {
-          width: size(67);
+          width: size(30);
+          vertical-align: bottom;
         }
       }
     }
@@ -189,6 +195,7 @@ p {
 
   .contact-links {
     display: none;
+
     @media (min-width: 768px) {
       display: flex;
       align-items: center;
@@ -239,11 +246,12 @@ footer {
   width: 100%;
   padding: size-m(32) 0 0 0;
   border-top: size-m(1) solid #999999;
+
   @media (min-width: 768px) {
     padding: 0;
   }
 
-  & > div {
+  &>div {
     @media (min-width: 768px) {
       display: flex;
       justify-content: space-between;
@@ -259,6 +267,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin-bottom: size-m(26);
+
     @media (min-width: 768px) {
       padding: 0;
       margin-bottom: 0;
@@ -268,6 +277,7 @@ footer {
       display: block;
       width: size-m(224);
       height: auto;
+
       @media (min-width: 768px) {
         width: size(199);
         margin-left: size(65);
@@ -275,13 +285,14 @@ footer {
       }
     }
 
-    & > div {
+    &>div {
       width: size-m(274);
       display: flex;
       flex-wrap: wrap;
       padding-bottom: size-m(16);
       border-bottom: size-m(1) solid #999;
       gap: size-m(3) size-m(17);
+
       @media (min-width: 768px) {
         width: size(872);
         height: size(77);
@@ -299,6 +310,7 @@ footer {
         font-size: size-m(18);
         font-weight: 600;
         letter-spacing: .1em;
+
         @media (min-width: 768px) {
           font-size: size(22);
         }
@@ -310,6 +322,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0 size-m(26) size-m(22) size-m(26);
+
     @media (min-width: 768px) {
       padding: 0 size(80) 0 size(51);
       flex: 1;
@@ -320,6 +333,7 @@ footer {
       width: size-m(50);
       height: size-m(50);
       cursor: pointer;
+
       @media (min-width: 768px) {
         width: size(43);
         height: size(43);
@@ -340,6 +354,7 @@ footer {
       line-height: 1;
       font-weight: 600;
       cursor: pointer;
+
       @media (min-width: 768px) {
         width: size(222);
         height: size(43);
@@ -354,6 +369,7 @@ footer {
         margin-left: size-m(10);
         font-weight: 400;
         font-family: "Noto Sans TC", sans-serif;
+
         @media (min-width: 768px) {
           font-size: size(14.46);
           margin-left: size(10);
@@ -368,6 +384,7 @@ footer {
     height: size-m(40);
     background-image: url(@/assets/menubg.webp);
     background-size: cover;
+
     @media (min-width: 768px) {
       height: size(18);
     }
@@ -383,6 +400,7 @@ footer {
   background-position: size-m(-464) 0;
   background-size: auto size-m(100);
   z-index: 1;
+
   @media (min-width: 768px) {
     display: none !important;
   }
@@ -432,7 +450,8 @@ footer {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;  
+  height: 100%;
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -443,7 +462,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,.3);
+    background: rgba(0, 0, 0, .3);
     backdrop-filter: blur(8px);
   }
 
@@ -453,13 +472,13 @@ footer {
     overflow-y: auto;
     padding: size-m(116) 0;
     padding-bottom: size-m(50);
-    background: rgba(0,0,0,.75);
+    background: rgba(0, 0, 0, .75);
     transform: translateX(-100%);
   }
 
   .logo img {
-    width: size-m(245);
-    margin-left: size-m(93);
+    width: size-m(190);
+    margin-left: size-m(90);
     margin-bottom: size-m(74);
   }
 
