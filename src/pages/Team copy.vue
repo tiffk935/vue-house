@@ -54,10 +54,10 @@
             米其林是國城對「國際標準的高端生活」的詮釋，也是一種對細節的執著、對品質的嚴謹、對生活的尊重，透過跨界的生活實踐，國城希望讓建築之外的日常，也能與世界同步，成為人們與城市共享的高端品味。</div>
         </div>
         <template v-for="(item, idx) in list2" :key="idx">
-        <div class="item" data-aos="fade-up" data-aos-duration="1000" 
-          :data-aos-delay="idx * 200" >
+        <div v-if="!(isMobile && !item.desc && !item.srcm)" class="item" data-aos="fade-up" data-aos-duration="1000" 
+          :data-aos-delay="idx * 200" :key="idx">
           <div class="photo">
-            <img :src="getImg(`../assets/team/2/${idx + 1}.webp`)" :alt="item.name" />
+            <img :src="isMobile && item.srcm ? item.srcm : getImg(`../assets/team/2/${idx + 1}.webp`)" :alt="item.name" />
             <img class="icon" v-if="item.icon" src="@/assets/team/icon.svg" />
           </div>
           <div class="info" v-if="item.desc">
@@ -283,20 +283,6 @@
         .item{
           .title{text-transform: uppercase;}
         }
-      }
-      &.items2{
-        margin: 0 0 func.size-m(50);
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: func.size-m(20) func.size-m(10);
-        .item{flex: 1;
-          width: 29%;
-         flex-direction: column;
-          padding: 0 0;
-          margin-bottom: 0;
-          background: none;}
       }
 
       .item {
