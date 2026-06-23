@@ -239,15 +239,17 @@
     position: absolute;
     bottom: size-m(10);
     right: size-m(20);
-    font-size: size-m(14);
+    font-size: size-m(12);
     line-height: 200%;
     filter: drop-shadow(0 size-m(2) size-m(3) #000);
+    text-align: right;
     @media (min-width: 768px) {
       bottom: size(10);
       right: size(20);
-      font-size: size(14);
+      font-size: size(12);
       filter: drop-shadow(0 size(2) size(3) #000);
     }
+    span{font-size: 1.8em;font-weight: 600;}
   }
 }
 

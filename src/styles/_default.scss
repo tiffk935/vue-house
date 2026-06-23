@@ -44,6 +44,7 @@ figure {
     font-size: size-m(14);
     line-height: 200%;
     filter: drop-shadow(0 size-m(2) size-m(3) #000);
+    text-align: right;
 
     @media (min-width: 768px) {
       bottom: size(10);
