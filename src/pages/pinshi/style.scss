@@ -401,10 +401,14 @@ figure {
       .slider {
         margin-left: size-m(-45);
         margin-right: size-m(-45);
+          height: size-m(500);
         @media (min-width: 768px) {
           width: 100%;
+          height: size(823);
           margin: 0 0 size(77) 0;
         }
+        > div,figure{height: 100%;}
+        img{height: 100%;object-fit: cover;}
       }
 
       .content {

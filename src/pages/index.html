@@ -180,6 +180,7 @@
       </section>
 
       <section id="news-sec">
+      <!--   <img src="@/assets/news/mo.png" class="t0">  -->
         <div id="news"></div>
 
         <div class="sec-title">
@@ -201,7 +202,10 @@
               <h3>
                 <%- mainNews.title %>
               </h3>
-              <div class="read-more">READ MORE</div>
+              <div class="author">
+                <%- mainNews.author %>
+              </div>
+              <!-- <div class="read-more">READ MORE</div>  -->
             </div>
           </div>
 
@@ -259,14 +263,11 @@
       </section>
 
       <section id="building">
-        <img loading="lazy" class="logo" src="@/assets/logo-with-text.webp" alt="">
-        <div class="title">平實第一 國際建築<span>｜</span></div>
-        <div class="title2">
-          <span class="num">8600</span><span class="pin">坪</span><span class="city">城市度假</span>
-        </div>
-        <div class="title3">25-75<b>坪</b></div>
+        <img loading="lazy" class="logo" src="@/assets/logo_l.svg" alt="">
+        <div class="title">二代寶實力<span>｜</span>守富平實力</div>
+        <div class="title3">平實公園首排｜25-75<b>坪</b></div>
         <img loading="lazy" class="slogo" src="@/assets/home/slogo-red.svg" alt="">
-        <div class="info">預留圖說欄位(無圖說隱藏)</div>
+        <div class="info"><span>國城寳實建案與七公頃平時公園示意透視圖</span><br>＊此為建物外觀3D效果參考示意圖，周遭環境係電腦合成示意表現。</div>
       </section>
 
       <section id="order-sec">
@@ -419,8 +420,9 @@
 
       <section id="information">
         <div class="flex">
-          <img class="logo" src="@/assets/logo-with-text-black.png" alt="">
-          <h2>建案資訊</h2>
+         <img fetchpriority="high" class="logo pc-logo" src="@/assets/logo2.svg" alt="">
+        <img fetchpriority="high" class="logo mob-logo" src="@/assets/logo3.svg" alt="">
+        <h2>建案資訊</h2>
           <div class="content font-sans">
             <div class="list">
               <div class="item">

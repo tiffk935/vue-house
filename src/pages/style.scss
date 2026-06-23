@@ -1,8 +1,16 @@
 @use '@/styles/functions' as *;
 @use '@/styles/default';
 @use 'perfect-scrollbar/css/perfect-scrollbar.css' as perfectScrollbar;
+.t0{position: absolute;top: 0;left: 0;width: 100%;opacity: .2; pointer-events: none;}
 
-.t0{width: 100%;}
+  // 手機／電腦版切換
+  .mob-logo { display: none; }
+  .pc-logo  { display: block; }
+
+  @media (max-width: 768px) {
+    .pc-logo  { display: none; }
+    .mob-logo { display: block; }
+  }
 #kv {
   width: 100%;
   height: size-m(1234);
@@ -57,14 +65,6 @@
       width: size(718);
     }
   }
-  // 手機／電腦版切換
-  .mob-logo { display: none; }
-  .pc-logo  { display: block; }
-
-  @media (max-width: 768px) {
-    .pc-logo  { display: none; }
-    .mob-logo { display: block; }
-  }
 
 
   .title {
@@ -81,46 +81,6 @@
     }
 
   }
-/*
-  .title2 {
-    position: absolute;
-    top: size-m(845);
-    left: 0;
-    width: 100%;
-    text-align: center;
-    @media (min-width: 768px) {
-      top: size(775);
-      left: size(989.46);
-      width: auto;
-    }
-
-    .num {
-      font-size: size-m(92);
-      font-weight: 400;
-      margin-right: size-m(4);
-      margin-left: -.05em;
-      letter-spacing: .05em;
-      @media (min-width: 768px) {
-        top: size(785);
-        left: size(989.46);
-        width: auto;
-        font-size: size(64);
-        margin-right: size(4);
-        margin-left: -.04em;
-        letter-spacing: .04em;
-      }
-    }
-
-    .pin {
-      font-size: size-m(56);
-      margin-right: size-m(20);
-      @media (min-width: 768px) {
-        font-size: size(50);
-        margin-right: .05em;
-      }
-    }
-  }
-    */
 
   .title3 {
     position: absolute;
@@ -143,28 +103,6 @@
         font-size: size(50);
       }
     }
-/*
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: size-m(160);
-      border-bottom: size-m(0.83) solid #fff;
-      @media (min-width: 768px) {
-        width: size(244);
-        border-bottom-width: size(1);
-      }
-    }
-
-    &:before {
-      left: 0;
-    }
-
-    &:after {
-      right: 0;
-    }
-
-    */
   }
 
   .slogo {
@@ -511,13 +449,13 @@
     }
   }
 }
-
 #news-sec {
   position: relative;
-  padding: size-m(46) size-m(25) size-m(76) size-m(25);
+  padding: size-m(46) size-m(25) size-m(20) size-m(25);
   @media (min-width: 768px) {
-    padding: size(45) size(117) size(40) size(117);
+    padding: size(53) size(117) size(40) size(117);
   }
+
 
   #news {
     position: absolute;
@@ -549,11 +487,11 @@
     text-align: center;
     font-size: size-m(18);
     font-weight: 700;
-    margin-bottom: size-m(49);
+    margin-bottom: size-m(40);
     @media (min-width: 768px) {
       text-align: left;
       font-size: size(23);
-      margin-bottom: 0;
+      margin-bottom: -.3em;
     }
   }
 
@@ -567,7 +505,7 @@
       display: block;
       order:2;
       width: 1px;
-      align-self:stretch;
+      align-self:stretch; align-items:stretch;
       background: #0006;
       }
     }
@@ -575,13 +513,17 @@
 
   .main {
     font-family: "Noto Sans TC", sans-serif;
-    cursor: pointer;
+  cursor: pointer;
     margin-bottom: size-m(28);
     @media (min-width: 768px) {
       width: size(742);
       margin: 0;
       order:1;
     }
+  // ✅ content 為空時取消點擊樣式
+  &.no-modal {
+    cursor: default;
+  }
 
     .photo {
       @media (min-width: 768px) {
@@ -609,30 +551,39 @@
 
     .post-content {
       background: #fff;
-      padding: size-m(17) size-m(18) size-m(26) size-m(25);
+      padding: size-m(2) size-m(18) size-m(5) size-m(20);
       @media (min-width: 768px) {
-        padding: size(19) size(20) size(24) size(27);
+        padding: size(7) size(20) size(7) size(31);
       }
     }
 
     time {
-      font-size: size-m(20);
+      font-size: size-m(14);
       @media (min-width: 768px) {
-        font-size: size(16);
+        font-size: size(19);
       }
     }
 
     h3 {
-      margin: size-m(10) 0;
-      font-size: size-m(24);
-      line-height: 120%;
+      margin: size-m(0) 0;
+      font-size: size-m(17);
+      line-height: 1.6;
       font-weight: 600;
       @media (min-width: 768px) {
-        margin: size(19) 0;
-        font-size: size(25);
+        margin: size(2) 0;
+        font-size: size(23.5);
+      line-height: 1.7;
       }
     }
-
+.author{
+      line-height: 1.7;
+      font-weight: 600;
+        margin: size-m(10) 0;
+      font-size: size-m(14);
+      @media (min-width: 768px) {
+        margin: size(15) 0;
+        font-size: size(20);
+      }}
     .read-more {
       text-align: right;
       color: #8C6239;
@@ -649,12 +600,16 @@
       margin-top: size(87);
       width: size(800);
       order:3;
+      align-self:stretch; 
+      display: flex;
+      flex-direction: column;
+    justify-content:space-between;
     }
 
     .news-sec {
-      margin-bottom: size-m(66);
+      margin-bottom: size-m(83);
       @media (min-width: 768px) {
-        margin-bottom: size(75);
+        margin-bottom: size(100);
       }
     }
 
@@ -675,13 +630,17 @@
       display: flex;
       margin-bottom: size-m(17);
       font-family: "Noto Sans TC", sans-serif;
-      font-size: size-m(20);
-      line-height: 120%;
+      font-size: size-m(12);
+      line-height: 1.2;
       cursor: pointer;
       @media (min-width: 768px) {
-        margin-bottom: size(19);
-        font-size: size(16);
+        margin-bottom: 1em;
+        font-size: size(14);
       }
+  &.no-modal {
+    cursor: default;
+  }
+
 
       &:last-child {
         margin-bottom: 0;
@@ -690,7 +649,8 @@
       time {
         margin-right: size-m(16);
         @media (min-width: 768px) {
-          margin-right: size(19);
+          margin-right:.8em;
+          font-size: 1.2em;
         }
       }
 
@@ -720,149 +680,77 @@
     background-size: cover;
     font-size: size(50);
   }
-
-  .logo {
+ .logo {
     position: absolute;
-    top: size-m(-21);
-    left: size-m(270);
-    width: size-m(284.28);
+    top: size-m(110);
+    left: 0;right: 0;margin: auto;
+    width: size-m(570);
     @media (min-width: 768px) {
-      top: size(-4);
-      left: size(775);
-      width: size(496);
+      top: size(130);
+      width: size(920);
     }
   }
+
 
   .title {
     position: absolute;
-    top: size-m(466.56);
+    top: size-m(565);
+    font-size: size-m(55);
     left: 0;
     width: 100%;
     text-align: center;
     @media (min-width: 768px) {
-      top: size(827);
-      left: size(527);
-      width: auto;
-      line-height: size(75);
-    }
-
-    span {
-      display: none;
-      @media (min-width: 768px) {
-        display: inline;
-      }
-    }
-  }
-
-  .title2 {
-    position: absolute;
-    top: size-m(549.63);
-    left: 0;
-    width: 100%;
+      top: size(830);
+    font-size: size(88);
     text-align: center;
-    @media (min-width: 768px) {
-      top: size(827.29);
-      left: size(989.74);
-      width: auto;
-      line-height: size(75);
     }
 
-    .num {
-      font-size: size-m(78.1);
-      font-weight: 400;
-      margin-right: size-m(8);
-      margin-left: -.05em;
-      letter-spacing: .05em;
-      @media (min-width: 768px) {
-        top: size(827.29);
-        left: size(989.74);
-        width: auto;
-        font-size: size(64);
-        margin-right: size(4);
-        margin-left: -.04em;
-        letter-spacing: .04em;
-        line-height: size(75);
-      }
-    }
-
-    .pin {
-      font-size: size-m(47.54);
-      margin-right: size-m(18);
-      @media (min-width: 768px) {
-        font-size: size(50);
-        line-height: size(75);
-        margin-right: .05em;
-      }
-    }
   }
-
   .title3 {
     position: absolute;
-    top: size-m(662.43);
-    left: size-m(135.39);
-    width: size-m(483.23);
+    top: size-m(650);
+    left: 0;
+    width: 100%;
     text-align: center;
-    font-size: size-m(57.73);
-    font-weight: 400;
+    font-size: size-m(40);
+    font-weight: 700;
     letter-spacing: .05em;
     text-indent: .05em;
-    position: relative;
+    //position: relative;
     @media (min-width: 768px) {
-      top: size(909);
-      left: size(593);
-      width: size(733);
-      font-size: size(64);
-
-      b {
-        font-size: size(50);
-      }
-    }
-
-    &:before, &:after {
-      content: '';
-      position: absolute;
-      top: 50%;
-      width: size-m(135);
-      border-bottom: size-m(0.7) solid #fff;
-      @media (min-width: 768px) {
-        width: size(244);
-        border-bottom-width: size(1);
-      }
-    }
-
-    &:before {
-      left: 0;
-    }
-
-    &:after {
-      right: 0;
+    font-size: size(73);
+      top: size(957);
+      font-size: size(60);
     }
   }
 
   .slogo {
     position: absolute;
-    top: size-m(762);
-    left: size-m(279);
-    width: size-m(190);
+    top: size-m(730);
+    left: 0;right: 0;margin: auto;
+    width: size-m(170);
     @media (min-width: 768px) {
-      top: size(1034);
-      left: size(853.83);
-      width: size(212.7);
+      top: size(1070);
+      width: size(270);
     }
   }
 
-  .info {
+    .info {
+    color: #fff;
     position: absolute;
     bottom: size-m(10);
     right: size-m(20);
-    font-size: size-m(14);
-    line-height: 2;
-    font-weight: 400;
+    font-size: size-m(12);
+    line-height: 200%;
+    filter: drop-shadow(0 size-m(2) size-m(3) #000);
+    text-align: right;
     @media (min-width: 768px) {
       bottom: size(10);
       right: size(20);
-      font-size: size(14);
+      font-size: size(12);
+      filter: drop-shadow(0 size(2) size(3) #000);
     }
+    span{font-size: 1.8em;font-weight: 600;}
   }
 }
 
@@ -1458,28 +1346,26 @@
 }
 
 #information {
-  padding: 0 size-m(99) size-m(125) size-m(99);
+  padding: size-m(100) size-m(99) size-m(125) size-m(99);
   @media (min-width: 768px) {
-    padding: size(13) 0 size(157) 0;
+    padding: size(130) 0 size(157) 0;
   }
 
   .flex {
     @media (min-width: 768px) {
-      width: size(1363);
+      width: size(1500);
       margin: 0 auto;
       position: relative;
       display: flex;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: center;
     }
   }
 
   .logo {
-    width: size-m(284.28);
-    margin: 0 0 size-m(48) size-m(170);
-    display: block;
+    width: size-m(520);
+    margin: 0 auto size-m(100) auto;
     @media (min-width: 768px) {
-      display: block;
       width: size(400);
       margin: 0;
     }
@@ -1493,8 +1379,8 @@
     @media (min-width: 768px) {
       writing-mode: vertical-rl;
       position: absolute;
-      top: size(120);
-      left: size(344);
+      top: size(3);
+      left: size(490);
       font-size: size(33);
       margin: 0;
       letter-spacing: .3em;
@@ -1506,7 +1392,7 @@
         left: 50%;
         transform: translateX(-50%);
         width: size(1);
-        height: size(293);
+        height: size(300);
         background: #999999;
       }
     }

@@ -11,7 +11,10 @@ export const newsImages = import.meta.glob('@/assets/news/**/*.{png,jpg,jpeg,web
 
 let ps;
 const newsItems = document.querySelectorAll('#news-sec .news-item');
-
+// 初始化：content 為空就標記 no-modal class
+if (!mainNews.content) {
+  document.querySelector('#news-sec .main')?.classList.add('no-modal');
+}
 newsItems.forEach(item => {
   item.addEventListener('click', (e) => {
     const el = e.target.closest('.news-item');
@@ -21,6 +24,8 @@ newsItems.forEach(item => {
       const filter = posts.filter(post => post.link === link);
       if (filter.length > 0) {
         const selectedPost = filter[0];
+        // ✅ content 為空就不開彈窗
+        if (!selectedPost.content) return;
         selectedPost.thumbnail = selectedPost.thumbnail.replace('@/assets', '../assets');
         updateModalContent(selectedPost);
 
@@ -45,6 +50,10 @@ const updateModalContent = (post) => {
 
 if (document.querySelector('#news-sec .main')) {
   document.querySelector('#news-sec .main').addEventListener('click', () => {
+
+    // ✅ content 為空就不開彈窗
+    if (!selectedPost.content) return;
+
     mainNews.thumbnail = mainNews.thumbnail.replace('@/assets', '../assets');
     updateModalContent(mainNews);
           
