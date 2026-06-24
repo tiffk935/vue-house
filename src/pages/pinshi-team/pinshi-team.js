@@ -61,85 +61,105 @@ const modalSliders = [
   [
     {
       img: imgs['../assets/pinshi-team/teams/1/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '台南煙波大飯店'
     },
     {
       img: imgs['../assets/pinshi-team/teams/1/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '台南煙波大飯店'
     },
     {
       img: imgs['../assets/pinshi-team/teams/1/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '高雄小城全區規劃'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/1/works/4.webp'],
+      msg: '高雄小城'
     }
   ],
   [
     {
       img: imgs['../assets/pinshi-team/teams/2/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '國城UFO'
     },
     {
       img: imgs['../assets/pinshi-team/teams/2/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '國城賦格'
     },
     {
       img: imgs['../assets/pinshi-team/teams/2/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '國城賦格'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/2/works/4.webp'],
+      msg: '國城賦格'
     }
   ],
   [
     {
       img: imgs['../assets/pinshi-team/teams/3/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '台南煙波PARK'
     },
     {
       img: imgs['../assets/pinshi-team/teams/3/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '台南煙波四季'
     },
     {
       img: imgs['../assets/pinshi-team/teams/3/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '宗大青田'
     }
   ],
   [
     {
       img: imgs['../assets/pinshi-team/teams/4/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '嘉義市立美術館'
     },
     {
       img: imgs['../assets/pinshi-team/teams/4/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: 'GEN-雋-頂級粵菜餐廳'
     },
     {
       img: imgs['../assets/pinshi-team/teams/4/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: 'SHO-承-日本料理餐廳'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/4/works/4.webp'],
+      msg: 'Liberte-頂級法餐餐廳'
     }
   ],
   [
     {
       img: imgs['../assets/pinshi-team/teams/5/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '高雄海洋及流行音樂中心'
     },
     {
       img: imgs['../assets/pinshi-team/teams/5/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
-    },
-    {
-      img: imgs['../assets/pinshi-team/teams/5/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '鳳山都更好'
     }
   ],
   [
     {
       img: imgs['../assets/pinshi-team/teams/6/works/1.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '竹跡館｜2018台中花博'
     },
     {
       img: imgs['../assets/pinshi-team/teams/6/works/2.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '竹跡館｜2018台中花博'
     },
     {
       img: imgs['../assets/pinshi-team/teams/6/works/3.webp'],
-      msg: '高雄軟體園區(文字示意)'
+      msg: '新竹美術館'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/6/works/4.webp'],
+      msg: '新竹美術館'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/6/works/5.webp'],
+      msg: '台南歷史文化園區---台南孔廟周邊'
+    },
+    {
+      img: imgs['../assets/pinshi-team/teams/6/works/6.webp'],
+      msg: '台南歷史文化園區---台南孔廟周邊'
     }
   ]
 ];

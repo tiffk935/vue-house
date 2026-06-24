@@ -8,6 +8,7 @@
   font-weight: 700;
   letter-spacing: .1em;
   margin-bottom: size-m(6);
+
   @media (min-width: 768px) {
     font-size: size(25);
     line-height: size(36);
@@ -20,6 +21,7 @@ h2 {
   line-height: size-m(46);
   font-weight: 700;
   margin: 0 0 size-m(26) 0;
+
   @media (min-width: 768px) {
     font-size: size(45);
     line-height: size(65);
@@ -29,6 +31,7 @@ h2 {
 
 p {
   text-align: justify;
+
   @media (min-width: 768px) {
     font-size: size(25);
     line-height: 180%;
@@ -38,6 +41,7 @@ p {
 br {
   &.pc {
     display: none;
+
     @media (min-width: 768px) {
       display: block;
     }
@@ -61,10 +65,12 @@ figure {
   position: relative;
   color: #fff;
   font-weight: 700;
+
   @media (min-width: 768px) {
     height: size(1080);
     background-image: url(@/assets/pinshi/kv.webp);
   }
+
   .kv-video-wrapper {
     position: relative;
     width: 100%;
@@ -79,21 +85,34 @@ figure {
   }
 
   // 手機／電腦版切換
-  .mob-video { display: none; }
-  .pc-video  { display: block; }
+  .mob-video {
+    display: none;
+  }
+
+  .pc-video {
+    display: block;
+  }
 
   @media (max-width: 768px) {
-    .pc-video  { display: none; }
-    .mob-video { display: block; }
+    .pc-video {
+      display: none;
+    }
+
+    .mob-video {
+      display: block;
+    }
   }
 
   .text {
+    display: inline-block; // 👈 加這行
     position: absolute;
     bottom: 0;
     left: 0;
     padding: size-m(57) size-m(46);
+
     @media (min-width: 768px) {
       padding: size(74) size(179);
+      width: fit-content;
     }
   }
 
@@ -102,6 +121,7 @@ figure {
     line-height: size-m(57);
     letter-spacing: .1em;
     margin: 0 0 size-m(22);
+
     @media (min-width: 768px) {
       font-size: size(54);
       line-height: size(78);
@@ -113,6 +133,7 @@ figure {
     font-size: size-m(60);
     line-height: size-m(75);
     margin: 0 0 size-m(22);
+
     @media (min-width: 768px) {
       font-size: size(83);
       line-height: size(119);
@@ -121,6 +142,7 @@ figure {
 
     span {
       display: none;
+
       @media (min-width: 768px) {
         display: inline;
       }
@@ -138,9 +160,13 @@ figure {
     line-height: size-m(34);
     letter-spacing: .1em;
     margin: 0;
+    text-align: justify;
+
     @media (min-width: 768px) {
       font-size: size(33);
       line-height: size(47);
+      width: 0; // 👈 不參與父容器寬度計算
+      min-width: 100%; // 👈 但自己還是撐滿父容器
     }
   }
 
@@ -152,6 +178,7 @@ figure {
     font-size: size-m(14);
     line-height: 200%;
     filter: drop-shadow(0 size-m(2) size-m(3) #000);
+
     @media (min-width: 768px) {
       bottom: size(10);
       right: size(20);
@@ -163,25 +190,28 @@ figure {
 
 #profit {
   padding: size-m(45) size-m(45) size-m(38) size-m(45);
+
   @media (min-width: 768px) {
     padding: size(87) 0 size(82) 0;
   }
 
   .flex {
     margin-bottom: size-m(36);
+
     @media (min-width: 768px) {
       width: size(1740);
       margin: 0 auto;
       display: flex;
       flex-direction: row-reverse;
       justify-content: space-between;
-      align-items: flex-end;
+      align-items: stretch;
       margin-bottom: size(63);
     }
   }
 
   .slider {
     margin-bottom: size-m(36);
+
     @media (min-width: 768px) {
       width: size(1199);
       margin: 0;
@@ -192,8 +222,12 @@ figure {
     @media (min-width: 768px) {
       width: size(500);
       margin: 0;
-      padding-bottom: size(113);
+      // padding-bottom: size(113);
       border-bottom: size(1) solid #000;
+      border-top: size(1) solid #000;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
   }
 
@@ -201,6 +235,7 @@ figure {
     padding-bottom: size-m(36);
     border-bottom: size-m(1) solid #000;
     position: relative;
+
     @media (min-width: 768px) {
       width: size(1740);
       margin: 0 auto;
@@ -232,6 +267,7 @@ figure {
       justify-content: center;
       align-items: center;
       cursor: pointer;
+
       @media (min-width: 768px) {
         display: none;
       }
@@ -243,15 +279,19 @@ figure {
   0% {
     transform: translate(-50%, 0);
   }
+
   25% {
     transform: translate(0%, 0);
   }
+
   50% {
     transform: translate(-50%, 0);
   }
+
   75% {
-    transform:translate(-100%)
+    transform: translate(-100%)
   }
+
   to {
     transform: translate(-50%, 0);
   }
@@ -260,6 +300,7 @@ figure {
 #map {
   position: relative;
   overflow: hidden;
+
   @media (min-width: 768px) {
     display: none;
   }
@@ -268,7 +309,7 @@ figure {
     width: 100%;
     height: size-m(480);
     overflow-x: auto;
-    
+
     img {
       display: block;
       height: 100%;
@@ -294,7 +335,7 @@ figure {
       .finger-area {
         width: 100%;
       }
-      
+
       .finger {
         position: absolute;
         top: 0;
@@ -309,18 +350,21 @@ figure {
 
 #feature {
   padding: size-m(36) size-m(45) size-m(38) size-m(45);
+
   @media (min-width: 768px) {
     padding: size(85) 0 size(115) 0;
   }
 
   .item {
     margin-bottom: size-m(36);
+
     @media (min-width: 768px) {
       margin-bottom: size(90);
     }
 
     &:first-child .slider {
       display: none;
+
       @media (min-width: 768px) {
         display: block;
       }
@@ -332,6 +376,7 @@ figure {
 
     .flex {
       margin-bottom: size-m(36);
+
       @media (min-width: 768px) {
         width: size(1740);
         margin: 0 auto;
@@ -350,6 +395,7 @@ figure {
       padding-bottom: size-m(36);
       border-bottom: size-m(1) solid #000;
       margin-bottom: size-m(38);
+
       @media (min-width: 768px) {
         padding: size(50) 0;
         width: size(490);
@@ -368,8 +414,17 @@ figure {
       }
     }
 
+    @media (min-width: 768px) {
+      &.item1 {
+        .content h2 {
+          font-size: size(36);
+        }
+      }
+    }
+
     .slider {
       margin-bottom: size-m(36);
+
       @media (min-width: 768px) {
         margin-bottom: 0;
         width: size(1199);
@@ -401,14 +456,23 @@ figure {
       .slider {
         margin-left: size-m(-45);
         margin-right: size-m(-45);
-          height: size-m(500);
+        height: size-m(500);
+
         @media (min-width: 768px) {
           width: 100%;
           height: size(823);
           margin: 0 0 size(77) 0;
         }
-        > div,figure{height: 100%;}
-        img{height: 100%;object-fit: cover;}
+
+        >div,
+        figure {
+          height: 100%;
+        }
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
       }
 
       .content {
@@ -420,6 +484,7 @@ figure {
           padding-top: 0;
           padding-bottom: size(95);
           flex-direction: row;
+          align-items: flex-end;
 
           .title {
             width: size(500);
@@ -487,6 +552,7 @@ figure {
     background-position: center;
     background-repeat: no-repeat;
     cursor: pointer;
+
     @media (min-width: 768px) {
       top: size(54);
       right: size(53);
