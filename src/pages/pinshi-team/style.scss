@@ -233,11 +233,11 @@
         display: none;
         @media (min-width: 768px) {
           display: flex;
-          margin-left: size(72);
+          margin-left: size(50);
           bottom: size(73);
 
           .swiper-pagination-bullet {
-            width: size(69);
+            width: size(60);
             height: size(11);
             border: size(1) solid #fff;
             margin: 0 size(8);
@@ -262,13 +262,13 @@
     .info {
       font-size: size-m(25);
       line-height: 175%;
-      bottom: size-m(49);
+      bottom: size-m(10);
       right: size-m(23);
       @media (min-width: 768px) {
-        font-size: size(25);
+        font-size: size(20);
         line-height: size(44);
-        bottom: size(65);
-        right: size(80);
+        bottom: size(58);
+        right: size(50);
       }
     }
   }

@@ -105,4 +105,3 @@ document.querySelectorAll('img[loading="lazy"]').forEach(img => {
     img.addEventListener('load', debouncedRefresh, { once: true });
   }
 });
-

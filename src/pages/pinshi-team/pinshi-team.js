@@ -115,15 +115,15 @@ const modalSliders = [
     },
     {
       img: imgs['../assets/pinshi-team/teams/4/works/2.webp'],
-      msg: 'GEN-雋-頂級粵菜餐廳'
+      msg: 'GEN 雋 頂級粵菜餐廳'
     },
     {
       img: imgs['../assets/pinshi-team/teams/4/works/3.webp'],
-      msg: 'SHO-承-日本料理餐廳'
+      msg: 'SHO 承 日本料理餐廳'
     },
     {
       img: imgs['../assets/pinshi-team/teams/4/works/4.webp'],
-      msg: 'Liberte-頂級法餐餐廳'
+      msg: 'Liberte 頂級法餐餐廳'
     }
   ],
   [
@@ -155,11 +155,11 @@ const modalSliders = [
     },
     {
       img: imgs['../assets/pinshi-team/teams/6/works/5.webp'],
-      msg: '台南歷史文化園區---台南孔廟周邊'
+      msg: '台南歷史文化園區   台南孔廟周邊'
     },
     {
       img: imgs['../assets/pinshi-team/teams/6/works/6.webp'],
-      msg: '台南歷史文化園區---台南孔廟周邊'
+      msg: '台南歷史文化園區   台南孔廟周邊'
     }
   ]
 ];

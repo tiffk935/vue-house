@@ -1,4 +1,4 @@
-const caseName = "國城寳實"
+const caseName = "寳實二代"
 
 export default {
   meta: {
