@@ -48,7 +48,7 @@ export default defineConfig({
       { ejs: { views: [projectRoot] } }
     ),
     resolveAtPlugin(projectRoot),
-    // notFoundPlugin(projectRoot),
+    notFoundPlugin(projectRoot),
     criticalCssPlugin,
     {
       name: 'scripts-to-body',
