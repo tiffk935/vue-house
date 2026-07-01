@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<script>
+  const match = location.pathname.match(/^\/news\/(\d+)/);
+  if (match) {
+    location.replace('/#news?post=' + match[1]);
+  } else {
+    location.replace('/#news');
+  }
+</script>
+</head>
+<body></body>
+</html>

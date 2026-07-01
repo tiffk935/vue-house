@@ -1,1 +1,17 @@
-ErrorDocument 404 /404
+Options -Indexes
+# 轉址 /gem 到根目錄
+RewriteCond %{REQUEST_URI} ^/gem/?$ [NC]
+RewriteRule ^gem/?$ / [R=301,L]
+RewriteBase /
+RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
+ErrorDocument 404 /index.php
