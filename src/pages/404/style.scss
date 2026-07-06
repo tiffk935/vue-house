@@ -1,0 +1,42 @@
+@use '@/styles/functions' as *;
+@use '@/styles/default';
+
+@function size-m2($size) {
+  $c-size: calc(100vw * $size / 375);
+  @return #{$c-size};
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0;
+  height: calc(100vh - size-m2(135));
+
+  @media (min-width: 768px) {
+    padding: size(80) 0 0 0;
+    height: calc(100vh - size(169));
+  }
+
+  h1 {
+    text-align: center;
+    line-height: 1.2;
+    font-size: 20px;
+    font-weight: 700;
+    color: #999;
+    margin-bottom: 0;
+
+    span {
+      font-size: 3em;
+      font-weight: 700;
+      color: #000;
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  #mob-bottom-nav {
+    display: none;
+  }
+}

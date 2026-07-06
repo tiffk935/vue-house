@@ -3,11 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>404 - 找不到頁面</title>
+  <title>頁面跳轉中...</title>
+  <link rel="stylesheet" href="./style.scss">
+  <script>
+    const path = location.pathname;
+
+    if (/^\/news\/(\d+)/.test(path)) {
+      location.replace('/#news?post=' + path.match(/^\/news\/(\d+)/)[1]);
+    } else if (/^\/news\/?$/.test(path)) {
+      location.replace('/#news');
+    } else if (/^\/order\/?$/.test(path)) {
+      location.replace('/#order');
+    }
+    // 其他真正的 404 → 顯示原本 404 內容，不跳轉
+  // ✅ 非跳轉頁面，直接加上 show-bg
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelector('#main-header')?.classList.add('show-bg');
+  });
+  </script>
 </head>
 <body>
   <%- include('src/components/header.ejs') %>
-
-  <h1>404 - 找不到頁面</h1>
+ <div class="container"> <h1><span>404</span>找不到頁面</h1></div>
+  <%- include('src/components/footer.ejs') %>
 </body>
 </html>
