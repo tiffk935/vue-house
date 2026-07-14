@@ -311,9 +311,9 @@
             </div>
 
             <div class="pretty p-default p-round">
-              <input type="checkbox" aria-label="privacy" v-model="formData.policyChecked" />
+              <input type="checkbox" aria-label="privacy" id="privacy" v-model="formData.policyChecked" />
               <div class="state">
-                <label>我同意使用上方提供的資訊與我聯繫，詳情請參閱隱私權聲明。</label>
+                <label for="privacy">我同意使用上方提供的資訊與我聯繫，詳情請參閱</label><a href="/privacy" target="_blank">隱私權聲明</a>。
               </div>
             </div>
 

@@ -1094,38 +1094,36 @@
     line-height: 1;
     display: block;
     margin: 0 0 size-m(60) 0;
+        font-size: size-m(19);
     @media (min-width: 768px) {
       margin: 0 0 size(68) 0;
+          font-size: size(25);
     }
 
     input {
       position: absolute;
       left: 0;
       top: 0;
-      min-width: 1em;
-      width: 100%;
+      min-width: 5em;
+      width: 0%;
       height: 100%;
       z-index: 2;
       opacity: 0;
       margin: 0;
       padding: 0;
       cursor: pointer;
-    }
+    } 
 
     .state {
       label {
         position: initial;
         display: inline-block;
+        cursor: pointer;
         margin: 0;
         text-indent: 1.5em;
         min-width: calc(1em + 2px);
-        font-size: size-m(19);
         font-weight: 500;
         letter-spacing: .05em;
-        @media (min-width: 768px) {
-          font-size: size(25);
-        }
-
         &:before, &:after {
           content: "";
           display: block;
@@ -1134,13 +1132,11 @@
           z-index: 0;
           position: absolute;
           background-color: transparent;
-          width: size-m(19);
-          height: size-m(19);
-          top: size-m(6);
+          width:  1em;
+          height: 1em;
+          top: -.1em;
           left: 0;
           @media (min-width: 768px) {
-            width: size(25);
-            height: size(25);
             top: 0;
           }
         }
@@ -1162,6 +1158,7 @@
           }
         }
       }
+      a{color: #390;}
     }
 
     input:checked ~ .state label::after {
