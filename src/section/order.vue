@@ -80,6 +80,7 @@
     font-size: size(43);
     font-weight: 500;
     margin-bottom: size(45);
+    
   }
 
   .z-10 {
@@ -95,41 +96,119 @@
   }
 
   .form {
-    width: size(920);
-    height: 300px;
-    gap: size(80);
-    margin-bottom: size(50);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 48px;
+    align-self: stretch;
 
     .left {
-      width: size(419);
-    }
+    display: flex;
+    padding: 0px 0 24px 0;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
 
-    .right {
-      width: size(419);
-    }
+    .left > * {
+  flex: 1;
+}   
 
-    &::after {
-      content: "";
-      width: size(1);
-      height: 100%;
-      background-color: #fff;
-      position: absolute;
-    }
+     .input,
+    .select {
+    width: 512px;
+    padding: 0 size(32);
+    align-items: center;
+    gap: 10px;
+    border-radius: 24px;
+    background: rgba(0, 119, 26, 0.35);
+    box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.22) inset;
+    color: #FFF;
+    font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 2.8px;
+
+    
+     }
+
+  .input::placeholder {
+    color: #FFF;
+   font-family: "Noto Sans TC";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.8px;
   }
 
+  .input:focus,
+  .select:focus {
+    outline: none;
+    border-color: #D9374B;
+  }
+}
+    
+
+    .right {
+      display: flex;
+      padding: 0px 24px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 16px;
+      align-self: stretch;
+
+      width: 540px;
+      height: 100%;
+      padding: 26px 19px;
+      align-items: flex-start;
+      gap: 10px;
+
+      border-radius: 16px;
+      background: rgba(0, 119, 26, 0.35);
+      box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.22) inset;
+
+
+  .textarea {
+    width: 100%;
+    height: 100%;
+
+    background: transparent;   // ← 不要白底
+    border: none;              // ← 不要外框
+    resize: none;              // ← 不讓使用者拖曳大小
+
+    color: #FFF;
+    font-size: 20px;
+    padding: 0 16px;
+  }
+
+  .textarea::placeholder {
+    color: #FFF;
+font-family: "Noto Sans";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: 2.8px;
+  }
+
+  .textarea:focus {
+    outline: none;
+  }
+
+   
+  }}
+
   .send {
-    font-size: size(22);
-    letter-spacing: 0.9em;
-    text-indent: 0.9em;
-    // color: #231815;
-    // background-color: #fff;
-    width: size(350);
-    height: 3.3em;
-    line-height: 3.3;
-    border: 0;
-    // border-radius: 1.6em;
-    z-index: 10;
-    position: relative;
+    display: flex;
+width: 264px;
+height: 66px;
+padding: 16px 32px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 26px;
+background: linear-gradient(179deg, #FFF -44.42%, #067700 27.67%, #005C19 88.16%, #31FF87 127.94%);
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   }
 
   .control {
