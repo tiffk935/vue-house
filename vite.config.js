@@ -93,4 +93,3 @@ export default defineConfig({
     }
   }
 })
-console.log('seo loaded:', seo)
