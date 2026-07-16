@@ -12,6 +12,7 @@ import info from './src/data/info.js'
 import notFoundPlugin from './plugins/notFoundPlugin.js'
 import criticalCssPlugin from './plugins/criticalCssPlugin.js'
 import resolveAtPlugin from './plugins/resolveAtPlugin.js'
+import seo from './src/data/seo.js'
 
 const projectRoot = import.meta.dirname
 const pagesDir = resolve(projectRoot, 'src/pages')
@@ -44,7 +45,7 @@ export default defineConfig({
 
   plugins: [
     ViteEjsPlugin(
-      { siteName: 'My News Website', newsList, mainNews, info },
+      { siteName: 'My News Website', newsList, mainNews, info, seo },  // ← 加在這裡
       { ejs: { views: [projectRoot] } }
     ),
     resolveAtPlugin(projectRoot),
@@ -72,25 +73,6 @@ export default defineConfig({
         }
       }
     },
-    // {
-    //   name: 'css-preload',
-    //   apply: 'build',
-    //   transformIndexHtml: {
-    //     order: 'post',
-    //     handler(html) {
-    //       return html.replace(
-    //         /<link\b([^>]*)\brel=(["'])stylesheet\2([^>]*)>/gi,
-    //         (match, before, quote, after) => {
-    //           const hrefMatch = match.match(/\bhref=(["'])([^"']+)\1/);
-    //           if (!hrefMatch) return match;
-    //           const href = hrefMatch[2];
-    //           const tag = `<link rel="stylesheet" href="${href}">`;
-    //           return `<link rel="preload" href="${href}" as="style" onload="this.onload=null;this.rel='stylesheet'"><noscript>${tag}</noscript>`;
-    //         }
-    //       );
-    //     }
-    //   }
-    // },
     simpleHtmlPlugin({
       minify: true,
     }),
@@ -111,3 +93,4 @@ export default defineConfig({
     }
   }
 })
+console.log('seo loaded:', seo)
