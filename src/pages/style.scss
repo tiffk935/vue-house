@@ -558,7 +558,7 @@
     }
 
     time {
-      font-size: size-m(14);
+      font-size: size-m(20);
       @media (min-width: 768px) {
         font-size: size(19);
       }
@@ -566,7 +566,7 @@
 
     h3 {
       margin: size-m(0) 0;
-      font-size: size-m(17);
+      font-size: size-m(24);
       line-height: 1.6;
       font-weight: 600;
       @media (min-width: 768px) {
@@ -579,7 +579,7 @@
       line-height: 1.7;
       font-weight: 600;
         margin: size-m(10) 0;
-      font-size: size-m(14);
+      font-size: size-m(20);
       @media (min-width: 768px) {
         margin: size(15) 0;
         font-size: size(20);
@@ -843,7 +843,7 @@
     }
 
     time {
-      font-size: size-m(14);
+      font-size: size-m(20);
       line-height: 160%;
       @media (min-width: 768px) {
         font-size: size(16);
@@ -851,7 +851,7 @@
     }
 
     .author {
-      font-size: size-m(16);
+      font-size: size-m(20);
       line-height: 160%;
       @media (min-width: 768px) {
         font-size: size(16);
