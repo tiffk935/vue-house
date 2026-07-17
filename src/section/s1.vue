@@ -1,13 +1,42 @@
 <template>
-  <section class="s1 text-white bg-[#D9374B] relative">
+  <section class="s1 text-white relative">
     <img class="leaf-1" src="@/section/s1/leaf-1.webp">
     <img class="leaf-2" src="@/section/s1/leaf-2.webp">
     <img class="green-bg" src="@/section/s1/green-bg.webp">
- <div class="H1">
-    <img class="Coming-soon" src="@/section/s1/Coming soon.svg">
-    <img class="Line" src="@/section/s1/Line.svg">
-    <img class="Local" src="@/section/s1/Local.svg">
-    <img class="LOGO" src="@/section/s1/LOGO.svg">
+ <div class="H1" data-aos="fade"
+    data-aos-delay="500"
+    data-aos-duration="1200"
+    data-aos-easing="ease"
+    data-aos-once="false"
+    data-aos-mirror="true"
+    >
+    <img class="Coming-soon"
+    v-if="isMobile"
+    src="@/section/s1/Coming soon-m.svg">
+     <img class="Coming-soon"
+    v-else
+    src="@/section/s1/Coming soon.svg">
+
+    <img class="Line"
+    v-if="isMobile"
+    src="@/section/s1/Line-m.svg">
+    <img class="Line"
+    v-else
+    src="@/section/s1/Line.svg">
+
+    <img class="Local"
+    v-if="isMobile"
+    src="@/section/s1/Local-m.svg">
+    <img class="Local"
+    v-else
+    src="@/section/s1/Local.svg">
+
+    <img class="LOGO"
+    v-if="isMobile"
+    src="@/section/s1/LOGO-m.svg">
+    <img class="LOGO"
+    v-else
+    src="@/section/s1/LOGO.svg">
  </div>
     
   </section>
