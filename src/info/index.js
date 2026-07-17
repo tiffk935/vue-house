@@ -6,10 +6,10 @@ export default {
     address1: "基地位子",//按鈕區的--- 如空白會只呈現地址
     address2: "導航地址",//map點下確認的--- 如空白會顯示"導航地址"
     address: "台中市梧棲區中華路二段155號",
-    googleSrc: "https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d7275.674967350943!2d120.54793815857862!3d24.247462221438916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjTCsDE0JzUwLjkiTiAxMjDCsDMzJzExLjEiRQ!5e0!3m2!1szh-TW!2stw!4v1770953354204!5m2!1szh-TW!2stw",
-    googleLink: "https://maps.app.goo.gl/dmQT3t7zk7u3N56r5",
+    googleSrc: "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d643.0854376168915!2d120.55318821221032!3d24.247353580134174!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3469150037fc9fc3%3A0xd5f5a6d95958f628!2z5L2z6YuQ6aaW6ICA!5e0!3m2!1szh-TW!2stw!4v1784257375045!5m2!1szh-TW!2stw",
+    googleLink: "https://maps.app.goo.gl/1HBGy8ZYx6WYgNH8A",
     phone: "04-2663-0999",
-    fbLink: "https://www.facebook.com/61563772475620/",
+    fbLink: "https://www.facebook.com/profile.php?id=61563772475620&locale=zh_TW",
     fbMessage: "https://m.me/61563772475620/",
     caseName: caseName,
     houseInfos: [
