@@ -24,6 +24,10 @@
     v-else
     src="@/section/s1/Line.svg">
 
+    <img class="Coming-soon-TC"
+    v-show="isMobile"
+    src="@/section/s1/Coming soon-TC-m.svg">
+
     <img class="Local"
     v-if="isMobile"
     src="@/section/s1/Local-m.svg">
@@ -176,41 +180,17 @@
     transform: translateY(0) rotate(0deg);
   }
 }
-
 </style>
-
 <script setup>
-import { onMounted, ref, computed, getCurrentInstance } from 'vue';
-
-const viewbox = ref();
-const viewImg = ref();
-const swiped = ref(false);
-const offsetRatio = 1.92; 
-
+import { computed, getCurrentInstance, ref ,inject} from 'vue';
 const globals = getCurrentInstance().appContext.config.globalProperties;
+
 const isMobile = computed(() => globals.$isMobile());
 
-onMounted(() => {
-  viewImg.value.addEventListener('load', () => {
-    if (isMobile.value) {
-      let scroll = new BScroll(viewbox.value, {
-        probeType: 2,
-        scrollX: true,
-        scrollY: true,
-        disableTouch: false,
-        disableMouse: false,
-        bindToWrapper: true,
-        eventPassthrough: "vertical",
-        bounce: false,
-      });
-
-      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
-      setTimeout(() => {
-        scroll.on("scroll", () => {
-          swiped.value = true;
-        });
-      }, 1000);
-    }
-  });
-});
+const smoothScroll = inject('smoothScroll')
+const scrollTo = (el) => {
+  smoothScroll({
+    scrollTo: document.querySelector(el)
+  })
+}
 </script>
