@@ -3,7 +3,7 @@
     <img class="leaf-1" src="@/section/s1/leaf-1.webp">
     <img class="leaf-2" src="@/section/s1/leaf-2.webp">
     <img class="green-bg" src="@/section/s1/green-bg.webp">
- <div class="H1" data-aos="fade"
+<div class="H1" data-aos="fade"
     data-aos-delay="500"
     data-aos-duration="1200"
     data-aos-easing="ease"
@@ -37,7 +37,7 @@
     <img class="LOGO"
     v-else
     src="@/section/s1/LOGO.svg">
- </div>
+ </div> 
     
   </section>
 </template>
@@ -180,11 +180,37 @@
 </style>
 
 <script setup>
-// import { inject } from 'vue';
-// const smoothScroll = inject('smoothScroll')
-// const scrollTo = (el) => {
-//   smoothScroll({
-//     scrollTo: document.querySelector(el)
-//   })
-// }
+import { onMounted, ref, computed, getCurrentInstance } from 'vue';
+
+const viewbox = ref();
+const viewImg = ref();
+const swiped = ref(false);
+const offsetRatio = 1.92; 
+
+const globals = getCurrentInstance().appContext.config.globalProperties;
+const isMobile = computed(() => globals.$isMobile());
+
+onMounted(() => {
+  viewImg.value.addEventListener('load', () => {
+    if (isMobile.value) {
+      let scroll = new BScroll(viewbox.value, {
+        probeType: 2,
+        scrollX: true,
+        scrollY: true,
+        disableTouch: false,
+        disableMouse: false,
+        bindToWrapper: true,
+        eventPassthrough: "vertical",
+        bounce: false,
+      });
+
+      scroll.scrollTo(scroll.maxScrollX / offsetRatio, 500);
+      setTimeout(() => {
+        scroll.on("scroll", () => {
+          swiped.value = true;
+        });
+      }, 1000);
+    }
+  });
+});
 </script>
