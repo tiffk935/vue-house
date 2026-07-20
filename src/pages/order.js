@@ -129,14 +129,3 @@ const app = createApp({
 });
 app.use(Toast, { timeout: 3000 });
 app.mount('#order-sec');
-
-const observer = new IntersectionObserver((entries) => {
-  if (!entries[0].isIntersecting) return;
-  observer.disconnect();
-  const script = document.createElement('script');
-  script.src = 'https://www.google.com/recaptcha/api.js';
-  script.async = true;
-  script.defer = true;
-  document.head.appendChild(script);
-});
-observer.observe(document.querySelector('#order-sec'));

@@ -1035,11 +1035,10 @@
     .input-group {
       padding-bottom: size-m(27);
       margin-bottom: size-m(28);
-      border-bottom: size-m(1) solid #000;
+      border-bottom: 1px solid #000;
       @media (min-width: 768px) {
         padding-bottom: size(28);
         margin-bottom: size(30);
-        border-bottom: size(1) solid #000;
         width: calc(50% - size(43));
       }
 
