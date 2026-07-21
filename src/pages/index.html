@@ -506,37 +506,41 @@
 
     <%- include('src/components/footer.ejs') %>
 
-      <div id="new-modal">
-        <div class="new-modal-inner">
-          <div class="sec-title">
-            <h2>最新消息</h2>
-            <div class="en-title">NEWS</div>
-          </div>
-          <div class="flex">
-            <figure class="pc">
+    <div id="new-modal">
+      <div class="new-modal-inner">
+        <div class="sec-title">
+          <h2>最新消息</h2>
+          <div class="en-title">NEWS</div>
+        </div>
+        <div class="flex">
+          <figure class="pc">
+            <img src="" alt="">
+            <figcaption>]</figcaption>
+          </figure>
+          <div>
+            <h3></h3>
+            <div class="metadata">
+              <time datetime=""></time>
+              <div class="author"></div>
+            </div>
+            <figure class="mob">
               <img src="" alt="">
               <figcaption>]</figcaption>
             </figure>
-            <div>
-              <h3></h3>
-              <div class="metadata">
-                <time datetime=""></time>
-                <div class="author"></div>
-              </div>
-              <figure class="mob">
-                <img src="" alt="">
-                <figcaption>]</figcaption>
-              </figure>
-              <div class="content"></div>
-            </div>
+            <div class="content"></div>
           </div>
         </div>
-        <div class="close"></div>
       </div>
+      <div class="close"></div>
+    </div>
 
-      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-      <script type="module" src="./main.js"></script>
-      <script type="module" src="./home.js"></script>
+    <div id="loading">
+      <img src="@/assets/home/logo2.svg" alt="">
+    </div>
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script type="module" src="./main.js"></script>
+    <script type="module" src="./home.js"></script>
 </body>
 
 </html>
