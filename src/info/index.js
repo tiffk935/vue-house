@@ -31,35 +31,54 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "測試表單",
-    subTitle: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
-    subTitle_mo: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
+    title: "預約賞屋",
+    //subTitle: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
+    //subTitle_mo: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
   },
   // 控制表單欄位
   //性別
   formConfig: {
     gender: {
-      enabled: true,     // ✅ 控制顯示 / 隱藏
+      enabled: false,     // ✅ 控制顯示 / 隱藏
       required: false    // ✅ 是否必填（通常不會必填）
     }
   },
+
   //各種欄位
   selectFields: {
     room_type: {
       title: "需求房型",
       type: "select",
       hold: "請選擇房型",
-      option: ["兩房", "三房"],
+      option: ["兩房", "店面"],
       required: true, //必填開啟使用
     }, 
-    /*
+    
         budget: {
           title: "購屋預算",
+          type: "select",
           hold: "請選擇區間",
-          option: ["1000", "2000", "3000"],
+          option: ["1,500 ~ 2,000", "2,000 ~ 2,500", "2,500 ~ 3,000"],
           //bypass:true, //必填開啟使用
         },
-       
+
+        car: {
+          title: "需求車位",
+          type: "select",
+          hold: "請選擇",
+          option: ["是", "否"],
+          //bypass:true, //必填開啟使用
+        },
+
+         time: {
+          title: "聯絡時間",
+          type: "select",
+          hold: "請選擇",
+          option: ["10:00 ~ 12:00", "13:00 ~ 15:00","15:00 ~ 17:00","17:00 ~ 19:00",],
+          //bypass:true, //必填開啟使用
+        },
+
+       /*
         use_type: {
           title: "使用用途",
           hold: "請選擇用途",
@@ -67,17 +86,22 @@ export default {
       },
         */
   },
+
   //縣市地區
   locationConfig: {
   city: {
     enabled: true,
     required: false
   },
+
   area: {
     enabled: true,     // ⚠️ 不能單獨 true
     required: false
   }
+
 },
+
+
 
   navList: [
     /*

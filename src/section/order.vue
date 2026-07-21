@@ -1,8 +1,12 @@
 <template>
   <div id="order" class="order relative text-center ">
     <div class="order-section">
-      <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
-      <div class="order-subTitle text-center" v-if="info.order.subTitle"
+      <div class="order-title-style">
+        <div class="order-title-line">
+          <div class="order-title" v-if="info.order.title" v-html="info.order.title"></div>
+        </div>  
+      </div> 
+    <div class="order-subTitle text-center" v-if="info.order.subTitle"
         v-html="$isMobile() && info.order.subTitle_mo ? info.order.subTitle_mo : info.order.subTitle">
       </div>
 <!--  -->
@@ -30,7 +34,7 @@
 
           <!-- 手機 -->
           <label class="row">
-            <span>手機<span>*</span></span>
+            <span>聯絡電話<span>*</span></span>
             <input v-model="formData.phone" type="text" class="input w-full" placeholder="請填寫電話" />
           </label>
 
@@ -96,8 +100,8 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-[#000]">
-          本人知悉並同意<label for="policy-modal" class="text-[#c00] cursor-pointer">「個資告知事項聲明」</label>內容
+        <p class="text-white tracking-[1px]">
+          本人知悉並 「 同意個資告知事項聲明 」內容
         </p>
       </div>
 
@@ -148,6 +152,7 @@ $o-title-c: #A30C24; //.order-title
   width: 100%;
   padding-top: size(40);
   font-size: 16px;
+  z-index: 6;
 
   .order-section {
     position: relative;
@@ -163,18 +168,55 @@ $o-title-c: #A30C24; //.order-title
   }
 }
   */
-  .order-title {
-  font-size: size(45);
-  font-weight: 700;
-  color: $o-title-c;
-  padding-top:1.5em;
+
+
+  .order-title-style{
+  display: flex;
+  padding-bottom: 25px;
+  flex-direction: column;
+  align-items: center;
+  gap: 21px;
+  align-self: stretch;
   }
 
-  .order-subTitle {
+  .order-title-line{
+  display: flex;
+  padding: 18px 112px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  }
+
+  .order-title-line::after {
+  content: "";
+  width: 400px;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 1) 50%,
+    transparent 100%
+  );
+}
+
+  .order-title {
+  color: #FFF;
+  font-family: "Noto Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 4.16px;
+  z-index: 6;
+  }
+
+ /* .order-subTitle {
     font-size: 1.2em;
     padding-top: .5em;
     letter-spacing: .1em;
   }
+    */
 
   .form {
     width: min(1200px, 95%); //最大1200px
@@ -197,7 +239,24 @@ $o-title-c: #A30C24; //.order-title
       flex: 1;
       height: auto;
       //  width: size(419);
+      .row {
+        color: #ffffff;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
+        letter-spacing: 1px;}
     }
+
+    .right textarea::placeholder {
+    color: #fff;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    font-weight: 100;
+    padding-left: 1em;
+    padding-top: 1em;
+    }
+
+
 
     &::after {
       content: "";
@@ -210,17 +269,22 @@ $o-title-c: #A30C24; //.order-title
 
 
     .row {
-      background: #fff;
+      border-radius: 24px;
+      background: rgba(0, 119, 26, 0.35);
+      box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.4) inset;
       border: 0px;
-      color: #000;
+      color: #ffffff;
       display: flex;
       width: 100%;
       align-items: center;
+      font-size: 16px;
+  
+
 
       >span {
-        min-width: 5.5em;
+        min-width: 8em;
         text-align: left;
-        padding-left: 1em;
+        padding-left: 2em;
 
         >span {
           color: #c00;
@@ -229,22 +293,48 @@ $o-title-c: #A30C24; //.order-title
 
       input,
       select {
-        background: inherit;
+        background: rgba(10, 38, 16, 0);
         flex: 1;
+        font-weight: 100;
       }
+
+       input::placeholder {
+      color: #ffffff;
+      opacity: 0.5;
+      font-size: 16px;
+      letter-spacing: 1px;
+  }
 
       option {
-        color: #666;
-      }
+        
+        border-radius: 24px;
+        background: rgba(1, 126, 28, 0.678);
+        box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.22) inset;
+        li {
 
+          font-size:14px;
+          letter-spacing:2px;
+
+          &:hover {
+         background:#006400;
+         color:white;
+
+          }
+          }
+}
       select {
-        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - .5em) 100%;
+        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - 1em) 100%;
         background-size: auto 200%;
         transition: background .3s;
+        color: #ffffff;
+        opacity: 1;
+        font-size: 16px;
+        letter-spacing: 1px;
     // filter:  brightness(0) invert(1); //select的箭頭顏色
 
         &:focus {
-          background-position: calc(100% - .5em) 0%;
+          background-position: calc(100% - 1em) 0%;
+          border-radius: 12px;
         }
       }
 
@@ -253,7 +343,9 @@ $o-title-c: #A30C24; //.order-title
       .name {
         width: 100%;
         display: flex;
-        .row{flex: 1;}
+        .row{
+          flex: 1;}
+          
       // width: calc(100% - 3.8em);
       }
     .gender {
@@ -292,17 +384,18 @@ $o-title-c: #A30C24; //.order-title
     font-weight: 700;
     &:hover{transform: scale(1.1);}
   }
-  .send-load{color: #fff;}
+  .send-load{color: #ffffff;}
 
   .control {
     font-size: 16px;
-    color: #000;
+    color: #ffffff;
     position: relative;
     z-index: 10;
     input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
   }
  
 }
+
 
 @media screen and (max-width:768px) {
   .order-section {
@@ -389,6 +482,9 @@ $o-title-c: #A30C24; //.order-title
     }
   }
 }
+
+
+
 </style>
 <script setup>
 import Policy from "@/section/form/policy.vue"

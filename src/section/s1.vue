@@ -11,7 +11,7 @@
     v-for="i in 20"
     :key="i"
     :class="['bg-piece','bg-pc',{ flip:i % 2 === 0 }]"
-    src="@/section/s1/bg-1.webp"
+    src="@/section/s1/bg-4.webp"
     alt=""
   >
 
@@ -21,7 +21,7 @@
     v-for="i in 20"
     :key="'mobile-'+i"
     :class="['bg-piece','bg-mobile',{ flip:i % 2 === 0 }]"
-    src="@/section/s1/bg-1m.webp"
+    src="@/section/s1/bg-2m.webp"
     alt=""
   >
 
@@ -124,6 +124,7 @@
   width: 100%;
   height: auto;
   font-weight: 500;
+  margin-bottom: 190px;
   @media screen and (min-width:768px) {
     height: auto;
   }
@@ -147,7 +148,7 @@
     width: 720px;
     height: 844px;
     aspect-ratio: 46/55;
-    top: -800px;
+    top: -560px;
     left: calc(50% - 420px);
     mix-blend-mode:multiply;
     z-index: 2;
@@ -158,56 +159,59 @@
 
 
 .H1 {
+    display: flex;
+    flex-direction: column;
     position: relative;
     justify-content: center;
+    align-items: center; 
     width: auto ;
-    height: 100%;
-    gap: 24px;
+    height: auto;
+    gap: clamp(4px, 80vw, 12px);
     z-index: 3;
   }
 
   .Coming-soon {
     position: relative;
-    width: clamp(320px, 60vw, 640px);
+    width: clamp(320px, 64vw, 920px);
     height: fit-content;
     object-fit: Contain;
-    margin: clamp(160px, 8vw, 360px) auto clamp(24px, 80vw, 48px) auto;
+    margin: clamp(148px, 80vw, 240px) auto clamp(8px, 80vw, 24px) auto;
     z-index: 3;
   }
 
   .Line {
-    width: clamp(240px, 60vw, 640px);
+    width: clamp(320px, 64vw, 920px);
     height: 1px;
     background: #fff;
-    margin: clamp(24px, 80vw, 48px) auto clamp(24px, 80vw, 48px) auto;
+    margin: clamp(8px, 80vw, 24px) auto clamp(8px, 80vw, 24px) auto;
     z-index: 3;
   }
 
   .Local {
     position: relative;
-    width: clamp(320px, 50vw, 640px);
+    width: clamp(256px, 56vw, 772px);
     height: fit-content;
     object-fit: contain;
-    margin: clamp(0px, 8vw, 24px) auto clamp(24px, 80vw, 48px) auto;
+    margin: 0 auto clamp(8px, 80vw, 24px) auto;
     z-index: 3;
   }
 
   .LOGO {
     position: relative;
-    width: clamp(320px, 36vw, 640px);
+    width: clamp(364px, 48vw, 560px);
     height: fit-content;
     object-fit: contain;
-    margin: clamp(0px, 40vw, 48px) auto auto auto;
+    margin: clamp(8px, 80vw, 48px) auto clamp(8px, 80vw, 24px) auto;
     z-index: 3;
   }
 
 
 .bg{
  position:absolute;
- top:-240px;
+ top:-28px;
  left:0;
  width:100%;
- height:auto;
+ height:fill;
  display:flex;
  flex-direction:column;
  z-index:1;
@@ -279,6 +283,97 @@
     transform: translateY(0) rotate(0deg);
   }
 }
+
+
+
+ /* 手機版 */
+
+.Coming-soon-m,
+.Coming-soon-TC-m,
+.Local-m,
+.bg-mobile,
+.LOGO-m{
+    display:none;
+}
+
+
+@media screen and (max-width:767px){
+
+    .Coming-soon,
+    .Local,
+    .bg-pc,
+    .LOGO{
+        display:none;
+    }
+
+
+    .Coming-soon-m,
+    .Coming-soon-TC-m,
+    .Local-m,
+    .bg-mobile,
+    .LOGO-m{
+        display:block;
+    }
+
+    .bg-mobile{
+        position:absolute;
+        top:-28px;
+        left:0;
+        width:100%;
+        height:auto;
+        display:flex;
+        flex-direction:column;
+        z-index:1;
+    }
+
+    .Coming-soon-m{
+      position: relative;
+      width: clamp(240px, 60vw, 880px);
+      height: fit-content;
+      object-fit: Contain;
+      margin-top: 148px;
+      margin-bottom: 24px;
+      z-index: 3;
+  }
+
+    .Line{
+      width: clamp(240px, 80vw, 880px);
+      height: 1px;
+      background: #fff;
+      z-index: 3;
+    }
+
+    .Coming-soon-TC-m{
+      position: relative;
+      width: clamp(228px, 60vw, 660px);
+      height: fit-content;
+      object-fit: Contain;
+      z-index: 3;
+    }
+
+    .Local-m{
+      position: relative;
+      width: clamp(264px, 60vw, 660px);
+      height: fit-content;
+      object-fit: Contain;
+      margin-top: 64px;
+      z-index: 3;
+    }
+
+    .LOGO-m{
+      position: relative;
+      width: clamp(256px, 56vw, 560px);
+      height: fit-content;
+      object-fit: contain;
+      margin-top: 16px;
+      margin-bottom: 16px;
+      z-index: 3;
+
+
+    }
+
+}
+
 
 //螢火蟲專區
 
@@ -623,84 +718,6 @@
     animation-delay:1.8s;
 }
 
-
- /* 手機版 */
-
-.Coming-soon-m,
-.Coming-soon-TC-m,
-.Local-m,
-.bg-mobile,
-.LOGO-m{
-    display:none;
-}
-
-
-@media screen and (max-width:767px){
-
-    .Coming-soon,
-    .Local,
-    .bg-pc,
-    .LOGO{
-        display:none;
-    }
-
-
-    .Coming-soon-m,
-    .Coming-soon-TC-m,
-    .Local-m,
-    .bg-mobile,
-    .LOGO-m{
-        display:block;
-    }
-
-    .bg-mobile{
-        position:absolute;
-        top:-200px;
-        left:0;
-        width:100%;
-        height:auto;
-        display:flex;
-        flex-direction:column;
-        z-index:1;
-    }
-
-    .Coming-soon-m{
-      position: relative;
-      width: 60vw;
-      height: fit-content;
-      object-fit: Contain;
-      margin: 80px auto auto auto;
-      z-index: 3;
-  }
-
-    .Line{
-      width: 60vw;
-      height: 1px;
-      margin: auto 24px auto 24px;
-      background: #fff;
-      z-index: 3;
-    }
-
-    .Coming-soon-TC-m{
-      position: relative;
-      width: 60vw;
-      height: fit-content;
-      object-fit: Contain;
-      margin: auto auto auto auto;
-      z-index: 3;
-    }
-
-    .Local-m{
-      position: relative;
-      width: 70vw;
-      height: fit-content;
-      object-fit: Contain;
-      margin: 17px auto auto auto;
-      z-index: 3;
-    }
-
-
-}
 
 
 
