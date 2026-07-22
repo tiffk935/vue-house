@@ -153,11 +153,15 @@ onUnmounted(() => {
 
   border-radius:18px;
 
-  overflow:hidden;
+  max-height: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   box-shadow:0 15px 35px rgba(0,0,0,.25);
 
   z-index:999;
+
+  
 
 }
 
