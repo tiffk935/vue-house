@@ -39,12 +39,12 @@
 
     <img 
       class="Coming-soon"
-      src="@/section/s1/Coming soon.svg"
+      src="@/section/s1/Coming-soon.svg"
     >
 
     <img 
       class="Coming-soon-m"
-      src="@/section/s1/Coming soon-m.svg"
+      src="@/section/s1/Coming-soon-m.svg"
     >
 
     <img 
