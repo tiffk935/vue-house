@@ -54,7 +54,7 @@
 
     <img 
       class="Coming-soon-TC-m"
-      src="@/section/s1/Coming soon-TC-m.svg"
+      src="@/section/s1/Coming-soon-TC-m.svg"
     >
 
     <img 
