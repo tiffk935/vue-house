@@ -1,53 +1,63 @@
 <template>
-  <div class="contact-info mx-auto flex flex-col items-center justify-between">
-    <!-- <div class="border absolute"></div> -->
-    <!-- <div class="logo"></div> -->
+  <div>
+  <div class="contact-info-img relative">
+</div>
+  <div class="contact-info mx-auto  flex flex-col items-center justify-between">
+   <!--    --><div class="logo">
+      <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
+    </div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
-        <img src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+        <img src="@/section/icon/line-md_phone-filled.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
-        <img src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
-        <div>FB 諮詢</div>
+      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+        <img src="@/section/icon/ri_messenger-line.svg" alt="Facebook 諮詢" srcset="" />
+        <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
-        <img src="//h35.banner.tw/img/form/fb.svg" alt="fb" srcset="" />
+      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+        <img src="@/section/icon/ic_baseline-facebook.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
-      <div class="flex contact-item justify-between items-center address">
-        <div>接待中心：<br class="md:hidden"><span v-html="info.address"></span></div>
+    <div class="flex justify-between w-full contact-item-box no-gap address" v-if="info.address">
+      <div class="flex contact-item justify-center items-center add">
+        <div><span v-if="info.address1">{{ info.address1 }}：</span>{{ info.address }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
-        <img src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      <div class="flex contact-item justify-center items-center googlemap"
+        @click="modalOpen = true; modalType = 'gmap'">
+        <img src="//h35.banner.tw/img/form/gmap.svg" alt="導航 GoogleMap" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
     </div>
+
   </div>
+</div>
 
   <!-- Mobile contact info -->
-  <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'phone'">
-      <img src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
+    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+      @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <img src="@/section/icon/line-md_phone-filled.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
-      <img src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img src="@/section/icon/ri_messenger-line.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img/form/pen.svg" alt="pen" srcset="" />
-      <div>預約賞屋</div>
+      <img src="//h35.banner.tw/img/form/pen.svg" alt="立即預約" srcset="" />
+      <div>立即預約
+      </div>
     </div>
+    <!--
     <div class="flex flex-1 flex-col contact-item justify-center items-center"
-      @click="modalOpen = true; modalType = 'gmap'">
-      <img src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
+      @click="modalOpen = true; modalType = 'gmap'"  v-if="info.address" >
+      <img src="//h35.banner.tw/img/form/gmap.svg" alt="地圖導航" srcset="" />
       <div>地圖導航</div>
     </div>
+  -->
   </div>
 
   <!-- Modal -->
@@ -57,25 +67,35 @@
       <label for="contact-modal" class="btn btn-sm btn-circle absolute right-4 top-4">✕</label>
       <!-- icon -->
       <img class="h-12" v-if="modalType == 'phone'" src="//h35.banner.tw/img/form/phone.svg" alt="phone" srcset="" />
-      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="messenger" srcset="" />
+      <img class="h-12" v-else-if="modalType == 'fb'" src="//h35.banner.tw/img/form/messenger.svg" alt="fb" srcset="" />
       <img class="h-12" v-else-if="modalType == 'gmap'" src="//h35.banner.tw/img/form/gmap.svg" alt="gmap" srcset="" />
       <!-- title -->
-      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '賞屋專線' : modalType == 'fb' ? 'Facebook Messenger' :
-          '接待會館'
+      <div class="text-xl mt-4 font-bold">{{ modalType == 'phone' ? '預約專線' : modalType == 'fb' ? 'Facebook Messenger' :
+      `${info.address2?info.address2:'導航地址'}`
       }}</div>
       <!-- content -->
       <div class="text-md mt-4">{{ modalType == 'phone' ? info.phone : modalType == 'fb' ? '線上諮詢' :
-          `接待中心：${info.address}`
+      `${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-color1  border-0 text-white mt-12 hover:bg-color2" @click="go()" v-bind:class="{
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" v-if="modalType != 'phone'" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
         'btcontac': modalType == 'phone'
       }">
         {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
-            '開啟導航'
+        '開啟導航'
+        }}</div>
+      <!-- btn phone -->
+      <div class="btn btn-lg bg-color1 border-0 text-white mt-12 hover:bg-color2" @click="go()" id="phonegtm" v-else v-bind:class="{
+        'hidden': modalType == 'phone' && !$isMobile(),
+        'btlead': modalType == 'fb',
+        'btsearch': modalType == 'gmap',
+        'btcontac': modalType == 'phone'
+      }">
+        {{ modalType == 'phone' ? '撥打電話' : modalType == 'fb' ? '立即諮詢' :
+        '開啟導航'
         }}</div>
     </div>
   </div>
@@ -86,192 +106,255 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
-.bg-color1{background-color: #E5005C;}
-.hover\:bg-color2:hover{background-color:#a00040;}
+.bg-color1{background-color: #00312E;}
+.hover\:bg-color2:hover{background-color:#002421;}
 
+
+.contact-info-img{
+  height: 0;z-index: 52;
+}
 .contact-info {
-  width: size(1200);
-  padding: size(68) size(160) size(50) size(160);
-  // margin-top: size(73);
+  margin-bottom: 48px;
+  padding: 5em 0 2.5em 0;
   position: relative;
+  z-index: 50;
+  width: size(1000);
+  min-width: 750px;
+  font-size:16px;
 
-  // .border {
-  //   top: size(21);
-  //   bottom: size(21);
-  //   left: size(23);
-  //   right: size(23);
-  //   border: size(12) solid #e6c57c;
-  // }
-
-  .logo {
-    width: 19.1145833333vw;
-    height: 8.9583333333vw;
-    background-image: url("@/section/s1/logo.svg");
+  .logo {position: relative;
+    display: none;
+    width: size(367);
+   // height: size(172);
+    // background-image: url("@/section/s1/logo.svg");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    //margin-bottom: size(40);
-    margin-bottom: size(20);
+    margin: size(30) auto 0;
+    img{width: 100%;}
+    .logot{position: absolute;top:31%;left: 0;right: 0;margin: auto;width: 85%;}
   }
 
   .contact-item-box {
     position: relative;
-    gap: size(20);
-
-    &.address-wrap {
-      margin-top: size(20);
-    } 
+    margin-top:0em;
+    gap: 1.25em;
+   // width: size(920);
+    // min-width: 680px;
 
     .contact-item {
-      background-color: #040000;
-      border: 1px solid #040000;
-      color: #ffffff;
+      background: linear-gradient(179deg, #078300 27.67%, #229100 88.16%);
+      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      color: #fff;
       width: 100%;
-      padding: 0 size(40);
-      font-size: size(16);
-      line-height: 3.8;
-      letter-spacing: 0.1em;
-      max-width: size(280);
+      flex: 1;
+      padding: 1.1em 0;
+    border-radius: 16px;
+      line-height: 1.6;//3.8
+      letter-spacing: 0em;
+     // max-width: size(280);
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
+      //border: 1px solid #C29267;
+      gap: 1em;
 
       &:hover {
-        background-color: #303640;
+        background: linear-gradient(179deg, #FFF -44.42%, #067700 27.67%, #005C19 88.16%, #31FF87 127.94%);
         color: #fff;
 
         img {
-          filter: brightness(0) invert(1);
+          filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
         }
       }
 
       img {
-        max-width: size(27);
+        max-width: 1.35em;
         height: auto;
-        max-height: size(27);
+        max-height: 1.35em;
+        filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
         transition: all .5s;
-        filter: brightness(0) invert(1);
-        margin-right: size(10);
+        margin: 0;
       }
 
-      &.address {
-        background-color: #fff;
+    }
+    &.address {
+        display: none;
+        background-color: #eee;
+        border-radius: 16px;
+
+      .contact-item {
+        &.add{
+          background: none;
         color: #000;
+        cursor: text;
+        flex:2.10;
+
+        }
+        /*
+        background: none;
         z-index: 0;
         position: relative;
-        max-width: 9999px;
+        flex:2.17;
+        // border-radius: 999px 0 0 999px;
+      //  max-width: 9999px;
         justify-content: center;
-        border-color: #fff;
 
         &::before {
           content: "";
           position: absolute;
           width: 8em;
           height: 100%;
-          background-color: #fff;
+          background-color: transparent;
           left: calc(100% - 4em);
           z-index: -1;
-          display: none;
         }
-      }
-    }
+        div{
+          text-indent:0em;
+          white-space: normal;
+          padding: 0 1em;
+        }
 
+
+      &.googlemap {
+        flex:1;
+  //    background-color: #9B1E44;
+      border-left-width: 0;
+      //  color: #fff;
+      }
+    */
+    }
+    }
     &.no-gap {
       gap: 0 !important;
     }
   }
 }
 .modal-box{
-  img{filter:invert(23%) sepia(95%) saturate(7481%) hue-rotate(329deg) brightness(88%) contrast(105%);
-  //用這個工具變顏色 https://www.zhangxinxu.com/sp/filter.html 
+  img{filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
   }
 }
 
 @media screen and (max-width:768px) {
+
+
   .mo-contact-info {
-    z-index: 89;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: size-m(375);
-    height: size-m(63);
     
+    z-index: 99;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: sizem(375);
+  height: sizem(63);
+  gap: sizem(1);
+  background: linear-gradient(268deg, 
+    rgba(20, 64, 0, 0.75) 4.22%, 
+    rgba(102, 146, 78, 0.75) 50.54%, 
+    rgba(20, 64, 0, 0.75) 102.54%),linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));;
+  background-blend-mode: multiply;
+  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.50);
+  backdrop-filter: blur(5.6px);
+   //background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
+    //background:linear-gradient(180deg, #f575a6 , #652ccf );
+    // background:linear-gradient(180deg, #b2baff , #781297 );
 
-    display: flex;
-padding: 16px 12px;
-justify-content: center;
-align-items: flex-start;
-gap: 8px;
-flex-shrink: 0;
 
-background: linear-gradient( 268deg,
-    rgba(20, 64, 0, 0.75) 4.22%,
-    rgba(102, 146, 78, 0.75) 50.54%,
-    rgba(20, 64, 0, 0.75) 102.54%);
-background-blend-mode: multiply;
-box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.50);
-backdrop-filter: blur(5.599999904632568px);
+    .contact-item {
+      height: 100%;   
+      margin-top: 16px;   
+      margin-bottom: 16px;
+      font-size: sizem(16);
+      font-weight: 400;
+      color: #fff;
+      border-left:1px solid #fff9;
+
+      img {
+        margin-bottom: sizem(5);
+        max-width: sizem(16.5);
+        height: auto;
+        max-height: sizem(16.5);
+        filter: brightness(0) invert(1);
+      }
+      &:first-child{
+      border-left:0;}
+
+    }
   }
 
   .contact-info {
-    width: size-m(375);
-    height: auto;
-    padding: size-m(50) size-m(32);
-    // margin-top: size-m(60);
+    width: 92%;
+    margin-bottom: 32px;
+    min-width:0;
+    // height: sizem(400);
+    // border-radius: sizem(68);
+    //padding: sizem(0) sizem(0);
+    padding: sizem(80) 0 sizem(80) 0;
+    margin-top: sizem(0);
     position: relative;
-    justify-content: flex-start;
-
-    // .border {
-    //   top: size-m(13);
-    //   bottom: size-m(13);
-    //   left: size-m(9);
-    //   right: size-m(10);
-    //   border: size-m(8) solid #e6c57c;
-    // }
+    justify-content: space-between;
+  background-size: sizem(450) auto;
 
     .logo {
-      width: size-m(258);
-      height: size-m(87.68);
-      //background-image: url("//h35.banner.tw/img/form/logo.svg");
-      margin-bottom: size-m(39);
+      width: sizem(257);
+    margin: sizem(00) auto sizem(50) auto;
+     // margin-bottom: sizem(47);
     }
 
     .contact-item-box {
       position: relative;
-      gap: size-m(20);
+      margin-top: sizem(0);
+      gap: sizem(15);
       flex-direction: column;
-
-      &.address-wrap {
-        // border-radius: size-m(50);
-        margin-top: size-m(20);
-        // border: size-m(4) solid #e6c57c;
-      }
+    width: sizem(310);
 
       .contact-item {
-        padding: 0 size-m(65);
-        font-size: size-m(16);
+        padding: 1.1em sizem(80);
+        font-size: sizem(16);
         max-width: 100%;
-        justify-content: space-around;
+        white-space: nowrap;
+        margin: 0;
 
-
-        img {
-          max-width: size-m(27);
+        img {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               
+          max-width: sizem(27);
           height: auto;
-          max-height: size-m(27);
+          max-height: sizem(27);
+          margin: unset;
+          position: absolute;
+          left: calc(50% - 5em);
+          transform: translateX(-50%);
         }
-
+        div{
+          text-indent: 2em;
+        }
+/*
         &.address {
-          padding: size-m(6) 0;
+          font-size: sizem(15);
+          border-radius: sizem(0) sizem(0) 0 0;
+          padding: 1.1em 0;
+          margin-top: sizem(25);
+          //font-size: .9em;
 
           &::before {
             width: 100%;
             height: 100%;
-            // bottom: -50%;
+            bottom: -50%;
             left: 0;
           }
-
-          div {
-            line-height: 1.3;
+        }
+        &.address+div {
+          border-radius: 0 0 sizem(0) sizem(0);
+        }
+      &.googlemap {
+        border-top-width: 0;
+      border-left-width:0;
+      }
+*/
+      }
+      &.address {
+        margin:sizem(15) 0 0 0 ;
+        .contact-item {
+          &.add{text-align: center;
+          div{text-indent: 0em;}
           }
         }
       }
@@ -293,9 +376,9 @@ const modalType = ref('');
 const go = () => {
   if (modalType.value == 'phone') {
     window.location.href = `tel:${info.phone.replace("-", "")}`;
-    setTimeout(() => {
-      window.location.href = "phoneThanks";
-    }, 1000);
+     setTimeout(() => {
+       window.location.href = "phoneThanks";
+     }, 1000);
   } else if (modalType.value == 'fb') {
     window.open(info.fbMessage);
   } else if (modalType.value == 'gmap') {

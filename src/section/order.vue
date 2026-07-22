@@ -47,13 +47,15 @@
                 <span v-if="field.required">*</span>
               </span>
 
-              <select v-if="field.type === 'select'" v-model="formData[key]" class="select w-full rounded-none">
-
-                <option value="" disabled>{{ field.hold }}</option>
-                <option v-for="opt in field.option" :key="opt" :value="opt">
-                  {{ opt }}
-                </option>
-              </select>
+              <CustomSelect
+  v-if="field.type === 'select'"
+  v-model="formData[key]"
+  :placeholder="field.hold"
+  :options="field.option?.map(item => ({
+  label:item,
+  value:item
+})) || []"
+/>
 
               <input v-else v-model="formData[key]" type="text" class="input w-full"
                 :placeholder="field.hold" />
@@ -64,12 +66,12 @@
           <label class="row" v-if="info.locationConfig?.city?.enabled">
             <span>居住縣市<span v-if="info.locationConfig?.city?.required">*</span></span>
 
-            <select v-model="formData.city" class="select w-full">
-              <option value="" disabled>請選擇城市</option>
-              <option v-for="c in cityList" :key="c.value" :value="c.value">
-                {{ c.label }}
-              </option>
-            </select>
+            <CustomSelect
+  v-model="formData.city"
+  placeholder="請選擇城市"
+  :options="cityList"
+/>
+
           </label>
 
           <!-- 地區 --><Transition name="area-drop">
@@ -78,12 +80,12 @@
     v-if="info.locationConfig?.area?.enabled && formData.city"
   >
     <span>居住地區<span v-if="info.locationConfig?.area?.required">*</span></span>
-    <select v-model="formData.area" class="select w-full">
-      <option value="" disabled>請選擇地區</option>
-      <option v-for="a in areaList" :key="a.value" :value="a.value">
-        {{ a.label }}
-      </option>
-    </select>
+
+   <CustomSelect
+  v-model="formData.area"
+  placeholder="請選擇地區"
+  :options="areaList"
+/>
   </label>
 </Transition>
 
@@ -100,7 +102,7 @@
       <!-- 同意 -->
       <div class="flex gap-2 items-center justify-center control">
         <input type="checkbox" v-model="formData.policyChecked" class="checkbox" />
-        <p class="text-white tracking-[1px]">
+        <p>
           本人知悉並 「 同意個資告知事項聲明 」內容
         </p>
       </div>
@@ -172,7 +174,7 @@ $o-title-c: #A30C24; //.order-title
 
   .order-title-style{
   display: flex;
-  padding-bottom: 25px;
+  padding-bottom: 0px;
   flex-direction: column;
   align-items: center;
   gap: 21px;
@@ -222,8 +224,8 @@ $o-title-c: #A30C24; //.order-title
     width: min(1200px, 95%); //最大1200px
     //  height: 350px;
     gap: 4em;
-    margin-top: 2.8em;
-    margin-bottom: 3em;
+    margin-top: 2em;
+    margin-bottom: 6em;
     z-index: 50;
     align-items: stretch;
 
@@ -248,7 +250,7 @@ $o-title-c: #A30C24; //.order-title
     }
 
     .right textarea::placeholder {
-    color: #fff;
+    color: #ffffff;
     opacity: 0.5;
     letter-spacing: 1px;
     font-weight: 100;
@@ -256,16 +258,6 @@ $o-title-c: #A30C24; //.order-title
     padding-top: 1em;
     }
 
-
-
-    &::after {
-      content: "";
-      width: 1px;
-      height: 100%;
-      background-color: #0003;
-      position: absolute;
-      top: 0;left:0;right: 0;margin: auto;
-    }
 
 
     .row {
@@ -278,6 +270,7 @@ $o-title-c: #A30C24; //.order-title
       width: 100%;
       align-items: center;
       font-size: 16px;
+      letter-spacing:1.5px;
   
 
 
@@ -291,52 +284,23 @@ $o-title-c: #A30C24; //.order-title
         }
       }
 
-      input,
-      select {
-        background: rgba(10, 38, 16, 0);
-        flex: 1;
-        font-weight: 100;
-      }
-
-       input::placeholder {
-      color: #ffffff;
-      opacity: 0.5;
-      font-size: 16px;
-      letter-spacing: 1px;
+      input {
+    color:#fff;
+    opacity:1;
+    background:transparent;
+    font-size:16px;
+    letter-spacing:1px;
   }
 
-      option {
-        
-        border-radius: 24px;
-        background: rgba(1, 126, 28, 0.678);
-        box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.22) inset;
-        li {
 
-          font-size:14px;
-          letter-spacing:2px;
+  input::placeholder {
+    color:rgba(255,255,255,.5);
+    opacity:1;
+    font-size:16px;
+    letter-spacing:1.5px;
+  }
 
-          &:hover {
-         background:#006400;
-         color:white;
-
-          }
-          }
-}
-      select {
-        background: url("//h35.banner.tw/img//select.svg") no-repeat calc(100% - 1em) 100%;
-        background-size: auto 200%;
-        transition: background .3s;
-        color: #ffffff;
-        opacity: 1;
-        font-size: 16px;
-        letter-spacing: 1px;
-    // filter:  brightness(0) invert(1); //select的箭頭顏色
-
-        &:focus {
-          background-position: calc(100% - 1em) 0%;
-          border-radius: 12px;
-        }
-      }
+      
 
     }
 
@@ -365,24 +329,24 @@ $o-title-c: #A30C24; //.order-title
   }
 
   .send {
-    font-size: 1.4em;
-    background-color: #A30C24;
-    //border: 1px solid #FFF9;
-    border: 0;
+    font-size: 20px;
+    border-radius: 26px;
+    background: linear-gradient(179deg, #FFF -44.42%, #067700 27.67%, #005C19 88.16%, #31FF87 127.94%);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     padding: .7em 0;
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
     line-height: 1.5;
     text-indent: 0.5em;
     border-radius: 2em;
     text-align: center;
-    width: 18em;
+    width: 264px;
     z-index: 10;
     color: #fff;
     position: relative;
     transition: transform .5s;
-    margin-bottom: 2em;
-    font-weight: 700;
-    &:hover{transform: scale(1.1);}
+    margin-bottom: 0em;
+    font-weight: 400;
+    &:hover{transform: scale(1.03);}
   }
   .send-load{color: #ffffff;}
 
@@ -443,11 +407,13 @@ $o-title-c: #A30C24; //.order-title
 
 
     .form {
-      width: sizem(310);
+      display: flex;
+    justify-content: center;
+      width: calc(100% - 4em);
       min-width: 0;
       flex-direction: column;
       gap: 0;
-      margin: 2em auto 1.1em;
+      margin: 3em auto 2em;
       /*  height: auto;
       gap: sizem(15);
       margin-bottom: sizem(20);
@@ -478,9 +444,19 @@ $o-title-c: #A30C24; //.order-title
     }
 
     .control {
-      font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:80vw;
+    margin: 0 auto;
+    font-size: sizem(12);
+    font-weight: 500;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 2px;
     }
   }
+
+  
 }
 
 
@@ -489,8 +465,11 @@ $o-title-c: #A30C24; //.order-title
 <script setup>
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
-import Map from "@/section/form/map.vue"
+//import Map from "@/section/form/map.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
+/*自訂下拉選單*/
+import CustomSelect from "@/section/CustomSelect.vue"
+
 
 import info from "@/info"
 import { cityList, renderAreaList } from "@/info/address.js"
@@ -527,6 +506,11 @@ const formData = reactive({
     return acc
   }, {})
 })
+
+
+
+
+
 
 // ==========================
 // 🔥 FIELD LABEL MAP

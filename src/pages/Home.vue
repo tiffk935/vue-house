@@ -17,6 +17,10 @@
   </div>
 </template>
 
+* {
+  outline:1px solid red;
+}
+
 <script setup>
 import info from "@/info"
 import S1 from "@/section/s1.vue"

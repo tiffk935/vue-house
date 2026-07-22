@@ -124,9 +124,11 @@
   width: 100%;
   height: auto;
   font-weight: 500;
-  margin-bottom: 190px;
+  margin-bottom:190px;
+  
   @media screen and (min-width:768px) {
     height: auto;
+    
   }
   
   .leaf-1 {
@@ -166,8 +168,9 @@
     align-items: center; 
     width: auto ;
     height: auto;
-    gap: clamp(4px, 80vw, 12px);
+    gap: clamp(4px, 2vw, 12px);
     z-index: 3;
+    
   }
 
   .Coming-soon {
@@ -175,7 +178,7 @@
     width: clamp(320px, 64vw, 920px);
     height: fit-content;
     object-fit: Contain;
-    margin: clamp(148px, 80vw, 240px) auto clamp(8px, 80vw, 24px) auto;
+    margin: clamp(148px, 20vw, 240px) auto clamp(8px, 5vw, 24px) auto;
     z-index: 3;
   }
 
@@ -201,9 +204,11 @@
     width: clamp(364px, 48vw, 560px);
     height: fit-content;
     object-fit: contain;
-    margin: clamp(8px, 80vw, 48px) auto clamp(8px, 80vw, 24px) auto;
+    margin: clamp(8px, 5vw, 48px) auto clamp(8px, 5vw, 24px) auto;
     z-index: 3;
   }
+
+  
 
 
 .bg{
@@ -211,7 +216,7 @@
  top:-28px;
  left:0;
  width:100%;
- height:fill;
+ height:100%;
  display:flex;
  flex-direction:column;
  z-index:1;
@@ -220,9 +225,14 @@
 
 .bg-piece{
  width:100%;
+ height:auto;
  display:block;
  flex-shrink:0;
  margin-top:-3px;
+ 
+}
+.flip {
+  transform: scaleY(-1);   // 依你的拼接方向選 scaleX 或 scaleY，直向堆疊通常是 scaleY
 }
 
 
@@ -315,16 +325,11 @@
         display:block;
     }
 
-    .bg-mobile{
-        position:absolute;
-        top:-28px;
-        left:0;
-        width:100%;
-        height:auto;
-        display:flex;
-        flex-direction:column;
-        z-index:1;
-    }
+    .s1{margin-bottom: 132px;}    
+
+
+
+
 
     .Coming-soon-m{
       position: relative;
@@ -366,11 +371,13 @@
       height: fit-content;
       object-fit: contain;
       margin-top: 16px;
-      margin-bottom: 16px;
+      margin-bottom: 0px;
       z-index: 3;
 
 
     }
+
+    
 
 }
 
