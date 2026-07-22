@@ -153,7 +153,7 @@ $o-title-c: #A30C24; //.order-title
 .order {
   width: 100%;
   padding-top: size(40);
-  font-size: 16px;
+  font-size: clamp(12px, 4vw, 16px);
   z-index: 6;
 
   .order-section {
@@ -269,7 +269,7 @@ $o-title-c: #A30C24; //.order-title
       display: flex;
       width: 100%;
       align-items: center;
-      font-size: 16px;
+      font-size: clamp(12px, 4vw, 16px);
       letter-spacing:1.5px;
   
 
@@ -288,7 +288,7 @@ $o-title-c: #A30C24; //.order-title
     color:#fff;
     opacity:1;
     background:transparent;
-    font-size:16px;
+    font-size: clamp(12px, 4vw, 16px);
     letter-spacing:1px;
   }
 
@@ -296,7 +296,7 @@ $o-title-c: #A30C24; //.order-title
   input::placeholder {
     color:rgba(255,255,255,.5);
     opacity:1;
-    font-size:16px;
+    font-size: clamp(12px, 4vw, 16px);
     letter-spacing:1.5px;
   }
 
@@ -351,7 +351,7 @@ $o-title-c: #A30C24; //.order-title
   .send-load{color: #ffffff;}
 
   .control {
-    font-size: 16px;
+    font-size: clamp(12px, 4vw, 16px);
     color: #ffffff;
     position: relative;
     z-index: 10;

@@ -8,7 +8,8 @@
     background-size: cover;
     background-position: center;
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;    // fallback，舊瀏覽器看這行
+    min-height: 100dvh;   // 新瀏覽器會用這行覆蓋
 }
 
 @media screen and (max-width: 767px) {

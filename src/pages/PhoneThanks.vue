@@ -9,7 +9,8 @@
 <style lang="scss" scoped>
 .thanks {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;    // fallback，舊瀏覽器看這行
+    min-height: 100dvh;   // 新瀏覽器會用這行覆蓋
     background: url('@/assets/thank_bg.png');
     background-size: cover;
     background-position: center;
