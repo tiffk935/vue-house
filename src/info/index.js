@@ -1,4 +1,4 @@
-const caseName = "test-one"
+const caseName = "宏利發SUN PARK"
 
 export default {
   caseid: "fc32f231-8202-4932-b9c7-04010740849f",
