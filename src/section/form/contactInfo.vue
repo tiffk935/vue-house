@@ -47,7 +47,7 @@
       <div>FB 諮詢</div>
     </div>
     <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
-      <img src="//h35.banner.tw/img/form/pen.svg" alt="立即預約" srcset="" />
+      <img src="@/section/icon/iCON.svg" alt="立即預約" srcset="" />
       <div>立即預約
       </div>
     </div>
