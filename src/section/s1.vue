@@ -1,31 +1,6 @@
 <template>
   <section class="s1 text-white relative">
-    <img class="leaf-1" src="@/section/s1/leaf-1.webp">
-    <img class="leaf-2" src="@/section/s1/leaf-2.webp">
 
-<div class="bg">
-
-
-  //電腦版背景
-  <img
-    v-for="i in 20"
-    :key="i"
-    :class="['bg-piece','bg-pc',{ flip:i % 2 === 0 }]"
-    src="@/section/s1/bg-4.webp"
-    alt=""
-  >
-
-
-  //手機板背景
-   <img
-    v-for="i in 20"
-    :key="'mobile-'+i"
-    :class="['bg-piece','bg-mobile',{ flip:i % 2 === 0 }]"
-    src="@/section/s1/bg-2m.webp"
-    alt=""
-  >
-
-</div>
 
 
 <div class="H1"
@@ -123,6 +98,7 @@
   position: relative;
   width: 100%;
   height: auto;
+  
   font-weight: 500;
   margin-bottom:190px;
   
@@ -131,33 +107,6 @@
     
   }
   
-  .leaf-1 {
-    position: absolute;
-    width: 1476px;
-    height: 1272px;
-    top: -180px;
-    left: calc(0% - 880px);
-    mix-blend-mode:multiply;
-    filter: brightness(0.9);
-    z-index: 2;
-
-    animation: leafFloat 8s ease-in-out infinite;
-    transform-origin: center;
-  }
-
-  .leaf-2 {
-    position: absolute;
-    width: 720px;
-    height: 844px;
-    aspect-ratio: 46/55;
-    top: -560px;
-    left: calc(50% - 420px);
-    mix-blend-mode:multiply;
-    z-index: 2;
-
-    animation: leafFtop 8s ease-in-out infinite;
-    transform-origin: top;
-  }
 
 
 .H1 {
@@ -208,92 +157,17 @@
     z-index: 3;
   }
 
-  
 
-
-.bg{
- position:absolute;
- top:-28px;
- left:0;
- width:100%;
- height:100%;
- display:flex;
- flex-direction:column;
- z-index:1;
-}
-
-
-.bg-piece{
- width:100%;
- height:auto;
- display:block;
- flex-shrink:0;
- margin-top:-3px;
- 
-}
-.flip {
-  transform: scaleY(-1);   // 依你的拼接方向選 scaleX 或 scaleY，直向堆疊通常是 scaleY
-}
-
-
-.bg-mobile{
- display:none;
-}
 
 
 @media(max-width:767px){
 
- .bg-pc{
-   display:none;
- }
 
- .bg-mobile{
-   display:block;
- }
-
-}
 
 
   
   
 }
-
-@keyframes leafFloat {
-  0% {
-    transform: translateY(0) rotate(-2deg);
-  }
-  25% {
-    transform: translateY(-4px) rotate(2deg);
-  }
-  50% {
-    transform: translateY(-12px) rotate(-1deg);
-  }
-  75% {
-    transform: translateY(-6px) rotate(2deg);
-  }
-  100% {
-    transform: translateY(0) rotate(-2deg);
-  }
-}
-
-@keyframes leafFtop {
-  0% {
-    transform: translateY(0) rotate(0deg);
-  }
-  35% {
-    transform: translateY(-2px) rotate(1deg);
-  }
-  50% {
-    transform: translateY(-6px) rotate(0deg);
-  }
-  80% {
-    transform: translateY(-2px) rotate(1deg);
-  }
-  100% {
-    transform: translateY(0) rotate(0deg);
-  }
-}
-
 
 
  /* 手機版 */
@@ -301,7 +175,6 @@
 .Coming-soon-m,
 .Coming-soon-TC-m,
 .Local-m,
-.bg-mobile,
 .LOGO-m{
     display:none;
 }
@@ -311,7 +184,6 @@
 
     .Coming-soon,
     .Local,
-    .bg-pc,
     .LOGO{
         display:none;
     }
@@ -320,7 +192,6 @@
     .Coming-soon-m,
     .Coming-soon-TC-m,
     .Local-m,
-    .bg-mobile,
     .LOGO-m{
         display:block;
     }
@@ -725,7 +596,7 @@
     animation-delay:1.8s;
 }
 
-
+}
 
 
 
