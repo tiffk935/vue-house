@@ -1014,7 +1014,7 @@
     }
   }
 
-  form {
+  .form {
     font-family: "Noto Sans TC", sans-serif;
     width: 100%;
     font-size: size-m(24.43);
@@ -1033,12 +1033,12 @@
     }
 
     .input-group {
-      padding-bottom: size-m(27);
-      margin-bottom: size-m(28);
+      -webkit-tap-highlight-color: transparent;
+      display: block;
+      padding: size-m(27) 0;
       border-bottom: 1px solid #000;
       @media (min-width: 768px) {
-        padding-bottom: size(28);
-        margin-bottom: size(30);
+        padding: size(28) 0;
         width: calc(50% - size(43));
       }
 
@@ -1047,7 +1047,7 @@
         width: 100%;
       }
 
-      label {
+      span {
         font-weight: 500;
         padding-right: size-m(21);
         border-right: size-m(1) solid #000;
@@ -1058,6 +1058,7 @@
       }
 
       input {
+        -webkit-tap-highlight-color: transparent;
         font-size: 16px;
         background: none;
         border: none;

@@ -2,7 +2,6 @@ import gsap from 'gsap';
 
 window.addEventListener('load', () => {
   import('@/pages/news.js');
-  import('@/pages/order.js');
 
   gsap.to('#loading', {
     opacity: 0,

@@ -277,35 +277,35 @@
             <div class="en-title">RESERVE</div>
           </div>
 
-          <form action="" method="post" @submit.prevent="handleSubmit">
+          <div class="form">
             <div class="input-groups">
-              <div class="input-group">
-                <label>姓　　名</label>
+              <label class="input-group">
+                <span>姓　　名</span>
                 <input type="text" name="name" aria-label="name" v-model="formData.name">
-              </div>
-              <div class="input-group">
-                <label>參觀人數</label>
+              </label>
+              <label class="input-group">
+                <span>參觀人數</span>
                 <input type="text" name="people" aria-label="amount" v-model="formData.people">
-              </div>
-              <div class="input-group">
-                <label>聯絡電話</label>
+              </label>
+              <label class="input-group">
+                <span>聯絡電話</span>
                 <input type="text" name="phone" aria-label="phone" v-model="formData.phone">
-              </div>
-              <div class="input-group">
-                <label>電子信箱</label>
+              </label>
+              <label class="input-group">
+                <span>電子信箱</span>
                 <input type="text" name="email" aria-label="email" v-model="formData.email">
-              </div>
-              <div class="input-group">
-                <label>備　　註</label>
+              </label>
+              <label class="input-group">
+                <span>備　　註</span>
                 <input type="text" name="msg" aria-label="message" v-model="formData.msg">
-              </div>
+              </label>
             </div>
 
             <div class="recaptcha-and-btn">
               <div class="g-recaptcha" data-sitekey="6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN"
                 data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"
                 data-error-callback="recaptchaErrorCallback"></div>
-              <button class="send-btn pc">立即預約</button>
+              <button class="send-btn pc" @click="handleSubmit">立即預約</button>
             </div>
 
             <div class="pretty p-default p-round">
@@ -316,7 +316,7 @@
             </div>
 
             <button class="send-btn mob">立即預約</button>
-          </form>
+          </div>
 
           <hr>
 
@@ -539,6 +539,7 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <script type="module" src="./main.js"></script>
     <script type="module" src="./home.js"></script>
+    <script type="module" src="./order.js"></script>
 </body>
 
 </html>
