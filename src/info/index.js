@@ -1,8 +1,8 @@
-const caseName = "宏利發SUN PARK"
+const caseName = "宏利發 SUN PARK"
 
 export default {
-  caseid: "fc32f231-8202-4932-b9c7-04010740849f",
-  caseid_j: "1d2db7f2-157b-4a33-acbc-f4abfde91846", //兩邊id一樣可以不用有
+  caseid: "40a42369-777f-4955-9369-99a146dc510d",
+  //caseid_j: "3c00c7f1-d23a-4d28-a94c-790a8f4626c5", //兩邊id一樣可以不用有
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
   address: "XXXXX",
@@ -25,8 +25,8 @@ export default {
     */
   ],
    gtmCode: ["GTM-000000"], // 可放置多個
-  recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
-  //recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
+  //recaptcha_site_key_v2: "6Lep-78UAAAAAMaZLtddpvpixEb8cqu7v7758gLz", //主1
+  recaptcha_site_key_v2: "6LfGUjEaAAAAANYvhZQx5imGm23pRt0V-rOvkpNC", //主2
   //recaptcha_site_key_v2: "6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN", //主3
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
@@ -51,7 +51,7 @@ export default {
       type: "select",
       hold: "請選擇房型",
       option: ["兩房", "店面"],
-      required: true, //必填開啟使用
+      required: false, //必填開啟使用
     }, 
     
         budget: {

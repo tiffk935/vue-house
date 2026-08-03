@@ -494,6 +494,10 @@ const locationConfig = info.locationConfig || {}
 const formData = reactive({
   name: "",
   phone: "",
+  room_type: "",
+  budget: "",
+  car: "",
+  time: "",
   msg: "",
   city: "",
   area: "",
@@ -518,7 +522,11 @@ const formData = reactive({
 const fieldLabelMap = {
   name: "姓名",
   phone: "手機",
-  gender: "性別",
+  //gender: "性別",
+  room_type: "需求房型",
+  budget: "購屋預算",
+  car: "需求車位",
+  time: "聯絡時間",
   city: "居住縣市",
   area: "居住地區",
   // 動態欄位從 selectFields 自動取 title
