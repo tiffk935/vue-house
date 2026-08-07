@@ -1,15 +1,16 @@
 <template>
     <div class="thanks">
         <a href="/">
-            <img src="~@/assets/thank-img.png" alt="戀JIA" class="img">
-            <img src="~@/assets/thank-img-hover.png" alt="戀JIA" class="img-hover">
+            <img src="~@/assets/thank-img.png" alt="SUN PARK" class="img">
+            <img src="~@/assets/thank-img-hover.png" alt="SUN PARK" class="img-hover">
         </a>
     </div>
 </template>
 <style lang="scss" scoped>
 .thanks {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh;    // fallback，舊瀏覽器看這行
+    min-height: 100dvh;   // 新瀏覽器會用這行覆蓋
     background: url('@/assets/thank_bg.png');
     background-size: cover;
     background-position: center;
