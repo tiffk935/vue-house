@@ -120,7 +120,7 @@
   z-index: 50;
   width: size(1000);
   min-width: 750px;
-  font-size:16px;
+  font-size:18px;
 
   .logo {position: relative;
     display: none;
@@ -136,22 +136,26 @@
   }
 
   .contact-item-box {
+    font-family: "Chiron Hei HK", sans-serif;
     position: relative;
     margin-top:0em;
-    gap: 1.25em;
+    gap: 1.8em;
    // width: size(920);
     // min-width: 680px;
 
     .contact-item {
-      background: linear-gradient(179deg, #078300 27.67%, #229100 88.16%);
-      box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+      
+      border-radius: 12px;
+border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
+background: rgba(255, 255, 255, 0.1);
+box-shadow: 1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.04) inset;
+backdrop-filter: blur(2.3105762004852295px);
       color: #fff;
       width: 100%;
       flex: 1;
       padding: 1.1em 0;
-    border-radius: 16px;
       line-height: 1.6;//3.8
-      letter-spacing: 0em;
+      letter-spacing: 0.05em;
      // max-width: size(280);
       z-index: 1;
       transition: all .3s;
@@ -160,7 +164,7 @@
       gap: 1em;
 
       &:hover {
-        background: linear-gradient(179deg, #FFF -44.42%, #067700 27.67%, #005C19 88.16%, #31FF87 127.94%);
+        background: rgba(0, 62, 143, 0.664);
         color: #fff;
 
         img {
@@ -247,10 +251,21 @@
   width: sizem(375);
   height: sizem(63);
   gap: sizem(1);
-  background: linear-gradient(268deg, 
-    rgba(20, 64, 0, 0.75) 4.22%, 
-    rgba(102, 146, 78, 0.75) 50.54%, 
-    rgba(20, 64, 0, 0.75) 102.54%),linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.25));;
+  background:
+    radial-gradient(
+      ellipse at 36% -20%,
+      #e93fff 0%,
+      #9b66b9 10%,
+      #003c80 55%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse at -100% 100%,
+      #5893FF 22%,
+      #00446E 55%,
+      transparent 75%
+    ),
+    #00446E;;
   background-blend-mode: multiply;
   box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.50);
   backdrop-filter: blur(5.6px);

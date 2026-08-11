@@ -125,7 +125,7 @@ onUnmounted(() => {
 }
 
 .arrow{
-
+  filler:#fff;
   width:48px;
   height:48px;
 
@@ -149,9 +149,11 @@ onUnmounted(() => {
 
   width:100%;
 
-  background:#fff;
-
-  border-radius:18px;
+  border-radius: 12px;
+  border: 0.7px solid #FFF;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 1px 4px 38.3px 0 rgba(255, 255, 255, 0.04) inset;
+  backdrop-filter: blur(2.049999952316284px);
 
   max-height: 280px;
   overflow-y: auto;
@@ -175,7 +177,7 @@ onUnmounted(() => {
 
   cursor:pointer;
 
-  color:#444;
+  color:#024DB0;
 
   transition:.25s;
 
@@ -184,7 +186,7 @@ onUnmounted(() => {
 
 .options li:hover{
 
-  background:#00771A;
+  background:#024DB0;
 
   color:#fff;
 
@@ -192,7 +194,7 @@ onUnmounted(() => {
 
 .options li.active{
 
-  background:#00771A;
+  background:#024DB0;
 
   color:#fff;
 

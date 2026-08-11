@@ -12,81 +12,31 @@
     data-aos-mirror="true"
 >
 
+
     <img 
       class="Coming-soon"
-      src="@/section/s1/Coming-soon.svg"
-    >
+      src="@/section/s1/h1-coming-soon.svg"
+    />
 
     <img 
       class="Coming-soon-m"
-      src="@/section/s1/Coming-soon-m.svg"
-    >
-
-    <img 
-      class="Line"
-      src="@/section/s1/Line.svg"
-    >
-
-    <img 
-      class="Coming-soon-TC-m"
-      src="@/section/s1/Coming-soon-TC-m.svg"
-    >
-
-    <img 
-      class="Local"
-      src="@/section/s1/Local.svg"
-    >
-
-    <img 
-      class="Local-m"
-      src="@/section/s1/Local-m.svg"
+      src="@/section/s1/h1-coming-soon-m.svg"
     >
 
     <img 
       class="LOGO"
-      src="@/section/s1/LOGO.svg"
+      src="@/section/s1/h2-logo.svg"
     >
     
     <img 
       class="LOGO-m"
-      src="@/section/s1/LOGO-m.svg" 
+      src="@/section/s1/h2-logo-m.svg" 
     >
 
 
 
 </div>
     
-<div class="fireflies">
-
-    <div class="firefly f1">
-        <span></span>
-    </div>
-
-    <div class="firefly f2">
-        <span></span>
-    </div>
-
-    <div class="firefly f3">
-        <span></span>
-    </div>
-
-    <div class="firefly f4">
-        <span></span>
-    </div>
-
-    <div class="firefly f5">
-        <span></span>
-    </div>
-
-    <div class="firefly f6">
-        <span></span>
-    </div>
-
-    <div class="firefly f7">
-        <span></span>
-    </div>
-
-</div>
 
   </section>
 </template>
@@ -129,28 +79,12 @@
     object-fit: Contain;
     margin: clamp(148px, 20vw, 240px) auto clamp(8px, 5vw, 24px) auto;
     z-index: 3;
-  }
-
-  .Line {
-    width: clamp(320px, 64vw, 920px);
-    height: 1px;
-    background: #fff;
-    margin: clamp(8px, 80vw, 24px) auto clamp(8px, 80vw, 24px) auto;
-    z-index: 3;
-  }
-
-  .Local {
-    position: relative;
-    width: clamp(256px, 56vw, 772px);
-    height: fit-content;
-    object-fit: contain;
-    margin: 0 auto clamp(8px, 80vw, 24px) auto;
-    z-index: 3;
+    animation: glowBreath 3s ease-in-out infinite;
   }
 
   .LOGO {
     position: relative;
-    width: clamp(364px, 48vw, 560px);
+    width: clamp(364px, 80vw, 935px);
     height: fit-content;
     object-fit: contain;
     margin: clamp(8px, 5vw, 48px) auto clamp(8px, 5vw, 24px) auto;
@@ -204,12 +138,13 @@
 
     .Coming-soon-m{
       position: relative;
-      width: clamp(240px, 60vw, 880px);
+      width: clamp(240px, 100vw, 880px);
       height: fit-content;
       object-fit: Contain;
       margin-top: 148px;
       margin-bottom: 24px;
       z-index: 3;
+      animation: glowBreath 3s ease-in-out infinite;
   }
 
     .Line{
@@ -251,6 +186,28 @@
     
 
 }
+
+.glow-breath {
+  animation: glowBreath 1s ease-in-out infinite;
+}
+
+@keyframes glowBreath {
+  0%,
+  100% {
+    filter:
+      drop-shadow(0 0 2px rgba(255, 78, 196, 0.2))
+      drop-shadow(0 0 6px rgba(255, 220, 170, 0.1));
+  }
+
+  50% {
+    filter:
+      drop-shadow(0 0 5px rgba(255, 92, 201, 0.7))
+      drop-shadow(0 0 15px rgba(255, 220, 170, 0.45))
+      drop-shadow(0 0 30px rgba(255, 220, 170, 0.2));
+  }
+}
+
+
 
 
 //螢火蟲專區

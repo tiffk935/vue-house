@@ -117,7 +117,7 @@
       <div class="sendall mt-8 mb-12 mx-auto">
 
         <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          送出表單
+          立即預約
         </button>
 
         <div v-else class="send-load">
@@ -160,6 +160,8 @@ $o-title-c: #A30C24; //.order-title
     position: relative;
     overflow: hidden;
     min-height: size(500);
+    margin-bottom: sizem(-100);
+  
   }
 /*
 .order-title-img{
@@ -205,7 +207,7 @@ $o-title-c: #A30C24; //.order-title
   .order-title {
   color: #FFF;
   font-family: "Noto Sans";
-  font-size: 32px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -221,9 +223,9 @@ $o-title-c: #A30C24; //.order-title
     */
 
   .form {
-    width: min(1200px, 95%); //最大1200px
+    width: min(1000px, 95%); //最大1200px
     //  height: 350px;
-    gap: 4em;
+    gap: 2em;
     margin-top: 2em;
     margin-bottom: 6em;
     z-index: 50;
@@ -245,8 +247,8 @@ $o-title-c: #A30C24; //.order-title
         color: #ffffff;
         padding-left: 2em;
         padding-right: 2em;
-        padding-top: 1em;
-        letter-spacing: 1px;}
+        padding-top: 1.5em;
+        letter-spacing: 2px;}
     }
 
     .right textarea::placeholder {
@@ -261,10 +263,12 @@ $o-title-c: #A30C24; //.order-title
 
 
     .row {
-      border-radius: 24px;
-      background: rgba(0, 119, 26, 0.35);
-      box-shadow: -3px 2px 26.3px 0 rgba(10, 38, 16, 0.4) inset;
-      border: 0px;
+      font-family: "Chiron Hei HK", sans-serif;
+
+      border-radius: 12px;
+      border: 0.1px solid #FFF;
+      background: rgba(255, 255, 255, 0.01);
+      box-shadow: 1px 4px 38.3px 0 rgba(255, 255, 255, 0.04) inset;
       color: #ffffff;
       display: flex;
       width: 100%;
@@ -330,14 +334,39 @@ $o-title-c: #A30C24; //.order-title
 
   .send {
     font-size: 20px;
-    border-radius: 26px;
-    background: linear-gradient(179deg, #FFF -44.42%, #067700 27.67%, #005C19 88.16%, #31FF87 127.94%);
+    border-radius: 1px;
+
+  background:
+  radial-gradient(
+    ellipse at 36% -20%,
+    #e93fff 0%,
+    #9b66b9 10%,
+    #003c80 55%,
+    transparent 75%
+  ),
+
+  radial-gradient(
+    ellipse at -100% 100%,
+  
+    #5893FF 22%,
+    #00446E 55%,
+    transparent 75%
+  ),
+  radial-gradient(
+    ellipse at 180% 120%,
+    #AD3DB7 0%,
+    #5893FF 22%,
+    #00446E 55%,
+    transparent 75%
+  ),
+  #00446E;
+    
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
     padding: .7em 0;
     letter-spacing: 0.2em;
     line-height: 1.5;
     text-indent: 0.5em;
-    border-radius: 2em;
+    border-radius: 12px;
     text-align: center;
     width: 264px;
     z-index: 10;
@@ -352,12 +381,72 @@ $o-title-c: #A30C24; //.order-title
 
   .control {
     font-size: clamp(12px, 4vw, 16px);
-    color: #ffffff;
-    position: relative;
-    z-index: 10;
-    input[type="checkbox"] {border: 2px solid #666;background-color:#fff;}
+  color: #ffffff;
+  position: relative;
+  z-index: 10;
   }
  
+}
+
+.checkbox {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 20px;
+  height: 20px;
+
+  margin: 0 0.5em -0.1em 0;
+
+  border: 1.5px solid rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  cursor: pointer;
+
+  position: relative;
+  flex-shrink: 0;
+
+  transition: all 0.2s ease;
+}
+
+/* 勾選後 */
+.checkbox:checked {
+  background:
+    radial-gradient(
+      ellipse at 36% -20%,
+      #e93fff 0%,
+      #9b66b9 10%,
+      #003c80 55%,
+      transparent 75%
+    ),
+    radial-gradient(
+      ellipse at -100% 100%,
+      #5893FF 22%,
+      #00446E 55%,
+      transparent 75%
+    ),
+    #00446E;
+
+  border-color: transparent;
+}
+
+/* 勾號 */
+.checkbox:checked::after {
+  content: "";
+
+  position: absolute;
+
+  width: 5px;
+  height: 9px;
+
+  left: 6px;
+  top: 2px;
+
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+
+  transform: rotate(45deg);
 }
 
 
@@ -386,7 +475,7 @@ $o-title-c: #A30C24; //.order-title
       margin: 0 auto;
       width: sizem(117);
       height: sizem(2);
-      margin-bottom: sizem(25);
+      margin-bottom: sizem(20);
       background-color: #055F76;
     }
 
@@ -459,6 +548,16 @@ $o-title-c: #A30C24; //.order-title
   
 }
 
+@media screen and (max-width: 768px) {
+  .order {
+    .form {
+      .row {
+        background: rgba(64, 106, 161, 0.466);
+      }
+    }
+  }
+}
+
 
 
 </style>
@@ -496,7 +595,6 @@ const formData = reactive({
   phone: "",
   room_type: "",
   budget: "",
-  car: "",
   time: "",
   msg: "",
   city: "",
@@ -525,7 +623,6 @@ const fieldLabelMap = {
   //gender: "性別",
   room_type: "需求房型",
   budget: "購屋預算",
-  car: "需求車位",
   time: "聯絡時間",
   city: "居住縣市",
   area: "居住地區",
