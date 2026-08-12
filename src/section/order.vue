@@ -18,7 +18,7 @@
           <!-- 姓名 -->
           <label class="row">
             <span>姓名<span>*</span></span>
-            <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫姓名" />
+            <input v-model="formData.name" type="text" class="input w-full" placeholder="請填寫您的姓名" />
           </label>
 
           <!-- 性別（可開關） -->
@@ -35,32 +35,44 @@
           <!-- 手機 -->
           <label class="row">
             <span>聯絡電話<span>*</span></span>
-            <input v-model="formData.phone" type="text" class="input w-full" placeholder="請填寫電話" />
+            <input v-model="formData.phone" type="text" class="input w-full" placeholder="請填寫您的聯絡電話" />
           </label>
 
           <!-- 動態欄位 -->
           <template v-for="(field, key) in selectFields" :key="key">
-            <label class="row" v-if="!field.hidden">
+  <Transition name="area-drop">
+    <label
+      class="row dynamic-row"
+      v-if="!field.hidden && shouldShowField(field)"
+    >
 
-              <span>
-                {{ field.title }}
-                <span v-if="field.required">*</span>
-              </span>
+      <span>
+        {{ field.title }}
+        <span v-if="field.required">*</span>
+      </span>
 
-              <CustomSelect
+      <CustomSelect
   v-if="field.type === 'select'"
   v-model="formData[key]"
   :placeholder="field.hold"
   :options="field.option?.map(item => ({
-  label:item,
-  value:item
-})) || []"
+    label: item,
+    value: item
+  })) || []"
+  :nowrap="field.nowrap"
 />
 
-              <input v-else v-model="formData[key]" type="text" class="input w-full"
-                :placeholder="field.hold" />
-            </label>
-          </template>
+      <input
+        v-else
+        v-model="formData[key]"
+        type="text"
+        class="input w-full"
+        :placeholder="field.hold"
+      />
+
+    </label>
+  </Transition>
+</template>
 
           <!-- 縣市 -->
           <label class="row" v-if="info.locationConfig?.city?.enabled">
@@ -68,7 +80,7 @@
 
             <CustomSelect
   v-model="formData.city"
-  placeholder="請選擇城市"
+  placeholder="請選擇縣市"
   :options="cityList"
 />
 
@@ -130,6 +142,8 @@
     </div>
 
     <Map v-if="info.address" />
+
+    
     <HouseInfo />
 
   </div>
@@ -269,11 +283,11 @@ $o-title-c: #A30C24; //.order-title
       border: 0.1px solid #FFF;
       background: rgba(255, 255, 255, 0.01);
       box-shadow: 1px 4px 38.3px 0 rgba(255, 255, 255, 0.04) inset;
-      color: #ffffff;
+      color: #def6ff;
       display: flex;
       width: 100%;
       align-items: center;
-      font-size: clamp(12px, 4vw, 16px);
+      font-size: clamp(10px, 3.5vw, 16px);
       letter-spacing:1.5px;
   
 
@@ -281,7 +295,7 @@ $o-title-c: #A30C24; //.order-title
       >span {
         min-width: 8em;
         text-align: left;
-        padding-left: 2em;
+        padding-left: 1.5em;
 
         >span {
           color: #c00;
@@ -289,7 +303,7 @@ $o-title-c: #A30C24; //.order-title
       }
 
       input {
-    color:#fff;
+    color:#ffffff;
     opacity:1;
     background:transparent;
     font-size: clamp(12px, 4vw, 16px);
@@ -307,6 +321,31 @@ $o-title-c: #A30C24; //.order-title
       
 
     }
+
+     .dynamic-row {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0em;
+
+  > span {
+    width: 100%;
+    min-width: 0;
+    padding-left: 1.5em;
+    padding-top: 0.8em;
+  }
+
+  > input {
+    width: calc(100% - 3em);
+    height: 2em;
+    margin: 1em auto 1em;
+    padding-left: 0em; // ⭐ 加這個
+  }
+
+  :deep(.custom-select) {
+    width: calc(100% - 3em);
+    margin: 0 auto 1em;
+  }
+}
 
       .name {
         width: 100%;
@@ -556,6 +595,7 @@ $o-title-c: #A30C24; //.order-title
       }
     }
   }
+
 }
 
 
@@ -586,6 +626,20 @@ const isMobile = computed(() => globals.$isMobile())
 const selectFields = info.selectFields || {}
 const formConfig = info.formConfig || {}
 const locationConfig = info.locationConfig || {}
+
+// ==========================
+// 🔥 欄位依賴控制
+// ==========================
+const shouldShowField = (field) => {
+
+  // 沒有設定 dependsOn → 正常顯示
+  if (!field.dependsOn) {
+    return true
+  }
+
+  // 有設定 dependsOn → 判斷指定欄位是否有值
+  return !!formData[field.dependsOn]
+}
 
 // ==========================
 // 🔥 FORM DATA

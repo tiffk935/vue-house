@@ -3,9 +3,14 @@
 <template>
   <div class="custom-select" ref="selectRef">
     <div class="select-btn" @click="toggle">
-      <span :class="{ placeholder: !modelValue }">
-        {{ currentLabel }}
-      </span>
+      <span
+  :class="[
+    { placeholder: !modelValue },
+    { nowrap: nowrap }
+  ]"
+>
+  {{ currentLabel }}
+</span>
 
       <img
         src="@/section/icon/prime_angle-down.svg"
@@ -17,11 +22,14 @@
     <Transition name="dropdown">
       <ul v-if="isOpen" class="options">
         <li
-          v-for="item in options"
-          :key="item.value"
-          @click="choose(item)"
-          :class="{ active: modelValue === item.value }"
-        >
+  v-for="item in options"
+  :key="item.value"
+  @click="choose(item)"
+  :class="[
+    { active: modelValue === item.value },
+    { nowrap: nowrap }
+  ]"
+>
           {{ item.label }}
 
           <span v-if="modelValue === item.value">
@@ -48,6 +56,10 @@ const props = defineProps({
   options: {
     type: Array,
     default: () => []
+  },
+  nowrap: {
+    type: Boolean,
+    default: false
   }
 })
 
@@ -93,11 +105,21 @@ onUnmounted(() => {
 
 <style scoped>
 
+.select-btn > span.nowrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.options li.nowrap {
+  white-space: nowrap;
+}
+
 .custom-select{
   position:relative;
   flex:1;
   height: 100%;
-  padding-left: 1em;
+  padding-left: 1.5em;
 }
 
 .select-btn{

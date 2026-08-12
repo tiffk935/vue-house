@@ -35,18 +35,18 @@
 </div>
 
   <!-- Mobile contact info -->
-    <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" 
+    <div v-if="$isMobile()" class="mo-contact-info">
+    <div class="flex  flex-col contact-item justify-center items-center" 
       @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
       <img src="@/section/icon/line-md_phone-filled.svg" alt="撥打電話" srcset="" />
       <div>撥打電話</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex  flex-col contact-item justify-center items-center"
       @click="modalOpen = true; modalType = 'fb'">
       <img src="@/section/icon/ri_messenger-line.svg" alt="FB 諮詢" srcset="" />
       <div>FB 諮詢</div>
     </div>
-    <div class="flex flex-1 flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
+    <div class="flex  flex-col contact-item justify-center items-center" @click="scrollTo('.order')">
       <img src="@/section/icon/iCON.svg" alt="立即預約" srcset="" />
       <div>立即預約
       </div>
@@ -118,8 +118,7 @@
   padding: 5em 0 2.5em 0;
   position: relative;
   z-index: 50;
-  width: size(1000);
-  min-width: 750px;
+  width: clamp(768px, 90vw, 1000px);
   font-size:18px;
 
   .logo {position: relative;
@@ -147,8 +146,8 @@
       
       border-radius: 12px;
 border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-background: rgba(255, 255, 255, 0.1);
-box-shadow: 1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.04) inset;
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.178) 0%, rgba(255, 255, 255, 0.05) 100%);
+        box-shadow: 1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.2) inset;
 backdrop-filter: blur(2.3105762004852295px);
       color: #fff;
       width: 100%;
@@ -238,65 +237,127 @@ backdrop-filter: blur(2.3105762004852295px);
   img{filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
   }
 }
-
-@media screen and (max-width:768px) {
-
+@media screen and (max-width: 768px) {
 
   .mo-contact-info {
-    
-    z-index: 99;
   position: fixed;
+  z-index: 99;
   bottom: 0;
   left: 0;
-  width: sizem(375);
-  height: sizem(63);
-  gap: sizem(1);
-  background:
-    radial-gradient(
-      ellipse at 36% -20%,
-      #e93fff 0%,
-      #9b66b9 10%,
-      #003c80 55%,
-      transparent 75%
-    ),
-    radial-gradient(
-      ellipse at -100% 100%,
-      #5893FF 22%,
-      #00446E 55%,
-      transparent 75%
-    ),
-    #00446E;;
-  background-blend-mode: multiply;
-  box-shadow: 0 0 40px 0 rgba(0, 0, 0, 0.50);
-  backdrop-filter: blur(5.6px);
-   //background:linear-gradient(180deg, #FF8BF3 , #6D1EDB );
-    //background:linear-gradient(180deg, #f575a6 , #652ccf );
-    // background:linear-gradient(180deg, #b2baff , #781297 );
 
+  width: 100%;
+  height: 80px;
+
+  /* ★ 固定三欄橫排 */
+  display: grid !important;
+  grid-template-columns: repeat(3, 70px);
+  grid-template-rows: 1fr;
+
+  justify-content: center;
+  align-items: center;
+
+  column-gap: clamp(20px, 80vw, 40px);
+
+    box-sizing: border-box;
+
+    background-blend-mode: darken;
+    backdrop-filter: blur(5.6px);
+
+    background:
+      radial-gradient(
+        ellipse 200% 220% at 35% -10%,
+        #3361dfc4 2%,
+        rgba(135, 54, 146, 0.747) 15%,
+        rgb(19, 44, 77) 30%,
+        transparent 85%
+      ),
+      radial-gradient(
+        ellipse 80% 180% at -10% 110%,
+        rgba(60, 110, 190, 0.5) 0%,
+        rgba(0, 55, 100, 0.6) 45%,
+        transparent 80%
+      ),
+      radial-gradient(
+        ellipse 80% 180% at 80% 70%,
+        rgb(81, 125, 207) 0%,
+        rgba(0, 55, 100, 0.6) 45%,
+        transparent 80%
+      );
+
+    overflow: hidden;
+    isolation: isolate;
+
+
+    /* noise */
+    &::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+
+      pointer-events: none;
+      z-index: 0;
+
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.45'/%3E%3C/svg%3E");
+
+      opacity: 1;
+      mix-blend-mode: soft-light;
+    }
+
+
+    /* =========================
+       三個按鈕
+       ========================= */
 
     .contact-item {
-      height: 100%;   
-      margin-top: 16px;   
-      margin-bottom: 16px;
-      font-size: sizem(16);
-      font-weight: 400;
-      color: #fff;
-      border-left:1px solid #fff9;
+  position: relative;
+  z-index: 1;
 
-      img {
-        margin-bottom: sizem(5);
-        max-width: sizem(16.5);
-        height: auto;
-        max-height: sizem(16.5);
-        filter: brightness(0) invert(1);
-      }
-      &:first-child{
-      border-left:0;}
+  width: sizem(70px);
+  min-width: 0;
+  max-width: none;
 
-    }
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  box-sizing: border-box;
+
+  font-size: sizem(16px);
+  font-weight: 400;
+  color: #fff;
+
+  background: transparent;
+  border: 0;
+  box-shadow: none;
+  backdrop-filter: none;
+
+  img {
+    position: static;
+
+    width: sizem(27px);
+    height: sizem(27px);
+
+    max-width: sizem(27px);
+    max-height: sizem(27px);
+
+    margin: 0 0 sizem(5px) 0;
+
+    transform: none;
+
+    filter: brightness(0) invert(1);
   }
 
-  .contact-info {
+  div {
+    text-indent: 0;
+    white-space: nowrap;
+  }
+}
+  }
+
+   .contact-info {
     width: 92%;
     margin-bottom: 32px;
     min-width:0;
@@ -323,6 +384,8 @@ backdrop-filter: blur(2.3105762004852295px);
     width: sizem(310);
 
       .contact-item {
+        background: linear-gradient(180deg, rgba(255, 255, 255, 0.178) 0%, rgba(255, 255, 255, 0.05) 100%);
+        box-shadow: 1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.2) inset;
         padding: 1.1em sizem(80);
         font-size: sizem(16);
         max-width: 100%;
@@ -379,6 +442,7 @@ backdrop-filter: blur(2.3105762004852295px);
       }
     }
   }
+
 }
 </style>
 

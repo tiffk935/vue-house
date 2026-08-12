@@ -346,12 +346,13 @@
 
     row-gap: 18px;
 
-    margin: 0 auto;
+    margin: 0 auto 40px auto;
   }
 
   .item {
     width: auto;
     max-width: 100%;
+    
 
     display: flex;
     align-items: center;
@@ -453,6 +454,7 @@
 
     /* 固定 14px */
     font-size: 14px;
+    
   }
 
 
@@ -524,6 +526,7 @@
   .item {
     /* 仍然固定 14px */
     font-size: 14px;
+    
   }
 
   .item-label {

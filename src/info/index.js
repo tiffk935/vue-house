@@ -14,9 +14,9 @@ export default {
   //line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [
-    ["投資建設", "泰和茂經營有限公司"],
+    ["投資建設", "秀溙開發有限公司"],
     ["營造公司", "和固營造有限公司"],
-    ["建造執照", "(113)府建管(建)字第0136005號"],
+    ["建造執照", "(115)府建管(建)字第0189047號"],
     ["企劃銷售", "泰和茂營建團隊"],
     ["建築設計", "華峰建築師事務所-蘇林⽴設計"],
     /*
@@ -29,7 +29,7 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "預約賞屋",
+    title: "立即預約",
     //subTitle: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
     //subTitle_mo: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
   },
@@ -48,33 +48,46 @@ export default {
       title: "需求房型",
       type: "select",
       hold: "請選擇房型",
-      option: ["一房", "兩房", "三房", "四房"],
+      option: ["1房", "2房", "3房"],
       required: false, //必填開啟使用
+      nowrap: false, //選項過長時是否換行
     }, 
     
         budget: {
           title: "購屋預算",
           type: "select",
           hold: "請選擇區間",
-          option: ["1,500 ~ 2,000", "2,000 ~ 2,500", "2,500 ~ 3,000"],
+          option: ["600萬以下", "600～800萬", "800～1,000萬","1,000萬以上"],
+          nowrap: false, //選項過長時是否換行
           //bypass:true, //必填開啟使用
         },
 
          time: {
-          title: "聯絡時間",
+          title: "方便聯絡時間",
           type: "select",
           hold: "請選擇",
-          option: ["10:00 ~ 12:00", "13:00 ~ 15:00","15:00 ~ 17:00","17:00 ~ 19:00",],
+          option: ["全天皆可", "上午 09:00–12:00", "中午 12:00–13:00","下午 13:00–17:00","晚上 17:00–21:00",],
+          nowrap: false, //選項過長時是否換行
           //bypass:true, //必填開啟使用
         },
 
-       /*
-        use_type: {
-          title: "使用用途",
-          hold: "請選擇用途",
-          option: ["自住", "投資", "租賃"]
+       
+        recommender: {
+          title: "介紹、推薦來源",
+          type: "select",
+          hold: "請選擇來源",
+         option: ["親友介紹", "合作店家推薦"]
       },
-        */
+
+        recname: {
+          title: "介紹人、店家名稱",
+          type: "text",
+          dependsOn: "recommender",
+          hold: "請填寫介紹人或店家名稱",
+      },
+
+      
+        
   },
 
   //縣市地區
@@ -90,6 +103,9 @@ export default {
   }
 
 },
+
+
+
 
 
 
