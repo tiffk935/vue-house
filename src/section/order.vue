@@ -106,7 +106,7 @@
         <!-- 留言 -->
         <div class="right">
           <textarea v-model="formData.msg" class="row textarea w-full h-full rounded-none"
-            placeholder="(非必填) 請輸入您的留言"></textarea>
+            placeholder="（非必填）歡迎留下您想了解的內容"></textarea>
         </div>
 
       </div>
@@ -650,6 +650,8 @@ const formData = reactive({
   room_type: "",
   budget: "",
   time: "",
+  recommender: "",
+  recname: "",
   msg: "",
   city: "",
   area: "",
