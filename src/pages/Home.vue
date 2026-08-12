@@ -277,6 +277,27 @@ keySplines="
 
 }
 
+@supports (-webkit-touch-callout: none) {
+  .page-bg {
+    filter: none;
+    animation: iosWater 8s ease-in-out infinite alternate;
+  }
+}
+
+@keyframes iosWater {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0);
+  }
+
+  50% {
+    transform: scale(1.015) translate3d(0.5%, -0.3%, 0);
+  }
+
+  100% {
+    transform: scale(1.01) translate3d(-0.5%, 0.4%, 0);
+  }
+}
+
 </style>
 
 
