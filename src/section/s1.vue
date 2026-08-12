@@ -141,26 +141,12 @@
       width: clamp(240px, 100vw, 880px);
       height: fit-content;
       object-fit: Contain;
-      margin-top: 148px;
+      margin-top: 134px;
       margin-bottom: 24px;
       z-index: 3;
       animation: glowBreath 3s ease-in-out infinite;
   }
 
-    .Line{
-      width: clamp(240px, 80vw, 880px);
-      height: 1px;
-      background: #fff;
-      z-index: 3;
-    }
-
-    .Coming-soon-TC-m{
-      position: relative;
-      width: clamp(228px, 60vw, 660px);
-      height: fit-content;
-      object-fit: Contain;
-      z-index: 3;
-    }
 
     .Local-m{
       position: relative;
