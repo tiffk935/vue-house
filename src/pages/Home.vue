@@ -132,7 +132,7 @@ keySplines="
       <img
         class="w-32"
         src="@/assets/loading_w.gif"
-        alt="戀JIA"
+        alt="昕馳"
       >
     </div>
 

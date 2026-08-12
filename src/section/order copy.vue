@@ -3,9 +3,9 @@
     <!-- Title -->
     <div class="order-title text-center text-[#595757]">{{ info.order.title }}</div>
     <!-- Title Image -->
-    <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="戀JIA" srcset=""
+    <!-- <img v-if="$isMobile()" class="order-title-img" src="@/section/form/titleImg_m.svg" alt="昕馳" srcset=""
       data-aos="fade" data-aos-duration="1000">
-    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="戀JIA" srcset="" data-aos="fade"
+    <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="昕馳" srcset="" data-aos="fade"
       data-aos-duration="1000"> -->
     <!-- Form -->
     <div class="form mx-auto relative flex items-start justify-center">
