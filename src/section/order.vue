@@ -677,7 +677,9 @@ const fieldLabelMap = {
   //gender: "性別",
   room_type: "需求房型",
   budget: "購屋預算",
-  time: "聯絡時間",
+  time: "方便聯絡時間",
+  recommender: "介紹、推薦來源",
+  recname: "介紹人、店家名稱",
   city: "居住縣市",
   area: "居住地區",
   // 動態欄位從 selectFields 自動取 title

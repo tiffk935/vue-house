@@ -289,6 +289,10 @@ const formData = reactive({
   name: "",
   phone: "",
   room_type: "",
+  budget: "",
+  time: "",
+  recommender: "",
+  recname: "",
   // email: "",
   city: "",
   area: "",
@@ -306,6 +310,10 @@ const formDataRef = ref([
   "姓名", //name
   "手機", //phone
   "房型", //room_type
+  "購屋預算", //budget
+  "方便聯絡時間", //time
+  "介紹、推薦來源", //recommender
+  "介紹人、店家名稱", //recname
   // "信箱", //email
   "居住縣市", //city
   "居住地區", //area
@@ -389,6 +397,10 @@ const send = () => {
       `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?name=${formData.name}
       &phone=${formData.phone}
       &room_type=${formData.room_type}
+      &budget=${formData.budget}
+      &time=${formData.time}
+      &recommender=${formData.recommender}
+      &recname=${formData.recname}
       &email=${formData.email}
       &cityarea=${formData.city}${formData.area}
       &msg=${formData.msg}
