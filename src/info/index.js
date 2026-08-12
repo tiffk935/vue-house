@@ -1,7 +1,7 @@
 const caseName = "泰和茂田中新案"
 
 export default {
-  caseid: "875fc59a-93ea-4f5d-b01a-6096242762fe",
+  caseid: "f65b0dfd-6b1d-448b-9460-b5112e1ac995",
   //caseid_j: "3c00c7f1-d23a-4d28-a94c-790a8f4626c5", //兩邊id一樣可以不用有
   address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
   address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"
