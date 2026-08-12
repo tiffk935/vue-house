@@ -11,7 +11,7 @@
     width: 100vw;
     min-height: 100vh;    // fallback，舊瀏覽器看這行
     min-height: 100dvh;   // 新瀏覽器會用這行覆蓋
-    background: url('@/assets/thank_bg.png');
+    background: url('//h65.tw/img/thank_bg.png');
     background-size: cover;
     background-position: center;
     display: flex;
