@@ -306,6 +306,7 @@ keySplines="
 import info from "@/info"
 
 import S1 from "@/section/s1.vue"
+import S2 from "@/section/s2.vue"
 import Order from "@/section/order.vue"
 import Nav from "@/layout/navbar.vue"
 
