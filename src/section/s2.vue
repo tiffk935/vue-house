@@ -333,11 +333,11 @@ white-space: nowrap;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-size: clamp(16px, 8vw, 22px);
+    font-size: clamp(16px, 8vw, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     animation: glowBreath-light 3s ease-in-out infinite;
 
     
@@ -350,11 +350,11 @@ white-space: nowrap;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-size: clamp(16px, 8vw, 22px);
+    font-size: clamp(16px, 8vw, 20px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
     animation: glowBreath-light 3s ease-in-out infinite;
 
     
