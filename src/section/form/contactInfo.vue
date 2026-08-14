@@ -7,15 +7,31 @@
       <img src="@/section/s1/logo.svg" alt="" data-aos="zoom-out" data-aos-delay="300" data-aos-duration="1000"/>
     </div>
     <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'phone'" v-if="info.phone">
+      <div
+  class="flex contact-item justify-center items-center"
+ @mousemove="handleMouseMove"
+@mouseenter="handleMouseEnter"
+@mouseleave="handleMouseLeave"
+  @click="modalOpen = true; modalType = 'phone'"
+  v-if="info.phone">
         <img src="@/section/icon/line-md_phone-filled.svg" alt="電話" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+      <div
+  class="flex contact-item justify-center items-center"
+  @mousemove="handleMouseMove"
+@mouseenter="handleMouseEnter"
+@mouseleave="handleMouseLeave"
+  @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/icon/ri_messenger-line.svg" alt="Facebook 諮詢" srcset="" />
         <div>Facebook 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center btfanpage" @click="open()">
+     <div
+  class="flex contact-item justify-center items-center btfanpage"
+  @mousemove="handleMouseMove"
+@mouseenter="handleMouseEnter"
+@mouseleave="handleMouseLeave"
+  @click="open()">
         <img src="@/section/icon/ic_baseline-facebook.svg" alt="前往粉絲專頁" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
@@ -142,45 +158,138 @@
    // width: size(920);
     // min-width: 680px;
 
-    .contact-item {
-      
-      border-radius: 12px;
-border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
-background: linear-gradient(180deg, rgba(255, 255, 255, 0.178) 0%, rgba(255, 255, 255, 0.05) 100%);
-        box-shadow: 1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.2) inset;
-backdrop-filter: blur(2.3105762004852295px);
-      color: #fff;
-      width: 100%;
-      flex: 1;
-      padding: 1.1em 0;
-      line-height: 1.6;//3.8
-      letter-spacing: 0.05em;
-     // max-width: size(280);
-      z-index: 1;
-      transition: all .3s;
-      cursor: pointer;
-      //border: 1px solid #C29267;
-      gap: 1em;
+ .contact-item {
+  position: relative;
+  overflow: hidden;
 
-      &:hover {
-        background: rgba(0, 62, 143, 0.664);
-        color: #fff;
+  border-radius: 12px;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
 
-        img {
-          filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
-        }
-      }
+  // 原本透白
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.178) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
 
-      img {
-        max-width: 1.35em;
-        height: auto;
-        max-height: 1.35em;
-        filter: invert(0%) sepia(1%) saturate(4%) hue-rotate(348deg) brightness(99%) contrast(101%);
-        transition: all .5s;
-        margin: 0;
-      }
+  box-shadow:
+    1.127px 4.508px 43.168px 0 rgba(255, 255, 255, 0.2) inset;
 
-    }
+  backdrop-filter: blur(2.3105762004852295px);
+
+  color: #fff;
+
+  width: 100%;
+  flex: 1;
+
+  padding: 1.1em 0;
+
+  line-height: 1.6;
+  letter-spacing: 0.05em;
+
+  z-index: 1;
+  cursor: pointer;
+
+
+  // =================================
+  // 藍色覆蓋層
+  // =================================
+
+   &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+      radial-gradient(
+        ellipse at 36% -20%,
+        rgba(233, 63, 255, 0.72) 0%,
+        rgba(178, 105, 220, 0.55) 12%,
+        rgba(54, 120, 210, 0.38) 48%,
+        transparent 78%
+      ),
+
+      radial-gradient(
+        ellipse at -100% 100%,
+        rgba(88, 147, 255, 0.62) 18%,
+        rgba(30, 115, 205, 0.38) 52%,
+        transparent 80%
+      ),
+
+      radial-gradient(
+        ellipse at 180% 120%,
+        rgba(190, 55, 210, 0.55) 0%,
+        rgba(80, 145, 255, 0.42) 24%,
+        rgba(0, 105, 175, 0.28) 55%,
+        transparent 82%
+      ),
+
+      #064875;
+
+    z-index: 0;
+    pointer-events: none;
+
+    clip-path: circle(
+      0% at
+      var(--mouse-x, 50%)
+      var(--mouse-y, 50%)
+    );
+
+    // 滑入動畫
+    transition:
+      clip-path 0.4s cubic-bezier(
+        0.5,
+        1,
+        0.1,
+        1
+      );
+  }
+
+  // 滑入
+  &.is-hover::before {
+    clip-path: circle(
+      150% at
+      var(--mouse-x)
+      var(--mouse-y)
+    );
+  }
+
+  // ★ 滑出快速消失
+  &:not(.is-hover)::before {
+    transition: clip-path 0.03s ease-in-out;
+  }
+
+  img,
+  div {
+    position: relative;
+    z-index: 1;
+  }
+
+
+
+  // =================================
+  // Hover
+  // =================================
+
+  &.is-hover::before {
+    clip-path: circle(
+      150% at
+      var(--mouse-x)
+      var(--mouse-y)
+    );
+  }
+
+
+  // =================================
+  // 文字 / icon
+  // =================================
+
+  img,
+  div {
+    position: relative;
+    z-index: 1;
+  }
+}
     &.address {
         display: none;
         background-color: #eee;
@@ -477,5 +586,146 @@ const scrollTo = (el) => {
     scrollTo: document.querySelector(el)
   })
 }
+
+let mouseAnimation = null
+
+const mouseState = new WeakMap()
+
+const handleMouseEnter = (e) => {
+  const item = e.currentTarget
+
+  item.classList.add("is-hover")
+
+  const rect = item.getBoundingClientRect()
+
+  mouseState.set(item, {
+    targetX: e.clientX - rect.left,
+    targetY: e.clientY - rect.top,
+
+    x: e.clientX - rect.left,
+    y: e.clientY - rect.top,
+
+    vx: 0,
+    vy: 0,
+
+    stretch: 1
+  })
+
+  startMouseAnimation()
+}
+
+const handleMouseLeave = (e) => {
+  const item = e.currentTarget
+
+  item.classList.remove("is-hover")
+
+  const state = mouseState.get(item)
+
+  if (!state) return
+
+  state.leaving = true
+}
+
+const handleMouseMove = (e) => {
+  const item = e.currentTarget
+  const rect = item.getBoundingClientRect()
+
+  const state = mouseState.get(item)
+
+  if (!state) return
+
+  state.targetX = e.clientX - rect.left
+  state.targetY = e.clientY - rect.top
+}
+
+const startMouseAnimation = () => {
+  if (mouseAnimation) return
+
+  const animate = () => {
+    let hasHover = false
+
+    document.querySelectorAll(".contact-item").forEach((item) => {
+      hasHover = true
+
+      const state = mouseState.get(item)
+
+      if (!state) return
+
+      // ★ 慣性追蹤
+      const ease = 0.08
+
+      state.vx += (state.targetX - state.x) * ease
+      state.vy += (state.targetY - state.y) * ease
+
+      // ★ 阻尼
+      state.vx *= 0.72
+      state.vy *= 0.72
+
+      state.x += state.vx
+      state.y += state.vy
+
+      // ★ 計算移動速度
+      const speed = Math.sqrt(
+        state.vx * state.vx +
+        state.vy * state.vy
+      )
+
+      // ★ 速度越快，拉伸越明顯
+      const stretch = Math.min(
+        1 + speed * 0.06,
+        2.2
+      )
+
+      state.stretch +=
+        (stretch - state.stretch) * 0.18
+
+      // ★ 方向角度
+      const angle = Math.atan2(
+        state.vy,
+        state.vx
+      ) * 180 / Math.PI
+
+      const rect = item.getBoundingClientRect()
+
+const mouseX =
+  (state.x / rect.width) * 100
+
+const mouseY =
+  (state.y / rect.height) * 100
+
+item.style.setProperty(
+  "--mouse-x",
+  `${mouseX}%`
+)
+
+item.style.setProperty(
+  "--mouse-y",
+  `${mouseY}%`
+)
+
+      item.style.setProperty(
+        "--stretch",
+        state.stretch
+      )
+
+      item.style.setProperty(
+        "--angle",
+        `${angle}deg`
+      )
+    })
+
+    if (hasHover) {
+      mouseAnimation = requestAnimationFrame(animate)
+    } else {
+      mouseAnimation = null
+    }
+  }
+
+  
+
+  mouseAnimation = requestAnimationFrame(animate)
+}
+
+
 
 </script>
