@@ -9,8 +9,8 @@ export default {
   googleSrc: "",
   googleLink: "",
   phone: "04-829-1133",
-  fbLink: "",
-  fbMessage: "",
+  fbLink: "https://www.facebook.com/profile.php?id=61593190918264",
+  fbMessage: "https://m.me/61593190918264",
   //line: "https://lin.ee/qakWswp",
   caseName: caseName,
   houseInfos: [

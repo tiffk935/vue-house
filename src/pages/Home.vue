@@ -298,6 +298,8 @@ keySplines="
   }
 }
 
+
+
 </style>
 
 
@@ -313,6 +315,7 @@ import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from "aos"
+import Lenis from 'lenis'
 
 
 const isLoading = ref(true)
@@ -322,6 +325,20 @@ const gtmNoScript = ref('')
 const config = ref({
   showNav: false
 })
+
+const lenis = new Lenis({
+  duration: 1.8,
+  smoothWheel: true,
+  wheelMultiplier: 0.5,
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+
 
 
 onMounted(() => {
