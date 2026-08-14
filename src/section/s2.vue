@@ -12,7 +12,7 @@
     <p class="opentxt" @click="scrollTo('.order')">提前登記開放中</p>
       
     <div class="gift-box">
-      <p class="get">搶先掌握最新資訊，取得&nbsp;<b>早鳥優惠</b></p>  
+      <p class="get">搶先掌握最新資訊，取得<b>限量早鳥優惠</b></p>  
       <img 
         class="gift-img"
         src="@/section/s2/proicons_gift.svg"
@@ -32,17 +32,23 @@
 >   <div class="line-m">
     <p class="open-m" @click="scrollTo('.order')">提前登記開放中</p>
     </div>
-      
+ <div class="umargin">   
+ <div class="wmask">  
+
     <div class="gift-box-m">
       <p class="get-m">搶先掌握最新資訊，</p>
         
-    <p class="get-m-2">取得&nbsp;<b>早鳥優惠</b></p>  
-      <img 
-        class="gift-img-m"
-        src="@/section/s2/proicons_gift.svg"
-      />
-    </div>
 
+        <div class="gift-box-m-2">
+             <p class="get-m-2">取得限量早鳥優惠</p>  
+                <img 
+                    class="gift-img-m"
+                    src="@/section/s2/proicons_gift.svg"/>
+        </div>
+
+</div>
+</div> 
+</div> 
 </div>
 
 </section>    
@@ -151,7 +157,7 @@
 
 
 
-@media screen and (max-width:1160px){
+@media screen and (max-width:1200px){
 
     .gift{
         display:none;
@@ -171,7 +177,7 @@
 .gift-m {
     display: flex;
     width: 100%;
-    padding: 18px 64px 8px 64px;
+    padding: 18px 0px 8px 0px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -185,7 +191,7 @@
 
 
 .line-m{
-  width: 100%;
+  width: 60%;
   display: flex;
   padding: 18px 0px 0px 0px;
   flex-direction: column;
@@ -236,16 +242,10 @@
 }
 }
 
-.gift-box-m{
-    display: flex;
-    flex-direction: row;
-    width: clamp(240px, 100vw, 720px);
-padding: 25px 64px 64px 64px;
-justify-content: center;
-align-items: center;
-border-radius: 0 12px 12px 0;
-background: rgba(231, 209, 232, 0.18);
-
+.wmask{
+    width:90%;
+    height:150px;
+    background: rgba(231, 209, 232, 0.18);
 
 -webkit-mask-image:
   linear-gradient(
@@ -279,6 +279,43 @@ mask-image:
   );
 
 mask-composite: intersect;
+
+
+}
+
+.gift-box-m{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+padding: 25px 0px 64px 0px;
+justify-content: center;
+align-items: center;
+border-radius: 0 12px 12px 0;
+
+gap: 4px;
+
+white-space: nowrap;
+    flex-shrink: 1;
+    
+    margin-bottom: 0px;
+
+
+}
+
+
+.gift-box-m-2{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+padding: 0px 0px 64px 0px;
+justify-content: center;
+align-items: center;
+border-radius: 0 12px 12px 0;
+
+
+mask-composite: intersect;
 gap: 4px;
 
 white-space: nowrap;
@@ -289,18 +326,35 @@ white-space: nowrap;
 
 }
 
+
 .get-m,
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-size: clamp(16px, 8vw, 22px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 5px;
+    animation: glowBreath-light 3s ease-in-out infinite;
+
+    
+}
+
+
 .get-m-2
 {
     display: flex;
     justify-content: center;
     align-items: center;
     color: #FFF;
-    font-size: clamp(16px, 4vw, 24px);
+    font-size: clamp(16px, 8vw, 22px);
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 1.5px;
+    letter-spacing: 5px;
     animation: glowBreath-light 3s ease-in-out infinite;
 
     
@@ -311,10 +365,18 @@ white-space: nowrap;
     height: auto;
     animation: glowBreath-light 3s ease-in-out infinite;
     margin-left: 4px;
+    
 
 }
 
+.umargin {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    margin-bottom: -120px;
+}
     
 
 }
