@@ -186,11 +186,11 @@ keySplines="
 .home {
   position: relative;
 }
-*::selection {
+/*::selection {
   background: rgba(255, 255, 255, 0.411);
   color: #1c36ad;
   
-}
+}*/
 
 /* =========================
    背景
@@ -320,7 +320,6 @@ import Nav from "@/layout/navbar.vue"
 import { onMounted, ref } from "vue"
 
 import AOS from "aos"
-import Lenis from 'lenis'
 
 
 const isLoading = ref(true)
@@ -331,18 +330,6 @@ const config = ref({
   showNav: false
 })
 
-const lenis = new Lenis({
-  duration: 1.8,
-  smoothWheel: true,
-  wheelMultiplier: 0.5,
-})
-
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
 
 
 
