@@ -202,8 +202,14 @@
     inset: 0;
 
     background:
-      #002897;
-    mix-blend-mode: hue;
+       linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.28) 0%,
+    rgba(255, 255, 255, 0.10) 35%,
+    rgba(130, 170, 255, 0.10) 65%,
+    rgba(255, 255, 255, 0.06) 100%
+  );
+    mix-blend-mode: color-burn;
 
     z-index: 0;
     pointer-events: none;
@@ -216,7 +222,7 @@
 
     // 滑入動畫
     transition:
-      clip-path 0.6s cubic-bezier(
+      clip-path 0.5s cubic-bezier(
         0.5,
         1,
         0.1,
