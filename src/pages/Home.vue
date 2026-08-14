@@ -1,5 +1,6 @@
 <template>
 
+
 <svg
   class="water-filter"
   width="0"
@@ -185,7 +186,11 @@ keySplines="
 .home {
   position: relative;
 }
-
+*::selection {
+  background: rgba(255, 255, 255, 0.411);
+  color: #1c36ad;
+  
+}
 
 /* =========================
    背景
