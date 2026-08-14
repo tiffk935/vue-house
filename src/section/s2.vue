@@ -34,7 +34,9 @@
     </div>
       
     <div class="gift-box-m">
-      <p class="get-m">搶先掌握最新資訊取得&nbsp;<b>早鳥優惠</b></p>  
+      <p class="get-m">搶先掌握最新資訊，</p>
+        
+    <p class="get-m-2">取得&nbsp;<b>早鳥優惠</b></p>  
       <img 
         class="gift-img-m"
         src="@/section/s2/proicons_gift.svg"
@@ -277,7 +279,7 @@ mask-image:
   );
 
 mask-composite: intersect;
-gap: 8px;
+gap: 4px;
 
 white-space: nowrap;
     flex-shrink: 1;
@@ -287,7 +289,9 @@ white-space: nowrap;
 
 }
 
-.get-m{
+.get-m,
+.get-m-2
+{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -296,7 +300,7 @@ white-space: nowrap;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    letter-spacing: 3.12px;
+    letter-spacing: 1.5px;
     animation: glowBreath-light 3s ease-in-out infinite;
 
     
@@ -306,6 +310,7 @@ white-space: nowrap;
     width: clamp(24px, 60vw, 40px);
     height: auto;
     animation: glowBreath-light 3s ease-in-out infinite;
+    margin-left: 4px;
 
 }
 
