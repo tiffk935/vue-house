@@ -161,6 +161,7 @@
  .contact-item {
   position: relative;
   overflow: hidden;
+  gap:1em;
 
   border-radius: 12px;
   border-bottom: 0.5px solid rgba(255, 255, 255, 0.5);
@@ -201,30 +202,8 @@
     inset: 0;
 
     background:
-      radial-gradient(
-        ellipse at 36% -20%,
-        rgba(233, 63, 255, 0.72) 0%,
-        rgba(178, 105, 220, 0.55) 12%,
-        rgba(54, 120, 210, 0.38) 48%,
-        transparent 78%
-      ),
-
-      radial-gradient(
-        ellipse at -100% 100%,
-        rgba(88, 147, 255, 0.62) 18%,
-        rgba(30, 115, 205, 0.38) 52%,
-        transparent 80%
-      ),
-
-      radial-gradient(
-        ellipse at 180% 120%,
-        rgba(190, 55, 210, 0.55) 0%,
-        rgba(80, 145, 255, 0.42) 24%,
-        rgba(0, 105, 175, 0.28) 55%,
-        transparent 82%
-      ),
-
-      #064875;
+      #002897;
+    mix-blend-mode: hue;
 
     z-index: 0;
     pointer-events: none;
@@ -237,7 +216,7 @@
 
     // 滑入動畫
     transition:
-      clip-path 0.4s cubic-bezier(
+      clip-path 0.6s cubic-bezier(
         0.5,
         1,
         0.1,

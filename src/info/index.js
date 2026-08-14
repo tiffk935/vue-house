@@ -29,7 +29,7 @@ export default {
   recaptcha_site_key: "6Lck-L8UAAAAABxfvNA1NJuBrdl3iLFc3GkudC8s", // recaptcha v3
   recaptcha_user_token: "6Lck-L8UAAAAAIcvenwGDl8_Q1tKbrEYsKuriePa",
   order: {
-    title: "立即預約",
+    title: "立即登記",
     //subTitle: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
     //subTitle_mo: "歡迎填寫表單，將由專人與您聯繫並提供服務，謝謝！",
   },

@@ -129,7 +129,7 @@
       <div class="sendall mt-8 mb-12 mx-auto">
 
         <button v-if="!submitted" class="send" :disabled="sending" @click="send">
-          立即預約
+          送出登記
         </button>
 
         <div v-else class="send-load">
