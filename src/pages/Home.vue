@@ -282,7 +282,7 @@ keySplines="
 
 }
 
-@supports (-webkit-touch-callout: none) {
+@supports (-webkit-hyphens: none) and (not (-webkit-touch-callout: none)) {
   .page-bg {
     filter: none !important;
   }
