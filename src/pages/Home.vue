@@ -285,7 +285,6 @@ keySplines="
 @supports (-webkit-touch-callout: none) {
   .page-bg {
     filter: none !important;
-    animation: iosWater 8s ease-in-out infinite alternate;
   }
 }
 
