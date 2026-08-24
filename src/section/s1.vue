@@ -207,7 +207,7 @@
       width: clamp(240px, 60vw, 880px);
       height: fit-content;
       object-fit: Contain;
-      margin-top: 148px;
+      margin-top: 132px;
       margin-bottom: 24px;
       z-index: 3;
   }
@@ -242,7 +242,7 @@
       height: fit-content;
       object-fit: contain;
       margin-top: 16px;
-      margin-bottom: 0px;
+      margin-bottom: -30px;
       z-index: 3;
 
 
