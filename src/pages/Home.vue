@@ -14,7 +14,6 @@
   <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#fff100]">
     <h1 style="display:none;">佳鋐首耀</h1>
     <img class="og" src="@/section/og.jpg" alt="og" >
-    <S0 />
     <S1 />
     <S2 /> 
     <S3 />
@@ -54,7 +53,6 @@
 </style>
 
 <script setup>
-import S0 from "@/section/s0.vue"
 import S1 from "@/section/s1.vue"
 import S2 from "@/section/s2.vue"
 // mport S22 from "@/section/s22.vue"
