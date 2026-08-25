@@ -1,4 +1,5 @@
 <template>
+
   <div class="house" v-if="info.houseInfos?.length">
     <div class="house-inner">
       <div class="info-box">
@@ -37,13 +38,13 @@
   <div class="footer">
 
     <a
-      href="https://www.lixin.com.tw/"
+      href="https://www.taihe-mao.com"
       target="_blank"
       rel="noopener noreferrer"
     >
       <img
-        src="//h65.tw/img/footerLogo.gif"
-        alt="立炘數位"
+        src="@/section/form/footer-taihe-logo.svg"
+        alt="泰和茂"
       />
     </a>
 
@@ -53,9 +54,7 @@
       rel="noopener noreferrer"
       class="footer-link"
     >
-      網頁製作
     </a>
-
   </div>
 </template>
 
@@ -68,10 +67,13 @@
    House
 ========================================================= */
 
+
+
 .house {
   position: relative;
   width: 100%;
   color: #fff;
+  font-family: "Inter", "Noto Sans TC", sans-serif;
 }
 
 .house-inner {
@@ -121,7 +123,7 @@
 
   color: #fff;
 
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Inter","Noto Sans TC", sans-serif;
 
   /* 固定字體 */
   font-size: 24px;
@@ -146,7 +148,7 @@
   display: grid;
 
   grid-template-columns: repeat(2, minmax(0, 1fr));
-
+font-family: "Inter","Noto Sans TC", sans-serif;
   column-gap: size(120);
   row-gap: size(25);
 }
@@ -165,7 +167,7 @@
 
   align-items: flex-start;
 
-  font-family: "Noto Sans TC", sans-serif;
+  font-family: "Inter","Noto Sans TC", sans-serif;
 
   /* 固定字體 */
   font-size: 18px;
@@ -228,10 +230,12 @@
    Footer
 ========================================================= */
 
+
+
 .footer {
   width: 100%;
 
-  height: 40px;
+  height: 60px;
 
   display: flex;
 
@@ -241,7 +245,8 @@
 
   gap: 10px;
 
-  background: #302626;
+  background: #4e69a3b7;
+  
 
   img {
     display: block;

@@ -198,7 +198,7 @@ keySplines="
 
 .page-bg-mask {
   position: absolute;
-  top: -10px;
+  top: 0px;
   left: 0;
   width: 100%;
   height: 100%;

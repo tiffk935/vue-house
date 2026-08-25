@@ -684,6 +684,8 @@ const fieldLabelMap = {
   recname: "介紹人、店家名稱",
   city: "居住縣市",
   area: "居住地區",
+  policyChecked: "個資聲明",
+  r_verify: "我不是機器人",
   // 動態欄位從 selectFields 自動取 title
   ...Object.fromEntries(
     Object.entries(selectFields).map(([k, v]) => [k, v.title])
@@ -711,7 +713,8 @@ watch(() => formData.city, (val) => {
 // ==========================
 const isRequired = (key) => {
   if (key === "name" || key === "phone") return true
-
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
   if (key === "gender") return formConfig.gender?.required
   if (key === "city") return locationConfig.city?.required
   if (key === "area") return locationConfig.area?.required
