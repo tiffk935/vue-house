@@ -14,63 +14,197 @@
           data-aos="fade" data-aos-duration="1000">
         <img v-else class="order-title-img" src="@/section/form/titleImg.svg" alt="小城故事8" srcset="" data-aos="fade"
           data-aos-duration="1000"> -->
-        <!-- Form -->
-        <div class="form mx-auto relative flex items-start justify-center">
-          <div class="left h-full flex flex-col justify-between items-center">
-            <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
-              @input="(event) => (formData.name = event.target.value)" />
-            <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
-              @input="(event) => (formData.phone = event.target.value)" />
+       <!-- FORM -->
+      <div class="form mx-auto relative flex justify-center">
+        <div class="left flex flex-col justify-between items-stretch">
+          <div class="name">
+            <!-- 姓名 -->
+            <label class="row">
+              <input
+                v-model="formData.name"
+                type="text"
+                class="input w-full"
+                placeholder="姓名"
+              />
+            </label>
 
+            <!-- 性別（可開關） 
+            <div v-if="info.formConfig?.gender?.enabled" class="gender">
+              <label>
+                <input type="radio" value="男" v-model="formData.gender" />先生
+              </label>
+              <label>
+                <input type="radio" value="女" v-model="formData.gender" />女士
+              </label>
+            </div>-->
+          </div>
 
-            <select class="select w-full rounded-none" v-model="formData.city">
-              <option value="" selected disabled>居住縣市</option>
-              <option v-for="city in cityList" :value="city.value" :key="city">
-                {{ city.label }}
+          <!-- 手機 -->
+          <label class="row">
+            <input
+              v-model="formData.phone"
+              type="text"
+              class="input w-full"
+              placeholder="手機"
+            />
+          </label>
+
+          <!-- LINE 
+          <label class="row">
+            <input
+              v-model="formData.room_type"
+              type="text"
+              class="input w-full"
+              placeholder="請填寫LINE ID"
+            />
+          </label>-->
+
+          <!-- 動態欄位 -->
+          <template v-for="(field, key) in selectFields" :key="key">
+            <label class="row" v-if="!field.hidden">
+              <span>
+                {{ field.title }}
+                <span v-if="field.required"> </span>
+              </span>
+
+              <select
+                v-if="field.type === 'select'"
+                v-model="formData[key]"
+                class="select w-full rounded-none"
+              >
+                <option value="" disabled>{{ field.hold }}</option>
+                <option v-for="opt in field.option" :key="opt" :value="opt">
+                  {{ opt }}
+                </option>
+              </select>
+
+              <input
+                v-else
+                v-model="formData[key]"
+                type="text"
+                class="input w-full"
+                :placeholder="field.hold"
+              />
+            </label>
+          </template>
+
+          <!-- 縣市 -->
+          <label class="row" v-if="info.locationConfig?.city?.enabled">
+        
+
+            <select v-model="formData.city" class="select w-full">
+              <option value="" disabled>居住縣市</option>
+              <option v-for="c in cityList" :key="c.value" :value="c.value">
+                {{ c.label }}
               </option>
             </select>
-            <select class="select w-full rounded-none" v-model="formData.area">
-              <option value="" selected disabled>居住地區</option>
-              <option v-for="area in areaList" :value="area.value" :key="area">
-                {{ area.label }}
-              </option>
-            </select>
-          </div>
-          <div class="right h-full">
-            <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
-              class="textarea w-full h-full rounded-none" placeholder="備註訊息"></textarea>
-          </div>
+          </label>
+
+          <!-- 地區 --><Transition name="area-drop">
+            <label
+              class="row"
+            >
+              <select v-model="formData.area" class="select w-full">
+                <option value="" disabled>居住地區</option>
+                <option v-for="a in areaList" :key="a.value" :value="a.value">
+                  {{ a.label }}
+                </option>
+              </select>
+            </label>
+          </Transition>
         </div>
 
-        <!-- Policy -->
-        <div class="flex gap-2 items-center justify-center control">
-          <input type="checkbox" v-model="formData.policyChecked" :checked="formData.policyChecked"
-            class="checkbox bg-white rounded-md" />
-          <p>
-            本人知悉並同意<label for="policy-modal"
-              class="modal-button text-[#7EAA46] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
-          </p>
-        </div>
-        <Policy />
-
-        <!-- Recaptcha -->
-        <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-          @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
-
-        <!-- Send -->
-        <div class="send mt-8 mx-auto hover:scale-90 btn cursor-pointer btregistration bg-[#7EAA46] text-white rounded-full" @click="send()">
-          {{ sending ? '發送中..' : '送出表單' }}
+        <!-- 留言 -->
+        <div class="right">
+          <textarea
+  v-model="formData.msg"
+  class="row textarea w-full rounded-none"
+  placeholder="備註訊息"
+></textarea>
         </div>
       </div>
 
-      <!-- Contact Info -->
+      <!-- 同意 -->
+      <div class="flex gap-2 items-center justify-center control">
+        <input
+          type="checkbox"
+          v-model="formData.policyChecked"
+          :checked="formData.policyChecked"
+          class="checkbox bg-white rounded-md"
+        />
+        <p>
+            本人知悉並同意<label for="policy-modal"
+              class="modal-button text-[#7EAA46] cursor-pointer hover:opacity-70">「個資告知事項聲明」</label>內容
+          </p>
+      </div>
+
+      <Policy />
+
+      <!-- recaptcha -->
+      <vue-recaptcha
+        class="flex justify-center mt-8 relative z-10"
+        :sitekey="info.recaptcha_site_key_v2"
+        @verify="onRecaptchaVerify"
+        @expired="onRecaptchaExpired"
+      />
+
+      <!-- Send -->
+      <div
+        class="sendall mt-8 mx-auto"
+        style="font-size: 20px; font-weight: 400; line-height: 3.3"
+      >
+        <button
+          class="send hover:scale-90 btn cursor-pointer"
+          v-if="!submitted"
+          @click="send"
+          :disabled="sending"
+        >
+          送出表單
+        </button>
+        <div
+          v-else
+          class="send-load text-[#333]"
+          style="letter-spacing: 0.7em; text-indent: 0.9em; height: 100%"
+        >
+          <svg
+            class="h-5 w-5 mr-2"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            style="display: inline-block; margin: 0 0.8em"
+          >
+            <circle
+              class="opacity-25"
+              cx="12"
+              cy="12"
+              r="10"
+              stroke="currentColor"
+              stroke-width="4"
+            ></circle>
+            <path
+              class="opacity-75"
+              fill="currentColor"
+              d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="rotate"
+                from="0 12 12"
+                to="360 12 12"
+                dur="1s"
+                repeatCount="indefinite"
+              />
+            </path>
+          </svg>
+          <span>發送中...</span>
+</div>
+</div>
+</div>
       <ContactInfo />
     </div>
 
-    <!-- Map -->
-    <Map />
-
-    <!-- HouseInfo -->
+    <Map v-if="info.address" />
     <HouseInfo />
   </div>
 </template>
@@ -78,6 +212,13 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+.row,
+.input,
+.select,
+.textarea,
+.form {
+  border-radius: 0 !important;
+}
 .order {
   width: 100%;
   background-color: #4B6730;
@@ -133,27 +274,39 @@
   }
 
   .form {
-    width: size(920);
-    height: 240px;
-    gap: size(80);
-    margin-bottom: size(50);
+  width: size(920);
+  display: flex;
+  align-items: stretch;
+  gap: size(80);
+  margin-bottom: size(50);
 
-    .left {
-      width: size(419);
-    }
-
-    .right {
-      width: size(419);
-    }
-
-    &::after {
-      content: "";
-      width: size(1);
-      height: 100%;
-      background-color: #fff;
-      position: absolute;
-    }
+  .left {
+    width: size(419);
+    display: flex;
+    flex-direction: column;
+    gap: size(15);
   }
+
+  .right {
+    width: size(419);
+    display: flex;
+  }
+
+  .textarea {
+    width: 100%;
+    min-height: 240px;
+    height: auto;
+  }
+
+  &::after {
+    content: "";
+    width: size(1);
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+  }
+}
 
   .send {
     font-size: size(22);
@@ -165,7 +318,23 @@
     border: 0;
     z-index: 10;
     position: relative;
+    margin-top: 2rem;           /* mt-8 */
+    margin-left: auto;          /* mx-auto */
+    margin-right: auto;
+  
+    cursor: pointer;            /* cursor-pointer */
+    background-color: #7EAA46;  /* bg-[#7EAA46] */
+    color: #fff;                /* text-white */
+    border-radius: 9999px;      /* rounded-full */
+
+  /* hover:scale-90 */
+  transition: transform 0.3s ease;
   }
+
+  .send:hover {
+  transform: scale(0.9);
+  background-color: rgb(48, 45, 64);
+}
 
   .control {
     font-size: size(16);
@@ -177,6 +346,7 @@
 @media screen and (max-width:768px) {
   .order {
     width: 100%;
+    height:auto;
     // border-radius: size-m(68) size-m(68) 0 0;
     // padding-top: size-m(40);
     margin-top: size-m(0);

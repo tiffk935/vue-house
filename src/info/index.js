@@ -35,7 +35,57 @@ export default {
           bypass:false,
         },
     },*/
-    navList: [
+    
+order: {
+    title: "預約賞屋",
+    subTitle: "",
+    subTitle_mo: "",
+  },
+  // 控制表單欄位
+  //性別
+  formConfig: {
+    gender: {
+      enabled: false ,     // ✅ 控制顯示 / 隱藏
+      required: false    // ✅ 是否必填（通常不會必填）
+    }
+  },
+  //各種欄位
+  selectFields: {
+    /*room_type: {
+      title: "需求房型",
+      type: "select",
+      hold: "請選擇房型",
+      option: ["兩房","三房","四房"],
+      required: true, //必填開啟使用
+    }, 
+    /*
+        budget: {
+          title: "購屋預算",
+          hold: "請選擇區間",
+          option: ["1000", "2000", "3000"],
+          //bypass:true, //必填開啟使用
+        },
+       
+        use_type: {
+          title: "使用用途",
+          hold: "請選擇用途",
+          option: ["自住", "投資", "租賃"]
+      },
+        */
+  },
+  //縣市地區
+  locationConfig: {
+  city: {
+    enabled: true,
+    required: false
+  },
+  area: {
+    enabled: true,     // ⚠️ 不能單獨 true
+    required: false
+  }
+},
+
+  navList: [
         {
             name: "十 樂",
             target: ".s2",
@@ -62,4 +112,4 @@ export default {
             offset: "",
         },
     ],
-}
+};
