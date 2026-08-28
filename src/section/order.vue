@@ -628,20 +628,6 @@ const formConfig = info.formConfig || {}
 const locationConfig = info.locationConfig || {}
 
 // ==========================
-// 🔥 欄位依賴控制
-// ==========================
-const shouldShowField = (field) => {
-
-  // 沒有設定 dependsOn → 正常顯示
-  if (!field.dependsOn) {
-    return true
-  }
-
-  // 有設定 dependsOn → 判斷指定欄位是否有值
-  return !!formData[field.dependsOn]
-}
-
-// ==========================
 // 🔥 FORM DATA
 // ==========================
 const formData = reactive({
@@ -818,19 +804,30 @@ delete presendA.form.msg
 // B API
 // ======================
 const presendB = new FormData()
+// 因對方欄位不足改併入 message，不再單獨送出
+const mergeToMessageKeys = ["time","recommender", "recname"]
 
 for (const [k, v] of Object.entries(formData)) {
   if (["policyChecked", "r_verify", "msg"].includes(k)) continue
+  if (mergeToMessageKeys.includes(k)) continue
   if (k === "area" && !v) continue
 
   // B API 欄位對應
   const apiKey = selectFields[k]?.apiB || k
-
   presendB.append(apiKey, v)
 }
 
 Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
-presendB.append("message", formData.msg)
+
+// 組合簡潔的留言內容：原留言 + 額外項目 / 額外項目
+const extraMsgParts = []
+if (formData.time) extraMsgParts.push(`方便聯絡時間：${formData.time}`)
+if (formData.recommender) extraMsgParts.push(`介紹、推薦來源：${formData.recommender}`)
+if (formData.recname) extraMsgParts.push(`介紹人、店家名稱：${formData.recname}`)
+
+const finalMessage = [formData.msg, ...extraMsgParts].filter(Boolean).join(" / ")
+
+presendB.append("message", finalMessage)
 
 presendB.append(
   "case_code",
@@ -845,8 +842,37 @@ presendB.append(
 
   try {
     if (!DEBUG_ONLY_A) {
-      fetch("https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec")
-    }
+  const scriptParams = new URLSearchParams();
+
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue;
+    if (mergeToMessageKeys.includes(k)) continue; // ← 新增：car、time 不單獨送
+    if (k === "area" && !v) continue;
+
+    scriptParams.append(k, v ?? "");
+  }
+
+  // msg 也統一改用合併後的 finalMessage
+  scriptParams.set("msg", finalMessage);
+
+  // UTM
+  Object.entries(utm).forEach(([k, v]) => {
+    scriptParams.append(k, v);
+  });
+
+  // 額外固定欄位
+  scriptParams.append("date", new Date().toISOString());
+  scriptParams.append("campaign_name", info.caseName || "");
+  scriptParams.append(
+    "case_code",
+    info.case_code || info.caseid_j || info.caseid || ""
+  );
+
+  fetch(
+    `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
+    { method: "GET" }
+  );
+}
 
     const requests = [
       fetch("https://leads.lixin.com.tw/submit", {
