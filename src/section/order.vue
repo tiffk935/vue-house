@@ -627,6 +627,21 @@ const selectFields = info.selectFields || {}
 const formConfig = info.formConfig || {}
 const locationConfig = info.locationConfig || {}
 
+
+// ==========================
+// 🔥 欄位依賴控制
+// ==========================
+const shouldShowField = (field) => {
+
+  // 沒有設定 dependsOn → 正常顯示
+  if (!field.dependsOn) {
+    return true
+  }
+
+  // 有設定 dependsOn → 判斷指定欄位是否有值
+  return !!formData[field.dependsOn]
+}
+
 // ==========================
 // 🔥 FORM DATA
 // ==========================
