@@ -836,9 +836,9 @@ Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
 
 // 組合簡潔的留言內容：原留言 + 額外項目 / 額外項目
 const extraMsgParts = []
-if (formData.time) extraMsgParts.push(`方便聯絡時間：${formData.time}`)
-if (formData.recommender) extraMsgParts.push(`介紹、推薦來源：${formData.recommender}`)
-if (formData.recname) extraMsgParts.push(`介紹人、店家名稱：${formData.recname}`)
+if (formData.time) extraMsgParts.push(`【方便聯絡時間】${formData.time}`)
+if (formData.recommender) extraMsgParts.push(`【介紹、推薦來源】${formData.recommender}`)
+if (formData.recname) extraMsgParts.push(`【介紹人、店家名稱】${formData.recname}`)
 
 const finalMessage = [formData.msg, ...extraMsgParts].filter(Boolean).join(" / ")
 
