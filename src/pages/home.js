@@ -81,3 +81,6 @@ videosToLoad.forEach(video => {
     setTimeout(complete, RESOURCE_TIMEOUT);
   }
 });
+window.addEventListener('load', () => {
+  import('@/pages/news.js');
+});
