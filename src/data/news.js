@@ -1,6 +1,6 @@
 const newsList = [
     {
-    link: '/news/8',                                            // 網址，唯一值，不可重複
+    link: '/news/8/',                                            // 網址，唯一值，不可重複
     title: '大隱於特區 大美於森邸 寳實以高訂住宅再寫新篇 改寫台南居住視野',     // 標題
     type: '國城時事',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/8/0.jpg',                // 列表頁封面圖
@@ -12,7 +12,7 @@ const newsList = [
 `,
   },
   {
-    link: '/news/7',                                            // 網址，唯一值，不可重複
+    link: '/news/7/',                                            // 網址，唯一值，不可重複
     title: '始於台南-城市切片：成大建築展打破府城框架，看見與世界對話的建築新觀點',     // 標題
     type: '共感設計',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/7/0.jpg',                // 列表頁封面圖
@@ -23,7 +23,7 @@ const newsList = [
     連結：<a target="_blank" href="https://wealth.businessweekly.com.tw/GArticle.aspx?id=ARTL001002795">新聞連結</a>`,
   },
   {
-    link: '/news/6',                                            // 網址，唯一值，不可重複
+    link: '/news/6/',                                            // 網址，唯一值，不可重複
     title: '台南捷運「藍線」年底動工！串連小巨蛋、台鐵大橋站，10個上車點',     // 標題
     type: '平實特區',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/6/0.webp',                // 列表頁封面圖
@@ -34,7 +34,7 @@ const newsList = [
     連結：<a target="_blank" href="https://www.bella.tw/articles/design&gadget/57392/tainan-new-mrt-blue-line-from-daqiao-to-rende">新聞連結</a>`,
   },
   {
-    link: '/news/5',                                            // 網址，唯一值，不可重複
+    link: '/news/5/',                                            // 網址，唯一值，不可重複
     title: '台南人敲碗成功！ 市長宣告「IKEA」進駐南紡 完成六都最後拼圖 再加碼：200億招商計畫啟動',     // 標題
     type: '平實特區',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/5/0.webp',                // 列表頁封面圖
@@ -46,7 +46,7 @@ const newsList = [
     連結：<a target="_blank" href="https://travel.udn.com/travel/story/7160/9569068">新聞連結</a>`,
   },
   {
-    link: '/news/4',                                            // 網址，唯一值，不可重複
+    link: '/news/4/',                                            // 網址，唯一值，不可重複
     title: '有國城，無國界：真平實都更好 善建築國際級 美生活米其林｜國城寳實 正式公開',     // 標題
     type: '國城時事',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/4/0.webp',                // 列表頁封面圖
@@ -62,7 +62,7 @@ const newsList = [
   },
 
   {
-    link: '/news/3',                                            // 網址，唯一值，不可重複
+    link: '/news/3/',                                            // 網址，唯一值，不可重複
     title: '高綠覆率平實重劃區 「國城寳實」營造米其林高端生活美學',     // 標題
     type: '國城時事',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/3/0.webp',                // 列表頁封面圖
@@ -79,7 +79,7 @@ const newsList = [
 來源：<a target="_blank" href="https://estate.ltn.com.tw/article/25467">新聞連結</a>`,
   },
   {
-    link: '/news/2',                                            // 網址，唯一值，不可重複
+    link: '/news/2/',                                            // 網址，唯一值，不可重複
     title: '日本建築師芦沢啓治專訪：「真正的奢華在於空間的真誠與情感共鳴」',     // 標題
     type: '共感設計',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/2/0.webp',                // 列表頁封面圖
@@ -118,7 +118,7 @@ const newsList = [
 來源：<a target="_blank" href="https://www.tatlerasia.com/homes/architecture-design/property-keiji-ashizawa-zh-hant-zh-hant">新聞連結</a>`,
   },
   {
-    link: '/news/1',                                            // 網址，唯一值，不可重複
+    link: '/news/1/',                                            // 網址，唯一值，不可重複
     title: '《誠實設計 芦沢啓治美學特展》台南初登場！日本設計師芦沢啓治暢談建築與生活',     // 標題
     type: '共感設計',                                            // 消息新聞 / 專題研究，擇一
     thumbnail: '@/assets/news/1/0.webp',                // 列表頁封面圖
@@ -197,7 +197,7 @@ const newsList = [
 ];
 
 const mainNews = {
-  link: '/news/7',
+  link: '/news/7/',
   title: '始於台南：城市切片<br>國際經典的在地轉譯，一場新世代與台南土地的對話',
   type: '平實特區',
   thumbnail: '@/assets/news/main/main.webp',

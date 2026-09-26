@@ -1,0 +1,229 @@
+@use '@/styles/functions' as *;
+@use '@/styles/default';
+
+body {
+  padding-top: size-m(128);
+  @media (min-width: 768px) {
+    padding-top: size(96);
+  }
+}
+
+#news-sec {
+  position: relative;
+  padding: size-m(46) size-m(25) size-m(20) size-m(25);
+  @media (min-width: 768px) {
+    padding: size(53) size(117) size(40) size(117);
+  }
+
+
+  #news {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    pointer-events: none;
+    @media (min-width: 768px) {
+      top: size(-96);
+    }
+  }
+
+  h2 {
+    text-align: center;
+    font-size: size-m(30);
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: size-m(1);
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: size(33);
+      margin-bottom: size(5);
+    }
+  }
+
+  .en-title {
+    color: #8C6239;
+    text-align: center;
+    font-size: size-m(18);
+    font-weight: 700;
+    margin-bottom: size-m(40);
+    @media (min-width: 768px) {
+      text-align: left;
+      font-size: size(23);
+      margin-bottom: -.3em;
+    }
+  }
+
+  .news-inner {
+    @media (min-width: 768px) {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-direction: row-reverse;
+      &::after{content: "";
+      display: block;
+      order:2;
+      width: 1px;
+      align-self:stretch; align-items:stretch;
+      background: #0006;
+      }
+    }
+  }
+
+  .main {
+    color: #000;
+    display: block;
+    font-family: "Noto Sans TC", sans-serif;
+    cursor: pointer;
+    margin-bottom: size-m(28);
+    @media (min-width: 768px) {
+      width: size(742);
+      margin: 0;
+      order:1;
+    }
+  // ✅ content 為空時取消點擊樣式
+  &.no-modal {
+    cursor: default;
+  }
+
+    .photo {
+      @media (min-width: 768px) {
+        margin-bottom: size(18);
+      }
+
+      img {
+        width: 100%;
+
+        &.mob {
+          display: block;
+          @media (min-width: 768px) {
+            display: none;
+          }
+        }
+
+        &.pc {
+          display: none;
+          @media (min-width: 768px) {
+            display: block;
+          }
+        }
+      }
+    }
+
+    .post-content {
+      background: #fff;
+      padding: size-m(2) size-m(18) size-m(5) size-m(20);
+      @media (min-width: 768px) {
+        padding: size(7) size(20) size(7) size(31);
+      }
+    }
+
+    time {
+      font-size: size-m(20);
+      @media (min-width: 768px) {
+        font-size: size(19);
+      }
+    }
+
+    h3 {
+      margin: size-m(0) 0;
+      font-size: size-m(24);
+      line-height: 1.6;
+      font-weight: 600;
+      @media (min-width: 768px) {
+        margin: size(2) 0;
+        font-size: size(23.5);
+      line-height: 1.7;
+      }
+    }
+.author{
+      line-height: 1.7;
+      font-weight: 600;
+        margin: size-m(10) 0;
+      font-size: size-m(20);
+      @media (min-width: 768px) {
+        margin: size(15) 0;
+        font-size: size(20);
+      }}
+    .read-more {
+      text-align: right;
+      color: #8C6239;
+      font-size: size-m(14);
+      letter-spacing: .02em;
+      @media (min-width: 768px) {
+        font-size: size(14);
+      }
+    }
+  }
+
+  .news-list {
+    @media (min-width: 768px) {
+      margin-top: size(87);
+      width: size(800);
+      order:3;
+      align-self:stretch; 
+      display: flex;
+      flex-direction: column;
+    justify-content:space-between;
+    }
+
+    .news-sec {
+      margin-bottom: size-m(83);
+      @media (min-width: 768px) {
+        margin-bottom: size(100);
+      }
+    }
+
+    .new-category {
+      font-size: size-m(30);
+      font-weight: 700;
+      padding-bottom: 0.68em;
+      margin-bottom: 0.8em;
+      border-bottom: 1px solid #0007;
+      @media (min-width: 768px) {
+        font-size: size(25);
+        padding-bottom: size(18);
+        margin-bottom: size(28);
+      }
+    }
+
+    .news-item {
+      color: #000;
+      display: flex;
+      margin-bottom: 1.4em;
+      font-family: "Noto Sans TC", sans-serif;
+      font-size: size-m(20);
+      line-height: 1.4;
+      cursor: pointer;
+      @media (min-width: 768px) {
+        margin-bottom: 1em;
+        font-size: size(14);
+      }
+  &.no-modal {
+    cursor: default;
+  }
+
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      time {
+        margin-right: size-m(16);
+        @media (min-width: 768px) {
+          margin-right:.8em;
+          font-size: 1.2em;
+        }
+      }
+
+      h3 {
+        margin: 0;
+        font-weight: 400;
+        
+        @media (max-width: 767px) {
+      font-size: size-m(24);
+        }
+      }
+    }
+  }
+}

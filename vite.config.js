@@ -9,7 +9,7 @@ import viteCompression from 'vite-plugin-compression';
 
 import { newsList, mainNews } from './src/data/news.js'
 import info from './src/data/info.js'
-import notFoundPlugin from './plugins/notFoundPlugin.js'
+// import notFoundPlugin from './plugins/notFoundPlugin.js'
 import criticalCssPlugin from './plugins/criticalCssPlugin.js'
 import resolveAtPlugin from './plugins/resolveAtPlugin.js'
 import seo from './src/data/seo.js'
@@ -49,7 +49,7 @@ export default defineConfig({
       { ejs: { views: [projectRoot] } }
     ),
     resolveAtPlugin(projectRoot),
-    notFoundPlugin(projectRoot),
+    // notFoundPlugin(projectRoot),
     criticalCssPlugin,
     {
       name: 'scripts-to-body',

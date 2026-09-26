@@ -188,7 +188,7 @@
 
         <div class="news-inner">
 
-          <div class="main">
+          <a class="main" href="<%= mainNews.link %>">
             <div class="photo">
               <img class="pc" src="<%= mainNews.thumbnail %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>" />
               <img class="mob" src="<%= mainNews.thumbnail_mobile %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>">
@@ -205,21 +205,21 @@
               </div>
               <!-- <div class="read-more">READ MORE</div>  -->
             </div>
-          </div>
+          </a>
 
           <div class="news-list">
             <% if (newsList.filter(post=> post.type === '平實特區').length > 0) { %>
               <div class="news-sec">
                 <div class="new-category">平實特區</div>
                 <% newsList.filter(post=> post.type === '平實特區').forEach(function(article) { %>
-                  <div class="news-item" data-link="<%= article.link %>">
+                  <a class="news-item" href="<%= article.link %>">
                     <time class="news-date">
                       <%= article.date %>
                     </time>
                     <h3 class="news-title">
                       <%= article.title %>
                     </h3>
-                  </div>
+                  </a>
                   <% }) %>
               </div>
               <% } %>
@@ -228,14 +228,14 @@
                   <div class="news-sec">
                     <div class="new-category">國城時事</div>
                     <% newsList.filter(post=> post.type === '國城時事').forEach(function(article) { %>
-                      <div class="news-item" data-link="<%= article.link %>">
+                      <a class="news-item" href="<%= article.link %>">
                         <time class="news-date">
                           <%= article.date %>
                         </time>
                         <h3 class="news-title">
                           <%= article.title %>
                         </h3>
-                      </div>
+                      </a>
                       <% }) %>
                   </div>
                   <% } %>
@@ -244,14 +244,14 @@
                       <div class="news-sec">
                         <div class="new-category">共感設計</div>
                         <% newsList.filter(post=> post.type === '共感設計').forEach(function(article) { %>
-                          <div class="news-item" data-link="<%= article.link %>">
+                          <a class="news-item" href="<%= article.link %>">
                             <time class="news-date">
                               <%= article.date %>
                             </time>
                             <h3 class="news-title">
                               <%= article.title %>
                             </h3>
-                          </div>
+                          </a>
                           <% }) %>
                       </div>
                       <% } %>
@@ -311,7 +311,7 @@
             <div class="pretty p-default p-round">
               <input type="checkbox" aria-label="privacy" id="privacy" v-model="formData.policyChecked" />
               <div class="state">
-                <label for="privacy">我同意使用上方提供的資訊與我聯繫，詳情請參閱</label><a href="/privacy" target="_blank">隱私權聲明</a>。
+                <label for="privacy">我同意使用上方提供的資訊與我聯繫，詳情請參閱</label><a href="/privacy/" target="_blank">隱私權聲明</a>。
               </div>
             </div>
               <button class="send-btn mob" @click="handleSubmit">立即預約</button>
@@ -503,7 +503,7 @@
 
     <%- include('src/components/footer.ejs') %>
 
-    <div id="new-modal">
+    <!-- <div id="new-modal">
       <div class="new-modal-inner">
         <div class="sec-title">
           <h2>最新消息</h2>
@@ -529,7 +529,7 @@
         </div>
       </div>
       <div class="close"></div>
-    </div>
+    </div> -->
 
     <div id="loading" style="display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 1rem;gap:2rem;">
       <img id="logoImg" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 810 970'%3E%3Cpath  

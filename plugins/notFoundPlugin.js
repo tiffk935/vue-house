@@ -3,8 +3,8 @@ import fs from 'fs'
 
 // 設定需要 redirect 的路徑
 const redirects = {
-  '/news': '/#news',
-  '/order': '/#order',
+  // '/news': '/#news',
+  // '/order': '/#order',
   // '/order': '/#order',  // 之後有其他頁面也可以加在這裡
 }
 // 動態 /news/:id → /#news?post=:id

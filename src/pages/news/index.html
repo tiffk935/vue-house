@@ -1,15 +1,102 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
+
 <head>
-<meta charset="UTF-8">
-<script>
-  const match = location.pathname.match(/^\/news\/(\d+)/);
-  if (match) {
-    location.replace('/#news?post=' + match[1]);
-  } else {
-    location.replace('/#news');
-  }
-</script>
+  <%- include('src/components/meta.ejs', seo.home) %>
+    <link rel="preload" as="image" href="@/assets/home/kv-bg.webp" fetchpriority="high">
+    <link rel="stylesheet" href="./style.scss">
 </head>
-<body></body>
+
+<body>
+  <%- include('src/components/header.ejs', { showBg: true }) %>
+
+  <main>
+    <section id="news-sec">
+      <div id="news"></div>
+
+      <div class="sec-title">
+        <h2>最新消息</h2>
+        <div class="en-title">NEWS</div>
+      </div>
+
+      <div class="news-inner">
+
+        <a class="main" href="<%= mainNews.link %>">
+          <div class="photo">
+            <img class="pc" src="<%= mainNews.thumbnail %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>" />
+            <img class="mob" src="<%= mainNews.thumbnail_mobile %>" alt="<%= mainNews.title.replace(/<br>/g, '') %>">
+          </div>
+          <div class="post-content">
+            <time datetime="">
+              <%= mainNews.date %>
+            </time>
+            <h3>
+              <%- mainNews.title %>
+            </h3>
+            <div class="author">
+              <%- mainNews.author %>
+            </div>
+            <!-- <div class="read-more">READ MORE</div>  -->
+          </div>
+        </a>
+
+        <div class="news-list">
+          <% if (newsList.filter(post=> post.type === '平實特區').length > 0) { %>
+            <div class="news-sec">
+              <div class="new-category">平實特區</div>
+              <% newsList.filter(post=> post.type === '平實特區').forEach(function(article) { %>
+                <a class="news-item" href="<%= article.link %>">
+                  <time class="news-date">
+                    <%= article.date %>
+                  </time>
+                  <h3 class="news-title">
+                    <%= article.title %>
+                  </h3>
+                </a>
+                <% }) %>
+            </div>
+            <% } %>
+
+              <% if (newsList.filter(post=> post.type === '國城時事').length > 0) { %>
+                <div class="news-sec">
+                  <div class="new-category">國城時事</div>
+                  <% newsList.filter(post=> post.type === '國城時事').forEach(function(article) { %>
+                    <a class="news-item" href="<%= article.link %>">
+                      <time class="news-date">
+                        <%= article.date %>
+                      </time>
+                      <h3 class="news-title">
+                        <%= article.title %>
+                      </h3>
+                    </a>
+                    <% }) %>
+                </div>
+                <% } %>
+
+                  <% if (newsList.filter(post=> post.type === '共感設計').length > 0) { %>
+                    <div class="news-sec">
+                      <div class="new-category">共感設計</div>
+                      <% newsList.filter(post=> post.type === '共感設計').forEach(function(article) { %>
+                        <a class="news-item" href="<%= article.link %>">
+                          <time class="news-date">
+                            <%= article.date %>
+                          </time>
+                          <h3 class="news-title">
+                            <%= article.title %>
+                          </h3>
+                        </a>
+                        <% }) %>
+                    </div>
+                    <% } %>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <script type="module" src="../main.js"></script>
+</body>
+
 </html>

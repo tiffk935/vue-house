@@ -512,8 +512,10 @@
   }
 
   .main {
+    color: #000;
+    display: block;
     font-family: "Noto Sans TC", sans-serif;
-  cursor: pointer;
+    cursor: pointer;
     margin-bottom: size-m(28);
     @media (min-width: 768px) {
       width: size(742);
@@ -627,6 +629,7 @@
     }
 
     .news-item {
+      color: #000;
       display: flex;
       margin-bottom: 1.4em;
       font-family: "Noto Sans TC", sans-serif;

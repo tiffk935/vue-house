@@ -50,13 +50,13 @@ if (document.querySelector('#kv')) {
       if (document.querySelector('body#home')) {
         gsap.to(window, { duration: 1, scrollTo: { y: '#order' } });
       } else {
-        window.location.href = '/#order';
+        window.location.href = '/order/';
       }
     });
   }
 });
 
-document.querySelectorAll('a[href="/#news"]').forEach(selector => {
+document.querySelectorAll('a[href="/news/"]').forEach(selector => {
   selector.addEventListener('click', (e) => {
     if (document.querySelector('body#home')) {
       e.preventDefault();

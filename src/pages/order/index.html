@@ -1,10 +1,253 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-TW">
+
 <head>
-<meta charset="UTF-8">
-<script>
-  location.replace('/#order');
-</script>
+  <%- include('src/components/meta.ejs', seo.order) %>
+  <link rel="stylesheet" href="./style.scss">
 </head>
-<body></body>
+
+<body>
+  <%- include('src/components/header.ejs', { showBg: true }) %>
+
+  <main>
+    <section id="order-sec">
+      <div id="order"></div>
+
+      <div class="container">
+        <div class="sec-title">
+          <h2>預約表單</h2>
+          <div class="en-title">RESERVE</div>
+        </div>
+
+        <div class="form">
+          <div class="input-groups">
+            <label class="input-group">
+              <span>姓　　名</span>
+              <input type="text" name="name" aria-label="name" v-model="formData.name">
+            </label>
+            <label class="input-group">
+              <span>參觀人數</span>
+              <input type="text" name="people" aria-label="amount" v-model="formData.people">
+            </label>
+            <label class="input-group">
+              <span>聯絡電話</span>
+              <input type="text" name="phone" aria-label="phone" v-model="formData.phone">
+            </label>
+            <label class="input-group">
+              <span>電子信箱</span>
+              <input type="text" name="email" aria-label="email" v-model="formData.email">
+            </label>
+            <label class="input-group">
+              <span>備　　註</span>
+              <input type="text" name="msg" aria-label="message" v-model="formData.msg">
+            </label>
+          </div>
+
+          <div class="recaptcha-and-btn">
+            <div class="g-recaptcha" data-sitekey="6LdbrqAmAAAAAPj2D_6cBbflea1livK9Uud4FGmN"
+              data-callback="recaptchaCallback" data-expired-callback="recaptchaExpiredCallback"
+              data-error-callback="recaptchaErrorCallback"></div>
+            <button class="send-btn pc" @click="handleSubmit">立即預約</button>
+          </div>
+
+          <div class="pretty p-default p-round">
+            <input type="checkbox" aria-label="privacy" id="privacy" v-model="formData.policyChecked" />
+            <div class="state">
+              <label for="privacy">我同意使用上方提供的資訊與我聯繫，詳情請參閱</label><a href="/privacy/" target="_blank">隱私權聲明</a>。
+            </div>
+          </div>
+            <button class="send-btn mob" @click="handleSubmit">立即預約</button>
+        </div>
+
+        <hr>
+
+        <table class="contact-table pc">
+          <tr>
+            <td class="font-sans">
+              <a class="phone" href="tel:06-273-8888">
+                <img src="@/assets/icon-phone.svg" alt="" />
+                <div>立即預約</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://m.me/61573695851738/">
+                <img src="@/assets/icon-messenger.svg" alt="">
+                <div>臉書諮詢</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="http://facebook.com/61573695851738/">
+                <img src="@/assets/icon-fb.svg" alt="">
+                <div>前往 粉絲專頁</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://www.instagram.com/gemofpinshi?igsh=M2F4NmY5bnRvaTli">
+                <img src="@/assets/icon-ig.svg" alt="">
+                <div>Instagram</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://maac.io/3vJTt">
+                <img src="@/assets/icon-line.svg" alt="">
+                <div>LINE @</div>
+              </a>
+            </td>
+          </tr><tr><td class="gmap_if" colspan="5">
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8418189987506!2d120.23546130000001!3d22.992843500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e776f10ee1899%3A0xefb880c3308d5070!2z5ZyL5Z-O5a-z5a-m5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1784107557023!5m2!1szh-TW!2stw"  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </td></tr>
+          <tr>
+            <td class="addr" colspan="4">
+              <div>
+                國城寳實 接待中心<div class="line"></div>地址｜台南市 東區 平實路／後甲一路口
+              </div>
+            </td>
+            <td>
+              <a class="gmap" href="<%= info.googleLink %>">立即導航</a>
+            </td>
+          </tr>
+        </table>
+
+        <table class="contact-table mob">
+          <tr>
+            <td class="font-sans" rowspan="2">
+              <a class="phone" href="tel:06-273-8888">
+                <img src="@/assets/icon-phone.svg" alt="" />
+                <div>立即預約</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://m.me/61573695851738/">
+                <img src="@/assets/icon-messenger.svg" alt="">
+                <div>臉書諮詢</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="http://facebook.com/61573695851738/">
+                <img src="@/assets/icon-fb.svg" alt="">
+                <div>前往 粉絲專頁</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="font-sans">
+              <a target="_blank" href="https://www.instagram.com/gemofpinshi?igsh=M2F4NmY5bnRvaTli">
+                <img src="@/assets/icon-ig.svg" alt="">
+                <div>Instagram</div>
+              </a>
+            </td>
+            <td class="font-sans">
+              <a target="_blank" href="https://maac.io/3vJTt">
+                <img src="@/assets/icon-line.svg" alt="">
+                <div>LINE @</div>
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td class="addr" colspan="3">
+              <div>
+                國城寳實 接待中心<div class="line"></div>地址｜台南市 東區 平實路／後甲一路口
+              </div>
+            </td>
+          </tr><tr><td class="gmap_if" colspan="3">
+      <iframe  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3672.8418189987506!2d120.23546130000001!3d22.992843500000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x346e776f10ee1899%3A0xefb880c3308d5070!2z5ZyL5Z-O5a-z5a-m5o6l5b6F5Lit5b-D!5e0!3m2!1szh-TW!2stw!4v1784107557023!5m2!1szh-TW!2stw"  allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </td></tr> <tr>
+            <td colspan="3">
+              <a class="gmap" href="<%= info.googleLink %>">立即導航</a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="information">
+      <div class="flex">
+        <img fetchpriority="high" class="logo pc-logo" src="@/assets/logo2.svg" alt="">
+      <img fetchpriority="high" class="logo mob-logo" src="@/assets/logo3.svg" alt="">
+      <h2>建案資訊</h2>
+        <div class="content font-sans">
+          <div class="list">
+            <div class="item">
+              <div class="t1">投資興建 ｜ </div>
+              <div class="t2">國城建設股份有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">營造工程 ｜ </div>
+              <div class="t2">盈舜營造股份有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">建築代銷 ｜ </div>
+              <div class="t2">聯碩地產行銷團隊</div>
+            </div>
+            <div class="item p">
+              <div class="t1">平面設計 ｜ </div>
+              <div class="t2">
+                林澤森建築師事務所<br>
+                陳俊廷建築師事務所<br>
+                賈書恆建築師事務所
+                <div class="note">＊按姓氏筆畫排列</div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="t1">立面設計 ｜ </div>
+              <div class="t2">張瑪龍陳玉霖聯合建築師事務所</div>
+            </div>
+            <div class="item">
+              <div class="t1">公設設計 ｜ </div>
+              <div class="t2">芦沢啓治 建築師事務所</div>
+            </div>
+            <div class="item">
+              <div class="t1">室內設計 ｜ </div>
+              <div class="t2">擊壤設計 林新峰總監</div>
+            </div>
+          </div>
+          <div class="list">
+            <div class="item">
+              <div class="t1">景觀設計 ｜ </div>
+              <div class="t2">橋内庭園設計 橋内智也</div>
+            </div>
+            <div class="item">
+              <div class="t1">燈光設計 ｜ </div>
+              <div class="t2">
+                AURORA Inc 市川善幾<br>
+                偶得設計 陳怡彰
+              </div>
+            </div>
+            <div class="item">
+              <div class="t1">結構工程 ｜ </div>
+              <div class="t2">科建聯合工程顧問有限公司</div>
+            </div>
+            <div class="item">
+              <div class="t1">建照號碼 ｜ </div>
+              <div class="t2">（114）南工造字第00976號</div>
+            </div>
+            <div class="item">
+              <div class="t1">經 紀 人 ｜ </div>
+              <div class="t2">李聆榕 (107)南市字第00668號</div>
+            </div>
+            <div class="item">
+              <div class="t1">建案位置 ｜ </div>
+              <div class="t2">台南市東區平實段2、3、3-1等三筆地號</div>
+            </div>
+            <div class="item">
+              <div class="t1">接待中心 ｜ </div>
+              <div class="t2">台南市東區平實路／後甲一路口</div>
+            </div>
+            <div class="item">
+              <div class="t1">貴賓專線 ｜ </div>
+              <div class="t2">06 273-8888</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="./order.js"></script>
+</body>
+
 </html>
