@@ -29,6 +29,19 @@ fs.readdirSync(pagesDir).forEach((dir) => {
   }
 })
 
+newsList.forEach((article) => {
+  const rel = article.link.replace(/^\/|\/$/g, '')
+  if (!rel) return
+  const dir = resolve(pagesDir, rel)
+  fs.mkdirSync(dir, { recursive: true })
+  const htmlPath = resolve(dir, 'index.html')
+  fs.writeFileSync(
+    htmlPath,
+    `<%- include('src/pages/news/_article.ejs', { article: newsList.find(p => p.link === ${JSON.stringify(article.link)}) }) %>\n`
+  )
+  input[rel] = htmlPath
+})
+
 export default defineConfig({
   resolve: {
     alias: {

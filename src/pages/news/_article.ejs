@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+  <%- include('src/components/meta.ejs', {
+    pageTitle: article.title + '最新消息-寳實二代',
+    pageDescription: '台南平實特區對位東京都更，以8600坪基地，打造融合生活、自然與美學的城市日常，集結張瑪龍、陳玉霖以及芦沢啓治等國際大師國際美感，創造以人為本的建築。',
+    pageKeywords: '平實特區, 國城建設, 8600坪基地, 台南市東區, 都市更新, 永續生活圈'
+  }) %>
+  <link rel="stylesheet" href="../style.scss">
+</head>
+
+<body id="news-single">
+  <%- include('src/components/header.ejs', { showBg: true }) %>
+
+  <main>
+    <div class="sec-title">
+      <h2>最新消息</h2>
+      <div class="en-title">NEWS</div>
+      <a class="back" href="/news/">
+        <svg viewBox="0 0 41 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.75513 1.5H27.6215C33.9859 1.5 39.1499 7.18663 39.1499 14.1951C39.1499 21.2035 33.9859 26.8901 27.6215 26.8901H1.75513" stroke="#8C6239" stroke-width="3" stroke-miterlimit="10"/>
+          <path d="M10.9763 36.7383L2.02661 26.8902L10.9763 17.0348" stroke="#8C6239" stroke-width="3" stroke-miterlimit="10"/>
+        </svg>
+        <div>返回列表</div>
+      </a>
+    </div>
+    <article>
+      <div class="flex">
+        <figure class="pc">
+          <img src="<%= article.thumbnail %>" alt="<%= article.title.replace(/<br\s*\/?>/gi, '') %>">
+          <figcaption><%= article.thumbnail_caption %></figcaption>
+        </figure>
+        <div>
+          <h1><%= article.title %></h1>
+          <div class="metadata">
+            <time><%= article.date %></time>
+            <div class="author"><%= article.author %></div>
+          </div>
+          <figure class="mob">
+            <img src="<%= article.thumbnail %>" alt="<%= article.title.replace(/<br\s*\/?>/gi, '') %>">
+            <figcaption><%= article.thumbnail_caption %></figcaption>
+          </figure>
+          <div class="content"><%- article.content %></div>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <%- include('src/components/footer.ejs') %>
+
+  <script type="module" src="../../main.js"></script>
+</body>
+</html>
