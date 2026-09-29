@@ -47,11 +47,12 @@ if (document.querySelector('#kv')) {
 ['#main-header .order', 'footer .order', '#mob-bottom-nav .order'].forEach(selector => {
   if (document.querySelector(selector)) {
     document.querySelector(selector).addEventListener('click', () => {
-      if (document.querySelector('body#home')) {
-        gsap.to(window, { duration: 1, scrollTo: { y: '#order' } });
-      } else {
         window.location.href = '/order/';
-      }
+   //   if (document.querySelector('body#home')) {
+  //      gsap.to(window, { duration: 1, scrollTo: { y: '#order' } });
+  //    } else {
+  //      window.location.href = '/order/';
+  //    }
     });
   }
 });
