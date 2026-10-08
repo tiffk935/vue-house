@@ -107,7 +107,7 @@ const app = createApp({
           }
         );
 
-        fetch("contact-form.php", {
+        fetch("/contact-form.php", {
           method: "POST",
           body: presend,
         }).then((res) => {
