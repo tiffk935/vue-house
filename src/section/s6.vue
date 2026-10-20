@@ -36,44 +36,44 @@
       >
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/1.webp" />
-            <div class="txt">銀玥藝術門廳（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/01-loby.jpg" />
+            <div class="txt">銀玥藝術門廳</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/2.webp" />
-            <div class="txt">文品交誼廳（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/02-loby.jpg" />
+            <div class="txt">文品交誼廳</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/3.webp" />
-            <div class="txt">奇朵媽媽教室（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/03-class.jpg" />
+            <div class="txt">奇朵媽媽教室</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/4.webp" />
-            <div class="txt">覓靖會議室（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/04-room.jpg" />
+            <div class="txt">覓靖會議室</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/5.webp" />
-            <div class="txt">沐夏歡樂遊戲室（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/05-fun.jpg" />
+            <div class="txt">沐夏歡樂遊戲室</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/6.webp" />
-            <div class="txt">波爾有氧健身房（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/06-gym.jpg" />
+            <div class="txt">波爾有氧健身房</div>
           </div>
         </swiper-slide>
         <swiper-slide>
           <div class="relative">
-            <img src="@/section/s6/slider/7.webp" />
-            <div class="txt">童話森林故事屋（3D模擬示意圖）</div>
+            <img src="@/section/s6/slider/07-kids.jpg" />
+            <div class="txt">童話森林故事屋</div>
           </div>
         </swiper-slide>
       </swiper>
@@ -104,11 +104,13 @@
     </svg>
     <div class="txt">左右滑動可看全圖</div>
     <div class="img">
-      <img v-if="clickedIndex === 0" src="@/section/s6/slider/1.webp" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 1" src="@/section/s6/slider/2.webp" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 2" src="@/section/s6/slider/3.webp" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 3" src="@/section/s6/slider/4.webp" @load="onImgLoad($event)" />
-      <img v-if="clickedIndex === 4" src="@/section/s6/slider/5.webp" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 0" src="@/section/s6/slider/01-loby.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 1" src="@/section/s6/slider/02-loby.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 2" src="@/section/s6/slider/03-class.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 3" src="@/section/s6/slider/04-room.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 4" src="@/section/s6/slider/05-fun.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 5" src="@/section/s6/slider/06-gym.jpg" @load="onImgLoad($event)" />
+      <img v-if="clickedIndex === 6" src="@/section/s6/slider/07-kids.jpg" @load="onImgLoad($event)" />
     </div>
   </div>
 </template>
@@ -235,11 +237,13 @@
         top: size-m(6);
         left: size-m(11);
         font-size: size-m(12);color: #fff;
+        text-shadow: 0 0px 6px rgba(105, 81, 1, 0.8);
         @media screen and (min-width:768px) {
           top: auto;
           bottom: size(17);
           left: size(25);
           font-size: size(16);
+          text-shadow: 0 0px 6px rgba(105, 81, 1, 0.8);
         }
       }
     }
