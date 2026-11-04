@@ -5,6 +5,8 @@
       <img src="./s1/train.png" alt="train" class="train1 absolute">
     </div>
 
+    <img src="./s1/1104-new/bg.jpg" alt="s1-bg" class="s1-bg" data-aos="zoom-in" data-aos-delay="0">
+
 <div class="s1-new-h1-wp" data-aos="zoom-in" data-aos-delay="0">
     <img src="./s1/1104-new/s1-logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
       <div class="s1-799">
@@ -42,43 +44,50 @@
   font-size: size(36);
   background-size: cover;
 
-  .t0 {
+.s1-bg {
     position: absolute;
     width: 100%;
-    top: 0vw;
-    left: 0;
-    pointer-events: none;
-    z-index: 10;
-    opacity: .3;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+
+  .s1-new-h1-wp {
+  position: relative;
+  width: 46vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.s1-799 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .s1-799-top {
+    position: relative;
+    margin-left: 4vw;
+  }
+
+  .s1-light {
+  position: relative;
+  margin-left: 4vw;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+  .s1-phone {
+    position: relative;
+    margin-left: 4vw;
   }
 
   .logo {
     position: relative;
-    width: size(705);
-    margin-bottom: size(75);
-  }
-
-  .ribbon {
-    position: absolute;
-    top: size(195);
-    left: size(-175);
-    width: size(986);
-    img {
-      width: 100%;
-      transform: rotate(-37deg);
-    }
-}
-  .bubble {
-    position: absolute;
-    bottom: size(308);
-    right: size(250);
-    width: size(350);
-    img {
-      width: 100%;
-      animation: an 2s infinite ease-in-out alternate;
-      transform: rotate(-5deg);
-      transform-origin: 0% 100%;
-    }
+    width: 40vw;
+    
   }
 
 
@@ -106,9 +115,11 @@
     width: 100%;
     text-align: right;
     border-bottom: size(22) solid #462E86;
+    z-index: 2;
 
     .trainbg {
       width: size(1650);
+
       margin: auto auto auto 0;
     }
 
