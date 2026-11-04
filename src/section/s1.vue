@@ -65,6 +65,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: size(100);
 }
 
   .s1-799-top {
@@ -86,8 +87,8 @@
 
   .logo {
     position: relative;
-    width: 40vw;
-    
+    width: 35vw;
+    margin-bottom: size(80);
   }
 
 
