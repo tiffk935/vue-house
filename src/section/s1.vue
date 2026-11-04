@@ -2,23 +2,18 @@
   <article class="s1" id="s1">
     <!-- <img src="./s1/mo.jpg" class="t0"> -->
     <div class="train absolute">
-      <img src="./s1/train.svg" alt="train" class="trainbg" v-if="!$isMobile()">
-      <img src="./s1/trainm.svg" alt="train" class="trainbg" v-else>
       <img src="./s1/train.png" alt="train" class="train1 absolute">
     </div>
 
-
-    <img src="./s1/logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
-    
-    <div class="ribbon" data-aos="zoom-in" data-aos-delay="0">
-    <img src="./s1/2.png" alt="ribbon">
-  </div>
-    <div class="bubble" data-aos="zoom-in" data-aos-delay="0">
-      <img src="./s1/bubble.svg" alt="bubble" v-if="!$isMobile()">
-      <img src="./s1/bubblem.svg" alt="bubble" v-else>
-    </div>
-    <img src="./s1/l.png" alt="logo" class="l">
-
+<div class="s1-new-h1-wp" data-aos="zoom-in" data-aos-delay="0">
+    <img src="./s1/1104-new/s1-logo.svg" alt="logo" class="logo" data-aos="zoom-in" data-aos-delay="0">
+      <div class="s1-799">
+        <img src="./s1/1104-new/s1-799.svg" alt="799" class="s1-799-top">
+        <img src="./s1/1104-new/s1-new-light.png" alt="light" class="s1-light">
+        <img src="./s1/1104-new/s1-phone.svg" alt="phone" class="s1-phone">
+      </div>
+</div>
+  
   </article>
 </template>
 
