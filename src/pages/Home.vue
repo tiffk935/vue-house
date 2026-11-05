@@ -76,9 +76,41 @@ const config = ref({
 })
 
 onMounted(() => {
-  window.onload = function () {
-    isLoading.value = false
-    AOS.init();
+
+  AOS.init({
+    offset: 0,
+    duration: 1500,
+    once: false,
+  });
+
+  const refresh = () => {
+    AOS.refreshHard();
+
+    document.querySelectorAll('.s1-girl').forEach((el, index) => {
+      console.log(`S1 girl ${index + 1}`, {
+        top: el.getBoundingClientRect().top + window.scrollY,
+        height: el.offsetHeight,
+        aos: el.classList.contains('aos-animate'),
+        offset: el.getAttribute('data-aos-offset'),
+      });
+    });
   };
-})
+
+  const handleLoad = () => {
+    isLoading.value = false;
+
+    refresh();
+
+    setTimeout(refresh, 500);
+    setTimeout(refresh, 1500);
+  };
+
+  if (document.readyState === 'complete') {
+    handleLoad();
+  } else {
+    window.addEventListener('load', handleLoad, { once: true });
+  }
+
+});
+
 </script>

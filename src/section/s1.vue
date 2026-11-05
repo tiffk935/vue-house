@@ -17,7 +17,7 @@
     data-aos-once="false"
     data-aos-mirror="true">
 
-    <img src="./s1/1104-new/MO/s1-new-m.svg" alt="s1-new-m" class="s1-new-m" data-aos="fade-in">
+    <img src="./s1/1104-new/MO/s1-new-m2.svg" alt="s1-new-m" class="s1-new-m" data-aos="fade-in">
 
     <img src="./s1/1104-new/s1-logo.svg" alt="logo" class="logo" data-aos="fade-in"
     data-aos-duration="1200"
@@ -39,13 +39,20 @@
         <p class="s1-phone-m">2663-0999</p>
       </div>
 
-<img src="./s1/1104-new/s1-arrow.svg" alt="s1-arrow" class="s1-arrow" data-aos="fade-in" data-aos-delay="0">
-
-<img src="./s1/1104-new/s1-girl.webp" alt="s1-girl" class="s1-girl" data-aos="fade-right" data-aos-delay="0">
+<img
+  src="./s1/1104-new/s1-girl.webp"
+  alt="s1-girl"
+  class="s1-girl"
+  data-aos="fade-right"
+  data-aos-offset="0"
+  data-aos-duration="1200"
+  data-aos-once="false"
+  data-aos-mirror="true"
+>
 
 <img src="./s1/1104-new/s1-new-t.svg" alt="s1-new" class="s1-new-t" data-aos="fade-in" data-aos-delay="0">
 
-<img src="./s1/1104-new/s1-th3.svg" alt="s1-th3" class="s1-th3" data-aos="fade-in" data-aos-delay="0" data-aos-offset="-300">
+<img src="./s1/1104-new/s1-th3.svg" alt="s1-th3" class="s1-th3" data-aos="fade-in" data-aos-delay="0" >
   
   </article>
 </template>
@@ -111,9 +118,9 @@
 }
 
   .s1-799-top {
-    width: 80%;
+    width: 100%;
     position: relative;
-    margin-left: 4vw;
+    margin-left: 5vw;
   }
 
   .s1-light {
@@ -153,8 +160,8 @@
   .s1-new-t{
     position: absolute;
     top: size(0);
-    left: size(0);
-    width: 14vw;
+    right: size(0);
+    width: 12vw;
     z-index: 1;
   }
 

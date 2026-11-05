@@ -31,7 +31,7 @@
         // background: rgba(139, 199, 130, 0.8);
         position: fixed;
         top: size(0);
-        right: size(0);
+        left: size(0);
         // border: 1px solid #fff;
         z-index: 99;
 
