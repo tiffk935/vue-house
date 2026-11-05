@@ -130,7 +130,7 @@
 
   .logo {
     position: relative;
-    width: 35vw;
+    width: 30vw;
     margin-bottom: size(80);
   }
 
@@ -182,7 +182,7 @@
     left: 0;
     width: 100%;
     text-align: right;
-    border-bottom: size(22) solid #821c3e;
+  
     z-index: 2;
 
     .trainbg {
