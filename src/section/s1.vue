@@ -45,7 +45,7 @@
 
 <img src="./s1/1104-new/s1-new-t.svg" alt="s1-new" class="s1-new-t" data-aos="fade-in" data-aos-delay="0">
 
-<img src="./s1/1104-new/s1-th3.svg" alt="s1-th3" class="s1-th3" data-aos="fade-in" data-aos-delay="0" data-aos-anchor="#s1">
+<img src="./s1/1104-new/s1-th3.svg" alt="s1-th3" class="s1-th3" data-aos="fade-in" data-aos-delay="0" data-aos-offset="-300">
   
   </article>
 </template>
