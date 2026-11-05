@@ -1,5 +1,5 @@
 <template>
-  <section class="s6 w-full relative text-[#462E86]">
+  <section class="s6 w-full relative text-[#821c3e]">
     <img class="line absolute top-0 left-0 w-full md:hidden" src="@/section/s6/line.svg">
     <img class="line absolute top-0 right-0 hidden md:block" src="@/section/s6/line2.svg">
     <div class="ccontainer">
@@ -79,13 +79,13 @@
       </swiper>
       <div class="slide-prev" @click="slidePrev">
         <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="15.5" cy="15.5" r="15.5" fill="#462E86"/>
+          <circle cx="15.5" cy="15.5" r="15.5" fill="#821c3e"/>
           <path d="M18.7295 24.5416L8.39616 14.8541 M18.7295 5.8124L8.39616 14.8541" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
       <div class="slide-next" @click="slideNext">
         <svg viewBox="0 0 32 31" xmlns="http://www.w3.org/2000/svg">
-          <circle cx="15.5" cy="15.5" r="15.5" fill="#462E86"/>
+          <circle cx="15.5" cy="15.5" r="15.5" fill="#821c3e"/>
           <path d="M12.2705 24.5416L22.6038 14.8541 M12.2705 5.8124L22.6038 14.8541" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </div>
@@ -93,11 +93,11 @@
       <div class="mask hidden md:block pointer-events-none"></div>
     </div>
     <div class="ccontainer">
-      <div class="en text-[#462E8699]">Enjoying the greenery and leisurely pleasures right at home.</div>
+      <div class="en text-[#821c3e99]">Enjoying the greenery and leisurely pleasures right at home.</div>
     </div>
   </section>
 
-  <div v-if="showPop" id="s6-popup" class="bg-[#462E86] text-white">
+  <div v-if="showPop" id="s6-popup" class="bg-[#821c3e] text-white">
     <svg @click="showPop = false" class="popup-close" viewBox="0 0 30 28" fill="none" xmlns="http://www.w3.org/2000/svg">
       <line x1="2.70711" y1="1.29289" x2="28.7071" y2="27.2929" stroke="white" stroke-width="2"/>
       <line y1="-1" x2="36.7696" y2="-1" transform="matrix(-0.707107 0.707107 0.707107 0.707107 28 2)" stroke="white" stroke-width="2"/>
@@ -257,7 +257,7 @@
       }
 
       .swiper-pagination-bullet {
-        background: #462E86;
+        background: #821c3e;
         opacity: 0.5;
         width: size(8);
         height: size(8);

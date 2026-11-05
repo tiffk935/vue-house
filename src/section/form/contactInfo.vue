@@ -123,8 +123,8 @@
     } 
 
     .contact-item {
-      background-color: #040000;
-      border: 1px solid #040000;
+      background-color: #821c3e;
+      border: 1px solid #821c3e;
       color: #ffffff;
       width: 100%;
       padding: 0 size(40);
@@ -196,11 +196,12 @@
     width: size-m(375);
     height: size-m(63);
     gap: size-m(1);
+     box-shadow: 0 -4px 15px rgba(94, 11, 32, 0.5);
 
     .contact-item {
       height: 100%;
-      background-color: #8BC782;
-      font-size: size-m(16);
+      background-color: #821c3e;
+      font-size: size-m(14);
       font-weight: 400;
       color: #fff;
 

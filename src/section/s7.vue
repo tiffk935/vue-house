@@ -106,7 +106,7 @@
   .t1 {
     font-size: size-m(25);
     line-height: size-m(34);
-    color: #462E86;
+    color: #821c3e;
     font-weight: 700;
     padding: 0 size-m(30);
     margin-bottom: size-m(20);
@@ -189,7 +189,7 @@
 
         @media (min-width: 768px) {
           circle {
-            fill: #462E86;
+            fill: #821c3e;
           }
 
           path {

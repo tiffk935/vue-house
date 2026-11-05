@@ -169,7 +169,7 @@
   .order-title {
     font-size: size(40);
     font-weight: 700;
-    color: #462E86;
+    color: #821c3e;
     padding-top:1.5em;
     //filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.8))
   }
@@ -251,7 +251,7 @@
     font-size:20px;
     letter-spacing: 0.9em;
     text-indent: 0.9em;
-    color: #462E86;
+    color: #821c3e;
     background-color:#fff;;
     //border: 1px solid #FFF9;
     border:0;

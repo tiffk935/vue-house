@@ -38,7 +38,7 @@
         .bar {
             width: size(38);
             height: 2px;
-            background-color: #462E86;
+            background-color: #ffffff;
             // position: relative;
             transform: all .5s;
             position: absolute;
@@ -52,7 +52,7 @@
                 height: 2px;
                 bottom: -#{size(10)};
                 position: absolute;
-                background-color: #462E86;
+                background-color: #ffffff;
                 transition: all .5s;
             }
 
@@ -62,7 +62,7 @@
                 height: 2px;
                 top: -#{size(10)};
                 position: absolute;
-                background-color: #462E86;
+                background-color: #ffffff;
                 transition: all .5s;
             }
         }
@@ -118,7 +118,7 @@
         position: fixed;
         top: size(0);
         right: size(0);
-        background-color: rgba(139, 199, 130, 0.8);
+        background-color: rgba(148, 42, 74, 0.8);
         backdrop-filter: blur(2px);
         width: size(280);
         height: 100%;
@@ -149,7 +149,7 @@
                 white-space: nowrap;
                 transition: width .4s linear, transform .1s linear;
                 transform-origin: left center;
-                text-shadow: 0 0 .6em #2d612699 ,0 0 .15em #2d612699;
+                text-shadow: 0 0 .6em #61263d99 ,0 0 .15em #61264699;
             }
 
             // &:hover {
@@ -268,7 +268,7 @@
 
         .menu {
             position: fixed;
-            background-color: rgba(139, 199, 130, 0.8);
+            background-color: rgba(109, 39, 54, 0.8);
             width: 100%;
             padding: 0;
             gap: size-m(45);

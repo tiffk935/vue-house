@@ -1,5 +1,5 @@
 <template>
-  <section class="s4 w-full relative text-[#462E86]">
+  <section class="s4 w-full relative text-[#821c3e]">
     <img class="ball-orange1 absolute" src="@/section/balls/orange.png" />
     <img class="ball-orange2 absolute" src="@/section/balls/orange.png" />
     <img class="ball-orange3 absolute hidden md:block" src="@/section/balls/orange.png" />
@@ -80,10 +80,10 @@
           </swiper>
         </div>
         <div class="slide-prev" @click="slidePrev1">
-          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#821c3e" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
         </div>
         <div class="slide-next" @click="slideNext1">
-          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#821c3e" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
         </div>
       </div>
     </div>
@@ -153,10 +153,10 @@
         </swiper-slide>
       </swiper>
       <div class="slide-prev" @click="slidePrev2">
-          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
+          <svg viewBox="0 0 8 8" fill="#821c3e" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M4.8,1.5L2.2,3.8l2.7,2.5"/></svg>
       </div>
       <div class="slide-next" @click="slideNext2">
-          <svg viewBox="0 0 8 8" fill="#462E86" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
+          <svg viewBox="0 0 8 8" fill="#821c3e" xmlns="http://www.w3.org/2000/svg"><circle cx="4" cy="4" r="4"/><path stroke="#FFF" stroke-linecap="round" stroke-linejoin="round" d="M3.2,6.5l2.7-2.3L3.2,1.7"/></svg>
       </div>
     </div>
     <div class="md:flex md:justify-end md:items-center md:flex-row-reverse">
@@ -459,7 +459,7 @@
     }
 
     .swiper-pagination-bullet {
-      background: #462E86;
+      background: #821c3e;
       opacity: .6;
       width: size(8);
       height: size(8);
