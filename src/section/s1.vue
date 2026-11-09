@@ -5,7 +5,7 @@
       <img src="./s1/train.png" alt="train" class="train1 absolute">
     </div>
 
-    <img src="./s1/1104-new/bg.jpg" alt="s1-bg" class="s1-bg" data-aos="fade-in"
+    <img src="./s1/1109-new/1109-s1-bg.jpg" alt="s1-bg" class="s1-bg" data-aos="fade-in"
     data-aos-duration="1200"
     data-aos-easing="ease"
     data-aos-once="false"
