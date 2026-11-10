@@ -12,7 +12,7 @@ body {
   font-weight: 400;
   font-style: normal;
   margin: 0;
-  font-size: size-m(20);
+  font-size: size-m(26);
   line-height: 180%;
   margin: 0;
   background: url(@/assets/sec-bg-m.jpg) fixed;
@@ -61,7 +61,7 @@ a {
 }
 
 p {
-  font-size: size-m(20);
+  font-size: size-m(26);
   line-height: 180%;
   margin: 0;
 
@@ -288,7 +288,7 @@ footer {
     }
 
     &>div {
-      width: size-m(274);
+      width: size-m(300);
       display: flex;
       flex-wrap: wrap;
       padding-bottom: size-m(16);
@@ -309,7 +309,7 @@ footer {
 
       a {
         color: #000;
-        font-size: size-m(18);
+        font-size: size-m(20);
         font-weight: 600;
         letter-spacing: .1em;
 

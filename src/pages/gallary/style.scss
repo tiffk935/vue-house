@@ -101,7 +101,7 @@
     position: absolute;
     bottom: size-m(10);
     right: size-m(20);
-    font-size: size-m(14);
+    font-size: size-m(16);
     line-height: 200%;
     filter: drop-shadow(0 size-m(2) size-m(3) #000);
     @media (min-width: 768px) {
@@ -223,7 +223,7 @@ h2 {
 }
 
 .c2 {
-  font-size: size-m2(11);
+  font-size: size-m2(12);
   line-height: size-m2(20);
   margin-bottom: size-m2(13);
   @media screen and (min-width:768px) {
@@ -590,7 +590,7 @@ h2 {
       right: size-m2(8);
       color: #FFF;
       font-family: "Noto Serif TC";
-      font-size: size-m2(10);
+      font-size: size-m2(11);
       font-weight: 700;
       line-height: 133.2%;
       @media screen and (min-width:768px) {

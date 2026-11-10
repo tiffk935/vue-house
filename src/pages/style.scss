@@ -244,9 +244,9 @@
   }
 
   a {
-    font-size: size-m(20);
+    font-size: size-m(24);
     line-height: 180%;
-    color: #8C6239;
+    color: #8C6239;white-space: nowrap;
     // transform: translateX(size-m(25));
     @media (min-width: 768px) {
       font-size: size(17);
@@ -560,7 +560,7 @@
     }
 
     time {
-      font-size: size-m(20);
+      font-size: size-m(24);
       @media (min-width: 768px) {
         font-size: size(19);
       }
@@ -581,7 +581,7 @@
       line-height: 1.7;
       font-weight: 600;
         margin: size-m(10) 0;
-      font-size: size-m(20);
+      font-size: size-m(24);
       @media (min-width: 768px) {
         margin: size(15) 0;
         font-size: size(20);
@@ -633,7 +633,7 @@
       display: flex;
       margin-bottom: 1.4em;
       font-family: "Noto Sans TC", sans-serif;
-      font-size: size-m(20);
+      font-size: size-m(24);
       line-height: 1.4;
       cursor: pointer;
       @media (min-width: 768px) {
@@ -846,7 +846,7 @@
     }
 
     time {
-      font-size: size-m(20);
+      font-size: size-m(24);
       line-height: 160%;
       @media (min-width: 768px) {
         font-size: size(16);
@@ -854,7 +854,7 @@
     }
 
     .author {
-      font-size: size-m(20);
+      font-size: size-m(24);
       line-height: 160%;
       @media (min-width: 768px) {
         font-size: size(16);
@@ -1416,7 +1416,7 @@
   }
 
   .content {
-    font-size: size-m(20);
+    font-size: size-m(24);
     line-height: 170%;
     @media (min-width: 768px) {
       width: size(911);

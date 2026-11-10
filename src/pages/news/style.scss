@@ -154,7 +154,7 @@ body {
     }
 
     time {
-      font-size: size-m(20);
+      font-size: size-m(24);
       @media (min-width: 768px) {
         font-size: size(19);
       }
@@ -175,7 +175,7 @@ body {
       line-height: 1.7;
       font-weight: 600;
         margin: size-m(10) 0;
-      font-size: size-m(20);
+      font-size: size-m(24);
       @media (min-width: 768px) {
         margin: size(15) 0;
         font-size: size(20);
@@ -227,7 +227,7 @@ body {
       display: flex;
       margin-bottom: 1.4em;
       font-family: "Noto Sans TC", sans-serif;
-      font-size: size-m(20);
+      font-size: size-m(24);
       line-height: 1.4;
       cursor: pointer;
       @media (min-width: 768px) {
@@ -290,7 +290,7 @@ body {
     }
 
     h1 {
-      font-size: size-m(30);
+      font-size: size-m(36);
       line-height: 160%;
       margin: 0 0 size-m(25) 0;
       @media (min-width: 768px) {
@@ -309,7 +309,7 @@ body {
       }
 
       time {
-        font-size: size-m(20);
+        font-size: size-m(24);
         line-height: 160%;
         @media (min-width: 768px) {
           font-size: size(16);
@@ -317,7 +317,7 @@ body {
       }
 
       .author {
-        font-size: size-m(20);
+        font-size: size-m(24);
         line-height: 160%;
         @media (min-width: 768px) {
           font-size: size(16);
@@ -354,7 +354,7 @@ body {
       }
 
       figcaption {
-        font-size: size-m(14);
+        font-size: size-m(22);
         line-height: 160%;
         @media (min-width: 768px) {
           font-size: size(16);
@@ -363,7 +363,9 @@ body {
     }
 
     .content {
+      font-size: size-m(26);line-height: 1.9;
       @media (min-width: 768px) {
+      font-size: size(17);
         position: relative;
         // height:calc(100vh - size(430));
         // overflow: hidden;
