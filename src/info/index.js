@@ -28,13 +28,41 @@ export default {
         title: "CONTACT US",
         // subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    // 底下2個 沒項目就會隱藏
+    // 性別（富旺原本沒有，維持關閉）
+    formConfig: {
+        gender: {
+            enabled: false,
+            required: false,
+        },
+    },
+    // 各種欄位：type select 排在縣市前、input 排在縣市後
+    // apiB 對應舊系統（service-sys）的 room_type / budget 欄位，沒對應的會併入留言
     selectFields: {
         budget: {
             title: "聯繫時段",
+            type: "select",
             hold: "請選擇時段",
             option: ["上午", "下午", "晚上", "皆可"],
-            bypass: false,
+            required: false,
+            apiB: "budget",
+        },
+        line: {
+            title: "LINE ID",
+            type: "input",
+            hold: "LINE",
+            required: false,
+            apiB: "room_type", // 舊版 LINE ID 是送在 room_type
+        },
+    },
+    // 縣市地區
+    locationConfig: {
+        city: {
+            enabled: true,
+            required: true,
+        },
+        area: {
+            enabled: true, // ⚠️ 不能單獨 true
+            required: true,
         },
     },
     navList: [

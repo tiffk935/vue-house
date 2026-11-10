@@ -40,40 +40,43 @@
               @input="(event) => (formData.phone = event.target.value)" />
           </label>
 
-          <!-- 動態 select 欄位產生 預算 用途 等 在index.js控制  -->
-          <template v-for="(fieldData, fieldKey) in selectFields" :key="fieldKey">
+          <!-- 動態 select 欄位（type: select）在index.js selectFields 控制 -->
+          <template v-for="(field, key) in selectFieldsBefore" :key="key">
             <label class="row">
-              <span>{{ fieldData.title }}<span v-if="fieldData.bypass">*</span></span>
-              <select class="select w-full rounded-none bg-white" v-model="formData[fieldKey]">
-                <option value="" disabled>{{ fieldData.hold }}</option>
-                <option v-for="option in fieldData.option" :value="option" :key="option">
-                  {{ option }}
+              <span>{{ field.title }}<span class="required" v-if="field.required">*</span></span>
+              <select class="select w-full rounded-none bg-white" v-model="formData[key]">
+                <option value="" disabled>{{ field.hold }}</option>
+                <option v-for="opt in field.option" :value="opt" :key="opt">
+                  {{ opt }}
                 </option>
               </select>
             </label>
           </template>
           <!-- 動態 select end-->
 
-          <!--  -->
-          <label class="row"><span>居住城市<span class="required">*</span></span>
+          <!-- 居住縣市 / 地區 在index.js locationConfig 控制 -->
+          <label class="row" v-if="locationConfig.city?.enabled"><span>居住城市<span class="required" v-if="locationConfig.city?.required">*</span></span>
             <select class="select w-full rounded-none" v-model="formData.city">
               <option value="" selected disabled>請選擇城市</option>
               <option v-for="city in cityList" :value="city.value" :key="city">
                 {{ city.label }}
               </option>
             </select></label>
-          <label class="row"><span>居住地區<span class="required">*</span></span>
+          <label class="row" v-if="locationConfig.city?.enabled && locationConfig.area?.enabled"><span>居住地區<span class="required" v-if="locationConfig.area?.required">*</span></span>
             <select class="select w-full rounded-none" v-model="formData.area">
               <option value="" selected disabled>請選擇地區</option>
               <option v-for="area in areaList" :value="area.value" :key="area">
                 {{ area.label }}
               </option>
             </select></label>
-          <label class="row">
-            <span>LINE ID</span>
-            <input type="text" placeholder="LINE" class="input w-full rounded-none" :value="formData.room_type"
-              @input="(event) => (formData.room_type = event.target.value)" />
-          </label>
+
+          <!-- 動態 input 欄位（type: input，例如 LINE ID）排在縣市之後，維持原版面順序 -->
+          <template v-for="(field, key) in selectFieldsAfter" :key="key">
+            <label class="row">
+              <span>{{ field.title }}<span class="required" v-if="field.required">*</span></span>
+              <input type="text" :placeholder="field.hold" class="input w-full rounded-none" v-model="formData[key]" />
+            </label>
+          </template>
         </div>
         <div class="right">
           <textarea :value="formData.msg" @input="(event) => (formData.msg = event.target.value)"
@@ -94,7 +97,7 @@
 
       <!-- Recaptcha -->
       <vue-recaptcha class="flex justify-center mt-8 z-10" ref="recaptcha" :sitekey="info.recaptcha_site_key_v2"
-        @verify="onRecaptchaVerify" @expired="onRecaptchaUnVerify" />
+        @verify="onRecaptchaVerify" @expired="onRecaptchaExpired" />
 
       <!-- Send -->
       <div class="sendall mt-8 mx-auto">
@@ -471,201 +474,292 @@
 </style>
 
 <script setup>
+// 新發信系統（A: leads.lixin 主要 / B: service-sys 過渡 / C: GAS 備份）
 import Policy from "@/section/form/policy.vue"
 import ContactInfo from "@/section/form/contactInfo.vue"
 import HouseInfo from "@/section/form/houseInfo.vue"
 
 import info from "@/info"
-
 import { cityList, renderAreaList } from "@/info/address.js"
-import { computed, getCurrentInstance, ref, reactive, watch, onMounted } from "vue"
+import { computed, getCurrentInstance, ref, reactive, watch } from "vue"
 import { VueRecaptcha } from "vue-recaptcha"
-
-const globals = getCurrentInstance().appContext.config.globalProperties;
-const isMobile = computed(() => globals.$isMobile());
-
-// const selectFields = info.selectFields
-
 import { useToast } from "vue-toastification"
-const toast = useToast()
 
+const toast = useToast()
 const sending = ref(false)
 const submitted = ref(false)
 
-// 後端那 name phone email msg 為必要欄位 請勿刪除
-const requiredFields = {
-  // 固定必要欄位 (請勿刪)
-  name: "姓名",
-  phone: "手機",
-  // email: "信箱",
-  budget: "購屋預算",
-  msg: "備註訊息",
-  city: "居住縣市",
-  area: "居住地區",
-  policyChecked: "個資告知事項聲明",
-  r_verify: "機器人驗證"
-}
+const globals = getCurrentInstance().appContext.config.globalProperties
+const isMobile = computed(() => globals.$isMobile())
 
-// selectFields
 const selectFields = info.selectFields || {}
+const formConfig = info.formConfig || {}
+const locationConfig = info.locationConfig || {}
 
-// 初始 formData（包含 selectFields 欄位）
+// 版面順序：select 類放在縣市前，input 類（LINE ID）放在縣市後
+const pickFields = (fn) =>
+  Object.fromEntries(Object.entries(selectFields).filter(([_, f]) => !f.hidden && fn(f)))
+const selectFieldsBefore = pickFields((f) => f.type !== "input")
+const selectFieldsAfter = pickFields((f) => f.type === "input")
+
+// ==========================
+// FORM DATA
+// ==========================
 const formData = reactive({
-  ...Object.keys(requiredFields).reduce((acc, key) => {
-    acc[key] = key === "policyChecked" || key === "r_verify" ? false : ""
-    return acc
-  }, {}),
-  ...Object.keys(selectFields).reduce((acc, key) => {
-    acc[key] = ""
+  name: "",
+  phone: "",
+  email: "",
+  msg: "",
+  city: "",
+  area: "",
+  gender: "",
+  policyChecked: false,
+  r_verify: false,
+
+  ...Object.keys(selectFields).reduce((acc, k) => {
+    acc[k] = ""
     return acc
   }, {})
 })
 
-// bypass（非必填欄位，根據 selectFields 的 bypass 設定）
-const staticBypass = ["budget", "msg"]
-const bypass = [
-  ...staticBypass,
-  ...Object.entries(selectFields)
-    .filter(([_, field]) => field.bypass === true)
-    .map(([key]) => key)
-]
-
-// 中文對照（formDataRef）
-const formDataRef = {
-  ...requiredFields,
-  ...Object.entries(selectFields).reduce((acc, [key, val]) => {
-    acc[key] = val.title || key
-    return acc
-  }, {})
+// ==========================
+// FIELD LABEL MAP
+// ==========================
+const fieldLabelMap = {
+  name: "姓名",
+  phone: "手機",
+  email: "信箱",
+  gender: "性別",
+  city: "居住縣市",
+  area: "居住地區",
+  policyChecked: "個資告知事項聲明",
+  r_verify: "機器人驗證",
+  ...Object.fromEntries(
+    Object.entries(selectFields).map(([k, v]) => [k, v.title])
+  )
 }
 
+// ==========================
+// AREA LIST
+// ==========================
 const areaList = ref([])
 
-watch(
-  () => formData.city,
-  (newVal, oldVal) => {
-    areaList.value = renderAreaList(newVal)
-    formData.area = areaList.value[0].value
+watch(() => formData.city, (val) => {
+  if (!val) {
+    formData.area = ""
+    areaList.value = []
+    return
   }
-)
-// 新系統這裡需調整
+  areaList.value = renderAreaList(val)
+  formData.area = areaList.value[0]?.value || ""
+})
+
+// ==========================
+// REQUIRED RULE
+// ==========================
+const isRequired = (key) => {
+  if (key === "name" || key === "phone") return true
+  if (key === "policyChecked") return true
+  if (key === "r_verify") return true
+  if (key === "gender") return formConfig.gender?.enabled && formConfig.gender?.required
+  if (key === "city") return locationConfig.city?.enabled && locationConfig.city?.required
+  if (key === "area") return locationConfig.area?.enabled && locationConfig.area?.required
+  if (selectFields[key]) return selectFields[key].required
+  return false
+}
+
+// ==========================
+// RECAPTCHA
+// ==========================
 const onRecaptchaVerify = (token) => {
-  formData.r_verify = token;
+  formData.r_verify = token
 }
-const onRecaptchaUnVerify = () => {
+
+const onRecaptchaExpired = () => {
   formData.r_verify = false
+  toast.warning("驗證已過期，請重新勾選")
 }
 
-const send = () => {
-  const urlParams = new URLSearchParams(window.location.search);
-  const utmSource = urlParams.get("utm_source") || "null"; // 确保有有效的来源
-  const utmMedium = urlParams.get("utm_medium") || "null";
-  const utmContent = urlParams.get("utm_content") || "null";
-  const utmCampaign = urlParams.get("utm_campaign") || "null";
-  const pad = (n) => String(n).padStart(2, '0');
-  const time = new Date();
-  const year = time.getFullYear();
-  const month = time.getMonth() + 1;
-  const day = time.getDate();
-  const hour = time.getHours();
-  const min = time.getMinutes();
-  const sec = time.getSeconds();
-  const date = `${year}-${month}-${day} ${hour}:${min}:${sec}`;
+// ==========================
+// SUBMIT
+// ==========================
+const send = async () => {
+  const urlParams = new URLSearchParams(window.location.search)
 
+  const utmSource = urlParams.get("utm_source") || "null"
+  const utmMedium = urlParams.get("utm_medium") || "null"
+  const utmContent = urlParams.get("utm_content") || "null"
+  const utmCampaign = urlParams.get("utm_campaign") || "null"
 
-  const presend = new FormData();
-  let pass = true;
-  let unfill = [];
-  let idx = 0;
+  const utm = {
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_content: utmContent,
+    utm_campaign: utmCampaign
+  }
 
-  //有性別的話 性別顯示
-  if (formData.gender) {
-    const genderTag = `(${formData.gender})`;
-    if (!formData.name.endsWith(genderTag)) {
-      formData.name += genderTag;
+  // 1. 性別標籤
+  if (formData.gender && formConfig.gender?.enabled) {
+    const tag = `(${formData.gender})`
+    if (!formData.name.includes(tag)) {
+      formData.name += tag
     }
   }
-  /*
-  if (formData.msg.trim() === "") {
-    formData.msg = "無留言";
-  }
-    */
 
-  // 验证必填字段
+  // 2. 必填驗證
+  const unfill = []
   for (const [key, value] of Object.entries(formData)) {
-    if (!bypass.includes(key) && (value === "" || value === false)) {
-      unfill.push(formDataRef[key] || key)
-      pass = false
+    if (!isRequired(key)) continue
+    if (value === "" || value === false) unfill.push(key)
+  }
+
+  if (unfill.length) {
+    const labels = unfill.map((k) => fieldLabelMap[k] || k)
+    toast.error(`「${labels.join(", ")}」為必填或必選`)
+    return
+  }
+
+  const phoneReg = /^(09)[0-9]{8}$/
+  if (!phoneReg.test(formData.phone)) {
+    toast.error("手機格式錯誤 ( 09開頭10位數字 )")
+    return
+  }
+
+  if (sending.value) return
+  sending.value = true
+  submitted.value = true
+
+  // ====================================================
+  // A 系統 (leads.lixin - 主要系統)
+  // ====================================================
+  const presendA = {
+    caseId: info.caseid,
+    form: {},
+    validation: {
+      siteKey: info.recaptcha_site_key_v2,
+      recaptchaToken: formData.r_verify
     }
-    if (key !== "r_verify" && key !== "policyChecked") {
-      presend.append(key, value)
+  }
+
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue
+    if (k === "area" && !v) continue
+    presendA.form[k] = v
+  }
+  presendA.form.note = formData.msg
+  delete presendA.form.msg
+  Object.assign(presendA.form, utm)
+
+  // ====================================================
+  // B 系統 (service-sys - 舊系統，過渡期)
+  // ====================================================
+  const presendB = new FormData()
+
+  presendB.append("name", formData.name || "")
+  presendB.append("phone", formData.phone || "")
+  if (formData.email) presendB.append("email", formData.email)
+  if (formData.gender) presendB.append("gender", formData.gender)
+  if (formData.city) presendB.append("city", formData.city)
+  if (formData.area) presendB.append("area", formData.area)
+
+  const assignedBFields = { room_type: false, budget: false }
+  const extraFieldsForBMessage = []
+
+  // 依 apiB 對應到 B 的 room_type / budget，其餘併入留言
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (!val) continue
+
+    const label = fieldConfig.title || key
+    const targetBKey = fieldConfig.apiB || key
+
+    if (targetBKey === "room_type" && !assignedBFields.room_type) {
+      presendB.append("room_type", val)
+      assignedBFields.room_type = true
+    } else if (targetBKey === "budget" && !assignedBFields.budget) {
+      presendB.append("budget", val)
+      assignedBFields.budget = true
+    } else {
+      extraFieldsForBMessage.push(`${label}：${val}`)
     }
   }
 
-  presend.append("utm_source", utmSource);
-  presend.append("utm_medium", utmMedium);
-  presend.append("utm_content", utmContent);
-  presend.append("utm_campaign", utmCampaign);
-  presend.append("message", formData.msg);
-  presend.append("case_code", info.case_code ? info.case_code : info.caseid);
-
-  // 如果有必填字段为空，返回
-  if (!pass) {
-    toast.error(`「${unfill.join(", ")}」為必填或必選`);
-    return;
+  if (formData.msg) {
+    extraFieldsForBMessage.push(
+      extraFieldsForBMessage.length ? `留言：${formData.msg}` : formData.msg
+    )
   }
 
-  // 手机格式验证
-  const MobileReg = /^(09)[0-9]{8}$/;
-  if (!formData.phone.match(MobileReg)) {
-    toast.error("手機格式錯誤 ( 09開頭10位數字 )");
-    return;
-  }
+  const combinedBMessage = extraFieldsForBMessage.join(" / ")
+  presendB.append("message", combinedBMessage)
+  presendB.append("msg", combinedBMessage)
 
-  // 如果通过验证
-  if (pass && !sending.value) {
-    sending.value = true;
-    submitted.value = true;
-    /*
-    */
-    fetch(
-      `https://script.google.com/macros/s/AKfycbzqyW-sbiYwNAwunTDkp3ncVcvPnPEkvsUQWswyprd2b1V2u1HQ/exec?name=${formData.name}
-      &phone=${formData.phone}
-      &email=${formData.email}
-      &cityarea=${formData.city}${formData.area}
-      &msg=${formData.room_type}；${formData.budget}；${formData.msg}
-      &utm_source=${utmSource}
-      &utm_medium=${utmMedium}
-      &utm_content=${utmContent}
-      &utm_campaign=${utmCampaign}
-      &date=${date}
-      &campaign_name=${info.caseName}`,
-      {
-        method: "GET"
-      }
-    );
-    //caseid 在index.js裡設定
-    fetch("https://service-sys.lixin.com.tw/reserve/" + info.caseid, {
+  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
+  presendB.append("case_code", info.case_code || info.caseid_j || info.caseid || "")
+
+  // ====================================================
+  // C 系統 (Google Apps Script - 備份試算表，沿用富旺原本的 GAS)
+  // ====================================================
+  const dynamicMsgParts = []
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (val) dynamicMsgParts.push(`${fieldConfig.title || key}：${val}`)
+  }
+  if (formData.msg) {
+    dynamicMsgParts.push(dynamicMsgParts.length ? `留言：${formData.msg}` : formData.msg)
+  }
+  
+// 固定台灣時間（UTC+8，台灣無夏令時間），不受訪客電腦時區影響
+  const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
+  const pad = (n) => String(n).padStart(2, "0")
+  const date = `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())} ${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`
+
+  const scriptParams = new URLSearchParams()
+  scriptParams.append("name", formData.name || "")
+  scriptParams.append("phone", formData.phone || "")
+  scriptParams.append("email", formData.email || "")
+  scriptParams.append("cityarea", `${formData.city || ""}${formData.area || ""}`)
+  scriptParams.append("msg", dynamicMsgParts.join(" / "))
+  scriptParams.append("utm_source", utmSource)
+  scriptParams.append("utm_medium", utmMedium)
+  scriptParams.append("utm_content", utmContent)
+  scriptParams.append("utm_campaign", utmCampaign)
+  scriptParams.append("date", date)
+  scriptParams.append("campaign_name", info.caseName || "")
+
+  const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
+
+  // ====================================================
+  // 發送：C、B 不等待；A 成功才跳轉
+  // ====================================================
+  try {
+    fetch(scriptUrl, {
+      method: "GET",
+      mode: "no-cors",
+      keepalive: true
+    }).catch(() => {})
+
+    fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
       method: "POST",
-      body: presend,
+      body: presendB,
+      keepalive: true
+    }).catch((e) => console.warn("B 系統送出失敗", e))
+
+    const resA = await fetch("https://leads.lixin.com.tw/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(presendA),
+      keepalive: true
     })
-      .then((response) => {
-        if (response.status === 200) {
-          window.location.href = "formThanks";
-        } else {
-          return response.json().then(err => {
-            console.error("後端錯誤訊息：", err);
-            toast.error(err.message || "提交失敗");
-          });
-        }
-      })
-      .catch((error) => {
-        console.error("傳送失敗：", error);
-        toast.error("無法連線或伺服器錯誤");
-      })
-      .finally(() => {
-        sending.value = false;
-      });
+
+    if (!resA.ok) throw new Error("A not ok")
+
+    window.location.href = "formThanks"
+  } catch (err) {
+    console.error("A 系統送出失敗:", err)
+    toast.error("送出失敗，請稍後再試")
+    sending.value = false
+    submitted.value = false
   }
-};
+}
 </script>
