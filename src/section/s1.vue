@@ -1,9 +1,7 @@
 <template>
   <article class="s1" id="s1">
     <!-- <img src="./s1/mo.jpg" class="t0"> -->
-    <div class="train absolute">
-      <img src="./s1/train.png" alt="train" class="train1 absolute">
-    </div>
+      <img src="./s1/1109-new/s1-40w.webp" alt="s1-40w" class="s1-40w">
 
     <img src="./s1/1109-new/1109-s1-bg.jpg" alt="s1-bg" class="s1-bg" data-aos="fade-in"
     data-aos-duration="1200"
@@ -19,17 +17,11 @@
 
     <img src="./s1/1104-new/MO/s1-new-m2.svg" alt="s1-new-m" class="s1-new-m" data-aos="fade-in">
 
-    <img src="./s1/1104-new/s1-logo.svg" alt="logo" class="logo" data-aos="fade-in"
+    <img src="./s1/1109-new/1109-s1-h1.webp" alt="logo" class="logo" data-aos="fade-in"
     data-aos-duration="1200"
     data-aos-easing="ease"
     data-aos-once="false"
     data-aos-mirror="true">
-
-      <div class="s1-799">
-        <img src="./s1/1104-new/s1-799.svg" alt="799" class="s1-799-top">
-        <img src="./s1/1104-new/s1-new-light.png" alt="light" class="s1-light">
-        <img src="./s1/1104-new/s1-phone.svg" alt="phone" class="s1-phone">
-      </div>
 
 </div>
 
@@ -50,7 +42,7 @@
   data-aos-mirror="true"
 >
 
-<img src="./s1/1104-new/s1-new-t.svg" alt="s1-new" class="s1-new-t" data-aos="fade-in" data-aos-delay="0">
+<img src="./s1/1109-new/y.svg" alt="全新落成" class="y" data-aos="fade-in" data-aos-delay="0">
 
 <img src="./s1/1104-new/s1-th3.svg" alt="s1-th3" class="s1-th3" data-aos="fade-in" data-aos-delay="0" >
   
@@ -107,38 +99,12 @@
   align-items: center;
 }
 
-.s1-799 {
-  width: 36vw;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: size(100);
-  gap: size(15);
-}
-
-  .s1-799-top {
-    width: 100%;
-    position: relative;
-    margin-left: 5vw;
-  }
-
-  .s1-light {
-  position: relative;
-  margin-left: 4vw;
-  mix-blend-mode: screen;
-  pointer-events: none;
-}
-
-  .s1-phone {
-    position: relative;
-    margin-left: 4vw;
-  }
 
   .logo {
     position: relative;
-    width: 30vw;
-    margin-bottom: size(80);
+    width: 45vw;
+    margin-bottom: size(200);
+    margin-left: size(160);
   }
 
   .s1-arrow {
@@ -157,11 +123,11 @@
     z-index: 1;
   }
 
-  .s1-new-t{
+  .y{
     position: absolute;
-    top: size(0);
-    right: size(0);
-    width: 12vw;
+    top: size(-25);
+    right: size(-25);
+    width: 14vw;
     z-index: 1;
   }
 
@@ -184,27 +150,14 @@
     }
   }
 
-  .train {
+  .s1-40w {
+    position: absolute;
     bottom: 0;
     left: 0;
     width: 100%;
     text-align: right;
   
     z-index: 2;
-
-    .trainbg {
-      width: size(1650);
-
-      margin: auto auto auto 0;
-    }
-
-    .train1 {
-      bottom: size(-5);
-      right: 100%;
-      height: size(91);
-      animation: train 10s infinite;
-      max-width: none;
-    }
   }
   
 
