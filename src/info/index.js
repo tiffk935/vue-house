@@ -30,13 +30,34 @@ export default {
         title: "預約賞屋",
         subTitle: "歡迎預約，將有專人與您聯絡，我們將竭誠為您服務",
     },
-    // 底下2個 沒項目就會隱藏
+    // 性別（國王大道原本沒有，維持關閉）
+    formConfig: {
+        gender: {
+            enabled: false,
+            required: false,
+        },
+    },
+    // 各種欄位：type select 排在縣市前、input 排在縣市後
+    // apiB 對應舊系統（service-sys）的 room_type / budget 欄位，沒對應的會併入留言
     selectFields: {
         room_type: {
             title: "需求房型",
+            type: "select",
             hold: "請選擇房型",
             option: ["2房", "3房", "店面"],
-            bypass: false,
+            required: false,
+            apiB: "room_type",
+        },
+    },
+    // 縣市地區（國王大道原本為選填）
+    locationConfig: {
+        city: {
+            enabled: true,
+            required: false,
+        },
+        area: {
+            enabled: true, // ⚠️ 不能單獨 true
+            required: false,
         },
     },
     navList: [
