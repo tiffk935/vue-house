@@ -438,8 +438,8 @@ const formData = reactive({
   policyChecked: false,
   r_verify: false,
 
-  ...Object.keys(selectFields).reduce((acc, k) => {
-    acc[k] = selectFields[k].type === "checkbox" ? [] : ""
+    ...Object.keys(selectFields).reduce((acc, k) => {
+    acc[k] = ""
     return acc
   }, {})
 })
@@ -514,22 +514,24 @@ const onRecaptchaExpired = () => {
 }
 
 // ==========================
-// 🔥 SUBMIT
+// 🔥 SUBMIT (正式發送)
 // ==========================
 const send = async () => {
-
   const urlParams = new URLSearchParams(window.location.search)
 
+  const utmSource = urlParams.get("utm_source") || "null"
+  const utmMedium = urlParams.get("utm_medium") || "null"
+  const utmContent = urlParams.get("utm_content") || "null"
+  const utmCampaign = urlParams.get("utm_campaign") || "null"
+
   const utm = {
-    utm_source: urlParams.get("utm_source") || "null",
-    utm_medium: urlParams.get("utm_medium") || "null",
-    utm_content: urlParams.get("utm_content") || "null",
-    utm_campaign: urlParams.get("utm_campaign") || "null"
+    utm_source: utmSource,
+    utm_medium: utmMedium,
+    utm_content: utmContent,
+    utm_campaign: utmCampaign
   }
 
-  // ======================
-  // gender tag
-  // ======================
+  // 1. 性別標籤處理
   if (formData.gender && formConfig.gender?.enabled) {
     const tag = `(${formData.gender})`
     if (!formData.name.includes(tag)) {
@@ -537,25 +539,20 @@ const send = async () => {
     }
   }
 
-  // ======================
-  // validation
-  // ======================
+  // 2. 必填欄位驗證
   const unfill = []
-
   for (const [key, value] of Object.entries(formData)) {
-
     if (!isRequired(key)) continue
-
     if (value === "" || value === false) {
       unfill.push(key)
     }
   }
 
-if (unfill.length) {
-  const labels = unfill.map(k => fieldLabelMap[k] || k)
-  toast.error(`請填寫：${labels.join(", ")}`)
-  return
-}
+  if (unfill.length) {
+    const labels = unfill.map(k => fieldLabelMap[k] || k)
+    toast.error(`請填寫：${labels.join(", ")}`)
+    return
+  }
 
   const phoneReg = /^(09)[0-9]{8}$/
   if (!phoneReg.test(formData.phone)) {
@@ -564,13 +561,15 @@ if (unfill.length) {
   }
 
   if (sending.value) return
-
   sending.value = true
   submitted.value = true
 
-  // ======================
-  // A API
-  // ======================
+  // ====================================================
+  // 📦 1. A 系統資料組裝 (leads.lixin - 主要系統)
+  // ====================================================
+  // 留言：沒填時一律送「無留言」（B 系統留言空白會被擋）
+  const msgText = (formData.msg || "").trim() || "無留言"
+
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -580,138 +579,144 @@ if (unfill.length) {
     }
   }
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify"].includes(k)) continue
-  if (k === "area" && !v) continue
-
-  presendA.form[k] = Array.isArray(v)
-    ? v.join(" / ")
-    : v
-}
-
-presendA.form.note = formData.msg
-delete presendA.form.msg
-
+  for (const [k, v] of Object.entries(formData)) {
+    if (["policyChecked", "r_verify"].includes(k)) continue
+    if (k === "area" && !v) continue
+    presendA.form[k] = v
+  }
+  presendA.form.note = msgText
+  delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
-// ======================
-// B API
-// ======================
-const presendB = new FormData()
-// 因對方欄位不足改併入 message，不再單獨送出
-const mergeToMessageKeys = ["time","recommender", "recname"]
+  // ====================================================
+  // 📦 2. B 系統資料組裝 (service-sys - 舊系統)
+  // ====================================================
+  const presendB = new FormData()
 
-for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify", "msg"].includes(k)) continue
-  if (mergeToMessageKeys.includes(k)) continue
-  if (k === "area" && !v) continue
+  // 基本標準欄位
+  presendB.append("name", formData.name || "")
+  presendB.append("phone", formData.phone || "")
+  if (formData.email) presendB.append("email", formData.email)
+  if (formData.gender) presendB.append("gender", formData.gender)
+  if (formData.city) presendB.append("city", formData.city)
+  if (formData.area) presendB.append("area", formData.area)
 
-  const apiKey = selectFields[k]?.apiB || k
+  const assignedBFields = {
+    room_type: false,
+    budget: false
+  }
+  const extraFieldsForBMessage = []
 
+  // 走訪 selectFields 依據 apiB 歸類，多餘項目放入留言
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (!val) continue
+
+    const label = fieldConfig.title || key
+    const targetBKey = fieldConfig.apiB || key
+
+    if (targetBKey === "room_type" && !assignedBFields.room_type) {
+      presendB.append("room_type", val)
+      assignedBFields.room_type = true
+    } else if (targetBKey === "budget" && !assignedBFields.budget) {
+      presendB.append("budget", val)
+      assignedBFields.budget = true
+    } else {
+      extraFieldsForBMessage.push(`${label}：${val}`)
+    }
+  }
+
+  // 留言組裝 (雙重傳遞 message 與 msg)
+  if (extraFieldsForBMessage.length > 0) {
+    extraFieldsForBMessage.push(`留言：${msgText}`)
+  } else {
+    extraFieldsForBMessage.push(msgText)
+  }
+
+  const combinedBMessage = extraFieldsForBMessage.join(" / ")
+  presendB.append("message", combinedBMessage)
+  presendB.append("msg", combinedBMessage)
+
+  // UTM 與案件號
+  Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
   presendB.append(
-    apiKey,
-    Array.isArray(v) ? v.join(" / ") : v
-  )
-}
-
-Object.entries(utm).forEach(([k, v]) => presendB.append(k, v))
-
-// 組合簡潔的留言內容：原留言 + 額外項目 / 額外項目
-const extraMsgParts = []
-if (formData.time) extraMsgParts.push(`【方便聯絡時間】${formData.time}`)
-if (formData.recommender) extraMsgParts.push(`【介紹、推薦來源】${formData.recommender}`)
-if (formData.recname) extraMsgParts.push(`【介紹人、店家名稱】${formData.recname}`)
-
-const finalMessage = [formData.msg, ...extraMsgParts].filter(Boolean).join(" / ")
-
-presendB.append("message", finalMessage)
-
-presendB.append(
-  "case_code",
-  info.case_code || info.caseid_j || info.caseid
-)
-
-
-  // ======================
-  // SUBMIT
-  // ======================
-  const DEBUG_ONLY_A = false  // 👈 測試時開啟，上線前改回 false / true
-
-  try {
-    if (!DEBUG_ONLY_A) {
-  const scriptParams = new URLSearchParams();
-
-  for (const [k, v] of Object.entries(formData)) {
-  if (["policyChecked", "r_verify"].includes(k)) continue
-  if (mergeToMessageKeys.includes(k)) continue
-  if (k === "area" && !v) continue
-
-  scriptParams.append(
-    k,
-    Array.isArray(v) ? v.join(" / ") : (v ?? "")
-  )
-}
-
-  // msg 也統一改用合併後的 finalMessage
-  scriptParams.set("msg", finalMessage);
-
-  // UTM
-  Object.entries(utm).forEach(([k, v]) => {
-    scriptParams.append(k, v);
-  });
-
-  // 額外固定欄位
-  scriptParams.append("date", new Date().toISOString());
-  scriptParams.append("campaign_name", info.caseName || "");
-  scriptParams.append(
     "case_code",
     info.case_code || info.caseid_j || info.caseid || ""
-  );
+  )
 
-  fetch(
-    `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`,
-    { method: "GET" }
-  );
-}
+  // ====================================================
+  // 📦 3. C 系統資料組裝 (Google Apps Script - 備份試算表)
+  // ====================================================
+  const dynamicMsgParts = []
 
-    const requests = [
-      fetch("https://leads.lixin.com.tw/submit", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(presendA)
-      })
-    ]
-
-    if (!DEBUG_ONLY_A) {
-      requests.push(
-        fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
-          method: "POST",
-          body: presendB
-        })
-      )
+  for (const [key, fieldConfig] of Object.entries(selectFields)) {
+    const val = formData[key]
+    if (val) {
+      const label = fieldConfig.title || key
+      dynamicMsgParts.push(`${label}：${val}`)
     }
+  }
 
-    const [resA, resB] = await Promise.allSettled(requests)
+  if (dynamicMsgParts.length > 0) {
+    dynamicMsgParts.push(`留言：${msgText}`)
+  } else {
+    dynamicMsgParts.push(msgText)
+  }
 
-    const aOk = resA.status === "fulfilled" && resA.value.ok
-    const bOk = DEBUG_ONLY_A ? true : (resB.status === "fulfilled" && resB.value.ok)
+  const combinedCMsg = dynamicMsgParts.join(" / ")
 
-    if (!aOk) {
-      console.warn("A API 發送失敗，B 與 Google Script 仍繼續")
-    }
+  const scriptParams = new URLSearchParams()
+  scriptParams.append("name", formData.name || "")
+  scriptParams.append("phone", formData.phone || "")
+  scriptParams.append("email", formData.email || "")
+  scriptParams.append("cityarea", `${formData.city || ""}${formData.area || ""}`)
+  scriptParams.append("msg", combinedCMsg)
+  scriptParams.append("utm_source", utmSource)
+  scriptParams.append("utm_medium", utmMedium)
+  scriptParams.append("utm_content", utmContent)
+  scriptParams.append("utm_campaign", utmCampaign)
+  const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
+  const pad = (n) => String(n).padStart(2, "0")
+  const date = `${t.getUTCFullYear()}-${pad(t.getUTCMonth() + 1)}-${pad(t.getUTCDate())} ${pad(t.getUTCHours())}:${pad(t.getUTCMinutes())}:${pad(t.getUTCSeconds())}`
+  scriptParams.append("date", date)
+  scriptParams.append("campaign_name", info.caseName || "")
 
-    if (DEBUG_ONLY_A ? aOk : bOk) {
-      window.location.href = "formThanks"
-    } else {
-      toast.error("送出失敗")
-    }
+  const scriptUrl = `https://script.google.com/macros/s/AKfycbyQKCOhxPqCrLXWdxsAaAH06Zwz_p6mZ5swK80USQ/exec?${scriptParams.toString()}`
 
+  // ====================================================
+  // 🚀 發送流程：ABC 
+  // ====================================================
+  try {
+    // C：備份，不等待
+    fetch(scriptUrl, {
+      method: "GET",
+      mode: "no-cors",
+      keepalive: true
+    }).catch(() => { })
+
+    // B：過渡期仍使用，不擋跳轉，但失敗要留紀錄
+    fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+      method: "POST",
+      body: presendB,
+      keepalive: true
+    }).catch((e) => console.warn("B 系統送出失敗", e))
+
+    // A：主要系統，等它成功才跳轉
+    const resA = await fetch("https://leads.lixin.com.tw/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(presendA),
+      keepalive: true
+    })
+
+    if (!resA.ok) throw new Error("A not ok")
+
+    window.location.href = "formThanks"
   } catch (err) {
-    console.error(err)
-    toast.error("系統錯誤")
-  } finally {
+    console.error("A 系統送出失敗:", err)
+    toast.error("送出失敗，請稍後再試")
     sending.value = false
+    submitted.value = false
   }
 }
-
 </script>

@@ -115,18 +115,21 @@
     }
 
     .menu {
-        position: fixed;
-        top: size(0);
-        right: size(0);
-        background-color: rgba(148, 42, 74, 0.8);
-        backdrop-filter: blur(2px);
-        width: size(280);
-        height: 100%;
-        z-index: 99;
-        transform: translateX(100%);
-        transition: all .5s;
-        padding: size(100) 0;
-        gap: size(20);
+    position: fixed;
+    top: size(0);
+    left: size(0);
+    right: auto;
+
+    background-color: rgba(148, 42, 74, 0.8);
+    backdrop-filter: blur(2px);
+
+    width: size(280);
+    height: 100%;
+    z-index: 99;
+
+    transform: translateX(-100%);
+    transition: transform .5s ease;
+
 
         .menu-inner {
             width: size(128);
@@ -272,6 +275,10 @@
             width: 100%;
             padding: 0;
             gap: size-m(45);
+            left: auto;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .5s ease;
 
             .menu-inner {
                 width: size-m(128);

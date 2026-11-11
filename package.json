@@ -12,6 +12,7 @@
     "@gtm-support/vue-gtm": "^1.6.0",
     "@splidejs/vue-splide": "^0.6.7",
     "aos": "^2.3.4",
+    "axios": "^1.21.1",
     "daisyui": "^2.15.3",
     "fs": "0.0.1-security",
     "fslightbox-vue": "^2.0.1",
