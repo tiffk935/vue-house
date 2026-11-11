@@ -310,7 +310,7 @@
         right: 0;
         width: size(836);
         height: 100%;
-        background: linear-gradient(270deg, #fff100 0%, #fff10000 100%);
+        background: linear-gradient(270deg, #f9f3f1 0%, #fff10000 100%);
       }
     }
   }
