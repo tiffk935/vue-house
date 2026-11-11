@@ -15,12 +15,14 @@
     <S1 />
     <S2 />
     <S3 />
-    <!--<S4 />-->
+    <!--
+    <S4 />
     <S5 />
     <S6 />
     <S7 />
     <S8 />
     <S9 />
+    -->
     <Order />
   </div>
 </template>
@@ -40,25 +42,16 @@
 
 .home:before {
   content: '';
-  background: url(@/section/bg.webp) center;
-  background-size: 100% auto;
+  background: url(@/section/s1/bg.png) center;
+  background-size: cover;
   position: fixed;
-  width: 240%;
-  height: 240vw;
-  left: -70%;
-  top: calc(50% - 120vw);
+  width: 100%;
+  height: 100%;
+  left:0;
+  top: 0;
   right: 0;
   bottom: 0;
-  transform: translate(0) rotate(360deg);
-  filter: blur(10px);
-  animation: bg 40s linear infinite;
-
-  @media screen and (min-width:768px) {
-    width: 120%;
-    height: 120vw;
-    left: -10%;
-    top: calc(50% - 60vw);
-  }
+//  animation: bg 40s linear infinite;
 }
 </style>
 
@@ -85,7 +78,7 @@ gsap.registerPlugin(ScrollTrigger);
 const isLoading = ref(true)
 const gtmNoScript = ref('')
 const config = ref({
-  showNav: true
+  showNav: false
 })
 
 const setTrigger = (sec) => {
@@ -119,8 +112,10 @@ onMounted(() => {
 
     setTimeout(() => {
       const sections = gsap.utils.toArray(".home section");
-      sections.forEach((section, idx) => {
-        setTrigger(`.s${idx + 1}`);
+      // 依區塊本身的 class（s1、s3、s5…）綁定，跳過被註解掉的區塊（如 s4）也不會錯位
+      sections.forEach((section) => {
+        const cls = [...section.classList].find((c) => /^s\d+$/.test(c));
+        if (cls) setTrigger(`.${cls}`);
       });
     }, 500);
   };

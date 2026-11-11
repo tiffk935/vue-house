@@ -1,7 +1,5 @@
 <template>
   <div id="order" class="order relative">
-    <div class="ball ball1 absolute"></div>
-    <div class="ball ball2 absolute"></div>
 
     <!-- Title -->
     <div class="order-title" v-if="info.order.title">{{ info.order.title }}</div>
@@ -11,10 +9,10 @@
       <!-- Form -->
       <div class="form mx-auto relative flex justify-center">
         <div class="left h-full flex flex-col justify-between items-center">
-          <label class="row name"><span>姓名</span>
+          <label class="row name"><span>姓名<span>*</span></span>
             <input type="text" placeholder="姓名" class="input w-full rounded-none" :value="formData.name"
               @input="(event) => (formData.name = event.target.value)" /></label>
-          <label class="row"><span>手機</span>
+          <label class="row"><span>手機<span>*</span></span>
             <input type="text" placeholder="手機" class="input w-full rounded-none" :value="formData.phone"
               @input="(event) => (formData.phone = event.target.value)" /></label>
 
@@ -258,7 +256,7 @@
     textarea {
       font-size: 16px;
       font-weight: 400;
-      color: #666666;
+      color: #000;
     }
 
     textarea {
@@ -302,6 +300,12 @@
         width: 95px;
         display: block;
         padding-left: 1rem;
+        > span {
+          color: #CC0000;
+        display: inline;
+        padding-left:0;
+        width:auto;
+        }
       }
 
       .required {
@@ -364,6 +368,7 @@
     padding: size-m(25) 0;
     border: none;
     border-radius: size-m(10);
+      background: rgba(255, 0, 0, .6);
 
     @media screen and (min-width:768px) {
       display: block;
@@ -376,7 +381,6 @@
       min-height: auto;
       margin: 0 auto size(20) auto;
       border-radius: size(10);
-      background: rgba(182, 0, 100, .6);
     }
   }
 
@@ -409,6 +413,9 @@ import { VueRecaptcha } from "vue-recaptcha"
 import { useToast } from "vue-toastification"
 
 const toast = useToast()
+
+// ⚠️ 測試用：true = 送出後不跳頁，並在 Console 印出 A / B 回應。上線前務必改回 false
+const DEBUG_NO_REDIRECT = true
 const sending = ref(false)
 const submitted = ref(false)
 
@@ -555,6 +562,9 @@ const send = async () => {
   // ====================================================
   // A 系統 (leads.lixin - 主要系統)
   // ====================================================
+  // 留言：沒填時一律送「無留言」（B 系統留言空白會被擋）
+  const msgText = (formData.msg || "").trim() || "無留言"
+
   const presendA = {
     caseId: info.caseid,
     form: {},
@@ -569,7 +579,7 @@ const send = async () => {
     if (k === "area" && !v) continue
     presendA.form[k] = v
   }
-  presendA.form.note = formData.msg
+  presendA.form.note = msgText
   delete presendA.form.msg
   Object.assign(presendA.form, utm)
 
@@ -607,11 +617,9 @@ const send = async () => {
     }
   }
 
-  if (formData.msg) {
-    extraFieldsForBMessage.push(
-      extraFieldsForBMessage.length ? `留言：${formData.msg}` : formData.msg
-    )
-  }
+  extraFieldsForBMessage.push(
+    extraFieldsForBMessage.length ? `留言：${msgText}` : msgText
+  )
 
   const combinedBMessage = extraFieldsForBMessage.join(" / ")
   presendB.append("message", combinedBMessage)
@@ -628,9 +636,7 @@ const send = async () => {
     const val = formData[key]
     if (val) dynamicMsgParts.push(`${fieldConfig.title || key}：${val}`)
   }
-  if (formData.msg) {
-    dynamicMsgParts.push(dynamicMsgParts.length ? `留言：${formData.msg}` : formData.msg)
-  }
+  dynamicMsgParts.push(dynamicMsgParts.length ? `留言：${msgText}` : msgText)
   
 // 固定台灣時間（UTC+8，台灣無夏令時間），不受訪客電腦時區影響
   const t = new Date(Date.now() + 8 * 60 * 60 * 1000)
@@ -662,11 +668,17 @@ const send = async () => {
       keepalive: true
     }).catch(() => {})
 
-    fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
+    const reqB = fetch("https://service-sys.lixin.com.tw/reserve/" + (info.caseid_j || info.caseid), {
       method: "POST",
       body: presendB,
       keepalive: true
-    }).catch((e) => console.warn("B 系統送出失敗", e))
+    })
+      .then(async (res) => {
+        const text = await res.text().catch(() => "")
+        if (DEBUG_NO_REDIRECT) console.log("【DEBUG】B 系統回應", res.status, text)
+        if (!res.ok) console.warn("B 系統回應錯誤", res.status, text)
+      })
+      .catch((e) => console.warn("B 系統送出失敗", e))
 
     const resA = await fetch("https://leads.lixin.com.tw/submit", {
       method: "POST",
@@ -676,6 +688,16 @@ const send = async () => {
     })
 
     if (!resA.ok) throw new Error("A not ok")
+
+    // 測試模式：不跳頁，等 B 回應後印在 Console
+    if (DEBUG_NO_REDIRECT) {
+      console.log("【DEBUG】A 系統回應", resA.status, await resA.text().catch(() => ""))
+      await reqB
+      toast.success("【測試模式】已送出，未跳頁，請看 Console")
+      sending.value = false
+      submitted.value = false
+      return
+    }
 
     window.location.href = "formThanks"
   } catch (err) {

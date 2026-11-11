@@ -32,7 +32,7 @@
 
     <div class="top-nav hidden md:block">
         <div class="top-nav-inner">
-            <img class="logo" src="@/section/logo.svg" alt="國王大道" @click="scrollTo('.s1')" />
+            <img class="logo" src="@/section/s1/logo.svg" alt="國王大道" @click="scrollTo('.s1')" />
             <div class="links">
                 <div 
                     class="link-item"
@@ -380,18 +380,18 @@
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(15, 67, 109, .7);
+    background: #300c;
     z-index: 99;
 
     .top-nav-inner {
-        padding: size(17) size(48);
+        padding: size(10) size(48);
         display: flex;
         align-items: center;
         justify-content: space-between;
     }
 
     .logo {
-        width: size(110);
+        width: size(130);
         cursor: pointer;
     }
 

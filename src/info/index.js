@@ -1,7 +1,8 @@
 const caseName = "國王大道"
 
 export default {
-    caseid: "69cf9884-c68a-4e5b-92e1-ec665d2423ab",
+  caseid: "69cf9884-c68a-4e5b-92e1-ec665d2423ab",
+  // caseid_j: "1d2db7f2-157b-4a33-acbc-f4abfde91846", 
     case_code: "king",
     address1: "接待中心",//按鈕區的--- 如空白會只呈現地址
     address2: "接待中心",//map點下確認的--- 如空白會顯示"導航地址"

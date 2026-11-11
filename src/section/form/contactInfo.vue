@@ -1,18 +1,17 @@
 <template>
   <div class="contact-info">
-    <div class="ball ball3 absolute md:hidden"></div>
 
     <div class="container">
       <div class="contact-item-box">
-        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
+        <div class="contact-item btn text-white flex justify-center items-center" @click="modalOpen = true; modalType = 'phone'">
           <img src="//h35.banner.tw/img//form/phone.svg" alt="phone" srcset="" />
           <div>{{ info.phone }}</div>
         </div>
-        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
+        <div class="contact-item btn text-white flex justify-center items-center" @click="modalOpen = true; modalType = 'fb'">
           <img src="//h35.banner.tw/img//form/messenger.svg" alt="messenger" srcset="" />
           <div>FB 諮詢</div>
         </div>
-        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center btfanpage" @click="open()">
+        <div class="contact-item btn text-white flex justify-center items-center btfanpage" @click="open()">
           <img src="//h35.banner.tw/img//form/fb.svg" alt="fb" srcset="" />
           <div>前往粉絲專頁</div>
         </div>
@@ -21,7 +20,7 @@
         <div class="address contact-item flex justify-center items-center">
           <div><span>接待中心：</span><span v-html="info.address"></span></div>
         </div>
-        <div class="contact-item btn text-white bg-[#560048] flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
+        <div class="contact-item btn text-white flex justify-center items-center" @click="modalOpen = true; modalType = 'gmap'">
           <img src="//h35.banner.tw/img//form/gmap.svg" alt="gmap" srcset="" />
           <div>導航 Google 地圖</div>
         </div>
@@ -70,7 +69,7 @@
           `接待中心：${info.address}`
       }}</div>
       <!-- btn -->
-      <div class="btn btn-lg bg-[#560048] border-0 text-white mt-12" @click="go()" v-bind:class="{
+      <div class="btn btn-lg  border-0 text-white mt-12" @click="go()" v-bind:class="{
         'hidden': modalType == 'phone' && !$isMobile(),
         'btlead': modalType == 'fb',
         'btsearch': modalType == 'gmap',
@@ -95,22 +94,6 @@
     padding: size(143) 0 size(117) 0;
   }
 
-  .ball3 {
-    width: size-m(108);
-    height: size-m(108);
-    bottom: size-m(178);
-    right: size-m(16);
-    transform: translateY(-30%);
-    background-image: url(@/section/ball2.png);
-    animation: ball 6s ease 0s infinite alternate;
-    opacity: .9;
-
-    &:after {
-      content: '';
-      background-color: #FF90FF;
-      mix-blend-mode: soft-light;
-    }
-  }
 
   .contact-item-box {
     &:nth-child(1) {
@@ -130,16 +113,16 @@
       border-radius: 0;
       min-height: auto;
       border: none;
+        background: rgba(210, 0, 0, 0.6);
       @media screen and (min-width:768px) {
         width: calc(33.333% - size(6.666666));
         height: size(72);
-        background: rgba(182, 0, 100, .6);
         margin-bottom: 0;
         font-size: size(22);
       }
 
       &:hover {
-        background: rgba(214, 0, 168, .7137254902);
+        background: rgba(210, 0, 0, .8);
       }
 
       img {
@@ -178,13 +161,10 @@
       }
 
       .contact-item:nth-child(2) {
-        background: #E4007F;
-        @media screen and (min-width:768px) {
-          background: rgba(182, 0, 100, .6);
-        }
+        background: rgba(210, 0, 0, 0.6);
 
         &:hover {
-          background: rgba(214, 0, 168, .7137254902);
+          background:  rgba(210, 0, 0, .8);
         }
 
         img {
@@ -213,7 +193,7 @@
 
   .contact-item {
     height: 100%;
-    background-color: #560048;
+    background-color: #800;
     font-size: size-m(16);
     font-weight: 400;
     color: #fff;
