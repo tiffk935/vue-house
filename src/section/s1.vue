@@ -242,7 +242,7 @@
   position: absolute;
   width: auto;
   max-height:50vh;
-  top: 7vh;
+  top: 9vh;
   margin-left: 12vw;
 }
  
@@ -304,7 +304,8 @@
 
 }
 
-@media screen and (max-width: 768px) and (min-aspect-ratio: 522 / 797) {
+@media screen and (max-width: 768px) and (min-aspect-ratio: 561 / 675) {
+
 
   .s1 .logo-m {
     display: none !important;
@@ -315,7 +316,7 @@
     position: absolute !important;
     width: auto !important;
     max-width:90vw;
-    top: 5vh !important;
+    bottom:-80vh !important;
     margin-left: 12vw !important;
     margin-bottom: 0 !important;
   }
