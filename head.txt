@@ -1,0 +1,38 @@
+<!--
+src: 'https://shouyao.tw/',
+title: '佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網',
+description: '佳鋐首耀：中華路 X 台灣大道，2-3房純靜4併，26-38坪雙面採光捷運宅；接待中心：台中市梧棲區中華路二段207號 即刻預約：04-2663099',
+keyword: '佳鋐首耀 ,佳鋐建設梧棲,佳鋐建設沙鹿,梧棲新案,沙鹿新案',
+image: 'https://shouyao.tw/og.jpg',
+-->
+
+<!-- 基本 SEO 設定 -->
+<title>佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網</title>
+<meta name="description" content="佳鋐首耀：中華路 X 台灣大道，2-3房純靜4併，26-38坪雙面採光捷運宅；接待中心：台中市梧棲區中華路二段207號 即刻預約：04-2663099">
+<meta name="keywords" content="佳鋐首耀 ,佳鋐建設梧棲,佳鋐建設沙鹿,梧棲新案,沙鹿新案">
+<link rel="canonical" href="https://shouyao.tw/">
+
+<!-- Open Graph (社群分享 / LINE / Facebook) -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="website">
+<meta property="og:title" content="佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網">
+<meta property="og:description" content="佳鋐首耀：中華路 X 台灣大道，2-3房純靜4併，26-38坪雙面採光捷運宅；接待中心：台中市梧棲區中華路二段207號 即刻預約：04-2663099">
+<meta property="og:site_name" content="佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網">
+<meta property="og:url" content="https://shouyao.tw/">
+
+<!-- 社群分享圖片 (LINE / FB 預覽圖) -->
+<meta property="og:image" content="https://shouyao.tw/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網">
+<meta name="twitter:description" content="佳鋐首耀：中華路 X 台灣大道，2-3房純靜4併，26-38坪雙面採光捷運宅；接待中心：台中市梧棲區中華路二段207號 即刻預約：04-2663099">
+<meta name="twitter:image" content="https://shouyao.tw/og.jpg">
+
+<!-- 結構化資料 / Schema.org -->
+<meta itemprop="name" content="佳鋐首耀｜車站商圈｜雙軌道捷運宅｜官網">
+<meta itemprop="description" content="佳鋐首耀：中華路 X 台灣大道，2-3房純靜4併，26-38坪雙面採光捷運宅；接待中心：台中市梧棲區中華路二段207號 即刻預約：04-2663099">
+<meta itemprop="image" content="https://shouyao.tw/og.jpg">
