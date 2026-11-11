@@ -102,13 +102,14 @@
   align-items: center;
 }
 
-
-  .logo {
-    position: relative;
-    width: 44vw;
-    margin-bottom: size(200);
-    margin-left: size(160);
-  }
+.logo {
+  position: relative;
+  width: auto;
+  height: clamp(60vh, 60vh, 80vh);
+  object-fit: contain;
+  margin-bottom: size(200);
+  margin-left: size(160);
+}
 
   .s1-arrow {
     width: 12vw;
@@ -123,7 +124,7 @@
     bottom: size(-330);
     left: size(-100);
     width: 42vw;
-    z-index: 2;
+    z-index: 1;
   }
 
   .y{
@@ -314,7 +315,7 @@
     position: absolute !important;
     width: auto !important;
     max-width:90vw;
-    top: 11vh !important;
+    top: 5vh !important;
     margin-left: 12vw !important;
     margin-bottom: 0 !important;
   }
