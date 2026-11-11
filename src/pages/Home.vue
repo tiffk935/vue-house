@@ -11,7 +11,7 @@
   <!--loading end-->
   <Nav v-if="config.showNav" />
   <!-- e5005c -->
-  <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#fff100]">
+  <div class="home overflow-hidden font-['Noto_Sans_TC'] bg-[#f9f3f1]">
     <h1 style="display:none;">佳鋐首耀</h1>
     <img class="og" src="@/section/og.jpg" alt="og" >
     <S1 />

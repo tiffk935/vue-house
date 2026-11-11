@@ -155,7 +155,7 @@
 
   .s1-40w {
     position: absolute;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
     width: 100%;
     text-align: right;
@@ -241,7 +241,7 @@
   position: absolute;
   width: auto;
   max-height:50vh;
-  top: 8vh;
+  top: 7vh;
   margin-left: 12vw;
 }
  
@@ -287,7 +287,7 @@
 
     .s1-40w-m {
       position: absolute;
-      bottom: 0;
+      bottom: -1px;
       left: 0;
       width: 100%;
       text-align: right;
@@ -303,7 +303,7 @@
 
 }
 
-@media screen and (max-width: 768px) and (min-aspect-ratio: 607 / 867) {
+@media screen and (max-width: 768px) and (min-aspect-ratio: 522 / 797) {
 
   .s1 .logo-m {
     display: none !important;
