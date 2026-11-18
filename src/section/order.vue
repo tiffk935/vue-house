@@ -415,7 +415,7 @@ import { useToast } from "vue-toastification"
 const toast = useToast()
 
 // ⚠️ 測試用：true = 送出後不跳頁，並在 Console 印出 A / B 回應。上線前務必改回 false
-const DEBUG_NO_REDIRECT = true
+const DEBUG_NO_REDIRECT = false
 const sending = ref(false)
 const submitted = ref(false)
 
