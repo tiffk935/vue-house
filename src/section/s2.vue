@@ -1,12 +1,12 @@
 <template>
   <section class="s2 user-n w-full relative">
-    <div class="slider">
-      <div class="slides">
-        <div class="slide">
-          <img src="@/section/s2/img.jpg" @load="onImgLoad()" />
+    <div class="slider" ref="sliderRef" @pointerenter="onEnter" @pointerleave="onLeave">
+      <div class="slides" ref="slidesRef">
+        <div class="slide" ref="slideRef">
+          <img src="@/section/s2/img.svg" draggable="false" @load="onImgLoad()" />
         </div>
         <div class="slide">
-          <img src="@/section/s2/img.jpg" />
+          <img src="@/section/s2/img.svg" draggable="false" />
         </div>
       </div>
     </div>
@@ -30,7 +30,8 @@
     display: inline-flex;
     position: relative;
     height: 100%;
-    background: #ddd;
+    background: #666;
+    img{background: url("./s2/img.jpg") center center; background-size: cover;}
   }
 
   img {
@@ -42,101 +43,87 @@
 </style>
 
 <script setup>
-import { gsap } from "gsap";    
+import { ref, onBeforeUnmount } from "vue";
+import { gsap } from "gsap";
 import { Draggable } from "gsap/Draggable";
 
 gsap.registerPlugin(Draggable);
 
-let startX = 0;
-const v = 40; // 速率
-let tl;
-let imgLoaded = false;
-let slideWidth = 0;
+const v = 40; // 速率（px / 秒）
 
-function createAnimation() {
-  if (!imgLoaded) return;
+const sliderRef = ref(null);
+const slidesRef = ref(null);
+const slideRef = ref(null);
 
-  if (tl) {
-    tl.kill();
-    tl = null;
-  }
+let x = 0;           // 目前位置（px）
+let w = 0;           // 一張圖的寬度，跑到 -w 就接回 0（兩張相同的圖無縫接）
+let ready = false;
+let hovering = false; // 滑鼠在上面 → 停
+let dragging = false; // 正在拖 → 由手控制
+let dragFromX = 0;
+let setX = null;
+let draggable = null;
+let proxy = null;
 
-  startX = 0;
+const wrap = (val) => (w ? gsap.utils.wrap(-w, 0, val) : 0);
+const render = () => setX && setX(wrap(x));
 
-  tl = gsap.timeline({
-    // paused: true,
-    onComplete: () => {
-      tl.restart();
-    },
-    onReverseComplete: () => {
-      tl.seek(tl.duration());
-    }
-  });
-
-  setTimeout(() => {
-    const duration = document.querySelector('.s2 .slides img').clientWidth / v;
-
-    tl
-      .set('.s2 .slides', { xPercent: 0 })
-      .to('.s2 .slides', {
-        xPercent: -50,
-        duration: duration,
-        ease: 'none'
-      });
-
-      // .set('.s2 .slides', { left: 0 })
-      // .to('.s2 .slides', {
-      //   left: () => {
-      //     const w = document.querySelector('.s2 .slides img').clientWidth;
-      //     return -w + 'px';
-      //   },
-      //   duration: duration,
-      //   ease: 'none'
-      // });
-  }, 0);
+function measure() {
+  const oldW = w;
+  w = slideRef.value ? slideRef.value.offsetWidth : 0;
+  // 尺寸變了，位置等比例換算，避免跳格
+  if (oldW && w && oldW !== w) x = (x / oldW) * w;
+  x = wrap(x);
+  render();
 }
 
-window.addEventListener('resize', () => {
-  if (!imgLoaded) return;
-  if ( parseInt(document.querySelector('.s2 .slides img').clientWidth) === parseInt(slideWidth) ) return;
-  
-  createAnimation();
-});
+// 每一幀固定速度往左跑；滑入或拖動中就不動
+function tick(time, deltaTime) {
+  if (!ready || hovering || dragging || !w) return;
+  x = wrap(x - (v * deltaTime) / 1000);
+  render();
+}
+
+// 只認滑鼠，避免手機點一下就被當成「滑入」而一直停住
+function onEnter(e) {
+  if (e.pointerType === "mouse") hovering = true;
+}
+function onLeave(e) {
+  if (e.pointerType === "mouse") hovering = false;
+}
 
 function onImgLoad() {
-  imgLoaded = true;
-  slideWidth = document.querySelector('.s2 .slides img').clientWidth;
-  
-  createAnimation();
+  if (ready) return;
+  ready = true;
 
-  Draggable.create(".s2 .slider", {
+  setX = gsap.quickSetter(slidesRef.value, "x", "px");
+  measure();
+
+  // 用一個看不見的 proxy 接拖曳距離，實際位置由上面的 x 控制，拖到哪放開就從哪繼續跑
+  proxy = document.createElement("div");
+  draggable = Draggable.create(proxy, {
     type: "x",
-    liveSnap: { x: () => 0 }, // 鎖住位置
-    onPress: function () {
-      tl.pause();
-      startX = this.pointerX;
+    trigger: sliderRef.value,
+    onPress() {
+      dragging = true;
+      dragFromX = x;
     },
-    onRelease: function() {
-      if (tl.reversed()) {
-        tl.reverse();
-      } else {
-        tl.play();
-      }
+    onDrag() {
+      x = wrap(dragFromX + (this.x - this.startX));
+      render();
     },
-    onDrag: function () {
-      const deltaX = this.pointerX - startX;
+    onRelease() {
+      dragging = false;
+    },
+  })[0];
 
-      if (Math.abs(deltaX) > 1) {
-        if (deltaX > 0) { // right
-          // console.log('right');
-          
-          tl.reverse();
-        } else { // left
-          // console.log('left');
-          tl.play();
-        }
-      }
-    }
-  });
+  gsap.ticker.add(tick);
+  window.addEventListener("resize", measure);
 }
+
+onBeforeUnmount(() => {
+  gsap.ticker.remove(tick);
+  window.removeEventListener("resize", measure);
+  if (draggable) draggable.kill();
+});
 </script>

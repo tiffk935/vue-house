@@ -1,7 +1,7 @@
 <template>
   <section class="s1 user-n w-full relative z-[1]">
     <!--  <img src="./s1/1.jpg" class="t0"> -->
-    <img class="lion absolute" src="./s1/lion2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" />
+    <img class="lion absolute" src="./s1/lion2.webp" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200" data-aos-offset="-300" />
     <img class="logo absolute" src="./s1/logo.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <img class="t1 absolute" src="./s1/t1.svg" data-aos="fade-up" data-aos-duration="1000"
       data-aos-offset="-600" /> 
