@@ -1,0 +1,38 @@
+<!--
+src: 'https://dream-park.tw',
+title: '清景麟夢公園｜夢想實現全民住平實｜官網',
+description: '清景麟夢公園兩房完工，位於台南東區平實特區，鄰近平實公園，串聯南紡購物中心生活圈，採買、餐飲、休閒便利。美夢成真，成家更踏實。',
+keyword: '清景麟夢公園,台南東區建案,平實特區,全新完工,東區買２房',
+image: 'https://dream-park.tw/og.png',
+-->
+
+<!-- 基本 SEO 設定 -->
+<title>清景麟夢公園｜夢想實現全民住平實｜官網</title>
+<meta name="description" content="清景麟夢公園兩房完工，位於台南東區平實特區，鄰近平實公園，串聯南紡購物中心生活圈，採買、餐飲、休閒便利。美夢成真，成家更踏實。">
+<meta name="keywords" content="清景麟夢公園,台南東區建案,平實特區,全新完工,東區買２房">
+<link rel="canonical" href="https://dream-park.tw">
+
+<!-- Open Graph (社群分享 / LINE / Facebook) -->
+<meta property="og:locale" content="zh_TW">
+<meta property="og:type" content="website">
+<meta property="og:title" content="清景麟夢公園｜夢想實現全民住平實｜官網">
+<meta property="og:description" content="清景麟夢公園兩房完工，位於台南東區平實特區，鄰近平實公園，串聯南紡購物中心生活圈，採買、餐飲、休閒便利。美夢成真，成家更踏實。">
+<meta property="og:site_name" content="清景麟夢公園｜夢想實現全民住平實｜官網">
+<meta property="og:url" content="https://dream-park.tw">
+
+<!-- 社群分享圖片 (LINE / FB 預覽圖) -->
+<meta property="og:image" content="https://dream-park.tw/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="清景麟夢公園｜夢想實現全民住平實｜官網">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="清景麟夢公園｜夢想實現全民住平實｜官網">
+<meta name="twitter:description" content="清景麟夢公園兩房完工，位於台南東區平實特區，鄰近平實公園，串聯南紡購物中心生活圈，採買、餐飲、休閒便利。美夢成真，成家更踏實。">
+<meta name="twitter:image" content="https://dream-park.tw/og.png">
+
+<!-- 結構化資料 / Schema.org -->
+<meta itemprop="name" content="清景麟夢公園｜夢想實現全民住平實｜官網">
+<meta itemprop="description" content="清景麟夢公園兩房完工，位於台南東區平實特區，鄰近平實公園，串聯南紡購物中心生活圈，採買、餐飲、休閒便利。美夢成真，成家更踏實。">
+<meta itemprop="image" content="https://dream-park.tw/og.png">

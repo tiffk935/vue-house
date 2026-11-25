@@ -2,25 +2,26 @@
   <div class="contact-info mx-auto flex flex-col items-center justify-between">
     <!-- <div class="border absolute"></div> -->
     <!-- <div class="logo"></div> -->
-    <div class="flex justify-between w-full contact-item-box">
-      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'phone'">
+    <!-- 寬度設定參考 j莫 新版：上排 3 欄平均，下排 地址:導航 = 2:1 -->
+    <div class="contact-row">
+      <div class="flex contact-item justify-center items-center rounded-none" v-if="info.phone" @click="modalOpen = true; modalType = 'phone'">
         <img src="@/section/form/phone.svg" alt="夢公園" srcset="" />
         <div>{{ info.phone }}</div>
       </div>
-      <div class="flex contact-item justify-center items-center rounded-none" @click="modalOpen = true; modalType = 'fb'">
+      <div class="flex contact-item justify-center items-center rounded-none" v-if="info.fbMessage" @click="modalOpen = true; modalType = 'fb'">
         <img src="@/section/form/messenger.svg" alt="夢公園" srcset="" />
         <div>FB 諮詢</div>
       </div>
-      <div class="flex contact-item justify-center items-center rounded-none btfanpage" @click="open()">
+      <div class="flex contact-item justify-center items-center rounded-none btfanpage" v-if="info.fbLink" @click="open()">
         <img src="@/section/form/fb.svg" alt="夢公園" srcset="" />
         <div>前往粉絲專頁</div>
       </div>
     </div>
-    <div class="address-wrap flex justify-center w-full contact-item-box no-gap md:rounded-none overflow-hidden">
-      <div class="flex contact-item justify-between items-center address">
+    <div class="contact-row bottom" v-if="info.address">
+      <div class="flex contact-item items-center address">
         <div>接待中心：<br class="md:hidden"><span v-html="info.address"></span></div>
       </div>
-      <div class="flex contact-item justify-center items-center md:rounded-none" @click="modalOpen = true; modalType = 'gmap'">
+      <div class="flex contact-item justify-center items-center googlemap" @click="modalOpen = true; modalType = 'gmap'">
         <img src="@/section/form/gmap.svg" alt="夢公園" srcset="" />
         <div>導航 GoogleMap</div>
       </div>
@@ -29,7 +30,7 @@
 
   <!-- Mobile contact info -->
   <div v-if="$isMobile()" class="bg-white mo-contact-info flex justify-between w-full contact-item-box items-center">
-    <div class="flex flex-1 flex-col contact-item justify-center items-center"
+    <div class="flex flex-1 flex-col contact-item justify-center items-center" v-if="info.phone"
       @click="modalOpen = true; modalType = 'phone'">
       <img src="@/section/form/phone.svg" alt="夢公園" srcset="" />
       <div>撥打電話</div>
@@ -85,49 +86,32 @@
 <style lang="scss">
 @import "@/assets/style/function.scss";
 
+// ── 寬度設定（參考 j莫 新版）──────────────────────
+$gap: 15px;
+
 .contact-info {
-  width: size(1200);
-  padding: size(68) size(160) size(50) size(160);
-  // margin-top: size(73);
+  width: min(1200px, 95%);
+  margin: 0 auto;
+  padding: size(68) 0 size(50) 0;
+  gap: $gap;
   position: relative;
 
-  // .border {
-  //   top: size(21);
-  //   bottom: size(21);
-  //   left: size(23);
-  //   right: size(23);
-  //   border: size(12) solid #e6c57c;
-  // }
-
-  .logo {
-    width: 19.1145833333vw;
-    height: 8.9583333333vw;
-    background-image: url("@/section/s1/logo.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    //margin-bottom: size(40);
-    margin-bottom: size(20);
-  }
-
-  .contact-item-box {
-    position: relative;
-    gap: size(20);
-
-    &.address-wrap {
-      margin-top: size(20);
-    } 
+  .contact-row {
+    display: grid;
+    width: 100%;
+    gap: $gap;
+    grid-template-columns: repeat(3, 1fr); // 上排 3 欄平均寬
 
     .contact-item {
       background-color: transparent;
       border: 1px solid #fff;
       color: #ffffff;
       width: 100%;
-      padding: 0 size(40);
-      font-size: size(16);
+      padding: 0 1em;
+      font-size: 16px;
       line-height: 3.8;
       letter-spacing: 0.1em;
-      max-width: size(280);
+      white-space: nowrap;
       z-index: 1;
       transition: all .3s;
       cursor: pointer;
@@ -142,37 +126,34 @@
       }
 
       img {
-        max-width: size(27);
-        height: auto;
-        max-height: size(27);
+        width: 1.65em;
+        height: 1.65em;
+        object-fit: contain;
+        flex-shrink: 0;
         transition: all .5s;
         filter: brightness(0) invert(1);
-        margin-right: size(10);
-      }
-
-      &.address {
-        background-color: #fff;
-        color: #000;
-        z-index: 0;
-        position: relative;
-        max-width: 9999px;
-        justify-content: center;
-
-        &::before {
-          content: "";
-          position: absolute;
-          width: 8em;
-          height: 100%;
-          background-color: #fff;
-          left: calc(100% - 4em);
-          z-index: -1;
-          display: none;
-        }
+        margin-right: 0.6em;
       }
     }
 
-    &.no-gap {
-      gap: 0 !important;
+    &.bottom {
+      gap: 0;
+      grid-template-columns: 2fr 1fr; // 地址:導航 = 2:1
+
+      .contact-item.address {
+        background-color: #fff;
+        color: #000;
+        z-index: 0;
+        justify-content: center;
+        white-space: normal;
+        text-align: center;
+        cursor: default;
+
+        &:hover {
+          background-color: #fff;
+          color: #000;
+        }
+      }
     }
   }
 }
@@ -206,70 +187,36 @@
   }
 
   .contact-info {
-    width: size-m(375);
-    height: auto;
-    padding: size-m(50) size-m(32);
-    // margin-top: size-m(60);
-    position: relative;
-    justify-content: flex-start;
+    width: size-m(310);
+    padding: size-m(50) 0;
 
-    // .border {
-    //   top: size-m(13);
-    //   bottom: size-m(13);
-    //   left: size-m(9);
-    //   right: size-m(10);
-    //   border: size-m(8) solid #e6c57c;
-    // }
-
-    .logo {
-      width: size-m(258);
-      height: size-m(87.68);
-      //background-image: url("@/section/form/logo.svg");
-      margin-bottom: size-m(39);
-    }
-
-    .contact-item-box {
-      position: relative;
-      gap: size-m(20);
-      flex-direction: column;
-
-      &.address-wrap {
-        // border-radius: size-m(50);
-        margin-top: size-m(20);
-        // border: size-m(4) solid #e6c57c;
-      }
+    .contact-row {
+      grid-template-columns: 1fr;
+      gap: 12px;
 
       .contact-item {
-        padding: 0 size-m(65);
-        font-size: size-m(16);
-        max-width: 100%;
-        justify-content: space-around;
-
+        position: relative;
+        justify-content: center;
 
         img {
-          max-width: size-m(27);
-          height: auto;
-          max-height: size-m(27);
+          position: absolute;
+          left: 3em;
+          top: 50%;
+          transform: translateY(-50%);
         }
+      }
 
-        &.address {
-          padding: 0 0;
+      &.bottom {
+        grid-template-columns: 1fr;
+        gap: 0;
 
-          &::before {
-            width: 100%;
-            height: 100%;
-            // bottom: -50%;
-            left: 0;
-          }
+        .contact-item.address {
+          padding: 0;
 
           div {
             line-height: 1.3;
           }
         }
-      }
-
-      &.no-gap {
-        gap: 0 !important;
       }
     }
   }
@@ -308,4 +255,4 @@ const scrollTo = (el) => {
   })
 }
 
-</script>
+</script>

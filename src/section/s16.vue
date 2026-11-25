@@ -1,6 +1,6 @@
 <template>
   <section class="s16 w-full relative text-[#173868]">
-    <img class="bg absolute" src="@/section/s16/bg.webp" />
+    <img class="bg absolute" src="@/section/s16/bg.jpg" />
     <div class="rect absolute"></div>
     <img class="style absolute" src="@/section/s16/style.svg" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0" />
     <div class="txt text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="0">
